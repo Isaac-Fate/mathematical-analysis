@@ -1,0 +1,69 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Mathematical Analysis
+author: Isaac Fei
+logo: icon.jpg
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: force
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+# bibtex_bibfiles:
+#   - Machine Learning.bib
+
+# Information about where the book exists on the web
+repository:
+  url: https://github.com/Isaac-Fate/math/tree/master/  # Online location of your book
+  path_to_book: math  # Optional path to your book, relative to the repository root
+  branch: master  # Which branch of the repository should be used when creating links (optional)
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  favicon: icon.jpg
+  use_issues_button: true
+  use_repository_button: true
+
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
+  thebe: true
+
+sphinx:
+  extra_extensions:
+    - sphinx_proof
+  config:
+    bibtex_reference_style: author_year
+    mathjax_config:
+      tex:
+        macros:
+          # Common Number Sets
+          "R": "\\mathbb{R}" # Real numbers
+          "C": "\\mathbb{C}" # Complex numbers
+          "F": "\\mathbb{F}" # Field (often stands for real or complex field)
+          "N": "\\mathbb{N}" # Natural numbers
+          "Ns": "\\mathbb{N^\\ast}" # Positive natural numbers
+          "Z": "\\mathbb{Z}" # Integers
+          "Q": "\\mathbb{Q}" # Rational numbers
+          
+          # Common Operators
+          "floor": ["\\lfloor#1\\rfloor", 1]
+          "bmat": ["\\left[\\begin{array}"] # Begin a (square) matrix env
+          "emat": ["\\end{array}\\right]"] # End a matrix env
+          "abs": ["\\left\\lvert #1 \\right\\rvert", 1]
+          "norm": ["\\left\\lVert #1 \\right\\rVert", 1]
+          "argmin": ["\\mathop{\\mathrm{arg \\, min}}"]
+          "argmax": ["\\mathop{\\mathrm{arg \\, max}}"]
+
+          # Real Analysis
+          "d": ["\\mathrm{d}"]
+
+          # Linear Algebra
+          "v": ["\\mathbf{#1}", 1] # Vector; lowercase symbol in bold font
