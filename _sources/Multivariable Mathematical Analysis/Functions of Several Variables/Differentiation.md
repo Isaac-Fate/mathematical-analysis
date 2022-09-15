@@ -63,7 +63,7 @@ Let
 ```{math}
 \begin{align*}
 f(x, y) = \begin{cases}
-1 &y = x^2, \x\neq 0 \\ 
+1 &y = x^2, \; x \neq 0 \\ 
 0 &\text{elsewhere}
 \end{cases}\end{align*}
 ```
@@ -79,7 +79,7 @@ We consider the partial derivatives as well as the directional derivatives at th
 ```
 
 
-We then compute the directional derivatives. Let $\theta\in\interval[open right]{0}{2\pi}$ and consider the direction $\mathbf{u} = (\cos\theta, \sin\theta)$($\theta\notin\left\{0, \pi/2, \pi, 3\pi/2\right\}$, i.e., $0 < \tan\theta < \infty$). If we choose a number $t$ satisfying $0 < \abs{t} < \tan\theta / \cos\theta$, then 
+We then compute the directional derivatives. Let $\theta\in\left[0, 2\pi\right)$ and consider the direction $\mathbf{u} = (\cos\theta, \sin\theta)$($\theta\notin\left\{0, \pi/2, \pi, 3\pi/2\right\}$, i.e., $0 < \tan\theta < \infty$). If we choose a number $t$ satisfying $0 < \abs{t} < \tan\theta / \cos\theta$, then 
 
 ```{math}
 \begin{align*}
@@ -226,7 +226,7 @@ Therefore, the left-hand side of {eq}`eq:48` will not tend to $0$ as $\mathbf{h}
 
 
 
-The directional derivative along the direction $\mathbf{u} = (\cos\theta, \sin\theta)$($\theta\in\interval[open right]{0}{2\pi}$) at the origin is 
+The directional derivative along the direction $\mathbf{u} = (\cos\theta, \sin\theta)$($\theta\in\left[0, 2\pi\right)$) at the origin is 
 
 ```{math}
 \begin{align*}
