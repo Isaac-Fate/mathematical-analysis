@@ -62,6 +62,7 @@ The integral is also linear in the integrator.
 
 
 ````{prf:theorem}
+:label: thm:35
 
 If $f \in\mathfrak{R}(\alpha)$ and $f \in\mathfrak{R}(\beta)$ on $[a,b]$, then $f \in\mathfrak{R}(c_1 \alpha + c_2 \beta)$ where $c_1$ and $c_2$ are constants. In that case, 
 
