@@ -57,7 +57,7 @@ We now show that the limit of $f(t)$ exists as $t \to x$, and it equals $A := \l
 
 ```{math}
 :label: eq:8
-\begin{align}\abs{f(t) - f_n(t)} < \frac{\varepsilon}{3}\quad\forall n \geq N_1, \\forall t \in E
+\begin{align}\abs{f(t) - f_n(t)} < \frac{\varepsilon}{3}\quad\forall n \geq N_1, \;\forall t \in E
 \end{align}
 ```
 
@@ -163,7 +163,7 @@ Let $E$ be the set consisting of terms of this sequence, i.e,
 
 ```{math}
 \begin{align*}
-E = \set{x \in \R}{\exists n \in \N, \x_n = x} = \left\{0\right\}\cup\set{\frac{1}{n}}{n \in \Ns}\end{align*}
+E = \set{x \in \R}{\exists n \in \N, \; x_n = x} = \left\{0\right\}\cup\set{\frac{1}{n}}{n \in \Ns}\end{align*}
 ```
 
 It is clear that $\lim_{n \infty} x_n = x_0$, and $x_n \to x_0$ if and only if $n \to\infty$. We now define a sequence of functions $\left\{f_i\right\}_{i \in \Ns}$ on $E$ by specifying the function value at each point:
@@ -293,7 +293,7 @@ Since, $g_n$ is continuous and $[\varepsilon, \infty)$ is closed in $\R$, it fol
 K_{n}\supset K_{n+1}\end{align*}
 ```
 
-We now claim that $\bigcap_{n \in \Ns} K_n = \emptyset$. To see this, we assume $x \in\bigcap_{n \in \Ns} K_n$, which then implies $g_n(x) \geq\varepsilon\\forall n \in\Ns$. This leads to a contradiction since $g_n \to g \equiv 0$. Having that $\bigcap_{n \in \Ns} K_n = \emptyset$, by {prf:ref}`thm:10`, it follows that there exists some finite subset $J \subset\Ns$ such that $\bigcap_{n \in J} K_n = \emptyset$. Suppose the largest number in $J$ is $N$, then we have
+We now claim that $\bigcap_{n \in \Ns} K_n = \emptyset$. To see this, we assume $x \in\bigcap_{n \in \Ns} K_n$, which then implies $g_n(x) \geq\varepsilon\;\forall n \in\Ns$. This leads to a contradiction since $g_n \to g \equiv 0$. Having that $\bigcap_{n \in \Ns} K_n = \emptyset$, by {prf:ref}`thm:10`, it follows that there exists some finite subset $J \subset\Ns$ such that $\bigcap_{n \in J} K_n = \emptyset$. Suppose the largest number in $J$ is $N$, then we have
 
 ```{math}
 \begin{align*}
@@ -313,7 +313,7 @@ It then follows from {eq}`eq:12` and the definition of $K_n$ that
 
 ```{math}
 \begin{align*}
-0 \leq g_n(x) < \varepsilon\quad\forall n \geq N, \\forall x \in K
+0 \leq g_n(x) < \varepsilon\quad\forall n \geq N, \;\forall x \in K
 \end{align*}
 ```
 

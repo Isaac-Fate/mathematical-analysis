@@ -690,7 +690,7 @@ Then we have</p>
 </div><div class="proof admonition" id="proof">
 <p>Proof. We first verify the following:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}&amp;\sum_{j=1}^\infty a_{ij}\\text{converges absolutely}\\forall i \in\Ns\\&amp;\sum_{i=1}^\infty a_{ij}\\text{converges absolutely}\\forall j \in\Ns\\&amp;\sum_{i=1}^\infty\sum_{j=1}^\infty a_{ij}\\text{converges (as a series consisting of terms $\left \{\sum_{j=1}^\infty a_{ij}\right \}_{i \in \Ns}$)}\end{align*}\end{split}\]</div>
+\[\begin{split}\begin{align*}&amp;\sum_{j=1}^\infty a_{ij}\;\text{converges absolutely}\;\forall i \in\Ns\\&amp;\sum_{i=1}^\infty a_{ij}\;\text{converges absolutely}\;\forall j \in\Ns\\&amp;\sum_{i=1}^\infty\sum_{j=1}^\infty a_{ij}\;\text{converges (as a series consisting of terms $\left \{\sum_{j=1}^\infty a_{ij}\right \}_{i \in \Ns}$)}\end{align*}\end{split}\]</div>
 <p>By the given condition <span class="math notranslate nohighlight">\(\sum_{j=1}^\infty\abs{a_{ij}} = b_i &lt; \infty\)</span>, <span class="math notranslate nohighlight">\(\sum_{j=1}^\infty a_{ij}\)</span> converges absolutely for all <span class="math notranslate nohighlight">\(i \in\Ns\)</span>.
 For each <span class="math notranslate nohighlight">\(j \in\Ns\)</span>, we have</p>
 <div class="math notranslate nohighlight">
@@ -950,7 +950,7 @@ c_n = \frac{(-1)^{n+1} \cdot 2}{n+1}\sum_{k=1}^n \frac{1}{k}\end{align*}\]</div>
 <p>Therefore,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{c_n}\geq\abs{c_{n+1}}\quad\forall n \in\Ns\end{align*}\]</div>
-<p>Moreover, the inequality becomes strict when <span class="math notranslate nohighlight">\(n \geq 2\)</span>, i.e., <span class="math notranslate nohighlight">\(\abs{c_n} &gt; \abs{c_{n+1}}\\forall n \geq 2\)</span>.</p>
+<p>Moreover, the inequality becomes strict when <span class="math notranslate nohighlight">\(n \geq 2\)</span>, i.e., <span class="math notranslate nohighlight">\(\abs{c_n} &gt; \abs{c_{n+1}}\;\forall n \geq 2\)</span>.</p>
 <p>Furthermore, we also need to show that <span class="math notranslate nohighlight">\(\left\{\abs{c_n}\right\}\)</span> converges to <span class="math notranslate nohighlight">\(0\)</span>. Since <span class="math notranslate nohighlight">\(\left\{c_n\right\}\)</span> decreases monotonically, and it is bounded below by <span class="math notranslate nohighlight">\(0\)</span>, we know that there exists a limit. Now, we show that this limit is precisely <span class="math notranslate nohighlight">\(0\)</span>. Consider the subsequence <span class="math notranslate nohighlight">\(\left\{\abs{c_{2^{n-1}}}\right\}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}\abs{c_{2^{n-1}}}&amp;= \frac{2}{2^{n-1} + 1}\left( 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \frac{1}{5} + \frac{1}{6} + \frac{1}{7} + \cdots + \frac{1}{2^{n-1}}\right) \\&amp;&lt; \frac{2}{2^{n-1} + 1}\left( 1 

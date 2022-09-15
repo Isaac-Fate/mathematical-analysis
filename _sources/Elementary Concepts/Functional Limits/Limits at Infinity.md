@@ -44,7 +44,7 @@ Let $f: E \to\R$ be a monotonically increasing (resp. decreasing) function where
 We only prove the case of monotonically increasing functions. Since $E$ is unbounded above, there exists a **subsequence**$\left\{k_n\right\}$ of $\Ns$ such that $k_n \in E$. Note that the numerical sequence $\left\{f(k_n)\right\}$ increases monotonically. By {prf:ref}`thm:23`, $\left\{f(k_n)\right\}$ converges, say, to $l$. 
 
 
-We are going to show that the limit of $f$ at infinity is exactly $l$. Given $\varepsilon > 0$, there exists $N \in\Ns$ such that $\abs{f(k_n) - l} < \varepsilon / 2 \\forall n \geq N$. Then for all $x > k_N$, there exist $n, m \geq N$($n < m$) such that $k_n \leq x < k_m$. It then follows that 
+We are going to show that the limit of $f$ at infinity is exactly $l$. Given $\varepsilon > 0$, there exists $N \in\Ns$ such that $\abs{f(k_n) - l} < \varepsilon / 2 \;\forall n \geq N$. Then for all $x > k_N$, there exist $n, m \geq N$($n < m$) such that $k_n \leq x < k_m$. It then follows that 
 
 ```{math}
 \begin{align*}\abs{f(x) - l}&\leq\abs{f(x) - f(k_n)} + \abs{f(k_n) - l}\\&< \abs{f(x) - f(k_n)} + \varepsilon / 2 \\&\leq\abs{f(k_m) - f(k_n)} + \varepsilon / 2

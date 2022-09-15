@@ -6,32 +6,32 @@ Suppose $f \in\mathfrak{R}$ on $[a,b]$ for all $b \geq a$ where $a$ is fixed. De
 
 ```{math}
 :label: eq:49
-\begin{align}\int_a^\infty f(x) \\mathrm{d}x
-= \lim_{b \to \infty}\int_a^b f(x) \\mathrm{d}x
+\begin{align}\int_a^\infty f(x) \;\mathrm{d}x
+= \lim_{b \to \infty}\int_a^b f(x) \;\mathrm{d}x
 \end{align}
 ```
 
 provided that the limit exists and is **finite**. In that case, we say the integral on the left-hand side of {eq}`eq:49`**converges**. And this kind of improper integral with infinite integration limits is called the **improper integral of the first kind**. If 
 
 ```{math}
-\begin{align*}\int_a^\infty\abs{f(x)}\\mathrm{d}x
-= \lim_{b \to \infty}\int_a^b \abs{f(x)}\\mathrm{d}x
+\begin{align*}\int_a^\infty\abs{f(x)}\;\mathrm{d}x
+= \lim_{b \to \infty}\int_a^b \abs{f(x)}\;\mathrm{d}x
 < \infty\end{align*}
 ```
 
-the integral $\int_a^\infty f(x) \\mathrm{d}x$ is said to converge **absolutely**.
+the integral $\int_a^\infty f(x) \;\mathrm{d}x$ is said to converge **absolutely**.
 
 ````
 
 ````{prf:theorem}
 
-Suppose that $f \in\mathfrak{R}$ on $[a,b]$ for all $b \geq a$, and $f \geq 0$ on $[a, \infty)$. Let $F(b) = \int_a^b f(x) \\mathrm{d}x$. Then $\int_a^\infty f(x) \\mathrm{d}x$ converges if and only if $F(b)$ is bounded on $[a, \infty)$.
+Suppose that $f \in\mathfrak{R}$ on $[a,b]$ for all $b \geq a$, and $f \geq 0$ on $[a, \infty)$. Let $F(b) = \int_a^b f(x) \;\mathrm{d}x$. Then $\int_a^\infty f(x) \;\mathrm{d}x$ converges if and only if $F(b)$ is bounded on $[a, \infty)$.
 
 ````
 
 ````{prf:proof}
 
-Assume first $\int_a^\infty f(x) \\mathrm{d}x$ converges, then $F(\infty) < \infty$. $F$ increases monotonically since $f \geq 0$. It follows that $F(b) \leq F(\infty) < \infty$, hence bounded. Conversely, if $F(b)$ is bounded on $[a, \infty)$, then by {prf:ref}`pro:2`, $F(\infty)$ exists, i.e., $\int_a^\infty f(x) \\mathrm{d}x$ converges since $F$ is increasing.
+Assume first $\int_a^\infty f(x) \;\mathrm{d}x$ converges, then $F(\infty) < \infty$. $F$ increases monotonically since $f \geq 0$. It follows that $F(b) \leq F(\infty) < \infty$, hence bounded. Conversely, if $F(b)$ is bounded on $[a, \infty)$, then by {prf:ref}`pro:2`, $F(\infty)$ exists, i.e., $\int_a^\infty f(x) \;\mathrm{d}x$ converges since $F$ is increasing.
 
 ````
 
@@ -48,9 +48,9 @@ Suppose that $f, g \in\mathfrak{R}$ on $[a, b]$ for all $b \geq a$, and $f$ and 
 ```
 
 where $c$ is a constant. Then we have 
-1. $\int_a^\infty f(x) \\mathrm{d}x$ converges if $\int_a^\infty g(x) \\mathrm{d}x$ converges.
+1. $\int_a^\infty f(x) \;\mathrm{d}x$ converges if $\int_a^\infty g(x) \;\mathrm{d}x$ converges.
 
-2. $\int_a^\infty g(x) \\mathrm{d}x$ diverges if $\int_a^\infty f(x) \\mathrm{d}x$ diverges.
+2. $\int_a^\infty g(x) \;\mathrm{d}x$ diverges if $\int_a^\infty f(x) \;\mathrm{d}x$ diverges.
 
 
 
@@ -70,11 +70,11 @@ Suppose that $f, g \in\mathfrak{R}$ on $[a, b]$ for all $b \geq a$, and $g(x) > 
 ```
 
 We have the following:
-1.  If $0 < l < \infty$, then $\int_a^\infty f(x) \\mathrm{d}x$ and $\int_a^\infty g(x) \\mathrm{d}x$ both converge or both diverge. In other words, $\int_a^\infty f(x) \\mathrm{d}x$ converges if and only if $\int_a^\infty g(x) \\mathrm{d}x$ converges.
+1.  If $0 < l < \infty$, then $\int_a^\infty f(x) \;\mathrm{d}x$ and $\int_a^\infty g(x) \;\mathrm{d}x$ both converge or both diverge. In other words, $\int_a^\infty f(x) \;\mathrm{d}x$ converges if and only if $\int_a^\infty g(x) \;\mathrm{d}x$ converges.
 
-2.  If $l = 0$, then $\int_a^\infty f(x) \\mathrm{d}x$ converges if $\int_a^\infty g(x) \\mathrm{d}x$ converges.
+2.  If $l = 0$, then $\int_a^\infty f(x) \;\mathrm{d}x$ converges if $\int_a^\infty g(x) \;\mathrm{d}x$ converges.
 
-3.  If $l = \infty$, then $\int_a^\infty f(x) \\mathrm{d}x$ diverges if $\int_a^\infty g(x) \\mathrm{d}x$ diverges.
+3.  If $l = \infty$, then $\int_a^\infty f(x) \;\mathrm{d}x$ diverges if $\int_a^\infty g(x) \;\mathrm{d}x$ diverges.
 
 
 
@@ -82,7 +82,7 @@ We have the following:
 
 ````{prf:remark}
 
-Note that all the conclusions are about $\int_a^\infty f(x) \\mathrm{d}x$. Indeed, the test is used to determine the convergence of $\int_a^\infty f(x) \\mathrm{d}x$ based on the knowledge of convergence of $\int_a^\infty g(x) \\mathrm{d}x$
+Note that all the conclusions are about $\int_a^\infty f(x) \;\mathrm{d}x$. Indeed, the test is used to determine the convergence of $\int_a^\infty f(x) \;\mathrm{d}x$ based on the knowledge of convergence of $\int_a^\infty g(x) \;\mathrm{d}x$
 ````
 
 ````{prf:proof}
@@ -93,7 +93,7 @@ Note that all the conclusions are about $\int_a^\infty f(x) \\mathrm{d}x$. Indee
 \end{align*}
 ```
 
-and $g(x) > 0 \\forall x > c$. It follows that 
+and $g(x) > 0 \;\forall x > c$. It follows that 
 
 ```{math}
 \begin{align*}(l - \varepsilon) g(x) < f(x) < (l + \varepsilon) g(x)
@@ -110,7 +110,7 @@ By the Comparison Test ({prf:ref}`thm:25`),
 \end{align*}
 ```
 
-implies that $\int_a^\infty g(x) \\mathrm{d}x$ converges if $\int_a^\infty f(x) \\mathrm{d}x$ converges. Similarly,
+implies that $\int_a^\infty g(x) \;\mathrm{d}x$ converges if $\int_a^\infty f(x) \;\mathrm{d}x$ converges. Similarly,
 
 ```{math}
 \begin{align*}
@@ -119,7 +119,7 @@ implies that $\int_a^\infty g(x) \\mathrm{d}x$ converges if $\int_a^\infty f(x) 
 \end{align*}
 ```
 
-implies that $\int_a^\infty f(x) \\mathrm{d}x$ converges if $\int_a^\infty g(x) \\mathrm{d}x$ converges.
+implies that $\int_a^\infty f(x) \;\mathrm{d}x$ converges if $\int_a^\infty g(x) \;\mathrm{d}x$ converges.
 
 
 
@@ -130,7 +130,7 @@ implies that $\int_a^\infty f(x) \\mathrm{d}x$ converges if $\int_a^\infty g(x) 
 \end{align*}
 ```
 
-and $g(x) > 0 \\forall x > c$. Rearranging the above inequality, we obtain
+and $g(x) > 0 \;\forall x > c$. Rearranging the above inequality, we obtain
 
 ```{math}
 \begin{align*}
@@ -138,7 +138,7 @@ and $g(x) > 0 \\forall x > c$. Rearranging the above inequality, we obtain
 \end{align*}
 ```
 
-Thus, it follows from the Comparison Test that $\int_a^\infty f(x) \\mathrm{d}x$ converges if $\int_a^\infty g(x) \\mathrm{d}x$ converges. 
+Thus, it follows from the Comparison Test that $\int_a^\infty f(x) \;\mathrm{d}x$ converges if $\int_a^\infty g(x) \;\mathrm{d}x$ converges. 
 
 
 
@@ -150,7 +150,7 @@ Thus, it follows from the Comparison Test that $\int_a^\infty f(x) \\mathrm{d}x$
 \end{align*}
 ```
 
-and $g(x) > 0 \\forall x > c$. It follows that 
+and $g(x) > 0 \;\forall x > c$. It follows that 
 
 ```{math}
 \begin{align*}
@@ -159,7 +159,7 @@ f(x) > M g(x) > 0
 \end{align*}
 ```
 
-Then $\int_a^\infty f(x) \\mathrm{d}x$ diverges if $\int_a^\infty g(x) \\mathrm{d}x$ diverges.
+Then $\int_a^\infty f(x) \;\mathrm{d}x$ diverges if $\int_a^\infty g(x) \;\mathrm{d}x$ diverges.
 
 ````
 
@@ -169,7 +169,7 @@ Then $\int_a^\infty f(x) \\mathrm{d}x$ diverges if $\int_a^\infty g(x) \\mathrm{
 Suppose that $f \geq 0$ and $f$ decreases monotonically on $[1, \infty)$. Then 
 
 ```{math}
-\begin{align*}\int_1^\infty f(x) \\mathrm{d}x
+\begin{align*}\int_1^\infty f(x) \;\mathrm{d}x
 \end{align*}
 ```
 

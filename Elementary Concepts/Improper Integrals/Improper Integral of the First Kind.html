@@ -614,23 +614,23 @@ title="Print to PDF"
 <section class="definition-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> for all <span class="math notranslate nohighlight">\(b \geq a\)</span> where <span class="math notranslate nohighlight">\(a\)</span> is fixed. Define</p>
 <div class="math notranslate nohighlight" id="equation-eq-49">
-<span class="eqno">(34)<a class="headerlink" href="#equation-eq-49" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}\int_a^\infty f(x) \\mathrm{d}x
-= \lim_{b \to \infty}\int_a^b f(x) \\mathrm{d}x
-\end{align}\end{split}\]</div>
+<span class="eqno">(34)<a class="headerlink" href="#equation-eq-49" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^\infty f(x) \;\mathrm{d}x
+= \lim_{b \to \infty}\int_a^b f(x) \;\mathrm{d}x
+\end{align}\]</div>
 <p>provided that the limit exists and is <strong>finite</strong>. In that case, we say the integral on the left-hand side of <a class="reference internal" href="#equation-eq-49">(34)</a><strong>converges</strong>. And this kind of improper integral with infinite integration limits is called the <strong>improper integral of the first kind</strong>. If</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\int_a^\infty\abs{f(x)}\\mathrm{d}x
-= \lim_{b \to \infty}\int_a^b \abs{f(x)}\\mathrm{d}x
-&lt; \infty\end{align*}\end{split}\]</div>
-<p>the integral <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> is said to converge <strong>absolutely</strong>.</p>
+\[\begin{align*}\int_a^\infty\abs{f(x)}\;\mathrm{d}x
+= \lim_{b \to \infty}\int_a^b \abs{f(x)}\;\mathrm{d}x
+&lt; \infty\end{align*}\]</div>
+<p>the integral <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> is said to converge <strong>absolutely</strong>.</p>
 </section>
 </div><div class="proof theorem admonition" id="theorem-1">
 <p class="admonition-title"><span class="caption-number">Theorem 28 </span></p>
 <section class="theorem-content" id="proof-content">
-<p>Suppose that <span class="math notranslate nohighlight">\(f \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> for all <span class="math notranslate nohighlight">\(b \geq a\)</span>, and <span class="math notranslate nohighlight">\(f \geq 0\)</span> on <span class="math notranslate nohighlight">\([a, \infty)\)</span>. Let <span class="math notranslate nohighlight">\(F(b) = \int_a^b f(x) \\mathrm{d}x\)</span>. Then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> converges if and only if <span class="math notranslate nohighlight">\(F(b)\)</span> is bounded on <span class="math notranslate nohighlight">\([a, \infty)\)</span>.</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(f \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> for all <span class="math notranslate nohighlight">\(b \geq a\)</span>, and <span class="math notranslate nohighlight">\(f \geq 0\)</span> on <span class="math notranslate nohighlight">\([a, \infty)\)</span>. Let <span class="math notranslate nohighlight">\(F(b) = \int_a^b f(x) \;\mathrm{d}x\)</span>. Then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges if and only if <span class="math notranslate nohighlight">\(F(b)\)</span> is bounded on <span class="math notranslate nohighlight">\([a, \infty)\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Assume first <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> converges, then <span class="math notranslate nohighlight">\(F(\infty) &lt; \infty\)</span>. <span class="math notranslate nohighlight">\(F\)</span> increases monotonically since <span class="math notranslate nohighlight">\(f \geq 0\)</span>. It follows that <span class="math notranslate nohighlight">\(F(b) \leq F(\infty) &lt; \infty\)</span>, hence bounded. Conversely, if <span class="math notranslate nohighlight">\(F(b)\)</span> is bounded on <span class="math notranslate nohighlight">\([a, \infty)\)</span>, then by <a class="reference internal" href="../Functional%20Limits/Limits%20at%20Infinity.html#pro:2">Proposition 4</a>, <span class="math notranslate nohighlight">\(F(\infty)\)</span> exists, i.e., <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> converges since <span class="math notranslate nohighlight">\(F\)</span> is increasing.</p>
+<p>Proof. Assume first <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges, then <span class="math notranslate nohighlight">\(F(\infty) &lt; \infty\)</span>. <span class="math notranslate nohighlight">\(F\)</span> increases monotonically since <span class="math notranslate nohighlight">\(f \geq 0\)</span>. It follows that <span class="math notranslate nohighlight">\(F(b) \leq F(\infty) &lt; \infty\)</span>, hence bounded. Conversely, if <span class="math notranslate nohighlight">\(F(b)\)</span> is bounded on <span class="math notranslate nohighlight">\([a, \infty)\)</span>, then by <a class="reference internal" href="../Functional%20Limits/Limits%20at%20Infinity.html#pro:2">Proposition 4</a>, <span class="math notranslate nohighlight">\(F(\infty)\)</span> exists, i.e., <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges since <span class="math notranslate nohighlight">\(F\)</span> is increasing.</p>
 </div>
 <div class="proof theorem admonition" id="thm:25">
 <p class="admonition-title"><span class="caption-number">Theorem 29 </span></p>
@@ -643,8 +643,8 @@ title="Print to PDF"
 \end{align*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(c\)</span> is a constant. Then we have</p>
 <ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> converges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \\mathrm{d}x\)</span> converges.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\int_a^\infty g(x) \\mathrm{d}x\)</span> diverges if <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> diverges.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> converges.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> diverges if <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> diverges.</p></li>
 </ol>
 </section>
 </div><div class="proof admonition" id="proof">
@@ -659,22 +659,22 @@ title="Print to PDF"
 \end{align*}\]</div>
 <p>We have the following:</p>
 <ol class="simple">
-<li><p>If <span class="math notranslate nohighlight">\(0 &lt; l &lt; \infty\)</span>, then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> and <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \\mathrm{d}x\)</span> both converge or both diverge. In other words, <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> converges if and only if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \\mathrm{d}x\)</span> converges.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(l = 0\)</span>, then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> converges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \\mathrm{d}x\)</span> converges.</p></li>
-<li><p>If <span class="math notranslate nohighlight">\(l = \infty\)</span>, then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> diverges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \\mathrm{d}x\)</span> diverges.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(0 &lt; l &lt; \infty\)</span>, then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> and <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> both converge or both diverge. In other words, <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges if and only if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> converges.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(l = 0\)</span>, then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> converges.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(l = \infty\)</span>, then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> diverges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> diverges.</p></li>
 </ol>
 </section>
 </div><div class="proof remark admonition" id="remark-4">
 <p class="admonition-title"><span class="caption-number">Remark 11 </span></p>
 <section class="remark-content" id="proof-content">
-<p>Note that all the conclusions are about <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span>. Indeed, the test is used to determine the convergence of <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> based on the knowledge of convergence of <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \\mathrm{d}x\)</span></p>
+<p>Note that all the conclusions are about <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span>. Indeed, the test is used to determine the convergence of <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> based on the knowledge of convergence of <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span></p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. (Proof of 1) Choose <span class="math notranslate nohighlight">\(0 &lt; \varepsilon &lt; l\)</span>. Then there exists <span class="math notranslate nohighlight">\(c &gt; a\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{\frac{f(x)}{g(x)} - l} &lt; \varepsilon\quad\forall x &gt; c
 \end{align*}\]</div>
-<p>and <span class="math notranslate nohighlight">\(g(x) &gt; 0 \\forall x &gt; c\)</span>. It follows that</p>
+<p>and <span class="math notranslate nohighlight">\(g(x) &gt; 0 \;\forall x &gt; c\)</span>. It follows that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}(l - \varepsilon) g(x) &lt; f(x) &lt; (l + \varepsilon) g(x)
 \quad\forall x &gt; c
@@ -685,43 +685,43 @@ title="Print to PDF"
 0 &lt; (l - \varepsilon) g(x) &lt; f(x)
 \quad\forall x &gt; c
 \end{align*}\]</div>
-<p>implies that <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \\mathrm{d}x\)</span> converges if <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> converges. Similarly,</p>
+<p>implies that <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> converges if <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges. Similarly,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 0 \leq f(x) &lt; (l + \varepsilon) g(x)
 \quad\forall x &gt; c
 \end{align*}\]</div>
-<p>implies that <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> converges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \\mathrm{d}x\)</span> converges.</p>
+<p>implies that <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> converges.</p>
 <p>(Proof of 2) Choose a positive number <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. There exists <span class="math notranslate nohighlight">\(c &gt; a\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{\frac{f(x)}{g(x)}} &lt; \varepsilon\quad\forall x &gt; c
 \end{align*}\]</div>
-<p>and <span class="math notranslate nohighlight">\(g(x) &gt; 0 \\forall x &gt; c\)</span>. Rearranging the above inequality, we obtain</p>
+<p>and <span class="math notranslate nohighlight">\(g(x) &gt; 0 \;\forall x &gt; c\)</span>. Rearranging the above inequality, we obtain</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 0 \leq f(x) &lt;  \varepsilon g(x)
 \end{align*}\]</div>
-<p>Thus, it follows from the Comparison Test that <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> converges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \\mathrm{d}x\)</span> converges.</p>
+<p>Thus, it follows from the Comparison Test that <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> converges.</p>
 <p>(Proof of 3) Choose a positive number <span class="math notranslate nohighlight">\(M &gt; 0\)</span>. By the definition of infinite limits, there exists <span class="math notranslate nohighlight">\(c &gt; a\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\frac{f(x)}{g(x)} &gt; M
 \quad\forall x &gt; c
 \end{align*}\]</div>
-<p>and <span class="math notranslate nohighlight">\(g(x) &gt; 0 \\forall x &gt; c\)</span>. It follows that</p>
+<p>and <span class="math notranslate nohighlight">\(g(x) &gt; 0 \;\forall x &gt; c\)</span>. It follows that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f(x) &gt; M g(x) &gt; 0
 \quad\forall x &gt; c
 \end{align*}\]</div>
-<p>Then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \\mathrm{d}x\)</span> diverges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \\mathrm{d}x\)</span> diverges.</p>
+<p>Then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> diverges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> diverges.</p>
 </div>
 <div class="proof theorem admonition" id="thm:22">
 <p class="admonition-title"><span class="caption-number">Theorem 31 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(f \geq 0\)</span> and <span class="math notranslate nohighlight">\(f\)</span> decreases monotonically on <span class="math notranslate nohighlight">\([1, \infty)\)</span>. Then</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\int_1^\infty f(x) \\mathrm{d}x
-\end{align*}\end{split}\]</div>
+\[\begin{align*}\int_1^\infty f(x) \;\mathrm{d}x
+\end{align*}\]</div>
 <p>converges if and only if</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{n=1}^\infty f(n)

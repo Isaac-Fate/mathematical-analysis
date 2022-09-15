@@ -615,9 +615,9 @@ title="Print to PDF"
 <section class="theorem-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(f, g \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span>. Then <span class="math notranslate nohighlight">\(c_1 f + c_2 g \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> where <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span> are constants. In that case,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\int_a^b c_1 f + c_2 g \\mathrm{d}\alpha
-= c_1 \int_a^b f \\mathrm{d}\alpha
-+ c_2 \int_a^b g \\mathrm{d}\alpha\end{align*}\end{split}\]</div>
+\[\begin{align*}\int_a^b c_1 f + c_2 g \;\mathrm{d}\alpha
+= c_1 \int_a^b f \;\mathrm{d}\alpha
++ c_2 \int_a^b g \;\mathrm{d}\alpha\end{align*}\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(P\)</span> be a partition on <span class="math notranslate nohighlight">\([a,b]\)</span>. The Riemann-Stieltjes sum of <span class="math notranslate nohighlight">\(c_1 f + c_2 g\)</span> can be written as</p>
@@ -630,18 +630,18 @@ S(P, c_1 f + c_2 g, \alpha)
 <p>Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. Since <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> then there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime}\)</span>
 such that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \\mathrm{d}\alpha} &lt; \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supset P_\varepsilon^{\prime}\end{align*}\end{split}\]</div>
+\[\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} &lt; \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supset P_\varepsilon^{\prime}\end{align*}\]</div>
 <p>Similarly, since <span class="math notranslate nohighlight">\(g \in\mathfrak{R}(\alpha)\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span> such that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{S(P, g, \alpha) - \int_a^b g \\mathrm{d}\alpha} &lt; \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supset P_\varepsilon^{\prime\prime}\end{align*}\end{split}\]</div>
+\[\begin{align*}\abs{S(P, g, \alpha) - \int_a^b g \; \mathrm{d}\alpha} &lt; \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supset P_\varepsilon^{\prime\prime}\end{align*}\]</div>
 <p>Let <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> be the refinement of <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime}\)</span> and <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span>, i.e., <span class="math notranslate nohighlight">\(P = P_\varepsilon^{\prime}\cup P_\varepsilon^{\prime\prime}\)</span>. Then for any <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}&amp;\abs{
 S(P, c_1 f + c_2 g, \alpha) 
-- c_1 \int_a^b f \\mathrm{d}\alpha
-- c_2 \int_a^b g \\mathrm{d}\alpha
-}\\&amp;\leq\abs{c_1}\abs{S(P,f,\alpha) - \int_a^b f \\mathrm{d}\alpha}
-+ \abs{c_2}\abs{S(P,g,\alpha) - \int_a^b g \\mathrm{d}\alpha}\\&amp;&lt; \abs{c_1}\frac{\varepsilon / 2}{1 + \abs{c_1}}
+- c_1 \int_a^b f \; \mathrm{d}\alpha
+- c_2 \int_a^b g \; \mathrm{d}\alpha
+}\\&amp;\leq\abs{c_1}\abs{S(P,f,\alpha) - \int_a^b f \; \mathrm{d}\alpha}
++ \abs{c_2}\abs{S(P,g,\alpha) - \int_a^b g \; \mathrm{d}\alpha}\\&amp;&lt; \abs{c_1}\frac{\varepsilon / 2}{1 + \abs{c_1}}
 + \abs{c_2}\frac{\varepsilon / 2}{1 + \abs{c_2}}\\&amp;&lt; \varepsilon\end{align*}\end{split}\]</div>
 <p>This completes the proof.</p>
 </div>
@@ -651,9 +651,9 @@ S(P, c_1 f + c_2 g, \alpha)
 <section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> and <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\beta)\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span>, then <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(c_1 \alpha + c_2 \beta)\)</span> where <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span> are constants. In that case,</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\int_a^b f \\mathrm{d}(c_1 \alpha + c_2 \beta)
-= c_1 \int_a^b f \\mathrm{d}\alpha
-+ c_2 \int_a^b f \\mathrm{d}\beta\end{align*}\end{split}\]</div>
+\[\begin{align*}\int_a^b f \;\mathrm{d}(c_1 \alpha + c_2 \beta)
+= c_1 \int_a^b f \;\mathrm{d}\alpha
++ c_2 \int_a^b f \;\mathrm{d}\beta\end{align*}\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(P\)</span> be a partition on <span class="math notranslate nohighlight">\([a,b]\)</span>. We have</p>
@@ -666,18 +666,18 @@ S(P, f, c_1 \alpha + c_2 \beta)
 <p>Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. Since <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> then there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime}\)</span>
 such that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \\mathrm{d}\alpha} &lt; \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supset P_\varepsilon^{\prime}\end{align*}\end{split}\]</div>
+\[\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} &lt; \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supset P_\varepsilon^{\prime}\end{align*}\]</div>
 <p>Similarly, since <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\beta)\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span> such that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{S(P, f, \beta) - \int_a^b f \\mathrm{d}\beta} &lt; \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supset P_\varepsilon^{\prime\prime}\end{align*}\end{split}\]</div>
+\[\begin{align*}\abs{S(P, f, \beta) - \int_a^b f \; \mathrm{d}\beta} &lt; \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supset P_\varepsilon^{\prime\prime}\end{align*}\]</div>
 <p>Let <span class="math notranslate nohighlight">\(P = P_\varepsilon^{\prime}\cup P_\varepsilon^{\prime\prime}\)</span>. Then for any <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}&amp;\abs{
 S(P, f, c_1 \alpha + c_2 \beta) 
-- c_1 \int_a^b f \\mathrm{d}\alpha
-- c_2 \int_a^b f \\mathrm{d}\beta
-}\\&amp;\leq\abs{c_1}\abs{S(P,f,\alpha) - \int_a^b f \\mathrm{d}\alpha}
-+ \abs{c_2}\abs{S(P,f,\beta) - \int_a^b f \\mathrm{d}\beta}\\&amp;&lt; \abs{c_1}\frac{\varepsilon / 2}{1 + \abs{c_1}}
+- c_1 \int_a^b f \; \mathrm{d}\alpha
+- c_2 \int_a^b f \; \mathrm{d}\beta
+}\\&amp;\leq\abs{c_1}\abs{S(P,f,\alpha) - \int_a^b f \; \mathrm{d}\alpha}
++ \abs{c_2}\abs{S(P,f,\beta) - \int_a^b f \; \mathrm{d}\beta}\\&amp;&lt; \abs{c_1}\frac{\varepsilon / 2}{1 + \abs{c_1}}
 + \abs{c_2}\frac{\varepsilon / 2}{1 + \abs{c_2}}\\&amp;&lt; \varepsilon\end{align*}\end{split}\]</div>
 </div>
 <p>If we divide the interval <span class="math notranslate nohighlight">\([a, b]\)</span> into two parts with some point <span class="math notranslate nohighlight">\(c \in(a, b)\)</span> in the middle, then the integral over the entire interval is the sum of the integrals on these two sub-intervals. This is also a kind of linearity of integrals considering the interval of integration.</p>
@@ -686,9 +686,9 @@ S(P, f, c_1 \alpha + c_2 \beta)
 <section class="lemma-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(c \in(a, b)\)</span>. We have</p>
 <div class="math notranslate nohighlight" id="equation-eq-52">
-<span class="eqno">(25)<a class="headerlink" href="#equation-eq-52" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}\int_a^b f \\mathrm{d}\alpha
-= \int_a^c f \\mathrm{d}\alpha
-+ \int_c^b f \\mathrm{d}\alpha\end{align}\end{split}\]</div>
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq-52" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
+= \int_a^c f \;\mathrm{d}\alpha
++ \int_c^b f \;\mathrm{d}\alpha\end{align}\]</div>
 <p>The existence of two integrals in <a class="reference internal" href="#equation-eq-52">(25)</a> will imply the existence of the third one.</p>
 </section>
 </div><div class="proof admonition" id="proof">
@@ -698,14 +698,14 @@ S(P, f, c_1 \alpha + c_2 \beta)
 S(P,f,\alpha) = S(P^\prime, f, \alpha) + S(P^{\prime\prime}, f, \alpha)
 \quad\forall P = P^\prime\cup P^{\prime\prime}\end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(P^\prime\)</span> and <span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span> are partitions on <span class="math notranslate nohighlight">\([a, b]\)</span>, <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\([c, b]\)</span>, respectively. Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be chosen arbitrarily.</p>
-<p>(Proof of existence of <span class="math notranslate nohighlight">\(\int_a^b f \\mathrm{d}\alpha\)</span>) Assume <span class="math notranslate nohighlight">\(\int_a^c f \\mathrm{d}\alpha\)</span> and <span class="math notranslate nohighlight">\(\int_c^b f \\mathrm{d}\alpha\)</span> exist. Then</p>
+<p>(Proof of existence of <span class="math notranslate nohighlight">\(\int_a^b f \;\mathrm{d}\alpha\)</span>) Assume <span class="math notranslate nohighlight">\(\int_a^c f \;\mathrm{d}\alpha\)</span> and <span class="math notranslate nohighlight">\(\int_c^b f \;\mathrm{d}\alpha\)</span> exist. Then</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{S(P^\prime, f, \alpha) - \int_a^c f \\mathrm{d}\alpha} &lt; \varepsilon / 2
-\quad\forall P^\prime\supset P_\varepsilon^\prime\end{align*}\end{split}\]</div>
+\[\begin{align*}\abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
+\quad\forall P^\prime\supset P_\varepsilon^\prime\end{align*}\]</div>
 <p>for some <span class="math notranslate nohighlight">\(P_\varepsilon^\prime\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span>. And</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{S(P^{\prime\prime}, f, \alpha) - \int_a^c f \\mathrm{d}\alpha} &lt; \varepsilon / 2
-\quad\forall P^{\prime\prime}\supset P_\varepsilon^{\prime\prime}\end{align*}\end{split}\]</div>
+\[\begin{align*}\abs{S(P^{\prime\prime}, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
+\quad\forall P^{\prime\prime}\supset P_\varepsilon^{\prime\prime}\end{align*}\]</div>
 <p>for some <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span> on <span class="math notranslate nohighlight">\([c, b]\)</span>. Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -725,24 +725,24 @@ P^{\prime\prime}&amp;\supset P_\varepsilon^{\prime\prime}\end{align*}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}&amp;\abs{
 S(P, f, \alpha)
-- \int_a^c f \\mathrm{d}\alpha
-- \int_c^b f \\mathrm{d}\alpha 
+- \int_a^c f \; \mathrm{d}\alpha
+- \int_c^b f \; \mathrm{d}\alpha 
 }\\&amp;\leq\abs{
 S(P^\prime, f, \alpha)
-- \int_a^c f \\mathrm{d}\alpha
+- \int_a^c f \; \mathrm{d}\alpha
 } + \abs{
 S(P^{\prime\prime}, f, \alpha)
-- \int_c^b f \\mathrm{d}\alpha
+- \int_c^b f \; \mathrm{d}\alpha
 }\\&amp;&lt; \varepsilon / 2 + \varepsilon / 2 \\&amp;= \varepsilon\end{align*}\end{split}\]</div>
 <p>Therefore, <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> and <a class="reference internal" href="#equation-eq-52">(25)</a> holds.</p>
-<p>(Proof of existence of <span class="math notranslate nohighlight">\(\int_c^b f \\mathrm{d}\alpha\)</span>) Assume <span class="math notranslate nohighlight">\(\int_a^b f \\mathrm{d}\alpha\)</span> and <span class="math notranslate nohighlight">\(\int_a^c f \\mathrm{d}\alpha\)</span> exist. Then</p>
+<p>(Proof of existence of <span class="math notranslate nohighlight">\(\int_c^b f \;\mathrm{d}\alpha\)</span>) Assume <span class="math notranslate nohighlight">\(\int_a^b f \;\mathrm{d}\alpha\)</span> and <span class="math notranslate nohighlight">\(\int_a^c f \;\mathrm{d}\alpha\)</span> exist. Then</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \\mathrm{d}\alpha} &lt; \varepsilon / 2
-\quad\forall P \supset P_\varepsilon\end{align*}\end{split}\]</div>
+\[\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
+\quad\forall P \supset P_\varepsilon\end{align*}\]</div>
 <p>for some <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. And</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{S(P^\prime, f, \alpha) - \int_a^c f \\mathrm{d}\alpha} &lt; \varepsilon / 2
-\quad\forall P^\prime\supset P_\varepsilon^\prime\end{align*}\end{split}\]</div>
+\[\begin{align*}\abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
+\quad\forall P^\prime\supset P_\varepsilon^\prime\end{align*}\]</div>
 <p>for some <span class="math notranslate nohighlight">\(P_\varepsilon^\prime\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span>.
 Let</p>
 <div class="math notranslate nohighlight">
@@ -764,24 +764,24 @@ P &amp;= P^\prime\cup P^{\prime\prime}\supset(P_\varepsilon\cap[a, c]) \cup(P_\v
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}&amp;\abs{
 S(P^{\prime\prime}, f, \alpha)
-- \int_a^b f \\mathrm{d}\alpha
-+ \int_a^c f \\mathrm{d}\alpha 
+- \int_a^b f \; \mathrm{d}\alpha
++ \int_a^c f \; \mathrm{d}\alpha 
 }\\&amp;\leq\abs{
 S(P, f, \alpha)
-- \int_a^b f \\mathrm{d}\alpha
+- \int_a^b f \; \mathrm{d}\alpha
 } + \abs{
 S(P^\prime, f, \alpha)
-- \int_a^c f \\mathrm{d}\alpha
+- \int_a^c f \; \mathrm{d}\alpha
 }\\&amp;&lt; \varepsilon / 2 + \varepsilon / 2 \\&amp;= \varepsilon\end{align*}\end{split}\]</div>
 <p>Therefore, <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([c, b]\)</span> and <a class="reference internal" href="#equation-eq-52">(25)</a> holds.</p>
-<p>(Proof of existence of <span class="math notranslate nohighlight">\(\int_a^c f \\mathrm{d}\alpha\)</span>) Assume <span class="math notranslate nohighlight">\(\int_a^b f \\mathrm{d}\alpha\)</span> and <span class="math notranslate nohighlight">\(\int_c^b f \\mathrm{d}\alpha\)</span> exist. Then</p>
+<p>(Proof of existence of <span class="math notranslate nohighlight">\(\int_a^c f \;\mathrm{d}\alpha\)</span>) Assume <span class="math notranslate nohighlight">\(\int_a^b f \;\mathrm{d}\alpha\)</span> and <span class="math notranslate nohighlight">\(\int_c^b f \;\mathrm{d}\alpha\)</span> exist. Then</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \\mathrm{d}\alpha} &lt; \varepsilon / 2
-\quad\forall P \supset P_\varepsilon\end{align*}\end{split}\]</div>
+\[\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
+\quad\forall P \supset P_\varepsilon\end{align*}\]</div>
 <p>for some <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. And</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{S(P^{\prime\prime}, f, \alpha) - \int_c^b f \\mathrm{d}\alpha} &lt; \varepsilon / 2
-\quad\forall P^{\prime\prime}\supset P_\varepsilon^{\prime\prime}\end{align*}\end{split}\]</div>
+\[\begin{align*}\abs{S(P^{\prime\prime}, f, \alpha) - \int_c^b f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
+\quad\forall P^{\prime\prime}\supset P_\varepsilon^{\prime\prime}\end{align*}\]</div>
 <p>for some <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span> on <span class="math notranslate nohighlight">\([c, b]\)</span>.
 Let</p>
 <div class="math notranslate nohighlight">
@@ -803,14 +803,14 @@ P &amp;= P^\prime\cup P^{\prime\prime}\supset(P_\varepsilon\cap[a, c]) \cup(P_\v
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}&amp;\abs{
 S(P^\prime, f, \alpha)
-- \int_a^b f \\mathrm{d}\alpha
-+ \int_c^b f \\mathrm{d}\alpha 
+- \int_a^b f \; \mathrm{d}\alpha
++ \int_c^b f \; \mathrm{d}\alpha 
 }\\&amp;\leq\abs{
 S(P, f, \alpha)
-- \int_a^b f \\mathrm{d}\alpha
+- \int_a^b f \; \mathrm{d}\alpha
 } + \abs{
 S(P^{\prime\prime}, f, \alpha)
-- \int_c^b f \\mathrm{d}\alpha
+- \int_c^b f \; \mathrm{d}\alpha
 }\\&amp;&lt; \varepsilon / 2 + \varepsilon / 2 \\&amp;= \varepsilon\end{align*}\end{split}\]</div>
 <p>Therefore, <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span> and <a class="reference internal" href="#equation-eq-52">(25)</a> holds.</p>
 </div>

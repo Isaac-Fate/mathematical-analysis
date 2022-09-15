@@ -614,9 +614,9 @@ title="Print to PDF"
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. For <span class="math notranslate nohighlight">\(x \in[a, b]\)</span>, put</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-F(x) = \int_a^x f(t) \\mathrm{d} t
-\end{align*}\end{split}\]</div>
+\[\begin{align*}
+F(x) = \int_a^x f(t) \;\mathrm{d} t
+\end{align*}\]</div>
 <p>Then, <span class="math notranslate nohighlight">\(F\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>(more precisely, <span class="math notranslate nohighlight">\(F\)</span>  is uniformly continuous). Furthermore, if <span class="math notranslate nohighlight">\(f\)</span> is continuous at some point <span class="math notranslate nohighlight">\(x_0 \in[a, b]\)</span>, then <span class="math notranslate nohighlight">\(F\)</span> is differentiable at <span class="math notranslate nohighlight">\(x_0\)</span>, and</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -633,14 +633,14 @@ F^\prime(x_0) = f(x_0)
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
 f(x) = \begin{cases}
-2x \sin \frac{1}{x} - \cos \frac{1}{x} &amp;-\frac{1}{\pi} \leq x \leq \frac{1}{\pi}, \x\neq 0 \\ 
+2x \sin \frac{1}{x} - \cos \frac{1}{x} &amp;-\frac{1}{\pi} \leq x \leq \frac{1}{\pi}, \; x \neq 0 \\ 
 0 &amp;x = 0
 \end{cases}\end{align*}\end{split}\]</div>
-<p>Let <span class="math notranslate nohighlight">\(F(x) = \int_{-1/\pi}^{x} f(t) \\mathrm{d} t\)</span>, then a few steps of computation shows</p>
+<p>Let <span class="math notranslate nohighlight">\(F(x) = \int_{-1/\pi}^{x} f(t) \;\mathrm{d} t\)</span>, then a few steps of computation shows</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
 F(x) = \begin{cases}
-x^2 \sin \frac{1}{x}  &amp;-\frac{1}{\pi} \leq x \leq \frac{1}{\pi}, \x\neq 0 \\ 
+x^2 \sin \frac{1}{x}  &amp;-\frac{1}{\pi} \leq x \leq \frac{1}{\pi}, \; x \neq 0 \\ 
 0 &amp;x = 0
 \end{cases}\end{align*}\end{split}\]</div>
 <p>Note that even though <span class="math notranslate nohighlight">\(f\)</span> is discontinuous at <span class="math notranslate nohighlight">\(x = 0\)</span>, <span class="math notranslate nohighlight">\(F\)</span> remains continuous on the entire interval. But, because of this discontinuity of <span class="math notranslate nohighlight">\(f\)</span>,  <span class="math notranslate nohighlight">\(F\)</span> is not differentiable at <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
@@ -650,8 +650,8 @@ x^2 \sin \frac{1}{x}  &amp;-\frac{1}{\pi} \leq x \leq \frac{1}{\pi}, \x\neq 0 \\
 <section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\( f \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> and <span class="math notranslate nohighlight">\(F\)</span> is a differentiable function on <span class="math notranslate nohighlight">\([a, b]\)</span> such that <span class="math notranslate nohighlight">\(F^\prime = f\)</span>, then we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\int_a^b f \\mathrm{d} x = F(b) - F(a)
-\end{align*}\end{split}\]</div>
+\[\begin{align*}\int_a^b f \;\mathrm{d} x = F(b) - F(a)
+\end{align*}\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. TODO</p>
@@ -661,8 +661,8 @@ x^2 \sin \frac{1}{x}  &amp;-\frac{1}{\pi} \leq x \leq \frac{1}{\pi}, \x\neq 0 \\
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(F, G\)</span> be differentiable functions on <span class="math notranslate nohighlight">\([a, b]\)</span> such that <span class="math notranslate nohighlight">\(F^\prime = f \in\mathfrak{R}\)</span> and <span class="math notranslate nohighlight">\(G^\prime = g \in\mathfrak{R}\)</span>, then</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\int_a^b F(x)g(x) \\mathrm{d} x = F(b)G(b) - F(a)G(a) - \int_a^b f(x)G(x) \\mathrm{d} x
-\end{align*}\end{split}\]</div>
+\[\begin{align*}\int_a^b F(x)g(x) \;\mathrm{d} x = F(b)G(b) - F(a)G(a) - \int_a^b f(x)G(x) \;\mathrm{d} x
+\end{align*}\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. TODO</p>

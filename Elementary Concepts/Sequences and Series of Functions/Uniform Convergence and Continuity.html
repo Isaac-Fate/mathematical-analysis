@@ -641,8 +641,8 @@ title="Print to PDF"
 <p>Therefore, <span class="math notranslate nohighlight">\(\left\{A_n\right\}\)</span> indeed converges due to the Cauchy criterion for convergence of sequences.</p>
 <p>We now show that the limit of <span class="math notranslate nohighlight">\(f(t)\)</span> exists as <span class="math notranslate nohighlight">\(t \to x\)</span>, and it equals <span class="math notranslate nohighlight">\(A := \lim_{n \to \infty} A_n\)</span>. Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary. Since <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(E\)</span>, there exists <span class="math notranslate nohighlight">\(N_1 \in\Ns\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-8">
-<span class="eqno">(37)<a class="headerlink" href="#equation-eq-8" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}\abs{f(t) - f_n(t)} &lt; \frac{\varepsilon}{3}\quad\forall n \geq N_1, \\forall t \in E
-\end{align}\end{split}\]</div>
+<span class="eqno">(37)<a class="headerlink" href="#equation-eq-8" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{f(t) - f_n(t)} &lt; \frac{\varepsilon}{3}\quad\forall n \geq N_1, \;\forall t \in E
+\end{align}\]</div>
 <p>And since <span class="math notranslate nohighlight">\(f_n(t) \to A_n\)</span> as <span class="math notranslate nohighlight">\(t \to x\)</span>, there exists a neighborhood <span class="math notranslate nohighlight">\(V\)</span> of <span class="math notranslate nohighlight">\(x\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-9">
 <span class="eqno">(38)<a class="headerlink" href="#equation-eq-9" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{f_n(t) - A_n} &lt; \frac{\varepsilon}{3}\quad\forall t \in V \cap E
@@ -707,7 +707,7 @@ x_n &amp;= \frac{1}{n}\quad n \geq 1
 <p>Let <span class="math notranslate nohighlight">\(E\)</span> be the set consisting of terms of this sequence, i.e,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-E = \set{x \in \R}{\exists n \in \N, \x_n = x} = \left\{0\right\}\cup\set{\frac{1}{n}}{n \in \Ns}\end{align*}\]</div>
+E = \set{x \in \R}{\exists n \in \N, \; x_n = x} = \left\{0\right\}\cup\set{\frac{1}{n}}{n \in \Ns}\end{align*}\]</div>
 <p>It is clear that <span class="math notranslate nohighlight">\(\lim_{n \infty} x_n = x_0\)</span>, and <span class="math notranslate nohighlight">\(x_n \to x_0\)</span> if and only if <span class="math notranslate nohighlight">\(n \to\infty\)</span>. We now define a sequence of functions <span class="math notranslate nohighlight">\(\left\{f_i\right\}_{i \in \Ns}\)</span> on <span class="math notranslate nohighlight">\(E\)</span> by specifying the function value at each point:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -784,7 +784,7 @@ K_n := g_n^{-1}[\varepsilon, \infty)
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 K_{n}\supset K_{n+1}\end{align*}\]</div>
-<p>We now claim that <span class="math notranslate nohighlight">\(\bigcap_{n \in \Ns} K_n = \emptyset\)</span>. To see this, we assume <span class="math notranslate nohighlight">\(x \in\bigcap_{n \in \Ns} K_n\)</span>, which then implies <span class="math notranslate nohighlight">\(g_n(x) \geq\varepsilon\\forall n \in\Ns\)</span>. This leads to a contradiction since <span class="math notranslate nohighlight">\(g_n \to g \equiv 0\)</span>. Having that <span class="math notranslate nohighlight">\(\bigcap_{n \in \Ns} K_n = \emptyset\)</span>, by <a class="reference internal" href="../Topology/Compact%20Sets.html#thm:10">Theorem 2</a>, it follows that there exists some finite subset <span class="math notranslate nohighlight">\(J \subset\Ns\)</span> such that <span class="math notranslate nohighlight">\(\bigcap_{n \in J} K_n = \emptyset\)</span>. Suppose the largest number in <span class="math notranslate nohighlight">\(J\)</span> is <span class="math notranslate nohighlight">\(N\)</span>, then we have</p>
+<p>We now claim that <span class="math notranslate nohighlight">\(\bigcap_{n \in \Ns} K_n = \emptyset\)</span>. To see this, we assume <span class="math notranslate nohighlight">\(x \in\bigcap_{n \in \Ns} K_n\)</span>, which then implies <span class="math notranslate nohighlight">\(g_n(x) \geq\varepsilon\;\forall n \in\Ns\)</span>. This leads to a contradiction since <span class="math notranslate nohighlight">\(g_n \to g \equiv 0\)</span>. Having that <span class="math notranslate nohighlight">\(\bigcap_{n \in \Ns} K_n = \emptyset\)</span>, by <a class="reference internal" href="../Topology/Compact%20Sets.html#thm:10">Theorem 2</a>, it follows that there exists some finite subset <span class="math notranslate nohighlight">\(J \subset\Ns\)</span> such that <span class="math notranslate nohighlight">\(\bigcap_{n \in J} K_n = \emptyset\)</span>. Suppose the largest number in <span class="math notranslate nohighlight">\(J\)</span> is <span class="math notranslate nohighlight">\(N\)</span>, then we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 K_N = \bigcap_{n \in J} K_n = \emptyset\end{align*}\]</div>
@@ -795,9 +795,9 @@ K_N = \emptyset\quad\forall n \geq N
 \end{align}\]</div>
 <p>It then follows from <a class="reference internal" href="#equation-eq-12">(43)</a> and the definition of <span class="math notranslate nohighlight">\(K_n\)</span> that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-0 \leq g_n(x) &lt; \varepsilon\quad\forall n \geq N, \\forall x \in K
-\end{align*}\end{split}\]</div>
+\[\begin{align*}
+0 \leq g_n(x) &lt; \varepsilon\quad\forall n \geq N, \;\forall x \in K
+\end{align*}\]</div>
 <p>Therefore, <span class="math notranslate nohighlight">\(g_n \to 0\)</span> uniformly, i.e., <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly.</p>
 </div>
 <p>The compactness is necessary. Consider the following example.</p>

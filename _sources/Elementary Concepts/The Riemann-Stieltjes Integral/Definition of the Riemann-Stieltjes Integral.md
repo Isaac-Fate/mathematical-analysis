@@ -3,7 +3,7 @@
 ````{prf:definition}
 :label: def:7
 
-Suppose that $f$ and $\alpha$ are **real-valued****bounded** functions on $[a,b]$. Let $P = \left\{x_0, x_1, \ldots, x_n\right\}$ be a partition on $[a, b]$ and $t_k$ a point in the sub-interval $[x_{k-1}, x_k]$. A sum of the form 
+Suppose that $f$ and $\alpha$ are **real-valued bounded** functions on $[a,b]$. Let $P = \left\{x_0, x_1, \ldots, x_n\right\}$ be a partition on $[a, b]$ and $t_k$ a point in the sub-interval $[x_{k-1}, x_k]$. A sum of the form 
 
 ```{math}
 \begin{align*}
@@ -20,7 +20,7 @@ is called a Riemann-Stieltjes sum of $f$ with respect to $\alpha$. We say $f$ is
 
 for any refinement $P$ of $P_\varepsilon$ and for any choice of points $t_k$. (Note that $S(P,f,\alpha)$ depends on $t_k$.) Moreover, the number $A$ is uniquely determined if it exists (this is proved in the following {prf:ref}`pro:7`) and is denoted by 
 ```{math}
-\begin{align*}\int_a^b f \\mathrm{d}\alpha\end{align*}
+\begin{align*}\int_a^b f \;\mathrm{d}\alpha\end{align*}
 ```
 
 ````

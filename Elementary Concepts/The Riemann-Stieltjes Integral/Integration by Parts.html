@@ -614,10 +614,10 @@ title="Print to PDF"
 <section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(\alpha\in\mathfrak{R}(f)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\int_a^b f \\mathrm{d}\alpha
-+ \int_a^b \alpha\\mathrm{d}f
+\[\begin{align*}\int_a^b f \;\mathrm{d}\alpha
++ \int_a^b \alpha\;\mathrm{d}f
 = f(b)\alpha(b) - f(a)\alpha(a)
-\end{align*}\end{split}\]</div>
+\end{align*}\]</div>
 </section>
 </div><div class="proof remark admonition" id="remark-1">
 <p class="admonition-title"><span class="caption-number">Remark 9 </span></p>
@@ -627,7 +627,7 @@ title="Print to PDF"
 </div><div class="proof admonition" id="proof">
 <p>Proof. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-57">
-<span class="eqno">(27)<a class="headerlink" href="#equation-eq-57" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}\abs{S(P, f, \alpha) - \int_a^b f \\mathrm{d}\alpha} &lt; \varepsilon\quad\forall P \supset P_\varepsilon\end{align}\end{split}\]</div>
+<span class="eqno">(27)<a class="headerlink" href="#equation-eq-57" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} &lt; \varepsilon\quad\forall P \supset P_\varepsilon\end{align}\]</div>
 <p>Let <span class="math notranslate nohighlight">\(P = \left\{x_0, x_1, \ldots, x_n\right\}\supset P_\varepsilon\)</span> be any refinement of <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>. The Riemann-Stieltjes sum of <span class="math notranslate nohighlight">\(\alpha\)</span> with respect to <span class="math notranslate nohighlight">\(f\)</span> is</p>
 <div class="math notranslate nohighlight" id="equation-eq-54">
 <span class="eqno">(28)<a class="headerlink" href="#equation-eq-54" title="Permalink to this equation">#</a></span>\[\begin{align}
@@ -665,18 +665,18 @@ A - S(P, \alpha, f) = S(P^\ast, f, \alpha)
 \end{align*}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(P^\ast\supset P \supset P_\varepsilon\)</span>, it follows from <a class="reference internal" href="#equation-eq-57">(27)</a> that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{A - S(P, \alpha, f) - \int_a^b f \\mathrm{d}\alpha} 
-= \abs{S(P^\ast, f, \alpha) - \int_a^b f \\mathrm{d}\alpha}
-&lt; \varepsilon\end{align*}\end{split}\]</div>
+\[\begin{align*}\abs{A - S(P, \alpha, f) - \int_a^b f \; \mathrm{d}\alpha} 
+= \abs{S(P^\ast, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha}
+&lt; \varepsilon\end{align*}\]</div>
 <p>Recall <span class="math notranslate nohighlight">\(A = f(b)\alpha(b) - f(a)\alpha(a)\)</span>, we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{S(P, \alpha, f) + \int_a^b f \\mathrm{d}\alpha - f(b)\alpha(b) + f(a)\alpha(a)} &lt; \varepsilon\quad\forall P \supset P_\varepsilon\end{align*}\end{split}\]</div>
+\[\begin{align*}\abs{S(P, \alpha, f) + \int_a^b f \; \mathrm{d}\alpha - f(b)\alpha(b) + f(a)\alpha(a)} &lt; \varepsilon\quad\forall P \supset P_\varepsilon\end{align*}\]</div>
 <p>This implies that <span class="math notranslate nohighlight">\(\alpha\in\mathfrak{R}(f)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\int_a^b f \\mathrm{d}\alpha
-= -\int_a^b f \\mathrm{d}\alpha 
+\[\begin{align*}\int_a^b f \;\mathrm{d}\alpha
+= -\int_a^b f \;\mathrm{d}\alpha 
 + f(b)\alpha(b) - f(a)\alpha(a)
-\end{align*}\end{split}\]</div>
+\end{align*}\]</div>
 </div>
 </section>
 

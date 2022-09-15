@@ -129,7 +129,7 @@ Let $\mathbf{u}\in\R^n$ be a unit vector. Define
 = \mathbf{x}_0 + t \mathbf{u}\end{align*}
 ```
 
-Since $E$ is open and $\mathbf{x}_0 \in E$, it is possible to chose $\delta > 0$ such that $\boldsymbol{\gamma}(t) \in E \\forall t \in(-\delta,\delta)$. Hence, $\boldsymbol{\gamma}: (-\delta,\delta) \to E$ is a well-defined function. Moreover, $\boldsymbol{\gamma}$ is differentiable in $(-\delta, \delta)$, and 
+Since $E$ is open and $\mathbf{x}_0 \in E$, it is possible to chose $\delta > 0$ such that $\boldsymbol{\gamma}(t) \in E \;\forall t \in(-\delta,\delta)$. Hence, $\boldsymbol{\gamma}: (-\delta,\delta) \to E$ is a well-defined function. Moreover, $\boldsymbol{\gamma}$ is differentiable in $(-\delta, \delta)$, and 
 
 ```{math}
 :label: eq:44
