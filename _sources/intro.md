@@ -1,6 +1,6 @@
 # Welcome to This Notebook on Mathematics
 
-This is a notebook that covers some topics of mathematics.
+This notebook introduces some fundamental topics on mathematical analysis.
 
 ```{tableofcontents}
 ```
