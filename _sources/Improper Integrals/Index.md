@@ -1,3 +1,0 @@
-# Improper Integrals
-```{tableofcontents}
-```

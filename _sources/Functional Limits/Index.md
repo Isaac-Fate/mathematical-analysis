@@ -1,3 +1,0 @@
-# Functional Limits
-```{tableofcontents}
-```
