@@ -1,2 +1,4 @@
 Riemann-Stieltjes
 pointwise
+integrand
+surjective

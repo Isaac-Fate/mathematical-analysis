@@ -1,0 +1,1 @@
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QLet \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be a real-valued function on \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}

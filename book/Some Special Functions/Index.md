@@ -1,3 +1,0 @@
-# Some Special Functions
-```{tableofcontents}
-```

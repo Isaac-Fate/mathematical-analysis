@@ -21,8 +21,8 @@ latex:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/Isaac-Fate/math/tree/master/  # Online location of your book
-  path_to_book: math  # Optional path to your book, relative to the repository root
+  url: https://github.com/Isaac-Fate/mathematical-analysis/tree/master/  # Online location of your book
+  path_to_book: book  # Optional path to your book, relative to the repository root
   branch: master  # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book
@@ -36,11 +36,26 @@ launch_buttons:
   colab_url: "https://colab.research.google.com"
   thebe: true
 
+parse:
+  myst_enable_extensions:  # default extensions to enable in the myst parser. See https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_admonition
+    - html_image
+    - linkify
+    - replacements
+    - smartquotes
+    - substitution
+
 sphinx:
   extra_extensions:
     - sphinx_proof
   config:
     bibtex_reference_style: author_year
+    latex_elements:
+      preamble: "\\intervalconfig{soft open fences}"
     mathjax_config:
       tex:
         macros:

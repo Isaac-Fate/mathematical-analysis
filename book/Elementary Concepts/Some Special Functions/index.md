@@ -1,0 +1,4 @@
+# Some Special Functions
+
+```{tableofcontents}
+```

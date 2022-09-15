@@ -1,16 +1,16 @@
 /.DS_Store
 
-/*.aux
-/*.bbl
-/*.bcf
-/*.blg
-/*.fdb_latexmk
-/*.fls
-/*.log
-/*.out
-/*.run.xml
-/*.synctex.gz
-/*.toc
+tex/*.aux
+tex/*.bbl
+tex/*.bcf
+tex/*.blg
+tex/*.fdb_latexmk
+tex/*.fls
+tex/*.log
+tex/*.out
+tex/*.run.xml
+tex/*.synctex.gz
+tex/*.toc
 
 /book/_build
 /scripts
