@@ -51,7 +51,7 @@ Note that even though $f$ is discontinuous at $x = 0$, $F$ remains continuous on
 
 ````
 
-````{prf:theorem}
+````{prf:theorem}Fundamental Theorem of Calculus
 :label: thm:1
 
 If $ f \in\mathfrak{R}$ on $[a, b]$ and $F$ is a differentiable function on $[a, b]$ such that $F^\prime = f$, then we have
@@ -67,7 +67,7 @@ If $ f \in\mathfrak{R}$ on $[a, b]$ and $F$ is a differentiable function on $[a,
 TODO
 ````
 
-````{prf:theorem}
+````{prf:theorem}Integration by Parts
 :label: thm:2
 
 Let $F, G$ be differentiable functions on $[a, b]$ such that $F^\prime = f \in\mathfrak{R}$ and $G^\prime = g \in\mathfrak{R}$, then 

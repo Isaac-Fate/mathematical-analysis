@@ -609,23 +609,31 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="mean-value-theorem-for-riemann-stieltjes-integrals">
 <h1>Mean Value Theorem for Riemann-Stieltjes Integrals<a class="headerlink" href="#mean-value-theorem-for-riemann-stieltjes-integrals" title="Permalink to this headline">#</a></h1>
-<div class="proof theorem admonition" id="thm:27">
-<p class="admonition-title"><span class="caption-number">Theorem 25 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then there exists a number <span class="math notranslate nohighlight">\(c\)</span> satisfying</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\inf_{x \in[a, b]} f(x) \leq c \leq\sup_{x \in[a, b]} f (x)
-\end{align*}\]</div>
-<p>such that</p>
-<div class="math notranslate nohighlight" id="equation-eq-58">
-<span class="eqno">(33)<a class="headerlink" href="#equation-eq-58" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
+<div class="highlight-{prf:theorem}First notranslate"><div class="highlight"><pre><span></span>:label: thm:27
+
+Suppose that $\alpha$ is increasing on $[a, b]$. If $f \in\mathfrak{R}(\alpha)$ on $[a, b]$, then there exists a number $c$ satisfying
+
+```{math}
+\begin{align*}\inf_{x \in[a, b]} f(x) \leq c \leq\sup_{x \in[a, b]} f (x)
+\end{align*}
+```
+
+such that 
+
+```{math}
+:label: eq:58
+\begin{align}\int_a^b f \;\mathrm{d}\alpha
 = c \int_{a}^{b}\mathrm{d}\alpha
 = c( \alpha(b) - \alpha(a) )
-\end{align}\]</div>
-<p>Furthermore, if <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, then there exists <span class="math notranslate nohighlight">\(x_0 \in[a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(x_0) = c\)</span>.</p>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. If <span class="math notranslate nohighlight">\(\alpha\)</span> is a constant function, then the conclusion is trivial since all values in <a class="reference internal" href="#equation-eq-58">(33)</a> are zeros. In the rest of the proof, we assume <span class="math notranslate nohighlight">\(\alpha\)</span> is non-constant. In that case, <span class="math notranslate nohighlight">\(\alpha(b) &gt; \alpha(a)\)</span>. To simplify the notation, we let <span class="math notranslate nohighlight">\(m = \inf_{x \in[a, b]} f(x)\)</span> and <span class="math notranslate nohighlight">\(M = \sup_{x \in[a, b]} f(x)\)</span>. Since constant functions are clearly integrable, by <a class="reference internal" href="Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 23</a>, we have</p>
+\end{align}
+```
+
+Furthermore, if $f$ is continuous on $[a, b]$, then there exists $x_0 \in[a, b]$ such that $f(x_0) = c$.
+
+</pre></div>
+</div>
+<div class="proof admonition" id="proof">
+<p>Proof. If <span class="math notranslate nohighlight">\(\alpha\)</span> is a constant function, then the conclusion is trivial since all values in <code class="xref eq docutils literal notranslate"><span class="pre">eq:58</span></code> are zeros. In the rest of the proof, we assume <span class="math notranslate nohighlight">\(\alpha\)</span> is non-constant. In that case, <span class="math notranslate nohighlight">\(\alpha(b) &gt; \alpha(a)\)</span>. To simplify the notation, we let <span class="math notranslate nohighlight">\(m = \inf_{x \in[a, b]} f(x)\)</span> and <span class="math notranslate nohighlight">\(M = \sup_{x \in[a, b]} f(x)\)</span>. Since constant functions are clearly integrable, by <a class="reference internal" href="Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 16</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_{a}^{b} m \;\mathrm{d}\alpha\leq\int_{a}^{b} f \;\mathrm{d}\alpha\leq\int_{a}^{b} M \;\mathrm{d}\alpha\end{align*}\]</div>
 <p>It then follows that</p>
@@ -637,39 +645,44 @@ m \leq\frac{1}{\alpha(b) - \alpha(a)}\int_{a}^{b} f \;\mathrm{d}\alpha\leq M
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 c = \frac{1}{\alpha(b) - \alpha(a)}\int_{a}^{b} f \;\mathrm{d}\alpha\end{align*}\]</div>
-<p>Hence, <a class="reference internal" href="#equation-eq-58">(33)</a> is proved.</p>
+<p>Hence, <code class="xref eq docutils literal notranslate"><span class="pre">eq:58</span></code> is proved.</p>
 <p>If we assume further that <span class="math notranslate nohighlight">\(f\)</span> is continuous, then by the Intermediate Value Theorem, <span class="math notranslate nohighlight">\(\exists x_0 \in[a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f(x_0) = c
 \end{align*}\]</div>
 </div>
-<div class="proof theorem admonition" id="thm:28">
-<p class="admonition-title"><span class="caption-number">Theorem 26 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous and <span class="math notranslate nohighlight">\(f\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then, there exists a point <span class="math notranslate nohighlight">\(x_0 \in[a, b]\)</span> such that</p>
-<div class="math notranslate nohighlight" id="equation-eq-69">
-<span class="eqno">(34)<a class="headerlink" href="#equation-eq-69" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
+<div class="highlight-{prf:theorem}Second notranslate"><div class="highlight"><pre><span></span>:label: thm:28
+
+Suppose that $\alpha$ is continuous and $f$ is increasing on $[a, b]$. Then, there exists a point $x_0 \in[a, b]$ such that 
+
+```{math}
+:label: eq:69
+\begin{align}\int_a^b f \;\mathrm{d}\alpha
 = f(a) \int_a^{x_0}\mathrm{d}\alpha
-+ f(b) \int_{x_0}^b \mathrm{d}\alpha\end{align}\]</div>
-<p>Of course, all the integrals involved in <a class="reference internal" href="#equation-eq-69">(34)</a> exist.</p>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. (Existence of Integrals) Firstly, by <a class="reference internal" href="Monotonically%20Increasing%20Integrators.html#thm:34">Theorem 22</a>, we know that <span class="math notranslate nohighlight">\(\alpha\in\mathfrak{R}(f)\)</span>. And by the reciprocity law (<a class="reference internal" href="Integration%20by%20Parts.html#thm:36">Theorem 20</a>), it also holds that <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span>.</p>
-<p>(Integration by Parts) Then, applying the integration by parts (<a class="reference internal" href="Integration%20by%20Parts.html#thm:36">Theorem 20</a>) to <span class="math notranslate nohighlight">\(\int_a^b f \;\mathrm{d}\alpha\)</span>, we obtain</p>
++ f(b) \int_{x_0}^b \mathrm{d}\alpha\end{align}
+```
+
+Of course, all the integrals involved in {eq}`eq:69` exist.
+
+</pre></div>
+</div>
+<div class="proof admonition" id="proof">
+<p>Proof. (Existence of Integrals) Firstly, by <a class="reference internal" href="Monotonically%20Increasing%20Integrators.html#thm:34">Theorem 15</a>, we know that <span class="math notranslate nohighlight">\(\alpha\in\mathfrak{R}(f)\)</span>. And by the reciprocity law (<code class="xref prf prf-ref docutils literal notranslate"><span class="pre">thm:36</span></code>), it also holds that <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span>.</p>
+<p>(Integration by Parts) Then, applying the integration by parts (<code class="xref prf prf-ref docutils literal notranslate"><span class="pre">thm:36</span></code>) to <span class="math notranslate nohighlight">\(\int_a^b f \;\mathrm{d}\alpha\)</span>, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-70">
-<span class="eqno">(35)<a class="headerlink" href="#equation-eq-70" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
+<span class="eqno">(33)<a class="headerlink" href="#equation-eq-70" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
 = f(b)\alpha(b) - f(a)\alpha(a)
 - \int_a^b \alpha\;\mathrm{d}f
 \end{align}\]</div>
-<p>(First Mean Value Theorem) Since <span class="math notranslate nohighlight">\(f\)</span> is increasing and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous, by the First Mean Value Theorem (<a class="reference internal" href="#thm:27">Theorem 25</a>), we have</p>
+<p>(First Mean Value Theorem) Since <span class="math notranslate nohighlight">\(f\)</span> is increasing and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous, by the First Mean Value Theorem (<code class="xref prf prf-ref docutils literal notranslate"><span class="pre">thm:27</span></code>), we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-71">
-<span class="eqno">(36)<a class="headerlink" href="#equation-eq-71" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b \alpha\;\mathrm{d}f
+<span class="eqno">(34)<a class="headerlink" href="#equation-eq-71" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b \alpha\;\mathrm{d}f
 = \alpha(x_0) \int_a^b \mathrm{d} f
 = \alpha(x_0) ( f(b) - f(a) )
 \end{align}\]</div>
 <p>for some <span class="math notranslate nohighlight">\(x_0 \in[a, b]\)</span>.
-Combine <a class="reference internal" href="#equation-eq-70">(35)</a> and <a class="reference internal" href="#equation-eq-71">(36)</a>,</p>
+Combine <a class="reference internal" href="#equation-eq-70">(33)</a> and <a class="reference internal" href="#equation-eq-71">(34)</a>,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_a^b f \;\mathrm{d}\alpha
 = f(a) (\alpha(x_0) - \alpha(a))

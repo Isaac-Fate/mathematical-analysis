@@ -667,22 +667,25 @@ title="Print to PDF"
 \[\begin{align*}\sum_{i=1}^m \sum_{j=1}^\infty a_{ij}
 = \sum_{j=1}^\infty\sum_{i=1}^m a_{ij}\end{align*}\]</div>
 </section>
-</div><div class="proof theorem admonition" id="thm:15">
-<p class="admonition-title"><span class="caption-number">Theorem 11 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(\left\{a_{ij}\right\}\)</span>(<span class="math notranslate nohighlight">\(a_{ij}\in\C\)</span>) be a double series where <span class="math notranslate nohighlight">\(i, j \in\Ns\)</span>. If</p>
-<ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(\sum_{j=1}^\infty\abs{a_{ij}}
-= b_i &lt; \infty\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\sum b_i\)</span> converges</p></li>
-</ol>
-<p>(The two conditions above are equivalent to that <span class="math notranslate nohighlight">\(\sum_{i=1}^\infty\sum_{j=1}^\infty\abs{a_{ij}} &lt; \infty\)</span>.)
-Then we have</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\sum_{i=1}^\infty\sum_{j=1}^\infty a_{ij}
-= \sum_{j=1}^\infty\sum_{i=1}^\infty a_{ij}\end{align*}\]</div>
-</section>
-</div><div class="proof remark admonition" id="remark-2">
+</div><div class="highlight-{prf:theorem}Interchanging notranslate"><div class="highlight"><pre><span></span>:label: thm:15
+
+Let $\left\{a_{ij}\right\}$($a_{ij}\in\C$) be a double series where $i, j \in\Ns$. If 
+1. $\sum_{j=1}^\infty\abs{a_{ij}}
+= b_i &lt; \infty$
+2. $\sum b_i$ converges
+
+
+(The two conditions above are equivalent to that $\sum_{i=1}^\infty\sum_{j=1}^\infty\abs{a_{ij}} &lt; \infty$.)
+Then we have 
+
+```{math}
+\begin{align*}\sum_{i=1}^\infty\sum_{j=1}^\infty a_{ij}
+= \sum_{j=1}^\infty\sum_{i=1}^\infty a_{ij}\end{align*}
+```
+
+</pre></div>
+</div>
+<div class="proof remark admonition" id="remark-1">
 <p class="admonition-title"><span class="caption-number">Remark 4 </span></p>
 <section class="remark-content" id="proof-content">
 <p>We will provide another more interesting proof later using the continuity of the sequence of functions.</p>
@@ -794,7 +797,7 @@ Then <a class="reference internal" href="#equation-eq-26">(13)</a> implies that 
 = \sum_{j=1}^\infty\sum_{i=1}^\infty a_{ij}\end{align*}\]</div>
 </div>
 <p>The following example shows that we may not change the order of infinite summations at will in general.</p>
-<div class="proof example admonition" id="example-3">
+<div class="proof example admonition" id="example-2">
 <p class="admonition-title"><span class="caption-number">Example 1 </span></p>
 <section class="example-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\left\{a_{ij}\right\}_{i,j \in \Ns}\)</span> be given by</p>
@@ -844,7 +847,7 @@ Summing up each row, we have
 = 0
 \end{align}\]</div>
 <p>Clearly, the right-hand sides of <a class="reference internal" href="#equation-eq-27">(14)</a> and <a class="reference internal" href="#equation-eq-28">(15)</a> are not equal to each other.</p>
-<p>We can further check which condition of <a class="reference internal" href="#thm:15">Theorem 11</a> that <span class="math notranslate nohighlight">\(\left\{a_{ij}\right\}\)</span> fails to satisfy. We have</p>
+<p>We can further check which condition of <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">thm:15</span></code> that <span class="math notranslate nohighlight">\(\left\{a_{ij}\right\}\)</span> fails to satisfy. We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}\sum_{j=1}^\infty\abs{a_{ij}}
 = \begin{cases}
@@ -853,7 +856,7 @@ Summing up each row, we have
 \end{cases}
 = 2 - 2^{1-i} =: b_i
 \end{align*}\end{split}\]</div>
-<p>Therefore, the first condition of <a class="reference internal" href="#thm:15">Theorem 11</a> is satisfied. But</p>
+<p>Therefore, the first condition of <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">thm:15</span></code> is satisfied. But</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{i=1}^\infty b_i
 = \sum_{i=1}^\infty(2 - 2^{1-i})
@@ -861,7 +864,7 @@ Summing up each row, we have
 <p>which means <span class="math notranslate nohighlight">\(\sum b_i\)</span> does not converge.</p>
 </section>
 </div><p>We can always interchange the order of summations for non-negative terms.</p>
-<div class="proof corollary admonition" id="corollary-4">
+<div class="proof corollary admonition" id="corollary-3">
 <p class="admonition-title"><span class="caption-number">Corollary 1 </span></p>
 <section class="corollary-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\left\{a_{ij}\right\}\)</span> be a sequence of non-negative terms, i.e., <span class="math notranslate nohighlight">\(a_{i,j}\geq 0\)</span>. Then</p>
@@ -870,7 +873,7 @@ Summing up each row, we have
 = \sum_{j}\sum_{i} a_{ij}\end{align*}\]</div>
 <p>The case <span class="math notranslate nohighlight">\(\infty = \infty\)</span> may occur.</p>
 </section>
-</div><div class="proof remark admonition" id="remark-5">
+</div><div class="proof remark admonition" id="remark-4">
 <p class="admonition-title"><span class="caption-number">Remark 5 </span></p>
 <section class="remark-content" id="proof-content">
 <p>Note that we do not rule out <span class="math notranslate nohighlight">\(\infty\)</span> in this corollary. And actually, we only need to prove the case where <span class="math notranslate nohighlight">\(\infty\)</span> occurs.</p>
@@ -906,20 +909,23 @@ Hence,</p>
 \[\begin{align*}\sum_{i}\sum_{j} a_{ij} 
 = \sum_{j}\sum_{i} a_{ij}
 = \infty\end{align*}\]</div>
-<p>(Case 3) The only case left is that <span class="math notranslate nohighlight">\(\sum_{j} a_{ij} = b_i &lt; \infty\)</span> for all <span class="math notranslate nohighlight">\(i\)</span>, and <span class="math notranslate nohighlight">\(\sum b_i\)</span> converges. Then the conclusion follows directly from <a class="reference internal" href="#thm:15">Theorem 11</a>.</p>
+<p>(Case 3) The only case left is that <span class="math notranslate nohighlight">\(\sum_{j} a_{ij} = b_i &lt; \infty\)</span> for all <span class="math notranslate nohighlight">\(i\)</span>, and <span class="math notranslate nohighlight">\(\sum b_i\)</span> converges. Then the conclusion follows directly from <code class="xref prf prf-ref docutils literal notranslate"><span class="pre">thm:15</span></code>.</p>
 </div>
 </section>
 <section id="cauchy-product">
 <h2>Cauchy Product<a class="headerlink" href="#cauchy-product" title="Permalink to this headline">#</a></h2>
-<div class="proof theorem admonition" id="thm:17">
-<p class="admonition-title"><span class="caption-number">Theorem 12 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>Suppose that <span class="math notranslate nohighlight">\(\sum a_n\)</span> and <span class="math notranslate nohighlight">\(\sum b_n\)</span> are both convergent series, and <strong>at least one</strong> of them converges <strong>absolutely</strong>. Then their Cauchy product <span class="math notranslate nohighlight">\(\sum c_n\)</span> converges and</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\sum c_n = \sum a_n \sum b_n
-\end{align*}\]</div>
-</section>
-</div><div class="proof remark admonition" id="remark-7">
+<div class="highlight-{prf:theorem}Mertens's notranslate"><div class="highlight"><pre><span></span>:label: thm:17
+
+Suppose that $\sum a_n$ and $\sum b_n$ are both convergent series, and **at least one** of them converges **absolutely**. Then their Cauchy product $\sum c_n$ converges and 
+
+```{math}
+\begin{align*}\sum c_n = \sum a_n \sum b_n
+\end{align*}
+```
+
+</pre></div>
+</div>
+<div class="proof remark admonition" id="remark-5">
 <p class="admonition-title"><span class="caption-number">Remark 6 </span></p>
 <section class="remark-content" id="proof-content">
 <p>Note that the requirement of at least one series being absolutely convergent is only a sufficient condition. We will see in <a class="reference internal" href="#eg:2">Example 2</a> that it is possible the Cauchy product of two conditionally convergent series also converges.</p>

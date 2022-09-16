@@ -609,42 +609,53 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="differentiation">
 <h1>Differentiation<a class="headerlink" href="#differentiation" title="Permalink to this headline">#</a></h1>
-<div class="proof theorem admonition" id="thm:20">
-<p class="admonition-title"><span class="caption-number">Theorem 46 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>Suppose that <span class="math notranslate nohighlight">\(\mathbf{f}: E \subset\R^n \to\R^m\)</span> be differentiable at point <span class="math notranslate nohighlight">\(\mathbf{x}_0 \in E\)</span> where <span class="math notranslate nohighlight">\(E\)</span> is open, and <span class="math notranslate nohighlight">\(\mathbf{g}: V \supset\mathbf{f}(E) \to\R^k\)</span> be differentiable at <span class="math notranslate nohighlight">\(\mathbf{f}(\mathbf{x}_0)\)</span> where <span class="math notranslate nohighlight">\(V\)</span> is also open. Then the mapping <span class="math notranslate nohighlight">\(\mathbf{F}: E \to\R^k\)</span> defined by</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\mathbf{F}(\mathbf{x}) = \mathbf{g}(\mathbf{f}(\mathbf{x}))
-\end{align*}\]</div>
-<p>is differentiable at <span class="math notranslate nohighlight">\(\mathbf{x}_0\)</span>, and</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\mathbf{F}^\prime(\mathbf{x}_0)
+<div class="highlight-{prf:theorem}Chain notranslate"><div class="highlight"><pre><span></span>:label: thm:20
+
+Suppose that $\mathbf{f}: E \subset\R^n \to\R^m$ be differentiable at point $\mathbf{x}_0 \in E$ where $E$ is open, and $\mathbf{g}: V \supset\mathbf{f}(E) \to\R^k$ be differentiable at $\mathbf{f}(\mathbf{x}_0)$ where $V$ is also open. Then the mapping $\mathbf{F}: E \to\R^k$ defined by 
+
+```{math}
+\begin{align*}\mathbf{F}(\mathbf{x}) = \mathbf{g}(\mathbf{f}(\mathbf{x}))
+\end{align*}
+```
+
+is differentiable at $\mathbf{x}_0$, and 
+
+```{math}
+\begin{align*}\mathbf{F}^\prime(\mathbf{x}_0)
 = \mathbf{g}^\prime(\mathbf{f}(\mathbf{x}_0)) \mathbf{f}^\prime(\mathbf{x}_0)
-\end{align*}\]</div>
-</section>
-</div><div class="proof admonition" id="proof">
+\end{align*}
+```
+
+</pre></div>
+</div>
+<div class="proof admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
 <p>There is a very important concept associated with real-valued functions called gradient. If <span class="math notranslate nohighlight">\(f\)</span> is a real-valued differentiable function, we know from the previous definition its derivative <span class="math notranslate nohighlight">\(f^\prime\)</span> is a row vector. The gradient of <span class="math notranslate nohighlight">\(f\)</span>, denoted by <span class="math notranslate nohighlight">\(\nabla f\)</span>, is nothing but the transpose of <span class="math notranslate nohighlight">\(f^\prime\)</span> so that it becomes a column vector.</p>
-<div class="proof definition admonition" id="definition-1">
-<p class="admonition-title"><span class="caption-number">Definition 17 </span></p>
-<section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f: E \subset\R^n \to\R\)</span> be a real-valued function where <span class="math notranslate nohighlight">\(E\)</span> is open. If <span class="math notranslate nohighlight">\(f\)</span> is differentiable at point <span class="math notranslate nohighlight">\(\mathbf{x}_0 \in E\)</span>, then the gradient of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(\mathbf{x}_0\)</span> is defined by</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\nabla f (\mathbf{x}_0) = \left(f^\prime(\mathbf{x}_0)\right)^\top\end{align*}\]</div>
-</section>
-</div><div class="proof definition admonition" id="definition-2">
-<p class="admonition-title"><span class="caption-number">Definition 18 </span></p>
-<section class="definition-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f: E \subset\R^n \to\R\)</span> be a real-valued function where <span class="math notranslate nohighlight">\(E\)</span> is open, and <span class="math notranslate nohighlight">\(\mathbf{u}\in\R^n\)</span> a unit vector, i.e., <span class="math notranslate nohighlight">\(\abs{\mathbf{u}} = 1\)</span>. The directional derivative of <span class="math notranslate nohighlight">\(f\)</span> at point <span class="math notranslate nohighlight">\(\mathbf{x}\)</span> is defined by</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
+<div class="highlight-{prf:definition}Gradient notranslate"><div class="highlight"><pre><span></span>
+Let $f: E \subset\R^n \to\R$ be a real-valued function where $E$ is open. If $f$ is differentiable at point $\mathbf{x}_0 \in E$, then the gradient of $f$ at $\mathbf{x}_0$ is defined by 
+
+```{math}
+\begin{align*}\nabla f (\mathbf{x}_0) = \left(f^\prime(\mathbf{x}_0)\right)^\top\end{align*}
+```
+
+</pre></div>
+</div>
+<div class="highlight-{prf:definition}Directional notranslate"><div class="highlight"><pre><span></span>
+Let $f: E \subset\R^n \to\R$ be a real-valued function where $E$ is open, and $\mathbf{u}\in\R^n$ a unit vector, i.e., $\abs{\mathbf{u}} = 1$. The directional derivative of $f$ at point $\mathbf{x}$ is defined by 
+
+```{math}
+\begin{align*}
 D_{\mathbf{u}}f (\mathbf{x})
-= \lim_{t \to 0}\frac{f(\mathbf{x} + t \mathbf{u}) - f(\mathbf{x})}{t}\end{align*}\]</div>
-<p>provided that the limit exists.</p>
-</section>
-</div><p>A function is not necessarily differentiable at some point even if all the directional derivatives at this point exist and are all equal to each other. (In this case, all directional derivatives must be zeros.)</p>
-<div class="proof example admonition" id="example-3">
+= \lim_{t \to 0}\frac{f(\mathbf{x} + t \mathbf{u}) - f(\mathbf{x})}{t}\end{align*}
+```
+
+provided that the limit exists.
+
+</pre></div>
+</div>
+<p>A function is not necessarily differentiable at some point even if all the directional derivatives at this point exist and are all equal to each other. (In this case, all directional derivatives must be zeros.)</p>
+<div class="proof example admonition" id="example-0">
 <p class="admonition-title"><span class="caption-number">Example 10 </span></p>
 <section class="example-content" id="proof-content">
 <p>Let</p>
@@ -676,13 +687,13 @@ D_{\mathbf{u}}f (0,0)
 <p>Thus, all the directional derivatives exist at <span class="math notranslate nohighlight">\((0,0)\)</span> and are equal to <span class="math notranslate nohighlight">\(0\)</span>. However, <span class="math notranslate nohighlight">\(f\)</span> is clearly not differentiable at <span class="math notranslate nohighlight">\((0,0)\)</span> since it is not even continuous there.</p>
 </section>
 </div><p>The next proposition is a simple application of the Chain Rule which establishes a connection between gradients and directional derivatives for real-valued functions.</p>
-<div class="proof proposition admonition" id="proposition-4">
+<div class="proof proposition admonition" id="proposition-1">
 <p class="admonition-title"><span class="caption-number">Proposition 10 </span></p>
 <section class="proposition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: E \subset\R^n \to\R\)</span> be a real-valued function where <span class="math notranslate nohighlight">\(E\)</span> is open.
 If <span class="math notranslate nohighlight">\(f\)</span> is differentiable at point <span class="math notranslate nohighlight">\(\mathbf{x}_0 \in E\)</span>, then all the directional derivatives at <span class="math notranslate nohighlight">\(\mathbf{x}_0\)</span> exist. In this case, suppose <span class="math notranslate nohighlight">\(\mathbf{u}\in\R^n\)</span> is a unit vector, then</p>
 <div class="math notranslate nohighlight" id="equation-eq-47">
-<span class="eqno">(66)<a class="headerlink" href="#equation-eq-47" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(62)<a class="headerlink" href="#equation-eq-47" title="Permalink to this equation">#</a></span>\[\begin{align}
 D_{\mathbf{u}}f (\mathbf{x}_0)
 = \nabla f (\mathbf{x}_0) \cdot\mathbf{u}\end{align}\]</div>
 </section>
@@ -693,33 +704,33 @@ D_{\mathbf{u}}f (\mathbf{x}_0)
 = \mathbf{x}_0 + t \mathbf{u}\end{align*}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(E\)</span> is open and <span class="math notranslate nohighlight">\(\mathbf{x}_0 \in E\)</span>, it is possible to chose <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\boldsymbol{\gamma}(t) \in E \;\forall t \in(-\delta,\delta)\)</span>. Hence, <span class="math notranslate nohighlight">\(\boldsymbol{\gamma}: (-\delta,\delta) \to E\)</span> is a well-defined function. Moreover, <span class="math notranslate nohighlight">\(\boldsymbol{\gamma}\)</span> is differentiable in <span class="math notranslate nohighlight">\((-\delta, \delta)\)</span>, and</p>
 <div class="math notranslate nohighlight" id="equation-eq-44">
-<span class="eqno">(67)<a class="headerlink" href="#equation-eq-44" title="Permalink to this equation">#</a></span>\[\begin{align}\boldsymbol{\gamma}^\prime(t) = \mathbf{u}\quad\forall t \in(-\delta, \delta)
+<span class="eqno">(63)<a class="headerlink" href="#equation-eq-44" title="Permalink to this equation">#</a></span>\[\begin{align}\boldsymbol{\gamma}^\prime(t) = \mathbf{u}\quad\forall t \in(-\delta, \delta)
 \end{align}\]</div>
 <p>Define a function <span class="math notranslate nohighlight">\(g: (-\delta, \delta) \to\R\)</span> by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 g(t) = f(\boldsymbol{\gamma}(t))
 \end{align*}\]</div>
-<p>Because <span class="math notranslate nohighlight">\(\boldsymbol{\gamma}\)</span> is differentiable at <span class="math notranslate nohighlight">\(t = 0\)</span> and <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(x = \boldsymbol{\gamma}(0) = \mathbf{x}_0\)</span>, it follows from the Chain Rule (<a class="reference internal" href="#thm:20">Theorem 46</a>) that <span class="math notranslate nohighlight">\(g\)</span> is differentiable at <span class="math notranslate nohighlight">\(t = 0\)</span> with</p>
+<p>Because <span class="math notranslate nohighlight">\(\boldsymbol{\gamma}\)</span> is differentiable at <span class="math notranslate nohighlight">\(t = 0\)</span> and <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(x = \boldsymbol{\gamma}(0) = \mathbf{x}_0\)</span>, it follows from the Chain Rule (<code class="xref prf prf-ref docutils literal notranslate"><span class="pre">thm:20</span></code>) that <span class="math notranslate nohighlight">\(g\)</span> is differentiable at <span class="math notranslate nohighlight">\(t = 0\)</span> with</p>
 <div class="math notranslate nohighlight" id="equation-eq-45">
-<span class="eqno">(68)<a class="headerlink" href="#equation-eq-45" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(64)<a class="headerlink" href="#equation-eq-45" title="Permalink to this equation">#</a></span>\[\begin{align}
 g^\prime(0) = f^\prime(\boldsymbol{\gamma}(0)) \boldsymbol{\gamma}^\prime(0)
 = f^\prime(\mathbf{x}_0) \mathbf{u}
 = \nabla f (\mathbf{x}_0) \cdot\mathbf{u}\end{align}\]</div>
-<p>The second last equality above follows from <a class="reference internal" href="#equation-eq-44">(67)</a>.</p>
+<p>The second last equality above follows from <a class="reference internal" href="#equation-eq-44">(63)</a>.</p>
 <p>On the other hand, by the definition of derivatives, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-46">
-<span class="eqno">(69)<a class="headerlink" href="#equation-eq-46" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(65)<a class="headerlink" href="#equation-eq-46" title="Permalink to this equation">#</a></span>\[\begin{align}
 g^\prime(0) 
 = \lim_{t \to 0}\frac{g(t) - g(0)}{t}
 = \lim_{t \to 0}\frac{f(\boldsymbol{\gamma}(t)) - f(\boldsymbol{\gamma}(0))}{t}
 = \lim_{t \to 0}\frac{f(\mathbf{x}_0 + t \mathbf{u}) - f(\mathbf{x}_0)}{t}
 = D_{\mathbf{u}}f (\mathbf{x_0})
 \end{align}\]</div>
-<p>Then <a class="reference internal" href="#equation-eq-47">(66)</a> follows from <a class="reference internal" href="#equation-eq-45">(68)</a> and <a class="reference internal" href="#equation-eq-46">(69)</a>.</p>
+<p>Then <a class="reference internal" href="#equation-eq-47">(62)</a> follows from <a class="reference internal" href="#equation-eq-45">(64)</a> and <a class="reference internal" href="#equation-eq-46">(65)</a>.</p>
 </div>
-<p>If <span class="math notranslate nohighlight">\(f\)</span> is not differentiable at <span class="math notranslate nohighlight">\(\mathbf{x}_0\)</span>, then <a class="reference internal" href="#equation-eq-47">(66)</a> will not hold in general. Consider the following example.</p>
-<div class="proof example admonition" id="example-5">
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is not differentiable at <span class="math notranslate nohighlight">\(\mathbf{x}_0\)</span>, then <a class="reference internal" href="#equation-eq-47">(62)</a> will not hold in general. Consider the following example.</p>
+<div class="proof example admonition" id="example-2">
 <p class="admonition-title"><span class="caption-number">Example 11 </span></p>
 <section class="example-content" id="proof-content">
 <p>Let</p>
@@ -736,18 +747,18 @@ f(x,y) = \begin{cases}
 \end{align*}\]</div>
 <p>Let <span class="math notranslate nohighlight">\(\mathbf{h} = (h,k)\)</span>. Consider the expression</p>
 <div class="math notranslate nohighlight" id="equation-eq-48">
-<span class="eqno">(70)<a class="headerlink" href="#equation-eq-48" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{\abs{
+<span class="eqno">(66)<a class="headerlink" href="#equation-eq-48" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{\abs{
 f(h,k) - f(0,0) - \begin{bmatrix}{\partial f}/{\partial x} (0,0) &amp; {\partial f}/{\partial y} (0,0)
 \end{bmatrix} \mathbf{h}
 }}{\abs{\mathbf{h}}}
 = \frac{\abs{h}^2 \abs{k}}{(h^2 + k^2)^{3/2}}\end{align}\]</div>
-<p>Put <span class="math notranslate nohighlight">\(k = h\)</span> and let <span class="math notranslate nohighlight">\(h \to 0\)</span> in <a class="reference internal" href="#equation-eq-48">(70)</a>, we obtain</p>
+<p>Put <span class="math notranslate nohighlight">\(k = h\)</span> and let <span class="math notranslate nohighlight">\(h \to 0\)</span> in <a class="reference internal" href="#equation-eq-48">(66)</a>, we obtain</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{h \to 0}\frac{\abs{h}^2 \abs{k}}{(h^2 + k^2)^{3/2}}
 = \lim_{h \to 0}\frac{\abs{h}^3}{2^{3/2} \abs{h}^3}
 = \frac{1}{2^{3/2}}\neq 0
 \end{align*}\]</div>
-<p>Therefore, the left-hand side of <a class="reference internal" href="#equation-eq-48">(70)</a> will not tend to <span class="math notranslate nohighlight">\(0\)</span> as <span class="math notranslate nohighlight">\(\mathbf{h}\to\mathbf{0}\)</span>, which implies <span class="math notranslate nohighlight">\(f\)</span> is not differentiable at <span class="math notranslate nohighlight">\((0,0)\)</span>.</p>
+<p>Therefore, the left-hand side of <a class="reference internal" href="#equation-eq-48">(66)</a> will not tend to <span class="math notranslate nohighlight">\(0\)</span> as <span class="math notranslate nohighlight">\(\mathbf{h}\to\mathbf{0}\)</span>, which implies <span class="math notranslate nohighlight">\(f\)</span> is not differentiable at <span class="math notranslate nohighlight">\((0,0)\)</span>.</p>
 <p>The directional derivative along the direction <span class="math notranslate nohighlight">\(\mathbf{u} = (\cos\theta, \sin\theta)\)</span>(<span class="math notranslate nohighlight">\(\theta\in\left[0, 2\pi\right)\)</span>) at the origin is</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -764,7 +775,7 @@ The inner product of the gradient <span class="math notranslate nohighlight">\(\
 \end{bmatrix}
 = \sin\theta\end{align*}\end{split}\]</div>
 <p>We see that <span class="math notranslate nohighlight">\(D_{\mathbf{u}}f (0,0)\)</span> and <span class="math notranslate nohighlight">\(\nabla f (0,0) \cdot\mathbf{u}\)</span> are not equal to each other in general. Specifically, they are not equal for <span class="math notranslate nohighlight">\(\theta\notin\left\{0,\pi/2,\pi,3\pi/2\right\}\)</span>.</p>
-<p><a class="reference internal" href="#equation-eq-47">(66)</a> fails because <span class="math notranslate nohighlight">\(f\)</span> is not differentiable at <span class="math notranslate nohighlight">\((0,0)\)</span>. From another point of view, the failure of <a class="reference internal" href="#equation-eq-47">(66)</a> can also be applied to prove that <span class="math notranslate nohighlight">\(f\)</span> is not differentiable.</p>
+<p><a class="reference internal" href="#equation-eq-47">(62)</a> fails because <span class="math notranslate nohighlight">\(f\)</span> is not differentiable at <span class="math notranslate nohighlight">\((0,0)\)</span>. From another point of view, the failure of <a class="reference internal" href="#equation-eq-47">(62)</a> can also be applied to prove that <span class="math notranslate nohighlight">\(f\)</span> is not differentiable.</p>
 </section>
 </div></section>
 

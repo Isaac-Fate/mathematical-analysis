@@ -627,19 +627,22 @@ title="Print to PDF"
 <p>for all <span class="math notranslate nohighlight">\(x \in E\)</span>.</p>
 </section>
 </div><p>The Cauchy criterion for uniform convergence is as follows.</p>
-<div class="proof theorem admonition" id="thm:6">
-<p class="admonition-title"><span class="caption-number">Theorem 34 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>The sequence of functions <span class="math notranslate nohighlight">\(\left\{f_n\right\}\)</span>, defined on <span class="math notranslate nohighlight">\(E\)</span>, converges uniformly if and only if for any <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(N \in\Ns\)</span> such that <span class="math notranslate nohighlight">\(m, n \geq N\)</span>, <span class="math notranslate nohighlight">\(x \in E\)</span> implies</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{f_n(x) - f_m(x)} &lt; \varepsilon\end{align*}\]</div>
-</section>
-</div><div class="proof admonition" id="proof">
+<div class="highlight-{prf:theorem}Cauchy notranslate"><div class="highlight"><pre><span></span>:label: thm:6
+
+The sequence of functions $\left\{f_n\right\}$, defined on $E$, converges uniformly if and only if for any $\varepsilon &gt; 0$, there exists $N \in\Ns$ such that $m, n \geq N$, $x \in E$ implies 
+
+```{math}
+\begin{align*}\abs{f_n(x) - f_m(x)} &lt; \varepsilon\end{align*}
+```
+
+</pre></div>
+</div>
+<div class="proof admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
 <p>The following theorem is another criterion for uniform convergence, which provides us with insight into measuring the distance between two functions.</p>
 <div class="proof theorem admonition" id="thm:8">
-<p class="admonition-title"><span class="caption-number">Theorem 35 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 20 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose the sequence of functions <span class="math notranslate nohighlight">\(\left\{f_n\right\}\)</span> converges pointwise to <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\(E\)</span>. Put</p>
 <div class="math notranslate nohighlight">
@@ -647,7 +650,7 @@ title="Print to PDF"
 M_n = \sup_{x \in E}\abs{f_n(x) - f(x)}\end{align*}\]</div>
 <p>Then <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly if and only if <span class="math notranslate nohighlight">\(\lim_{n \to \infty} M_n = 0\)</span>.</p>
 </section>
-</div><div class="proof remark admonition" id="remark-4">
+</div><div class="proof remark admonition" id="remark-3">
 <p class="admonition-title"><span class="caption-number">Remark 13 </span></p>
 <section class="remark-content" id="proof-content">
 <p><span class="math notranslate nohighlight">\(\sup_{x \in E}\abs{f_n(x) - f(x)}\)</span> actually defines a distance function <span class="math notranslate nohighlight">\(d(f_n, f)\)</span>, which we will discuss in more details later.</p>
@@ -656,16 +659,20 @@ M_n = \sup_{x \in E}\abs{f_n(x) - f(x)}\end{align*}\]</div>
 <p>Proof. TODO</p>
 </div>
 <p>For series, there is a very convenient test called Weierstrass’s M-Test for uniform convergence.</p>
-<div class="proof theorem admonition" id="thm:14">
-<p class="admonition-title"><span class="caption-number">Theorem 36 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(\left\{f_n\right\}\)</span> be a sequence of functions defined on <span class="math notranslate nohighlight">\(E\)</span>, and suppose</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{f_n(x)}\leq M_n \quad\forall x \in E
-\end{align*}\]</div>
-<p>Then <span class="math notranslate nohighlight">\(\sum f_n\)</span> converges uniformly on <span class="math notranslate nohighlight">\(E\)</span> if <span class="math notranslate nohighlight">\(\sum M_n\)</span> converges.</p>
-</section>
-</div><div class="proof admonition" id="proof">
+<div class="highlight-{prf:theorem}Weierstrass's notranslate"><div class="highlight"><pre><span></span>:label: thm:14
+
+Let $\left\{f_n\right\}$ be a sequence of functions defined on $E$, and suppose 
+
+```{math}
+\begin{align*}\abs{f_n(x)}\leq M_n \quad\forall x \in E
+\end{align*}
+```
+
+Then $\sum f_n$ converges uniformly on $E$ if $\sum M_n$ converges.
+
+</pre></div>
+</div>
+<div class="proof admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
 </section>

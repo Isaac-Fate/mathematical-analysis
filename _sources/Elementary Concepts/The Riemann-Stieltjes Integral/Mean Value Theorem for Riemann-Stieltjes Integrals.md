@@ -1,6 +1,6 @@
 # Mean Value Theorem for Riemann-Stieltjes Integrals
 
-````{prf:theorem}
+````{prf:theorem}First Mean Value Theorem for Riemann-Stieltjes Integrals
 :label: thm:27
 
 Suppose that $\alpha$ is increasing on $[a, b]$. If $f \in\mathfrak{R}(\alpha)$ on $[a, b]$, then there exists a number $c$ satisfying
@@ -61,7 +61,7 @@ f(x_0) = c
 
 ````
 
-````{prf:theorem}
+````{prf:theorem}Second Mean Value Theorem for Riemann-Stieltjes Integrals
 :label: thm:28
 
 Suppose that $\alpha$ is continuous and $f$ is increasing on $[a, b]$. Then, there exists a point $x_0 \in[a, b]$ such that 

@@ -636,7 +636,7 @@ e = \sum_{n=0}^{\infty}\frac{1}{n!}\end{align*}\]</div>
 <p>Proof. Sorry.</p>
 </div>
 <div class="proof theorem admonition" id="theorem-3">
-<p class="admonition-title"><span class="caption-number">Theorem 4 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 3 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>The sequence <span class="math notranslate nohighlight">\(\left\{\left( 1 + \frac{1}{n}\right)^n \right\}\)</span> is increasing.</p>
 </section>
@@ -657,7 +657,7 @@ Apply the binomial expansion to <span class="math notranslate nohighlight">\(\le
 = \sum_{k=0}^{n}\frac{1}{k!}\end{align*}\end{split}\]</div>
 </div>
 <div class="proof theorem admonition" id="theorem-5">
-<p class="admonition-title"><span class="caption-number">Theorem 5 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 4 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>The sequence <span class="math notranslate nohighlight">\(\left\{\left(1+\frac{1}{n}\right)^n\right\}\)</span> converges to <span class="math notranslate nohighlight">\(e\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
@@ -700,7 +700,7 @@ e \leq\liminf_{n \to \infty} e_n \leq\limsup_{n \to \infty} e_n \leq e
 </div>
 <p>The next theorem shows how rapidly that the series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty\frac{1}{n!}\)</span> converges to <span class="math notranslate nohighlight">\(e\)</span>. As we can imagine, the tailing terms of this series decrease dramatically. Therefore, we can obtain a fair approximation of <span class="math notranslate nohighlight">\(e\)</span> by summing up only the first few terms of the series.</p>
 <div class="proof theorem admonition" id="thm:5">
-<p class="admonition-title"><span class="caption-number">Theorem 6 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 5 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>The difference between the number <span class="math notranslate nohighlight">\(e\)</span> and the sum of the first <span class="math notranslate nohighlight">\(n\)</span> terms of <span class="math notranslate nohighlight">\(\sum\frac{1}{k!}\)</span> is bounded above by <span class="math notranslate nohighlight">\(\frac{1}{n! n}\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
@@ -718,14 +718,14 @@ e \leq\liminf_{n \to \infty} e_n \leq\limsup_{n \to \infty} e_n \leq e
 \[\begin{split}\begin{align*}
 e - \sum_{k=0}^{n}\frac{1}{k!}&amp;= \sum_{k=n+1}^{\infty}\frac{1}{k!}\\&amp;= \frac{1}{n!}\left(\frac{1}{n+1} + \frac{1}{(n+2)(n+1)} + \cdots\right) \\&amp;\leq\frac{1}{n!}\left(\frac{1}{n+1} + \frac{1}{(n+1)^2} + \cdots\right) \\&amp;= \frac{1}{n!}\sum_{k=1}^\infty\frac{1}{(n+1)^k}\\&amp;= \frac{1}{n! n}\end{align*}\end{split}\]</div>
 </div>
-<p>It is widely known that <span class="math notranslate nohighlight">\(e\)</span> is an irrational number. <a class="reference internal" href="#thm:5">Theorem 6</a> provides a very neat proof of this result.</p>
+<p>It is widely known that <span class="math notranslate nohighlight">\(e\)</span> is an irrational number. <a class="reference internal" href="#thm:5">Theorem 5</a> provides a very neat proof of this result.</p>
 <div class="proof theorem admonition" id="theorem-8">
-<p class="admonition-title"><span class="caption-number">Theorem 7 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 6 </span></p>
 <section class="theorem-content" id="proof-content">
 <p><span class="math notranslate nohighlight">\(e\)</span> is an irrational number.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We shall prove by contradiction. Assume <span class="math notranslate nohighlight">\(e\)</span> is rational, then <span class="math notranslate nohighlight">\(e\)</span> can be written as <span class="math notranslate nohighlight">\(e = \frac{p}{q}\)</span> where <span class="math notranslate nohighlight">\(p, q \in\Ns\)</span>. Since <span class="math notranslate nohighlight">\(2 &lt; e &lt; 3\)</span>, <span class="math notranslate nohighlight">\(e\)</span> is clearly not an integer. Hence, <span class="math notranslate nohighlight">\(q \geq 2\)</span>. It follows from <a class="reference internal" href="#thm:5">Theorem 6</a> that</p>
+<p>Proof. We shall prove by contradiction. Assume <span class="math notranslate nohighlight">\(e\)</span> is rational, then <span class="math notranslate nohighlight">\(e\)</span> can be written as <span class="math notranslate nohighlight">\(e = \frac{p}{q}\)</span> where <span class="math notranslate nohighlight">\(p, q \in\Ns\)</span>. Since <span class="math notranslate nohighlight">\(2 &lt; e &lt; 3\)</span>, <span class="math notranslate nohighlight">\(e\)</span> is clearly not an integer. Hence, <span class="math notranslate nohighlight">\(q \geq 2\)</span>. It follows from <a class="reference internal" href="#thm:5">Theorem 5</a> that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 0 &lt; \frac{p}{q} - \sum_{k=0}^{n}\frac{1}{k!} 
