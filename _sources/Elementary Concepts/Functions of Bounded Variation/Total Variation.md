@@ -45,7 +45,6 @@ V(f g) &\leq\sup_{x\in[a, b]}\abs{g(x)} V(f) + \sup_{x \in[a, b]}\abs{f(x)} V(g)
 ````
 
 ````{prf:proof}
-:class: dropdown
 (Proof of $f \pm g$ being of bounded variation) We have 
 
 ```{math}

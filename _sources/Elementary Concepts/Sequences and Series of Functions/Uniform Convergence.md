@@ -46,7 +46,6 @@ The sequence of functions $\left\{f_n\right\}$, defined on $E$, converges unifor
 ````
 
 ````{prf:proof}
-:class: dropdown
 TODO
 ````
 
@@ -74,7 +73,6 @@ $\sup_{x \in E}\abs{f_n(x) - f(x)}$ actually defines a distance function $d(f_n,
 ````
 
 ````{prf:proof}
-:class: dropdown
 TODO
 ````
 
@@ -97,6 +95,5 @@ Then $\sum f_n$ converges uniformly on $E$ if $\sum M_n$ converges.
 ````
 
 ````{prf:proof}
-:class: dropdown
 TODO
 ````

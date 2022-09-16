@@ -35,7 +35,6 @@ The converse is not true. That is, if $f$ is a bounded function, then it may not
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 Pick any $x \in[a, b]$. Consider the partition $P = \left\{a, b\right\}\cup\left\{x\right\}$. Since $f$ is of bounded variation, we have 
 
@@ -126,7 +125,6 @@ If $f$ is a monotonic function on $[a, b]$, then $f$ is of bounded variation on 
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 Without loss of generality, we assume $f$ is increasing. For any partition $P = \left\{x_0, \ldots, x_n\right\}$ on $[a, b]$, we have 
 

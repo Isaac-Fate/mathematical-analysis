@@ -17,7 +17,6 @@ Suppose that $f, g \in\mathfrak{R}(\alpha)$ on $[a,b]$. Then $c_1 f + c_2 g \in\
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 Let $P$ be a partition on $[a,b]$. The Riemann-Stieltjes sum of $c_1 f + c_2 g$ can be written as 
 
@@ -76,7 +75,6 @@ If $f \in\mathfrak{R}(\alpha)$ and $f \in\mathfrak{R}(\beta)$ on $[a,b]$, then $
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 Let $P$ be a partition on $[a,b]$. We have 
 
@@ -135,7 +133,6 @@ The existence of two integrals in {eq}`eq:52` will imply the existence of the th
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 We have 
 

@@ -37,7 +37,6 @@ The sequence $\left\{\left( 1 + \frac{a}{n}\right)^n \right\}$ is increasing whe
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 Sorry.
 
@@ -63,7 +62,6 @@ where $n \geq 1$. The inequality is strict when $n \geq 2$.
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 If $n = 1$, then the equality holds. Now, suppose that $n \geq 2$.
 Apply the binomial expansion to $\left(1+\frac{1}{n}\right)^n$, and we will obtain
@@ -88,7 +86,6 @@ The sequence $\left\{\left(1+\frac{1}{n}\right)^n\right\}$ converges to $e$, i.e
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 Let $e_n = \left(1+\frac{1}{n}\right)^n $. We first apply the upper limits on both sides of the inequality proved in {prf:ref}`lem:1`. We have
 
@@ -167,7 +164,6 @@ When we approximate $e$ with the $11$th ($n = 10$) partial sum of this series, t
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 The error $e - \sum_{k=0}^{n}\frac{1}{k!}$ can be estimated as follows.
 
@@ -188,7 +184,6 @@ $e$ is an irrational number.
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 We shall prove by contradiction. Assume $e$ is rational, then $e$ can be written as $e = \frac{p}{q}$ where $p, q \in\Ns$. Since $2 < e < 3$, $e$ is clearly not an integer. Hence, $q \geq 2$. It follows from {prf:ref}`thm:5` that
 

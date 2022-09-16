@@ -43,7 +43,6 @@ We will provide another more interesting proof later using the continuity of the
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 We first verify the following:
 
@@ -327,7 +326,6 @@ Note that we do not rule out $\infty$ in this corollary. And actually, we only n
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 We shall consider three cases.
 
@@ -410,7 +408,6 @@ Note that the requirement of at least one series being absolutely convergent is 
 ````
 
 ````{prf:proof}
-:class: dropdown
 TODO
 ````
 

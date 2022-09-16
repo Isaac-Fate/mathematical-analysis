@@ -29,7 +29,6 @@ We do not require that $\mathbf{a}$ and $\mathbf{b}$ be distinct since {eq}`eq:4
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 Let curve $\boldsymbol{\gamma}: [0,1]\to E$ be defined by 
 

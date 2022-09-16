@@ -15,7 +15,6 @@ Let $f$ be of bounded variation on $[a, b]$. Define $V(x) := V_a^x(f)$($a \leq x
 ````
 
 ````{prf:proof}
-:class: dropdown
 (Proof of 1) By {prf:ref}`thm:32` and {prf:ref}`def:8`, we know $V(x)$ is well-defined, and 
 
 ```{math}
@@ -71,7 +70,6 @@ Let $f$ be a real-valued function on $[a, b]$. Then, the following statements ar
 ````
 
 ````{prf:proof}
-:class: dropdown
 (Proof of 1 $\implies$ 2) Let function $V$ be as in {prf:ref}`lem:3`. Then by {prf:ref}`lem:3`, $V$ and $V - f$ are both increasing functions on $[a, b]$. Thus, statement 2 holds since $f = V - (V - f)$.
 
 

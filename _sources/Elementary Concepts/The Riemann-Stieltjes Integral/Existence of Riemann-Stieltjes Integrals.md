@@ -13,7 +13,6 @@ By the reciprocity law of Riemann-Stieltjes integrals (or the theorem of integra
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 By {prf:ref}`thm:33`, $\alpha$ can be written as a difference of two increasing functions, i.e., 
 

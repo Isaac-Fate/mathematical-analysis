@@ -32,7 +32,6 @@ One way to remember this theorem is that if the *inner* limits on both sides of 
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 We first prove that $\left\{A_n\right\}$ converges. Given $\varepsilon > 0$, since $\left\{f_n\right\}$ converges uniformly, there exists $N \in\Ns$ such that $n, m \geq N$ implies that 
 
@@ -150,7 +149,6 @@ But $\frac{n^2}{\sqrt{1 + 2n}}\to\infty$ as $n \to\infty$. Therefore, $\lim_{n \
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 Let a sequence $\left\{x_n\right\}_{n \in \N}$ be given by 
 
@@ -279,7 +277,6 @@ Then $f_n \to f$ uniformly on $K$.
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 Let $g_n(x) := f_n(x) - f(x)$. It is clear that $g_n(x) \geq g_{n+1}(x) \geq 0$ and $g_n \to g \equiv 0$ pointwise. Given $\varepsilon > 0$. Define set
 
@@ -446,7 +443,6 @@ Let $\left\{f_n\right\}$ be a sequence in $\mathscr{C}(X)$. Then $f_n \to f$ uni
 ````
 
 ````{prf:proof}
-:class: dropdown
 
 Let $\left\{f_n\right\}$ be a Cauchy sequence in $\mathscr{C}(X)$. Then for given $\varepsilon > 0$, there exists $N \in\Ns$ such that $n, m \geq N$ implies 
 
