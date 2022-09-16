@@ -1,6 +1,6 @@
 # Mean Value Theorem
 
-````{prf:theorem}Mean Value Theorem in Several Variables
+````{prf:theorem} Mean Value Theorem in Several Variables
 :label: thm:21
 
 Let $f: E \subset\R^n \to\R$ be a differentiable function where $E$ is open. If $\mathbf{a}, \mathbf{b}\in E$ and the line segment between $\mathbf{a}$ and $\mathbf{b}$ lies in $E$, i.e., 

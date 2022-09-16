@@ -610,7 +610,7 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="integration-and-differentiation">
 <h1>Integration and Differentiation<a class="headerlink" href="#integration-and-differentiation" title="Permalink to this headline">#</a></h1>
 <div class="proof theorem admonition" id="thm:3">
-<p class="admonition-title"><span class="caption-number">Theorem 18 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 27 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. For <span class="math notranslate nohighlight">\(x \in[a, b]\)</span>, put</p>
 <div class="math notranslate nohighlight">
@@ -645,32 +645,26 @@ x^2 \sin \frac{1}{x}  &amp;-\frac{1}{\pi} \leq x \leq \frac{1}{\pi}, \; x \neq 0
 \end{cases}\end{align*}\end{split}\]</div>
 <p>Note that even though <span class="math notranslate nohighlight">\(f\)</span> is discontinuous at <span class="math notranslate nohighlight">\(x = 0\)</span>, <span class="math notranslate nohighlight">\(F\)</span> remains continuous on the entire interval. But, because of this discontinuity of <span class="math notranslate nohighlight">\(f\)</span>,  <span class="math notranslate nohighlight">\(F\)</span> is not differentiable at <span class="math notranslate nohighlight">\(x=0\)</span>.</p>
 </section>
-</div><div class="highlight-{prf:theorem}Fundamental notranslate"><div class="highlight"><pre><span></span>:label: thm:1
-
-If $ f \in\mathfrak{R}$ on $[a, b]$ and $F$ is a differentiable function on $[a, b]$ such that $F^\prime = f$, then we have
-
-```{math}
-\begin{align*}\int_a^b f \;\mathrm{d} x = F(b) - F(a)
-\end{align*}
-```
-
-</pre></div>
-</div>
-<div class="proof admonition" id="proof">
+</div><div class="proof theorem admonition" id="thm:1">
+<p class="admonition-title"><span class="caption-number">Theorem 28 </span> (Fundamental Theorem of Calculus)</p>
+<section class="theorem-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\( f \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> and <span class="math notranslate nohighlight">\(F\)</span> is a differentiable function on <span class="math notranslate nohighlight">\([a, b]\)</span> such that <span class="math notranslate nohighlight">\(F^\prime = f\)</span>, then we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\int_a^b f \;\mathrm{d} x = F(b) - F(a)
+\end{align*}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
-<div class="highlight-{prf:theorem}Integration notranslate"><div class="highlight"><pre><span></span>:label: thm:2
-
-Let $F, G$ be differentiable functions on $[a, b]$ such that $F^\prime = f \in\mathfrak{R}$ and $G^\prime = g \in\mathfrak{R}$, then 
-
-```{math}
-\begin{align*}\int_a^b F(x)g(x) \;\mathrm{d} x = F(b)G(b) - F(a)G(a) - \int_a^b f(x)G(x) \;\mathrm{d} x
-\end{align*}
-```
-
-</pre></div>
-</div>
-<div class="proof admonition" id="proof">
+<div class="proof theorem admonition" id="thm:2">
+<p class="admonition-title"><span class="caption-number">Theorem 29 </span> (Integration by Parts)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(F, G\)</span> be differentiable functions on <span class="math notranslate nohighlight">\([a, b]\)</span> such that <span class="math notranslate nohighlight">\(F^\prime = f \in\mathfrak{R}\)</span> and <span class="math notranslate nohighlight">\(G^\prime = g \in\mathfrak{R}\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\int_a^b F(x)g(x) \;\mathrm{d} x = F(b)G(b) - F(a)G(a) - \int_a^b f(x)G(x) \;\mathrm{d} x
+\end{align*}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
 </section>

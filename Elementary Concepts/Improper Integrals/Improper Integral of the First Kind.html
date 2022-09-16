@@ -614,10 +614,10 @@ title="Print to PDF"
 <section class="definition-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> for all <span class="math notranslate nohighlight">\(b \geq a\)</span> where <span class="math notranslate nohighlight">\(a\)</span> is fixed. Define</p>
 <div class="math notranslate nohighlight" id="equation-eq-49">
-<span class="eqno">(35)<a class="headerlink" href="#equation-eq-49" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^\infty f(x) \;\mathrm{d}x
+<span class="eqno">(37)<a class="headerlink" href="#equation-eq-49" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^\infty f(x) \;\mathrm{d}x
 = \lim_{b \to \infty}\int_a^b f(x) \;\mathrm{d}x
 \end{align}\]</div>
-<p>provided that the limit exists and is <strong>finite</strong>. In that case, we say the integral on the left-hand side of <a class="reference internal" href="#equation-eq-49">(35)</a><strong>converges</strong>. And this kind of improper integral with infinite integration limits is called the <strong>improper integral of the first kind</strong>. If</p>
+<p>provided that the limit exists and is <strong>finite</strong>. In that case, we say the integral on the left-hand side of <a class="reference internal" href="#equation-eq-49">(37)</a><strong>converges</strong>. And this kind of improper integral with infinite integration limits is called the <strong>improper integral of the first kind</strong>. If</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_a^\infty\abs{f(x)}\;\mathrm{d}x
 = \lim_{b \to \infty}\int_a^b \abs{f(x)}\;\mathrm{d}x
@@ -625,56 +625,46 @@ title="Print to PDF"
 <p>the integral <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> is said to converge <strong>absolutely</strong>.</p>
 </section>
 </div><div class="proof theorem admonition" id="theorem-1">
-<p class="admonition-title"><span class="caption-number">Theorem 19 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 30 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(f \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> for all <span class="math notranslate nohighlight">\(b \geq a\)</span>, and <span class="math notranslate nohighlight">\(f \geq 0\)</span> on <span class="math notranslate nohighlight">\([a, \infty)\)</span>. Let <span class="math notranslate nohighlight">\(F(b) = \int_a^b f(x) \;\mathrm{d}x\)</span>. Then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges if and only if <span class="math notranslate nohighlight">\(F(b)\)</span> is bounded on <span class="math notranslate nohighlight">\([a, \infty)\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Assume first <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges, then <span class="math notranslate nohighlight">\(F(\infty) &lt; \infty\)</span>. <span class="math notranslate nohighlight">\(F\)</span> increases monotonically since <span class="math notranslate nohighlight">\(f \geq 0\)</span>. It follows that <span class="math notranslate nohighlight">\(F(b) \leq F(\infty) &lt; \infty\)</span>, hence bounded. Conversely, if <span class="math notranslate nohighlight">\(F(b)\)</span> is bounded on <span class="math notranslate nohighlight">\([a, \infty)\)</span>, then by <a class="reference internal" href="../Functional%20Limits/Limits%20at%20Infinity.html#pro:2">Proposition 4</a>, <span class="math notranslate nohighlight">\(F(\infty)\)</span> exists, i.e., <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges since <span class="math notranslate nohighlight">\(F\)</span> is increasing.</p>
 </div>
-<div class="highlight-{prf:theorem}Comparison notranslate"><div class="highlight"><pre><span></span>:label: thm:25
-
-Suppose that $f, g \in\mathfrak{R}$ on $[a, b]$ for all $b \geq a$, and $f$ and $g$ satisfy the following inequality for sufficiently large $x$:
-
-```{math}
-\begin{align*}
+<div class="proof theorem admonition" id="thm:25">
+<p class="admonition-title"><span class="caption-number">Theorem 31 </span> (Comparison Test)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose that <span class="math notranslate nohighlight">\(f, g \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> for all <span class="math notranslate nohighlight">\(b \geq a\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> satisfy the following inequality for sufficiently large <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
 0 \leq f(x) \leq g(x)
 \quad\forall x &gt; c
-\end{align*}
-```
-
-where $c$ is a constant. Then we have 
-1. $\int_a^\infty f(x) \;\mathrm{d}x$ converges if $\int_a^\infty g(x) \;\mathrm{d}x$ converges.
-
-2. $\int_a^\infty g(x) \;\mathrm{d}x$ diverges if $\int_a^\infty f(x) \;\mathrm{d}x$ diverges.
-
-
-
-</pre></div>
-</div>
-<div class="proof admonition" id="proof">
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c\)</span> is a constant. Then we have</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> converges.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> diverges if <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> diverges.</p></li>
+</ol>
+</section>
+</div><div class="proof admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
-<div class="highlight-{prf:theorem}Ratio notranslate"><div class="highlight"><pre><span></span>
-Suppose that $f, g \in\mathfrak{R}$ on $[a, b]$ for all $b \geq a$, and $g(x) &gt; 0$ for sufficiently large $x$. Let $l$ be the limit of ratio of $f(x)$ to $g(x)$, i.e., 
-
-```{math}
-\begin{align*}\lim_{x \to \infty}\frac{f(x)}{g(x)} = l
-\end{align*}
-```
-
-We have the following:
-1.  If $0 &lt; l &lt; \infty$, then $\int_a^\infty f(x) \;\mathrm{d}x$ and $\int_a^\infty g(x) \;\mathrm{d}x$ both converge or both diverge. In other words, $\int_a^\infty f(x) \;\mathrm{d}x$ converges if and only if $\int_a^\infty g(x) \;\mathrm{d}x$ converges.
-
-2.  If $l = 0$, then $\int_a^\infty f(x) \;\mathrm{d}x$ converges if $\int_a^\infty g(x) \;\mathrm{d}x$ converges.
-
-3.  If $l = \infty$, then $\int_a^\infty f(x) \;\mathrm{d}x$ diverges if $\int_a^\infty g(x) \;\mathrm{d}x$ diverges.
-
-
-
-</pre></div>
-</div>
-<div class="proof remark admonition" id="remark-2">
+<div class="proof theorem admonition" id="theorem-3">
+<p class="admonition-title"><span class="caption-number">Theorem 32 </span> (Ratio Test)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose that <span class="math notranslate nohighlight">\(f, g \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> for all <span class="math notranslate nohighlight">\(b \geq a\)</span>, and <span class="math notranslate nohighlight">\(g(x) &gt; 0\)</span> for sufficiently large <span class="math notranslate nohighlight">\(x\)</span>. Let <span class="math notranslate nohighlight">\(l\)</span> be the limit of ratio of <span class="math notranslate nohighlight">\(f(x)\)</span> to <span class="math notranslate nohighlight">\(g(x)\)</span>, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\lim_{x \to \infty}\frac{f(x)}{g(x)} = l
+\end{align*}\]</div>
+<p>We have the following:</p>
+<ol class="simple">
+<li><p>If <span class="math notranslate nohighlight">\(0 &lt; l &lt; \infty\)</span>, then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> and <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> both converge or both diverge. In other words, <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges if and only if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> converges.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(l = 0\)</span>, then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> converges.</p></li>
+<li><p>If <span class="math notranslate nohighlight">\(l = \infty\)</span>, then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> diverges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> diverges.</p></li>
+</ol>
+</section>
+</div><div class="proof remark admonition" id="remark-4">
 <p class="admonition-title"><span class="caption-number">Remark 12 </span></p>
 <section class="remark-content" id="proof-content">
 <p>Note that all the conclusions are about <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span>. Indeed, the test is used to determine the convergence of <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> based on the knowledge of convergence of <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span></p>
@@ -689,7 +679,7 @@ We have the following:
 \[\begin{align*}(l - \varepsilon) g(x) &lt; f(x) &lt; (l + \varepsilon) g(x)
 \quad\forall x &gt; c
 \end{align*}\]</div>
-<p>By the Comparison Test (<code class="xref prf prf-ref docutils literal notranslate"><span class="pre">thm:25</span></code>),</p>
+<p>By the Comparison Test (<a class="reference internal" href="#thm:25">Theorem 31</a>),</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 0 &lt; (l - \varepsilon) g(x) &lt; f(x)
@@ -725,27 +715,20 @@ f(x) &gt; M g(x) &gt; 0
 \end{align*}\]</div>
 <p>Then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> diverges if <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> diverges.</p>
 </div>
-<div class="highlight-{prf:theorem}Integral notranslate"><div class="highlight"><pre><span></span>:label: thm:22
-
-Suppose that $f \geq 0$ and $f$ decreases monotonically on $[1, \infty)$. Then 
-
-```{math}
-\begin{align*}\int_1^\infty f(x) \;\mathrm{d}x
-\end{align*}
-```
-
-converges if and only if 
-
-```{math}
-\begin{align*}\sum_{n=1}^\infty f(n)
-\end{align*}
-```
-
-converges.
-
-</pre></div>
-</div>
-<div class="proof admonition" id="proof">
+<div class="proof theorem admonition" id="thm:22">
+<p class="admonition-title"><span class="caption-number">Theorem 33 </span> (Integral Test)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose that <span class="math notranslate nohighlight">\(f \geq 0\)</span> and <span class="math notranslate nohighlight">\(f\)</span> decreases monotonically on <span class="math notranslate nohighlight">\([1, \infty)\)</span>. Then</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\int_1^\infty f(x) \;\mathrm{d}x
+\end{align*}\]</div>
+<p>converges if and only if</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\sum_{n=1}^\infty f(n)
+\end{align*}\]</div>
+<p>converges.</p>
+</section>
+</div><div class="proof admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
 </section>

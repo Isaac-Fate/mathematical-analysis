@@ -1,6 +1,6 @@
 # The Root and Ratio Tests
 
-````{prf:theorem}Root Test
+````{prf:theorem} Root Test
 :label: thm:12
 
 Given series $\sum a_n$($a_n \in\C$), put $\alpha = \limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}$.
@@ -14,7 +14,7 @@ Given series $\sum a_n$($a_n \in\C$), put $\alpha = \limsup_{n \to \infty}\sqrt[
 
 ````
 
-````{prf:theorem}Ratio Test
+````{prf:theorem} Ratio Test
 :label: thm:24
 
 The series $\sum a_n$($a_n \in\C$) 

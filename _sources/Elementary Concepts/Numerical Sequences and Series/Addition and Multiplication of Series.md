@@ -17,7 +17,7 @@ Let $\left\{a_{ij}\right\}$ be a double sequence of complex numbers. If $\sum_{j
 
 ````
 
-````{prf:theorem}Interchanging the Order of Summations
+````{prf:theorem} Interchanging the Order of Summations
 :label: thm:15
 
 Let $\left\{a_{ij}\right\}$($a_{ij}\in\C$) be a double series where $i, j \in\Ns$. If 
@@ -389,7 +389,7 @@ Hence,
 ````
 ## Cauchy Product
 
-````{prf:theorem}Mertens's Theorem on Cauchy Product
+````{prf:theorem} Mertens's Theorem on Cauchy Product
 :label: thm:17
 
 Suppose that $\sum a_n$ and $\sum b_n$ are both convergent series, and **at least one** of them converges **absolutely**. Then their Cauchy product $\sum c_n$ converges and 

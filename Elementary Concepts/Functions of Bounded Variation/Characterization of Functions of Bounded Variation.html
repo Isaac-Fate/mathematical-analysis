@@ -620,7 +620,7 @@ title="Print to PDF"
 </ol>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (Proof of 1) By <a class="reference internal" href="Additive%20Property%20of%20Total%20Variation.html#thm:32">Theorem 11</a> and <a class="reference internal" href="Additive%20Property%20of%20Total%20Variation.html#def:8">Definition 5</a>, we know <span class="math notranslate nohighlight">\(V(x)\)</span> is well-defined, and</p>
+<p>Proof. (Proof of 1) By <a class="reference internal" href="Additive%20Property%20of%20Total%20Variation.html#thm:32">Theorem 16</a> and <a class="reference internal" href="Additive%20Property%20of%20Total%20Variation.html#def:8">Definition 5</a>, we know <span class="math notranslate nohighlight">\(V(x)\)</span> is well-defined, and</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 V(x+h) - V(x) = V_x^{x+h}(f) \geq 0
@@ -642,20 +642,17 @@ V_x^{x+h}(P, f) = \abs{f(x+h) - f(x)}\leq V_x^{x+h}(f)
 \end{align*}\end{split}\]</div>
 <p>Hence, <span class="math notranslate nohighlight">\(V-f\)</span> is also an increasing function on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </div>
-<div class="highlight-{prf:theorem}Characterization notranslate"><div class="highlight"><pre><span></span>:label: thm:33
-
-Let $f$ be a real-valued function on $[a, b]$. Then, the following statements are equivalent.
-1. $f$ is of bounded variation on $[a, b]$.
-
-2.  There exist two increasing functions $g$ and $h$ on $[a, b]$ such that $f = g - h$.
-
-3.  There exist two **strictly** increasing functions $g$ and $h$ on $[a, b]$ such that $f = g - h$.
-
-
-
-</pre></div>
-</div>
-<div class="proof admonition" id="proof">
+<div class="proof theorem admonition" id="thm:33">
+<p class="admonition-title"><span class="caption-number">Theorem 17 </span> (Characterization of Functions of Bounded Variation)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be a real-valued function on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then, the following statements are equivalent.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p></li>
+<li><p>There exist two increasing functions <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(h\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that <span class="math notranslate nohighlight">\(f = g - h\)</span>.</p></li>
+<li><p>There exist two <strong>strictly</strong> increasing functions <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(h\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that <span class="math notranslate nohighlight">\(f = g - h\)</span>.</p></li>
+</ol>
+</section>
+</div><div class="proof admonition" id="proof">
 <p>Proof. (Proof of 1 <span class="math notranslate nohighlight">\(\implies\)</span> 2) Let function <span class="math notranslate nohighlight">\(V\)</span> be as in <a class="reference internal" href="#lem:3">Lemma 4</a>. Then by <a class="reference internal" href="#lem:3">Lemma 4</a>, <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(V - f\)</span> are both increasing functions on <span class="math notranslate nohighlight">\([a, b]\)</span>. Thus, statement 2 holds since <span class="math notranslate nohighlight">\(f = V - (V - f)\)</span>.</p>
 <p>(Proof of 2 <span class="math notranslate nohighlight">\(\implies\)</span> 3) Since <span class="math notranslate nohighlight">\(f = g - h\)</span>, we have</p>
 <div class="math notranslate nohighlight">
@@ -663,7 +660,7 @@ Let $f$ be a real-valued function on $[a, b]$. Then, the following statements ar
 f(x) = (g(x) + x) - (h(x) + x)
 \end{align*}\]</div>
 <p>Then statement 3 follows since <span class="math notranslate nohighlight">\(g(x) + x\)</span> and <span class="math notranslate nohighlight">\(h(x) + x\)</span> are strictly increasing functions.</p>
-<p>(Proof of 3 <span class="math notranslate nohighlight">\(\implies\)</span> 1) By <a class="reference internal" href="Definition%20of%20Functions%20of%20Bounded%20Variation.html#thm:29">Theorem 9</a>, we know that <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(h\)</span> are both of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then, by <a class="reference internal" href="Total%20Variation.html#thm:31">Theorem 10</a>, the difference of <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(h\)</span>, the function <span class="math notranslate nohighlight">\(f = g - h\)</span>, is also of bounded variation.</p>
+<p>(Proof of 3 <span class="math notranslate nohighlight">\(\implies\)</span> 1) By <a class="reference internal" href="Definition%20of%20Functions%20of%20Bounded%20Variation.html#thm:29">Theorem 14</a>, we know that <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(h\)</span> are both of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then, by <a class="reference internal" href="Total%20Variation.html#thm:31">Theorem 15</a>, the difference of <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(h\)</span>, the function <span class="math notranslate nohighlight">\(f = g - h\)</span>, is also of bounded variation.</p>
 </div>
 </section>
 

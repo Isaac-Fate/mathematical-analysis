@@ -1,6 +1,6 @@
 # Integration by Parts
 
-````{prf:theorem}Integration by Parts
+````{prf:theorem} Integration by Parts
 :label: thm:36
 
 If $f \in\mathfrak{R}(\alpha)$ on $[a, b]$, then $\alpha\in\mathfrak{R}(f)$ on $[a, b]$, and 

@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"R": "\\mathbb{R}", "C": "\\mathbb{C}", "F": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Z": "\\mathbb{Z}", "Q": "\\mathbb{Q}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "d": ["\\mathrm{d}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../_static/icon.jpg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -607,13 +609,12 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="convergent-sequences">
 <h1>Convergent Sequences<a class="headerlink" href="#convergent-sequences" title="Permalink to this headline">#</a></h1>
-<div class="highlight-{prf:theorem}Convergence notranslate"><div class="highlight"><pre><span></span>:label: thm:23
-
-Suppose a sequence of real numbers $\left\{a_n\right\}$ is monotonic. Then $\left\{a_n\right\}$ converges if and only if it is bounded. 
-
-</pre></div>
-</div>
+<div class="proof theorem admonition" id="thm:23">
+<p class="admonition-title"><span class="caption-number">Theorem 3 </span> (Convergence of Monotonic Sequences)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose a sequence of real numbers <span class="math notranslate nohighlight">\(\left\{a_n\right\}\)</span> is monotonic. Then <span class="math notranslate nohighlight">\(\left\{a_n\right\}\)</span> converges if and only if it is bounded.</p>
 </section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {

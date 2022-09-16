@@ -79,7 +79,7 @@ It is well known that
 The right-hand side is a geometric series, and we can easily compute its explicit value, which equals the left-hand side. The Negative Binomial Theorem is a generalization for it states the power series representation of the function $\frac{1}{(1-x)^n}$.
 
 
-````{prf:theorem}Negative Binomial Theorem
+````{prf:theorem} Negative Binomial Theorem
 :label: thm:16
 
 We have the following identity:
@@ -159,7 +159,7 @@ We note that $\frac{1}{(1-x)^n}$ is obtained by multiplying $\frac{1}{1-x}$ by i
 In the alternative proof, we will need an identity from combinatorial mathematics, which is known as the Hockey-Stick Identity.
 
 
-````{prf:theorem}Hockey-Stick Identity
+````{prf:theorem} Hockey-Stick Identity
 
 We have the identity:
 
@@ -278,7 +278,7 @@ which is exactly {eq}`eq:30` with $n=m+1$.
 The Taylor's Theorem states that we can expand a power series as a Taylor series about some point in the interval of convergence.
 
 
-````{prf:theorem}Taylor's Theorem
+````{prf:theorem} Taylor's Theorem
 :label: thm:19
 
 Suppose power series

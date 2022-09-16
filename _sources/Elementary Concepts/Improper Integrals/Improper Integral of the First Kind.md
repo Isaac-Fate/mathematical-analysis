@@ -35,7 +35,7 @@ Assume first $\int_a^\infty f(x) \;\mathrm{d}x$ converges, then $F(\infty) < \in
 
 ````
 
-````{prf:theorem}Comparison Test
+````{prf:theorem} Comparison Test
 :label: thm:25
 
 Suppose that $f, g \in\mathfrak{R}$ on $[a, b]$ for all $b \geq a$, and $f$ and $g$ satisfy the following inequality for sufficiently large $x$:
@@ -60,7 +60,7 @@ where $c$ is a constant. Then we have
 TODO
 ````
 
-````{prf:theorem}Ratio Test
+````{prf:theorem} Ratio Test
 
 Suppose that $f, g \in\mathfrak{R}$ on $[a, b]$ for all $b \geq a$, and $g(x) > 0$ for sufficiently large $x$. Let $l$ be the limit of ratio of $f(x)$ to $g(x)$, i.e., 
 
@@ -163,7 +163,7 @@ Then $\int_a^\infty f(x) \;\mathrm{d}x$ diverges if $\int_a^\infty g(x) \;\mathr
 
 ````
 
-````{prf:theorem}Integral Test
+````{prf:theorem} Integral Test
 :label: thm:22
 
 Suppose that $f \geq 0$ and $f$ decreases monotonically on $[1, \infty)$. Then 
