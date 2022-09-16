@@ -1,4 +1,4 @@
-# Reimann Integrals
+# The Reimann Integral
 
 ```{tableofcontents}
 ```
