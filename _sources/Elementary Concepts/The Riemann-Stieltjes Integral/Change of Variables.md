@@ -35,6 +35,7 @@ The reason why we assume that $g$ is strictly monotonic and continuous is to ens
 ````
 
 ````{prf:proof}
+:class: dropdown
 (One-To-One Relation of Partitions) Without loss of generality, we may assume that $g$ is strictly *increasing* and continuous. Then $I = [c, d]$. From the conditions of $g$, we can immediately conclude that it has a bijective inverse function
 
 ```{math}

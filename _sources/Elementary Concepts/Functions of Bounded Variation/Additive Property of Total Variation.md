@@ -15,6 +15,7 @@ V_a^b(f) = V_a^c(f) + V_c^b(f)
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 Let $P^\prime$ be a partition on $[a, c]$ and $P^{\prime\prime}$ a partition on $[c, b]$. Note that $P = P^\prime\cup P^{\prime\prime}$ forms a partition on $[a, b]$. We have
 

@@ -12,6 +12,7 @@ The series $\sum_{n=0}^\infty\frac{z^n}{n!}$ converges **absolutely** for all $z
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 If $z = 0$, then the conclusion is trivial since the series is equal to $1$. For $z \neq 0$, we apply the Ratio Test ({prf:ref}`thm:24`) to the series $\sum\frac{\abs{z}^n}{n!}$, we have 
 
@@ -62,6 +63,7 @@ E(z)E(w) = E(z + w)
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 By {prf:ref}`thm:17`, the Cauchy product $E(z)E(w)$ converges, and it equals
 
@@ -137,6 +139,7 @@ e^r = (E(1))^r = E(r)
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 We first prove this proposition for **integer** exponents, that is,
 

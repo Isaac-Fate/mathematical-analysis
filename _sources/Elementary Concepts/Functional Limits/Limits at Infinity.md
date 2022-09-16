@@ -40,6 +40,7 @@ Let $f: E \to\R$ be a monotonically increasing (resp. decreasing) function where
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 We only prove the case of monotonically increasing functions. Since $E$ is unbounded above, there exists a **subsequence**$\left\{k_n\right\}$ of $\Ns$ such that $k_n \in E$. Note that the numerical sequence $\left\{f(k_n)\right\}$ increases monotonically. By {prf:ref}`thm:23`, $\left\{f(k_n)\right\}$ converges, say, to $l$. 
 

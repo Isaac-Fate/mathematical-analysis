@@ -37,6 +37,7 @@ Let $S(P,f,\alpha)$ be as in {prf:ref}`def:7`. If $A$ and $A^\prime$ both satisf
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 Given $\varepsilon > 0$, by the property in {prf:ref}`def:7`, there exists a partitions $P_1$ and $P_2$ such that  
 

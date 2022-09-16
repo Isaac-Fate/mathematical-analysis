@@ -25,6 +25,7 @@ Furthermore, if $f$ is continuous on $[a, b]$, then there exists $x_0 \in[a, b]$
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 If $\alpha$ is a constant function, then the conclusion is trivial since all values in {eq}`eq:58` are zeros. In the rest of the proof, we assume $\alpha$ is non-constant. In that case, $\alpha(b) > \alpha(a)$. To simplify the notation, we let $m = \inf_{x \in[a, b]} f(x)$ and $M = \sup_{x \in[a, b]} f(x)$. Since constant functions are clearly integrable, by {prf:ref}`thm:26`, we have 
 
@@ -64,7 +65,7 @@ f(x_0) = c
 ````{prf:theorem} Second Mean Value Theorem for Riemann-Stieltjes Integrals
 :label: thm:28
 
-Suppose that $\alpha$ is continuous and $f$ is increasing on $[a, b]$. Then, there exists a point $x_0 \in[a, b]$ such that 
+Suppose that $\alpha$ is continuous and $f$ is monotonic on $[a, b]$. Then, there exists a point $x_0 \in[a, b]$ such that 
 
 ```{math}
 :label: eq:69
@@ -78,6 +79,12 @@ Of course, all the integrals involved in {eq}`eq:69` exist.
 ````
 
 ````{prf:proof}
+:class: dropdown
+
+Without loss of generality, we may assume that $f$ is increasing in the rest of this proof. If $f$ is decreasing, then we apply this theorem to $-f$, which is increasing. And {eq}`eq:69` still holds after multiplying $-1$ on the both sides.
+
+
+
 (Existence of Integrals) Firstly, by {prf:ref}`thm:34`, we know that $\alpha\in\mathfrak{R}(f)$. And by the reciprocity law ({prf:ref}`thm:36`), it also holds that $f \in\mathfrak{R}(\alpha)$. 
 
 

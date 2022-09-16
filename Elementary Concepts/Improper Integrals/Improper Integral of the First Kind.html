@@ -283,12 +283,29 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Reimann%20Integrals/index.html">
+   Reimann Integrals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Reimann%20Integrals/Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html">
+     Reduction from Riemann-Stieltjes Integrals to Reimann Integrals
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
    Improper Integrals
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -309,8 +326,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/index.html">
    Sequences and Series of Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -346,8 +363,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Some%20Special%20Functions/index.html">
    Some Special Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -385,8 +402,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/index.html">
    Functions of Several Variables
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -629,7 +646,7 @@ title="Print to PDF"
 <section class="theorem-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(f \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> for all <span class="math notranslate nohighlight">\(b \geq a\)</span>, and <span class="math notranslate nohighlight">\(f \geq 0\)</span> on <span class="math notranslate nohighlight">\([a, \infty)\)</span>. Let <span class="math notranslate nohighlight">\(F(b) = \int_a^b f(x) \;\mathrm{d}x\)</span>. Then <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges if and only if <span class="math notranslate nohighlight">\(F(b)\)</span> is bounded on <span class="math notranslate nohighlight">\([a, \infty)\)</span>.</p>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. Assume first <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges, then <span class="math notranslate nohighlight">\(F(\infty) &lt; \infty\)</span>. <span class="math notranslate nohighlight">\(F\)</span> increases monotonically since <span class="math notranslate nohighlight">\(f \geq 0\)</span>. It follows that <span class="math notranslate nohighlight">\(F(b) \leq F(\infty) &lt; \infty\)</span>, hence bounded. Conversely, if <span class="math notranslate nohighlight">\(F(b)\)</span> is bounded on <span class="math notranslate nohighlight">\([a, \infty)\)</span>, then by <a class="reference internal" href="../Functional%20Limits/Limits%20at%20Infinity.html#pro:2">Proposition 4</a>, <span class="math notranslate nohighlight">\(F(\infty)\)</span> exists, i.e., <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> converges since <span class="math notranslate nohighlight">\(F\)</span> is increasing.</p>
 </div>
 <div class="proof theorem admonition" id="thm:25">
@@ -647,7 +664,7 @@ title="Print to PDF"
 <li><p><span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span> diverges if <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> diverges.</p></li>
 </ol>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
 <div class="proof theorem admonition" id="theorem-3">
@@ -669,7 +686,7 @@ title="Print to PDF"
 <section class="remark-content" id="proof-content">
 <p>Note that all the conclusions are about <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span>. Indeed, the test is used to determine the convergence of <span class="math notranslate nohighlight">\(\int_a^\infty f(x) \;\mathrm{d}x\)</span> based on the knowledge of convergence of <span class="math notranslate nohighlight">\(\int_a^\infty g(x) \;\mathrm{d}x\)</span></p>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. (Proof of 1) Choose <span class="math notranslate nohighlight">\(0 &lt; \varepsilon &lt; l\)</span>. Then there exists <span class="math notranslate nohighlight">\(c &gt; a\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{\frac{f(x)}{g(x)} - l} &lt; \varepsilon\quad\forall x &gt; c
@@ -728,7 +745,7 @@ f(x) &gt; M g(x) &gt; 0
 \end{align*}\]</div>
 <p>converges.</p>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
 </section>

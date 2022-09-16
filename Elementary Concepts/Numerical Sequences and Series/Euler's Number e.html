@@ -284,11 +284,28 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Improper%20Integrals/index.html">
-   Improper Integrals
+  <a class="reference internal" href="../Reimann%20Integrals/index.html">
+   Reimann Integrals
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Reimann%20Integrals/Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html">
+     Reduction from Riemann-Stieltjes Integrals to Reimann Integrals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Improper%20Integrals/index.html">
+   Improper Integrals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -309,8 +326,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/index.html">
    Sequences and Series of Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -346,8 +363,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Some%20Special%20Functions/index.html">
    Some Special Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -385,8 +402,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/index.html">
    Functions of Several Variables
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -632,7 +649,7 @@ e = \sum_{n=0}^{\infty}\frac{1}{n!}\end{align*}\]</div>
 <section class="lemma-content" id="proof-content">
 <p>The sequence <span class="math notranslate nohighlight">\(\left\{\left( 1 + \frac{a}{n}\right)^n \right\}\)</span> is increasing where <span class="math notranslate nohighlight">\(a &gt; 0\)</span>.</p>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. Sorry.</p>
 </div>
 <div class="proof theorem admonition" id="theorem-3">
@@ -648,7 +665,7 @@ e = \sum_{n=0}^{\infty}\frac{1}{n!}\end{align*}\]</div>
 \[\begin{align*}\left(1+\frac{1}{n}\right)^n \leq\sum_{k=0}^{n}\frac{1}{k!}\end{align*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(n \geq 1\)</span>. The inequality is strict when <span class="math notranslate nohighlight">\(n \geq 2\)</span>.</p>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. If <span class="math notranslate nohighlight">\(n = 1\)</span>, then the equality holds. Now, suppose that <span class="math notranslate nohighlight">\(n \geq 2\)</span>.
 Apply the binomial expansion to <span class="math notranslate nohighlight">\(\left(1+\frac{1}{n}\right)^n\)</span>, and we will obtain</p>
 <div class="math notranslate nohighlight">
@@ -664,7 +681,7 @@ Apply the binomial expansion to <span class="math notranslate nohighlight">\(\le
 \[\begin{align*}\lim_{n \to \infty}\left( 1 + \frac{1}{n}\right)^n = e
 \end{align*}\]</div>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(e_n = \left(1+\frac{1}{n}\right)^n \)</span>. We first apply the upper limits on both sides of the inequality proved in <a class="reference internal" href="#lem:1">Lemma 2</a>. We have</p>
 <div class="math notranslate nohighlight" id="equation-eq-1">
 <span class="eqno">(1)<a class="headerlink" href="#equation-eq-1" title="Permalink to this equation">#</a></span>\[\begin{align}\limsup_{n \to \infty} e_n
@@ -712,7 +729,7 @@ e \leq\liminf_{n \to \infty} e_n \leq\limsup_{n \to \infty} e_n \leq e
 <section class="remark-content" id="proof-content">
 <p>When we approximate <span class="math notranslate nohighlight">\(e\)</span> with the <span class="math notranslate nohighlight">\(11\)</span>th (<span class="math notranslate nohighlight">\(n = 10\)</span>) partial sum of this series, the error is less than <span class="math notranslate nohighlight">\(2.76 \times 10^{-8}\)</span>, which makes a rather accurate approximation.</p>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. The error <span class="math notranslate nohighlight">\(e - \sum_{k=0}^{n}\frac{1}{k!}\)</span> can be estimated as follows.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -724,7 +741,7 @@ e - \sum_{k=0}^{n}\frac{1}{k!}&amp;= \sum_{k=n+1}^{\infty}\frac{1}{k!}\\&amp;= \
 <section class="theorem-content" id="proof-content">
 <p><span class="math notranslate nohighlight">\(e\)</span> is an irrational number.</p>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. We shall prove by contradiction. Assume <span class="math notranslate nohighlight">\(e\)</span> is rational, then <span class="math notranslate nohighlight">\(e\)</span> can be written as <span class="math notranslate nohighlight">\(e = \frac{p}{q}\)</span> where <span class="math notranslate nohighlight">\(p, q \in\Ns\)</span>. Since <span class="math notranslate nohighlight">\(2 &lt; e &lt; 3\)</span>, <span class="math notranslate nohighlight">\(e\)</span> is clearly not an integer. Hence, <span class="math notranslate nohighlight">\(q \geq 2\)</span>. It follows from <a class="reference internal" href="#thm:5">Theorem 6</a> that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}

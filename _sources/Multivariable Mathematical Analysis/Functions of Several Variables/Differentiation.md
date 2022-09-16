@@ -21,6 +21,7 @@ is differentiable at $\mathbf{x}_0$, and
 ````
 
 ````{prf:proof}
+:class: dropdown
 TODO
 ````
 
@@ -121,6 +122,7 @@ D_{\mathbf{u}}f (\mathbf{x}_0)
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 Let $\mathbf{u}\in\R^n$ be a unit vector. Define
 

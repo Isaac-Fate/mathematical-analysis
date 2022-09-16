@@ -28,6 +28,7 @@ Pay attention to the conditions of this theorem. The reason that we do not assum
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 The first thing we need to show is that $\left\{f_n\right\}$ converges uniformly. Given $\varepsilon > 0$, there exists some $N_1 \in\Ns$ such that $n, m \geq N_1$ implies
 

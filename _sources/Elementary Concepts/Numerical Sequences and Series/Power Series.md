@@ -8,6 +8,7 @@ Suppose that the power series $\sum c_n z^n$ converges at some point $z = z_0$($
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 Because $\sum c_n z_0^n$ converges, the sequence $\left\{c_n z_0^n\right\}$ also converges (to $0$). Therefore, $\left\{c_n z_0^n\right\}$ is bounded, that is,  
 
@@ -52,6 +53,7 @@ As soon as we know the power series $\sum c_n z^n$ converges at some non-zero po
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 We first prove that $\sum c_n z^n$ converges if $\abs{z} < R$. We intend to apply the Root Test. Taking the $n$-th root of each term of the series and then taking the upper limit, we obtain
 

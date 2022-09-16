@@ -284,11 +284,28 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Improper%20Integrals/index.html">
-   Improper Integrals
+  <a class="reference internal" href="../Reimann%20Integrals/index.html">
+   Reimann Integrals
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Reimann%20Integrals/Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html">
+     Reduction from Riemann-Stieltjes Integrals to Reimann Integrals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Improper%20Integrals/index.html">
+   Improper Integrals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -309,8 +326,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/index.html">
    Sequences and Series of Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -346,8 +363,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Some%20Special%20Functions/index.html">
    Some Special Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -385,8 +402,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/index.html">
    Functions of Several Variables
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -614,7 +631,7 @@ title="Print to PDF"
 <section class="lemma-content" id="proof-content">
 <p>Suppose that the power series <span class="math notranslate nohighlight">\(\sum c_n z^n\)</span> converges at some point <span class="math notranslate nohighlight">\(z = z_0\)</span>(<span class="math notranslate nohighlight">\(z_0 \neq 0\)</span>). Then <span class="math notranslate nohighlight">\(\sum c_n z^n\)</span> converges absolutely for all <span class="math notranslate nohighlight">\(z\)</span> satisfying <span class="math notranslate nohighlight">\(\abs{z} &lt; \abs{z_0}\)</span>.</p>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. Because <span class="math notranslate nohighlight">\(\sum c_n z_0^n\)</span> converges, the sequence <span class="math notranslate nohighlight">\(\left\{c_n z_0^n\right\}\)</span> also converges (to <span class="math notranslate nohighlight">\(0\)</span>). Therefore, <span class="math notranslate nohighlight">\(\left\{c_n z_0^n\right\}\)</span> is bounded, that is,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{c_n z_0^n}\leq M
@@ -641,7 +658,7 @@ title="Print to PDF"
 <section class="remark-content" id="proof-content">
 <p>As soon as we know the power series <span class="math notranslate nohighlight">\(\sum c_n z^n\)</span> converges at some non-zero point, we are immediately informed that it has a positive radius of convergence, and it converges <em>absolutely</em> at points <em>interior</em> to the circle of convergence.</p>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. We first prove that <span class="math notranslate nohighlight">\(\sum c_n z^n\)</span> converges if <span class="math notranslate nohighlight">\(\abs{z} &lt; R\)</span>. We intend to apply the Root Test. Taking the <span class="math notranslate nohighlight">\(n\)</span>-th root of each term of the series and then taking the upper limit, we obtain</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{c_n z^n}}

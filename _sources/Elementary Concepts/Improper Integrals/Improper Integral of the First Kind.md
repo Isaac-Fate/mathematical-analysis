@@ -30,6 +30,7 @@ Suppose that $f \in\mathfrak{R}$ on $[a,b]$ for all $b \geq a$, and $f \geq 0$ o
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 Assume first $\int_a^\infty f(x) \;\mathrm{d}x$ converges, then $F(\infty) < \infty$. $F$ increases monotonically since $f \geq 0$. It follows that $F(b) \leq F(\infty) < \infty$, hence bounded. Conversely, if $F(b)$ is bounded on $[a, \infty)$, then by {prf:ref}`pro:2`, $F(\infty)$ exists, i.e., $\int_a^\infty f(x) \;\mathrm{d}x$ converges since $F$ is increasing.
 
@@ -57,6 +58,7 @@ where $c$ is a constant. Then we have
 ````
 
 ````{prf:proof}
+:class: dropdown
 TODO
 ````
 
@@ -86,6 +88,7 @@ Note that all the conclusions are about $\int_a^\infty f(x) \;\mathrm{d}x$. Inde
 ````
 
 ````{prf:proof}
+:class: dropdown
 (Proof of 1) Choose $0 < \varepsilon < l$. Then there exists $c > a$ such that 
 
 ```{math}
@@ -185,5 +188,6 @@ converges.
 ````
 
 ````{prf:proof}
+:class: dropdown
 TODO
 ````

@@ -22,6 +22,7 @@ F^\prime(x_0) = f(x_0)
 ````
 
 ````{prf:proof}
+:class: dropdown
 TODO
 ````
 
@@ -64,6 +65,7 @@ If $ f \in\mathfrak{R}$ on $[a, b]$ and $F$ is a differentiable function on $[a,
 ````
 
 ````{prf:proof}
+:class: dropdown
 TODO
 ````
 
@@ -80,5 +82,6 @@ Let $F, G$ be differentiable functions on $[a, b]$ such that $F^\prime = f \in\m
 ````
 
 ````{prf:proof}
+:class: dropdown
 TODO
 ````

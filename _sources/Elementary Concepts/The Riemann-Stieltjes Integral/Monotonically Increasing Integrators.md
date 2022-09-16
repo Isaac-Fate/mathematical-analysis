@@ -16,6 +16,7 @@ If $f$ is continuous on $[a, b]$ and $\alpha$ is increasing on $[a, b]$, then $f
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 Note that $f$ is actually uniformly continuous on $[a, b]$. It follows that for a given $\varepsilon > 0$, there exists $\delta > 0$ such that 
 

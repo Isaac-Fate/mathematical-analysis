@@ -21,6 +21,7 @@ This can be treated as the *reciprocity law* for integrals.
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 Given $\varepsilon > 0$, since $f \in\mathfrak{R}(\alpha)$ on $[a, b]$, there exists a partition $P_\varepsilon$ such that 
 

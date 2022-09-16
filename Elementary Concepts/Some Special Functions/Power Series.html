@@ -284,11 +284,28 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Improper%20Integrals/index.html">
-   Improper Integrals
+  <a class="reference internal" href="../Reimann%20Integrals/index.html">
+   Reimann Integrals
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Reimann%20Integrals/Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html">
+     Reduction from Riemann-Stieltjes Integrals to Reimann Integrals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Improper%20Integrals/index.html">
+   Improper Integrals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -309,8 +326,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/index.html">
    Sequences and Series of Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -346,8 +363,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="index.html">
    Some Special Functions
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -385,8 +402,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/index.html">
    Functions of Several Variables
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -679,7 +696,7 @@ f(x) = \sum_{n=0}^{\infty} c_n x^n
 \[\begin{align*}
 f^\prime(x) = \sum_{n=1}^{\infty} n c_n x^{n-1}\end{align*}\]</div>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
 <div class="proof corollary admonition" id="cor:2">
@@ -714,7 +731,7 @@ c_n = \frac{f^{(n)}(0)}{n!}\end{align}\]</div>
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(x \in\R\)</span>, <span class="math notranslate nohighlight">\(\abs{x} &lt; 1\)</span> and <span class="math notranslate nohighlight">\(n \in\Ns\)</span>. Moreover, the power series on right-hand side of <a class="reference internal" href="#equation-eq-30">(53)</a> converges only when <span class="math notranslate nohighlight">\(\abs{x} &lt; 1\)</span>.</p>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -779,11 +796,12 @@ The shape of these numbers is like a hockey stick, hence the name of this identi
 
 
 ````{prf:proof}
+:class: dropdown
 TODO
 </pre></div>
 </div>
 <p>We now provide an alternative proof of the Negative Binomial Theorem as follows.</p>
-<div class="proof admonition" id="proof">
+<div class="proof dropdown admonition" id="proof">
 <p>Proof. (<strong>Proof of <a class="reference internal" href="#thm:16">Theorem 43</a> using Cauchy Product</strong>)
 We shall prove by induction on <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <p>(Base Case) If <span class="math notranslate nohighlight">\(n = 1\)</span>, then <a class="reference internal" href="#equation-eq-30">(53)</a> is</p>
@@ -845,7 +863,7 @@ f(x) = \sum_{n=0}^\infty\frac{f^{(n)}(a)}{n!}(x-a)^n
 <section class="remark-content" id="proof-content">
 <p>Note that the radius of convergence of the power series <a class="reference internal" href="#equation-eq-35">(59)</a> is <em>at least</em><span class="math notranslate nohighlight">\(R - \abs{a}\)</span>(provided that <span class="math notranslate nohighlight">\(R\)</span> is the radius of convergence of <span class="math notranslate nohighlight">\(\sum c_n x^n\)</span>). It may converge in a larger interval about point <span class="math notranslate nohighlight">\(a\)</span>. Having said that, there also exists a case that <span class="math notranslate nohighlight">\(R - \abs{a}\)</span> is precisely the radius of convergence of <a class="reference internal" href="#equation-eq-35">(59)</a>. We will illustrate this in <a class="reference internal" href="#eg:3">Example 9</a>.</p>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. To obtain the term <span class="math notranslate nohighlight">\((x-a)\)</span>, we apply the Binomial Theorem:</p>
 <div class="math notranslate nohighlight" id="equation-eq-36">
 <span class="eqno">(60)<a class="headerlink" href="#equation-eq-36" title="Permalink to this equation">#</a></span>\[\begin{align}

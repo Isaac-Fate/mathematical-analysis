@@ -40,6 +40,7 @@ f^\prime(x) = \sum_{n=1}^{\infty} n c_n x^{n-1}\end{align*}
 ````
 
 ````{prf:proof}
+:class: dropdown
 TODO
 ````
 
@@ -96,6 +97,7 @@ where $x \in\R$, $\abs{x} < 1$ and $n \in\Ns$. Moreover, the power series on rig
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 Let
 
@@ -199,6 +201,7 @@ The shape of these numbers is like a hockey stick, hence the name of this identi
 
 
 ````{prf:proof}
+:class: dropdown
 TODO
 ````
 
@@ -207,6 +210,7 @@ We now provide an alternative proof of the Negative Binomial Theorem as follows.
 
 
 ````{prf:proof}
+:class: dropdown
 (**Proof of {prf:ref}`thm:16` using Cauchy Product**) 
 We shall prove by induction on $n$.
 
@@ -309,6 +313,7 @@ Note that the radius of convergence of the power series {eq}`eq:35` is *at least
 ````
 
 ````{prf:proof}
+:class: dropdown
 
 To obtain the term $(x-a)$, we apply the Binomial Theorem:
 

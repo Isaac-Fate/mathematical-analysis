@@ -284,11 +284,28 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Improper%20Integrals/index.html">
-   Improper Integrals
+  <a class="reference internal" href="../Reimann%20Integrals/index.html">
+   Reimann Integrals
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Reimann%20Integrals/Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html">
+     Reduction from Riemann-Stieltjes Integrals to Reimann Integrals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Improper%20Integrals/index.html">
+   Improper Integrals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -309,8 +326,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/index.html">
    Sequences and Series of Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -346,8 +363,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Some%20Special%20Functions/index.html">
    Some Special Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -385,8 +402,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../../Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/index.html">
    Functions of Several Variables
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -624,7 +641,7 @@ title="Print to PDF"
 \end{align}\]</div>
 <p>Furthermore, if <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, then there exists <span class="math notranslate nohighlight">\(x_0 \in[a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(x_0) = c\)</span>.</p>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="proof dropdown admonition" id="proof">
 <p>Proof. If <span class="math notranslate nohighlight">\(\alpha\)</span> is a constant function, then the conclusion is trivial since all values in <a class="reference internal" href="#equation-eq-58">(33)</a> are zeros. In the rest of the proof, we assume <span class="math notranslate nohighlight">\(\alpha\)</span> is non-constant. In that case, <span class="math notranslate nohighlight">\(\alpha(b) &gt; \alpha(a)\)</span>. To simplify the notation, we let <span class="math notranslate nohighlight">\(m = \inf_{x \in[a, b]} f(x)\)</span> and <span class="math notranslate nohighlight">\(M = \sup_{x \in[a, b]} f(x)\)</span>. Since constant functions are clearly integrable, by <a class="reference internal" href="Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 23</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_{a}^{b} m \;\mathrm{d}\alpha\leq\int_{a}^{b} f \;\mathrm{d}\alpha\leq\int_{a}^{b} M \;\mathrm{d}\alpha\end{align*}\]</div>
@@ -647,15 +664,16 @@ f(x_0) = c
 <div class="proof theorem admonition" id="thm:28">
 <p class="admonition-title"><span class="caption-number">Theorem 26 </span> (Second Mean Value Theorem for Riemann-Stieltjes Integrals)</p>
 <section class="theorem-content" id="proof-content">
-<p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous and <span class="math notranslate nohighlight">\(f\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then, there exists a point <span class="math notranslate nohighlight">\(x_0 \in[a, b]\)</span> such that</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous and <span class="math notranslate nohighlight">\(f\)</span> is monotonic on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then, there exists a point <span class="math notranslate nohighlight">\(x_0 \in[a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-69">
 <span class="eqno">(34)<a class="headerlink" href="#equation-eq-69" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
 = f(a) \int_a^{x_0}\mathrm{d}\alpha
 + f(b) \int_{x_0}^b \mathrm{d}\alpha\end{align}\]</div>
 <p>Of course, all the integrals involved in <a class="reference internal" href="#equation-eq-69">(34)</a> exist.</p>
 </section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. (Existence of Integrals) Firstly, by <a class="reference internal" href="Monotonically%20Increasing%20Integrators.html#thm:34">Theorem 22</a>, we know that <span class="math notranslate nohighlight">\(\alpha\in\mathfrak{R}(f)\)</span>. And by the reciprocity law (<a class="reference internal" href="Integration%20by%20Parts.html#thm:36">Theorem 20</a>), it also holds that <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span>.</p>
+</div><div class="proof dropdown admonition" id="proof">
+<p>Proof. Without loss of generality, we may assume that <span class="math notranslate nohighlight">\(f\)</span> is increasing in the rest of this proof. If <span class="math notranslate nohighlight">\(f\)</span> is decreasing, then we apply this theorem to <span class="math notranslate nohighlight">\(-f\)</span>, which is increasing. And <a class="reference internal" href="#equation-eq-69">(34)</a> still holds after multiplying <span class="math notranslate nohighlight">\(-1\)</span> on the both sides.</p>
+<p>(Existence of Integrals) Firstly, by <a class="reference internal" href="Monotonically%20Increasing%20Integrators.html#thm:34">Theorem 22</a>, we know that <span class="math notranslate nohighlight">\(\alpha\in\mathfrak{R}(f)\)</span>. And by the reciprocity law (<a class="reference internal" href="Integration%20by%20Parts.html#thm:36">Theorem 20</a>), it also holds that <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span>.</p>
 <p>(Integration by Parts) Then, applying the integration by parts (<a class="reference internal" href="Integration%20by%20Parts.html#thm:36">Theorem 20</a>) to <span class="math notranslate nohighlight">\(\int_a^b f \;\mathrm{d}\alpha\)</span>, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-70">
 <span class="eqno">(35)<a class="headerlink" href="#equation-eq-70" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
