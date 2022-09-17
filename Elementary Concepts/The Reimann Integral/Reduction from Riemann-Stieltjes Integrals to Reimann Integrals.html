@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"R": "\\mathbb{R}", "C": "\\mathbb{C}", "F": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Z": "\\mathbb{Z}", "Q": "\\mathbb{Q}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "d": ["\\mathrm{d}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../_static/icon.jpg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -262,6 +264,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Monotonically%20Increasing%20Integrators.html">
      Monotonically Increasing Integrators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Integrators%20of%20Bounded%20Variation.html">
+     Integrators of Bounded Variation
     </a>
    </li>
    <li class="toctree-l2">
@@ -624,6 +631,74 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="reduction-from-riemann-stieltjes-integrals-to-reimann-integrals">
 <h1>Reduction from Riemann-Stieltjes Integrals to Reimann Integrals<a class="headerlink" href="#reduction-from-riemann-stieltjes-integrals-to-reimann-integrals" title="Permalink to this headline">#</a></h1>
+<div class="proof theorem admonition" id="theorem-0">
+<p class="admonition-title"><span class="caption-number">Theorem 33 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuously differentiable on <span class="math notranslate nohighlight">\([a, b]\)</span>, i.e., <span class="math notranslate nohighlight">\(\alpha^\prime(x)\)</span> exists for every <span class="math notranslate nohighlight">\(x \in[a, b]\)</span> and <span class="math notranslate nohighlight">\(\alpha^\prime\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f \alpha^\prime\in\mathfrak{R}\)</span>, and</p>
+<div class="math notranslate nohighlight" id="equation-eq-85">
+<span class="eqno">(54)<a class="headerlink" href="#equation-eq-85" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
+= \int_a^b f(x) \alpha^\prime(x) \;\mathrm{d}x
+\end{align}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Choose an arbitrarily positive number <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. Since <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-80">
+<span class="eqno">(55)<a class="headerlink" href="#equation-eq-80" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} &lt; \frac{\varepsilon}{2}\quad\forall P \supset P_\varepsilon\end{align}\]</div>
+<p>On the other hand, because <span class="math notranslate nohighlight">\(\alpha^\prime\)</span> is continuous, actually uniformly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, there exist <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-81">
+<span class="eqno">(56)<a class="headerlink" href="#equation-eq-81" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{s - t} &lt; \delta\implies\abs{\alpha^\prime(s) - \alpha^\prime(t)} &lt; \frac{\varepsilon}{2M(b-a)}\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(M\)</span> is a constant positive number such that <span class="math notranslate nohighlight">\(\abs{f(x)} &lt; M \;\forall x \in[a, b]\)</span>. Let <span class="math notranslate nohighlight">\(P^\prime_\varepsilon\supset P_\varepsilon\)</span> be a refinement such that the length of each subinterval is bounded by <span class="math notranslate nohighlight">\(\delta\)</span>, i.e., <span class="math notranslate nohighlight">\(\Delta x_k &lt; \delta\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(P \supset P^\prime_\varepsilon\)</span>. We compare the Riemann sum <span class="math notranslate nohighlight">\(S(P, f \alpha^\prime)\)</span> to <span class="math notranslate nohighlight">\(\int_a^b f \;\mathrm{d}\alpha\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-82">
+<span class="eqno">(57)<a class="headerlink" href="#equation-eq-82" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{
+S(P, f \alpha^\prime)
+- \int_a^b f \; \mathrm{d}\alpha
+}&amp;\leq\abs{
+S(P, f \alpha^\prime)
+- S(P, f, \alpha)
+} + \abs{
+S(P, f, \alpha)
+- \int_a^b f \; \mathrm{d}\alpha
+}\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(S(P, f \alpha^\prime)\)</span> and <span class="math notranslate nohighlight">\(S(P, f, \alpha)\)</span> share the same choice of point <span class="math notranslate nohighlight">\(t_k\)</span> in each subinterval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>. We consider each term on the right-hand side of <a class="reference internal" href="#equation-eq-82">(57)</a> in the following.</p>
+<p>For the term <span class="math notranslate nohighlight">\(\abs{ S(P, f \alpha^\prime) - S(P, f, \alpha) }\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}\abs{ 
+S(P, f \alpha^\prime) 
+- S(P, f, \alpha) 
+}&amp;= \abs{
+\sum \left ( f(t_k) \alpha^\prime(t_k) \Delta x_k - f(t_k) \Delta \alpha_k \right )
+}\\&amp;= \abs{
+\sum  f(t_k) \left ( \alpha^\prime(t_k)  - \alpha^\prime(\xi_k) \right ) \Delta x_k
+}\quad\text{by the Mean Value Theorem}\\&amp;\leq\sum\abs{f(t_k)}\abs{
+\alpha^\prime(t_k)  
+- \alpha^\prime(\xi_k)
+}\Delta x_k \\&amp;\leq M \sum\abs{
+\alpha^\prime(t_k)  
+- \alpha^\prime(\xi_k)
+}\Delta x_k 
+\quad\text{recall $\abs{f} &lt; M$}\\&amp;&lt; M \frac{\varepsilon}{2M(b-a)}\sum\Delta x_k \\&amp;= \frac{\varepsilon}{2}\end{align*}\end{split}\]</div>
+<p>Note that the second last inequality follows from <a class="reference internal" href="#equation-eq-81">(56)</a> since <span class="math notranslate nohighlight">\(\abs{t_k - \xi_k} &lt; \delta\)</span>. In summary, we have obtained</p>
+<div class="math notranslate nohighlight" id="equation-eq-83">
+<span class="eqno">(58)<a class="headerlink" href="#equation-eq-83" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{ 
+S(P, f \alpha^\prime) 
+- S(P, f, \alpha) 
+} &lt; \frac{\varepsilon}{2}\end{align}\]</div>
+<p>We also need to consider the term <span class="math notranslate nohighlight">\(\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha}\)</span> in <a class="reference internal" href="#equation-eq-82">(57)</a>. Recall that <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span>. It then follows from <a class="reference internal" href="#equation-eq-80">(55)</a> that</p>
+<div class="math notranslate nohighlight" id="equation-eq-84">
+<span class="eqno">(59)<a class="headerlink" href="#equation-eq-84" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{
+S(P, f, \alpha)
+- \int_a^b f \; \mathrm{d}\alpha
+} &lt; \frac{\varepsilon}{2}\end{align}\]</div>
+<p>Finally, taking into consideration <a class="reference internal" href="#equation-eq-82">(57)</a>, <a class="reference internal" href="#equation-eq-83">(58)</a> and <a class="reference internal" href="#equation-eq-84">(59)</a>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{
+S(P, f \alpha^\prime)
+- \int_a^b f \; \mathrm{d}\alpha
+} &lt; \frac{\varepsilon}{2} + \frac{\varepsilon}{2}
+= \varepsilon\quad\forall P \supset P^\prime_\varepsilon\end{align*}\]</div>
+<p>This implies that <span class="math notranslate nohighlight">\(f\alpha^\prime\in\mathfrak{R}\)</span>, and <a class="reference internal" href="#equation-eq-85">(54)</a> indeed holds.</p>
+</div>
 <div class="note admonition">
 <p class="admonition-title">Exercise</p>
 <p>An exercise</p>

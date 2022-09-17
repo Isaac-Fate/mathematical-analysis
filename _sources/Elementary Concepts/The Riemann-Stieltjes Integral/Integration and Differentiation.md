@@ -61,7 +61,7 @@ where $M$ is a constant such that $M > \abs{f(x)}\;\forall x \in[a, b]$.
 
 ```{math}
 \begin{align*}
-V(P, F) = \sum\abs{F(x_i) - F(x_{i-1})}\leq M \sum\abs{\alpha(x_i) - \alpha(x_{i-1})}
+V(P, F) = \sum\abs{F(x_k) - F( x_{k-1})}\leq M \sum\abs{\alpha(x_k) - \alpha(x_{k-1})}
 = M (b-a)
 \end{align*}
 ```
