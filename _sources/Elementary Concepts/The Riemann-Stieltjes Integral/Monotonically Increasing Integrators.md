@@ -61,6 +61,7 @@ U(P, f, \alpha) - L(P, f, \alpha)
 This implies $f \in\mathfrak{R}(\alpha)$.
 
 ````
+## Comparison Theorems
 
 ````{prf:theorem}
 :label: thm:26
@@ -70,5 +71,84 @@ Suppose that $\alpha$ is increasing on $[a, b]$. If $f, g \in\mathfrak{R}(\alpha
 ```{math}
 \begin{align*}\int_a^b f \;\mathrm{d}\alpha\leq\int_a^b g \;\mathrm{d}\alpha\end{align*}
 ```
+
+````
+
+````{prf:theorem}
+:label: thm:37
+
+Suppose $\alpha$ is increasing on $[a, b]$. If $f \in\mathfrak{R}(\alpha)$ on $[a, b]$, then $\abs{f}\in\mathfrak{R}(\alpha)$ on $[a, b]$. And we have the inequality
+
+```{math}
+:label: eq:95
+\begin{align}\abs{\int_a^b f \; \mathrm{d}\alpha}\leq\int_a^b \abs{f}\;\mathrm{d}\alpha\end{align}
+```
+
+````
+
+
+The critical step of the proof is to note 
+
+```{math}
+\begin{align*}\sup_{x \in[x_{k-1}, x_k]} f(x) - \inf_{x \in[x_{k-1}, x_k]} f(x) 
+= \sup_{x,y \in[x_{k-1}, x_k]}\abs{f(x) - f(y)}\end{align*}
+```
+
+````{prf:proof}
+
+For a partition $P$ on $[a, b]$, let $M_k(f)$ and $m_k(f)$ denote 
+
+```{math}
+\begin{align*}
+M_k(f) &= \sup_{x \in[x_{k-1}, x_k]} f(x) &
+m_k(f) &= \inf_{x \in[x_{k-1}, x_k]} f(x)
+\end{align*}
+```
+
+And let $M_k(\abs{f})$ and $m_k(\abs{f})$ have the similar meanings. Note that 
+
+```{math}
+\begin{align*}
+M_k(f) - m_k(f) = \sup_{x,y \in[x_{k-1}, x_k]}\abs{f(x) - f(y)}\end{align*}
+```
+
+It then follows from the triangle inequality
+
+```{math}
+\begin{align*}\abs{\abs{f(x)} - \abs{f(y)}}\leq\abs{f(x) - f(y)}\end{align*}
+```
+
+that 
+
+```{math}
+:label: eq:96
+\begin{align}
+M_k(\abs{f}) - m_k(\abs{f}) 
+= \sup_{x,y \in[x_{k-1}, x_k]}\abs{\abs{f(x)} - \abs{f(y)}}\leq\sup_{x,y \in[x_{k-1}, x_k]}\abs{f(x) - f(y)}
+= M_k(f) - m_k(f)
+\end{align}
+```
+
+
+Given $\varepsilon > 0$, since $f \in\mathfrak{R}(\alpha)$, there exists a partition $P$ such that  
+
+```{math}
+\begin{align*}
+U(P, f, \alpha) - L(P, f, \alpha)
+= \sum(M_k(f) - m_k(f)) \Delta\alpha_k
+< \varepsilon\end{align*}
+```
+
+It then follows from {eq}`eq:96` that 
+
+```{math}
+\begin{align*}
+U(P, \abs{f}, \alpha) - L(P, \abs{f}, \alpha)
+= \sum\abs{M_k(f) - m_k(f)}\Delta\alpha_k
+\leq\sum(M_k(f) - m_k(f)) \Delta\alpha_k
+< \varepsilon\end{align*}
+```
+
+Note that we also need the condition that $\alpha$ is increasing for the above inequality to hold. Therefore, we conclude that $\abs{f}\in\mathfrak{R}(\alpha)$ by {prf:ref}`thm:4`. The inequality {eq}`eq:95` then follows form {prf:ref}`thm:26`.
 
 ````

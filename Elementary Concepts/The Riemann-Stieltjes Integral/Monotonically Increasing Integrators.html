@@ -637,6 +637,11 @@ title="Print to PDF"
    Existence
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-theorems">
+   Comparison Theorems
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -664,6 +669,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#existence">
    Existence
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-theorems">
+   Comparison Theorems
   </a>
  </li>
 </ul>
@@ -719,6 +729,9 @@ U(P, f, \alpha) - L(P, f, \alpha)
 = \varepsilon\end{align*}\]</div>
 <p>This implies <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span>.</p>
 </div>
+</section>
+<section id="comparison-theorems">
+<h2>Comparison Theorems<a class="headerlink" href="#comparison-theorems" title="Permalink to this headline">#</a></h2>
 <div class="proof theorem admonition" id="thm:26">
 <p class="admonition-title"><span class="caption-number">Theorem 24 </span></p>
 <section class="theorem-content" id="proof-content">
@@ -726,7 +739,54 @@ U(P, f, \alpha) - L(P, f, \alpha)
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_a^b f \;\mathrm{d}\alpha\leq\int_a^b g \;\mathrm{d}\alpha\end{align*}\]</div>
 </section>
-</div></section>
+</div><div class="proof theorem admonition" id="thm:37">
+<p class="admonition-title"><span class="caption-number">Theorem 25 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(\abs{f}\in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. And we have the inequality</p>
+<div class="math notranslate nohighlight" id="equation-eq-95">
+<span class="eqno">(33)<a class="headerlink" href="#equation-eq-95" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\int_a^b f \; \mathrm{d}\alpha}\leq\int_a^b \abs{f}\;\mathrm{d}\alpha\end{align}\]</div>
+</section>
+</div><p>The critical step of the proof is to note</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\sup_{x \in[x_{k-1}, x_k]} f(x) - \inf_{x \in[x_{k-1}, x_k]} f(x) 
+= \sup_{x,y \in[x_{k-1}, x_k]}\abs{f(x) - f(y)}\end{align*}\]</div>
+<div class="proof admonition" id="proof">
+<p>Proof. For a partition <span class="math notranslate nohighlight">\(P\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, let <span class="math notranslate nohighlight">\(M_k(f)\)</span> and <span class="math notranslate nohighlight">\(m_k(f)\)</span> denote</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+M_k(f) &amp;= \sup_{x \in[x_{k-1}, x_k]} f(x) &amp;
+m_k(f) &amp;= \inf_{x \in[x_{k-1}, x_k]} f(x)
+\end{align*}\]</div>
+<p>And let <span class="math notranslate nohighlight">\(M_k(\abs{f})\)</span> and <span class="math notranslate nohighlight">\(m_k(\abs{f})\)</span> have the similar meanings. Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+M_k(f) - m_k(f) = \sup_{x,y \in[x_{k-1}, x_k]}\abs{f(x) - f(y)}\end{align*}\]</div>
+<p>It then follows from the triangle inequality</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{\abs{f(x)} - \abs{f(y)}}\leq\abs{f(x) - f(y)}\end{align*}\]</div>
+<p>that</p>
+<div class="math notranslate nohighlight" id="equation-eq-96">
+<span class="eqno">(34)<a class="headerlink" href="#equation-eq-96" title="Permalink to this equation">#</a></span>\[\begin{align}
+M_k(\abs{f}) - m_k(\abs{f}) 
+= \sup_{x,y \in[x_{k-1}, x_k]}\abs{\abs{f(x)} - \abs{f(y)}}\leq\sup_{x,y \in[x_{k-1}, x_k]}\abs{f(x) - f(y)}
+= M_k(f) - m_k(f)
+\end{align}\]</div>
+<p>Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P, f, \alpha) - L(P, f, \alpha)
+= \sum(M_k(f) - m_k(f)) \Delta\alpha_k
+&lt; \varepsilon\end{align*}\]</div>
+<p>It then follows from <a class="reference internal" href="#equation-eq-96">(34)</a> that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P, \abs{f}, \alpha) - L(P, \abs{f}, \alpha)
+= \sum\abs{M_k(f) - m_k(f)}\Delta\alpha_k
+\leq\sum(M_k(f) - m_k(f)) \Delta\alpha_k
+&lt; \varepsilon\end{align*}\]</div>
+<p>Note that we also need the condition that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing for the above inequality to hold. Therefore, we conclude that <span class="math notranslate nohighlight">\(\abs{f}\in\mathfrak{R}(\alpha)\)</span> by <a class="reference internal" href="#thm:4">Theorem 22</a>. The inequality <a class="reference internal" href="#equation-eq-95">(33)</a> then follows form <a class="reference internal" href="#thm:26">Theorem 24</a>.</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
