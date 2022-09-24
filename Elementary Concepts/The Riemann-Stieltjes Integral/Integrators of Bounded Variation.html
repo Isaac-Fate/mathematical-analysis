@@ -652,7 +652,7 @@ f(x) = \begin{cases}
 </section>
 </div><p>The preceding example shows that we can not decompose <span class="math notranslate nohighlight">\(\alpha\)</span> into any two increasing functions, with respect to which <span class="math notranslate nohighlight">\(f\)</span> is integrable.</p>
 <div class="proof theorem admonition" id="theorem-1">
-<p class="admonition-title"><span class="caption-number">Theorem 26 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 29 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(V_a^x(\alpha))\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> where <span class="math notranslate nohighlight">\(V_a^x(\alpha)\)</span> is the total variation of <span class="math notranslate nohighlight">\(\alpha\)</span>, which is regarded as a function of <span class="math notranslate nohighlight">\(x\)</span> as in <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/Additive%20Property%20of%20Total%20Variation.html#def:8">Definition 5</a>.</p>
 </section>
@@ -683,14 +683,14 @@ A = \sup_{x \in[a, b]} f(x) - \inf_{x \in[a, b]} f(x)
 <p>Since <span class="math notranslate nohighlight">\(f\)</span> is non-constant, it is clear that <span class="math notranslate nohighlight">\(A &gt; 0\)</span>.</p>
 <p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be chosen arbitrarily. Since <span class="math notranslate nohighlight">\(\alpha\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>, by the definition of total variations, there exists a partition <span class="math notranslate nohighlight">\(P^\prime_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-86">
-<span class="eqno">(35)<a class="headerlink" href="#equation-eq-86" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(41)<a class="headerlink" href="#equation-eq-86" title="Permalink to this equation">#</a></span>\[\begin{align}
 V_a^b(\alpha) 
 &lt; V(P, \alpha)
 + \frac{\varepsilon}{3A}\quad\forall P \supset P^\prime_\varepsilon\end{align}\]</div>
 <p>We shall use this inequality later.</p>
 <p>Now, we prepare another inequality that will be in use. Because <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P^{\prime\prime}_\varepsilon\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-87">
-<span class="eqno">(36)<a class="headerlink" href="#equation-eq-87" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{
+<span class="eqno">(42)<a class="headerlink" href="#equation-eq-87" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{
 \sum \left (f(s_k) - f(t_k)\right ) 
 \Delta \alpha_k
 } &lt; \frac{\varepsilon}{3}\quad\forall P \supset P^{\prime\prime}_\varepsilon\end{align}\]</div>
@@ -703,11 +703,11 @@ U(P,f,V) - L(P,f,V)
 + \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}\end{align*}\end{split}\]</div>
 <p>Recall <span class="math notranslate nohighlight">\(A = \sup f - \inf f\)</span>. Hence, the right-hand side of the equality above can be further enlarged to</p>
 <div class="math notranslate nohighlight" id="equation-eq-88">
-<span class="eqno">(37)<a class="headerlink" href="#equation-eq-88" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(43)<a class="headerlink" href="#equation-eq-88" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P,f,V) - L(P,f,V)
 \leq A \sum_{k=1}^n \left( \Delta V_k - \abs{\Delta\alpha_k}\right)
 + \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}\end{align}\]</div>
-<p>Note that <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\supset P^\prime_\varepsilon\)</span>. It then follows from <a class="reference internal" href="#equation-eq-86">(35)</a> that</p>
+<p>Note that <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\supset P^\prime_\varepsilon\)</span>. It then follows from <a class="reference internal" href="#equation-eq-86">(41)</a> that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{k=1}^n \Delta V_k
 \leq V_a^b(\alpha) 
@@ -717,15 +717,15 @@ U(P,f,V) - L(P,f,V)
 + \frac{\varepsilon}{3A}\end{align*}\]</div>
 <p>Rearranging the terms, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-89">
-<span class="eqno">(38)<a class="headerlink" href="#equation-eq-89" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{k=1}^n \left( \Delta V_k - \abs{\Delta\alpha_k}\right)
+<span class="eqno">(44)<a class="headerlink" href="#equation-eq-89" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{k=1}^n \left( \Delta V_k - \abs{\Delta\alpha_k}\right)
 &lt; \frac{\varepsilon}{3A}\end{align}\]</div>
-<p>By combining <a class="reference internal" href="#equation-eq-88">(37)</a> and <a class="reference internal" href="#equation-eq-89">(38)</a>, we have</p>
+<p>By combining <a class="reference internal" href="#equation-eq-88">(43)</a> and <a class="reference internal" href="#equation-eq-89">(44)</a>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-90">
-<span class="eqno">(39)<a class="headerlink" href="#equation-eq-90" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(45)<a class="headerlink" href="#equation-eq-90" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P,f,V) - L(P,f,V)
 &lt; \frac{\varepsilon}{3}
 + \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}\end{align}\]</div>
-<p>It requires much more work to bound the term <span class="math notranslate nohighlight">\(\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}\)</span> in <a class="reference internal" href="#equation-eq-90">(39)</a>. Let <span class="math notranslate nohighlight">\(h\)</span> be a positive number given by</p>
+<p>It requires much more work to bound the term <span class="math notranslate nohighlight">\(\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}\)</span> in <a class="reference internal" href="#equation-eq-90">(45)</a>. Let <span class="math notranslate nohighlight">\(h\)</span> be a positive number given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 h = \frac{\varepsilon}{3(V_a^b (\alpha) + 1)}\end{align*}\]</div>
@@ -741,7 +741,7 @@ M_k - m_k &lt; f(s_k) - f(t_k) + h
 \end{align*}\]</div>
 <p>In this case,</p>
 <div class="math notranslate nohighlight" id="equation-eq-91">
-<span class="eqno">(40)<a class="headerlink" href="#equation-eq-91" title="Permalink to this equation">#</a></span>\[\begin{align}(M_k - m_k)\abs{\Delta\alpha_k}
+<span class="eqno">(46)<a class="headerlink" href="#equation-eq-91" title="Permalink to this equation">#</a></span>\[\begin{align}(M_k - m_k)\abs{\Delta\alpha_k}
 &lt; \left(f(s_k) - f(t_k) + h\right)\abs{\Delta\alpha_k}
 =  \left(f(s_k) - f(t_k) + h\right) \Delta\alpha_k
 \end{align}\]</div>
@@ -752,11 +752,11 @@ M_k - m_k &lt; -f(s_k) + f(t_k) + h
 \end{align*}\]</div>
 <p>It then follows that</p>
 <div class="math notranslate nohighlight" id="equation-eq-92">
-<span class="eqno">(41)<a class="headerlink" href="#equation-eq-92" title="Permalink to this equation">#</a></span>\[\begin{align}(M_k - m_k)\abs{\Delta\alpha_k}
+<span class="eqno">(47)<a class="headerlink" href="#equation-eq-92" title="Permalink to this equation">#</a></span>\[\begin{align}(M_k - m_k)\abs{\Delta\alpha_k}
 &lt; \left(-f(s_k) + f(t_k) + h\right)\abs{\Delta\alpha_k}
 =  \left(f(s_k) - f(t_k) - h\right) \Delta\alpha_k
 \end{align}\]</div>
-<p>Compare <a class="reference internal" href="#equation-eq-91">(40)</a> and <a class="reference internal" href="#equation-eq-92">(41)</a>, we conclude</p>
+<p>Compare <a class="reference internal" href="#equation-eq-91">(46)</a> and <a class="reference internal" href="#equation-eq-92">(47)</a>, we conclude</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}(M_k - m_k)\abs{\Delta\alpha_k}
 &lt; \left(f(s_k) - f(t_k)\right) \Delta\alpha_k
@@ -766,14 +766,14 @@ M_k - m_k &lt; -f(s_k) + f(t_k) + h
 \[\begin{split}\begin{align*}\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}&amp;&lt; \sum_{k=1}^n \left(f(s_k) - f(t_k)\right) \Delta\alpha_k + h \sum_{k=1}^n \abs{\Delta\alpha_k}\\&amp;\leq\sum_{k=1}^n \left(f(s_k) - f(t_k)\right) \Delta\alpha_k + h V_a^b (\alpha) \\&amp;&lt; \frac{\varepsilon}{3} + \sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k \\&amp;\leq\frac{\varepsilon}{3} + \abs{\sum_{k=1}^n \left (f(s_k) - f(t_k)\right )\Delta\alpha_k}\end{align*}\end{split}\]</div>
 <p>In summary,</p>
 <div class="math notranslate nohighlight" id="equation-eq-93">
-<span class="eqno">(42)<a class="headerlink" href="#equation-eq-93" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+<span class="eqno">(48)<a class="headerlink" href="#equation-eq-93" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
 &lt; \frac{\varepsilon}{3} + \abs{\sum_{k=1}^n \left (f(s_k) - f(t_k)\right )\Delta\alpha_k}\end{align}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\supset P^{\prime\prime}_\varepsilon\)</span>, we may apply <a class="reference internal" href="#equation-eq-87">(36)</a> to <a class="reference internal" href="#equation-eq-93">(42)</a> and obtain that</p>
+<p>Since <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\supset P^{\prime\prime}_\varepsilon\)</span>, we may apply <a class="reference internal" href="#equation-eq-87">(42)</a> to <a class="reference internal" href="#equation-eq-93">(48)</a> and obtain that</p>
 <div class="math notranslate nohighlight" id="equation-eq-94">
-<span class="eqno">(43)<a class="headerlink" href="#equation-eq-94" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+<span class="eqno">(49)<a class="headerlink" href="#equation-eq-94" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
 &lt; \frac{\varepsilon}{3} + \frac{\varepsilon}{3}
 = \frac{2\varepsilon}{3}\end{align}\]</div>
-<p>Finally, by combining <a class="reference internal" href="#equation-eq-90">(39)</a> and <a class="reference internal" href="#equation-eq-94">(43)</a>, we have</p>
+<p>Finally, by combining <a class="reference internal" href="#equation-eq-90">(45)</a> and <a class="reference internal" href="#equation-eq-94">(49)</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 U(P,f,V) - L(P,f,V)

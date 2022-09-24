@@ -642,6 +642,11 @@ title="Print to PDF"
    Comparison Theorems
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integral-of-product-of-two-functions">
+   Integral of Product of Two Functions
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -676,6 +681,11 @@ title="Print to PDF"
    Comparison Theorems
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#integral-of-product-of-two-functions">
+   Integral of Product of Two Functions
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -703,8 +713,17 @@ title="Print to PDF"
 \[\begin{align*}
 U(P, f, \alpha) - L(P, f, \alpha) &lt; \varepsilon\end{align*}\]</div>
 </section>
-</div><div class="proof theorem admonition" id="thm:34">
+</div><p>It is natural to assert that if <span class="math notranslate nohighlight">\(f\)</span> is integrable on an interval <span class="math notranslate nohighlight">\([a, b]\)</span>, then it must also be integrable on every subinterval contained in that.</p>
+<div class="proof theorem admonition" id="thm:38">
 <p class="admonition-title"><span class="caption-number">Theorem 23 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on every subinterval <span class="math notranslate nohighlight">\([c, d]\subset[a, b]\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
+<div class="proof theorem admonition" id="thm:34">
+<p class="admonition-title"><span class="caption-number">Theorem 24 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
@@ -733,14 +752,14 @@ U(P, f, \alpha) - L(P, f, \alpha)
 <section id="comparison-theorems">
 <h2>Comparison Theorems<a class="headerlink" href="#comparison-theorems" title="Permalink to this headline">#</a></h2>
 <div class="proof theorem admonition" id="thm:26">
-<p class="admonition-title"><span class="caption-number">Theorem 24 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 25 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(f, g \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(f \leq g\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_a^b f \;\mathrm{d}\alpha\leq\int_a^b g \;\mathrm{d}\alpha\end{align*}\]</div>
 </section>
 </div><div class="proof theorem admonition" id="thm:37">
-<p class="admonition-title"><span class="caption-number">Theorem 25 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 26 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(\abs{f}\in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. And we have the inequality</p>
 <div class="math notranslate nohighlight" id="equation-eq-95">
@@ -784,7 +803,113 @@ U(P, \abs{f}, \alpha) - L(P, \abs{f}, \alpha)
 = \sum\abs{M_k(f) - m_k(f)}\Delta\alpha_k
 \leq\sum(M_k(f) - m_k(f)) \Delta\alpha_k
 &lt; \varepsilon\end{align*}\]</div>
-<p>Note that we also need the condition that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing for the above inequality to hold. Therefore, we conclude that <span class="math notranslate nohighlight">\(\abs{f}\in\mathfrak{R}(\alpha)\)</span> by <a class="reference internal" href="#thm:4">Theorem 22</a>. The inequality <a class="reference internal" href="#equation-eq-95">(33)</a> then follows form <a class="reference internal" href="#thm:26">Theorem 24</a>.</p>
+<p>Note that we also need the condition that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing for the above inequality to hold. Therefore, we conclude that <span class="math notranslate nohighlight">\(\abs{f}\in\mathfrak{R}(\alpha)\)</span> by <a class="reference internal" href="#thm:4">Theorem 22</a>. The inequality <a class="reference internal" href="#equation-eq-95">(33)</a> then follows form <a class="reference internal" href="#thm:26">Theorem 25</a>.</p>
+</div>
+</section>
+<section id="integral-of-product-of-two-functions">
+<h2>Integral of Product of Two Functions<a class="headerlink" href="#integral-of-product-of-two-functions" title="Permalink to this headline">#</a></h2>
+<div class="proof theorem admonition" id="thm:39">
+<p class="admonition-title"><span class="caption-number">Theorem 27 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(f, g \in\mathfrak{R}(\alpha)\)</span>, then <span class="math notranslate nohighlight">\(fg \in\mathfrak{R}(\alpha)\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
+<div class="proof theorem admonition" id="theorem-6">
+<p class="admonition-title"><span class="caption-number">Theorem 28 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>, and  <span class="math notranslate nohighlight">\(f, g \in\mathfrak{R}(\alpha)\)</span>. Define</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F(x) &amp;:= \int_a^x f \;\mathrm{d}\alpha&amp;
+G(x) &amp;:= \int_a^x g \;\mathrm{d}\alpha\end{align*}\]</div>
+<p><span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> are indeed well-defined due to <a class="reference internal" href="#thm:38">Theorem 23</a> in the sense that the integrals exist for every <span class="math notranslate nohighlight">\(x \in[a, b]\)</span>. Then <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(G)\)</span> and <span class="math notranslate nohighlight">\(g \in\mathfrak{R}(F)\)</span>. In this case,</p>
+<div class="math notranslate nohighlight" id="equation-eq-97">
+<span class="eqno">(35)<a class="headerlink" href="#equation-eq-97" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f g \;\mathrm{d}\alpha
+= \int_a^b f \;\mathrm{d}G
+= \int_a^b g \;\mathrm{d}F
+\end{align}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(fg \in\mathfrak{R}(a)\)</span> by <a class="reference internal" href="#thm:39">Theorem 27</a>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We only prove that <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(G)\)</span> and the first equation in <a class="reference internal" href="#equation-eq-97">(35)</a>. Let <span class="math notranslate nohighlight">\(M_g &gt; 0\)</span> be an upper bound of <span class="math notranslate nohighlight">\(\abs{g}\)</span>, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{g(x)} &lt; M_g
+\quad\forall x \in[a, b]\end{align*}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be chosen arbitrarily. Since <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span>, by <a class="reference internal" href="#thm:4">Theorem 22</a>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-98">
+<span class="eqno">(36)<a class="headerlink" href="#equation-eq-98" title="Permalink to this equation">#</a></span>\[\begin{align}
+U(P, f, \alpha) - L(P, f, \alpha) &lt; \frac{\varepsilon}{M_G}\quad\forall P \supset P_\varepsilon\end{align}\]</div>
+<p>For any refinement <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span>, we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-99">
+<span class="eqno">(37)<a class="headerlink" href="#equation-eq-99" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}
+S(P, f, G)
+&amp;= \sum_k f(t_k) \Delta G_k \nonumber\\&amp;= \sum_k f(t_k) \int_{x_{k-1}}^{x_k} g \;\mathrm{d}\alpha\nonumber\\&amp;= \sum_k  \int_{x_{k-1}}^{x_k} f(t_k) g(t) \;\mathrm{d}\alpha(t)
+\end{align}\end{split}\]</div>
+<p>We know from <a class="reference internal" href="#thm:38">Theorem 23</a> that <span class="math notranslate nohighlight">\(\int_{x_{k-1}}^{x_k} fg \;\mathrm{d}\alpha\)</span> exists for each <span class="math notranslate nohighlight">\(k\)</span>. We then subtract <span class="math notranslate nohighlight">\(\int_a^b fg \;\mathrm{d}\alpha\)</span> from <a class="reference internal" href="#equation-eq-99">(37)</a>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}\abs{
+S(P, f, G)
+- \int_a^b fg \; \mathrm{d}\alpha
+}&amp;= \abs{
+\sum_k \int_{x_{k-1}}^{x_k} (f(t_k) - f(t)) g(t) \; \mathrm{d}\alpha(t)
+}\\&amp;\leq\sum_k \abs{
+\int_{x_{k-1}}^{x_k} (f(t_k) - f(t)) g(t) \; \mathrm{d}\alpha(t)
+}\end{align*}\end{split}\]</div>
+<p>It then follows from <a class="reference internal" href="#thm:37">Theorem 26</a> that</p>
+<div class="math notranslate nohighlight" id="equation-eq-100">
+<span class="eqno">(38)<a class="headerlink" href="#equation-eq-100" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}\abs{
+S(P, f, G)
+- \int_a^b fg \; \mathrm{d}\alpha
+}&amp;\leq\sum_k \abs{
+\int_{x_{k-1}}^{x_k} (f(t_k) - f(t)) g(t) \; \mathrm{d}\alpha(t)
+}\nonumber\\&amp;\leq\sum_k \int_{x_{k-1}}^{x_k}\abs{f(t_k) - f(t)}\abs{g(t)}\;\mathrm{d}\alpha(t)
+\end{align}\end{split}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(\abs{f(t_k) - f(t)}\in\mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> where <span class="math notranslate nohighlight">\(f(t_k)\)</span> is a constant by <a class="reference internal" href="Linear%20Properties.html#thm:40">Theorem 18</a> and <a class="reference internal" href="#thm:37">Theorem 26</a> since <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(\alpha)\)</span>.</p>
+<p>Therefore, we can further enlarge the right-hand side of <a class="reference internal" href="#equation-eq-100">(38)</a> using <a class="reference internal" href="#thm:26">Theorem 25</a>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-101">
+<span class="eqno">(39)<a class="headerlink" href="#equation-eq-101" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}\abs{
+S(P, f, G)
+- \int_a^b fg \; \mathrm{d}\alpha
+}&amp;\leq\sum_k \int_{x_{k-1}}^{x_k}\abs{f(t_k) - f(t)}\abs{g(t)}\;\mathrm{d}\alpha(t) \nonumber\\&amp;\leq\abs{M_g}\sum_k \int_{x_{k-1}}^{x_k}\abs{f(t_k) - f(t)}\;\mathrm{d}\alpha(t)
+\quad\text{recall $\abs{g} &lt; M_g$}\end{align}\end{split}\]</div>
+<p>On subinterval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>, denote</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+M_k &amp;= \sup_{x \in[x_{k-1}, x_k]} f(x) &amp;
+m_k &amp;= \inf_{x \in[x_{k-1}, x_k]} f(x)
+\end{align*}\]</div>
+<p>It is clear <span class="math notranslate nohighlight">\(M_k - m_k \in\mathfrak{R}(\alpha)\)</span> on each subinterval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> since it is just a constant function. Then by <a class="reference internal" href="#thm:26">Theorem 25</a>, we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-102">
+<span class="eqno">(40)<a class="headerlink" href="#equation-eq-102" title="Permalink to this equation">#</a></span>\[\begin{align}\int_{x_{k-1}}^{x_k}\abs{f(t_k) - f(t)}\;\mathrm{d}\alpha(t)
+\leq\int_{x_{k-1}}^{x_k} M_k - m_k \;\mathrm{d}\alpha(t)
+= (M_k - m_k) \Delta\alpha_k
+\end{align}\]</div>
+<p>By comparing <a class="reference internal" href="#equation-eq-101">(39)</a> and <a class="reference internal" href="#equation-eq-102">(40)</a>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{
+S(P, f, G)
+- \int_a^b fg \; \mathrm{d}\alpha
+}\leq\abs{M_g}\sum_k (M_k - m_k) \Delta\alpha_k 
+= \abs{M_g}( U(P, f, \alpha) - L(P, f, \alpha) )
+\end{align*}\]</div>
+<p>Recall that <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span>, then it follows from <a class="reference internal" href="#equation-eq-98">(36)</a> that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{
+S(P, f, G)
+- \int_a^b fg \; \mathrm{d}\alpha
+}  &lt; \varepsilon\end{align*}\]</div>
+<p>This implies that <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(G)\)</span>, and</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\int_a^b fg \;\mathrm{d}\alpha
+= \int_a^b f \;\mathrm{d}G
+\end{align*}\]</div>
+<p>With the similar arguments, we can also prove <span class="math notranslate nohighlight">\(g \in\mathfrak{R}(F)\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\int_a^b fg \;\mathrm{d}\alpha
+= \int_a^b g \;\mathrm{d}F
+\end{align*}\]</div>
 </div>
 </section>
 </section>

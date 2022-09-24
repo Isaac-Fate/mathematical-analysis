@@ -5,6 +5,7 @@ The integral is linear in the integrand. In other words, the integral of a linea
 
 
 ````{prf:theorem}
+:label: thm:40
 
 Suppose that $f, g \in\mathfrak{R}(\alpha)$ on $[a,b]$. Then $c_1 f + c_2 g \in\mathfrak{R}(\alpha)$ on $[a,b]$ where $c_1$ and $c_2$ are constants. In that case, 
 
