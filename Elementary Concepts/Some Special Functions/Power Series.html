@@ -685,7 +685,7 @@ f(x) = \sum c_n x^n
 \end{align*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(c_n, x \in\R\)</span>. The reason why we confine ourselves to real values is that we have only defined differentiation and integration in the real field.</p>
 <div class="proof theorem admonition" id="thm:18">
-<p class="admonition-title"><span class="caption-number">Theorem 50 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 51 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose that the power series</p>
 <div class="math notranslate nohighlight">
@@ -727,7 +727,7 @@ c_n = \frac{f^{(n)}(0)}{n!}\end{align}\]</div>
 \end{align*}\]</div>
 <p>The right-hand side is a geometric series, and we can easily compute its explicit value, which equals the left-hand side. The Negative Binomial Theorem is a generalization for it states the power series representation of the function <span class="math notranslate nohighlight">\(\frac{1}{(1-x)^n}\)</span>.</p>
 <div class="proof theorem admonition" id="thm:16">
-<p class="admonition-title"><span class="caption-number">Theorem 51 </span> (Negative Binomial Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 52 </span> (Negative Binomial Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>We have the following identity:</p>
 <div class="math notranslate nohighlight" id="equation-eq-30">
@@ -770,7 +770,7 @@ f^{(n-1)}(x) = \sum_{k=n-1}^\infty k(k-1) \cdots(k-n+1) x^{k-n}
 <p>We note that <span class="math notranslate nohighlight">\(\frac{1}{(1-x)^n}\)</span> is obtained by multiplying <span class="math notranslate nohighlight">\(\frac{1}{1-x}\)</span> by itself <span class="math notranslate nohighlight">\(n-1\)</span> times. It is tempting to multiply the power series <span class="math notranslate nohighlight">\(\sum x^k\)</span>. Hence, another strategy for proving this theorem is to compute the <em>Cauchy Product</em> of these <span class="math notranslate nohighlight">\(n\)</span> series <span class="math notranslate nohighlight">\(\sum x^k\)</span>.</p>
 <p>In the alternative proof, we will need an identity from combinatorial mathematics, which is known as the Hockey-Stick Identity.</p>
 <div class="proof theorem admonition" id="theorem-3">
-<p class="admonition-title"><span class="caption-number">Theorem 52 </span> (Hockey-Stick Identity)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 53 </span> (Hockey-Stick Identity)</p>
 <section class="theorem-content" id="proof-content">
 <p>We have the identity:</p>
 <div class="math notranslate nohighlight">
@@ -806,7 +806,7 @@ TODO
 </div>
 <p>We now provide an alternative proof of the Negative Binomial Theorem as follows.</p>
 <div class="proof admonition" id="proof">
-<p>Proof. (<strong>Proof of <a class="reference internal" href="#thm:16">Theorem 51</a> using Cauchy Product</strong>)
+<p>Proof. (<strong>Proof of <a class="reference internal" href="#thm:16">Theorem 52</a> using Cauchy Product</strong>)
 We shall prove by induction on <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <p>(Base Case) If <span class="math notranslate nohighlight">\(n = 1\)</span>, then <a class="reference internal" href="#equation-eq-30">(84)</a> is</p>
 <div class="math notranslate nohighlight">
@@ -848,7 +848,7 @@ We have</p>
 <h2>Taylor’s Theorem<a class="headerlink" href="#taylors-theorem" title="Permalink to this headline">#</a></h2>
 <p>The Taylor’s Theorem states that we can expand a power series as a Taylor series about some point in the interval of convergence.</p>
 <div class="proof theorem admonition" id="thm:19">
-<p class="admonition-title"><span class="caption-number">Theorem 53 </span> (Taylor’s Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 54 </span> (Taylor’s Theorem)</p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose power series</p>
 <div class="math notranslate nohighlight">
@@ -911,7 +911,7 @@ b_n = \abs{c_n}\left(\abs{a} + \abs{x-a}\right)^n
 b_n = \abs{c_n}\left(\abs{a} + \abs{x-a}\right)^n
 &lt; \abs{c_n}\left(R - \varepsilon\right)^n
 \end{align*}\]</div>
-<p>Note that <a class="reference internal" href="#thm:18">Theorem 50</a> implies that <span class="math notranslate nohighlight">\(\sum c_n (R-\varepsilon)^n\)</span> converges absolutely, i.e., <span class="math notranslate nohighlight">\(\sum\abs{c_n}\left(R - \varepsilon\right)^n\)</span> converges. It follows that <span class="math notranslate nohighlight">\(\sum b_n\)</span> also converges by the Comparison Test.</p>
+<p>Note that <a class="reference internal" href="#thm:18">Theorem 51</a> implies that <span class="math notranslate nohighlight">\(\sum c_n (R-\varepsilon)^n\)</span> converges absolutely, i.e., <span class="math notranslate nohighlight">\(\sum\abs{c_n}\left(R - \varepsilon\right)^n\)</span> converges. It follows that <span class="math notranslate nohighlight">\(\sum b_n\)</span> also converges by the Comparison Test.</p>
 <p>Indeed, we are allowed to change the order of summations in <a class="reference internal" href="#equation-eq-37">(92)</a>. It then follows that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -933,7 +933,7 @@ f(x) = \frac{1}{1-x}
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f^{(n)}(x) = \frac{n!}{(1-x)^{n+1}}\end{align*}\]</div>
-<p>We now expand <span class="math notranslate nohighlight">\(f(x)\)</span> about some point <span class="math notranslate nohighlight">\(a \in(-1, 1)\)</span> using <a class="reference internal" href="#thm:19">Theorem 53</a></p>
+<p>We now expand <span class="math notranslate nohighlight">\(f(x)\)</span> about some point <span class="math notranslate nohighlight">\(a \in(-1, 1)\)</span> using <a class="reference internal" href="#thm:19">Theorem 54</a></p>
 <div class="math notranslate nohighlight" id="equation-eq-39">
 <span class="eqno">(94)<a class="headerlink" href="#equation-eq-39" title="Permalink to this equation">#</a></span>\[\begin{align}
 f(x) = \frac{1}{1-x}
@@ -956,7 +956,7 @@ R = \frac{1}{\limsup_{n \to \infty} \frac{1}{\sqrt[n]{\abs{1-a}^{n+1}}}}
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 R = \abs{1-a} = 1 - \abs{a}\end{align*}\]</div>
-<p>which means <a class="reference internal" href="#equation-eq-39">(94)</a> only converges in the range that is stated in <a class="reference internal" href="#thm:19">Theorem 53</a>.</p>
+<p>which means <a class="reference internal" href="#equation-eq-39">(94)</a> only converges in the range that is stated in <a class="reference internal" href="#thm:19">Theorem 54</a>.</p>
 <p>However, if <span class="math notranslate nohighlight">\(a &lt; 0\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}

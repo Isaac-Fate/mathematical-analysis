@@ -180,7 +180,12 @@ Suppose $\alpha$ is increasing on $[a, b]$. If $f, g \in\mathfrak{R}(\alpha)$, t
 TODO
 ````
 
+
+When considering the integral of a product $fg$, the following theorem says we can merge $g$ into the integrator in the sense that $\int_a^b fg \;\mathrm{d}\alpha = \int_a^b f \;\mathrm{d}G$.
+
+
 ````{prf:theorem}
+:label: thm:41
 
 Suppose that $\alpha$ is increasing on $[a, b]$, and  $f, g \in\mathfrak{R}(\alpha)$. Define 
 

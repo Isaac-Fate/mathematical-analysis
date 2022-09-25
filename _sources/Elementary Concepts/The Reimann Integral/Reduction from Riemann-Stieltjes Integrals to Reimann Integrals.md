@@ -109,6 +109,33 @@ This implies that $f\alpha^\prime\in\mathfrak{R}$, and {eq}`eq:85` indeed holds.
 
 ````
 
+````{prf:theorem}
+:label: thm:43
+
+Suppose $f, g \in\mathfrak{R}$ on $[a, b]$. Let functions $F, G$ on $[a, b]$ be defined by
+
+```{math}
+\begin{align*}
+F(x) &:= \int_a^x f(t) \;\mathrm{d}t & 
+G(x) &:= \int_a^x g(t) \;\mathrm{d}t
+\end{align*}
+```
+
+Then $F$ and $G$ are both continuous and of bounded variation on $[a, b]$. Moreover, $f \in\mathfrak{R}(G)$ and $g \in\mathfrak{R}(F)$. In this case, 
+
+```{math}
+\begin{align*}\int_a^b f(x) g(x) \;\mathrm{d}x
+= \int_a^b f \;\mathrm{d}G
+= \int_a^b g \;\mathrm{d}F
+\end{align*}
+```
+
+````
+
+````{prf:proof}
+TODO
+````
+
 ````{admonition} Exercise
 :class: note
 

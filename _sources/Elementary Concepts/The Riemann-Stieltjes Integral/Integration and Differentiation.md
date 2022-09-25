@@ -1,6 +1,7 @@
 # Integration and Differentiation
 
 ````{prf:theorem}
+:label: thm:42
 
 Suppose $\alpha$ is of bounded variation on $[a, b]$, and $f \in\mathfrak{R}(\alpha)$ on $[a, b]$. Define a function $F$ on $[a, b]$ by
 

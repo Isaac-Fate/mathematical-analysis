@@ -633,7 +633,7 @@ title="Print to PDF"
 <h1>Uniform Convergence and Continuity<a class="headerlink" href="#uniform-convergence-and-continuity" title="Permalink to this headline">#</a></h1>
 <p>The uniform convergence of functions allows us to interchange change limits.</p>
 <div class="proof theorem admonition" id="thm:7">
-<p class="admonition-title"><span class="caption-number">Theorem 45 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 46 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(E \subset X\)</span> where <span class="math notranslate nohighlight">\(X\)</span> is a metric space. Let <span class="math notranslate nohighlight">\(x\)</span> be a limit point of <span class="math notranslate nohighlight">\(E\)</span>. If the limit <span class="math notranslate nohighlight">\(A_n := \lim_{t \to x} f_n(t)\)</span> exists, then <span class="math notranslate nohighlight">\(\left\{A_n\right\}\)</span> converges and</p>
 <div class="math notranslate nohighlight">
@@ -655,7 +655,7 @@ title="Print to PDF"
 <div class="math notranslate nohighlight" id="equation-eq-7">
 <span class="eqno">(70)<a class="headerlink" href="#equation-eq-7" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{f_n(t) - f_m(t)} &lt; \varepsilon\quad\forall t \in E
 \end{align}\]</div>
-<p>due to <a class="reference internal" href="Uniform%20Convergence.html#thm:6">Theorem 42</a>. Because the limits <span class="math notranslate nohighlight">\(\lim_{t \to x} f_n(t)\)</span> and <span class="math notranslate nohighlight">\(\lim_{t \to x} f_m(t)\)</span> both exist, the limit of the left-hand side of <a class="reference internal" href="#equation-eq-7">(70)</a> also exists as <span class="math notranslate nohighlight">\(t \to x\)</span>. Letting <span class="math notranslate nohighlight">\(t \to x\)</span>, we have</p>
+<p>due to <a class="reference internal" href="Uniform%20Convergence.html#thm:6">Theorem 43</a>. Because the limits <span class="math notranslate nohighlight">\(\lim_{t \to x} f_n(t)\)</span> and <span class="math notranslate nohighlight">\(\lim_{t \to x} f_m(t)\)</span> both exist, the limit of the left-hand side of <a class="reference internal" href="#equation-eq-7">(70)</a> also exists as <span class="math notranslate nohighlight">\(t \to x\)</span>. Letting <span class="math notranslate nohighlight">\(t \to x\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{A_n - A_m}
 = \abs{\lim_{t \to x} f_n(t) - \lim_{t \to x} f_m(t)}
@@ -682,9 +682,9 @@ title="Print to PDF"
 = \varepsilon\end{align*}\]</div>
 <p>Therefore, <span class="math notranslate nohighlight">\(\lim_{t \to x} f(t) = A\)</span>.</p>
 </div>
-<p>An immediate corollary to <a class="reference internal" href="#thm:7">Theorem 45</a> is that if a sequence of continuous functions converges uniformly to some function, then that limit function is also continuous.</p>
+<p>An immediate corollary to <a class="reference internal" href="#thm:7">Theorem 46</a> is that if a sequence of continuous functions converges uniformly to some function, then that limit function is also continuous.</p>
 <div class="proof theorem admonition" id="thm:11">
-<p class="admonition-title"><span class="caption-number">Theorem 46 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 47 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\left\{f_n\right\}\)</span> be a sequence of continuous functions on <span class="math notranslate nohighlight">\(E\)</span>. If <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(E\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is also continuous.</p>
 </section>
@@ -706,7 +706,7 @@ f_n(x) = n^2 x (1 - x^2)^n
 \[\begin{align*}
 f(x) = \lim_{n \to \infty} f_n(x) = 0
 \end{align*}\]</div>
-<p>All <span class="math notranslate nohighlight">\(f_n\)</span>’s are continuous and <span class="math notranslate nohighlight">\(f\)</span> is of course continuous since it is a constant function. But <span class="math notranslate nohighlight">\(\left\{f_n\right\}\)</span> does not converge to <span class="math notranslate nohighlight">\(f\)</span> uniformly on <span class="math notranslate nohighlight">\([0,1]\)</span> due to <a class="reference internal" href="Uniform%20Convergence.html#thm:8">Theorem 43</a>. To see this, one can obtain</p>
+<p>All <span class="math notranslate nohighlight">\(f_n\)</span>’s are continuous and <span class="math notranslate nohighlight">\(f\)</span> is of course continuous since it is a constant function. But <span class="math notranslate nohighlight">\(\left\{f_n\right\}\)</span> does not converge to <span class="math notranslate nohighlight">\(f\)</span> uniformly on <span class="math notranslate nohighlight">\([0,1]\)</span> due to <a class="reference internal" href="Uniform%20Convergence.html#thm:8">Theorem 44</a>. To see this, one can obtain</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 M_n = \sup_{x \in[0,1]} f_n(x)
@@ -717,7 +717,7 @@ M_n = \sup_{x \in[0,1]} f_n(x)
 \[\begin{align*}\lim_{n \to \infty}\left(1 - \frac{1}{1+2n}\right)^n
 = \lim_{n \to \infty}\sqrt{\frac{1}{\left (1 + \frac{1}{2n}\right )^{2n}}}
 = \frac{1}{\sqrt{e}}\end{align*}\]</div>
-<p>But <span class="math notranslate nohighlight">\(\frac{n^2}{\sqrt{1 + 2n}}\to\infty\)</span> as <span class="math notranslate nohighlight">\(n \to\infty\)</span>. Therefore, <span class="math notranslate nohighlight">\(\lim_{n \to \infty} M_n = \infty\)</span>. Since <span class="math notranslate nohighlight">\(M_n\)</span> does not converge to <span class="math notranslate nohighlight">\(0\)</span>, <a class="reference internal" href="Uniform%20Convergence.html#thm:8">Theorem 43</a> implies that <span class="math notranslate nohighlight">\(\left\{f_n\right\}\)</span> does not converge to <span class="math notranslate nohighlight">\(f\)</span> uniformly.</p>
+<p>But <span class="math notranslate nohighlight">\(\frac{n^2}{\sqrt{1 + 2n}}\to\infty\)</span> as <span class="math notranslate nohighlight">\(n \to\infty\)</span>. Therefore, <span class="math notranslate nohighlight">\(\lim_{n \to \infty} M_n = \infty\)</span>. Since <span class="math notranslate nohighlight">\(M_n\)</span> does not converge to <span class="math notranslate nohighlight">\(0\)</span>, <a class="reference internal" href="Uniform%20Convergence.html#thm:8">Theorem 44</a> implies that <span class="math notranslate nohighlight">\(\left\{f_n\right\}\)</span> does not converge to <span class="math notranslate nohighlight">\(f\)</span> uniformly.</p>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let a sequence <span class="math notranslate nohighlight">\(\left\{x_n\right\}_{n \in \N}\)</span> be given by</p>
@@ -749,7 +749,7 @@ For function <span class="math notranslate nohighlight">\(g\)</span>, we note th
 f_i(x) 
 \leq\abs{f_i(x)}\leq\sum_{j=1}^\infty\abs{a_{ij}}
 = b_i &lt; \infty\end{align}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(\sum b_i\)</span> converges, we know <span class="math notranslate nohighlight">\(\sum\abs{f_i(x)}\)</span> also converges by the Comparison Test. Therefore, <span class="math notranslate nohighlight">\(\sum f_i(x)\)</span> converges (absolutely), and hence <span class="math notranslate nohighlight">\(g(x)\)</span> is well-defined. Moreover, <a class="reference internal" href="#equation-eq-17">(74)</a> implies that <span class="math notranslate nohighlight">\(\sum f_i(x)\)</span> converges <em>uniformly</em> to <span class="math notranslate nohighlight">\(g(x)\)</span> by Weierstrass’s M-Test (<a class="reference internal" href="Uniform%20Convergence.html#thm:14">Theorem 44</a>).</p>
+<p>Since <span class="math notranslate nohighlight">\(\sum b_i\)</span> converges, we know <span class="math notranslate nohighlight">\(\sum\abs{f_i(x)}\)</span> also converges by the Comparison Test. Therefore, <span class="math notranslate nohighlight">\(\sum f_i(x)\)</span> converges (absolutely), and hence <span class="math notranslate nohighlight">\(g(x)\)</span> is well-defined. Moreover, <a class="reference internal" href="#equation-eq-17">(74)</a> implies that <span class="math notranslate nohighlight">\(\sum f_i(x)\)</span> converges <em>uniformly</em> to <span class="math notranslate nohighlight">\(g(x)\)</span> by Weierstrass’s M-Test (<a class="reference internal" href="Uniform%20Convergence.html#thm:14">Theorem 45</a>).</p>
 <p>In the following, we show that <span class="math notranslate nohighlight">\(f_i\)</span> is <em>continuous</em> at <span class="math notranslate nohighlight">\(x_0\)</span>. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(N \in\Ns\)</span> such that <span class="math notranslate nohighlight">\(n \geq N\)</span> implies</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{f_i(x_n) - f_i(x_0)}= \abs{\sum_{j=1}^n a_{ij} - \sum_{j=1}^\infty a_{ij}} &lt; \varepsilon\end{align*}\]</div>
@@ -757,7 +757,7 @@ f_i(x)
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{f_i(x_n) - f_i(x_0)} &lt; \varepsilon\end{align*}\]</div>
 <p>since <span class="math notranslate nohighlight">\(n &gt; N\)</span>. Therefore, <span class="math notranslate nohighlight">\(f_i\)</span> is indeed continuous at <span class="math notranslate nohighlight">\(x_0\)</span>.</p>
-<p>Recall <span class="math notranslate nohighlight">\(\sum f_i(x)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(g(x)\)</span>. It follows that <span class="math notranslate nohighlight">\(g\)</span> is also continuous at <span class="math notranslate nohighlight">\(x_0\)</span> due to <a class="reference internal" href="#thm:7">Theorem 45</a>. Then, we have</p>
+<p>Recall <span class="math notranslate nohighlight">\(\sum f_i(x)\)</span> converges uniformly to <span class="math notranslate nohighlight">\(g(x)\)</span>. It follows that <span class="math notranslate nohighlight">\(g\)</span> is also continuous at <span class="math notranslate nohighlight">\(x_0\)</span> due to <a class="reference internal" href="#thm:7">Theorem 46</a>. Then, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 g(x_0) = \lim_{x \to x_0} g(x)
@@ -786,7 +786,7 @@ g(x_0) = \sum_{i=1}^\infty f_i(x_0)
 <p>We complete the proof by equating the right-hand sides of <a class="reference internal" href="#equation-eq-18">(75)</a> and <a class="reference internal" href="#equation-eq-19">(76)</a>.</p>
 </div>
 <div class="proof theorem admonition" id="theorem-5">
-<p class="admonition-title"><span class="caption-number">Theorem 47 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 48 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(K\)</span> is a compact set, and</p>
 <ol class="simple">
@@ -892,7 +892,7 @@ d(f, g) := \norm{f - g}\end{align*}\]</div>
 </section>
 </div><p>Associate with a distance function, we are now able to call <span class="math notranslate nohighlight">\(\mathscr{C}(X)\)</span> a metric space. Even better, <span class="math notranslate nohighlight">\(\mathscr{C}(X)\)</span> is a <em>complete</em> metric space, which we shall prove below.</p>
 <div class="proof theorem admonition" id="theorem-13">
-<p class="admonition-title"><span class="caption-number">Theorem 48 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 49 </span></p>
 <section class="theorem-content" id="proof-content">
 <p><span class="math notranslate nohighlight">\(\mathscr{C}(X)\)</span> is a <strong>complete</strong> metric space.</p>
 </section>
@@ -905,7 +905,7 @@ d(f, g) := \norm{f - g}\end{align*}\]</div>
 <p>Proof. Let <span class="math notranslate nohighlight">\(\left\{f_n\right\}\)</span> be a Cauchy sequence in <span class="math notranslate nohighlight">\(\mathscr{C}(X)\)</span>. Then for given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(N \in\Ns\)</span> such that <span class="math notranslate nohighlight">\(n, m \geq N\)</span> implies</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sup_{x \in X}\abs{f_n(x) - f_m(x)}= d(f_n, f_m) &lt; \varepsilon\end{align*}\]</div>
-<p>By <a class="reference internal" href="Uniform%20Convergence.html#thm:6">Theorem 42</a>, there exists some function <span class="math notranslate nohighlight">\(f\)</span> such that <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(f\)</span>. (Note that <span class="math notranslate nohighlight">\(f\)</span> is not necessary in <span class="math notranslate nohighlight">\(\mathscr{C}(X)\)</span> for now. That is exactly what we need to prove.) We intend to show that <span class="math notranslate nohighlight">\(f \in\mathscr{C}(X)\)</span>. By <a class="reference internal" href="#thm:11">Theorem 46</a>, <span class="math notranslate nohighlight">\(f\)</span> is continuous since all <span class="math notranslate nohighlight">\(f_n\)</span>’s are continuous. We also need to show that <span class="math notranslate nohighlight">\(f\)</span> is bounded. By <a class="reference internal" href="Uniform%20Convergence.html#thm:8">Theorem 43</a>, we have</p>
+<p>By <a class="reference internal" href="Uniform%20Convergence.html#thm:6">Theorem 43</a>, there exists some function <span class="math notranslate nohighlight">\(f\)</span> such that <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(f\)</span>. (Note that <span class="math notranslate nohighlight">\(f\)</span> is not necessary in <span class="math notranslate nohighlight">\(\mathscr{C}(X)\)</span> for now. That is exactly what we need to prove.) We intend to show that <span class="math notranslate nohighlight">\(f \in\mathscr{C}(X)\)</span>. By <a class="reference internal" href="#thm:11">Theorem 47</a>, <span class="math notranslate nohighlight">\(f\)</span> is continuous since all <span class="math notranslate nohighlight">\(f_n\)</span>’s are continuous. We also need to show that <span class="math notranslate nohighlight">\(f\)</span> is bounded. By <a class="reference internal" href="Uniform%20Convergence.html#thm:8">Theorem 44</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sup_{x \in X}\abs{f(x) - f_N(x)} &lt; 1
 \end{align*}\]</div>
@@ -914,7 +914,7 @@ d(f, g) := \norm{f - g}\end{align*}\]</div>
 \[\begin{align*}\sup_{x \in X}\abs{f(x)}\leq\sup_{x \in X}\abs{f(x) - f_N(x)} + \sup_{x \in X}\abs{f_N(x)}
 &lt; 1 + M
 \end{align*}\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(f\)</span> is indeed bounded. Hence, <span class="math notranslate nohighlight">\(f \in\mathscr{C}(X)\)</span> since we have proved <span class="math notranslate nohighlight">\(f\)</span> is bounded and continuous (of course, <span class="math notranslate nohighlight">\(f\)</span> is also complex-valued). As <a class="reference internal" href="Uniform%20Convergence.html#thm:8">Theorem 43</a> states,</p>
+<p>Therefore, <span class="math notranslate nohighlight">\(f\)</span> is indeed bounded. Hence, <span class="math notranslate nohighlight">\(f \in\mathscr{C}(X)\)</span> since we have proved <span class="math notranslate nohighlight">\(f\)</span> is bounded and continuous (of course, <span class="math notranslate nohighlight">\(f\)</span> is also complex-valued). As <a class="reference internal" href="Uniform%20Convergence.html#thm:8">Theorem 44</a> states,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{n \to \infty} d(f_n, f) = 0
 \end{align*}\]</div>
