@@ -709,14 +709,15 @@ F(x) &amp;:= \int_a^x f(t) \;\mathrm{d}t &amp;
 G(x) &amp;:= \int_a^x g(t) \;\mathrm{d}t
 \end{align*}\]</div>
 <p>Then <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> are both continuous and of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>. Moreover, <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(G)\)</span> and <span class="math notranslate nohighlight">\(g \in\mathfrak{R}(F)\)</span>. In this case,</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\int_a^b f(x) g(x) \;\mathrm{d}x
+<div class="math notranslate nohighlight" id="equation-eq-103">
+<span class="eqno">(68)<a class="headerlink" href="#equation-eq-103" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f(x) g(x) \;\mathrm{d}x
 = \int_a^b f \;\mathrm{d}G
 = \int_a^b g \;\mathrm{d}F
-\end{align*}\]</div>
+\end{align}\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. TODO</p>
+<p>Proof. By <a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Integration%20and%20Differentiation.html#thm:42">Theorem 33</a>, we know <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> are of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>. In addition, since identity integrator <span class="math notranslate nohighlight">\(t\)</span> is clearly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, it follows that <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> are also continuous.</p>
+<p>Then, by <a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Monotonically%20Increasing%20Integrators.html#thm:41">Theorem 28</a>, we have <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(G)\)</span> and <span class="math notranslate nohighlight">\(g \in g \in\mathfrak{R}(F)\)</span>, and the equality <a class="reference internal" href="#equation-eq-103">(68)</a> holds.</p>
 </div>
 <div class="note admonition">
 <p class="admonition-title">Exercise</p>

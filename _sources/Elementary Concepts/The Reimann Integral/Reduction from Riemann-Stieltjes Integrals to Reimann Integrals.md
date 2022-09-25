@@ -124,16 +124,23 @@ G(x) &:= \int_a^x g(t) \;\mathrm{d}t
 Then $F$ and $G$ are both continuous and of bounded variation on $[a, b]$. Moreover, $f \in\mathfrak{R}(G)$ and $g \in\mathfrak{R}(F)$. In this case, 
 
 ```{math}
-\begin{align*}\int_a^b f(x) g(x) \;\mathrm{d}x
+:label: eq:103
+\begin{align}\int_a^b f(x) g(x) \;\mathrm{d}x
 = \int_a^b f \;\mathrm{d}G
 = \int_a^b g \;\mathrm{d}F
-\end{align*}
+\end{align}
 ```
 
 ````
 
 ````{prf:proof}
-TODO
+
+By {prf:ref}`thm:42`, we know $F$ and $G$ are of bounded variation on $[a, b]$. In addition, since identity integrator $t$ is clearly continuous on $[a, b]$, it follows that $F$ and $G$ are also continuous. 
+
+
+
+Then, by {prf:ref}`thm:41`, we have $f \in\mathfrak{R}(G)$ and $g \in g \in\mathfrak{R}(F)$, and the equality {eq}`eq:103` holds.
+
 ````
 
 ````{admonition} Exercise
