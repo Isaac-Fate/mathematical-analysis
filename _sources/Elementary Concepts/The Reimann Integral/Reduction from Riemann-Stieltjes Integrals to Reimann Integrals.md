@@ -143,22 +143,85 @@ Then, by {prf:ref}`thm:41`, we have $f \in\mathfrak{R}(G)$ and $g \in g \in\math
 
 ````
 
+````{prf:theorem}
+
+Suppose $f \in\mathfrak{R}$ on $[a, b]$. If function $F$ is defined on $(a, b)$ with 
+
+```{math}
+\begin{align*}
+F^\prime(x) = f(x)
+\quad\forall x \in(a, b)
+\end{align*}
+```
+
+Moreover, suppose $F(a+)$ and $F(b-)$ both exist as **finite** values. Then we have 
+
+```{math}
+:label: eq:106
+\begin{align}\int_a^b f(x) \;\mathrm{d}x
+= F(b-) - F(a+)
+\end{align}
+```
+
+````
+
+````{prf:proof}
+(Extension of $F$) We first extend the function $F$ to the entire closed interval $[a, b]$ by defining
+
+```{math}
+\begin{align*}
+F(a) &:= F(a+) &
+F(b) &:= F(b-)
+\end{align*}
+```
+
+
+(Applying Mean Value Theorem) For a partition $P$ on $[a, b]$, we have 
+
+```{math}
+\begin{align*}
+F(b-) - F(a+) = F(b) - F(a) = \sum_k F(x_k) - F(x_{k-1})
+\end{align*}
+```
+
+Then, by applying the extended version of Generalized Mean Value Theorem ({prf:ref}`thm:44`), there exists $t_k \in(x_k, x_{k-1})$ such that 
+
+```{math}
+\begin{align*}
+F(x_k) - F(x_{k-1}) = f(t_k) \Delta x_k
+\end{align*}
+```
+
+It then follows that 
+
+```{math}
+:label: eq:104
+\begin{align}
+F(b-) - F(a+) = \sum_k f(t_k) \Delta x_k
+= S(P, f)
+\end{align}
+```
+
+
+(Applying Integrability) Given $\varepsilon > 0$, since $f \in\mathfrak{R}$ on $[a, b]$, there exists a partition $P_\varepsilon$ such that for any refinement $P \supset P_\varepsilon$, we have 
+
+```{math}
+:label: eq:105
+\begin{align}\abs{S(P, f) - \int_a^b f \; \mathrm{d}x} < \varepsilon\quad\forall P \supset P_\varepsilon\end{align}
+```
+
+Equation {eq}`eq:106` then follows from {eq}`eq:104` and {eq}`eq:105`.
+
+````
+
+````{prf:example}
+TODO
+````
+
 ````{admonition} Exercise
 :class: note
-
-An exercise
-````
+TODO````
 
 ````{admonition} Solution
 :class: tip, dropdown
-
-This is a 
-
-
-
-muti-line 
-
-
-
-solution.
-````
+TODO````
