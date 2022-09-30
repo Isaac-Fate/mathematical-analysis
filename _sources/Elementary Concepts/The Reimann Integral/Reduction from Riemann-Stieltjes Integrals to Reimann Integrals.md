@@ -144,6 +144,7 @@ Then, by {prf:ref}`thm:41`, we have $f \in\mathfrak{R}(G)$ and $g \in g \in\math
 ````
 
 ````{prf:theorem}
+:label: thm:45
 
 Suppose $f \in\mathfrak{R}$ on $[a, b]$. If function $F$ is defined on $(a, b)$ with 
 
@@ -215,12 +216,79 @@ Equation {eq}`eq:106` then follows from {eq}`eq:104` and {eq}`eq:105`.
 ````
 
 ````{prf:example}
-TODO
+
+Consider function 
+
+```{math}
+\begin{align*}
+F(x) = \frac{x \sin(1 - x^2)}{1 - x^2}\quad x \in(-1, 1)
+\end{align*}
+```
+
+The derivative $f$ of $F$ exists on $(-1, 1)$. After some computation, we will obtain the following expression for $f$:
+
+```{math}
+\begin{align*}
+f(x) = F^\prime(x)
+= \frac{(1+x^2)\sin(1-x^2) - 2x^2(1-x^2)\cos(1-x^2)}{(1-x^2)^2}\quad x \in(-1, 1)
+\end{align*}
+```
+
+Note that $f$ is clearly continuous. Though $f$ is defined in $(-1, 1)$, the one-sided limits at two endpoints both exist, and 
+
+```{math}
+:label: eq:107
+\begin{align}
+f(-1+) = f(1-) = 0
+\end{align}
+```
+
+The above result {eq}`eq:107` is not that obvious, and is left as an exercise ({prf:ref}`ex:1`). Hence, we can extend $f$ on $[-1, 1]$ by defining
+
+```{math}
+\begin{align*}
+f(-1) &:= 0 &
+f(1) &:= 1
+\end{align*}
+```
+
+and $f$ remains continuous on $[-1, 1]$.
+
+
+
+Now, we want to compute the integral of $f$ on $[-1, 1]$, i.e., $\int_{-1}^1 f(x) \;\mathrm{d}x$. Applying {prf:ref}`thm:45`, we have 
+
+```{math}
+\begin{align*}\int_{-1}^1 f(x) \;\mathrm{d}x
+= F(1-) - F(-1+)
+= 1 - (-1)
+=2
+\end{align*}
+```
+
 ````
 
 ````{admonition} Exercise
 :class: note
-TODO````
+:label: ex:1
+
+Let $f$ be given by 
+
+```{math}
+\begin{align*}
+f(x)
+= \frac{(1+x^2)\sin(1-x^2) - 2x^2(1-x^2)\cos(1-x^2)}{(1-x^2)^2}\quad x \in(-1, 1)
+\end{align*}
+```
+
+Show that $f(-1+)$ and $f(1-)$ both exist, and 
+
+```{math}
+\begin{align*}
+f(-1+) = f(1-) = 0
+\end{align*}
+```
+````
 
 ````{admonition} Solution
 :class: tip, dropdown

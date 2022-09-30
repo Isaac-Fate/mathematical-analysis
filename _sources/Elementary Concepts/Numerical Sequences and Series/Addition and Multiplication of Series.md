@@ -225,12 +225,9 @@ a_{ij} = \begin{cases}
 We list a few terms to get a better intuition:
 
 ```{math}
-\begin{align*}
-```{math}
-\begin{array}rrrrrr
+\begin{align*}\begin{array}{rrrrrr}
 -1 & 0 & 0 & 0 & 0 & \cdots\\\frac{1}{2}& -1 & 0 & 0 & 0 & \cdots\\\frac{1}{4}& \frac{1}{2}& -1 & 0 & 0 & \cdots\\\frac{1}{8}& \frac{1}{4}& \frac{1}{2}& -1 & 0 & \cdots\\\vdots& \vdots& \vdots& \vdots& \vdots&
 \end{array}
-```
 \end{align*}
 ```
 

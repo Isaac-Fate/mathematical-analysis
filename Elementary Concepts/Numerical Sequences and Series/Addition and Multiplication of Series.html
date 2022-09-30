@@ -846,24 +846,18 @@ a_{ij} = \begin{cases}
 \end{cases}\end{align*}\end{split}\]</div>
 <p>We list a few terms to get a better intuition:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-```{math}
-\begin{array}rrrrrr
+\[\begin{split}\begin{align*}\begin{array}{rrrrrr}
 -1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots\\\frac{1}{2}&amp; -1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots\\\frac{1}{4}&amp; \frac{1}{2}&amp; -1 &amp; 0 &amp; 0 &amp; \cdots\\\frac{1}{8}&amp; \frac{1}{4}&amp; \frac{1}{2}&amp; -1 &amp; 0 &amp; \cdots\\\vdots&amp; \vdots&amp; \vdots&amp; \vdots&amp; \vdots&amp;
-\end{array}\end{split}\]</div>
-<p>\end{align*}</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-Summing up each row, we have 
-
-```{math}
-\begin{align*}\sum_{j=1}^\infty a_{ij}
+\end{array}
+\end{align*}\end{split}\]</div>
+<p>Summing up each row, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}\sum_{j=1}^\infty a_{ij}
 = \begin{cases}
 -1 &amp;i=1 \\ 
 -1 + \sum_{j=1}^{i-1} 2^{j-i} &amp;i&gt;1
 \end{cases}
-= -2^{1-i}\end{align*}
-</pre></div>
-</div>
+= -2^{1-i}\end{align*}\end{split}\]</div>
 <p>It then follows that</p>
 <div class="math notranslate nohighlight" id="equation-eq-27">
 <span class="eqno">(14)<a class="headerlink" href="#equation-eq-27" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{i=1}^\infty\sum_{j=1}^\infty a_{ij}

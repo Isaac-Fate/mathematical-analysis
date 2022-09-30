@@ -736,7 +736,7 @@ G(x) &amp;:= \int_a^x g(t) \;\mathrm{d}t
 <p>Proof. By <a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Integration%20and%20Differentiation.html#thm:42">Theorem 34</a>, we know <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> are of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>. In addition, since identity integrator <span class="math notranslate nohighlight">\(t\)</span> is clearly continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, it follows that <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> are also continuous.</p>
 <p>Then, by <a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Monotonically%20Increasing%20Integrators.html#thm:41">Theorem 29</a>, we have <span class="math notranslate nohighlight">\(f \in\mathfrak{R}(G)\)</span> and <span class="math notranslate nohighlight">\(g \in g \in\mathfrak{R}(F)\)</span>, and the equality <a class="reference internal" href="#equation-eq-103">(68)</a> holds.</p>
 </div>
-<div class="proof theorem admonition" id="theorem-2">
+<div class="proof theorem admonition" id="thm:45">
 <p class="admonition-title"><span class="caption-number">Theorem 40 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. If function <span class="math notranslate nohighlight">\(F\)</span> is defined on <span class="math notranslate nohighlight">\((a, b)\)</span> with</p>
@@ -782,15 +782,40 @@ F(b-) - F(a+) = \sum_k f(t_k) \Delta x_k
 <div class="proof example admonition" id="example-3">
 <p class="admonition-title"><span class="caption-number">Example 6 </span></p>
 <section class="example-content" id="proof-content">
-<p>TODO</p>
+<p>Consider function</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F(x) = \frac{x \sin(1 - x^2)}{1 - x^2}\quad x \in(-1, 1)
+\end{align*}\]</div>
+<p>The derivative <span class="math notranslate nohighlight">\(f\)</span> of <span class="math notranslate nohighlight">\(F\)</span> exists on <span class="math notranslate nohighlight">\((-1, 1)\)</span>. After some computation, we will obtain the following expression for <span class="math notranslate nohighlight">\(f\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(x) = F^\prime(x)
+= \frac{(1+x^2)\sin(1-x^2) - 2x^2(1-x^2)\cos(1-x^2)}{(1-x^2)^2}\quad x \in(-1, 1)
+\end{align*}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(f\)</span> is clearly continuous. Though <span class="math notranslate nohighlight">\(f\)</span> is defined in <span class="math notranslate nohighlight">\((-1, 1)\)</span>, the one-sided limits at two endpoints both exist, and</p>
+<div class="math notranslate nohighlight" id="equation-eq-107">
+<span class="eqno">(72)<a class="headerlink" href="#equation-eq-107" title="Permalink to this equation">#</a></span>\[\begin{align}
+f(-1+) = f(1-) = 0
+\end{align}\]</div>
+<p>The above result <a class="reference internal" href="#equation-eq-107">(72)</a> is not that obvious, and is left as an exercise (<code class="xref prf prf-ref docutils literal notranslate"><span class="pre">ex:1</span></code>). Hence, we can extend <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\([-1, 1]\)</span> by defining</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(-1) &amp;:= 0 &amp;
+f(1) &amp;:= 1
+\end{align*}\]</div>
+<p>and <span class="math notranslate nohighlight">\(f\)</span> remains continuous on <span class="math notranslate nohighlight">\([-1, 1]\)</span>.</p>
+<p>Now, we want to compute the integral of <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\([-1, 1]\)</span>, i.e., <span class="math notranslate nohighlight">\(\int_{-1}^1 f(x) \;\mathrm{d}x\)</span>. Applying <a class="reference internal" href="#thm:45">Theorem 40</a>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\int_{-1}^1 f(x) \;\mathrm{d}x
+= F(1-) - F(-1+)
+= 1 - (-1)
+=2
+\end{align*}\]</div>
 </section>
-</div><div class="note admonition">
-<p class="admonition-title">Exercise</p>
-<p>TODO````</p>
-<div class="tip dropdown admonition">
+</div><div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
 <p>TODO````</p>
-</div>
 </div>
 </section>
 

@@ -174,9 +174,7 @@ Observe the bold numbers in Pascal's Triangle below.
 
 
 ```{math}
-\begin{align*}
-```{math}
-\begin{array}c
+\begin{align*}\begin{array}{c}
 1 \\ 
 1 \quad 1 \\ 
 1 \quad 2 \quad\mathbf{1}\\ 
@@ -186,7 +184,6 @@ Observe the bold numbers in Pascal's Triangle below.
 1 \quad 6 \quad 15 \quad\mathbf{20}\quad 15 \quad 6 \quad 1 \\ 
 1 \quad 7 \quad 21 \quad 35 \quad 35 \quad 21 \quad 7 \quad 1
 \end{array}
-```
 \end{align*}
 ```
 
