@@ -243,7 +243,7 @@ f(-1+) = f(1-) = 1
 \end{align}
 ```
 
-The above result {eq}`eq:107` is not that obvious, and is left as an exercise ({ref}`ex:1`). Hence, we can extend $f$ on $[-1, 1]$ by defining
+The above result {eq}`eq:107` is not that obvious, and is left as an exercise ([✍️](ex:1)). Hence, we can extend $f$ on $[-1, 1]$ by defining
 
 ```{math}
 \begin{align*}
@@ -253,13 +253,13 @@ f(1) &:= 1
 ```
 
 and $f$ remains continuous on $[-1, 1]$.
-The plotting of $f$ and $F$ is illustrated in {ref}`fig:1`.
+The plotting of $f$ and $F$ is illustrated in {numref}`fig:1`.
 
-```{figure} /Users/isaac/Documents/math/mathematical-analysis/tex/figures/reimann-integral-001.png
+```{figure} ../../figures/reimann-integral-001.png
 ---
 name: fig:1
 ---
-
+Plotting
 ```
 
 
@@ -275,9 +275,9 @@ Now, we want to compute the integral of $f$ on $[-1, 1]$, i.e., $\int_{-1}^1 f(x
 
 ````
 
+(ex:1)=
 ````{admonition} Exercise
 :class: note
-:label: ex:1
 
 Let $f$ be given by 
 
