@@ -17,7 +17,7 @@ Let $\left\{a_{ij}\right\}$ be a double sequence of complex numbers. If $\sum_{j
 
 ````
 
-````{prf:theorem}
+````{prf:theorem} Interchanging the Order of Summations
 :label: thm:15
 
 Let $\left\{a_{ij}\right\}$($a_{ij}\in\C$) be a double series where $i, j \in\Ns$. If 
@@ -47,7 +47,7 @@ We will provide another more interesting proof later using the continuity of the
 We first verify the following:
 
 ```{math}
-\begin{align*}&\sum_{j=1}^\infty a_{ij}\\text{converges absolutely}\\forall i \in\Ns\\&\sum_{i=1}^\infty a_{ij}\\text{converges absolutely}\\forall j \in\Ns\\&\sum_{i=1}^\infty\sum_{j=1}^\infty a_{ij}\\text{converges (as a series consisting of terms $\left \{\sum_{j=1}^\infty a_{ij}\right \}_{i \in \Ns}$)}\end{align*}
+\begin{align*}&\sum_{j=1}^\infty a_{ij}\;\text{converges absolutely}\;\forall i \in\Ns\\&\sum_{i=1}^\infty a_{ij}\;\text{converges absolutely}\;\forall j \in\Ns\\&\sum_{i=1}^\infty\sum_{j=1}^\infty a_{ij}\;\text{converges (as a series consisting of terms $\left \{\sum_{j=1}^\infty a_{ij}\right \}_{i \in \Ns}$)}\end{align*}
 ```
 
 By the given condition $\sum_{j=1}^\infty\abs{a_{ij}} = b_i < \infty$, $\sum_{j=1}^\infty a_{ij}$ converges absolutely for all $i \in\Ns$. 
@@ -225,12 +225,9 @@ a_{ij} = \begin{cases}
 We list a few terms to get a better intuition:
 
 ```{math}
-\begin{align*}
-```{math}
-\begin{array}rrrrrr
+\begin{align*}\begin{array}{rrrrrr}
 -1 & 0 & 0 & 0 & 0 & \cdots\\\frac{1}{2}& -1 & 0 & 0 & 0 & \cdots\\\frac{1}{4}& \frac{1}{2}& -1 & 0 & 0 & \cdots\\\frac{1}{8}& \frac{1}{4}& \frac{1}{2}& -1 & 0 & \cdots\\\vdots& \vdots& \vdots& \vdots& \vdots&
 \end{array}
-```
 \end{align*}
 ```
 
@@ -389,7 +386,7 @@ Hence,
 ````
 ## Cauchy Product
 
-````{prf:theorem}
+````{prf:theorem} Mertens's Theorem on Cauchy Product
 :label: thm:17
 
 Suppose that $\sum a_n$ and $\sum b_n$ are both convergent series, and **at least one** of them converges **absolutely**. Then their Cauchy product $\sum c_n$ converges and 
@@ -409,6 +406,7 @@ Note that the requirement of at least one series being absolutely convergent is 
 
 ````{prf:proof}
 TODO
+
 ````
 
 ````{prf:example}
@@ -448,7 +446,7 @@ Therefore,
 \begin{align*}\abs{c_n}\geq\abs{c_{n+1}}\quad\forall n \in\Ns\end{align*}
 ```
 
-Moreover, the inequality becomes strict when $n \geq 2$, i.e., $\abs{c_n} > \abs{c_{n+1}}\\forall n \geq 2$.
+Moreover, the inequality becomes strict when $n \geq 2$, i.e., $\abs{c_n} > \abs{c_{n+1}}\;\forall n \geq 2$.
 
 
 

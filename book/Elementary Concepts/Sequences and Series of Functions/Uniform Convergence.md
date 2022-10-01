@@ -34,7 +34,7 @@ for all $x \in E$.
 The Cauchy criterion for uniform convergence is as follows.
 
 
-````{prf:theorem}
+````{prf:theorem} Cauchy Criterion
 :label: thm:6
 
 The sequence of functions $\left\{f_n\right\}$, defined on $E$, converges uniformly if and only if for any $\varepsilon > 0$, there exists $N \in\Ns$ such that $m, n \geq N$, $x \in E$ implies 
@@ -47,6 +47,7 @@ The sequence of functions $\left\{f_n\right\}$, defined on $E$, converges unifor
 
 ````{prf:proof}
 TODO
+
 ````
 
 
@@ -74,13 +75,14 @@ $\sup_{x \in E}\abs{f_n(x) - f(x)}$ actually defines a distance function $d(f_n,
 
 ````{prf:proof}
 TODO
+
 ````
 
 
 For series, there is a very convenient test called Weierstrass's M-Test for uniform convergence.
 
 
-````{prf:theorem}
+````{prf:theorem} Weierstrass's M-Test
 :label: thm:14
 
 Let $\left\{f_n\right\}$ be a sequence of functions defined on $E$, and suppose 
@@ -96,4 +98,5 @@ Then $\sum f_n$ converges uniformly on $E$ if $\sum M_n$ converges.
 
 ````{prf:proof}
 TODO
+
 ````

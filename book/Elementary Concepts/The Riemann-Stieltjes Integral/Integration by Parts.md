@@ -1,12 +1,13 @@
 # Integration by Parts
 
-````{prf:theorem}
+````{prf:theorem} Integration by Parts
+:label: thm:36
 
 If $f \in\mathfrak{R}(\alpha)$ on $[a, b]$, then $\alpha\in\mathfrak{R}(f)$ on $[a, b]$, and 
 
 ```{math}
-\begin{align*}\int_a^b f \\mathrm{d}\alpha
-+ \int_a^b \alpha\\mathrm{d}f
+\begin{align*}\int_a^b f \;\mathrm{d}\alpha
++ \int_a^b \alpha\;\mathrm{d}f
 = f(b)\alpha(b) - f(a)\alpha(a)
 \end{align*}
 ```
@@ -25,7 +26,7 @@ Given $\varepsilon > 0$, since $f \in\mathfrak{R}(\alpha)$ on $[a, b]$, there ex
 
 ```{math}
 :label: eq:57
-\begin{align}\abs{S(P, f, \alpha) - \int_a^b f \\mathrm{d}\alpha} < \varepsilon\quad\forall P \supset P_\varepsilon\end{align}
+\begin{align}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon\quad\forall P \supset P_\varepsilon\end{align}
 ```
 
 Let $P = \left\{x_0, x_1, \ldots, x_n\right\}\supset P_\varepsilon$ be any refinement of $P_\varepsilon$. The Riemann-Stieltjes sum of $\alpha$ with respect to $f$ is 
@@ -87,22 +88,22 @@ A - S(P, \alpha, f) = S(P^\ast, f, \alpha)
 Since $P^\ast\supset P \supset P_\varepsilon$, it follows from {eq}`eq:57` that 
 
 ```{math}
-\begin{align*}\abs{A - S(P, \alpha, f) - \int_a^b f \\mathrm{d}\alpha} 
-= \abs{S(P^\ast, f, \alpha) - \int_a^b f \\mathrm{d}\alpha}
+\begin{align*}\abs{A - S(P, \alpha, f) - \int_a^b f \; \mathrm{d}\alpha} 
+= \abs{S(P^\ast, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha}
 < \varepsilon\end{align*}
 ```
 
 Recall $A = f(b)\alpha(b) - f(a)\alpha(a)$, we have 
 
 ```{math}
-\begin{align*}\abs{S(P, \alpha, f) + \int_a^b f \\mathrm{d}\alpha - f(b)\alpha(b) + f(a)\alpha(a)} < \varepsilon\quad\forall P \supset P_\varepsilon\end{align*}
+\begin{align*}\abs{S(P, \alpha, f) + \int_a^b f \; \mathrm{d}\alpha - f(b)\alpha(b) + f(a)\alpha(a)} < \varepsilon\quad\forall P \supset P_\varepsilon\end{align*}
 ```
 
 This implies that $\alpha\in\mathfrak{R}(f)$ on $[a, b]$, and 
 
 ```{math}
-\begin{align*}\int_a^b f \\mathrm{d}\alpha
-= -\int_a^b f \\mathrm{d}\alpha 
+\begin{align*}\int_a^b f \;\mathrm{d}\alpha
+= -\int_a^b f \;\mathrm{d}\alpha 
 + f(b)\alpha(b) - f(a)\alpha(a)
 \end{align*}
 ```

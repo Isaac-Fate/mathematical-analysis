@@ -18,6 +18,9 @@ parts:
   - file: Elementary Concepts/Functional Limits/index
     sections:
     - file: Elementary Concepts/Functional Limits/Limits at Infinity
+  - file: Elementary Concepts/Differentiation/index
+    sections:
+    - file: Elementary Concepts/Differentiation/Mean Value Theorems
   - file: Elementary Concepts/Functions of Bounded Variation/index
     sections:
     - file: Elementary Concepts/Functions of Bounded Variation/Definition of Functions
@@ -34,12 +37,20 @@ parts:
     - file: Elementary Concepts/The Riemann-Stieltjes Integral/Linear Properties
     - file: Elementary Concepts/The Riemann-Stieltjes Integral/Integration by Parts
     - file: Elementary Concepts/The Riemann-Stieltjes Integral/Change of Variables
-    - file: Elementary Concepts/The Riemann-Stieltjes Integral/Comparison Theorems
+    - file: Elementary Concepts/The Riemann-Stieltjes Integral/Monotonically Increasing
+        Integrators
+    - file: Elementary Concepts/The Riemann-Stieltjes Integral/Integrators of Bounded
+        Variation
     - file: Elementary Concepts/The Riemann-Stieltjes Integral/Existence of Riemann-Stieltjes
         Integrals
     - file: Elementary Concepts/The Riemann-Stieltjes Integral/Mean Value Theorem
         for Riemann-Stieltjes Integrals
     - file: Elementary Concepts/The Riemann-Stieltjes Integral/Integration and Differentiation
+  - file: Elementary Concepts/The Reimann Integral/index
+    sections:
+    - file: Elementary Concepts/The Reimann Integral/Reduction from Riemann-Stieltjes
+        Integrals to Reimann Integrals
+    - file: Elementary Concepts/The Reimann Integral/Change of Variables
   - file: Elementary Concepts/Improper Integrals/index
     sections:
     - file: Elementary Concepts/Improper Integrals/Improper Integral of the First

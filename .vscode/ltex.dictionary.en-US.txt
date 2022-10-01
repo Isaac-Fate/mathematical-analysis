@@ -2,3 +2,7 @@ Riemann-Stieltjes
 pointwise
 integrand
 surjective
+subinterval
+supremum
+Darboux
+Integrability

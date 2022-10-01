@@ -1,12 +1,5 @@
 \documentclass[thmcnt=section, 12pt]{elegantbook}
 
-% Packges for intervals,
-% especially for half open half closed intervals
-\usepackage{interval}
-\intervalconfig {
-    soft open fences
-}
-
 % Title and author
 \title{Mathematical Analysis}
 \author{Isaac FEI}
@@ -46,7 +39,7 @@
 %------------------------------
 
 \begin{definition}
-    Let $X$ be a metric space. $X$ is bounded if there exists $p \in X$ such that $d(x, p) < M \ \forall x \in X$.
+    Let $X$ be a metric space. $X$ is bounded if there exists $p \in X$ such that $d(x, p) < M \; \forall x \in X$.
 \end{definition}
 
 %------------------------------
@@ -371,9 +364,9 @@
 \begin{proof}
     We first verify the following:
     \begin{align*}
-        &\sum_{j=1}^\infty a_{ij} \ \text{converges absolutely} \ \forall i \in \Ns \\
-        &\sum_{i=1}^\infty a_{ij} \ \text{converges absolutely} \ \forall j \in \Ns \\
-        &\sum_{i=1}^\infty \sum_{j=1}^\infty a_{ij} \ \text{converges (as a series consisting of terms $\left\{\sum_{j=1}^\infty a_{ij}\right\}_{i \in \Ns}$)}
+        &\sum_{j=1}^\infty a_{ij} \; \text{converges absolutely} \; \forall i \in \Ns \\
+        &\sum_{i=1}^\infty a_{ij} \; \text{converges absolutely} \; \forall j \in \Ns \\
+        &\sum_{i=1}^\infty \sum_{j=1}^\infty a_{ij} \; \text{converges (as a series consisting of terms $\left\{\sum_{j=1}^\infty a_{ij}\right\}_{i \in \Ns}$)}
     \end{align*}
     By the given condition $\sum_{j=1}^\infty \abs{a_{ij}} = b_i < \infty$, $\sum_{j=1}^\infty a_{ij}$ converges absolutely for all $i \in \Ns$. 
     For each $j \in \Ns$, we have
@@ -715,7 +708,7 @@
     \begin{align*}
         \abs{c_n} \geq \abs{c_{n+1}} \quad \forall n \in \Ns
     \end{align*}
-    Moreover, the inequality becomes strict when $n \geq 2$, i.e., $\abs{c_n} > \abs{c_{n+1}} \ \forall n \geq 2$.
+    Moreover, the inequality becomes strict when $n \geq 2$, i.e., $\abs{c_n} > \abs{c_{n+1}} \; \forall n \geq 2$.
 
     \par Furthermore, we also need to show that $\left\{\abs{c_n}\right\}$ converges to $0$. Since $\left\{c_n\right\}$ decreases monotonically, and it is bounded below by $0$, we know that there exists a limit. Now, we show that this limit is precisely $0$. Consider the subsequence $\left\{\abs{c_{2^{n-1}}}\right\}$:
     \begin{align*}
@@ -779,7 +772,7 @@
 
 \begin{proof}
     We only prove the case of monotonically increasing functions. Since $E$ is unbounded above, there exists a \textbf{subsequence} $\left\{k_n\right\}$ of $\Ns$ such that $k_n \in E$. Note that the numerical sequence $\left\{f(k_n)\right\}$ increases monotonically. By Theorem~\ref{thm:23}, $\left\{f(k_n)\right\}$ converges, say, to $l$. 
-    \par We are going to show that the limit of $f$ at infinity is exactly $l$. Given $\varepsilon > 0$, there exists $N \in \Ns$ such that $\abs{f(k_n) - l} < \varepsilon / 2 \ \forall n \geq N$. Then for all $x > k_N$, there exist $n, m \geq N$ ($n < m$) such that $k_n \leq x < k_m$. It then follows that 
+    \par We are going to show that the limit of $f$ at infinity is exactly $l$. Given $\varepsilon > 0$, there exists $N \in \Ns$ such that $\abs{f(k_n) - l} < \varepsilon / 2 \; \forall n \geq N$. Then for all $x > k_N$, there exist $n, m \geq N$ ($n < m$) such that $k_n \leq x < k_m$. It then follows that 
     \begin{align*}
         \abs{f(x) - l}
         &\leq \abs{f(x) - f(k_n)} + \abs{f(k_n) - l} \\
@@ -802,6 +795,25 @@
 \end{proof}
 
 %==============================
+
+\chapter{Differentiation}
+
+%==============================
+
+\section{Mean Value Theorems}
+
+%------------------------------
+
+\begin{theorem}[Extension of Generalized Mean Value Theorem] \label{thm:44}
+    Let $f$ and $g$ be two functions on $(a, b)$, each having a derivative (\textbf{finite} or \textbf{infinite}) at each point in $(a, b)$. Suppose that $f(a+)$, $f(b-)$, $g(a+)$ and $g(b-)$ all exist as \textbf{finite values}. Suppose further that there is no point $x \in (a, b)$ such that
+    $f^\prime(x) = g^\prime(x) = \infty$. Then, there exists some point $c \in (a, b)$ such that 
+    \begin{align*}
+        f^\prime(c)(g(b-) - g(a+))
+        = g^\prime(c)(f(b-) - f(a+))
+    \end{align*} 
+\end{theorem}
+
+%------------------------------
 
 \chapter{Functions of Bounded Variation} % Apostol
 
@@ -1065,7 +1077,11 @@
 \par The total variation of a function with the same lower and upper limits is defined as zero, i.e.,  $V_x^x(f) = 0$ so that \eqref{eq:61} holds for $c = a$ and $c = b$.
 
 \begin{definition} \label{def:8}
-    Suppose that $f$ is of bounded variation on $[a, b]$. Define $V_x^x(f) := 0$ where $a \leq x \leq b$.
+    Suppose that $f$ is of bounded variation on $[a, b]$. The total variation
+    \begin{align*}
+        V_a^x(f) \quad a \leq x \leq b
+    \end{align*}
+    can be regarded as a function of $x$ on $[a, b]$ with an addition definition $V_a^a(f) := 0$.
 \end{definition}
 
 %------------------------------
@@ -1147,7 +1163,7 @@
 %------------------------------
 
 \begin{definition} \label{def:7}
-    Suppose that $f$ and $\alpha$ are \textbf{real-valued} \textbf{bounded} functions on $[a,b]$. Let $P = \left\{x_0, x_1, \ldots, x_n\right\}$ be a partition on $[a, b]$ and $t_k$ a point in the sub-interval $[x_{k-1}, x_k]$. A sum of the form 
+    Suppose that $f$ and $\alpha$ are \textbf{real-valued bounded} functions on $[a,b]$. Let $P = \left\{x_0, x_1, \ldots, x_n\right\}$ be a partition on $[a, b]$ and $t_k$ a point in the sub-interval $[x_{k-1}, x_k]$. A sum of the form 
     \begin{align*}
         S(P,f,\alpha)
         = \sum_{k=0}^n f(t_k) \Delta \alpha_k
@@ -1157,7 +1173,7 @@
         \abs{S(P,f,\alpha) - A} < \varepsilon
     \end{align*}
     for any refinement $P$ of $P_\varepsilon$ and for any choice of points $t_k$. (Note that $S(P,f,\alpha)$ depends on $t_k$.) Moreover, the number $A$ is uniquely determined if it exists (this is proved in the following Proposition~\ref{pro:7}) and is denoted by \begin{align*}
-        \int_a^b f \ \mathrm{d}\alpha
+        \int_a^b f \; \mathrm{d}\alpha
     \end{align*}
 \end{definition}
 
@@ -1199,12 +1215,12 @@
 
 \par The integral is linear in the integrand. In other words, the integral of a linear combination of functions is equal to the linear combination of integrals of each function.
 
-\begin{theorem}
+\begin{theorem} \label{thm:40}
     Suppose that $f, g \in \mathfrak{R}(\alpha)$ on $[a,b]$. Then $c_1 f + c_2 g \in \mathfrak{R}(\alpha)$ on $[a,b]$ where $c_1$ and $c_2$ are constants. In that case, 
     \begin{align*}
-        \int_a^b c_1 f + c_2 g \ \mathrm{d}\alpha
-        = c_1 \int_a^b f \ \mathrm{d}\alpha
-        + c_2 \int_a^b g \ \mathrm{d}\alpha
+        \int_a^b c_1 f + c_2 g \; \mathrm{d}\alpha
+        = c_1 \int_a^b f \; \mathrm{d}\alpha
+        + c_2 \int_a^b g \; \mathrm{d}\alpha
     \end{align*}
 \end{theorem}
 
@@ -1220,23 +1236,23 @@
     Given $\varepsilon > 0$. Since $f \in \mathfrak{R}(\alpha)$ on $[a,b]$ then there exists a partition $P_\varepsilon^{\prime}$
     such that 
     \begin{align*}
-        \abs{S(P, f, \alpha) - \int_a^b f \ \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}
+        \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}
         \quad \forall P \supset P_\varepsilon^{\prime}
     \end{align*}
     Similarly, since $g \in \mathfrak{R}(\alpha)$, there exists a partition $P_\varepsilon^{\prime\prime}$ such that 
     \begin{align*}
-        \abs{S(P, g, \alpha) - \int_a^b g \ \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_2}}
+        \abs{S(P, g, \alpha) - \int_a^b g \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_2}}
         \quad \forall P \supset P_\varepsilon^{\prime\prime}
     \end{align*}
     Let $P_\varepsilon$ be the refinement of $P_\varepsilon^{\prime}$ and $P_\varepsilon^{\prime\prime}$, i.e., $P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}$. Then for any $P \supset P_\varepsilon$, we have 
     \begin{align*}
         &\abs{
             S(P, c_1 f + c_2 g, \alpha) 
-            - c_1 \int_a^b f \ \mathrm{d}\alpha
-            - c_2 \int_a^b g \ \mathrm{d}\alpha
+            - c_1 \int_a^b f \; \mathrm{d}\alpha
+            - c_2 \int_a^b g \; \mathrm{d}\alpha
         } \\
-        &\leq \abs{c_1} \abs{S(P,f,\alpha) - \int_a^b f \ \mathrm{d}\alpha}
-        + \abs{c_2} \abs{S(P,g,\alpha) - \int_a^b g \ \mathrm{d}\alpha} \\ 
+        &\leq \abs{c_1} \abs{S(P,f,\alpha) - \int_a^b f \; \mathrm{d}\alpha}
+        + \abs{c_2} \abs{S(P,g,\alpha) - \int_a^b g \; \mathrm{d}\alpha} \\ 
         &< \abs{c_1} \frac{\varepsilon / 2}{1 + \abs{c_1}}
         + \abs{c_2} \frac{\varepsilon / 2}{1 + \abs{c_2}} \\ 
         &< \varepsilon
@@ -1248,12 +1264,12 @@
 
 \par The integral is also linear in the integrator.
 
-\begin{theorem}
+\begin{theorem} \label{thm:35}
     If $f \in \mathfrak{R}(\alpha)$ and $f \in \mathfrak{R}(\beta)$ on $[a,b]$, then $f \in \mathfrak{R}(c_1 \alpha + c_2 \beta)$ where $c_1$ and $c_2$ are constants. In that case, 
     \begin{align*}
-        \int_a^b f \ \mathrm{d}(c_1 \alpha + c_2 \beta)
-        = c_1 \int_a^b f \ \mathrm{d}\alpha
-        + c_2 \int_a^b f \ \mathrm{d}\beta
+        \int_a^b f \; \mathrm{d}(c_1 \alpha + c_2 \beta)
+        = c_1 \int_a^b f \; \mathrm{d}\alpha
+        + c_2 \int_a^b f \; \mathrm{d}\beta
     \end{align*}
 \end{theorem}
 
@@ -1269,23 +1285,23 @@
     Given $\varepsilon > 0$. Since $f \in \mathfrak{R}(\alpha)$ on $[a,b]$ then there exists a partition $P_\varepsilon^{\prime}$
     such that 
     \begin{align*}
-        \abs{S(P, f, \alpha) - \int_a^b f \ \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}
+        \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}
         \quad \forall P \supset P_\varepsilon^{\prime}
     \end{align*}
     Similarly, since $f \in \mathfrak{R}(\beta)$, there exists a partition $P_\varepsilon^{\prime\prime}$ such that 
     \begin{align*}
-        \abs{S(P, f, \beta) - \int_a^b f \ \mathrm{d}\beta} < \frac{\varepsilon / 2}{1 + \abs{c_2}}
+        \abs{S(P, f, \beta) - \int_a^b f \; \mathrm{d}\beta} < \frac{\varepsilon / 2}{1 + \abs{c_2}}
         \quad \forall P \supset P_\varepsilon^{\prime\prime}
     \end{align*}
     Let $P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}$. Then for any $P \supset P_\varepsilon$, we have 
     \begin{align*}
         &\abs{
             S(P, f, c_1 \alpha + c_2 \beta) 
-            - c_1 \int_a^b f \ \mathrm{d}\alpha
-            - c_2 \int_a^b f \ \mathrm{d}\beta
+            - c_1 \int_a^b f \; \mathrm{d}\alpha
+            - c_2 \int_a^b f \; \mathrm{d}\beta
         } \\
-        &\leq \abs{c_1} \abs{S(P,f,\alpha) - \int_a^b f \ \mathrm{d}\alpha}
-        + \abs{c_2} \abs{S(P,f,\beta) - \int_a^b f \ \mathrm{d}\beta} \\ 
+        &\leq \abs{c_1} \abs{S(P,f,\alpha) - \int_a^b f \; \mathrm{d}\alpha}
+        + \abs{c_2} \abs{S(P,f,\beta) - \int_a^b f \; \mathrm{d}\beta} \\ 
         &< \abs{c_1} \frac{\varepsilon / 2}{1 + \abs{c_1}}
         + \abs{c_2} \frac{\varepsilon / 2}{1 + \abs{c_2}} \\ 
         &< \varepsilon
@@ -1299,9 +1315,9 @@
 \begin{lemma}
     Suppose $c \in (a, b)$. We have 
     \begin{align}
-        \int_a^b f \ \mathrm{d}\alpha
-        = \int_a^c f \ \mathrm{d}\alpha
-        + \int_c^b f \ \mathrm{d}\alpha
+        \int_a^b f \; \mathrm{d}\alpha
+        = \int_a^c f \; \mathrm{d}\alpha
+        + \int_c^b f \; \mathrm{d}\alpha
         \label{eq:52}
     \end{align}
     The existence of two integrals in \eqref{eq:52} will imply the existence of the third one.
@@ -1319,14 +1335,14 @@
 
 
 
-    \par (Proof of existence of $\int_a^b f \ \mathrm{d}\alpha$) Assume $\int_a^c f \ \mathrm{d}\alpha$ and $\int_c^b f \ \mathrm{d}\alpha$ exist. Then 
+    \par (Proof of existence of $\int_a^b f \; \mathrm{d}\alpha$) Assume $\int_a^c f \; \mathrm{d}\alpha$ and $\int_c^b f \; \mathrm{d}\alpha$ exist. Then 
     \begin{align*}
-        \abs{S(P^\prime, f, \alpha) - \int_a^c f \ \mathrm{d}\alpha} < \varepsilon / 2
+        \abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
         \quad \forall P^\prime \supset P_\varepsilon^\prime
     \end{align*}
     for some $P_\varepsilon^\prime$ on $[a, c]$. And 
     \begin{align*}
-        \abs{S(P^{\prime\prime}, f, \alpha) - \int_a^c f \ \mathrm{d}\alpha} < \varepsilon / 2
+        \abs{S(P^{\prime\prime}, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
         \quad \forall P^{\prime\prime} \supset P_\varepsilon^{\prime\prime}
     \end{align*}
     for some $P_\varepsilon^{\prime\prime}$ on $[c, b]$. Let
@@ -1348,15 +1364,15 @@
     \begin{align*}
         &\abs{
             S(P, f, \alpha)
-            - \int_a^c f \ \mathrm{d}\alpha
-            - \int_c^b f \ \mathrm{d}\alpha 
+            - \int_a^c f \; \mathrm{d}\alpha
+            - \int_c^b f \; \mathrm{d}\alpha 
         } \\ 
         &\leq \abs{
             S(P^\prime, f, \alpha)
-            - \int_a^c f \ \mathrm{d}\alpha
+            - \int_a^c f \; \mathrm{d}\alpha
         } + \abs{
             S(P^{\prime\prime}, f, \alpha)
-            - \int_c^b f \ \mathrm{d}\alpha
+            - \int_c^b f \; \mathrm{d}\alpha
         } \\ 
         &< \varepsilon / 2 + \varepsilon / 2 \\ 
         &= \varepsilon
@@ -1365,14 +1381,14 @@
 
 
 
-    \par (Proof of existence of $\int_c^b f \ \mathrm{d}\alpha$) Assume $\int_a^b f \ \mathrm{d}\alpha$ and $\int_a^c f \ \mathrm{d}\alpha$ exist. Then 
+    \par (Proof of existence of $\int_c^b f \; \mathrm{d}\alpha$) Assume $\int_a^b f \; \mathrm{d}\alpha$ and $\int_a^c f \; \mathrm{d}\alpha$ exist. Then 
     \begin{align*}
-        \abs{S(P, f, \alpha) - \int_a^b f \ \mathrm{d}\alpha} < \varepsilon / 2
+        \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon / 2
         \quad \forall P \supset P_\varepsilon
     \end{align*}
     for some $P_\varepsilon$ on $[a, b]$. And
     \begin{align*}
-        \abs{S(P^\prime, f, \alpha) - \int_a^c f \ \mathrm{d}\alpha} < \varepsilon / 2
+        \abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
         \quad \forall P^\prime \supset P_\varepsilon^\prime
     \end{align*}
     for some $P_\varepsilon^\prime$ on $[a, c]$.
@@ -1397,15 +1413,15 @@
     \begin{align*}
         &\abs{
             S(P^{\prime\prime}, f, \alpha)
-            - \int_a^b f \ \mathrm{d}\alpha
-            + \int_a^c f \ \mathrm{d}\alpha 
+            - \int_a^b f \; \mathrm{d}\alpha
+            + \int_a^c f \; \mathrm{d}\alpha 
         } \\ 
         &\leq \abs{
             S(P, f, \alpha)
-            - \int_a^b f \ \mathrm{d}\alpha
+            - \int_a^b f \; \mathrm{d}\alpha
         } + \abs{
             S(P^\prime, f, \alpha)
-            - \int_a^c f \ \mathrm{d}\alpha
+            - \int_a^c f \; \mathrm{d}\alpha
         } \\ 
         &< \varepsilon / 2 + \varepsilon / 2 \\ 
         &= \varepsilon
@@ -1414,14 +1430,14 @@
 
 
 
-    \par (Proof of existence of $\int_a^c f \ \mathrm{d}\alpha$) Assume $\int_a^b f \ \mathrm{d}\alpha$ and $\int_c^b f \ \mathrm{d}\alpha$ exist. Then 
+    \par (Proof of existence of $\int_a^c f \; \mathrm{d}\alpha$) Assume $\int_a^b f \; \mathrm{d}\alpha$ and $\int_c^b f \; \mathrm{d}\alpha$ exist. Then 
     \begin{align*}
-        \abs{S(P, f, \alpha) - \int_a^b f \ \mathrm{d}\alpha} < \varepsilon / 2
+        \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon / 2
         \quad \forall P \supset P_\varepsilon
     \end{align*}
     for some $P_\varepsilon$ on $[a, b]$. And
     \begin{align*}
-        \abs{S(P^{\prime\prime}, f, \alpha) - \int_c^b f \ \mathrm{d}\alpha} < \varepsilon / 2
+        \abs{S(P^{\prime\prime}, f, \alpha) - \int_c^b f \; \mathrm{d}\alpha} < \varepsilon / 2
         \quad \forall P^{\prime\prime} \supset P_\varepsilon^{\prime\prime}
     \end{align*}
     for some $P_\varepsilon^{\prime\prime}$ on $[c, b]$.
@@ -1446,15 +1462,15 @@
     \begin{align*}
         &\abs{
             S(P^\prime, f, \alpha)
-            - \int_a^b f \ \mathrm{d}\alpha
-            + \int_c^b f \ \mathrm{d}\alpha 
+            - \int_a^b f \; \mathrm{d}\alpha
+            + \int_c^b f \; \mathrm{d}\alpha 
         } \\ 
         &\leq \abs{
             S(P, f, \alpha)
-            - \int_a^b f \ \mathrm{d}\alpha
+            - \int_a^b f \; \mathrm{d}\alpha
         } + \abs{
             S(P^{\prime\prime}, f, \alpha)
-            - \int_c^b f \ \mathrm{d}\alpha
+            - \int_c^b f \; \mathrm{d}\alpha
         } \\ 
         &< \varepsilon / 2 + \varepsilon / 2 \\ 
         &= \varepsilon
@@ -1469,11 +1485,11 @@
 
 %------------------------------
 
-\begin{theorem}[Integration by Parts]
+\begin{theorem}[Integration by Parts] \label{thm:36}
     If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $\alpha \in \mathfrak{R}(f)$ on $[a, b]$, and 
     \begin{align*}
-        \int_a^b f \ \mathrm{d}\alpha
-        + \int_a^b \alpha \ \mathrm{d}f
+        \int_a^b f \; \mathrm{d}\alpha
+        + \int_a^b \alpha \; \mathrm{d}f
         = f(b)\alpha(b) - f(a)\alpha(a)
     \end{align*}
 \end{theorem}
@@ -1485,7 +1501,7 @@
 \begin{proof}
     Given $\varepsilon > 0$, since $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, there exists a partition $P_\varepsilon$ such that 
     \begin{align}
-        \abs{S(P, f, \alpha) - \int_a^b f \ \mathrm{d}\alpha} < \varepsilon
+        \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon
         \quad \forall P \supset P_\varepsilon
         \label{eq:57}
     \end{align}
@@ -1524,19 +1540,19 @@
     \end{align*}
     Since $P^\ast \supset P \supset P_\varepsilon$, it follows from \eqref{eq:57} that 
     \begin{align*}
-        \abs{A - S(P, \alpha, f) - \int_a^b f \ \mathrm{d}\alpha} 
-        = \abs{S(P^\ast, f, \alpha) - \int_a^b f \ \mathrm{d}\alpha}
+        \abs{A - S(P, \alpha, f) - \int_a^b f \; \mathrm{d}\alpha} 
+        = \abs{S(P^\ast, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha}
         < \varepsilon
     \end{align*}
     Recall $A = f(b)\alpha(b) - f(a)\alpha(a)$, we have 
     \begin{align*}
-        \abs{S(P, \alpha, f) + \int_a^b f \ \mathrm{d}\alpha - f(b)\alpha(b) + f(a)\alpha(a)} < \varepsilon
+        \abs{S(P, \alpha, f) + \int_a^b f \; \mathrm{d}\alpha - f(b)\alpha(b) + f(a)\alpha(a)} < \varepsilon
         \quad \forall P \supset P_\varepsilon
     \end{align*}
     This implies that $\alpha \in \mathfrak{R}(f)$ on $[a, b]$, and 
     \begin{align*}
-        \int_a^b f \ \mathrm{d}\alpha
-        = -\int_a^b f \ \mathrm{d}\alpha 
+        \int_a^b f \;\mathrm{d}\alpha
+        = -\int_a^b f \;\mathrm{d}\alpha 
         + f(b)\alpha(b) - f(a)\alpha(a)
     \end{align*}
 \end{proof}
@@ -1557,9 +1573,9 @@
         h &= f(g(x)) & 
         \beta &= \alpha(g(x))
     \end{align*}
-    Then $h \in \mathfrak{R}(\beta)$ on $I$, and $\int_a^b f \ \mathrm{d}\alpha = \int_c^d h \ \mathrm{d}\beta$, i.e., 
+    Then $h \in \mathfrak{R}(\beta)$ on $I$, and $\int_a^b f \; \mathrm{d}\alpha = \int_c^d h \; \mathrm{d}\beta$, i.e., 
     \begin{align*}
-        \int_a^b f(x) \ \mathrm{d}\alpha(x) = \int_c^d f(g(x)) \ \mathrm{d}\alpha(g(x))
+        \int_a^b f(x) \; \mathrm{d}\alpha(x) = \int_c^d f(g(x)) \; \mathrm{d}\alpha(g(x))
     \end{align*}
 \end{theorem}
 
@@ -1584,7 +1600,7 @@
 
     \par (Existence of the Integral) Given $\varepsilon > 0$, since $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, there exists a partition $P^\prime_\varepsilon$ on $[a, b]$ such that 
     \begin{align}
-        \abs{S(P^\prime, f, \alpha) - \int_a^b f \ \mathrm{d}\alpha} < \varepsilon
+        \abs{S(P^\prime, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon
         \quad \forall P^\prime \supset P^\prime_\varepsilon
         \label{eq:67}
     \end{align}
@@ -1608,7 +1624,7 @@
     \end{align}
     What is left to shown is that $P^\prime \supset P^\prime_\varepsilon$. For any point $x \in P^\prime_\varepsilon$, we have $g^{-1}(x) \in P_\varepsilon$ since $P_\varepsilon = g^{-1}(P_\varepsilon)$. Recall that $P \supset P_\varepsilon$. Thus, $g^{-1}(x) \in P$. And because $P^\prime = g(P)$, we have $x = g(g^{-1}(x)) \in P^\prime$. Therefore, indeed $P^\prime \supset P^\prime_\varepsilon$. It then follows from \eqref{eq:67} and \eqref{eq:68} that 
     \begin{align*}
-        \abs{S(P, h, \beta) - \int_a^b f \ \mathrm{d}\alpha} < \varepsilon
+        \abs{S(P, h, \beta) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon
         \quad \forall P \supset P_\varepsilon
     \end{align*}
     This completes the proof.
@@ -1616,21 +1632,499 @@
 
 %------------------------------
 
-\section{Comparison Theorems}
+\section{Monotonically Increasing Integrators}
+
+\par It is much easier to study and prove some properties of the Riemann-Stieltjes integrals if we require that $\alpha$ is monotonically increasing. 
+
+\par Thanks to Theorem~\ref{thm:33}, which states that every function of bounded variation can express as a difference of two increasing functions, almost all the properties introduced in this section can be extended with ease to integrators of bounded variation. 
 
 %------------------------------
 
-\begin{theorem} \label{thm:26}
-    Suppose that $\alpha \uparrow$ on $[a, b]$. If $f, g \in \mathfrak{R}(\alpha)$ on $[a, b]$, and $f \leq g$, then 
+\subsection{The Darboux Sum}
+
+%------------------------------
+
+\subsection{Existence}
+
+%------------------------------
+
+\begin{theorem} \label{thm:4}
+    Suppose $\alpha$ is increasing on $[a, b]$. $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ if and only if for any given $\varepsilon > 0$, there exists a partition $P$ on $[a, b]$ such that 
     \begin{align*}
-        \int_a^b f \ \mathrm{d}\alpha
-        \leq \int_a^b g \ \mathrm{d}\alpha
+        U(P, f, \alpha) - L(P, f, \alpha) < \varepsilon
     \end{align*}
 \end{theorem}
 
 %------------------------------
 
+\par It is natural to assert that if $f$ is integrable on an interval $[a, b]$, then it must also be integrable on every subinterval contained in that.
+
+\begin{theorem} \label{thm:38}
+    Suppose $\alpha$ is increasing on $[a, b]$. If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $f \in \mathfrak{R}(\alpha)$ on every subinterval $[c, d] \subset [a, b]$.
+\end{theorem}
+
+\begin{proof}
+    % TODO
+\end{proof}
+
+%------------------------------
+
+\begin{theorem} \label{thm:34}
+    If $f$ is continuous on $[a, b]$ and $\alpha$ is increasing on $[a, b]$, then $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+\end{theorem}
+
+\begin{proof}
+    Note that $f$ is actually uniformly continuous on $[a, b]$. It follows that for a given $\varepsilon > 0$, there exists $\delta > 0$ such that 
+    \begin{align*}
+        \abs{x - y} < \delta
+        \implies \abs{f(x) - f(y)} < \varepsilon / (b - a)
+    \end{align*}
+    We can find a partition $P$ on $[a, b]$ such that the length of each subinterval is less than $\delta$, i.e., $ x_k - x_{k-1} < \delta$. It then follows that 
+    \begin{align*}
+        \sup f_i - \inf f_i
+        = \sup_{x \in [x_{k-1},  x_k]} f(x)
+        - \inf_{x \in [x_{k-1},  x_k]} f(x)
+        < \varepsilon / (b-a)
+    \end{align*}
+    Therefore, 
+    \begin{align*}
+        U(P, f, \alpha) - L(P, f, \alpha)
+        = \sum (\sup f_i - \inf f_i) \Delta \alpha_i
+        < \varepsilon / (b-a) \sum \Delta\alpha_i
+        = \varepsilon
+    \end{align*}
+    This implies $f \in \mathfrak{R}(\alpha)$.
+\end{proof}
+
+%------------------------------
+
+\subsection{Comparison Theorems}
+
+%------------------------------
+
+\begin{theorem} \label{thm:26}
+    Suppose that $\alpha$ is increasing on $[a, b]$. If $f, g \in \mathfrak{R}(\alpha)$ on $[a, b]$, and $f \leq g$, then 
+    \begin{align*}
+        \int_a^b f \;\mathrm{d}\alpha
+        \leq \int_a^b g \;\mathrm{d}\alpha
+    \end{align*}
+\end{theorem}
+
+%------------------------------
+
+\begin{theorem} \label{thm:37}
+    Suppose $\alpha$ is increasing on $[a, b]$. If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $\abs{f} \in \mathfrak{R}(\alpha)$ on $[a, b]$. And we have the inequality
+    \begin{align}
+        \abs{\int_a^b f \; \mathrm{d}\alpha}
+        \leq \int_a^b \abs{f} \; \mathrm{d}\alpha
+        \label{eq:95}
+    \end{align}
+\end{theorem}
+
+\par The critical step of the proof is to note 
+\begin{align*}
+    \sup_{x \in [x_{k-1}, x_k]} f(x) - \inf_{x \in [x_{k-1}, x_k]} f(x) 
+    = \sup_{x,y \in [x_{k-1}, x_k]} \abs{f(x) - f(y)} 
+\end{align*}
+
+\begin{proof}
+    For a partition $P$ on $[a, b]$, let $M_k(f)$ and $m_k(f)$ denote 
+    \begin{align*}
+        M_k(f) &= \sup_{x \in [x_{k-1}, x_k]} f(x) &
+        m_k(f) &= \inf_{x \in [x_{k-1}, x_k]} f(x)
+    \end{align*}
+    And let $M_k(\abs{f})$ and $m_k(\abs{f})$ have the similar meanings. Note that 
+    \begin{align*}
+        M_k(f) - m_k(f) = \sup_{x,y \in [x_{k-1}, x_k]} \abs{f(x) - f(y)} 
+    \end{align*}
+    It then follows from the triangle inequality
+    \begin{align*}
+        \abs{\abs{f(x)} - \abs{f(y)}}
+        \leq \abs{f(x) - f(y)}
+    \end{align*}
+    that 
+    \begin{align}
+        M_k(\abs{f}) - m_k(\abs{f}) 
+        = \sup_{x,y \in [x_{k-1}, x_k]}\abs{\abs{f(x)} - \abs{f(y)}}
+        \leq \sup_{x,y \in [x_{k-1}, x_k]}\abs{f(x) - f(y)}
+        = M_k(f) - m_k(f)
+        \label{eq:96}
+    \end{align}
+
+    \par Given $\varepsilon > 0$, since $f \in \mathfrak{R}(\alpha)$, there exists a partition $P$ such that  
+    \begin{align*}
+        U(P, f, \alpha) - L(P, f, \alpha)
+        = \sum (M_k(f) - m_k(f)) \Delta\alpha_k
+        < \varepsilon
+    \end{align*}
+    It then follows from \eqref{eq:96} that 
+    \begin{align*}
+        U(P, \abs{f}, \alpha) - L(P, \abs{f}, \alpha)
+        = \sum \abs{M_k(f) - m_k(f)} \Delta\alpha_k
+        \leq \sum (M_k(f) - m_k(f)) \Delta\alpha_k
+        < \varepsilon
+    \end{align*}
+    Note that we also need the condition that $\alpha$ is increasing for the above inequality to hold. Therefore, we conclude that $\abs{f} \in \mathfrak{R}(\alpha)$ by Theorem~\ref{thm:4}. The inequality \eqref{eq:95} then follows form Theorem~\ref{thm:26}.
+\end{proof}
+
+%------------------------------
+
+\subsection{Integral of Product of Two Functions}
+
+%------------------------------
+
+\begin{theorem} \label{thm:39}
+    Suppose $\alpha$ is increasing on $[a, b]$. If $f, g \in \mathfrak{R}(\alpha)$, then $fg \in \mathfrak{R}(\alpha)$.
+\end{theorem}
+
+\begin{proof}
+    % TODO
+\end{proof}
+
+%------------------------------
+
+\par When considering the integral of a product $fg$, the following theorem says we can merge $g$ into the integrator in the sense that $\int_a^b fg \; \mathrm{d}\alpha = \int_a^b f \; \mathrm{d}G$.
+
+\begin{theorem} \label{thm:41}
+    Suppose that $\alpha$ is increasing on $[a, b]$, and  $f, g \in \mathfrak{R}(\alpha)$. Define 
+    \begin{align*}
+        F(x) &:= \int_a^x f \; \mathrm{d}\alpha &
+        G(x) &:= \int_a^x g \; \mathrm{d}\alpha
+    \end{align*}
+    $F$ and $G$ are indeed well-defined due to Theorem~\ref{thm:38} in the sense that the integrals exist for every $x \in [a, b]$. Then $f \in \mathfrak{R}(G)$ and $g \in \mathfrak{R}(F)$. In this case,
+    \begin{align}
+        \int_a^b f g \; \mathrm{d}\alpha
+        = \int_a^b f \; \mathrm{d}G
+        = \int_a^b g \; \mathrm{d}F
+        \label{eq:97}
+    \end{align}
+    Note that $fg \in \mathfrak{R}(a)$ by Theorem~\ref{thm:39}.
+\end{theorem}
+
+\begin{proof}
+    We only prove that $f \in \mathfrak{R}(G)$ and the first equation in \eqref{eq:97}. Let $M_g > 0$ be an upper bound of $\abs{g}$, i.e., 
+    \begin{align*}
+        \abs{g(x)} < M_g
+        \quad \forall x \in [a, b]
+    \end{align*} 
+    Let $\varepsilon > 0$ be chosen arbitrarily. Since $f \in \mathfrak{R}(\alpha)$, by Theorem~\ref{thm:4}, there exists a partition $P_\varepsilon$ on $[a, b]$ such that 
+    \begin{align}
+        U(P, f, \alpha) - L(P, f, \alpha) < \frac{\varepsilon}{M_G}
+        \quad \forall P \supset P_\varepsilon
+        \label{eq:98}
+    \end{align}
+
+    \par For any refinement $P \supset P_\varepsilon$, we have 
+    \begin{align}
+        S(P, f, G)
+        &= \sum_k f(t_k) \Delta G_k \nonumber \\ 
+        &= \sum_k f(t_k) \int_{x_{k-1}}^{x_k} g \; \mathrm{d}\alpha \nonumber \\ 
+        &= \sum_k  \int_{x_{k-1}}^{x_k} f(t_k) g(t) \; \mathrm{d}\alpha(t)
+        \label{eq:99}
+    \end{align}
+    We know from Theorem~\ref{thm:38} that $\int_{x_{k-1}}^{x_k} fg \; \mathrm{d}\alpha$ exists for each $k$. We then subtract $\int_a^b fg \; \mathrm{d}\alpha$ from \eqref{eq:99},
+    \begin{align*}
+        \abs{
+            S(P, f, G)
+            - \int_a^b fg \; \mathrm{d}\alpha
+        } &= \abs{
+            \sum_k \int_{x_{k-1}}^{x_k} (f(t_k) - f(t)) g(t) \; \mathrm{d}\alpha(t)
+        } \\ 
+        &\leq \sum_k \abs{
+            \int_{x_{k-1}}^{x_k} (f(t_k) - f(t)) g(t) \; \mathrm{d}\alpha(t)
+        }
+    \end{align*}
+    It then follows from Theorem~\ref{thm:37} that 
+    \begin{align}
+        \abs{
+            S(P, f, G)
+            - \int_a^b fg \; \mathrm{d}\alpha
+        }  
+        &\leq \sum_k \abs{
+            \int_{x_{k-1}}^{x_k} (f(t_k) - f(t)) g(t) \; \mathrm{d}\alpha(t)
+        } \nonumber \\ 
+        &\leq \sum_k \int_{x_{k-1}}^{x_k} \abs{f(t_k) - f(t)} \abs{g(t)} \; \mathrm{d}\alpha(t)
+        \label{eq:100}
+    \end{align}
+    Note that $\abs{f(t_k) - f(t)} \in \mathfrak{R}(\alpha)$ on $[x_{k-1}, x_k]$ where $f(t_k)$ is a constant by Theorem~\ref{thm:40} and Theorem~\ref{thm:37} since $f \in \mathfrak{R}(\alpha)$.
+
+    \par Therefore, we can further enlarge the right-hand side of \eqref{eq:100} using Theorem~\ref{thm:26}:
+    \begin{align}
+        \abs{
+            S(P, f, G)
+            - \int_a^b fg \; \mathrm{d}\alpha
+        }  
+        &\leq \sum_k \int_{x_{k-1}}^{x_k} \abs{f(t_k) - f(t)} \abs{g(t)} \; \mathrm{d}\alpha(t) \nonumber \\ 
+        &\leq \abs{M_g} \sum_k \int_{x_{k-1}}^{x_k} \abs{f(t_k) - f(t)} \; \mathrm{d}\alpha(t)
+        \quad \text{recall $\abs{g} < M_g$}
+        \label{eq:101}
+    \end{align}
+
+    \par On subinterval $[x_{k-1}, x_k]$, denote 
+    \begin{align*}
+        M_k &= \sup_{x \in [x_{k-1}, x_k]} f(x) &
+        m_k &= \inf_{x \in [x_{k-1}, x_k]} f(x)
+    \end{align*}
+    It is clear $M_k - m_k \in \mathfrak{R}(\alpha)$ on each subinterval $[x_{k-1}, x_k]$ since it is just a constant function. Then by Theorem~\ref{thm:26}, we have 
+    \begin{align}
+        \int_{x_{k-1}}^{x_k} \abs{f(t_k) - f(t)} \; \mathrm{d}\alpha(t)
+        \leq \int_{x_{k-1}}^{x_k} M_k - m_k \; \mathrm{d}\alpha(t)
+        = (M_k - m_k) \Delta\alpha_k
+        \label{eq:102}
+    \end{align}
+
+    \par By comparing \eqref{eq:101} and \eqref{eq:102}, we obtain 
+    \begin{align*}
+        \abs{
+            S(P, f, G)
+            - \int_a^b fg \; \mathrm{d}\alpha
+        }  
+        \leq \abs{M_g} \sum_k (M_k - m_k) \Delta\alpha_k 
+        = \abs{M_g} ( U(P, f, \alpha) - L(P, f, \alpha) )
+    \end{align*}
+    Recall that $P \supset P_\varepsilon$, then it follows from \eqref{eq:98} that 
+    \begin{align*}
+        \abs{
+            S(P, f, G)
+            - \int_a^b fg \; \mathrm{d}\alpha
+        }  < \varepsilon
+    \end{align*}
+    This implies that $f \in \mathfrak{R}(G)$, and 
+    \begin{align*}
+        \int_a^b fg \; \mathrm{d}\alpha
+        = \int_a^b f \; \mathrm{d}G
+    \end{align*}
+
+    \par With the similar arguments, we can also prove $g \in \mathfrak{R}(F)$ and 
+    \begin{align*}
+        \int_a^b fg \; \mathrm{d}\alpha
+        = \int_a^b g \; \mathrm{d}F
+    \end{align*}
+\end{proof}
+
+%------------------------------
+
+
+\section{Integrators of Bounded Variation}
+
+%------------------------------
+
+\par $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$ on $[a, b]$ where $\alpha_1$ and $\alpha_2$ are both increasing functions, then we know from Theorem~\ref{thm:35} that $f \in \mathfrak{R}(\alpha)$ where $\alpha = \alpha_1 - \alpha_2$. Moreover, by Theorem~\ref{thm:33}, we are immediately informed that $\alpha$ is of bounded variation. 
+
+\par Now, let us think about the converse of this statement. Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ where $\alpha$ if of bounded variation. Can we assert that $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$ on $[a, b]$ where $\alpha_1$ and $\alpha_2$ are any increasing functions satisfying $\alpha = \alpha_1 - \alpha_2$? Unfortunately, this is not true in general. Consider the following example.
+
+\begin{example}
+    Let $f$ be the Dirichlet function, i.e., 
+    \begin{align*}
+        f(x) = \begin{cases}
+            1 &x \in \Q \\ 
+            0 & x \notin \Q
+        \end{cases}
+    \end{align*}
+    Let
+    \begin{align*}
+        \alpha_1(x) = \alpha_2(x) = x
+    \end{align*}
+    Note that $f$ is not integrable with respect to $x$ on any closed interval $[a, b]$ since $\overline{\int}_a^b f \; \mathrm{d}x = b-a$ and $\underline{\int}_a^b f \; \mathrm{d}x = 0$.
+
+    \par However, if we let $\alpha = \alpha_1 - \alpha_2 = 0$, then it is evident that $f \in \mathfrak{R}(\alpha)$, and $\int_a^b f \; \mathrm{d}\alpha = 0$ since $S(P, f, \alpha = 0) = 0$ for any partition on $[a, b]$.
+\end{example}
+
+\par The preceding example shows that we can not decompose $\alpha$ into any two increasing functions, with respect to which $f$ is integrable.
+
+
+\begin{theorem} 
+    If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $f \in \mathfrak{R}(V_a^x(\alpha))$ on $[a, b]$ where $V_a^x(\alpha)$ is the total variation of $\alpha$, which is regarded as a function of $x$ as in Definition~\ref{def:8}.
+\end{theorem}
+
+\par Before presenting the proof, we first introduce some notations we shall use as well as the general strategy of this proof.
+
+\par For a subinterval $[x_{k-1}, x_k]$ in the partition $P = \left\{ x_0, \ldots, x_n \right\}$ on $[a, b]$, we adopt the following notation:
+\begin{align*}
+    M_k &= \sup_{x \in [x_{k-1}, x_k]} f(x) &
+    m_k &= \inf_{x \in [x_{k-1}, x_k]} f(x) & 
+    \Delta V_k &= V_{x_{k-1}}^{x_k}(\alpha)
+\end{align*}
+And we write $V(x)$ instead of $V_a^x(\alpha)$ to emphasize that the total variation is a function of $x$.
+
+\par Observe that $V(x)$ is monotonically increasing, hence we shall prove $f$ is integrable with respect to $V(x)$ mainly relies on Theorem~\ref{thm:4}. We intend to bound the difference of the upper and the lower Darboux sum, which is shown in the following, with an arbitrarily small positive number.
+\begin{align*}
+    U(P,f,V) - L(P,f,V)
+    &= \sum (M_k - m_k) \Delta V_k \\ 
+    &= \sum (M_k - m_k) \left( \Delta V_k - \abs{\Delta\alpha_k} \right)
+    + \sum (M_k - m_k) \abs{\Delta\alpha_k}
+\end{align*}
+Therefore, we shall focus on bounding each of the two terms on the right-hand side of the above equation.
+
+\par We now present the proof as follows.
+
+\begin{proof}
+    \par If $f$ is a constant function, then this theorem holds trivially. We assume that $f$ is non-constant in the rest of the proof. Let $A$ be given by 
+    \begin{align*}
+        A = \sup_{x \in [a, b]} f(x) - \inf_{x \in [a, b]} f(x)
+    \end{align*}
+    Since $f$ is non-constant, it is clear that $A > 0$.
+    
+    \par Let $\varepsilon > 0$ be chosen arbitrarily. Since $\alpha$ is of bounded variation on $[a, b]$, by the definition of total variations, there exists a partition $P^\prime_\varepsilon$ on $[a, b]$ such that 
+    \begin{align}
+        V_a^b(\alpha) 
+        < V(P, \alpha)
+        + \frac{\varepsilon}{3A}
+        \quad \forall P \supset P^\prime_\varepsilon
+        \label{eq:86}
+    \end{align}
+    We shall use this inequality later.
+
+    \par Now, we prepare another inequality that will be in use. Because $f \in \mathfrak{R}(\alpha)$, there exists a partition $P^{\prime\prime}_\varepsilon$ such that
+    \begin{align}
+        \abs{
+            \sum \left(f(s_k) - f(t_k)\right) 
+            \Delta \alpha_k
+        } < \frac{\varepsilon}{3}
+        \quad \forall P \supset P^{\prime\prime}_\varepsilon
+        \label{eq:87}
+    \end{align}
+    where $s_k$ and $t_k$ are any two points in the $k$-th subinterval of $P$.
+
+    \par Let $P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon$, and let $P = \left\{x_0, \ldots, x_n\right\} \supset P_\varepsilon$ be a refinement. We have 
+    \begin{align*}
+        U(P,f,V) - L(P,f,V)
+        &= \sum_{k=1}^n (M_k - m_k) \Delta V_k \\ 
+        &= \sum_{k=1}^n (M_k - m_k) \left( \Delta V_k - \abs{\Delta\alpha_k} \right)
+        + \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+    \end{align*}
+    Recall $A = \sup f - \inf f$. Hence, the right-hand side of the equality above can be further enlarged to
+    \begin{align}
+        U(P,f,V) - L(P,f,V)
+        \leq A \sum_{k=1}^n \left( \Delta V_k - \abs{\Delta\alpha_k} \right)
+        + \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+        \label{eq:88}
+    \end{align}
+    Note that $P \supset P_\varepsilon \supset P^\prime_\varepsilon$. It then follows from \eqref{eq:86} that 
+    \begin{align*}
+        \sum_{k=1}^n \Delta V_k
+        \leq V_a^b(\alpha) 
+        < V(P, \alpha)
+        + \frac{\varepsilon}{3A}
+        = \sum_{k=1}^n \abs{\Delta\alpha_k}
+        + \frac{\varepsilon}{3A}
+    \end{align*}
+    Rearranging the terms, we obtain 
+    \begin{align}
+        \sum_{k=1}^n \left( \Delta V_k - \abs{\Delta\alpha_k} \right)
+        < \frac{\varepsilon}{3A}
+        \label{eq:89}
+    \end{align}
+    By combining \eqref{eq:88} and \eqref{eq:89}, we have 
+    \begin{align}
+        U(P,f,V) - L(P,f,V)
+        < \frac{\varepsilon}{3}
+        + \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+        \label{eq:90}
+    \end{align}
+
+    \par It requires much more work to bound the term $\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}$ in \eqref{eq:90}. Let $h$ be a positive number given by 
+    \begin{align*}
+        h = \frac{\varepsilon}{3(V_a^b (\alpha) + 1)}
+    \end{align*}
+    Let $I(P), J(P) \subset \left\{0, 1, \ldots, n\right\}$ be defined as 
+    \begin{align*}
+        I(P) &= \set{k}{\Delta\alpha_k \geq 0} & 
+        J(P) &= \set{k}{\Delta\alpha_k < 0}
+    \end{align*}
+
+    \par For $k \in I(P)$, we can choose a pair of points, $s_k$ and $t_k$, in the $k$-th subinterval of $P$ such that 
+    \begin{align*}
+        M_k - m_k < f(s_k) - f(t_k) + h
+    \end{align*}
+    In this case, 
+    \begin{align}
+        (M_k - m_k)\abs{\Delta\alpha_k}
+        < \left(f(s_k) - f(t_k) + h\right)\abs{\Delta\alpha_k}
+        =  \left(f(s_k) - f(t_k) + h\right) \Delta\alpha_k
+        \label{eq:91}
+    \end{align}
+
+    \par On the other hand, for $k \in J(P)$, we can choose a pair of points, $s_k$ and $t_k$, in the $k$-th subinterval of $P$ such that 
+    \begin{align*}
+        M_k - m_k < -f(s_k) + f(t_k) + h
+    \end{align*}
+    It then follows that
+    \begin{align}
+        (M_k - m_k)\abs{\Delta\alpha_k}
+        < \left(-f(s_k) + f(t_k) + h\right)\abs{\Delta\alpha_k}
+        =  \left(f(s_k) - f(t_k) - h\right) \Delta\alpha_k
+        \label{eq:92}
+    \end{align}
+
+    \par Compare \eqref{eq:91} and \eqref{eq:92}, we conclude
+    \begin{align*}
+        (M_k - m_k)\abs{\Delta\alpha_k}
+        < \left(f(s_k) - f(t_k)\right) \Delta\alpha_k
+        + h \abs{\Delta\alpha_k}
+        \quad \forall k \in \left\{0, 1, \ldots, n\right\}
+    \end{align*}
+    Therefore, 
+    \begin{align*}
+        \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+        &< \sum_{k=1}^n \left(f(s_k) - f(t_k)\right) \Delta\alpha_k + h \sum_{k=1}^n \abs{\Delta\alpha_k} \\ 
+        &\leq \sum_{k=1}^n \left(f(s_k) - f(t_k)\right) \Delta\alpha_k + h V_a^b (\alpha) \\ 
+        &< \frac{\varepsilon}{3} + \sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k \\ 
+        &\leq \frac{\varepsilon}{3} + \abs{\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k}
+    \end{align*}
+    In summary,
+    \begin{align}
+        \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+        < \frac{\varepsilon}{3} + \abs{\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k}
+        \label{eq:93}
+    \end{align}
+    Since $P \supset P_\varepsilon \supset P^{\prime\prime}_\varepsilon$, we may apply \eqref{eq:87} to \eqref{eq:93} and obtain that 
+    \begin{align}
+        \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+        < \frac{\varepsilon}{3} + \frac{\varepsilon}{3}
+        = \frac{2\varepsilon}{3}
+        \label{eq:94}
+    \end{align}
+
+    \par Finally, by combining \eqref{eq:90} and \eqref{eq:94}, we have 
+    \begin{align*}
+        U(P,f,V) - L(P,f,V)
+        < \frac{\varepsilon}{3} + \frac{2\varepsilon}{3}
+        = \varepsilon
+    \end{align*}
+    Therefore, $f \in \mathfrak{R}(V(x))$ by Theorem~\ref{thm:4} since $V(x)$ is increasing.
+\end{proof}
+
+
+%------------------------------
+
 \section{Existence of Riemann-Stieltjes Integrals}
+
+%------------------------------
+
+\begin{theorem}
+    If $f$ is continuous on $[a, b]$ and $\alpha$ is of bounded variation on $[a, b]$, then $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+\end{theorem}
+
+\begin{remark}
+    By the reciprocity law of Riemann-Stieltjes integrals (or the theorem of integration by parts, Theorem~\ref{thm:36}), we immediately know it is also true that $\alpha$ is integrable with respect to $f$, i.e., $\alpha \in \mathfrak{R}(f)$.
+\end{remark}
+
+\begin{proof}
+    By Theorem~\ref{thm:33}, $\alpha$ can be written as a difference of two increasing functions, i.e., 
+    \begin{align*}
+        \alpha = \alpha_1 - \alpha_2
+    \end{align*}
+    where $\alpha_1$ and $\alpha_2$ are both monotonically increasing. 
+
+    \par Then, we know from Theorem~\ref{thm:34} that $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$.
+
+    \par Finally, we use the linear property of integrators Theorem~\ref{thm:35} to conclude that indeed $f \in \mathfrak{R}(\alpha_1 - \alpha_2)$.
+\end{proof}
+
+%------------------------------
+
+
 
 %------------------------------
 
@@ -1639,15 +2133,15 @@
 %------------------------------
 
 \begin{theorem}[First Mean Value Theorem for Riemann-Stieltjes Integrals] \label{thm:27}
-    Suppose that $\alpha \uparrow$ on $[a, b]$. If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then there exists a number $c$ satisfying
+    Suppose that $\alpha$ is increasing on $[a, b]$. If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then there exists a number $c$ satisfying
     \begin{align*}
         \inf_{x \in [a, b]} f(x) \leq c \leq \sup_{x \in [a, b]} f (x)
     \end{align*}
     such that 
     \begin{align}
-        \int_a^b f \ \mathrm{d}\alpha
+        \int_a^b f \; \mathrm{d}\alpha
         = c \int_{a}^{b} \mathrm{d}\alpha
-        = \alpha(b) - \alpha(a)
+        = c( \alpha(b) - \alpha(a) )
         \label{eq:58}
     \end{align}
     Furthermore, if $f$ is continuous on $[a, b]$, then there exists $x_0 \in [a, b]$ such that $f(x_0) = c$.
@@ -1656,17 +2150,17 @@
 \begin{proof}
     If $\alpha$ is a constant function, then the conclusion is trivial since all values in \eqref{eq:58} are zeros. In the rest of the proof, we assume $\alpha$ is non-constant. In that case, $\alpha(b) > \alpha(a)$. To simplify the notation, we let $m = \inf_{x \in [a, b]} f(x)$ and $M = \sup_{x \in [a, b]} f(x)$. Since constant functions are clearly integrable, by Theorem~\ref{thm:26}, we have 
     \begin{align*}
-        \int_{a}^{b} m \ \mathrm{d}\alpha
-        \leq \int_{a}^{b} f \ \mathrm{d}\alpha
-        \leq \int_{a}^{b} M \ \mathrm{d}\alpha
+        \int_{a}^{b} m \;\mathrm{d}\alpha
+        \leq \int_{a}^{b} f \;\mathrm{d}\alpha
+        \leq \int_{a}^{b} M \;\mathrm{d}\alpha
     \end{align*}
     It then follows that 
     \begin{align*}
-        m \leq \frac{1}{\alpha(b) - \alpha(a)} \int_{a}^{b} f \ \mathrm{d}\alpha \leq M
+        m \leq \frac{1}{\alpha(b) - \alpha(a)} \int_{a}^{b} f \; \mathrm{d}\alpha \leq M
     \end{align*}
     Let $c$ be given by 
     \begin{align*}
-        c = \frac{1}{\alpha(b) - \alpha(a)} \int_{a}^{b} f \ \mathrm{d}\alpha
+        c = \frac{1}{\alpha(b) - \alpha(a)} \int_{a}^{b} f \; \mathrm{d}\alpha
     \end{align*}
     Hence, \eqref{eq:58} is proved.
 
@@ -1679,8 +2173,46 @@
 %------------------------------
 
 \begin{theorem}[Second Mean Value Theorem for Riemann-Stieltjes Integrals] \label{thm:28}
-    % TODO
+    Suppose that $\alpha$ is continuous and $f$ is monotonic on $[a, b]$. Then, there exists a point $x_0 \in [a, b]$ such that 
+    \begin{align}
+        \int_a^b f \; \mathrm{d}\alpha
+        = f(a) \int_a^{x_0} \mathrm{d}\alpha
+        + f(b) \int_{x_0}^b \mathrm{d}\alpha
+        \label{eq:69}
+    \end{align}
+    Of course, all the integrals involved in \eqref{eq:69} exist.
 \end{theorem}
+
+\begin{proof}
+    Without loss of generality, we may assume that $f$ is increasing in the rest of this proof. If $f$ is decreasing, then we apply this theorem to $-f$, which is increasing. And \eqref{eq:69} still holds after multiplying $-1$ on the both sides.
+
+    \par (Existence of Integrals) Firstly, by Theorem~\ref{thm:34}, we know that $\alpha \in \mathfrak{R}(f)$. And by the reciprocity law (Theorem~\ref{thm:36}), it also holds that $f \in \mathfrak{R}(\alpha)$. 
+
+    \par (Integration by Parts) Then, applying the integration by parts (Theorem~\ref{thm:36}) to $\int_a^b f \; \mathrm{d}\alpha$, we obtain
+    \begin{align}
+        \int_a^b f \; \mathrm{d}\alpha
+        = f(b)\alpha(b) - f(a)\alpha(a)
+        - \int_a^b \alpha \; \mathrm{d}f
+        \label{eq:70}
+    \end{align}
+
+    \par (First Mean Value Theorem) Since $f$ is increasing and $\alpha$ is continuous, by the First Mean Value Theorem (Theorem~\ref{thm:27}), we have 
+    \begin{align}
+        \int_a^b \alpha \; \mathrm{d}f
+        = \alpha(x_0) \int_a^b \mathrm{d} f
+        = \alpha(x_0) ( f(b) - f(a) )
+        \label{eq:71}
+    \end{align}
+    for some $x_0 \in [a, b]$.
+    Combine \eqref{eq:70} and \eqref{eq:71}, 
+    \begin{align*}
+        \int_a^b f \; \mathrm{d}\alpha
+        = f(a) (\alpha(x_0) - \alpha(a))
+        + f(b) (\alpha(b) - \alpha(x_0))
+        = f(a) \int_a^{x_0} \mathrm{d}\alpha
+        + f(b) \int_{x_0}^b \mathrm{d}\alpha
+    \end{align*}
+\end{proof}
 
 %------------------------------
 
@@ -1688,10 +2220,143 @@
 
 %------------------------------
 
+\begin{theorem} \label{thm:42}
+    Suppose $\alpha$ is of bounded variation on $[a, b]$, and $f \in \mathfrak{R}(\alpha)$ on $[a, b]$. Define a function $F$ on $[a, b]$ by
+    \begin{align*}
+        F(x) := \int_a^x f \; \mathrm{d}\alpha
+    \end{align*}
+    Then we have the following:
+    \begin{enumerate}
+        \item $F$ is of bounded variation on $[a, b]$.
+        \item If $\alpha$ is continuous at $x_0$, then $F$ is also continuous at $x_0$.
+        \item Suppose that $\alpha$ is increasing. Then $F$ is differentiable at some point $x_0 \in (a, b)$ where $\alpha$ is differentiable and $f$ is continuous. That is, if $\alpha^\prime(x_0)$ exists and $f$ is continuous at $x_0$, then $F^\prime(x_0)$ exists. In that case,
+        \begin{align*}
+            F^\prime(x_0) = f(x_0) \alpha^\prime(x_0)
+        \end{align*}
+    \end{enumerate}
+\end{theorem}
+
+\par The proof of this theorem is an application of the First Mean Value Theorem for Riemann-Stieltjes Integrals (Theorem~\ref{thm:27}), which we shall present in the following.
+
+\begin{proof}
+    (Sufficiency of Only Considering the Case Where $\alpha$ Is Increasing) Assume we can prove 1 and 2 for increasing $\alpha$. Then by applying Theorem~\ref{thm:33}, Theorem~\ref{thm:35} and Theorem~\ref{thm:31}, we can prove 1 and 2 for $\alpha$ that is of bounded variation. Therefore, it suffices to only prove 1 and 2 assuming $\alpha$ is increasing.
+
+    \par (Result from the First Mean Value Theorem) For any pair of points $x_1, x_2 \in [a, b]$. By Theorem~\ref{thm:27}, there exists some value $c$ such that 
+    \begin{align}
+        F(x_2) - F(x_1)
+        = c (\alpha(x_2) - \alpha(x_1))
+        \label{eq:72}
+    \end{align}
+    Note that \eqref{eq:72} follows from Theorem~\ref{thm:27} provided that $x_1 < x_2$. But the cases where $x_1 > x_2$ and $x_1 = x_2$ will also hold immediately by a few steps of arguments. We also have the following inequality, which follows from \eqref{eq:72}:
+    \begin{align}
+        \abs{F(x_2) - F(x_1)}
+        = M \abs{\alpha(x_2) - \alpha(x_1)}
+        \label{eq:73}
+    \end{align}
+    where $M$ is a constant such that $M > \abs{f(x)} \; \forall x \in [a, b]$.
+
+    \par (Proof of 1) For any partition $P = \left\{x_0, \ldots, x_n\right\}$ on $[a, b]$, by applying \eqref{eq:73}, we obtain
+    \begin{align*}
+        V(P, F) = \sum \abs{F(x_k) - F( x_{k-1})}
+        \leq M \sum \abs{\alpha(x_k) - \alpha(x_{k-1})}
+        = M (b-a)
+    \end{align*}
+    Note that the last equality follows from the assumption that $\alpha$ is increasing. Therefore, $V(P, F)$ is bounded above by a constant positive number, which implies $F$ is indeed of bounded variation on $[a, b]$.
+
+    \par (Proof of 2) Given $\varepsilon > 0$, since $\alpha$ is continuous at $x_0$, there exist $\delta > 0$ such that
+    \begin{align*}
+        \abs{x - x_0} < \delta 
+        \implies \abs{\alpha(x) - \alpha(x_0)} < \varepsilon / M
+    \end{align*}
+    For $x$ satisfying $\abs{x - x_0} < \delta$, it then follows from \eqref{eq:73} that 
+    \begin{align*}
+        \abs{F(x) - F(x_0)}
+        = M \abs{\alpha(x) - \alpha(x_0)}
+        < \varepsilon
+    \end{align*}
+    This implies $F$ is continuous at $x_0$.
+
+    \par (Proof of 3) Let $\varepsilon > 0$ be arbitrary. Because $\alpha$ is differentiable at $x_0$, there exists $\delta_1 > 0$ such that 
+    \begin{align}
+        \abs{x - x_0} < \delta_1
+        \implies \abs{\frac{\alpha(x) - \alpha(x_0)}{x - x_0} - \alpha^\prime(x_0)} < \varepsilon
+        \label{eq:74}
+    \end{align}
+    And because $f$ is continuous at $x_0$, there exists $\delta_2 > 0$ such that 
+    \begin{align}
+        \abs{x - x_0} < \delta_2
+        \implies \abs{f(x) - f(x_0)} < \varepsilon
+        \label{eq:75}
+    \end{align}
+    To ease the notation, let $I_x$ denote the interval with endpoints $x$ and $x_0$. Let $\delta = \min\left\{\delta_1, \delta_2\right\}$. 
+    
+    \par In the rest of the proof we consider point $x$ satisfying $\abs{x - x_0} < \delta$, it then follows from \eqref{eq:72} that 
+    \begin{align}
+        F(x) - F(x_0)
+        = c_x (\alpha(x) - \alpha(x_0))
+        \label{eq:76}
+    \end{align}
+    where $c_x$ depends on the choice of $x$. Moreover, 
+    \begin{align*}
+        \inf_{t \in I_x} f(t) \leq c_x \leq \sup_{t\in I_x} f(t)
+    \end{align*}
+    From \eqref{eq:76}, we have 
+    \begin{align}
+        \abs{
+            \frac{F(x) - F(x_0)}{x - x_0}
+            - f(x_0) \alpha^\prime(x_0)
+        } \leq \abs{
+            c_x
+        } \abs{
+            \frac{\alpha(x) - \alpha(x_0)}{x - x_0}
+            - \alpha^\prime(x_0)
+        } + \abs{
+            \alpha^\prime(x_0)
+        } \abs{
+            c_x - f(x_0)
+        }
+        \label{eq:77}
+    \end{align}
+    Our goal is to bound the right-hand side of \eqref{eq:77} by an arbitrarily small quantity.
+    \par Let us first consider expressions involving $c_x$. It follows from \eqref{eq:75} that 
+    \begin{align*}
+        \abs{\sup_{t \in I_x}f(t) - f(x_0)} &\leq \varepsilon &
+        \abs{\inf_{t \in I_x}f(t) - f(x_0)} &\leq \varepsilon
+    \end{align*}
+    which further implies
+    \begin{align*}
+        \sup_{t \in I_x}f(t)
+        - \inf_{t \in I_x}f(t) \leq 2\varepsilon
+    \end{align*}
+    Since $c_x$ and $f(x_0)$ both take values in between $\inf_{t \in I_x}f(t)$ and $\sup_{t \in I_x}f(t)$, we have 
+    \begin{align}
+        \abs{c_x - f(x_0)} \leq 2\varepsilon
+        \label{eq:78}
+    \end{align}
+    And the value of $c_x$ itself is bounded by 
+    \begin{align}
+        \abs{c_x} \leq \abs{f(x_0)} + 2\varepsilon
+        \label{eq:79}
+    \end{align}
+
+    \par Finally, by taking into consideration \eqref{eq:77}, \eqref{eq:78}, \eqref{eq:79} and \eqref{eq:74}, we have 
+    \begin{align*}
+        \abs{x - x_0}
+        \implies
+        \abs{
+            \frac{F(x) - F(x_0)}{x - x_0}
+            - f(x_0) \alpha^\prime(x_0)
+        } \leq \left( \abs{f(x_0)} + 2\varepsilon \right) \varepsilon + \abs{\alpha^\prime(x_0)} \cdot 2\varepsilon
+    \end{align*}
+    Observe that the right-hand side of the inequality above is indeed an arbitrarily small quantity. This completes the proof.
+\end{proof}
+
+%------------------------------
+
 \begin{theorem} \label{thm:3}
     Let $f \in \mathfrak{R}$ on $[a, b]$. For $x \in [a, b]$, put 
     \begin{align*}
-        F(x) = \int_a^x f(t) \ \mathrm{d} t
+        F(x) = \int_a^x f(t) \; \mathrm{d} t
     \end{align*}
     Then, $F$ is continuous on $[a, b]$ (more precisely, $F$  is uniformly continuous). Furthermore, if $f$ is continuous at some point $x_0 \in [a, b]$, then $F$ is differentiable at $x_0$, and 
     \begin{align*}
@@ -1707,14 +2372,14 @@
     Consider the function 
     \begin{align*}
         f(x) = \begin{cases}
-            2x \sin \frac{1}{x} - \cos \frac{1}{x} &-\frac{1}{\pi} \leq x \leq \frac{1}{\pi}, \ x \neq 0 \\ 
+            2x \sin \frac{1}{x} - \cos \frac{1}{x} &-\frac{1}{\pi} \leq x \leq \frac{1}{\pi}, \; x \neq 0 \\ 
             0 &x = 0
         \end{cases}
     \end{align*}
-    Let $F(x) = \int_{-1/\pi}^{x} f(t) \ \mathrm{d} t$, then a few steps of computation shows 
+    Let $F(x) = \int_{-1/\pi}^{x} f(t) \; \mathrm{d} t$, then a few steps of computation shows 
     \begin{align*}
         F(x) = \begin{cases}
-            x^2 \sin \frac{1}{x}  &-\frac{1}{\pi} \leq x \leq \frac{1}{\pi}, \ x \neq 0 \\ 
+            x^2 \sin \frac{1}{x}  &-\frac{1}{\pi} \leq x \leq \frac{1}{\pi}, \; x \neq 0 \\ 
             0 &x = 0
         \end{cases}
     \end{align*}
@@ -1726,7 +2391,7 @@
 \begin{theorem}[Fundamental Theorem of Calculus] \label{thm:1}
     If $ f \in \mathfrak{R} $ on $[a, b]$ and $F$ is a differentiable function on $[a, b]$ such that $F^\prime = f$, then we have
     \begin{align*}
-        \int_a^b f \ \mathrm{d} x = F(b) - F(a)
+        \int_a^b f \; \mathrm{d} x = F(b) - F(a)
     \end{align*}
 \end{theorem}
 
@@ -1739,13 +2404,310 @@
 \begin{theorem}[Integration by Parts] \label{thm:2}
     Let $F, G$ be differentiable functions on $[a, b]$ such that $F^\prime = f \in \mathfrak{R}$ and $G^\prime = g \in \mathfrak{R}$, then 
     \begin{align*}
-        \int_a^b F(x)g(x) \ \mathrm{d} x = F(b)G(b) - F(a)G(a) - \int_a^b f(x)G(x) \ \mathrm{d} x
+        \int_a^b F(x)g(x) \; \mathrm{d} x = F(b)G(b) - F(a)G(a) - \int_a^b f(x)G(x) \; \mathrm{d} x
     \end{align*}
 \end{theorem}
 
 \begin{proof}
     % TODO
 \end{proof}
+
+%------------------------------
+
+%==============================
+
+\chapter{The Reimann Integral}
+
+%==============================
+
+\section{Reduction from Riemann-Stieltjes Integrals to Reimann Integrals}
+
+%------------------------------
+
+\begin{theorem}
+    If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and $\alpha$ is continuously differentiable on $[a, b]$, i.e., $\alpha^\prime(x)$ exists for every $x \in [a, b]$ and $\alpha^\prime$ is continuous on $[a, b]$, then $f \alpha^\prime \in \mathfrak{R}$, and 
+    \begin{align}
+        \int_a^b f \; \mathrm{d}\alpha
+        = \int_a^b f(x) \alpha^\prime(x) \; \mathrm{d}x
+        \label{eq:85}
+    \end{align}
+\end{theorem}
+
+\begin{proof}
+    Choose an arbitrarily positive number $\varepsilon > 0$. Since $f \in \mathfrak{R}(\alpha)$, there exists a partition $P_\varepsilon$ such that 
+    \begin{align}
+        \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon}{2}
+        \quad \forall P \supset P_\varepsilon
+        \label{eq:80}
+    \end{align}
+    On the other hand, because $\alpha^\prime$ is continuous, actually uniformly continuous on $[a, b]$, there exist $\delta > 0$ such that 
+    \begin{align}
+        \abs{s - t} < \delta
+        \implies \abs{\alpha^\prime(s) - \alpha^\prime(t)} < \frac{\varepsilon}{2M(b-a)}
+        \label{eq:81}
+    \end{align}
+    where $M$ is a constant positive number such that $\abs{f(x)} < M \; \forall x \in [a, b]$. Let $P^\prime_\varepsilon \supset P_\varepsilon$ be a refinement such that the length of each subinterval is bounded by $\delta$, i.e., $\Delta x_k < \delta$.
+
+    \par Let $P \supset P^\prime_\varepsilon$. We compare the Riemann sum $S(P, f \alpha^\prime)$ to $\int_a^b f \; \mathrm{d}\alpha$:
+    \begin{align}
+        \abs{
+            S(P, f \alpha^\prime)
+            - \int_a^b f \; \mathrm{d}\alpha
+        } &\leq \abs{
+            S(P, f \alpha^\prime)
+            - S(P, f, \alpha)
+        } + \abs{
+            S(P, f, \alpha)
+            - \int_a^b f \; \mathrm{d}\alpha
+        }
+        \label{eq:82}
+    \end{align}
+    where $S(P, f \alpha^\prime)$ and $S(P, f, \alpha)$ share the same choice of point $t_k$ in each subinterval $[x_{k-1}, x_k]$. We consider each term on the right-hand side of \eqref{eq:82} in the following.
+
+    \par For the term $\abs{ S(P, f \alpha^\prime) - S(P, f, \alpha) }$, we have 
+    \begin{align*}
+        \abs{ 
+            S(P, f \alpha^\prime) 
+            - S(P, f, \alpha) 
+        } &= \abs{
+            \sum \left( f(t_k) \alpha^\prime(t_k) \Delta x_k - f(t_k) \Delta \alpha_k \right)
+        } \\ 
+        &= \abs{
+            \sum  f(t_k) \left( \alpha^\prime(t_k)  - \alpha^\prime(\xi_k) \right) \Delta x_k
+        } \quad \text{by the Mean Value Theorem} \\ 
+        &\leq \sum \abs{f(t_k)} \abs{
+            \alpha^\prime(t_k)  
+            - \alpha^\prime(\xi_k)
+        } \Delta x_k \\ 
+        &\leq M \sum \abs{
+            \alpha^\prime(t_k)  
+            - \alpha^\prime(\xi_k)
+        } \Delta x_k 
+        \quad \text{recall $\abs{f} < M$} \\ 
+        &< M \frac{\varepsilon}{2M(b-a)} \sum \Delta x_k \\ 
+        &= \frac{\varepsilon}{2}
+    \end{align*}
+    Note that the second last inequality follows from \eqref{eq:81} since $\abs{t_k - \xi_k} < \delta$. In summary, we have obtained
+    \begin{align}
+        \abs{ 
+            S(P, f \alpha^\prime) 
+            - S(P, f, \alpha) 
+        } < \frac{\varepsilon}{2}
+        \label{eq:83}
+    \end{align}
+
+    \par We also need to consider the term $\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha}$ in \eqref{eq:82}. Recall that $P \supset P_\varepsilon$. It then follows from \eqref{eq:80} that 
+    \begin{align}
+        \abs{
+            S(P, f, \alpha)
+            - \int_a^b f \; \mathrm{d}\alpha
+        } < \frac{\varepsilon}{2}
+        \label{eq:84}
+    \end{align}
+
+    \par Finally, taking into consideration \eqref{eq:82}, \eqref{eq:83} and \eqref{eq:84}, we obtain
+    \begin{align*}
+        \abs{
+            S(P, f \alpha^\prime)
+            - \int_a^b f \; \mathrm{d}\alpha
+        } < \frac{\varepsilon}{2} + \frac{\varepsilon}{2}
+        = \varepsilon
+        \quad \forall P \supset P^\prime_\varepsilon
+    \end{align*}
+    This implies that $f\alpha^\prime \in \mathfrak{R}$, and \eqref{eq:85} indeed holds.
+\end{proof}
+
+%------------------------------
+
+\begin{theorem} \label{thm:43}
+    Suppose $f, g \in \mathfrak{R}$ on $[a, b]$. Let functions $F, G$ on $[a, b]$ be defined by
+    \begin{align*}
+        F(x) &:= \int_a^x f(t) \; \mathrm{d}t & 
+        G(x) &:= \int_a^x g(t) \; \mathrm{d}t
+    \end{align*}
+    Then $F$ and $G$ are both continuous and of bounded variation on $[a, b]$. Moreover, $f \in \mathfrak{R}(G)$ and $g \in \mathfrak{R}(F)$. In this case, 
+    \begin{align}
+        \int_a^b f(x) g(x) \; \mathrm{d}x
+        = \int_a^b f \; \mathrm{d}G
+        = \int_a^b g \; \mathrm{d}F
+        \label{eq:103}
+    \end{align}
+\end{theorem}
+
+\begin{proof}
+    By Theorem~\ref{thm:42}, we know $F$ and $G$ are of bounded variation on $[a, b]$. In addition, since identity integrator $t$ is clearly continuous on $[a, b]$, it follows that $F$ and $G$ are also continuous. 
+
+    \par Then, by Theorem~\ref{thm:41}, we have $f \in \mathfrak{R}(G)$ and $g \in g \in \mathfrak{R}(F)$, and the equality \eqref{eq:103} holds.
+\end{proof}
+
+%------------------------------
+
+\begin{theorem} \label{thm:45}
+    Suppose $f \in \mathfrak{R}$ on $[a, b]$. If function $F$ is defined on $(a, b)$ with 
+    \begin{align*}
+        F^\prime(x) = f(x)
+        \quad \forall x \in (a, b)
+    \end{align*}
+    Moreover, suppose $F(a+)$ and $F(b-)$ both exist as \textbf{finite} values. Then we have 
+    \begin{align}
+        \int_a^b f(x) \; \mathrm{d}x
+        = F(b-) - F(a+)
+        \label{eq:106}
+    \end{align}
+\end{theorem}
+
+\begin{proof}
+    (Extension of $F$) We first extend the function $F$ to the entire closed interval $[a, b]$ by defining
+    \begin{align*}
+        F(a) &:= F(a+) &
+        F(b) &:= F(b-)
+    \end{align*}
+    
+    \par (Applying Mean Value Theorem) For a partition $P$ on $[a, b]$, we have 
+    \begin{align*}
+        F(b-) - F(a+) = F(b) - F(a) = \sum_k F(x_k) - F(x_{k-1})
+    \end{align*}
+    Then, by applying the extended version of Generalized Mean Value Theorem (Theorem~\ref{thm:44}), there exists $t_k \in (x_k, x_{k-1})$ such that 
+    \begin{align*}
+        F(x_k) - F(x_{k-1}) = f(t_k) \Delta x_k
+    \end{align*}
+    It then follows that 
+    \begin{align}
+        F(b-) - F(a+) = \sum_k f(t_k) \Delta x_k
+        = S(P, f)
+        \label{eq:104}
+    \end{align}
+
+    \par (Applying Integrability) Given $\varepsilon > 0$, since $f \in \mathfrak{R}$ on $[a, b]$, there exists a partition $P_\varepsilon$ such that for any refinement $P \supset P_\varepsilon$, we have 
+    \begin{align}
+        \abs{S(P, f) - \int_a^b f \; \mathrm{d}x} < \varepsilon
+        \quad \forall P \supset P_\varepsilon
+        \label{eq:105}
+    \end{align}
+    Equation \eqref{eq:106} then follows from \eqref{eq:104} and \eqref{eq:105}.
+\end{proof}
+
+\begin{example}
+    Consider function 
+    \begin{align*}
+        F(x) = \frac{x \sin(1 - x^2)}{1 - x^2}
+        \quad x \in (-1, 1)
+    \end{align*}
+    The derivative $f$ of $F$ exists on $(-1, 1)$. After some computation, we will obtain the following expression for $f$:
+    \begin{align*}
+        f(x) = F^\prime(x)
+        = \frac{(1+x^2)\sin(1-x^2) - 2x^2(1-x^2)\cos(1-x^2)}{(1-x^2)^2}
+        \quad x \in (-1, 1)
+    \end{align*}
+    Note that $f$ is clearly continuous. Though $f$ is defined in $(-1, 1)$, the one-sided limits at two endpoints both exist, and 
+    \begin{align}
+        f(-1+) = f(1-) = 1
+        \label{eq:107}
+    \end{align}
+    The above result \eqref{eq:107} is not that obvious, and is left as an exercise (Exercise~\ref{ex:1}). Hence, we can extend $f$ on $[-1, 1]$ by defining
+    \begin{align*}
+        f(-1) &:= 1 &
+        f(1) &:= 1
+    \end{align*}
+    and $f$ remains continuous on $[-1, 1]$.
+    The plotting of $f$ and $F$ is illustrated in Figure~\ref{fig:1}.
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[scale = 0.7]{figures/reimann-integral-001.png}
+        \caption{}
+        \label{fig:1}
+    \end{figure}
+
+    \par Now, we want to compute the integral of $f$ on $[-1, 1]$, i.e., $\int_{-1}^1 f(x) \; \mathrm{d}x$. Applying Theorem~\ref{thm:45}, we have 
+    \begin{align*}
+        \int_{-1}^1 f(x) \; \mathrm{d}x
+        = F(1-) - F(-1+)
+        = 1 - (-1)
+        =2
+    \end{align*}
+
+\end{example}
+
+\begin{exercise} \label{ex:1}
+    Let $f$ be given by 
+    \begin{align*}
+        f(x)
+        = \frac{(1+x^2)\sin(1-x^2) - 2x^2(1-x^2)\cos(1-x^2)}{(1-x^2)^2}
+        \quad x \in (-1, 1)
+    \end{align*}
+    Show that $f(-1+)$ and $f(1-)$ both exist, and 
+    \begin{align*}
+        f(-1+) = f(1-) = 1
+    \end{align*}
+\end{exercise}
+
+\begin{solution}
+    % TODO
+\end{solution}
+
+%------------------------------
+
+\begin{theorem} \label{thm:46}
+    Suppose $f \in \mathfrak{R}$ and $\alpha$ is continuous on $[a, b]$. Suppose further $\alpha^\prime$ exists and $\alpha^\prime \in \mathfrak{R}$ on $[a, b]$. Then $f \in \mathfrak{R}(\alpha)$ and $f \alpha^\prime \in \mathfrak{R}$ on $[a, b]$. In this case,
+    \begin{align}
+        \int_a^b f(x) \; \mathrm{d}\alpha(x)
+        = \int_a^b f(x) \alpha^\prime(x) \; \mathrm{d}x
+        \label{eq:111}
+    \end{align}
+\end{theorem}
+
+\begin{remark}
+    Note that the requirement of $\alpha$ being continuous is actually redundant since we assume that $\alpha^\prime$ exists on $[a, b]$. 
+\end{remark}
+
+\begin{proof}
+    Since $f, \alpha^\prime \in \mathfrak{R}$, it follows from Theorem~\ref{thm:39} that their product is also integrable, i.e., $f \alpha^\prime \in \mathfrak{R}$. Theorem~\ref{thm:43} tells us we may put $\alpha^\prime$ into the integrator in the sense that 
+    \begin{align}
+        \int_a^b f(x) \alpha^\prime(x) \; \mathrm{d}x
+        = \int_a^b f(x) \; \mathrm{d} A(x)
+        \label{eq:108}
+    \end{align}
+    where 
+    \begin{align*}
+        A(x) = \int_a^x \alpha^\prime(t) \; \mathrm{d}t
+    \end{align*}
+
+    \par But we know from Theorem~\ref{thm:45} that
+    \begin{align*}
+        \alpha(x) - \alpha(a) = \int_a^x \alpha^\prime(t) \; \mathrm{d}t
+    \end{align*}
+    which implies 
+    \begin{align*}
+        A(x) = \alpha(x) - \alpha(a)
+    \end{align*}
+    Then \eqref{eq:108} reduces to 
+    \begin{align}
+        \int_a^b f(x) \alpha^\prime(x) \; \mathrm{d}x
+        = \int_a^b f(x) \; \mathrm{d} (\alpha(x) - \alpha(a))
+        \label{eq:109}
+    \end{align}
+
+    \par Note that $\alpha(a)$ is just a constant, and hence $f \in \mathfrak{R}(\alpha(a))$ and $\int_a^b f (x) \; \mathrm{d} \alpha(a) = 0$. Due to the linear property (Theorem~\ref{thm:35}) of the integrals, we have 
+    \begin{align}
+        \int_a^b f(x) \; \mathrm{d} (\alpha(x) - \alpha(a))
+        = \int_a^b f(x) \; \mathrm{d} \alpha(x) 
+        - \int_a^b f(x) \; \mathrm{d} \alpha(a)
+        = \int_a^b f(x) \; \mathrm{d} \alpha(x)
+        \label{eq:110}
+    \end{align}
+    Finally, \eqref{eq:111} follows from \eqref{eq:109} and \eqref{eq:110}.
+\end{proof}
+
+%------------------------------
+
+\section{Change of Variables}
+
+%------------------------------
+
+\begin{theorem}
+    
+\end{theorem}
 
 %------------------------------
 
@@ -1762,27 +2724,27 @@
 \begin{definition}
     Suppose $f \in \mathfrak{R}$ on $[a,b]$ for all $b \geq a$ where $a$ is fixed. Define 
     \begin{align}
-        \int_a^\infty f(x) \ \mathrm{d}x
-        = \lim_{b \to \infty} \int_a^b f(x) \ \mathrm{d}x
+        \int_a^\infty f(x) \; \mathrm{d}x
+        = \lim_{b \to \infty} \int_a^b f(x) \; \mathrm{d}x
         \label{eq:49}
     \end{align}
     provided that the limit exists and is \textbf{finite}. In that case, we say the integral on the left-hand side of \eqref{eq:49} \textbf{converges}. And this kind of improper integral with infinite integration limits is called the \textbf{improper integral of the first kind}. If 
     \begin{align*}
-        \int_a^\infty \abs{f(x)} \ \mathrm{d}x
-        = \lim_{b \to \infty} \int_a^b \abs{f(x)} \ \mathrm{d}x
+        \int_a^\infty \abs{f(x)} \; \mathrm{d}x
+        = \lim_{b \to \infty} \int_a^b \abs{f(x)} \; \mathrm{d}x
         < \infty
     \end{align*}
-    the integral $\int_a^\infty f(x) \ \mathrm{d}x$ is said to converge \textbf{absolutely}.
+    the integral $\int_a^\infty f(x) \; \mathrm{d}x$ is said to converge \textbf{absolutely}.
 \end{definition}
 
 %------------------------------
 
 \begin{theorem}
-    Suppose that $f \in \mathfrak{R}$ on $[a,b]$ for all $b \geq a$, and $f \geq 0$ on $[a, \infty)$. Let $F(b) = \int_a^b f(x) \ \mathrm{d}x$. Then $\int_a^\infty f(x) \ \mathrm{d}x$ converges if and only if $F(b)$ is bounded on $[a, \infty)$.
+    Suppose that $f \in \mathfrak{R}$ on $[a,b]$ for all $b \geq a$, and $f \geq 0$ on $[a, \infty)$. Let $F(b) = \int_a^b f(x) \; \mathrm{d}x$. Then $\int_a^\infty f(x) \; \mathrm{d}x$ converges if and only if $F(b)$ is bounded on $[a, \infty)$.
 \end{theorem}
 
 \begin{proof}
-    Assume first $\int_a^\infty f(x) \ \mathrm{d}x$ converges, then $F(\infty) < \infty$. $F$ increases monotonically since $f \geq 0$. It follows that $F(b) \leq F(\infty) < \infty$, hence bounded. Conversely, if $F(b)$ is bounded on $[a, \infty)$, then by Proposition~\ref{pro:2}, $F(\infty)$ exists, i.e., $\int_a^\infty f(x) \ \mathrm{d}x$ converges since $F$ is increasing.
+    Assume first $\int_a^\infty f(x) \; \mathrm{d}x$ converges, then $F(\infty) < \infty$. $F$ increases monotonically since $f \geq 0$. It follows that $F(b) \leq F(\infty) < \infty$, hence bounded. Conversely, if $F(b)$ is bounded on $[a, \infty)$, then by Proposition~\ref{pro:2}, $F(\infty)$ exists, i.e., $\int_a^\infty f(x) \; \mathrm{d}x$ converges since $F$ is increasing.
 \end{proof}
 
 %------------------------------
@@ -1795,8 +2757,8 @@
     \end{align*}
     where $c$ is a constant. Then we have 
     \begin{enumerate}
-        \item $\int_a^\infty f(x) \ \mathrm{d}x$ converges if $\int_a^\infty g(x) \ \mathrm{d}x$ converges.
-        \item $\int_a^\infty g(x) \ \mathrm{d}x$ diverges if $\int_a^\infty f(x) \ \mathrm{d}x$ diverges.
+        \item $\int_a^\infty f(x) \; \mathrm{d}x$ converges if $\int_a^\infty g(x) \; \mathrm{d}x$ converges.
+        \item $\int_a^\infty g(x) \; \mathrm{d}x$ diverges if $\int_a^\infty f(x) \; \mathrm{d}x$ diverges.
     \end{enumerate}
 \end{theorem}
 
@@ -1813,14 +2775,14 @@
     \end{align*}
     We have the following:
     \begin{enumerate}
-        \item If $0 < l < \infty$, then $\int_a^\infty f(x) \ \mathrm{d}x$ and $\int_a^\infty g(x) \ \mathrm{d}x$ both converge or both diverge. In other words, $\int_a^\infty f(x) \ \mathrm{d}x$ converges if and only if $\int_a^\infty g(x) \ \mathrm{d}x$ converges.
-        \item If $l = 0$, then $\int_a^\infty f(x) \ \mathrm{d}x$ converges if $\int_a^\infty g(x) \ \mathrm{d}x$ converges.
-        \item If $l = \infty$, then $\int_a^\infty f(x) \ \mathrm{d}x$ diverges if $\int_a^\infty g(x) \ \mathrm{d}x$ diverges.
+        \item If $0 < l < \infty$, then $\int_a^\infty f(x) \; \mathrm{d}x$ and $\int_a^\infty g(x) \; \mathrm{d}x$ both converge or both diverge. In other words, $\int_a^\infty f(x) \; \mathrm{d}x$ converges if and only if $\int_a^\infty g(x) \; \mathrm{d}x$ converges.
+        \item If $l = 0$, then $\int_a^\infty f(x) \; \mathrm{d}x$ converges if $\int_a^\infty g(x) \; \mathrm{d}x$ converges.
+        \item If $l = \infty$, then $\int_a^\infty f(x) \; \mathrm{d}x$ diverges if $\int_a^\infty g(x) \; \mathrm{d}x$ diverges.
     \end{enumerate}
 \end{theorem}
 
 \begin{remark}
-    Note that all the conclusions are about $\int_a^\infty f(x) \ \mathrm{d}x$. Indeed, the test is used to determine the convergence of $\int_a^\infty f(x) \ \mathrm{d}x$ based on the knowledge of convergence of $\int_a^\infty g(x) \ \mathrm{d}x$
+    Note that all the conclusions are about $\int_a^\infty f(x) \; \mathrm{d}x$. Indeed, the test is used to determine the convergence of $\int_a^\infty f(x) \; \mathrm{d}x$ based on the knowledge of convergence of $\int_a^\infty g(x) \; \mathrm{d}x$
 \end{remark}
 
 \begin{proof}
@@ -1829,7 +2791,7 @@
         \abs{\frac{f(x)}{g(x)} - l} < \varepsilon
         \quad \forall x > c
     \end{align*}
-    and $g(x) > 0 \ \forall x > c$. It follows that 
+    and $g(x) > 0 \; \forall x > c$. It follows that 
     \begin{align*}
         (l - \varepsilon) g(x) < f(x) < (l + \varepsilon) g(x)
         \quad \forall x > c
@@ -1839,35 +2801,35 @@
         0 < (l - \varepsilon) g(x) < f(x)
         \quad \forall x > c
     \end{align*}
-    implies that $\int_a^\infty g(x) \ \mathrm{d}x$ converges if $\int_a^\infty f(x) \ \mathrm{d}x$ converges. Similarly,
+    implies that $\int_a^\infty g(x) \; \mathrm{d}x$ converges if $\int_a^\infty f(x) \; \mathrm{d}x$ converges. Similarly,
     \begin{align*}
         0 \leq f(x) < (l + \varepsilon) g(x)
         \quad \forall x > c
     \end{align*}
-    implies that $\int_a^\infty f(x) \ \mathrm{d}x$ converges if $\int_a^\infty g(x) \ \mathrm{d}x$ converges.
+    implies that $\int_a^\infty f(x) \; \mathrm{d}x$ converges if $\int_a^\infty g(x) \; \mathrm{d}x$ converges.
 
     \par (Proof of 2) Choose a positive number $\varepsilon > 0$. There exists $c > a$ such that 
     \begin{align*}
         \abs{\frac{f(x)}{g(x)}} < \varepsilon
         \quad \forall x > c
     \end{align*}
-    and $g(x) > 0 \ \forall x > c$. Rearranging the above inequality, we obtain
+    and $g(x) > 0 \; \forall x > c$. Rearranging the above inequality, we obtain
     \begin{align*}
         0 \leq f(x) <  \varepsilon g(x)
     \end{align*}
-    Thus, it follows from the Comparison Test that $\int_a^\infty f(x) \ \mathrm{d}x$ converges if $\int_a^\infty g(x) \ \mathrm{d}x$ converges. 
+    Thus, it follows from the Comparison Test that $\int_a^\infty f(x) \; \mathrm{d}x$ converges if $\int_a^\infty g(x) \; \mathrm{d}x$ converges. 
 
     \par (Proof of 3) Choose a positive number $M > 0$. By the definition of infinite limits, there exists $c > a$ such that 
     \begin{align*}
         \frac{f(x)}{g(x)} > M
         \quad \forall x > c
     \end{align*}
-    and $g(x) > 0 \ \forall x > c$. It follows that 
+    and $g(x) > 0 \; \forall x > c$. It follows that 
     \begin{align*}
         f(x) > M g(x) > 0
         \quad \forall x > c
     \end{align*}
-    Then $\int_a^\infty f(x) \ \mathrm{d}x$ diverges if $\int_a^\infty g(x) \ \mathrm{d}x$ diverges.
+    Then $\int_a^\infty f(x) \; \mathrm{d}x$ diverges if $\int_a^\infty g(x) \; \mathrm{d}x$ diverges.
 \end{proof}
 
 %------------------------------
@@ -1875,7 +2837,7 @@
 \begin{theorem}[Integral Test] \label{thm:22}
     Suppose that $f \geq 0$ and $f$ decreases monotonically on $[1, \infty)$. Then 
     \begin{align*}
-        \int_1^\infty f(x) \ \mathrm{d}x
+        \int_1^\infty f(x) \; \mathrm{d}x
     \end{align*}
     converges if and only if 
     \begin{align*}
@@ -2046,7 +3008,7 @@
     
     \par We now show that the limit of $f(t)$ exists as $t \to x$, and it equals $A := \lim_{n \to \infty} A_n$. Let $\varepsilon > 0$ be arbitrary. Since $f_n \to f$ uniformly on $E$, there exists $N_1 \in \Ns$ such that 
     \begin{align}
-        \abs{f(t) - f_n(t)} < \frac{\varepsilon}{3} \quad \forall n \geq N_1, \ \forall t \in E
+        \abs{f(t) - f_n(t)} < \frac{\varepsilon}{3} \quad \forall n \geq N_1, \; \forall t \in E
         \label{eq:8}
     \end{align}
     And since $f_n(t) \to A_n$ as $t \to x$, there exists a neighborhood $V$ of $x$ such that 
@@ -2116,7 +3078,7 @@
     \end{align*}
     Let $E$ be the set consisting of terms of this sequence, i.e, 
     \begin{align*}
-        E = \set{x \in \R}{\exists n \in \N, \ x_n = x} = \left\{0\right\} \cup \set{\frac{1}{n}}{n \in \Ns}
+        E = \set{x \in \R}{\exists n \in \N, \; x_n = x} = \left\{0\right\} \cup \set{\frac{1}{n}}{n \in \Ns}
     \end{align*}
     It is clear that $\lim_{n \infty} x_n = x_0$, and $x_n \to x_0$ if and only if $n \to \infty$. We now define a sequence of functions $\left\{f_i\right\}_{i \in \Ns}$ on $E$ by specifying the function value at each point:
     \begin{align*}
@@ -2206,7 +3168,7 @@
     \begin{align*}
         K_{n} \supset K_{n+1}
     \end{align*}
-    We now claim that $\bigcap_{n \in \Ns} K_n = \emptyset$. To see this, we assume $x \in \bigcap_{n \in \Ns} K_n$, which then implies $g_n(x) \geq \varepsilon \ \forall n \in \Ns$. This leads to a contradiction since $g_n \to g \equiv 0$. Having that $\bigcap_{n \in \Ns} K_n = \emptyset$, by Theorem~\ref{thm:10}, it follows that there exists some finite subset $J \subset \Ns$ such that $\bigcap_{n \in J} K_n = \emptyset$. Suppose the largest number in $J$ is $N$, then we have
+    We now claim that $\bigcap_{n \in \Ns} K_n = \emptyset$. To see this, we assume $x \in \bigcap_{n \in \Ns} K_n$, which then implies $g_n(x) \geq \varepsilon \; \forall n \in \Ns$. This leads to a contradiction since $g_n \to g \equiv 0$. Having that $\bigcap_{n \in \Ns} K_n = \emptyset$, by Theorem~\ref{thm:10}, it follows that there exists some finite subset $J \subset \Ns$ such that $\bigcap_{n \in J} K_n = \emptyset$. Suppose the largest number in $J$ is $N$, then we have
     \begin{align*}
         K_N = \bigcap_{n \in J} K_n = \emptyset 
     \end{align*}
@@ -2217,7 +3179,7 @@
     \end{align}
     It then follows from \eqref{eq:12} and the definition of $K_n$ that 
     \begin{align*}
-        0 \leq g_n(x) < \varepsilon \quad \forall n \geq N, \ \forall x \in K
+        0 \leq g_n(x) < \varepsilon \quad \forall n \geq N, \; \forall x \in K
     \end{align*}
     Therefore, $g_n \to 0$ uniformly, i.e., $f_n \to f$ uniformly.
 \end{proof}
@@ -3057,7 +4019,7 @@ where $r \in Q$.
         \boldsymbol{\gamma}(t)
         = \mathbf{x}_0 + t \mathbf{u}
     \end{align*}
-    Since $E$ is open and $\mathbf{x}_0 \in E$, it is possible to chose $\delta > 0$ such that $\boldsymbol{\gamma}(t) \in E \ \forall t \in (-\delta,\delta)$. Hence, $\boldsymbol{\gamma}: (-\delta,\delta) \to E$ is a well-defined function. Moreover, $\boldsymbol{\gamma}$ is differentiable in $(-\delta, \delta)$, and 
+    Since $E$ is open and $\mathbf{x}_0 \in E$, it is possible to chose $\delta > 0$ such that $\boldsymbol{\gamma}(t) \in E \; \forall t \in (-\delta,\delta)$. Hence, $\boldsymbol{\gamma}: (-\delta,\delta) \to E$ is a well-defined function. Moreover, $\boldsymbol{\gamma}$ is differentiable in $(-\delta, \delta)$, and 
     \begin{align}
         \boldsymbol{\gamma}^\prime(t) = \mathbf{u}
         \quad \forall t \in (-\delta, \delta)

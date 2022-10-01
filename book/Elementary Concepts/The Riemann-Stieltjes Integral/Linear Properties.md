@@ -5,13 +5,14 @@ The integral is linear in the integrand. In other words, the integral of a linea
 
 
 ````{prf:theorem}
+:label: thm:40
 
 Suppose that $f, g \in\mathfrak{R}(\alpha)$ on $[a,b]$. Then $c_1 f + c_2 g \in\mathfrak{R}(\alpha)$ on $[a,b]$ where $c_1$ and $c_2$ are constants. In that case, 
 
 ```{math}
-\begin{align*}\int_a^b c_1 f + c_2 g \\mathrm{d}\alpha
-= c_1 \int_a^b f \\mathrm{d}\alpha
-+ c_2 \int_a^b g \\mathrm{d}\alpha\end{align*}
+\begin{align*}\int_a^b c_1 f + c_2 g \;\mathrm{d}\alpha
+= c_1 \int_a^b f \;\mathrm{d}\alpha
++ c_2 \int_a^b g \;\mathrm{d}\alpha\end{align*}
 ```
 
 ````
@@ -32,13 +33,13 @@ Given $\varepsilon > 0$. Since $f \in\mathfrak{R}(\alpha)$ on $[a,b]$ then there
 such that 
 
 ```{math}
-\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \\mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supset P_\varepsilon^{\prime}\end{align*}
+\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supset P_\varepsilon^{\prime}\end{align*}
 ```
 
 Similarly, since $g \in\mathfrak{R}(\alpha)$, there exists a partition $P_\varepsilon^{\prime\prime}$ such that 
 
 ```{math}
-\begin{align*}\abs{S(P, g, \alpha) - \int_a^b g \\mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supset P_\varepsilon^{\prime\prime}\end{align*}
+\begin{align*}\abs{S(P, g, \alpha) - \int_a^b g \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supset P_\varepsilon^{\prime\prime}\end{align*}
 ```
 
 Let $P_\varepsilon$ be the refinement of $P_\varepsilon^{\prime}$ and $P_\varepsilon^{\prime\prime}$, i.e., $P = P_\varepsilon^{\prime}\cup P_\varepsilon^{\prime\prime}$. Then for any $P \supset P_\varepsilon$, we have 
@@ -46,10 +47,10 @@ Let $P_\varepsilon$ be the refinement of $P_\varepsilon^{\prime}$ and $P_\vareps
 ```{math}
 \begin{align*}&\abs{
 S(P, c_1 f + c_2 g, \alpha) 
-- c_1 \int_a^b f \\mathrm{d}\alpha
-- c_2 \int_a^b g \\mathrm{d}\alpha
-}\\&\leq\abs{c_1}\abs{S(P,f,\alpha) - \int_a^b f \\mathrm{d}\alpha}
-+ \abs{c_2}\abs{S(P,g,\alpha) - \int_a^b g \\mathrm{d}\alpha}\\&< \abs{c_1}\frac{\varepsilon / 2}{1 + \abs{c_1}}
+- c_1 \int_a^b f \; \mathrm{d}\alpha
+- c_2 \int_a^b g \; \mathrm{d}\alpha
+}\\&\leq\abs{c_1}\abs{S(P,f,\alpha) - \int_a^b f \; \mathrm{d}\alpha}
++ \abs{c_2}\abs{S(P,g,\alpha) - \int_a^b g \; \mathrm{d}\alpha}\\&< \abs{c_1}\frac{\varepsilon / 2}{1 + \abs{c_1}}
 + \abs{c_2}\frac{\varepsilon / 2}{1 + \abs{c_2}}\\&< \varepsilon\end{align*}
 ```
 
@@ -62,13 +63,14 @@ The integral is also linear in the integrator.
 
 
 ````{prf:theorem}
+:label: thm:35
 
 If $f \in\mathfrak{R}(\alpha)$ and $f \in\mathfrak{R}(\beta)$ on $[a,b]$, then $f \in\mathfrak{R}(c_1 \alpha + c_2 \beta)$ where $c_1$ and $c_2$ are constants. In that case, 
 
 ```{math}
-\begin{align*}\int_a^b f \\mathrm{d}(c_1 \alpha + c_2 \beta)
-= c_1 \int_a^b f \\mathrm{d}\alpha
-+ c_2 \int_a^b f \\mathrm{d}\beta\end{align*}
+\begin{align*}\int_a^b f \;\mathrm{d}(c_1 \alpha + c_2 \beta)
+= c_1 \int_a^b f \;\mathrm{d}\alpha
++ c_2 \int_a^b f \;\mathrm{d}\beta\end{align*}
 ```
 
 ````
@@ -89,13 +91,13 @@ Given $\varepsilon > 0$. Since $f \in\mathfrak{R}(\alpha)$ on $[a,b]$ then there
 such that 
 
 ```{math}
-\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \\mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supset P_\varepsilon^{\prime}\end{align*}
+\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supset P_\varepsilon^{\prime}\end{align*}
 ```
 
 Similarly, since $f \in\mathfrak{R}(\beta)$, there exists a partition $P_\varepsilon^{\prime\prime}$ such that 
 
 ```{math}
-\begin{align*}\abs{S(P, f, \beta) - \int_a^b f \\mathrm{d}\beta} < \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supset P_\varepsilon^{\prime\prime}\end{align*}
+\begin{align*}\abs{S(P, f, \beta) - \int_a^b f \; \mathrm{d}\beta} < \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supset P_\varepsilon^{\prime\prime}\end{align*}
 ```
 
 Let $P = P_\varepsilon^{\prime}\cup P_\varepsilon^{\prime\prime}$. Then for any $P \supset P_\varepsilon$, we have 
@@ -103,10 +105,10 @@ Let $P = P_\varepsilon^{\prime}\cup P_\varepsilon^{\prime\prime}$. Then for any 
 ```{math}
 \begin{align*}&\abs{
 S(P, f, c_1 \alpha + c_2 \beta) 
-- c_1 \int_a^b f \\mathrm{d}\alpha
-- c_2 \int_a^b f \\mathrm{d}\beta
-}\\&\leq\abs{c_1}\abs{S(P,f,\alpha) - \int_a^b f \\mathrm{d}\alpha}
-+ \abs{c_2}\abs{S(P,f,\beta) - \int_a^b f \\mathrm{d}\beta}\\&< \abs{c_1}\frac{\varepsilon / 2}{1 + \abs{c_1}}
+- c_1 \int_a^b f \; \mathrm{d}\alpha
+- c_2 \int_a^b f \; \mathrm{d}\beta
+}\\&\leq\abs{c_1}\abs{S(P,f,\alpha) - \int_a^b f \; \mathrm{d}\alpha}
++ \abs{c_2}\abs{S(P,f,\beta) - \int_a^b f \; \mathrm{d}\beta}\\&< \abs{c_1}\frac{\varepsilon / 2}{1 + \abs{c_1}}
 + \abs{c_2}\frac{\varepsilon / 2}{1 + \abs{c_2}}\\&< \varepsilon\end{align*}
 ```
 
@@ -122,9 +124,9 @@ Suppose $c \in(a, b)$. We have
 
 ```{math}
 :label: eq:52
-\begin{align}\int_a^b f \\mathrm{d}\alpha
-= \int_a^c f \\mathrm{d}\alpha
-+ \int_c^b f \\mathrm{d}\alpha\end{align}
+\begin{align}\int_a^b f \;\mathrm{d}\alpha
+= \int_a^c f \;\mathrm{d}\alpha
++ \int_c^b f \;\mathrm{d}\alpha\end{align}
 ```
 
 The existence of two integrals in {eq}`eq:52` will imply the existence of the third one.
@@ -148,17 +150,17 @@ where $P$, $P^\prime$ and $P^{\prime\prime}$ are partitions on $[a, b]$, $[a, c]
 
 
 
-(Proof of existence of $\int_a^b f \\mathrm{d}\alpha$) Assume $\int_a^c f \\mathrm{d}\alpha$ and $\int_c^b f \\mathrm{d}\alpha$ exist. Then 
+(Proof of existence of $\int_a^b f \;\mathrm{d}\alpha$) Assume $\int_a^c f \;\mathrm{d}\alpha$ and $\int_c^b f \;\mathrm{d}\alpha$ exist. Then 
 
 ```{math}
-\begin{align*}\abs{S(P^\prime, f, \alpha) - \int_a^c f \\mathrm{d}\alpha} < \varepsilon / 2
+\begin{align*}\abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
 \quad\forall P^\prime\supset P_\varepsilon^\prime\end{align*}
 ```
 
 for some $P_\varepsilon^\prime$ on $[a, c]$. And 
 
 ```{math}
-\begin{align*}\abs{S(P^{\prime\prime}, f, \alpha) - \int_a^c f \\mathrm{d}\alpha} < \varepsilon / 2
+\begin{align*}\abs{S(P^{\prime\prime}, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
 \quad\forall P^{\prime\prime}\supset P_\varepsilon^{\prime\prime}\end{align*}
 ```
 
@@ -190,14 +192,14 @@ It then follows from {eq}`eq:53` that
 ```{math}
 \begin{align*}&\abs{
 S(P, f, \alpha)
-- \int_a^c f \\mathrm{d}\alpha
-- \int_c^b f \\mathrm{d}\alpha 
+- \int_a^c f \; \mathrm{d}\alpha
+- \int_c^b f \; \mathrm{d}\alpha 
 }\\&\leq\abs{
 S(P^\prime, f, \alpha)
-- \int_a^c f \\mathrm{d}\alpha
+- \int_a^c f \; \mathrm{d}\alpha
 } + \abs{
 S(P^{\prime\prime}, f, \alpha)
-- \int_c^b f \\mathrm{d}\alpha
+- \int_c^b f \; \mathrm{d}\alpha
 }\\&< \varepsilon / 2 + \varepsilon / 2 \\&= \varepsilon\end{align*}
 ```
 
@@ -207,17 +209,17 @@ Therefore, $f \in\mathfrak{R}(\alpha)$ on $[a, b]$ and {eq}`eq:52` holds.
 
 
 
-(Proof of existence of $\int_c^b f \\mathrm{d}\alpha$) Assume $\int_a^b f \\mathrm{d}\alpha$ and $\int_a^c f \\mathrm{d}\alpha$ exist. Then 
+(Proof of existence of $\int_c^b f \;\mathrm{d}\alpha$) Assume $\int_a^b f \;\mathrm{d}\alpha$ and $\int_a^c f \;\mathrm{d}\alpha$ exist. Then 
 
 ```{math}
-\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \\mathrm{d}\alpha} < \varepsilon / 2
+\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon / 2
 \quad\forall P \supset P_\varepsilon\end{align*}
 ```
 
 for some $P_\varepsilon$ on $[a, b]$. And
 
 ```{math}
-\begin{align*}\abs{S(P^\prime, f, \alpha) - \int_a^c f \\mathrm{d}\alpha} < \varepsilon / 2
+\begin{align*}\abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
 \quad\forall P^\prime\supset P_\varepsilon^\prime\end{align*}
 ```
 
@@ -252,14 +254,14 @@ It then follows from {eq}`eq:53` that
 ```{math}
 \begin{align*}&\abs{
 S(P^{\prime\prime}, f, \alpha)
-- \int_a^b f \\mathrm{d}\alpha
-+ \int_a^c f \\mathrm{d}\alpha 
+- \int_a^b f \; \mathrm{d}\alpha
++ \int_a^c f \; \mathrm{d}\alpha 
 }\\&\leq\abs{
 S(P, f, \alpha)
-- \int_a^b f \\mathrm{d}\alpha
+- \int_a^b f \; \mathrm{d}\alpha
 } + \abs{
 S(P^\prime, f, \alpha)
-- \int_a^c f \\mathrm{d}\alpha
+- \int_a^c f \; \mathrm{d}\alpha
 }\\&< \varepsilon / 2 + \varepsilon / 2 \\&= \varepsilon\end{align*}
 ```
 
@@ -269,17 +271,17 @@ Therefore, $f \in\mathfrak{R}(\alpha)$ on $[c, b]$ and {eq}`eq:52` holds.
 
 
 
-(Proof of existence of $\int_a^c f \\mathrm{d}\alpha$) Assume $\int_a^b f \\mathrm{d}\alpha$ and $\int_c^b f \\mathrm{d}\alpha$ exist. Then 
+(Proof of existence of $\int_a^c f \;\mathrm{d}\alpha$) Assume $\int_a^b f \;\mathrm{d}\alpha$ and $\int_c^b f \;\mathrm{d}\alpha$ exist. Then 
 
 ```{math}
-\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \\mathrm{d}\alpha} < \varepsilon / 2
+\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon / 2
 \quad\forall P \supset P_\varepsilon\end{align*}
 ```
 
 for some $P_\varepsilon$ on $[a, b]$. And
 
 ```{math}
-\begin{align*}\abs{S(P^{\prime\prime}, f, \alpha) - \int_c^b f \\mathrm{d}\alpha} < \varepsilon / 2
+\begin{align*}\abs{S(P^{\prime\prime}, f, \alpha) - \int_c^b f \; \mathrm{d}\alpha} < \varepsilon / 2
 \quad\forall P^{\prime\prime}\supset P_\varepsilon^{\prime\prime}\end{align*}
 ```
 
@@ -314,14 +316,14 @@ It then follows from {eq}`eq:53` that
 ```{math}
 \begin{align*}&\abs{
 S(P^\prime, f, \alpha)
-- \int_a^b f \\mathrm{d}\alpha
-+ \int_c^b f \\mathrm{d}\alpha 
+- \int_a^b f \; \mathrm{d}\alpha
++ \int_c^b f \; \mathrm{d}\alpha 
 }\\&\leq\abs{
 S(P, f, \alpha)
-- \int_a^b f \\mathrm{d}\alpha
+- \int_a^b f \; \mathrm{d}\alpha
 } + \abs{
 S(P^{\prime\prime}, f, \alpha)
-- \int_c^b f \\mathrm{d}\alpha
+- \int_c^b f \; \mathrm{d}\alpha
 }\\&< \varepsilon / 2 + \varepsilon / 2 \\&= \varepsilon\end{align*}
 ```
 

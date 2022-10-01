@@ -111,6 +111,14 @@ The total variation of a function with the same lower and upper limits is define
 ````{prf:definition}
 :label: def:8
 
-Suppose that $f$ is of bounded variation on $[a, b]$. Define $V_x^x(f) := 0$ where $a \leq x \leq b$.
+Suppose that $f$ is of bounded variation on $[a, b]$. The total variation
+
+```{math}
+\begin{align*}
+V_a^x(f) \quad a \leq x \leq b
+\end{align*}
+```
+
+can be regarded as a function of $x$ on $[a, b]$ with an addition definition $V_a^a(f) := 0$.
 
 ````

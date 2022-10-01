@@ -1,6 +1,6 @@
 # Differentiation
 
-````{prf:theorem}
+````{prf:theorem} Chain Rule
 :label: thm:20
 
 Suppose that $\mathbf{f}: E \subset\R^n \to\R^m$ be differentiable at point $\mathbf{x}_0 \in E$ where $E$ is open, and $\mathbf{g}: V \supset\mathbf{f}(E) \to\R^k$ be differentiable at $\mathbf{f}(\mathbf{x}_0)$ where $V$ is also open. Then the mapping $\mathbf{F}: E \to\R^k$ defined by 
@@ -22,13 +22,14 @@ is differentiable at $\mathbf{x}_0$, and
 
 ````{prf:proof}
 TODO
+
 ````
 
 
 There is a very important concept associated with real-valued functions called gradient. If $f$ is a real-valued differentiable function, we know from the previous definition its derivative $f^\prime$ is a row vector. The gradient of $f$, denoted by $\nabla f$, is nothing but the transpose of $f^\prime$ so that it becomes a column vector.
 
 
-````{prf:definition}
+````{prf:definition} Gradient
 
 Let $f: E \subset\R^n \to\R$ be a real-valued function where $E$ is open. If $f$ is differentiable at point $\mathbf{x}_0 \in E$, then the gradient of $f$ at $\mathbf{x}_0$ is defined by 
 
@@ -38,7 +39,7 @@ Let $f: E \subset\R^n \to\R$ be a real-valued function where $E$ is open. If $f$
 
 ````
 
-````{prf:definition}
+````{prf:definition} Directional Derivative
 
 Let $f: E \subset\R^n \to\R$ be a real-valued function where $E$ is open, and $\mathbf{u}\in\R^n$ a unit vector, i.e., $\abs{\mathbf{u}} = 1$. The directional derivative of $f$ at point $\mathbf{x}$ is defined by 
 
@@ -129,7 +130,7 @@ Let $\mathbf{u}\in\R^n$ be a unit vector. Define
 = \mathbf{x}_0 + t \mathbf{u}\end{align*}
 ```
 
-Since $E$ is open and $\mathbf{x}_0 \in E$, it is possible to chose $\delta > 0$ such that $\boldsymbol{\gamma}(t) \in E \\forall t \in(-\delta,\delta)$. Hence, $\boldsymbol{\gamma}: (-\delta,\delta) \to E$ is a well-defined function. Moreover, $\boldsymbol{\gamma}$ is differentiable in $(-\delta, \delta)$, and 
+Since $E$ is open and $\mathbf{x}_0 \in E$, it is possible to chose $\delta > 0$ such that $\boldsymbol{\gamma}(t) \in E \;\forall t \in(-\delta,\delta)$. Hence, $\boldsymbol{\gamma}: (-\delta,\delta) \to E$ is a well-defined function. Moreover, $\boldsymbol{\gamma}$ is differentiable in $(-\delta, \delta)$, and 
 
 ```{math}
 :label: eq:44

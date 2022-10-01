@@ -41,6 +41,7 @@ f^\prime(x) = \sum_{n=1}^{\infty} n c_n x^{n-1}\end{align*}
 
 ````{prf:proof}
 TODO
+
 ````
 
 ````{prf:corollary}
@@ -79,7 +80,7 @@ It is well known that
 The right-hand side is a geometric series, and we can easily compute its explicit value, which equals the left-hand side. The Negative Binomial Theorem is a generalization for it states the power series representation of the function $\frac{1}{(1-x)^n}$.
 
 
-````{prf:theorem}
+````{prf:theorem} Negative Binomial Theorem
 :label: thm:16
 
 We have the following identity:
@@ -159,7 +160,7 @@ We note that $\frac{1}{(1-x)^n}$ is obtained by multiplying $\frac{1}{1-x}$ by i
 In the alternative proof, we will need an identity from combinatorial mathematics, which is known as the Hockey-Stick Identity.
 
 
-````{prf:theorem}
+````{prf:theorem} Hockey-Stick Identity
 
 We have the identity:
 
@@ -174,9 +175,7 @@ Observe the bold numbers in Pascal's Triangle below.
 
 
 ```{math}
-\begin{align*}
-```{math}
-\begin{array}c
+\begin{align*}\begin{array}{c}
 1 \\ 
 1 \quad 1 \\ 
 1 \quad 2 \quad\mathbf{1}\\ 
@@ -186,7 +185,6 @@ Observe the bold numbers in Pascal's Triangle below.
 1 \quad 6 \quad 15 \quad\mathbf{20}\quad 15 \quad 6 \quad 1 \\ 
 1 \quad 7 \quad 21 \quad 35 \quad 35 \quad 21 \quad 7 \quad 1
 \end{array}
-```
 \end{align*}
 ```
 
@@ -200,6 +198,7 @@ The shape of these numbers is like a hockey stick, hence the name of this identi
 
 ````{prf:proof}
 TODO
+
 ````
 
 
@@ -278,7 +277,7 @@ which is exactly {eq}`eq:30` with $n=m+1$.
 The Taylor's Theorem states that we can expand a power series as a Taylor series about some point in the interval of convergence.
 
 
-````{prf:theorem}
+````{prf:theorem} Taylor's Theorem
 :label: thm:19
 
 Suppose power series
