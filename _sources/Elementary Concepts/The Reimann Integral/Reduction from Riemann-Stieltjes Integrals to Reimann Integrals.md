@@ -255,7 +255,7 @@ f(1) &:= 1
 and $f$ remains continuous on $[-1, 1]$.
 The plotting of $f$ and $F$ is illustrated in {ref}`fig:1`.
 
-````{figure} /Users/isaac/Documents/math/mathematical-analysis/tex/figures/reimann-integral-001.png
+```{figure} /Users/isaac/Documents/math/mathematical-analysis/tex/figures/reimann-integral-001.png
 ---
 name: fig:1
 ---
