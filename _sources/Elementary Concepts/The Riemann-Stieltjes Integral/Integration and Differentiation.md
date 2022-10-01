@@ -214,6 +214,7 @@ F^\prime(x_0) = f(x_0)
 
 ````{prf:proof}
 TODO
+
 ````
 
 ````{prf:example}
@@ -256,6 +257,7 @@ If $ f \in\mathfrak{R}$ on $[a, b]$ and $F$ is a differentiable function on $[a,
 
 ````{prf:proof}
 TODO
+
 ````
 
 ````{prf:theorem} Integration by Parts
@@ -272,4 +274,5 @@ Let $F, G$ be differentiable functions on $[a, b]$ such that $F^\prime = f \in\m
 
 ````{prf:proof}
 TODO
+
 ````

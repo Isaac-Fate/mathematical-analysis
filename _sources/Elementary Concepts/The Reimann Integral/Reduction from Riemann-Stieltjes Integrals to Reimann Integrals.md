@@ -239,21 +239,28 @@ Note that $f$ is clearly continuous. Though $f$ is defined in $(-1, 1)$, the one
 ```{math}
 :label: eq:107
 \begin{align}
-f(-1+) = f(1-) = 0
+f(-1+) = f(1-) = 1
 \end{align}
 ```
 
-The above result {eq}`eq:107` is not that obvious, and is left as an exercise ({prf:ref}`ex:1`). Hence, we can extend $f$ on $[-1, 1]$ by defining
+The above result {eq}`eq:107` is not that obvious, and is left as an exercise ({ref}`ex:1`). Hence, we can extend $f$ on $[-1, 1]$ by defining
 
 ```{math}
 \begin{align*}
-f(-1) &:= 0 &
+f(-1) &:= 1 &
 f(1) &:= 1
 \end{align*}
 ```
 
 and $f$ remains continuous on $[-1, 1]$.
+The plotting of $f$ and $F$ is illustrated in {ref}`fig:1`.
 
+````{figure} /Users/isaac/Documents/math/mathematical-analysis/tex/figures/reimann-integral-001.png
+---
+name: fig:1
+---
+
+```
 
 
 Now, we want to compute the integral of $f$ on $[-1, 1]$, i.e., $\int_{-1}^1 f(x) \;\mathrm{d}x$. Applying {prf:ref}`thm:45`, we have 
@@ -285,11 +292,92 @@ Show that $f(-1+)$ and $f(1-)$ both exist, and
 
 ```{math}
 \begin{align*}
-f(-1+) = f(1-) = 0
+f(-1+) = f(1-) = 1
 \end{align*}
 ```
 ````
 
 ````{admonition} Solution
 :class: tip, dropdown
-TODO````
+TODO
+````
+
+````{prf:theorem}
+:label: thm:46
+
+Suppose $f \in\mathfrak{R}$ and $\alpha$ is continuous on $[a, b]$. Suppose further $\alpha^\prime$ exists and $\alpha^\prime\in\mathfrak{R}$ on $[a, b]$. Then $f \in\mathfrak{R}(\alpha)$ and $f \alpha^\prime\in\mathfrak{R}$ on $[a, b]$. In this case,
+
+```{math}
+:label: eq:111
+\begin{align}\int_a^b f(x) \;\mathrm{d}\alpha(x)
+= \int_a^b f(x) \alpha^\prime(x) \;\mathrm{d}x
+\end{align}
+```
+
+````
+
+````{prf:remark}
+
+Note that the requirement of $\alpha$ being continuous is actually redundant since we assume that $\alpha^\prime$ exists on $[a, b]$. 
+
+````
+
+````{prf:proof}
+
+Since $f, \alpha^\prime\in\mathfrak{R}$, it follows from {prf:ref}`thm:39` that their product is also integrable, i.e., $f \alpha^\prime\in\mathfrak{R}$. {prf:ref}`thm:43` tells us we may put $\alpha^\prime$ into the integrator in the sense that 
+
+```{math}
+:label: eq:108
+\begin{align}\int_a^b f(x) \alpha^\prime(x) \;\mathrm{d}x
+= \int_a^b f(x) \;\mathrm{d} A(x)
+\end{align}
+```
+
+where 
+
+```{math}
+\begin{align*}
+A(x) = \int_a^x \alpha^\prime(t) \;\mathrm{d}t
+\end{align*}
+```
+
+
+But we know from {prf:ref}`thm:45` that
+
+```{math}
+\begin{align*}\alpha(x) - \alpha(a) = \int_a^x \alpha^\prime(t) \;\mathrm{d}t
+\end{align*}
+```
+
+which implies 
+
+```{math}
+\begin{align*}
+A(x) = \alpha(x) - \alpha(a)
+\end{align*}
+```
+
+Then {eq}`eq:108` reduces to 
+
+```{math}
+:label: eq:109
+\begin{align}\int_a^b f(x) \alpha^\prime(x) \;\mathrm{d}x
+= \int_a^b f(x) \;\mathrm{d}(\alpha(x) - \alpha(a))
+\end{align}
+```
+
+
+Note that $\alpha(a)$ is just a constant, and hence $f \in\mathfrak{R}(\alpha(a))$ and $\int_a^b f (x) \;\mathrm{d}\alpha(a) = 0$. Due to the linear property ({prf:ref}`thm:35`) of the integrals, we have 
+
+```{math}
+:label: eq:110
+\begin{align}\int_a^b f(x) \;\mathrm{d}(\alpha(x) - \alpha(a))
+= \int_a^b f(x) \;\mathrm{d}\alpha(x) 
+- \int_a^b f(x) \;\mathrm{d}\alpha(a)
+= \int_a^b f(x) \;\mathrm{d}\alpha(x)
+\end{align}
+```
+
+Finally, {eq}`eq:111` follows from {eq}`eq:109` and {eq}`eq:110`.
+
+````

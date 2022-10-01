@@ -41,6 +41,7 @@ f^\prime(x) = \sum_{n=1}^{\infty} n c_n x^{n-1}\end{align*}
 
 ````{prf:proof}
 TODO
+
 ````
 
 ````{prf:corollary}
@@ -197,6 +198,7 @@ The shape of these numbers is like a hockey stick, hence the name of this identi
 
 ````{prf:proof}
 TODO
+
 ````
 
 

@@ -58,6 +58,7 @@ where $c$ is a constant. Then we have
 
 ````{prf:proof}
 TODO
+
 ````
 
 ````{prf:theorem} Ratio Test
@@ -186,4 +187,5 @@ converges.
 
 ````{prf:proof}
 TODO
+
 ````

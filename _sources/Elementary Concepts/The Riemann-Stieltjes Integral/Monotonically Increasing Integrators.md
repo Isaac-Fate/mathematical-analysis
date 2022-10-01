@@ -35,6 +35,7 @@ Suppose $\alpha$ is increasing on $[a, b]$. If $f \in\mathfrak{R}(\alpha)$ on $[
 
 ````{prf:proof}
 TODO
+
 ````
 
 ````{prf:theorem}
@@ -178,6 +179,7 @@ Suppose $\alpha$ is increasing on $[a, b]$. If $f, g \in\mathfrak{R}(\alpha)$, t
 
 ````{prf:proof}
 TODO
+
 ````
 
 

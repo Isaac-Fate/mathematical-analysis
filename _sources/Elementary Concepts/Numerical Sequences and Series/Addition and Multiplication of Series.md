@@ -406,6 +406,7 @@ Note that the requirement of at least one series being absolutely convergent is 
 
 ````{prf:proof}
 TODO
+
 ````
 
 ````{prf:example}

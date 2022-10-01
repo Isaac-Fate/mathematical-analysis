@@ -22,6 +22,7 @@ is differentiable at $\mathbf{x}_0$, and
 
 ````{prf:proof}
 TODO
+
 ````
 
 
