@@ -1,5 +1,13 @@
 # Change of Variables
 
+
+Recall the theorem of Change of Variables in Riemann-Stieltjes integrals ({prf:ref}`thm:47`). If we derive the Change of Variables theorem for Riemann integrals based on that, then the transformation $\phi(x)$ of variable $x$ is required to be monotonic. But $f$ only needs to be integrable, i.e., $f \in\mathfrak{R}$.
+
+
+
+However, in practice, $\phi(x)$ appears to be a more general function, which is seldom monotonic. Therefore, we need to relax the constraints on $\phi$. The following theorem states the Change of Variables theorem in Riemann integrals, the proof of which is mainly based on the First Fundamental Theorem of Calculus ({prf:ref}`thm:48`). Though the function $\phi$ is no longer required to be monotonic, the integrand $f$ needs to be continuous instead of just integrable.
+
+
 ````{prf:theorem}
 
 Suppose $\phi$ is continuously differentiable on $[c, d]$, and $f$ is continuous on $\phi([c, d])$. Define function $F$ by 
