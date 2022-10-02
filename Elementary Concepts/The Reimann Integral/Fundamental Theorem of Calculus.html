@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Compact Sets &#8212; Mathematical Analysis</title>
+    <title>Fundamental Theorem of Calculus &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -56,8 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/icon.jpg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Numerical Sequences and Series" href="../Numerical%20Sequences%20and%20Series/index.html" />
-    <link rel="prev" title="Metric Spaces" href="Metric%20Spaces.html" />
+    <link rel="next" title="Reduction from Riemann-Stieltjes Integrals to Reimann Integrals" href="Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html" />
+    <link rel="prev" title="The Reimann Integral" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,23 +123,23 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Topology/index.html">
    Topology
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Metric%20Spaces.html">
+    <a class="reference internal" href="../Topology/Metric%20Spaces.html">
      Metric Spaces
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Topology/Compact%20Sets.html">
      Compact Sets
     </a>
    </li>
@@ -305,28 +305,28 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../The%20Reimann%20Integral/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    The Reimann Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
   <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../The%20Reimann%20Integral/Fundamental%20Theorem%20of%20Calculus.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Fundamental Theorem of Calculus
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../The%20Reimann%20Integral/Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html">
+    <a class="reference internal" href="Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html">
      Reduction from Riemann-Stieltjes Integrals to Reimann Integrals
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../The%20Reimann%20Integral/Change%20of%20Variables.html">
+    <a class="reference internal" href="Change%20of%20Variables.html">
      Change of Variables
     </a>
    </li>
@@ -567,7 +567,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/tree/master//issues/new?title=Issue%20on%20page%20%2FElementary Concepts/Topology/Compact Sets.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Isaac-Fate/mathematical-analysis/tree/master//issues/new?title=Issue%20on%20page%20%2FElementary Concepts/The Reimann Integral/Fundamental Theorem of Calculus.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -595,7 +595,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/Elementary Concepts/Topology/Compact Sets.md"
+        <a href="../../_sources/Elementary Concepts/The Reimann Integral/Fundamental Theorem of Calculus.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -644,7 +644,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Compact Sets</h1>
+                <h1>Fundamental Theorem of Calculus</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -656,19 +656,31 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="compact-sets">
-<h1>Compact Sets<a class="headerlink" href="#compact-sets" title="Permalink to this headline">#</a></h1>
-<div class="proof theorem admonition" id="thm:9">
-<p class="admonition-title"><span class="caption-number">Theorem 1 </span></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="fundamental-theorem-of-calculus">
+<h1>Fundamental Theorem of Calculus<a class="headerlink" href="#fundamental-theorem-of-calculus" title="Permalink to this headline">#</a></h1>
+<div class="proof theorem admonition" id="thm:48">
+<p class="admonition-title"><span class="caption-number">Theorem 38 </span> (First Fundamental Theorem of Calculus)</p>
 <section class="theorem-content" id="proof-content">
-<p>Closed subsets of a compact set are compact.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(f \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. Define function <span class="math notranslate nohighlight">\(F\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F := \int_a^x f(t) \;\mathrm{d}t
+\end{align*}\]</div>
+<p>Then</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(F\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p></li>
+<li><p><span class="math notranslate nohighlight">\(F\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p></li>
+<li><p><span class="math notranslate nohighlight">\(F\)</span> is differentiable at <span class="math notranslate nohighlight">\(x_0 \in(a, b)\)</span> if <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>. In this case,</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F^\prime(x_0) = f(x_0)
+\end{align*}\]</div>
 </section>
-</div><div class="proof theorem admonition" id="thm:10">
-<p class="admonition-title"><span class="caption-number">Theorem 2 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(\left\{K_\alpha\right\}_{\alpha \in I}\)</span> be a family of compact subsets in topological space <span class="math notranslate nohighlight">\(X\)</span> where <span class="math notranslate nohighlight">\(I\)</span> is an arbitrary index set. If for any <strong>finite</strong> subset <span class="math notranslate nohighlight">\(J \subset I\)</span>, we have <span class="math notranslate nohighlight">\(\bigcap_{\alpha \in J} K_\alpha\neq\emptyset\)</span>, then <span class="math notranslate nohighlight">\(\bigcap_{\alpha \in I} K_\alpha\neq\emptyset\)</span>.</p>
+</div><div class="proof admonition" id="proof">
+<p>Proof. This theorem follows directly from <a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Integration%20and%20Differentiation.html#thm:42">Theorem 34</a>.</p>
+</div>
 </section>
-</div></section>
 
     <script type="text/x-thebe-config">
     {
@@ -683,7 +695,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Elementary Concepts/Topology"
+            path: "./Elementary Concepts/The Reimann Integral"
         },
         predefinedOutput: true
     }
@@ -697,17 +709,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Metric%20Spaces.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Metric Spaces</p>
+            <p class="prev-next-title">The Reimann Integral</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../Numerical%20Sequences%20and%20Series/index.html" title="next page">
+    <a class='right-next' id="next-link" href="Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Numerical Sequences and Series</p>
+        <p class="prev-next-title">Reduction from Riemann-Stieltjes Integrals to Reimann Integrals</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

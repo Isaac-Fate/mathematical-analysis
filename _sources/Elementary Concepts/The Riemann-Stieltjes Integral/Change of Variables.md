@@ -1,6 +1,7 @@
 # Change of Variables
 
 ````{prf:theorem}
+:label: thm:47
 
 Suppose $f \in\mathfrak{R}(\alpha)$ on $[a, b]$, and $g$ is a **strictly monotonic continuous** function on a closed interval $I$ with endpoints $c$ and $d$. ($I$ is either $[c, d]$ or $[d, c]$.) Assume
 

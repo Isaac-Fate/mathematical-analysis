@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"R": "\\mathbb{R}", "C": "\\mathbb{C}", "F": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Z": "\\mathbb{Z}", "Q": "\\mathbb{Q}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "d": ["\\mathrm{d}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../_static/icon.jpg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -313,6 +315,11 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Fundamental%20Theorem%20of%20Calculus.html">
+     Fundamental Theorem of Calculus
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html">
      Reduction from Riemann-Stieltjes Integrals to Reimann Integrals
@@ -652,10 +659,50 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="change-of-variables">
 <h1>Change of Variables<a class="headerlink" href="#change-of-variables" title="Permalink to this headline">#</a></h1>
 <div class="proof theorem admonition" id="theorem-0">
-<p class="admonition-title"><span class="caption-number">Theorem 42 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 43 </span></p>
 <section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(\phi\)</span> is continuously differentiable on <span class="math notranslate nohighlight">\([c, d]\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\(\phi([c, d])\)</span>. Define function <span class="math notranslate nohighlight">\(F\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F(x) = \int_{\phi(c)}^x f(t) \;\mathrm{d}t
+\quad x \in\phi([c, d])
+\end{align*}\]</div>
+<p>Then,</p>
+<div class="math notranslate nohighlight" id="equation-eq-112">
+<span class="eqno">(77)<a class="headerlink" href="#equation-eq-112" title="Permalink to this equation">#</a></span>\[\begin{align}
+F(\phi(x)) 
+= \int_{\phi(c)}^{\phi(x)} f(t) \;\mathrm{d}t
+= \int_c^{x} f(\phi(t)) \phi^\prime(t) \;\mathrm{d}t
+\end{align}\]</div>
+<p>In particular, putting <span class="math notranslate nohighlight">\(x = d\)</span> in <a class="reference internal" href="#equation-eq-112">(77)</a>, we obtain</p>
+<div class="math notranslate nohighlight" id="equation-eq-114">
+<span class="eqno">(78)<a class="headerlink" href="#equation-eq-114" title="Permalink to this equation">#</a></span>\[\begin{align}\int_{\phi(c)}^{\phi(d)} f(t) \;\mathrm{d}t 
+= \int_c^d f(\phi(t)) \phi^\prime(t) \;\mathrm{d}t
+\end{align}\]</div>
 </section>
-</div></section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. By the First Fundamental Theorem of Calculus (<a class="reference internal" href="Fundamental%20Theorem%20of%20Calculus.html#thm:48">Theorem 38</a>), <span class="math notranslate nohighlight">\(F\)</span> is continuous on <span class="math notranslate nohighlight">\(\phi([c, d])\)</span>. Even better, <span class="math notranslate nohighlight">\(F\)</span> is differentiable in the interior of <span class="math notranslate nohighlight">\(\phi([c, d])\)</span> since <span class="math notranslate nohighlight">\(f\)</span> is continuous, and in this case,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F^\prime(x) = f(x)
+\end{align*}\]</div>
+<p>It then follows from the Chain Rule that</p>
+<div class="math notranslate nohighlight" id="equation-eq-113">
+<span class="eqno">(79)<a class="headerlink" href="#equation-eq-113" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{\mathrm{d}}{\mathrm{d}t} F(\phi(t))
+= F^\prime(\phi(t)) \phi^\prime(t)
+= f(\phi(t)) \phi^\prime(t)
+\end{align}\]</div>
+<p>Since functions <span class="math notranslate nohighlight">\(f(\phi(t))\)</span> and <span class="math notranslate nohighlight">\(\phi^\prime(t)\)</span> are both continuous, they are clearly integrable, i.e., <span class="math notranslate nohighlight">\(f(\phi(t)), \phi^\prime(t) \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([c, d]\)</span>. Hence, their product is also integrable, i.e., <span class="math notranslate nohighlight">\(f(\phi(t)) \phi^\prime(t) \in\mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([c, d]\)</span>.</p>
+<p>Integrating the right-hand side of <a class="reference internal" href="#equation-eq-113">(79)</a> using <a class="reference internal" href="Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html#thm:45">Theorem 41</a>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\int_c^x f(\phi(t)) \phi^\prime(t) \;\mathrm{d}t
+= F(\phi(x)) - F(\phi(c))
+= F(\phi(x))
+= \int_{\phi(c)}^{\phi(x)} f(t) \;\mathrm{d}t
+\end{align*}\]</div>
+<p>This proves <a class="reference internal" href="#equation-eq-112">(77)</a>. Putting <span class="math notranslate nohighlight">\(x = d\)</span> in <a class="reference internal" href="#equation-eq-112">(77)</a>, we will obtain <a class="reference internal" href="#equation-eq-114">(78)</a>.</p>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
