@@ -6,3 +6,7 @@ subinterval
 supremum
 Darboux
 Integrability
+Extrema
+extrema
+extremum
+Rolle

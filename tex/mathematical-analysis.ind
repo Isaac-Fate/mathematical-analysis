@@ -1,0 +1,47 @@
+\begin{theindex}
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{C}\par\nopagebreak
+
+ \item \small chain rule \hfill 7
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{D}\par\nopagebreak
+
+ \item \small derivative \hfill 2
+ \item \small differentiable functions \hfill 2
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{I}\par\nopagebreak
+
+ \item \small infinite derivative \hfill 4
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{L}\par\nopagebreak
+
+ \item \small left-hand derivative \hfill 4
+ \item \small local extremum \hfill 9
+ \item \small local maximum \hfill 9
+ \item \small local minimum \hfill 9
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{O}\par\nopagebreak
+
+ \item \small one-sided derivatives \hfill 4
+
+  \indexspace
+
+\centering\large\sffamily\bfseries%
+\noindent\textbf{R}\par\nopagebreak
+
+ \item \small right-hand derivative \hfill 4
+
+\end{theindex}

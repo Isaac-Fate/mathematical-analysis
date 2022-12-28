@@ -48,6 +48,7 @@ parts:
     - file: Elementary Concepts/The Riemann-Stieltjes Integral/Integration and Differentiation
   - file: Elementary Concepts/The Reimann Integral/index
     sections:
+    - file: Elementary Concepts/The Reimann Integral/Fundamental Theorem of Calculus
     - file: Elementary Concepts/The Reimann Integral/Reduction from Riemann-Stieltjes
         Integrals to Reimann Integrals
     - file: Elementary Concepts/The Reimann Integral/Change of Variables
