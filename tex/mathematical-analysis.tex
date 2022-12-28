@@ -80,7 +80,7 @@ The next theorem states that the composite function of continuous functions is a
     Let $f: X \to \R$ be a real-valued function from a metric space $X$ to $\R$. Let $K \subset X$ be a compact subset. Then there exist points $p, q \in K$ such that 
     \begin{align*}
         f(p) = \sup f(K)
-        \quad \text{and}
+        \quad \text{and} \quad
         f(q) = \inf f(K)
     \end{align*}
 \end{theorem}
@@ -204,7 +204,7 @@ The definition of derivatives we present here involves the limit obtained by let
 
 So far, the point at which the derivative is defined has to be an \textit{interior} point. Sometimes, we are required to consider the derivatives at the endpoints of the interval. For example, as we shall see in more detail in Chapter~\ref{chap:1}, we need to take the derivative of function $F(x) = \int_a^x f(t) \mathrm{d}t$ at $x=a$. Hence, we are motivated to define the \textbf{one-sided derivatives}\index{one-sided derivatives}. 
 
-If we consider the derivative of $f$, $f^\prime$ as a function, then $f^\prime(x)$ may tend to infinity as $x$ approaches an endpoint. Therefore, we also need to define \textbf{infinite derivatives}\index{infinite derivative}.
+If we consider the derivative of $f$, $f^\prime$ as a function, then $f^\prime(x)$ may tend to infinity as $x$ approaches an endpoint. In addition, sometimes we need to interpret the meaning of vertical tangent lines. This leads to the definition of \textbf{infinite derivatives}\index{infinite derivative}.
 
 \begin{definition}
     Let $f$ be defined on a closed interval $I$. Suppose $f$ is continuous at point $c \in I$. Then $f$ is said to have a \textbf{right-hand derivative}\index{right-hand derivative} at $c$ if the right-hand limit 
@@ -218,11 +218,48 @@ If we consider the derivative of $f$, $f^\prime$ as a function, then $f^\prime(x
     Note that though we write $f^\prime(c) = \infty$ or $f^\prime(c) = -\infty$, we do not say $f$ is differentiable there.
 \end{remark}
 
-It is very difficult to imagine the scenario that $f^\prime_{+}(c) = \infty$ provided $f$ is continuous at $c$. But we indeed have such an example (Example~\ref{eg:1}).
+It is not very intuitive to imagine, at first thought, a continuous function having infinite derivatives. But there are quite a lot of such examples.
 
 \begin{example}
-    Cantor function.
+    The first example is constructed by cutting a circle in the middle. If we cut a circle in half and stick the lower half to the right of the upper one, then we have a function with a vertical tangent line in the middle. The explicit expression of this function is 
+    \begin{align*}
+        f(x) = \begin{cases}
+            \sqrt{1 - (x-1)^2} &0 \leq x \leq 2 \\ 
+            - \sqrt{1 - (x-3)^2} &2 < x \leq 4
+        \end{cases}
+    \end{align*}
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.2]{figures/graph-002.png}
+        \caption{Graph of $f(x) = \sqrt{1-(x-1)^2}\ind\{0 \leq x \leq 2\} - \sqrt{1-(x-3)^2}\ind\{2 < x \leq 4\}$.}
+    \end{figure}
+
+    \noindent The function is continuous and one can show that $f^\prime(2) = -\infty$.
     \label{eg:1}
+\end{example}
+
+\begin{example}
+    The following next example includes both positive and negative intuitive derivatives, and a point at which the right and left-hand side derivatives are $\infty$ and $-\infty$, respectively. Consider the function 
+    \begin{align*}
+        f(x) = \sqrt[3]{x^2 (x-1) (x-2)}
+    \end{align*}
+    Its graph is shown in Figure~\ref{fig:3}.
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.2]{figures/graph-003.png}
+        \caption{Graph of $f(x) = \sqrt[3]{x^2 (x-1) (x-2)}$.}
+        \label{fig:3}
+    \end{figure}    
+
+    It is an exercise to show $f^\prime(1) = -\infty$ and $f^\prime(2) = \infty$. We now consider the one-sided derivatives at $x = 0$. We have 
+    \begin{align*}
+        \frac{f(x) - f(0)}{x - 0}
+        = \sqrt[3]{\frac{(x-1)(x-2)}{x}}
+    \end{align*}
+    Letting $x \to 0^{+}$ leads to $f^\prime_{+}(0) = \infty$, while $x \to 0^{-}$ yields $f^\prime_{-}(0) = -\infty$. Hence, we say the derivative of $f$ does not exist at $x = 0$.
+    \label{eg:2}
 \end{example}
 
 %------------------------------
@@ -593,7 +630,9 @@ Moreover, it should be emphasized that we conclude in Theorem~\ref{thm:5} that $
 
 \subsection{Rolle's Theorem and Mean Value Theorem}
 
-\begin{theorem}[Rolle]
+If a function starts from point $a$ and ends at point $b$ with the same level of height as its initial position, then there must be a turning point somewhere in between. 
+
+\begin{theorem}[Rolle] \label{thm:9}
     Let $f$ be defined on $[a, b]$. Suppose $f^\prime(x)$ exists (as finite or infinite number) for each $x \in (a, b)$, and $f$ is continuous at the endpoints $a$ and $b$. If $f(a) = f(b)$, then there exists $c \in (a, b)$ such that 
     \begin{align*}
         f^\prime(c) = 0
@@ -604,6 +643,55 @@ Moreover, it should be emphasized that we conclude in Theorem~\ref{thm:5} that $
     If $f$ is a constant function, i.e., $f(x) = f(a) = f(b) \; \forall x \in [a, b]$, then the conclusion is trivial since $f^\prime(x) = 0 \; \forall x \in (a, b)$.
 
     We now suppose $f$ is non-constant. We know that $f$ is continuous on $[a, b]$ since $f^\prime$ exists throughout $(a, b)$ and $f$ is continuous at endpoints. It then follows from Theorem~\ref{thm:6} that $f$ attains its maximum and minimum on $[a, b]$. Because we assume $f$ is non-constant and $f(a) = f(b)$, at least one of the maximum and the minimum of $f$ is reached at an interior point $c \in (a, b)$. Note that $f(c)$ is a global extremum, and of course also a local extremum. Then by applying Theorem~\ref{thm:5}, we conclude $f^\prime(c) = 0$.
+\end{proof}
+
+\begin{example}
+    Review Example~\ref{eg:1}. Note that $f(0) = f(4) = 0$. And the derivative vanishes at $x = 1$ and $x = 3$. 
+\end{example}
+
+%------------------------------
+
+The \textbf{mean value theorem}\index{mean value theorem} is a generalization of Rolle's theorem. Roughly speaking it says $f$ has a derivative value that equals the slope of the secant line joining two endpoints of the graph of $f$. The mean value theorem itself can be treated as a special case of an even more generalized version, the \textbf{generalized mean value theorem}\index{generalized mean value theorem} (Theorem~\ref{thm:7}).
+
+\begin{theorem}[Mean Value Theorem] \label{thm:8}
+    Suppose $f$ has a derivative (finite or infinite) at each point of $(a, b)$, and suppose $f$ is continuous at endpoints $a$ and $b$. Then there exists $c \in (a, b)$ such that 
+    \begin{align*}
+        f(b) - f(a) = f^\prime(c) (b - a)
+    \end{align*}
+\end{theorem}
+
+\begin{theorem}[Generalized Mean Value Theorem] \label{thm:7}
+    Let $f$ and $g$ be two functions, each having a derivative (finite or infinite) at each point in $(a, b)$. Suppose $f$ and $g$ are both continuous at endpoints $a$ and $b$, and $f^\prime(x)$ and $g^\prime(x)$ do not assume infinite values simultaneously. Then there exists $c \in (a, b)$ such that 
+    \begin{align}
+        f^\prime(c) [g(b) - g(a)]
+        = g^\prime(c) [f(b) - f(a)]
+        \label{eq:15}
+    \end{align} 
+\end{theorem}
+
+\begin{remark}
+    By taking $g(x) = x$, this theorem reduces to the standard mean value theorem, Theorem~\ref{thm:8}.
+\end{remark}
+
+Though it is a generalized version of the mean value theorem, and hence Rolle's theorem, it can be proved easily using Rolle's theorem by constructing a function out of $f$ and $g$.
+
+\begin{proof}
+    Define 
+    \begin{align*}
+        \psi(x) = f(x)[g(b) - g(a)] - g(x) [f(b) - f(a)]
+    \end{align*}
+    It is clear that $\psi$ is continuous on $[a, b]$. Since $f^\prime(x)$ and $g^\prime(x)$ can never both be infinity, the following equation holds:
+    \begin{align*}
+        \psi^\prime(x)
+        = f^\prime(x)[g(b) - g(a)] - g^\prime(x) [f(b) - f(a)]
+        \quad \forall x \in (a, b)
+    \end{align*}
+    Furthermore, we note that 
+    \begin{align*}
+        \psi(a) = f(a)g(b) - f(b)g(a)
+        = \psi(b)
+    \end{align*}
+    Applying Rolle's theorem (Theorem~\ref{thm:9}) to $\psi$ leads to $\psi^\prime(c) = 0$ for some $c \in (a, b)$, which is exactly \eqref{eq:15}.
 \end{proof}
 
 %==============================

@@ -11,6 +11,9 @@ tex/*.out
 tex/*.run.xml
 tex/*.synctex.gz
 tex/*.toc
+tex/*.idx
+tex/*.ind
+tex/*.ilg
 
 /book/_build
 /scripts
