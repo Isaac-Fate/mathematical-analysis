@@ -694,6 +694,88 @@ Though it is a generalized version of the mean value theorem, and hence Rolle's 
     Applying Rolle's theorem (Theorem~\ref{thm:9}) to $\psi$ leads to $\psi^\prime(c) = 0$ for some $c \in (a, b)$, which is exactly \eqref{eq:15}.
 \end{proof}
 
+%------------------------------
+
+Sometimes, functions $f$ and $g$ in Theorem~\ref{thm:7} may not be defined at endpoints. But all the one-sided limits exist as finite values. In this case, we still wish to apply the theorem. The following is a slight extension of Theorem~\ref{thm:7}.
+
+\begin{theorem}
+    Let $f$ and $g$ be two functions, each having a derivative (finite or infinite) at each point in $(a, b)$. Suppose that $f^\prime(x)$ and $g^\prime(x)$ do not assume infinite values simultaneously, and one-sided limits $f(a+)$, $f(b-)$, $g(a+)$ and $g(b-)$ all exist as finite values. Then there exists $c \in (a, b)$ such that 
+    \begin{align}
+        f^\prime(c) [g(b-) - g(a+)]
+        = g^\prime(c) [f(b-) - f(a+)]
+        \label{eq:16}
+    \end{align} 
+\end{theorem}
+
+The proof is done by simply defining the function values at the endpoints.
+
+\begin{proof}
+    Define
+    \begin{align*}
+        \tilde{f}(x) = f(x) \quad \forall x \in (a, b),
+        \quad
+        \tilde{f}(a) = f(a+),
+        \quad \text{and} \quad
+        \tilde{f}(b) = f(b-) \\ 
+        \tilde{g}(x) = g(x) \quad \forall x \in (a, b),
+        \quad
+        \tilde{g}(a) = g(a+),
+        \quad \text{and} \quad
+        \tilde{g}(b) = g(b-)
+    \end{align*}
+    It is evident that $\tilde{f}$ and $\tilde{g}$ are both continuous on $[a, b]$. Furthermore, the derivatives $\tilde{f}^\prime(x) = f^\prime(x)$ and $\tilde{g}^\prime(x) = g^\prime(x)$ for each $x \in (a, b)$. Applying Theorem~\ref{thm:7} to functions $\tilde{f}$ and $\tilde{g}$ leads to \eqref{eq:16}.
+\end{proof}
+
+The following theorem is an immediate result of the mean value theorem, which provides a sufficient condition for determining strictly increasing and decreasing functions. It also says a function is constant if its derivative vanishes everywhere.
+
+\begin{theorem} \label{thm:10}
+    Suppose $f$ has a derivative (finite or infinite) at each point in $(a, b)$, and itself is continuous at the endpoints $a$ and $b$.
+    \begin{enumerate}
+        \item If $f^\prime(x) > 0 \; \forall x \in (a, b)$, then $f$ is strictly increasing on $[a, b]$.
+        \item If $f^\prime(x) < 0 \; \forall x \in (a, b)$, then $f$ is strictly decreasing on $[a, b]$.
+        \item If $f^\prime(x) = 0 \; \forall x \in (a, b)$, then $f$ is constant on $[a, b]$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    (Proof of 1) Let $x_1, x_2 \in [a, b]$ with $x_1 < x_2$. Applying Theorem~\ref{thm:8} to $f$ on the interval $[x_1, x_2]$ leads to 
+    \begin{align*}
+        f(x_2) - f(x_1) = f^\prime(c) (x_2 - x_1)
+    \end{align*}
+    for some $c \in (x_1, x_2)$. Since $f^\prime(c) > 0$ and $x_2 - x_1 > 0$, we have $f(x_2) > f(x_1)$. Because $x_1$ and $x_2$ are arbitrarily chosen, this implies $f$ is strictly increasing on $[a, b]$.
+
+    (Proof of 2) Similarly, for any $x_1, x_2 \in [a, b]$ with $x_1 < x_2$, we have 
+    \begin{align*}
+        f(x_2) - f(x_1) = f^\prime(c) (x_2 - x_1) < 0
+    \end{align*}
+
+    (Proof of 3) For any $x_1, x_2 \in [a, b]$ with $x_1 < x_2$, by applying Theorem~\ref{thm:8}, we have
+    \begin{align*}
+        f(x_2) - f(x_1) = f^\prime(c) (x_2 - x_1) = 0
+    \end{align*}
+    This implies $f$ is a constant function.
+\end{proof}
+
+If $f$ and $g$ have the same derivatives everywhere in $(a, b)$, then they only differ by a constant. 
+
+\begin{corollary}
+    If $f$ and $g$ are continuous on $[a, b]$, and $f^\prime(x) = g^\prime(x) \; \forall x \in (a, b)$, then $f - g$ is constant on $[a, b]$.
+\end{corollary}
+
+\begin{proof}
+    Note that the difference $f-g$ is continuous on $[a, b]$ and $(f-g)^\prime(x) = 0 \; \forall x \in (a, b)$. It then follows from Theorem~\ref{thm:10} that $f-g$ is a constant.
+\end{proof}
+
+%------------------------------
+
+\section{Intermediate Value Theorem}
+
+
+
+%------------------------------
+
+\section{Taylor's Theorem}
+
 %==============================
 
 \chapter{Functions of Bounded Variation}
