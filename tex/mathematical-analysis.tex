@@ -77,13 +77,82 @@ The next theorem states that the composite function of continuous functions is a
 %------------------------------
 
 \begin{theorem} \label{thm:6}
-    Let $f: X \to \R$ be a real-valued function from a metric space $X$ to $\R$. Let $K \subset X$ be a compact subset. Then there exist points $p, q \in K$ such that 
+    Let $f: X \to \R$ be a real-valued continuous function from a metric space $X$ to $\R$. Let $K \subset X$ be a compact subset. Then there exist points $p, q \in K$ such that 
     \begin{align*}
         f(p) = \sup f(K)
         \quad \text{and} \quad
         f(q) = \inf f(K)
     \end{align*}
 \end{theorem}
+
+%------------------------------
+
+\section{Connectedness}
+
+\begin{theorem}[Intermediate Value Theorem] \label{thm:11}
+    Let $f: [a, b] \to \R$ be a real-valued continuous function. Suppose that $f(a) \neq f(b)$, and $y$ is some number in between $f(a)$ and $f(b)$. Then there exists an interior point $c \in (a, b)$ such that $f(c) = y$.
+\end{theorem}
+
+\begin{proof}
+    % TODO
+\end{proof}
+
+%------------------------------
+
+\section{Monotonic Functions}
+
+\begin{theorem} \label{thm:15}
+    If $f$ is increasing on $[a, b]$, then $f(c+)$ and $f(c-)$ both exists for every $c \in (a, b)$, and we have
+    \begin{align*}
+        f(c-) \leq f(c) \leq f(c+) 
+    \end{align*}
+    As the endpoints, we have $f(a+)$ and $f(b-)$ both exists and 
+    \begin{align}
+        f(a) \leq f(a+)
+        \quad \text{and} \quad 
+        f(b-) \leq f(b)
+        \label{eq:18}
+    \end{align}
+    Analogous results exist for $f$ being a decreasing function.
+\end{theorem}
+
+\begin{proof}
+    We only prove this theorem for increasing functions. Let $c \in (a, b)$ be an interior point. 
+    
+    \par (Existence of $f(c-)$) Define a set 
+    \begin{align*}
+        A = \set{f(x)}{a \leq x < c}
+    \end{align*}
+    Note that $A$ is bounded above by $f(c)$ since $f$ is increasing. Then $A$ has the least upper bound, say $\alpha = \sup A$. We want to show that $f(c-)$ exists and equals $\alpha$. Given $\varepsilon > 0$, by the property of $\alpha$, there exists $x_\varepsilon = (c - \delta) \in [a, c)$ such that ($\delta$ depends on $\varepsilon$)
+    \begin{align*}
+        f(c - \delta) > \alpha - \varepsilon
+    \end{align*}
+    Because $f$ is increasing, we have 
+    \begin{align*}
+        \alpha \geq f(x) \geq f(c-\delta) > \alpha-\varepsilon
+        \quad \forall x \in (c-\delta, c)
+    \end{align*}
+    This implies that 
+    \begin{align*}
+        \abs{f(x) - \alpha} < \varepsilon
+        \quad \forall x \in (c-\delta, c)
+    \end{align*}
+    Hence, $\alpha$ is the left-hand limit of $f$ at $x = c$, i.e., $f(c-) = \alpha$. Recall $A$ is bounded above by $f(c)$. We have $\alpha \leq f(c)$, i.e., 
+    \begin{align*}
+        f(c-) \leq f(c)
+    \end{align*}
+
+    \par (Existence of $f(c+)$) Define 
+    \begin{align*}
+        B = \set{f(x)}{c < x \leq b}
+    \end{align*}
+    Let $\beta$ be the greatest lower bound of $B$. A similar argument shows that $f(c+)$, and $f(c+) = \beta$ with 
+    \begin{align*}
+        f(c) \leq f(c+)
+    \end{align*}
+
+    \par (Existence of $f(a+)$ and $f(b-)$) The existence of $f(a+)$ and $f(b-)$ along with \eqref{eq:18} can be proved by the exact argument as before.
+\end{proof}
 
 %==============================
 
@@ -501,6 +570,7 @@ With the help of Theorem~\ref{thm:1}, we can reduce the proof of this theorem to
     for all $x \in \R$. Recall we have already calculated its derivative at $x = 0$ in Exercise~\ref{ex:1}, which is $f^\prime(0) = 0$.
 
     \noindent [Hint: Make use of the result in Exercise~\ref{ex:2} and the chain rule (Theorem~\ref{thm:4}).]
+    \label{ex:3}
 \end{exercise}
 
 %------------------------------
@@ -511,9 +581,9 @@ With the help of Theorem~\ref{thm:1}, we can reduce the proof of this theorem to
 
 \subsection{Local Extrema}
 
-One may be familiar with the fact that if the derivative of function $f$ is positive at some point, i.e., $f^\prime(c) > 0$, then $f$ is increasing near $c$, and if $f^\prime(c) < 0$, it is decreasing. However, we can extend this result a little further for we have defined one-sided and infinite derivatives.
+\par One may be familiar with the fact that if the derivative of function $f$ is positive at some point, i.e., $f^\prime(c) > 0$, then $f$ is increasing near $c$, and if $f^\prime(c) < 0$, it is decreasing. However, we can extend this result a little further for we have defined one-sided and infinite derivatives.
 
-\begin{theorem}
+\begin{theorem} \label{thm:14}
     Let $f$ be defined on a subset $A \subset \R$ and $c \in A$. If $f^\prime_+(c) > 0$, possibly $f^\prime_+(c) = \infty$, then there exists a half-open ball $(c, c+\delta) \subset A$ in which
     \begin{align}
         x > c \implies f(x) > f(c)
@@ -550,7 +620,7 @@ One may be familiar with the fact that if the derivative of function $f$ is posi
     One can instead choose any large number (non-negative of course, to prove this theorem). This completes the proof since both the numerator and denominator share the same sign.
 \end{proof}
 
-The following corollary is the version that is more familiar to the reader and is more common in practice.
+\par The following corollary is the version that is more familiar to the reader and is more common in practice.
 
 \begin{corollary} \label{cor:1}
     Let $f$ be defined on $(a, b)$, and $c \in (a, b)$ an interior point. If $f^\prime(c) > 0$, possibly $f^\prime(c) = \infty$, then there exists an open ball $B_\delta(c) \subset (a, b)$ in which
@@ -579,7 +649,7 @@ The following corollary is the version that is more familiar to the reader and i
 
 %------------------------------
 
-The \textbf{local extremum}\index{local extremum} of a function is the largest or smallest value within some \textit{open ball}.
+\par The \textbf{local extremum}\index{local extremum} of a function is the largest or smallest value within some \textit{open ball}.
 
 \begin{definition}
     Let $f$ be a real-valued function defined on a subset $A$ of a metric space $(X, d)$, and suppose $p \in A$. Then $f$ is said to have a \textbf{local maximum}\index{local maximum} at $p$ if 
@@ -592,7 +662,7 @@ The \textbf{local extremum}\index{local extremum} of a function is the largest o
 
 %------------------------------
 
-The reader should be very familiar with the exercise of finding a local extremum by solving the equation in which the derivative vanishes. The following Theorem is the theory behind that.
+\par The reader should be very familiar with the exercise of finding a local extremum by solving the equation in which the derivative vanishes. The following Theorem is the theory behind that.
 
 \begin{theorem} \label{thm:5}
     Let $f$ be defined on $(a, b)$, and suppose $f$ has a local extremum at an interior point $c \in (a, b)$. If $f^\prime(c)$ exists as a finite or infinite number, then $f^\prime(c) = 0$.
@@ -606,7 +676,7 @@ The reader should be very familiar with the exercise of finding a local extremum
     We shall prove by contradiction. Assume $f^\prime(c) \neq 0$, then either $f^\prime(c) > 0$ or $f^\prime(c) < 0$. (We do not exclude the possibilities that $f^\prime(c) = \infty$ or $f^\prime(c) = -\infty$.) If $f^\prime(c) > 0$, then follows from Corollary~\ref{cor:1} that there acts some open ball $B_\delta(c)$ in which $f(x) > f(c)$ for $x > c$ and $f(x) < f(c)$ for $x < c$. This contradicts the fact that $f(c)$ is a local extremum. Similarly, $f^\prime(c) < 0$ will also lead to a contradiction. 
 \end{proof}
 
-The converse of this Theorem is not true. 
+\par The converse of this Theorem is not true. 
 
 \begin{example}
     Consider $f(x) = x^3$. Its derivative is $f^\prime(x) = 3x^2$. We note that $f^\prime(0) = 0$. But it is clear that $f(0) = 0$ is neither a local maximum nor a local minimum. In fact, $f(x)$ does not have any local extremum.
@@ -620,7 +690,7 @@ The converse of this Theorem is not true.
     defined in Exercise~\ref{ex:1}. Show that $f(0)$ is not a local extremum. Recall we have shown that $f^\prime(0) = 0$. This is another example that the converse of Theorem~\ref{thm:5} does not hold.
 \end{exercise}
 
-Moreover, it should be emphasized that we conclude in Theorem~\ref{thm:5} that $f^\prime(c) = 0$ under the condition that $f^\prime(c)$ exists. $f(c)$ may be a local extremum without having a derivative there.
+\par Moreover, it should be emphasized that we conclude in Theorem~\ref{thm:5} that $f^\prime(c) = 0$ under the condition that $f^\prime(c)$ exists. $f(c)$ may be a local extremum without having a derivative there.
 
 \begin{example}
     The simplest example is $f(x) = \abs{x}$. Note that $f(0) = 0$ is a local minimum. But the derivative does not exist at $x = 0$ since $f^\prime_{+}(0) = 1 \neq -1 = f^\prime_{-}(0)$.
@@ -630,7 +700,7 @@ Moreover, it should be emphasized that we conclude in Theorem~\ref{thm:5} that $
 
 \subsection{Rolle's Theorem and Mean Value Theorem}
 
-If a function starts from point $a$ and ends at point $b$ with the same level of height as its initial position, then there must be a turning point somewhere in between. 
+\par If a function starts from point $a$ and ends at point $b$ with the same level of height as its initial position, then there must be a turning point somewhere in between. 
 
 \begin{theorem}[Rolle] \label{thm:9}
     Let $f$ be defined on $[a, b]$. Suppose $f^\prime(x)$ exists (as finite or infinite number) for each $x \in (a, b)$, and $f$ is continuous at the endpoints $a$ and $b$. If $f(a) = f(b)$, then there exists $c \in (a, b)$ such that 
@@ -651,7 +721,7 @@ If a function starts from point $a$ and ends at point $b$ with the same level of
 
 %------------------------------
 
-The \textbf{mean value theorem}\index{mean value theorem} is a generalization of Rolle's theorem. Roughly speaking it says $f$ has a derivative value that equals the slope of the secant line joining two endpoints of the graph of $f$. The mean value theorem itself can be treated as a special case of an even more generalized version, the \textbf{generalized mean value theorem}\index{generalized mean value theorem} (Theorem~\ref{thm:7}).
+\par The \textbf{mean value theorem}\index{mean value theorem} is a generalization of Rolle's theorem. Roughly speaking it says $f$ has a derivative value that equals the slope of the secant line joining two endpoints of the graph of $f$. The mean value theorem itself can be treated as a special case of an even more generalized version, the \textbf{generalized mean value theorem}\index{generalized mean value theorem} (Theorem~\ref{thm:7}).
 
 \begin{theorem}[Mean Value Theorem] \label{thm:8}
     Suppose $f$ has a derivative (finite or infinite) at each point of $(a, b)$, and suppose $f$ is continuous at endpoints $a$ and $b$. Then there exists $c \in (a, b)$ such that 
@@ -673,7 +743,7 @@ The \textbf{mean value theorem}\index{mean value theorem} is a generalization of
     By taking $g(x) = x$, this theorem reduces to the standard mean value theorem, Theorem~\ref{thm:8}.
 \end{remark}
 
-Though it is a generalized version of the mean value theorem, and hence Rolle's theorem, it can be proved easily using Rolle's theorem by constructing a function out of $f$ and $g$.
+\par Though it is a generalized version of the mean value theorem, and hence Rolle's theorem, it can be proved easily using Rolle's theorem by constructing a function out of $f$ and $g$.
 
 \begin{proof}
     Define 
@@ -696,7 +766,7 @@ Though it is a generalized version of the mean value theorem, and hence Rolle's 
 
 %------------------------------
 
-Sometimes, functions $f$ and $g$ in Theorem~\ref{thm:7} may not be defined at endpoints. But all the one-sided limits exist as finite values. In this case, we still wish to apply the theorem. The following is a slight extension of Theorem~\ref{thm:7}.
+\par Sometimes, functions $f$ and $g$ in Theorem~\ref{thm:7} may not be defined at endpoints. But all the one-sided limits exist as finite values. In this case, we still wish to apply the theorem. The following is a slight extension of Theorem~\ref{thm:7}.
 
 \begin{theorem}
     Let $f$ and $g$ be two functions, each having a derivative (finite or infinite) at each point in $(a, b)$. Suppose that $f^\prime(x)$ and $g^\prime(x)$ do not assume infinite values simultaneously, and one-sided limits $f(a+)$, $f(b-)$, $g(a+)$ and $g(b-)$ all exist as finite values. Then there exists $c \in (a, b)$ such that 
@@ -707,7 +777,7 @@ Sometimes, functions $f$ and $g$ in Theorem~\ref{thm:7} may not be defined at en
     \end{align} 
 \end{theorem}
 
-The proof is done by simply defining the function values at the endpoints.
+\par The proof is done by simply defining the function values at the endpoints.
 
 \begin{proof}
     Define
@@ -726,7 +796,7 @@ The proof is done by simply defining the function values at the endpoints.
     It is evident that $\tilde{f}$ and $\tilde{g}$ are both continuous on $[a, b]$. Furthermore, the derivatives $\tilde{f}^\prime(x) = f^\prime(x)$ and $\tilde{g}^\prime(x) = g^\prime(x)$ for each $x \in (a, b)$. Applying Theorem~\ref{thm:7} to functions $\tilde{f}$ and $\tilde{g}$ leads to \eqref{eq:16}.
 \end{proof}
 
-The following theorem is an immediate result of the mean value theorem, which provides a sufficient condition for determining strictly increasing and decreasing functions. It also says a function is constant if its derivative vanishes everywhere.
+\par The following theorem is an immediate result of the mean value theorem, which provides a sufficient condition for determining strictly increasing and decreasing functions. It also says a function is constant if its derivative vanishes everywhere.
 
 \begin{theorem} \label{thm:10}
     Suppose $f$ has a derivative (finite or infinite) at each point in $(a, b)$, and itself is continuous at the endpoints $a$ and $b$.
@@ -756,7 +826,7 @@ The following theorem is an immediate result of the mean value theorem, which pr
     This implies $f$ is a constant function.
 \end{proof}
 
-If $f$ and $g$ have the same derivatives everywhere in $(a, b)$, then they only differ by a constant. 
+\par If $f$ and $g$ have the same derivatives everywhere in $(a, b)$, then they only differ by a constant. 
 
 \begin{corollary}
     If $f$ and $g$ are continuous on $[a, b]$, and $f^\prime(x) = g^\prime(x) \; \forall x \in (a, b)$, then $f - g$ is constant on $[a, b]$.
@@ -770,7 +840,209 @@ If $f$ and $g$ have the same derivatives everywhere in $(a, b)$, then they only 
 
 \section{Intermediate Value Theorem}
 
+\par In Exercise~\ref{ex:3}, we have shown that the derivative of function $f(x) = x^2 \sin(1/x^2) \ind\{x \neq 0\}$ is given by 
+\begin{align*}
+    f^\prime(x) = \begin{cases}
+        2x \sin \frac{1}{x^2} 
+        - \frac{2}{x} \cos \frac{1}{x^2}
+        & x \neq 0 \\
+        0 & x = 0
+    \end{cases}
+\end{align*}
+We plot the original function $f$ along with its derivative $f^\prime$ side by side in Figure~\ref{fig:4}.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.2]{figures/graph-004.png}
+    \caption{Left: original function. Right: its derivative.}
+    \label{fig:4}
+\end{figure}
 
+\noindent Note that the derivative $f^\prime$ is not continuous at $x = 0$ since the limit of $f^\prime(x)$ does not exist as $x \to 0$. This example shows that the derivative of a function may not be continuous, and hence theorems for continuous functions do not apply to derivatives in general. However, the \textbf{intermediate value theorem}\index{intermediate value theorem for derivatives} is an exception. The intermediate value theorem for derivatives is also known as the \textbf{Darboux's theorem}\index{Darboux's theorem}.
+
+\begin{theorem}[Darboux] \label{thm:12}
+    Suppose $f$ is defined on $[a, b]$, and it has a derivative (finite or infinite) at each point in $(a, b)$. Assume also that the one-sided derivatives $f^\prime_{+}(a)$ and $f^\prime_{-}(b)$ both exist as finite numbers, and $f^\prime_{+}(a) \neq f^\prime_{-}(b)$. If $k$ is a number in between $f^\prime_{+}(a)$ and $f^\prime_{-}(b)$, then there exists an interior point $c \in (a, b)$ such that 
+    \begin{align*}
+        f^\prime(c) = k
+    \end{align*}
+\end{theorem}
+
+\begin{proof}
+    Note that $f$ is continuous on the entire closed interval $[a, b]$.
+
+    \par We first consider the case where $k = [f(b) - f(a)] / (b-a)$. Then by applying the mean value theorem (Theorem~\ref{thm:8}), there exists $c \in (a, b)$ such that $f^\prime(c) = [f(b) - f(a)] / (b-a) = k$.
+
+    \par Now, we suppose $k \neq [f(b) - f(a)] / (b-a)$. We note that either $f^\prime_{+}(a) \neq [f(b) - f(a)] / (b-a)$ or $f^\prime_{-}(b) \neq [f(b) - f(a)] / (b-a)$ since $f^\prime_{+}(a) \neq f^\prime_{-}(b)$. In other words, $k$ is either in between $f^\prime_{+}(a)$ and $[f(b) - f(a)] / (b-a)$ to it is in between $f^\prime_{-}(b)$ and $[f(b) - f(a)] / (b-a)$.
+
+    \par Without loss of generality, we may assume $k$ is in between $f^\prime_{+}(a)$ and $[f(b) - f(a)] / (b-a)$. Define a function $\phi$ on $[a, b]$ by
+    \begin{align*}
+        \phi(x) = \begin{cases}
+            \frac{f(x) - f(a)}{x - a}
+            &x \neq a \\ 
+            f^\prime_{+}(a)
+            &x = a
+        \end{cases}
+    \end{align*}
+    Note that $\phi$ is continuous on $[a, b]$, and $k$ is in between $\phi(a)$ and $\phi(b)$. Hence, we may apply the intermediate values theorem for continuous functions (Theorem~\ref{thm:11}) to $\phi$, there is a number $d \in (a, b)$ such that 
+    \begin{align*}
+        k = \phi(d) = \frac{f(d) - f(a)}{d - a}
+    \end{align*}
+    Then applying the mean value theorem (Theorem~\ref{thm:8}) to the fraction on the right-hand side of the above equation, we have 
+    \begin{align*}
+        k = \frac{f(d) - f(a)}{d - a}
+        = f^\prime(c)
+    \end{align*}
+    for some $c$ in between $a$ and $d$.
+
+    \par For the case where $k$ lying in between $f^\prime_{-}(b)$ and $[f(b) - f(a)] / (b-a)$, it can be proved with a similar argument, started by defining
+    \begin{align*}
+        \phi(x) = \begin{cases}
+            \frac{f(x) - f(b)}{x - b}
+            &x \neq b \\ 
+            f^\prime_{-}(b)
+            &x = b
+        \end{cases}
+    \end{align*}
+\end{proof}
+
+\par Essentially, Darboux's theorem tells us that though the derivative may not be continuous, it cannot have any \textit{jump discontinuities}. The following is another classical example in addition to the one in Exercise~\ref{ex:1}.
+
+\begin{example}
+    Consider the function 
+    \begin{align*}
+        f(x) = x^2 \sin\frac{1}{x} \ind\{x \neq 0\}
+        = \begin{cases}
+            x^2 \sin\frac{1}{x}
+            &x \neq 0 \\ 
+            0 & x = 0
+        \end{cases}
+    \end{align*}
+    Its derivative is given by 
+    \begin{align*}
+        f^\prime(x)
+        = \begin{cases}
+            2x \sin\frac{1}{x} - \cos\frac{1}{x}
+            &x \neq 0 \\ 
+            0 & x = 0
+        \end{cases}
+    \end{align*}
+    Note that the derivative $f^\prime$ is not continuous at $x = 0$. The graphs of $f$ and $f^\prime$ are shown in Figure~\ref{fig:6}.
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.2]{figures/graph-007.png}
+        \caption{Left: original function. Right: its derivative.}
+        \label{fig:6}
+    \end{figure}
+\end{example}
+
+\par Actually, there is no need to require that $f^\prime_{+}(a)$ and $f^\prime_{-}(b)$ to be finite numbers in Theorem~\ref{thm:12}. The following theorem is an extension, and its proof is somewhat neater and more interesting than that of Theorem~\ref{thm:12}.
+
+\begin{theorem} \label{thm:13}
+    Suppose $f$ is defined on $[a, b]$, and it has a derivative (finite or infinite) at each point in $(a, b)$. Assume also that the one-sided derivatives $f^\prime_{+}(a)$ and $f^\prime_{-}(b)$ both exist (each of the two can either be finite or infinite), and $f^\prime_{+}(a) \neq f^\prime_{-}(b)$. If $k$ is a number in between $f^\prime_{+}(a)$ and $f^\prime_{-}(b)$, then there exists an interior point $c \in (a, b)$ such that 
+    \begin{align*}
+        f^\prime(c) = k
+    \end{align*}
+\end{theorem}
+
+\begin{proof}
+    Without loss of generality, we may assume $f^\prime_{+}(a) < k <  f^\prime_{-}(b)$. Define a function $g$ on $[a, b]$ by the equation
+    \begin{align*}
+        g(x) = f(x) - kx
+    \end{align*}
+    Note that $g$ is continuous on $[a, b]$, and the derivative of $g$ exists at each point in $(a, b)$. Furthermore, the one-sided derivatives of $g$, $g^\prime_{+}(a)$ and $g^\prime_{-}(b)$, both exist, which are given by
+    \begin{align}
+        g^\prime_{+}(a) = f^\prime_{+}(a) - k
+        \quad \text{and} \quad 
+        g^\prime_{-}(b) = f^\prime_{-}(b) - k
+        \label{eq:17}
+    \end{align} 
+    It should be emphasized that \eqref{eq:17} also holds for infinite values. 
+
+    \par Because we assume $f^\prime_{+}(a) < k <  f^\prime_{-}(b)$, \eqref{eq:17} yields
+    \begin{align*}
+        g^\prime_{+}(a) < 0
+        \quad \text{and} \quad 
+        g^\prime_{-}(b) > 0
+    \end{align*} 
+    It then follows from Theorem~\ref{thm:14} that there exist points $t_1$ and $t_2$ at which
+    \begin{align*}
+        g(t_1) < g(a)
+        \quad \text{and} \quad 
+        g(t_2) < g(b)
+    \end{align*}
+    This implies that $g$ must attain its minimum at some interior point $c \in (a, b)$ rather than at the endpoints. Then by applying Theorem~\ref{thm:5}, we have 
+    \begin{align*}
+        g^\prime(c) = 0
+    \end{align*}
+    Because $g^\prime(x) = f^\prime(x) - k \; \forall x \in (a, b)$, it follows that
+    \begin{align*}
+        f^\prime(c) = k
+    \end{align*}
+    This completes the proof.
+\end{proof}
+
+\begin{example}
+    Consider a function defined on $[0, 1]$ given by 
+    \begin{align*}
+        f(x) = \sqrt[3]{x(x-1)},
+        \quad x \in [0, 1]
+    \end{align*}
+    Note that the derivative exists as a finite number in $(0, 1)$. And it can be shown that $f^\prime_{+}(0) = -\infty$ and $f^\prime_{-}(1) = \infty$. Then Theorem~\ref{thm:13} tells us $f^\prime$ takes all the real numbers in $(0, 1)$. See Figure~\ref{fig:5}.
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.2]{figures/graph-006.png}
+        \caption{Left: original function. Right: its derivative.}
+        \label{fig:5}
+    \end{figure}
+
+    \begin{note}
+        Theoretically, the graph of $f^\prime$ in Figure~\ref{fig:5} will tend to $-\infty$ and $\infty$ as $x$ approaches $0$ and $1$, respectively. The reason why the absolute values of the derivatives near the endpoints shown in the graph are only about $3000$ is because of the limited computational precision of the computer.
+    \end{note}
+\end{example}
+
+%------------------------------
+
+\par By Theorem~\ref{thm:10}, we know a function is strictly increasing if its derivative is always positive, and it is strictly decreasing if its derivative is always negative. Suppose now we only know that $f^\prime$ is nonzero in some open interval, what can we conclude? Thanks to the intermediate value theorem, or Darboux's theorem, $f^\prime$ is either always positive or always negative. Hence, we can conclude that $f$ must be strictly monotonic. 
+
+\begin{theorem}
+    Suppose $f$ has a derivative (finite or infinite) in $(a, b)$, and is continuous at endpoints $a$ and $b$. If $f^\prime(x) \neq 0 \; \forall x \in (a, b)$, then $f$ is strictly monotonic on $[a, b]$.
+\end{theorem}
+
+\begin{proof}
+    Pick a point $x_1 \in (a, b)$. Suppose $f^\prime(x_0) > 0$. Let $x_0$ be fixed, and choose an arbitrary point $x \in (a, b)$ other than $x_0$. We claim that $f^\prime(x) > 0$. Otherwise, if $f^\prime(x) < 0$, then by Theorem~\ref{thm:13}, there exists some point $c$ in between $x_0$ and $x$ such that $f^\prime(c) = 0$, which contradicts the given condition that $f^\prime$ is nonzero in $(a, b)$. In this case, we have $f^\prime(x) > 0 \; \forall x \in (a, b)$. It then follows from Theorem~\ref{thm:10} that $f$ is strictly increasing on $[a, b]$.
+
+    \par If $f^\prime(x_0) < 0$, then a similar argument will show that $f$ is strictly decreasing on $[a, b]$.
+\end{proof}
+
+%------------------------------
+
+\par It is because the derivatives cannot have jump discontinuities that monotonic derivatives are necessarily continuous.
+
+\begin{theorem}
+    Suppose $f^\prime$ exits, and is monotonic in $(a, b)$. Then $f^\prime$ is continuous in $(a, b)$.
+\end{theorem}
+
+\begin{proof}
+    Without loss of generality, suppose that $f^\prime$ is increasing. We shall prove by contradiction. Assume that $f^\prime$ is discontinuous at $x = c \in (a, b)$. By Theorem~\ref{thm:15}, we have $f^\prime(c-)$ and $f^\prime(c+)$ both exist, and 
+    \begin{align*}
+        f^\prime(c-) \leq f(c) \leq f^\prime(c+)
+    \end{align*}
+    But because we assume $f^\prime$ is not continuous at $x = c$, it holds that 
+    \begin{align*}
+        f^\prime(c-) < f^\prime(c+)
+    \end{align*}
+    Let $[c-\delta, c+\delta]$ ($\delta > 0$) be a closed interval contained in $(a, b)$. We have 
+    \begin{align*}
+        f^\prime(c-\delta) \leq f^\prime(c-) < f^\prime(c+) \leq f^\prime(c+\delta)
+    \end{align*}
+    Let $k$ be a number in between $f^\prime(c-)$ and $ f^\prime(c+)$ other than $f^\prime(c)$. That is, 
+    \begin{align*}
+        f^\prime(c-) < k < f^\prime(c+) 
+        \quad \text{and} \quad 
+        k \neq f^\prime(c)
+    \end{align*}
+    
+    \par Applying Theorem~\ref{thm:13} to $f^\prime$ on $[c-\delta, c+\delta]$, we conclude that there exists $x_0 \in (c-\delta, c+\delta)$ such that $f^\prime(x_0) = k$. But since $f^\prime$ is increasing, $f^\prime(c-) < k = f^\prime(x_0)$ and $k \neq f^\prime(c)$, we have $x_0 > c$. On the other hand, because $ f^\prime(x_0) = k < f^\prime(c+) $ and $k \neq f^\prime(c)$, we have $x_0 < c$. This leads to a contradiction. 
+\end{proof}
 
 %------------------------------
 
