@@ -26,6 +26,8 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/admonition.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dataframe.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -119,15 +121,10 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Elementary Concepts
- </span>
-</p>
-<ul class="nav bd-sidenav">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Elementary%20Concepts/Topology/index.html">
-   Topology
+  <a class="reference internal" href="Limits%20and%20Continuity/index.html">
+   Limits and Continuity
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -136,20 +133,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Topology/Metric%20Spaces.html">
-     Metric Spaces
+    <a class="reference internal" href="Limits%20and%20Continuity/Limit%20of%20a%20Function.html">
+     Limit of a Function
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Topology/Compact%20Sets.html">
-     Compact Sets
+    <a class="reference internal" href="Limits%20and%20Continuity/Continuous%20Functions.html">
+     Continuous Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Limits%20and%20Continuity/Connectedness.html">
+     Connectedness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Limits%20and%20Continuity/Monotonic%20Functions.html">
+     Monotonic Functions
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/index.html">
-   Numerical Sequences and Series
+  <a class="reference internal" href="Differentiation/index.html">
+   Differentiation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -158,326 +165,46 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Convergent%20Sequences.html">
-     Convergent Sequences
+    <a class="reference internal" href="Differentiation/Definition%20of%20Derivative.html">
+     Definition of Derivative
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Euler%27s%20Number%20e.html">
-     Euler’s Number e
+    <a class="reference internal" href="Differentiation/Derivatives%20and%20Continuity.html">
+     Derivatives and Continuity
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/The%20Root%20and%20Ratio%20Tests.html">
-     The Root and Ratio Tests
+    <a class="reference internal" href="Differentiation/Computing%20Derivatives.html">
+     Computing Derivatives
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Power%20Series.html">
-     Power Series
+    <a class="reference internal" href="Differentiation/The%20Mean%20Value%20Theorem.html">
+     The Mean Value Theorem
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Addition%20and%20Multiplication%20of%20Series.html">
-     Addition and Multiplication of Series
+    <a class="reference internal" href="Differentiation/Intermediate%20Value%20Theorem.html">
+     Intermediate Value Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Differentiation/Taylor%27s%20Theorem.html">
+     Taylor’s Theorem
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Elementary%20Concepts/Functional%20Limits/index.html">
-   Functional Limits
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Functional%20Limits/Limits%20at%20Infinity.html">
-     Limits at Infinity
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Elementary%20Concepts/Differentiation/index.html">
-   Differentiation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Differentiation/Mean%20Value%20Theorems.html">
-     Mean Value Theorems
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/index.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Functions%20of%20Bounded%20Variation/index.html">
    Functions of Bounded Variation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/Definition%20of%20Functions%20of%20Bounded%20Variation.html">
-     Definition of Functions of Bounded Variation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/Total%20Variation.html">
-     Total Variation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/Additive%20Property%20of%20Total%20Variation.html">
-     Additive Property of Total Variation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html">
-     Characterization of Functions of Bounded Variation
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/index.html">
-   The Riemann-Stieltjes Integral
+ <li class="toctree-l1">
+  <a class="reference internal" href="Riemann-Stieltjes%20Integral/index.html">
+   Riemann-Stieltjes Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">
-     Definition of the Riemann-Stieltjes Integral
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Linear%20Properties.html">
-     Linear Properties
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Integration%20by%20Parts.html">
-     Integration by Parts
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Change%20of%20Variables.html">
-     Change of Variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Monotonically%20Increasing%20Integrators.html">
-     Monotonically Increasing Integrators
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Integrators%20of%20Bounded%20Variation.html">
-     Integrators of Bounded Variation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Existence%20of%20Riemann-Stieltjes%20Integrals.html">
-     Existence of Riemann-Stieltjes Integrals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Mean%20Value%20Theorem%20for%20Riemann-Stieltjes%20Integrals.html">
-     Mean Value Theorem for Riemann-Stieltjes Integrals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Integration%20and%20Differentiation.html">
-     Integration and Differentiation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Elementary%20Concepts/The%20Reimann%20Integral/index.html">
-   The Reimann Integral
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/The%20Reimann%20Integral/Fundamental%20Theorem%20of%20Calculus.html">
-     Fundamental Theorem of Calculus
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/The%20Reimann%20Integral/Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html">
-     Reduction from Riemann-Stieltjes Integrals to Reimann Integrals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/The%20Reimann%20Integral/Change%20of%20Variables.html">
-     Change of Variables
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Elementary%20Concepts/Improper%20Integrals/index.html">
-   Improper Integrals
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Improper%20Integrals/Improper%20Integral%20of%20the%20First%20Kind.html">
-     Improper Integral of the First Kind
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Improper%20Integrals/Dirichlet%27s%20Test%20and%20Abel%27s%20Test%20for%20Improper%20Integrals.html">
-     Dirichlet’s Test and Abel’s Test for Improper Integrals
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/index.html">
-   Sequences and Series of Functions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Discussion%20of%20Main%20Problem.html">
-     Discussion of Main Problem
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html">
-     Uniform Convergence
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html">
-     Uniform Convergence and Continuity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Integration.html">
-     Uniform Convergence and Integration
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Differentiation.html">
-     Uniform Convergence and Differentiation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Elementary%20Concepts/Some%20Special%20Functions/index.html">
-   Some Special Functions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Some%20Special%20Functions/Power%20Series.html">
-     Power Series
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Some%20Special%20Functions/Exponential%20Function.html">
-     Exponential Function
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Some%20Special%20Functions/Logarithm.html">
-     Logarithm
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Elementary%20Concepts/Some%20Special%20Functions/Power%20Function.html">
-     Power Function
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Multivariable Mathematical Analysis
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/index.html">
-   Functions of Several Variables
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Linear%20Transformations.html">
-     Linear Transformations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Differentiation.html">
-     Differentiation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Mean%20Value%20Theorem.html">
-     Mean Value Theorem
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Continuously%20Differentiable%20Functions.html">
-     Continuously Differentiable Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Contraction%20Principle.html">
-     Contraction Principle
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Inverse%20Function%20Theorem.html">
-     Inverse Function Theorem
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Implicit%20Function%20Theorem.html">
-     Implicit Function Theorem
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -616,61 +343,28 @@ title="Open an issue"
    <h1>Proof Index</h1>
 
    <div class="modindex-jumpbox">
-   <a href="#cap-cor:2"><strong>cor:2</strong></a> | 
-   <a href="#cap-corollary-4"><strong>corollary-4</strong></a> | 
-   <a href="#cap-def:1"><strong>def:1</strong></a> | 
-   <a href="#cap-def:2"><strong>def:2</strong></a> | 
-   <a href="#cap-def:3"><strong>def:3</strong></a> | 
-   <a href="#cap-def:4"><strong>def:4</strong></a> | 
-   <a href="#cap-def:5"><strong>def:5</strong></a> | 
-   <a href="#cap-def:6"><strong>def:6</strong></a> | 
-   <a href="#cap-def:7"><strong>def:7</strong></a> | 
-   <a href="#cap-def:8"><strong>def:8</strong></a> | 
+   <a href="#cap-cor:1"><strong>cor:1</strong></a> | 
+   <a href="#cap-corollary-14"><strong>corollary-14</strong></a> | 
    <a href="#cap-definition-0"><strong>definition-0</strong></a> | 
-   <a href="#cap-definition-1"><strong>definition-1</strong></a> | 
-   <a href="#cap-definition-11"><strong>definition-11</strong></a> | 
    <a href="#cap-definition-2"><strong>definition-2</strong></a> | 
-   <a href="#cap-definition-6"><strong>definition-6</strong></a> | 
-   <a href="#cap-definition-8"><strong>definition-8</strong></a> | 
    <a href="#cap-eg:1"><strong>eg:1</strong></a> | 
    <a href="#cap-eg:2"><strong>eg:2</strong></a> | 
-   <a href="#cap-eg:3"><strong>eg:3</strong></a> | 
-   <a href="#cap-eg:4"><strong>eg:4</strong></a> | 
    <a href="#cap-example-0"><strong>example-0</strong></a> | 
-   <a href="#cap-example-2"><strong>example-2</strong></a> | 
+   <a href="#cap-example-1"><strong>example-1</strong></a> | 
    <a href="#cap-example-3"><strong>example-3</strong></a> | 
    <a href="#cap-example-5"><strong>example-5</strong></a> | 
    <a href="#cap-example-6"><strong>example-6</strong></a> | 
-   <a href="#cap-example-7"><strong>example-7</strong></a> | 
-   <a href="#cap-lem:1"><strong>lem:1</strong></a> | 
-   <a href="#cap-lem:2"><strong>lem:2</strong></a> | 
-   <a href="#cap-lem:3"><strong>lem:3</strong></a> | 
-   <a href="#cap-lemma-2"><strong>lemma-2</strong></a> | 
+   <a href="#cap-example-8"><strong>example-8</strong></a> | 
    <a href="#cap-pro:1"><strong>pro:1</strong></a> | 
    <a href="#cap-pro:2"><strong>pro:2</strong></a> | 
-   <a href="#cap-pro:3"><strong>pro:3</strong></a> | 
-   <a href="#cap-pro:4"><strong>pro:4</strong></a> | 
-   <a href="#cap-pro:5"><strong>pro:5</strong></a> | 
-   <a href="#cap-pro:6"><strong>pro:6</strong></a> | 
-   <a href="#cap-pro:7"><strong>pro:7</strong></a> | 
-   <a href="#cap-proposition-1"><strong>proposition-1</strong></a> | 
-   <a href="#cap-proposition-4"><strong>proposition-4</strong></a> | 
-   <a href="#cap-proposition-5"><strong>proposition-5</strong></a> | 
    <a href="#cap-remark-1"><strong>remark-1</strong></a> | 
-   <a href="#cap-remark-10"><strong>remark-10</strong></a> | 
-   <a href="#cap-remark-12"><strong>remark-12</strong></a> | 
-   <a href="#cap-remark-14"><strong>remark-14</strong></a> | 
-   <a href="#cap-remark-2"><strong>remark-2</strong></a> | 
+   <a href="#cap-remark-11"><strong>remark-11</strong></a> | 
    <a href="#cap-remark-3"><strong>remark-3</strong></a> | 
    <a href="#cap-remark-4"><strong>remark-4</strong></a> | 
-   <a href="#cap-remark-5"><strong>remark-5</strong></a> | 
-   <a href="#cap-remark-7"><strong>remark-7</strong></a> | 
    <a href="#cap-theorem-0"><strong>theorem-0</strong></a> | 
-   <a href="#cap-theorem-1"><strong>theorem-1</strong></a> | 
-   <a href="#cap-theorem-13"><strong>theorem-13</strong></a> | 
-   <a href="#cap-theorem-3"><strong>theorem-3</strong></a> | 
+   <a href="#cap-theorem-12"><strong>theorem-12</strong></a> | 
+   <a href="#cap-theorem-4"><strong>theorem-4</strong></a> | 
    <a href="#cap-theorem-5"><strong>theorem-5</strong></a> | 
-   <a href="#cap-theorem-8"><strong>theorem-8</strong></a> | 
    <a href="#cap-thm:1"><strong>thm:1</strong></a> | 
    <a href="#cap-thm:10"><strong>thm:10</strong></a> | 
    <a href="#cap-thm:11"><strong>thm:11</strong></a> | 
@@ -680,40 +374,9 @@ title="Open an issue"
    <a href="#cap-thm:15"><strong>thm:15</strong></a> | 
    <a href="#cap-thm:16"><strong>thm:16</strong></a> | 
    <a href="#cap-thm:17"><strong>thm:17</strong></a> | 
-   <a href="#cap-thm:18"><strong>thm:18</strong></a> | 
-   <a href="#cap-thm:19"><strong>thm:19</strong></a> | 
    <a href="#cap-thm:2"><strong>thm:2</strong></a> | 
-   <a href="#cap-thm:20"><strong>thm:20</strong></a> | 
-   <a href="#cap-thm:21"><strong>thm:21</strong></a> | 
-   <a href="#cap-thm:22"><strong>thm:22</strong></a> | 
-   <a href="#cap-thm:23"><strong>thm:23</strong></a> | 
-   <a href="#cap-thm:24"><strong>thm:24</strong></a> | 
-   <a href="#cap-thm:25"><strong>thm:25</strong></a> | 
-   <a href="#cap-thm:26"><strong>thm:26</strong></a> | 
-   <a href="#cap-thm:27"><strong>thm:27</strong></a> | 
-   <a href="#cap-thm:28"><strong>thm:28</strong></a> | 
-   <a href="#cap-thm:29"><strong>thm:29</strong></a> | 
    <a href="#cap-thm:3"><strong>thm:3</strong></a> | 
-   <a href="#cap-thm:30"><strong>thm:30</strong></a> | 
-   <a href="#cap-thm:31"><strong>thm:31</strong></a> | 
-   <a href="#cap-thm:32"><strong>thm:32</strong></a> | 
-   <a href="#cap-thm:33"><strong>thm:33</strong></a> | 
-   <a href="#cap-thm:34"><strong>thm:34</strong></a> | 
-   <a href="#cap-thm:35"><strong>thm:35</strong></a> | 
-   <a href="#cap-thm:36"><strong>thm:36</strong></a> | 
-   <a href="#cap-thm:37"><strong>thm:37</strong></a> | 
-   <a href="#cap-thm:38"><strong>thm:38</strong></a> | 
-   <a href="#cap-thm:39"><strong>thm:39</strong></a> | 
    <a href="#cap-thm:4"><strong>thm:4</strong></a> | 
-   <a href="#cap-thm:40"><strong>thm:40</strong></a> | 
-   <a href="#cap-thm:41"><strong>thm:41</strong></a> | 
-   <a href="#cap-thm:42"><strong>thm:42</strong></a> | 
-   <a href="#cap-thm:43"><strong>thm:43</strong></a> | 
-   <a href="#cap-thm:44"><strong>thm:44</strong></a> | 
-   <a href="#cap-thm:45"><strong>thm:45</strong></a> | 
-   <a href="#cap-thm:46"><strong>thm:46</strong></a> | 
-   <a href="#cap-thm:47"><strong>thm:47</strong></a> | 
-   <a href="#cap-thm:48"><strong>thm:48</strong></a> | 
    <a href="#cap-thm:5"><strong>thm:5</strong></a> | 
    <a href="#cap-thm:6"><strong>thm:6</strong></a> | 
    <a href="#cap-thm:7"><strong>thm:7</strong></a> | 
@@ -723,108 +386,28 @@ title="Open an issue"
 
    <table class="indextable modindextable">
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-cor:2"><td></td><td>
-       <strong>cor:2</strong></td><td></td></tr>
+     <tr class="cap" id="cap-cor:1"><td></td><td>
+       <strong>cor:1</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Power%20Series.html#cor:2"><code class="xref">cor:2</code></a> <em>(Elementary Concepts/Some Special Functions/Power Series)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#cor:1"><code class="xref">cor:1</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>corollary</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-corollary-4"><td></td><td>
-       <strong>corollary-4</strong></td><td></td></tr>
+     <tr class="cap" id="cap-corollary-14"><td></td><td>
+       <strong>corollary-14</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Addition%20and%20Multiplication%20of%20Series.html#corollary-4"><code class="xref">corollary-4</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/Addition and Multiplication of Series)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#corollary-14"><code class="xref">corollary-14</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>corollary</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:1"><td></td><td>
-       <strong>def:1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Discussion%20of%20Main%20Problem.html#def:1"><code class="xref">def:1</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Discussion of Main Problem)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:2"><td></td><td>
-       <strong>def:2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Discussion%20of%20Main%20Problem.html#def:2"><code class="xref">def:2</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Discussion of Main Problem)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:3"><td></td><td>
-       <strong>def:3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html#def:3"><code class="xref">def:3</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:4"><td></td><td>
-       <strong>def:4</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html#def:4"><code class="xref">def:4</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:5"><td></td><td>
-       <strong>def:5</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#def:5"><code class="xref">def:5</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:6"><td></td><td>
-       <strong>def:6</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Exponential%20Function.html#def:6"><code class="xref">def:6</code></a> <em>(Elementary Concepts/Some Special Functions/Exponential Function)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:7"><td></td><td>
-       <strong>def:7</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:7"><code class="xref">def:7</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Definition of the Riemann-Stieltjes Integral)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:8"><td></td><td>
-       <strong>def:8</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/Additive%20Property%20of%20Total%20Variation.html#def:8"><code class="xref">def:8</code></a> <em>(Elementary Concepts/Functions of Bounded Variation/Additive Property of Total Variation)</em></td><td>
-       <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-definition-0"><td></td><td>
        <strong>definition-0</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Topology/Metric%20Spaces.html#definition-0"><code class="xref">definition-0</code></a> <em>(Elementary Concepts/Topology/Metric Spaces)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-definition-1"><td></td><td>
-       <strong>definition-1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Differentiation.html#definition-1"><code class="xref">definition-1</code></a> <em>(Multivariable Mathematical Analysis/Functions of Several Variables/Differentiation)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-definition-11"><td></td><td>
-       <strong>definition-11</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#definition-11"><code class="xref">definition-11</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
+       <a href="Differentiation/Definition%20of%20Derivative.html#definition-0"><code class="xref">definition-0</code></a> <em>(Differentiation/Definition of Derivative)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-definition-2"><td></td><td>
@@ -832,23 +415,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Differentiation.html#definition-2"><code class="xref">definition-2</code></a> <em>(Multivariable Mathematical Analysis/Functions of Several Variables/Differentiation)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-definition-6"><td></td><td>
-       <strong>definition-6</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Exponential%20Function.html#definition-6"><code class="xref">definition-6</code></a> <em>(Elementary Concepts/Some Special Functions/Exponential Function)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-definition-8"><td></td><td>
-       <strong>definition-8</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#definition-8"><code class="xref">definition-8</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#definition-2"><code class="xref">definition-2</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-eg:1"><td></td><td>
@@ -856,7 +423,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#eg:1"><code class="xref">eg:1</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
+       <a href="Differentiation/Definition%20of%20Derivative.html#eg:1"><code class="xref">eg:1</code></a> <em>(Differentiation/Definition of Derivative)</em></td><td>
        <em>example</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-eg:2"><td></td><td>
@@ -864,23 +431,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Addition%20and%20Multiplication%20of%20Series.html#eg:2"><code class="xref">eg:2</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/Addition and Multiplication of Series)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:3"><td></td><td>
-       <strong>eg:3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Power%20Series.html#eg:3"><code class="xref">eg:3</code></a> <em>(Elementary Concepts/Some Special Functions/Power Series)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:4"><td></td><td>
-       <strong>eg:4</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/Definition%20of%20Functions%20of%20Bounded%20Variation.html#eg:4"><code class="xref">eg:4</code></a> <em>(Elementary Concepts/Functions of Bounded Variation/Definition of Functions of Bounded Variation)</em></td><td>
+       <a href="Differentiation/Definition%20of%20Derivative.html#eg:2"><code class="xref">eg:2</code></a> <em>(Differentiation/Definition of Derivative)</em></td><td>
        <em>example</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-example-0"><td></td><td>
@@ -888,15 +439,15 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Integrators%20of%20Bounded%20Variation.html#example-0"><code class="xref">example-0</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Integrators of Bounded Variation)</em></td><td>
+       <a href="Differentiation/Taylor%27s%20Theorem.html#example-0"><code class="xref">example-0</code></a> <em>(Differentiation/Taylor&#39;s Theorem)</em></td><td>
        <em>example</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-example-2"><td></td><td>
-       <strong>example-2</strong></td><td></td></tr>
+     <tr class="cap" id="cap-example-1"><td></td><td>
+       <strong>example-1</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Integration%20and%20Differentiation.html#example-2"><code class="xref">example-2</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Integration and Differentiation)</em></td><td>
+       <a href="Differentiation/Intermediate%20Value%20Theorem.html#example-1"><code class="xref">example-1</code></a> <em>(Differentiation/Intermediate Value Theorem)</em></td><td>
        <em>example</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-example-3"><td></td><td>
@@ -904,7 +455,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Differentiation.html#example-3"><code class="xref">example-3</code></a> <em>(Multivariable Mathematical Analysis/Functions of Several Variables/Differentiation)</em></td><td>
+       <a href="Differentiation/Intermediate%20Value%20Theorem.html#example-3"><code class="xref">example-3</code></a> <em>(Differentiation/Intermediate Value Theorem)</em></td><td>
        <em>example</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-example-5"><td></td><td>
@@ -912,7 +463,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Differentiation.html#example-5"><code class="xref">example-5</code></a> <em>(Multivariable Mathematical Analysis/Functions of Several Variables/Differentiation)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#example-5"><code class="xref">example-5</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>example</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-example-6"><td></td><td>
@@ -920,55 +471,23 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#example-6"><code class="xref">example-6</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#example-6"><code class="xref">example-6</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>example</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-example-7"><td></td><td>
-       <strong>example-7</strong></td><td></td></tr>
+     <tr class="cap" id="cap-example-8"><td></td><td>
+       <strong>example-8</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#example-7"><code class="xref">example-7</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#example-8"><code class="xref">example-8</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lem:1"><td></td><td>
-       <strong>lem:1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Euler%27s%20Number%20e.html#lem:1"><code class="xref">lem:1</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/Euler&#39;s Number e)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lem:2"><td></td><td>
-       <strong>lem:2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Power%20Series.html#lem:2"><code class="xref">lem:2</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/Power Series)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lem:3"><td></td><td>
-       <strong>lem:3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html#lem:3"><code class="xref">lem:3</code></a> <em>(Elementary Concepts/Functions of Bounded Variation/Characterization of Functions of Bounded Variation)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lemma-2"><td></td><td>
-       <strong>lemma-2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Linear%20Properties.html#lemma-2"><code class="xref">lemma-2</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Linear Properties)</em></td><td>
-       <em>lemma</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-pro:1"><td></td><td>
        <strong>pro:1</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Addition%20and%20Multiplication%20of%20Series.html#pro:1"><code class="xref">pro:1</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/Addition and Multiplication of Series)</em></td><td>
+       <a href="Differentiation/Definition%20of%20Derivative.html#pro:1"><code class="xref">pro:1</code></a> <em>(Differentiation/Definition of Derivative)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-pro:2"><td></td><td>
@@ -976,71 +495,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Functional%20Limits/Limits%20at%20Infinity.html#pro:2"><code class="xref">pro:2</code></a> <em>(Elementary Concepts/Functional Limits/Limits at Infinity)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-pro:3"><td></td><td>
-       <strong>pro:3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Exponential%20Function.html#pro:3"><code class="xref">pro:3</code></a> <em>(Elementary Concepts/Some Special Functions/Exponential Function)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-pro:4"><td></td><td>
-       <strong>pro:4</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Exponential%20Function.html#pro:4"><code class="xref">pro:4</code></a> <em>(Elementary Concepts/Some Special Functions/Exponential Function)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-pro:5"><td></td><td>
-       <strong>pro:5</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Exponential%20Function.html#pro:5"><code class="xref">pro:5</code></a> <em>(Elementary Concepts/Some Special Functions/Exponential Function)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-pro:6"><td></td><td>
-       <strong>pro:6</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Functional%20Limits/Limits%20at%20Infinity.html#pro:6"><code class="xref">pro:6</code></a> <em>(Elementary Concepts/Functional Limits/Limits at Infinity)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-pro:7"><td></td><td>
-       <strong>pro:7</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#pro:7"><code class="xref">pro:7</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Definition of the Riemann-Stieltjes Integral)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-proposition-1"><td></td><td>
-       <strong>proposition-1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Functional%20Limits/Limits%20at%20Infinity.html#proposition-1"><code class="xref">proposition-1</code></a> <em>(Elementary Concepts/Functional Limits/Limits at Infinity)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-proposition-4"><td></td><td>
-       <strong>proposition-4</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Differentiation.html#proposition-4"><code class="xref">proposition-4</code></a> <em>(Multivariable Mathematical Analysis/Functions of Several Variables/Differentiation)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-proposition-5"><td></td><td>
-       <strong>proposition-5</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Exponential%20Function.html#proposition-5"><code class="xref">proposition-5</code></a> <em>(Elementary Concepts/Some Special Functions/Exponential Function)</em></td><td>
+       <a href="Limits%20and%20Continuity/Limit%20of%20a%20Function.html#pro:2"><code class="xref">pro:2</code></a> <em>(Limits and Continuity/Limit of a Function)</em></td><td>
        <em>proposition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-remark-1"><td></td><td>
@@ -1048,39 +503,15 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Mean%20Value%20Theorem.html#remark-1"><code class="xref">remark-1</code></a> <em>(Multivariable Mathematical Analysis/Functions of Several Variables/Mean Value Theorem)</em></td><td>
+       <a href="Differentiation/Computing%20Derivatives.html#remark-1"><code class="xref">remark-1</code></a> <em>(Differentiation/Computing Derivatives)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-remark-10"><td></td><td>
-       <strong>remark-10</strong></td><td></td></tr>
+     <tr class="cap" id="cap-remark-11"><td></td><td>
+       <strong>remark-11</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#remark-10"><code class="xref">remark-10</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
-       <em>remark</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-remark-12"><td></td><td>
-       <strong>remark-12</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#remark-12"><code class="xref">remark-12</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
-       <em>remark</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-remark-14"><td></td><td>
-       <strong>remark-14</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#remark-14"><code class="xref">remark-14</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
-       <em>remark</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-remark-2"><td></td><td>
-       <strong>remark-2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Exponential%20Function.html#remark-2"><code class="xref">remark-2</code></a> <em>(Elementary Concepts/Some Special Functions/Exponential Function)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#remark-11"><code class="xref">remark-11</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-remark-3"><td></td><td>
@@ -1088,7 +519,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#remark-3"><code class="xref">remark-3</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
+       <a href="Differentiation/Taylor%27s%20Theorem.html#remark-3"><code class="xref">remark-3</code></a> <em>(Differentiation/Taylor&#39;s Theorem)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-remark-4"><td></td><td>
@@ -1096,23 +527,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html#remark-4"><code class="xref">remark-4</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence)</em></td><td>
-       <em>remark</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-remark-5"><td></td><td>
-       <strong>remark-5</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Reimann%20Integral/Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html#remark-5"><code class="xref">remark-5</code></a> <em>(Elementary Concepts/The Reimann Integral/Reduction from Riemann-Stieltjes Integrals to Reimann Integrals)</em></td><td>
-       <em>remark</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-remark-7"><td></td><td>
-       <strong>remark-7</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Euler%27s%20Number%20e.html#remark-7"><code class="xref">remark-7</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/Euler&#39;s Number e)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#remark-4"><code class="xref">remark-4</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>remark</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-theorem-0"><td></td><td>
@@ -1120,31 +535,23 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Existence%20of%20Riemann-Stieltjes%20Integrals.html#theorem-0"><code class="xref">theorem-0</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Existence of Riemann-Stieltjes Integrals)</em></td><td>
+       <a href="Differentiation/Computing%20Derivatives.html#theorem-0"><code class="xref">theorem-0</code></a> <em>(Differentiation/Computing Derivatives)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-1"><td></td><td>
-       <strong>theorem-1</strong></td><td></td></tr>
+     <tr class="cap" id="cap-theorem-12"><td></td><td>
+       <strong>theorem-12</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Integrators%20of%20Bounded%20Variation.html#theorem-1"><code class="xref">theorem-1</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Integrators of Bounded Variation)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#theorem-12"><code class="xref">theorem-12</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-13"><td></td><td>
-       <strong>theorem-13</strong></td><td></td></tr>
+     <tr class="cap" id="cap-theorem-4"><td></td><td>
+       <strong>theorem-4</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#theorem-13"><code class="xref">theorem-13</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-3"><td></td><td>
-       <strong>theorem-3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Power%20Series.html#theorem-3"><code class="xref">theorem-3</code></a> <em>(Elementary Concepts/Some Special Functions/Power Series)</em></td><td>
+       <a href="Differentiation/Intermediate%20Value%20Theorem.html#theorem-4"><code class="xref">theorem-4</code></a> <em>(Differentiation/Intermediate Value Theorem)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-theorem-5"><td></td><td>
@@ -1152,15 +559,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#theorem-5"><code class="xref">theorem-5</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-8"><td></td><td>
-       <strong>theorem-8</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Euler%27s%20Number%20e.html#theorem-8"><code class="xref">theorem-8</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/Euler&#39;s Number e)</em></td><td>
+       <a href="Differentiation/Intermediate%20Value%20Theorem.html#theorem-5"><code class="xref">theorem-5</code></a> <em>(Differentiation/Intermediate Value Theorem)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:1"><td></td><td>
@@ -1168,7 +567,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Integration%20and%20Differentiation.html#thm:1"><code class="xref">thm:1</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Integration and Differentiation)</em></td><td>
+       <a href="Differentiation/Derivatives%20and%20Continuity.html#thm:1"><code class="xref">thm:1</code></a> <em>(Differentiation/Derivatives and Continuity)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:10"><td></td><td>
@@ -1176,7 +575,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Topology/Compact%20Sets.html#thm:10"><code class="xref">thm:10</code></a> <em>(Elementary Concepts/Topology/Compact Sets)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:10"><code class="xref">thm:10</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:11"><td></td><td>
@@ -1184,7 +583,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#thm:11"><code class="xref">thm:11</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
+       <a href="Limits%20and%20Continuity/Connectedness.html#thm:11"><code class="xref">thm:11</code></a> <em>(Limits and Continuity/Connectedness)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:12"><td></td><td>
@@ -1192,7 +591,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/The%20Root%20and%20Ratio%20Tests.html#thm:12"><code class="xref">thm:12</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/The Root and Ratio Tests)</em></td><td>
+       <a href="Differentiation/Intermediate%20Value%20Theorem.html#thm:12"><code class="xref">thm:12</code></a> <em>(Differentiation/Intermediate Value Theorem)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:13"><td></td><td>
@@ -1200,7 +599,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Power%20Series.html#thm:13"><code class="xref">thm:13</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/Power Series)</em></td><td>
+       <a href="Differentiation/Intermediate%20Value%20Theorem.html#thm:13"><code class="xref">thm:13</code></a> <em>(Differentiation/Intermediate Value Theorem)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:14"><td></td><td>
@@ -1208,7 +607,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html#thm:14"><code class="xref">thm:14</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:14"><code class="xref">thm:14</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:15"><td></td><td>
@@ -1216,7 +615,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Addition%20and%20Multiplication%20of%20Series.html#thm:15"><code class="xref">thm:15</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/Addition and Multiplication of Series)</em></td><td>
+       <a href="Limits%20and%20Continuity/Monotonic%20Functions.html#thm:15"><code class="xref">thm:15</code></a> <em>(Limits and Continuity/Monotonic Functions)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:16"><td></td><td>
@@ -1224,7 +623,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Power%20Series.html#thm:16"><code class="xref">thm:16</code></a> <em>(Elementary Concepts/Some Special Functions/Power Series)</em></td><td>
+       <a href="Differentiation/Taylor%27s%20Theorem.html#thm:16"><code class="xref">thm:16</code></a> <em>(Differentiation/Taylor&#39;s Theorem)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:17"><td></td><td>
@@ -1232,23 +631,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Addition%20and%20Multiplication%20of%20Series.html#thm:17"><code class="xref">thm:17</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/Addition and Multiplication of Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:18"><td></td><td>
-       <strong>thm:18</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Power%20Series.html#thm:18"><code class="xref">thm:18</code></a> <em>(Elementary Concepts/Some Special Functions/Power Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:19"><td></td><td>
-       <strong>thm:19</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Some%20Special%20Functions/Power%20Series.html#thm:19"><code class="xref">thm:19</code></a> <em>(Elementary Concepts/Some Special Functions/Power Series)</em></td><td>
+       <a href="Differentiation/Taylor%27s%20Theorem.html#thm:17"><code class="xref">thm:17</code></a> <em>(Differentiation/Taylor&#39;s Theorem)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:2"><td></td><td>
@@ -1256,87 +639,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Integration%20and%20Differentiation.html#thm:2"><code class="xref">thm:2</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Integration and Differentiation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:20"><td></td><td>
-       <strong>thm:20</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Differentiation.html#thm:20"><code class="xref">thm:20</code></a> <em>(Multivariable Mathematical Analysis/Functions of Several Variables/Differentiation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:21"><td></td><td>
-       <strong>thm:21</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Multivariable%20Mathematical%20Analysis/Functions%20of%20Several%20Variables/Mean%20Value%20Theorem.html#thm:21"><code class="xref">thm:21</code></a> <em>(Multivariable Mathematical Analysis/Functions of Several Variables/Mean Value Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:22"><td></td><td>
-       <strong>thm:22</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Improper%20Integrals/Improper%20Integral%20of%20the%20First%20Kind.html#thm:22"><code class="xref">thm:22</code></a> <em>(Elementary Concepts/Improper Integrals/Improper Integral of the First Kind)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:23"><td></td><td>
-       <strong>thm:23</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Convergent%20Sequences.html#thm:23"><code class="xref">thm:23</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/Convergent Sequences)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:24"><td></td><td>
-       <strong>thm:24</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/The%20Root%20and%20Ratio%20Tests.html#thm:24"><code class="xref">thm:24</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/The Root and Ratio Tests)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:25"><td></td><td>
-       <strong>thm:25</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Improper%20Integrals/Improper%20Integral%20of%20the%20First%20Kind.html#thm:25"><code class="xref">thm:25</code></a> <em>(Elementary Concepts/Improper Integrals/Improper Integral of the First Kind)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:26"><td></td><td>
-       <strong>thm:26</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Monotonically%20Increasing%20Integrators.html#thm:26"><code class="xref">thm:26</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Monotonically Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:27"><td></td><td>
-       <strong>thm:27</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Mean%20Value%20Theorem%20for%20Riemann-Stieltjes%20Integrals.html#thm:27"><code class="xref">thm:27</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Mean Value Theorem for Riemann-Stieltjes Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:28"><td></td><td>
-       <strong>thm:28</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Mean%20Value%20Theorem%20for%20Riemann-Stieltjes%20Integrals.html#thm:28"><code class="xref">thm:28</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Mean Value Theorem for Riemann-Stieltjes Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:29"><td></td><td>
-       <strong>thm:29</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/Definition%20of%20Functions%20of%20Bounded%20Variation.html#thm:29"><code class="xref">thm:29</code></a> <em>(Elementary Concepts/Functions of Bounded Variation/Definition of Functions of Bounded Variation)</em></td><td>
+       <a href="Differentiation/Derivatives%20and%20Continuity.html#thm:2"><code class="xref">thm:2</code></a> <em>(Differentiation/Derivatives and Continuity)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:3"><td></td><td>
@@ -1344,87 +647,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Integration%20and%20Differentiation.html#thm:3"><code class="xref">thm:3</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Integration and Differentiation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:30"><td></td><td>
-       <strong>thm:30</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/Definition%20of%20Functions%20of%20Bounded%20Variation.html#thm:30"><code class="xref">thm:30</code></a> <em>(Elementary Concepts/Functions of Bounded Variation/Definition of Functions of Bounded Variation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:31"><td></td><td>
-       <strong>thm:31</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/Total%20Variation.html#thm:31"><code class="xref">thm:31</code></a> <em>(Elementary Concepts/Functions of Bounded Variation/Total Variation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:32"><td></td><td>
-       <strong>thm:32</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/Additive%20Property%20of%20Total%20Variation.html#thm:32"><code class="xref">thm:32</code></a> <em>(Elementary Concepts/Functions of Bounded Variation/Additive Property of Total Variation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:33"><td></td><td>
-       <strong>thm:33</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html#thm:33"><code class="xref">thm:33</code></a> <em>(Elementary Concepts/Functions of Bounded Variation/Characterization of Functions of Bounded Variation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:34"><td></td><td>
-       <strong>thm:34</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Monotonically%20Increasing%20Integrators.html#thm:34"><code class="xref">thm:34</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Monotonically Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:35"><td></td><td>
-       <strong>thm:35</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Linear%20Properties.html#thm:35"><code class="xref">thm:35</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Linear Properties)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:36"><td></td><td>
-       <strong>thm:36</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Integration%20by%20Parts.html#thm:36"><code class="xref">thm:36</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Integration by Parts)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:37"><td></td><td>
-       <strong>thm:37</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Monotonically%20Increasing%20Integrators.html#thm:37"><code class="xref">thm:37</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Monotonically Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:38"><td></td><td>
-       <strong>thm:38</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Monotonically%20Increasing%20Integrators.html#thm:38"><code class="xref">thm:38</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Monotonically Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:39"><td></td><td>
-       <strong>thm:39</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Monotonically%20Increasing%20Integrators.html#thm:39"><code class="xref">thm:39</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Monotonically Increasing Integrators)</em></td><td>
+       <a href="Limits%20and%20Continuity/Continuous%20Functions.html#thm:3"><code class="xref">thm:3</code></a> <em>(Limits and Continuity/Continuous Functions)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:4"><td></td><td>
@@ -1432,79 +655,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Monotonically%20Increasing%20Integrators.html#thm:4"><code class="xref">thm:4</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Monotonically Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:40"><td></td><td>
-       <strong>thm:40</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Linear%20Properties.html#thm:40"><code class="xref">thm:40</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Linear Properties)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:41"><td></td><td>
-       <strong>thm:41</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Monotonically%20Increasing%20Integrators.html#thm:41"><code class="xref">thm:41</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Monotonically Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:42"><td></td><td>
-       <strong>thm:42</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Integration%20and%20Differentiation.html#thm:42"><code class="xref">thm:42</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Integration and Differentiation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:43"><td></td><td>
-       <strong>thm:43</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Reimann%20Integral/Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html#thm:43"><code class="xref">thm:43</code></a> <em>(Elementary Concepts/The Reimann Integral/Reduction from Riemann-Stieltjes Integrals to Reimann Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:44"><td></td><td>
-       <strong>thm:44</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/Differentiation/Mean%20Value%20Theorems.html#thm:44"><code class="xref">thm:44</code></a> <em>(Elementary Concepts/Differentiation/Mean Value Theorems)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:45"><td></td><td>
-       <strong>thm:45</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Reimann%20Integral/Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html#thm:45"><code class="xref">thm:45</code></a> <em>(Elementary Concepts/The Reimann Integral/Reduction from Riemann-Stieltjes Integrals to Reimann Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:46"><td></td><td>
-       <strong>thm:46</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Reimann%20Integral/Reduction%20from%20Riemann-Stieltjes%20Integrals%20to%20Reimann%20Integrals.html#thm:46"><code class="xref">thm:46</code></a> <em>(Elementary Concepts/The Reimann Integral/Reduction from Riemann-Stieltjes Integrals to Reimann Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:47"><td></td><td>
-       <strong>thm:47</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Riemann-Stieltjes%20Integral/Change%20of%20Variables.html#thm:47"><code class="xref">thm:47</code></a> <em>(Elementary Concepts/The Riemann-Stieltjes Integral/Change of Variables)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:48"><td></td><td>
-       <strong>thm:48</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Elementary%20Concepts/The%20Reimann%20Integral/Fundamental%20Theorem%20of%20Calculus.html#thm:48"><code class="xref">thm:48</code></a> <em>(Elementary Concepts/The Reimann Integral/Fundamental Theorem of Calculus)</em></td><td>
+       <a href="Differentiation/Computing%20Derivatives.html#thm:4"><code class="xref">thm:4</code></a> <em>(Differentiation/Computing Derivatives)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:5"><td></td><td>
@@ -1512,7 +663,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Numerical%20Sequences%20and%20Series/Euler%27s%20Number%20e.html#thm:5"><code class="xref">thm:5</code></a> <em>(Elementary Concepts/Numerical Sequences and Series/Euler&#39;s Number e)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:5"><code class="xref">thm:5</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:6"><td></td><td>
@@ -1520,7 +671,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html#thm:6"><code class="xref">thm:6</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence)</em></td><td>
+       <a href="Limits%20and%20Continuity/Continuous%20Functions.html#thm:6"><code class="xref">thm:6</code></a> <em>(Limits and Continuity/Continuous Functions)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:7"><td></td><td>
@@ -1528,7 +679,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#thm:7"><code class="xref">thm:7</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:7"><code class="xref">thm:7</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:8"><td></td><td>
@@ -1536,7 +687,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html#thm:8"><code class="xref">thm:8</code></a> <em>(Elementary Concepts/Sequences and Series of Functions/Uniform Convergence)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:8"><code class="xref">thm:8</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:9"><td></td><td>
@@ -1544,7 +695,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Elementary%20Concepts/Topology/Compact%20Sets.html#thm:9"><code class="xref">thm:9</code></a> <em>(Elementary Concepts/Topology/Compact Sets)</em></td><td>
+       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:9"><code class="xref">thm:9</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>theorem</em></td></tr>
    </table>
 

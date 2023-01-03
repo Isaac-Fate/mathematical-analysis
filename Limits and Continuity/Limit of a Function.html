@@ -5,57 +5,60 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to This Notebook on Mathematical Analysis &#8212; Mathematical Analysis</title>
+    <title>Limit of a Function &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/admonition.css" />
-    <link rel="stylesheet" type="text/css" href="_static/dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonition.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="_static/icon.jpg"/>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Limits and Continuity" href="Limits%20and%20Continuity/index.html" />
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"R": "\\mathbb{R}", "C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Z": "\\mathbb{Z}", "Q": "\\mathbb{Q}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"], "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "d": ["\\mathrm{d}"], "v": ["\\mathbf{#1}", 1], "Span": ["\\mathop{\\mathrm{span}}"], "im": ["\\mathop{\\mathrm{im}}"], "ker": ["\\mathop{\\mathrm{ker}}"], "row": ["\\mathop{\\mathrm{row}}"], "col": ["\\mathop{\\mathrm{col}}"]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../_static/icon.jpg"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Continuous Functions" href="Continuous%20Functions.html" />
+    <link rel="prev" title="Limits and Continuity" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -90,66 +93,66 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="bd-sidebar noprint" id="site-navigation">
     <div class="bd-sidebar__content">
         <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="_static/icon.jpg" class="logo" alt="logo">
+      <img src="../_static/icon.jpg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Mathematical Analysis</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
                     Welcome to This Notebook on Mathematical Analysis
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Limits%20and%20Continuity/index.html">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    Limits and Continuity
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Limits%20and%20Continuity/Limit%20of%20a%20Function.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Limit of a Function
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Limits%20and%20Continuity/Continuous%20Functions.html">
+    <a class="reference internal" href="Continuous%20Functions.html">
      Continuous Functions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Limits%20and%20Continuity/Connectedness.html">
+    <a class="reference internal" href="Connectedness.html">
      Connectedness
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Limits%20and%20Continuity/Monotonic%20Functions.html">
+    <a class="reference internal" href="Monotonic%20Functions.html">
      Monotonic Functions
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Differentiation/index.html">
+  <a class="reference internal" href="../Differentiation/index.html">
    Differentiation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -159,44 +162,44 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Differentiation/Definition%20of%20Derivative.html">
+    <a class="reference internal" href="../Differentiation/Definition%20of%20Derivative.html">
      Definition of Derivative
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Differentiation/Derivatives%20and%20Continuity.html">
+    <a class="reference internal" href="../Differentiation/Derivatives%20and%20Continuity.html">
      Derivatives and Continuity
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Differentiation/Computing%20Derivatives.html">
+    <a class="reference internal" href="../Differentiation/Computing%20Derivatives.html">
      Computing Derivatives
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Differentiation/The%20Mean%20Value%20Theorem.html">
+    <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html">
      The Mean Value Theorem
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Differentiation/Intermediate%20Value%20Theorem.html">
+    <a class="reference internal" href="../Differentiation/Intermediate%20Value%20Theorem.html">
      Intermediate Value Theorem
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Differentiation/Taylor%27s%20Theorem.html">
+    <a class="reference internal" href="../Differentiation/Taylor%27s%20Theorem.html">
      Taylor’s Theorem
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Functions%20of%20Bounded%20Variation/index.html">
+  <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/index.html">
    Functions of Bounded Variation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Riemann-Stieltjes%20Integral/index.html">
+  <a class="reference internal" href="../Riemann-Stieltjes%20Integral/index.html">
    Riemann-Stieltjes Integral
   </a>
  </li>
@@ -290,7 +293,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/tree/master//issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Isaac-Fate/mathematical-analysis/tree/master//issues/new?title=Issue%20on%20page%20%2FLimits and Continuity/Limit of a Function.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -318,7 +321,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/intro.md"
+        <a href="../_sources/Limits and Continuity/Limit of a Function.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -355,60 +358,23 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Welcome to This Notebook on Mathematical Analysis</h1>
+                <h1>Limit of a Function</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#references">
-   References
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
@@ -416,19 +382,19 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="welcome-to-this-notebook-on-mathematical-analysis">
-<h1>Welcome to This Notebook on Mathematical Analysis<a class="headerlink" href="#welcome-to-this-notebook-on-mathematical-analysis" title="Permalink to this headline">#</a></h1>
-<p>This notebook introduces some fundamental topics on mathematical analysis.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Limits%20and%20Continuity/index.html">Limits and Continuity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Differentiation/index.html">Differentiation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Functions%20of%20Bounded%20Variation/index.html">Functions of Bounded Variation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Riemann-Stieltjes%20Integral/index.html">Riemann-Stieltjes Integral</a></li>
-</ul>
+  <div class="tex2jax_ignore mathjax_ignore section" id="limit-of-a-function">
+<h1>Limit of a Function<a class="headerlink" href="#limit-of-a-function" title="Permalink to this headline">#</a></h1>
+<div class="proof proposition admonition" id="pro:2">
+<p class="admonition-title"><span class="caption-number">Proposition 1 </span></p>
+<div class="proposition-content section" id="proof-content">
+<p>Let  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(g\)</span>  be complex-valued functions defined on a subset  <span class="math notranslate nohighlight">\(A\)</span>  of a metric space  <span class="math notranslate nohighlight">\((X, d)\)</span> , and  <span class="math notranslate nohighlight">\(p\)</span>  a limit point of  <span class="math notranslate nohighlight">\(A\)</span> . If  <span class="math notranslate nohighlight">\(\lim_{x \to p} f(x) = 0\)</span>  and  <span class="math notranslate nohighlight">\(g\)</span>  is bounded, then</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\lim _ {x \to p}  f(x)g(x) = 0
+\end{align*}\]</div>
 </div>
-<div class="section" id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h2>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
 </div>
 </div>
 
@@ -445,7 +411,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./."
+            path: "./Limits and Continuity"
         },
         predefinedOutput: true
     }
@@ -459,10 +425,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="Limits%20and%20Continuity/index.html" title="next page">
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Limits and Continuity</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Continuous%20Functions.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Limits and Continuity</p>
+        <p class="prev-next-title">Continuous Functions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -487,7 +460,7 @@ title="Print to PDF"
     </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
 
   </body>
