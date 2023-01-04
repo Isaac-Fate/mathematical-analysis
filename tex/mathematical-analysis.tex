@@ -123,7 +123,7 @@ The next theorem states that the composite function of continuous functions is a
     \begin{align*}
         A = \set{f(x)}{a \leq x < c}
     \end{align*}
-    Note that $A$ is bounded above by $f(c)$ since $f$ is increasing. Then $A$ has the least upper bound, say $\alpha = \sup A$. We want to show that $f(c-)$ exists and equals $\alpha$. Given $\varepsilon > 0$, by the property of $\alpha$, there exists $x_\varepsilon = (c - \delta) \in [a, c)$ such that ($\delta$ depends on $\varepsilon$)
+    Note that $A$ is bounded above by $f(c)$ since $f$ is increasing. Then $A$ has the least upper bound, say $\alpha = \sup A$. We want to show that $f(c-)$ exists and equals $\alpha$. Given $\varepsilon > 0$, by the property of $\alpha$, there exists $x_\varepsilon = (c - \delta) \in \left[ a, c \right) $ such that ($\delta$ depends on $\varepsilon$)
     \begin{align*}
         f(c - \delta) > \alpha - \varepsilon
     \end{align*}
@@ -853,7 +853,7 @@ We plot the original function $f$ along with its derivative $f^\prime$ side by s
 \begin{figure}[ht]
     \centering
     \includegraphics[scale=0.2]{figures/graph-004.png}
-    \caption{Left: original function. Right: its derivative.}
+    \caption{Left: original function. Right: derivative.}
     \label{fig:4}
 \end{figure}
 
@@ -929,7 +929,7 @@ We plot the original function $f$ along with its derivative $f^\prime$ side by s
     \begin{figure}[ht]
         \centering
         \includegraphics[scale=0.2]{figures/graph-007.png}
-        \caption{Left: original function. Right: its derivative.}
+        \caption{Left: original function. Right: derivative.}
         \label{fig:6}
     \end{figure}
 \end{example}
@@ -990,7 +990,7 @@ We plot the original function $f$ along with its derivative $f^\prime$ side by s
     \begin{figure}[ht]
         \centering
         \includegraphics[scale=0.2]{figures/graph-006.png}
-        \caption{Left: original function. Right: its derivative.}
+        \caption{Left: original function. Right: derivative.}
         \label{fig:5}
     \end{figure}
 
@@ -1048,13 +1048,686 @@ We plot the original function $f$ along with its derivative $f^\prime$ side by s
 
 \section{Taylor's Theorem}
 
+\par If $f$ is differentiable at $x = c$, then it can be approximated by 
+\begin{align}
+    f(x) \approx f(c) + f^\prime(c)(x-c)
+    \label{eq:19}
+\end{align}
+when $\abs{x-c}$ is small. Geometrically, $f$ is close to its tangent line at $x=c$ near the point of tangency. Another way to look at \eqref{eq:19} is that $f$ is approximated by a polynomial of degree one whose first-order derivative at $x=c$ is exactly $f^\prime(c)$. And the value of this polynomial at $x=c$ is $f(c)$, that is, its zeroth-order derivative is $f(c)$. We can extend this idea by approximating $f$ with higher degree polynomials whose derivatives of all orders match with that of $f$ at $x = c$.
+
+\begin{example}
+    Suppose we know any order derivative of the function $f(x) = e^x$ is itself. That is,
+    \begin{align*}
+        f^{(k)}(x) = f(x) = e^x \quad \forall k = 0, 1, 2, \ldots
+    \end{align*}
+    Consider the polynomial 
+    \begin{align*}
+        p_n(x) 
+        = \sum_{k=0}^n \frac{x^k}{k!}
+        = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \cdots + \frac{x^n}{n!}
+    \end{align*}
+    One can check that 
+    \begin{align*}
+        p^{(k)}_n(0) = f^{(k)}(0)
+        \quad \forall k = 0, 1, \ldots, n
+    \end{align*}
+    Hence, it is reasonable to approximate $f(x)$ with $p_n(x)$ near point $x = 0$. Figure~\ref{fig:7} compares $f$ with $p_n$ with several choices of $n$.
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.2]{figures/graph-008.png}
+        \caption{Approximations of $f$ at $x=0$.}
+        \label{fig:7}
+    \end{figure}
+\end{example}
+
+%------------------------------
+
+In general, a function $f$ can be approximated by the polynomial
+\begin{align*}
+    \sum_{k=0}^{n-1} \frac{f^{(k)}(c)}{k}(x-c)^k
+    = f(c) + f^\prime(c)(x-c) + \cdots + \frac{f^{(n)}(c)}{n!} (x-c)^{n}
+\end{align*}
+at point $c$ provided that $f$ has up to $(n+1)$-th order derivative. The reason why we approximate $f$ with a polynomial of $n$ degree is that we have a remainder term, which makes use of the $(n+1)$-th order derivative. The remainder tells us how accurate the approximation is. The formal statement is described in the following theorem, the \textbf{Taylor's theorem}\index{Taylor's theorem}.
+
+\begin{theorem}[Taylor] \label{thm:16}
+    Let $f$ be a function having $(n+1)$-th order derivative everywhere in $(a, b)$, and suppose $f^{(n)}$ is continuous on $[a, b]$. Let $c \in (a, b)$ be an interior point. Then for every $x \in [a, b]$ other than $c$, we have 
+    \begin{align}
+        f(x) = \sum_{k=0}^{n} \frac{f^{(k)}(c)}{k!}(x-c)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!} (x-c)^{n+1}
+        \label{eq:20}
+    \end{align}
+    where $\xi$ is some number in between $x$ and $c$.
+\end{theorem}
+
+\par This theorem can be obtained as an immediate corollary of the following extension of the mean value theorem.
+
+\begin{theorem} \label{thm:17}
+    Let $f$ and $g$ be two functions each having $(n+1)$-th order derivative everywhere in $(a, b)$. Suppose that $f^{(n)}$ and $g^{(n)}$ are both continuous on $[a, b]$. Let $c \in (a, b)$ be an interior point. Then for every $x \in [a, b]$ other than $c$, we have 
+    \begin{align}
+        \left[
+            f(x) - \sum_{k=0}^{n} \frac{f^{(k)}(c)}{k!}(x-c)^k
+        \right] g^{(n+1)}(\xi)
+        = f^{(n+1)}(\xi) \left[
+            g(x) - \sum_{k=0}^{n} \frac{g^{(k)}(c)}{k!}(x-c)^k
+        \right] 
+        \label{eq:21}
+    \end{align}
+    where $\xi$ is some number in between $x$ and $c$.
+\end{theorem}
+
+\begin{remark}
+    Taking $g(x) = (x-c)^{n+1}$, we have
+    \begin{align*}
+        g^{(n+1)}(\xi) = (n+1)!
+        \quad \text{and} \quad
+        \sum_{k=0}^{n} \frac{g^{(k)}(c)}{k!}(x-c)^k = 0
+    \end{align*}
+    Then \eqref{eq:21} reduces to \eqref{eq:20}, and hence this theorem reduces to Theorem~\ref{thm:16}.
+\end{remark}
+
+\begin{proof}
+    Define functions $F(t)$ and $G(t)$ on $[a, b]$ by 
+    \begin{align*}
+        F(t) = \sum_{k=0}^{n} \frac{f^{(k)}(t)}{k!}(x-t)^k
+        \quad \text{and} \quad 
+        G(t) = \sum_{k=0}^{n} \frac{g^{(k)}(t)}{k!}(x-t)^k
+        \quad \forall t \in [a, b]
+    \end{align*}
+    Note that $F$ and $G$ are continuous on $[a, b]$, and they have derivatives everywhere in $(a, b)$. Applying the generalized mean value theorem (Theorem~\ref{thm:7}) to $F(t)$ and $G(t)$ on the closed interval joining points $x$ and $c$, we have 
+    \begin{align}
+        [F(x) - F(c)] G^\prime(\xi)
+        = F^\prime(\xi) [G(x) - G(c)]
+        \label{eq:22}
+    \end{align}
+    for some number $\xi$ in between $x$ and $c$.
+
+    \par After a few steps of computation, we obtain derivatives $F^\prime(t)$ and $G^\prime(t)$ as follows.
+    \begin{align}
+        F^\prime(t) = \frac{f^{(n+1)}(t)}{n!}(x-t)^{n}
+        \quad \text{and} \quad 
+        G^\prime(t) = \frac{g^{(n+1)}(t)}{n!}(x-t)^{n}
+        \quad \forall t \in (a, b)
+        \label{eq:23}
+    \end{align}
+    We also note that 
+    \begin{align}
+        F(x) = f(x), 
+        \quad
+        F(c) = \sum_{k=0}^{n} \frac{f^{(k)}(c)}{k!}(x-c)^k, 
+        \quad
+        G(x) = g(x), 
+        \quad \text{and} \quad
+        G(c) = \sum_{k=0}^{n} \frac{g^{(k)}(c)}{k!}(x-c)^k
+        \label{eq:24}
+    \end{align}
+    Plugging \eqref{eq:23} and \eqref{eq:24} into \eqref{eq:22} leads to \eqref{eq:21}.
+\end{proof}
+
+\par We can rewrite \eqref{eq:20} as 
+\begin{align*}
+    f(x) = p_n(x) + r_n(x)
+\end{align*}
+where 
+\begin{align*}
+    p_n(x) = \sum_{k=0}^{n} \frac{f^{(k)}(c)}{k!}(x-c)^k
+\end{align*}
+is the polynomial approximation, and 
+\begin{align*}
+    r_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!} (x-c)^{n+1}
+\end{align*}
+is the remainder. The smaller the absolute value of $r_n(x)$ is, the more accurate the approximation will be.
+
+
+\begin{exercise}
+    Use Taylor's theorem (Theorem~\ref{thm:16}) to approximate the value of $\ln(0.6)$ so that the absolute error is less than $0.1$.
+\end{exercise}
+
+\begin{solution}
+    Putting $f(x) = \ln(x)$ in \eqref{eq:20}, we have
+    \begin{align*}
+        p_n(x;c) &= \sum_{k=0}^{n} \frac{f^{(k)}(c)}{k!}(x-c)^k
+        = \ln(c) + \sum_{k=1}^{n} \frac{(-1)^{k+1}}{k c^n}(x-c)^k \\ 
+        r_n(x;c) &= \frac{(-1)^{n+2}}{(n+1) \xi^{n+1}}(x-c)^{n+1}
+    \end{align*}
+    Since the value of $\ln(x)$ at $x=1$ is known, i.e., $\ln(1) = 0$, we can expand it about that point by putting $c=1$. Then we have 
+    \begin{align*}
+        p_n(x) = \sum_{k=1}^{n} \frac{(-1)^{k+1}}{k}(x-1)^k
+        \quad \text{and} \quad
+        r_n(x) = \frac{(-1)^{n+2}}{(n+1) \xi^{n+1}}(x-1)^{n+1}
+    \end{align*}
+    To approximate $\ln(0.6)$ by $p_n(0.6)$ within the error bounds, we need to estimate the remainder $r_n(0.6)$. Note that $\xi$ is now some number in between $0.6$ and $1$ since $x=0.6$ and $c=1$. The absolute value of $r_n(0.6)$ is bounded above by 
+    \begin{align}
+        \abs{r_n(0.6)} = \frac{1}{n+1} \abs{\frac{0.6-1}{\xi}}^{n+1}
+        < \frac{1}{n+1} \left(\frac{0.4}{0.6}\right)^{n+1}
+        = \frac{1}{n+1} \left(\frac{2}{3}\right)^{n+1}
+        \label{eq:25}
+    \end{align}
+
+
+    \par We then estimate $\abs{r_n(0.6)}$ using \eqref{eq:25} by trying the first few values of $n$. We have 
+    \begin{align*}
+        r_1(0.6) = \frac{2}{9} > 0.1
+        \quad \text{and} \quad 
+        r_2(0.6) = \frac{8}{81} < 0.1
+    \end{align*}
+    Hence, it is adequate to approximate $\ln(0.6)$ by $p_2(0.6)$. The approximated value is
+    \begin{align*}
+        \ln(0.6) \approx p_2(0.6) = (0.6-1) - \frac{1}{2} \times (0.6-1)^2 = -0.48
+    \end{align*}
+    We can also visualize the result in Figure~\ref{fig:8}. As we can see, the approximated value is quite close to the true value. And the absolute error is actually much less than the required bound, $0.1$.
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.2]{figures/taylor-approx.png}
+        \caption{Approximation of $\ln(0.6)$.}
+        \label{fig:8}
+    \end{figure}
+\end{solution}
+
 %==============================
 
 \chapter{Functions of Bounded Variation}
 
+%------------------------------
+
+\section{Characterization of Functions of Bounded Variation}
+
+\begin{theorem}[Characterization of Functions of Bounded Variation] \label{thm:22}
+    Let $f$ be a real-valued function on $[a, b]$. Then, the following statements are equivalent.
+    \begin{enumerate}
+        \item $f$ is of bounded variation on $[a, b]$.
+        \item There exist two increasing functions $g$ and $h$ on $[a, b]$ such that $f = g - h$.
+        \item There exist two \textbf{strictly} increasing functions $g$ and $h$ on $[a, b]$ such that $f = g - h$.
+    \end{enumerate}
+\end{theorem}
 
 %==============================
 \chapter{Riemann-Stieltjes Integral} \label{chap:1}
+
+\section{Definition of the Riemann-Stieltjes Integral}
+
+%------------------------------
+
+\begin{definition} \label{def:1}
+    Suppose that $f$ and $\alpha$ are \textbf{real-valued bounded} functions on $[a,b]$. Let $P = \left\{x_0, x_1, \ldots, x_n\right\}$ be a partition on $[a, b]$ and $t_k$ a point in the sub-interval $[x_{k-1}, x_k]$. A sum of the form 
+    \begin{align*}
+        S(P,f,\alpha)
+        = \sum_{k=1}^n f(t_k) \Delta \alpha_k
+    \end{align*}
+    is called a Riemann-Stieltjes sum of $f$ with respect to $\alpha$. We say $f$ is Riemann-integrable with respect to $\alpha$, and write $f \in \mathfrak{R}(\alpha)$ on $[a,b]$ if there exists a number $A$ having the following property: for any given $\varepsilon > 0$, there exists a partition $P_\varepsilon$ such that 
+    \begin{align*}
+        \abs{S(P,f,\alpha) - A} < \varepsilon
+    \end{align*}
+    for any refinement $P$ of $P_\varepsilon$ and for any choice of points $t_k$. (Note that $S(P,f,\alpha)$ depends on $t_k$.) Moreover, the number $A$ is \textbf{uniquely} determined if it exists (this is proved in Proposition~\ref{pro:3}) and is denoted by \begin{align*}
+        \int_a^b f \; \mathrm{d}\alpha
+    \end{align*}
+\end{definition}
+
+\begin{note}
+    To ease the nation, we will sometimes write
+    \begin{align*}
+        \sum_{k} f(t_k) \delta \alpha_k
+    \end{align*}
+    without specifying the lower and upper limits of $k$ if no confusion will be caused.
+\end{note}
+
+%------------------------------
+
+\par Recall Definition~\ref{def:1} only requires the existence of $A$. We now show that such number $A$ is also unique.
+
+\begin{proposition} \label{pro:3}
+    Let $S(P,f,\alpha)$ be as in Definition~\ref{def:1}. If $A$ and $A^\prime$ both satisfy the property stated in Definition~\ref{def:1}, then $A = A^\prime$.
+\end{proposition}
+
+\begin{proof}
+    Given $\varepsilon > 0$, by the property in Definition~\ref{def:1}, there exist partitions $P_1$ and $P_2$ such that  
+    \begin{align*}
+        \abs{S(P_1,f,\alpha) - A} &< \varepsilon / 2 &
+        \abs{S(P_2,f,\alpha) - A^\prime} &< \varepsilon / 2
+    \end{align*}
+    Let $P = P_1 \cup P_2$. We have
+    \begin{align*}
+        \abs{S(P,f,\alpha) - A} &< \varepsilon / 2 &
+        \abs{S(P,f,\alpha) - A^\prime} &< \varepsilon / 2
+    \end{align*}
+    It then follows that
+    \begin{align*}
+        \abs{A - A^\prime}
+        \leq \abs{S(P,f,\alpha) - A} +
+        \abs{S(P,f,\alpha) - A^\prime} 
+        < \varepsilon / 2 + \varepsilon / 2
+        = \varepsilon
+    \end{align*}
+    Since $\varepsilon > 0$ is arbitrary, we must have $A = A^\prime$.
+\end{proof}
+
+%------------------------------
+
+\section{Linear Properties}
+
+%------------------------------
+
+\par The integral is linear in the integrand. In other words, the integral of a linear combination of functions is equal to the linear combination of integrals of each function.
+
+\begin{theorem} \label{thm:18}
+    Suppose that $f, g \in \mathfrak{R}(\alpha)$ on $[a,b]$. Then $c_1 f + c_2 g \in \mathfrak{R}(\alpha)$ on $[a,b]$ where $c_1$ and $c_2$ are constants. In that case, 
+    \begin{align*}
+        \int_a^b c_1 f + c_2 g \; \mathrm{d}\alpha
+        = c_1 \int_a^b f \; \mathrm{d}\alpha
+        + c_2 \int_a^b g \; \mathrm{d}\alpha
+    \end{align*}
+\end{theorem}
+
+\begin{proof}
+    Let $P$ be a partition on $[a,b]$. The Riemann-Stieltjes sum of $c_1 f + c_2 g$ can be written as 
+    \begin{align*}
+        S(P, c_1 f + c_2 g, \alpha)
+        &= \sum_{k} c_1 f(t_k) + c_2 g(t_k) \Delta\alpha_k \\ 
+        &= c_1 \sum_{k} f(t_k) \Delta\alpha_k
+        + c_2 \sum_{k} g(t_k) \Delta\alpha_k \\ 
+        &= c_1 S(P, f, \alpha) + c_2 S(P, g, \alpha)
+    \end{align*}
+    Given $\varepsilon > 0$. Since $f \in \mathfrak{R}(\alpha)$ on $[a,b]$ then there exists a partition $P_\varepsilon^{\prime}$
+    such that 
+    \begin{align*}
+        \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}
+        \quad \forall P \supset P_\varepsilon^{\prime}
+    \end{align*}
+    Similarly, since $g \in \mathfrak{R}(\alpha)$, there exists a partition $P_\varepsilon^{\prime\prime}$ such that 
+    \begin{align*}
+        \abs{S(P, g, \alpha) - \int_a^b g \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_2}}
+        \quad \forall P \supset P_\varepsilon^{\prime\prime}
+    \end{align*}
+    Let $P_\varepsilon$ be the refinement of $P_\varepsilon^{\prime}$ and $P_\varepsilon^{\prime\prime}$, i.e., $P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}$. Then for any $P \supset P_\varepsilon$, we have 
+    \begin{align*}
+        &\abs{
+            S(P, c_1 f + c_2 g, \alpha) 
+            - c_1 \int_a^b f \; \mathrm{d}\alpha
+            - c_2 \int_a^b g \; \mathrm{d}\alpha
+        } \\
+        &\leq \abs{c_1} \abs{S(P,f,\alpha) - \int_a^b f \; \mathrm{d}\alpha}
+        + \abs{c_2} \abs{S(P,g,\alpha) - \int_a^b g \; \mathrm{d}\alpha} \\ 
+        &< \abs{c_1} \frac{\varepsilon / 2}{1 + \abs{c_1}}
+        + \abs{c_2} \frac{\varepsilon / 2}{1 + \abs{c_2}} \\ 
+        &< \varepsilon
+    \end{align*}
+    This completes the proof.
+\end{proof}
+
+%------------------------------
+
+\par The integral is also linear in the integrator.
+
+\begin{theorem} \label{thm:19}
+    If $f \in \mathfrak{R}(\alpha)$ and $f \in \mathfrak{R}(\beta)$ on $[a,b]$, then $f \in \mathfrak{R}(c_1 \alpha + c_2 \beta)$ where $c_1$ and $c_2$ are constants. In that case, 
+    \begin{align*}
+        \int_a^b f \; \mathrm{d}(c_1 \alpha + c_2 \beta)
+        = c_1 \int_a^b f \; \mathrm{d}\alpha
+        + c_2 \int_a^b f \; \mathrm{d}\beta
+    \end{align*}
+\end{theorem}
+
+\begin{proof}
+    Let $P$ be a partition on $[a,b]$. We have 
+    \begin{align*}
+        S(P, f, c_1 \alpha + c_2 \beta)
+        &= \sum_{k=0} f(t_k) + \Delta(c_1 \alpha + c_2 \beta)_k \\ 
+        &= c_1 \sum_{k=0} f(t_k) \Delta\alpha_k
+        + c_2 \sum_{k=0} f(t_k) \Delta\beta_k \\ 
+        &= c_1 S(P, f, \alpha) + c_2 S(P, f, \beta)
+    \end{align*}
+    Given $\varepsilon > 0$. Since $f \in \mathfrak{R}(\alpha)$ on $[a,b]$ then there exists a partition $P_\varepsilon^{\prime}$
+    such that 
+    \begin{align*}
+        \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}
+        \quad \forall P \supset P_\varepsilon^{\prime}
+    \end{align*}
+    Similarly, since $f \in \mathfrak{R}(\beta)$, there exists a partition $P_\varepsilon^{\prime\prime}$ such that 
+    \begin{align*}
+        \abs{S(P, f, \beta) - \int_a^b f \; \mathrm{d}\beta} < \frac{\varepsilon / 2}{1 + \abs{c_2}}
+        \quad \forall P \supset P_\varepsilon^{\prime\prime}
+    \end{align*}
+    Let $P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}$. Then for any $P \supset P_\varepsilon$, we have 
+    \begin{align*}
+        &\abs{
+            S(P, f, c_1 \alpha + c_2 \beta) 
+            - c_1 \int_a^b f \; \mathrm{d}\alpha
+            - c_2 \int_a^b f \; \mathrm{d}\beta
+        } \\
+        &\leq \abs{c_1} \abs{S(P,f,\alpha) - \int_a^b f \; \mathrm{d}\alpha}
+        + \abs{c_2} \abs{S(P,f,\beta) - \int_a^b f \; \mathrm{d}\beta} \\ 
+        &< \abs{c_1} \frac{\varepsilon / 2}{1 + \abs{c_1}}
+        + \abs{c_2} \frac{\varepsilon / 2}{1 + \abs{c_2}} \\ 
+        &< \varepsilon
+    \end{align*}
+\end{proof}
+
+%------------------------------
+
+\par If we divide the interval $[a, b]$ into two parts with some point $c \in (a, b)$ in the middle, then the integral over the entire interval is the sum of the integrals on these two sub-intervals. This is also a kind of linearity of integrals considering the interval of integration. 
+
+\begin{lemma}
+    Suppose $c \in (a, b)$. We have 
+    \begin{align}
+        \int_a^b f \; \mathrm{d}\alpha
+        = \int_a^c f \; \mathrm{d}\alpha
+        + \int_c^b f \; \mathrm{d}\alpha
+        \label{eq:27}
+    \end{align}
+    The existence of two integrals in \eqref{eq:27} will imply the existence of the third one.
+\end{lemma}
+
+\begin{proof}
+    We have 
+    \begin{align}
+        S(P,f,\alpha) = S(P^\prime, f, \alpha) + S(P^{\prime\prime}, f, \alpha)
+        \quad
+        \forall P = P^\prime \cup P^{\prime\prime}
+        \label{eq:26}
+    \end{align}
+    where $P$, $P^\prime$ and $P^{\prime\prime}$ are partitions on $[a, b]$, $[a, c]$ and $[c, b]$, respectively. Let $\varepsilon > 0$ be chosen arbitrarily.
+
+    \par (Proof of existence of $\int_a^b f \; \mathrm{d}\alpha$) Assume $\int_a^c f \; \mathrm{d}\alpha$ and $\int_c^b f \; \mathrm{d}\alpha$ exist. Then 
+    \begin{align*}
+        \abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
+        \quad \forall P^\prime \supset P_\varepsilon^\prime
+    \end{align*}
+    for some $P_\varepsilon^\prime$ on $[a, c]$. And 
+    \begin{align*}
+        \abs{S(P^{\prime\prime}, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
+        \quad \forall P^{\prime\prime} \supset P_\varepsilon^{\prime\prime}
+    \end{align*}
+    for some $P_\varepsilon^{\prime\prime}$ on $[c, b]$. Let
+    \begin{align*}
+        P_\varepsilon = P_\varepsilon^\prime \cup P_\varepsilon^{\prime\prime}
+    \end{align*}
+    (Note that $c \in P_\varepsilon$.) Let
+    \begin{align*}
+        P &\supset P_\varepsilon &
+        P^\prime &= P \cap [a, c] &
+        P^{\prime\prime} &= P \cap [c, b]
+    \end{align*}
+    Observe that
+    \begin{align*}
+        P^\prime &\supset P_\varepsilon^\prime & 
+        P^{\prime\prime} &\supset P_\varepsilon^{\prime\prime}
+    \end{align*}
+    It then follows from \eqref{eq:26} that
+    \begin{align*}
+        &\abs{
+            S(P, f, \alpha)
+            - \int_a^c f \; \mathrm{d}\alpha
+            - \int_c^b f \; \mathrm{d}\alpha 
+        } \\ 
+        &\leq \abs{
+            S(P^\prime, f, \alpha)
+            - \int_a^c f \; \mathrm{d}\alpha
+        } + \abs{
+            S(P^{\prime\prime}, f, \alpha)
+            - \int_c^b f \; \mathrm{d}\alpha
+        } \\ 
+        &< \varepsilon / 2 + \varepsilon / 2 \\ 
+        &= \varepsilon
+    \end{align*} 
+    Therefore, $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ and \eqref{eq:27} holds.
+
+    \par (Proof of existence of $\int_c^b f \; \mathrm{d}\alpha$) Assume $\int_a^b f \; \mathrm{d}\alpha$ and $\int_a^c f \; \mathrm{d}\alpha$ exist. Then 
+    \begin{align*}
+        \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon / 2
+        \quad \forall P \supset P_\varepsilon
+    \end{align*}
+    for some $P_\varepsilon$ on $[a, b]$. And
+    \begin{align*}
+        \abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
+        \quad \forall P^\prime \supset P_\varepsilon^\prime
+    \end{align*}
+    for some $P_\varepsilon^\prime$ on $[a, c]$.
+    Let
+    \begin{align*}
+        P_\varepsilon^{\prime\prime} = (P_\varepsilon \cup P_\varepsilon^\prime) \cap [c, b]
+    \end{align*}
+    Let
+    \begin{align*}
+        P^{\prime\prime} &\supset P_\varepsilon^{\prime\prime} &
+        P^\prime &\supset (P_\varepsilon \cup P_\varepsilon^\prime) \cap [a, c] &
+        P &= P^\prime \cup P^{\prime\prime}
+    \end{align*} 
+    Observe that 
+    \begin{align*}
+        P^\prime &\supset P_\varepsilon^\prime &
+        P &= P^\prime \cup P^{\prime\prime}
+        \supset (P_\varepsilon \cap [a, c]) \cup (P_\varepsilon \cap [c, b])
+        = P_\varepsilon
+    \end{align*}
+    It then follows from \eqref{eq:26} that
+    \begin{align*}
+        &\abs{
+            S(P^{\prime\prime}, f, \alpha)
+            - \int_a^b f \; \mathrm{d}\alpha
+            + \int_a^c f \; \mathrm{d}\alpha 
+        } \\ 
+        &\leq \abs{
+            S(P, f, \alpha)
+            - \int_a^b f \; \mathrm{d}\alpha
+        } + \abs{
+            S(P^\prime, f, \alpha)
+            - \int_a^c f \; \mathrm{d}\alpha
+        } \\ 
+        &< \varepsilon / 2 + \varepsilon / 2 \\ 
+        &= \varepsilon
+    \end{align*} 
+    Therefore, $f \in \mathfrak{R}(\alpha)$ on $[c, b]$ and \eqref{eq:27} holds.
+
+
+
+    \par (Proof of existence of $\int_a^c f \; \mathrm{d}\alpha$) Assume $\int_a^b f \; \mathrm{d}\alpha$ and $\int_c^b f \; \mathrm{d}\alpha$ exist. Then 
+    \begin{align*}
+        \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon / 2
+        \quad \forall P \supset P_\varepsilon
+    \end{align*}
+    for some $P_\varepsilon$ on $[a, b]$. And
+    \begin{align*}
+        \abs{S(P^{\prime\prime}, f, \alpha) - \int_c^b f \; \mathrm{d}\alpha} < \varepsilon / 2
+        \quad \forall P^{\prime\prime} \supset P_\varepsilon^{\prime\prime}
+    \end{align*}
+    for some $P_\varepsilon^{\prime\prime}$ on $[c, b]$.
+    Let
+    \begin{align*}
+        P_\varepsilon^\prime = (P_\varepsilon \cup P_\varepsilon^{\prime\prime}) \cap [a, c]
+    \end{align*}
+    Let
+    \begin{align*}
+        P^\prime &\supset P_\varepsilon^\prime &
+        P^{\prime\prime} &\supset (P_\varepsilon \cup P_\varepsilon^{\prime\prime}) \cap [c, b] &
+        P &= P^\prime \cup P^{\prime\prime}
+    \end{align*} 
+    Observe that 
+    \begin{align*}
+        P^{\prime\prime} &\supset P_\varepsilon^{\prime\prime} &
+        P &= P^\prime \cup P^{\prime\prime}
+        \supset (P_\varepsilon \cap [a, c]) \cup (P_\varepsilon \cap [c, b])
+        = P_\varepsilon
+    \end{align*}
+    It then follows from \eqref{eq:26} that
+    \begin{align*}
+        &\abs{
+            S(P^\prime, f, \alpha)
+            - \int_a^b f \; \mathrm{d}\alpha
+            + \int_c^b f \; \mathrm{d}\alpha 
+        } \\ 
+        &\leq \abs{
+            S(P, f, \alpha)
+            - \int_a^b f \; \mathrm{d}\alpha
+        } + \abs{
+            S(P^{\prime\prime}, f, \alpha)
+            - \int_c^b f \; \mathrm{d}\alpha
+        } \\ 
+        &< \varepsilon / 2 + \varepsilon / 2 \\ 
+        &= \varepsilon
+    \end{align*} 
+    Therefore, $f \in \mathfrak{R}(\alpha)$ on $[a, c]$ and \eqref{eq:27} holds.
+
+\end{proof}
+
+%------------------------------
+
+\section{Integration by Parts}
+
+%------------------------------
+
+\begin{theorem}[Integration by Parts] \label{thm:20}
+    If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $\alpha \in \mathfrak{R}(f)$ on $[a, b]$, and 
+    \begin{align*}
+        \int_a^b f \; \mathrm{d}\alpha
+        + \int_a^b \alpha \; \mathrm{d}f
+        = f(b)\alpha(b) - f(a)\alpha(a)
+    \end{align*}
+\end{theorem}
+
+\begin{remark}
+    This can be treated as the \textit{reciprocity law} for integrals.
+\end{remark}
+
+\begin{proof}
+    Given $\varepsilon > 0$, since $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, there exists a partition $P_\varepsilon$ such that 
+    \begin{align}
+        \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon
+        \quad \forall P \supset P_\varepsilon
+        \label{eq:28}
+    \end{align}
+    Let $P = \left\{x_0, x_1, \ldots, x_n\right\} \supset P_\varepsilon$ be any refinement of $P_\varepsilon$. The Riemann-Stieltjes sum of $\alpha$ with respect to $f$ is 
+    \begin{align}
+        S(P, \alpha, f)
+        = \sum_{k=1}^n \alpha(t_k) (f(x_k) - f(x_{k-1}))
+        = \sum_{k=1}^n \alpha(t_k) f(x_k)
+        - \sum_{k=1}^n \alpha(t_k) f(x_{k-1})
+        \label{eq:29}
+    \end{align}
+    Let 
+    \begin{align}
+        P^\ast = P \cup \set{t_k}{1 \leq k \leq n}
+        \label{eq:30}
+    \end{align}
+    Denote by $A$ the value 
+    \begin{align*}
+        A = f(b)\alpha(b) - f(a)\alpha(a)
+    \end{align*}
+    Note that $A$ can be written as 
+    \begin{align}
+        A = \sum_{k=1}^n f(x_k) \alpha(x_k)
+        - \sum_{k=1}^n f(x_{k-1}) \alpha(x_{k-1})
+        \label{eq:31}
+    \end{align}
+    Subtracting \eqref{eq:29} from \eqref{eq:31}, we obtain
+    \begin{align*}
+        A - S(P, \alpha, f)
+        = \sum_{k=1}^n f(x_k) (\alpha(x_k) - \alpha(t_k))
+        + \sum_{k=1}^n f(x_{k-1}) (\alpha(t_k) - \alpha(x_{k-1}))
+    \end{align*}
+    By recalling the construction of $P^\ast$ in \eqref{eq:30}, we observe that the right-hand side of the above equation is precisely the Riemann-Stieltjes sum $S(P^\ast, f, \alpha)$. That is, 
+    \begin{align*}
+        A - S(P, \alpha, f) = S(P^\ast, f, \alpha)
+    \end{align*}
+    Since $P^\ast \supset P \supset P_\varepsilon$, it follows from \eqref{eq:28} that 
+    \begin{align*}
+        \abs{A - S(P, \alpha, f) - \int_a^b f \; \mathrm{d}\alpha} 
+        = \abs{S(P^\ast, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha}
+        < \varepsilon
+    \end{align*}
+    Recall $A = f(b)\alpha(b) - f(a)\alpha(a)$, we have 
+    \begin{align*}
+        \abs{S(P, \alpha, f) + \int_a^b f \; \mathrm{d}\alpha - f(b)\alpha(b) + f(a)\alpha(a)} < \varepsilon
+        \quad \forall P \supset P_\varepsilon
+    \end{align*}
+    This implies that $\alpha \in \mathfrak{R}(f)$ on $[a, b]$, and 
+    \begin{align*}
+        \int_a^b f \;\mathrm{d}\alpha
+        = -\int_a^b f \;\mathrm{d}\alpha 
+        + f(b)\alpha(b) - f(a)\alpha(a)
+    \end{align*}
+\end{proof}
+
+%------------------------------
+
+\section{Change of Variables}
+
+%------------------------------
+
+\begin{theorem} \label{thm:21}
+    Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and $\phi$ is a \textbf{strictly monotonic continuous} function on a closed interval $I$ with endpoints $c$ and $d$. ($I$ is either $[c, d]$ or $[d, c]$.) Assume
+    \begin{align*}
+        a &= \phi(c) & b &= \phi(d)
+    \end{align*}
+    Define two composite functions:
+    \begin{align*}
+        h &= f(\phi(x)) & 
+        \beta &= \alpha(\phi(x))
+    \end{align*}
+    Then $h \in \mathfrak{R}(\beta)$ on $I$, and $\int_a^b f \; \mathrm{d}\alpha = \int_c^d h \; \mathrm{d}\beta$, i.e., 
+    \begin{align*}
+        \int_a^b f(x) \; \mathrm{d}\alpha(x) = \int_{\phi^{-1}(a)}^{\phi^{-1}(b)} f(\phi(x)) \; \mathrm{d}\alpha(\phi(x))
+    \end{align*}
+\end{theorem}
+
+\begin{remark}
+    The reason why we assume that $\phi$ is strictly monotonic and continuous is to ensure that it is a bijective function. It is equivalent to assuming $\phi$ is strictly monotonic and injective.
+\end{remark}
+
+\par The main idea of this proof is exploiting the one-to-one relation between the partitions on $[a, b]$ and $[c, d]$. 
+
+\begin{proof}
+    (One-To-One Relation of Partitions) Without loss of generality, we may assume that $g$ is strictly \textit{increasing} and continuous. Then $I = [c, d]$. From the conditions of $g$, we can immediately conclude that it has a bijective inverse function
+    \begin{align*}
+        \phi^{-1}: [a, b] \to [c, d]
+    \end{align*}
+    For any partition $P^\prime = \left\{x_0, \ldots, x_n\right\}$ on $[a, b]$, we can associate it with a partition $P$ on $[c, d]$, which is given by 
+    \begin{align*}
+        P := \phi^{-1}(P^\prime) 
+        := \left\{\phi^{-1}(x_0), \ldots, \phi^{-1}(x_n)\right\}
+    \end{align*}
+    On the other hand, for any partition $P = \left\{y_0, \ldots, y_n\right\}$ on $[c, d]$, we can define a partition $P^\prime$ on $[a, b]$ by 
+    \begin{align*}
+        P^\prime := \phi(P) := \left\{\phi(y_0), \ldots, \phi(y_n)\right\}
+    \end{align*}
+
+    \par (Existence of the Integral) Given $\varepsilon > 0$, since $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, there exists a partition $P^\prime_\varepsilon$ on $[a, b]$ such that 
+    \begin{align}
+        \abs{S(P^\prime, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon
+        \quad \forall P^\prime \supset P^\prime_\varepsilon
+        \label{eq:32}
+    \end{align}
+    Let partition $P_\varepsilon$ on $[c, d]$ be given by $P_\varepsilon = \phi^{-1}(P^\prime_\varepsilon)$. For any refinement $P \supset P_\varepsilon$, we have 
+    \begin{align*}
+        S(P, h, \beta)
+        = \sum h(s_i) \Delta\beta_i
+        = \sum h(s_i) (\beta(s_i) - \beta(s_{i-1}))
+    \end{align*}
+    For each point $s_i$, we can map it to $[a, b]$ by $t_i = \phi(s_i)$. It then follows that 
+    \begin{align*}
+        S(P, h, \beta)
+        &= \sum h(\phi^{-1}(t_i)) (\beta(\phi^{-1}(t_i)) - \beta(\phi^{-1}(t_{i-1}))) \\ 
+        &= \sum f(t_i) (\alpha(t_i) - \alpha(t_{i-1})) \\ 
+        &= S(P^\prime, f, \alpha)
+    \end{align*}
+    where $P^\prime = \phi(P)$. In summary,
+    \begin{align}
+        S(P, h, \beta) = S(P^\prime, \phi, \alpha)
+        \label{eq:33}
+    \end{align}
+    What is left to show is that $P^\prime \supset P^\prime_\varepsilon$. For any point $x \in P^\prime_\varepsilon$, we have $\phi^{-1}(x) \in P_\varepsilon$ since $P_\varepsilon = \phi^{-1}(P_\varepsilon)$. Recall that $P \supset P_\varepsilon$. Thus, $\phi^{-1}(x) \in P$. And because $P^\prime = \phi(P)$, we have $x = \phi(\phi^{-1}(x)) \in P^\prime$. Therefore, indeed $P^\prime \supset P^\prime_\varepsilon$. It then follows from \eqref{eq:32} and \eqref{eq:33} that 
+    \begin{align*}
+        \abs{S(P, h, \beta) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon
+        \quad \forall P \supset P_\varepsilon
+    \end{align*}
+    This completes the proof.
+\end{proof}
+
+%------------------------------
+
+\section{Monotonically Increasing Integrators}
+
+\par It is much easier to study and prove some properties of the Riemann-Stieltjes integrals if we require that $\alpha$ is monotonically increasing. 
+
+\par Thanks to Theorem~\ref{thm:22}, which states that every function of bounded variation can express as a difference of two increasing functions, almost all the properties introduced in this section can be extended with ease to integrators of bounded variation. 
 
 %==============================
 % print index page

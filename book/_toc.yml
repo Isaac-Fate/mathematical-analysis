@@ -1,95 +1,19 @@
+chapters:
+- file: Limits and Continuity/index
+  sections:
+  - file: Limits and Continuity/Limit of a Function
+  - file: Limits and Continuity/Continuous Functions
+  - file: Limits and Continuity/Connectedness
+  - file: Limits and Continuity/Monotonic Functions
+- file: Differentiation/index
+  sections:
+  - file: Differentiation/Definition of Derivative
+  - file: Differentiation/Derivatives and Continuity
+  - file: Differentiation/Computing Derivatives
+  - file: Differentiation/The Mean Value Theorem
+  - file: Differentiation/Intermediate Value Theorem
+  - file: Differentiation/Taylor's Theorem
+- file: Functions of Bounded Variation/index
+- file: Riemann-Stieltjes Integral/index
 format: jb-book
-parts:
-- caption: Elementary Concepts
-  chapters:
-  - file: Elementary Concepts/Topology/index
-    sections:
-    - file: Elementary Concepts/Topology/Metric Spaces
-    - file: Elementary Concepts/Topology/Compact Sets
-  - file: Elementary Concepts/Numerical Sequences and Series/index
-    sections:
-    - file: Elementary Concepts/Numerical Sequences and Series/Convergent Sequences
-    - file: Elementary Concepts/Numerical Sequences and Series/Euler's Number e
-    - file: Elementary Concepts/Numerical Sequences and Series/The Root and Ratio
-        Tests
-    - file: Elementary Concepts/Numerical Sequences and Series/Power Series
-    - file: Elementary Concepts/Numerical Sequences and Series/Addition and Multiplication
-        of Series
-  - file: Elementary Concepts/Functional Limits/index
-    sections:
-    - file: Elementary Concepts/Functional Limits/Limits at Infinity
-  - file: Elementary Concepts/Differentiation/index
-    sections:
-    - file: Elementary Concepts/Differentiation/Mean Value Theorems
-  - file: Elementary Concepts/Functions of Bounded Variation/index
-    sections:
-    - file: Elementary Concepts/Functions of Bounded Variation/Definition of Functions
-        of Bounded Variation
-    - file: Elementary Concepts/Functions of Bounded Variation/Total Variation
-    - file: Elementary Concepts/Functions of Bounded Variation/Additive Property of
-        Total Variation
-    - file: Elementary Concepts/Functions of Bounded Variation/Characterization of
-        Functions of Bounded Variation
-  - file: Elementary Concepts/The Riemann-Stieltjes Integral/index
-    sections:
-    - file: Elementary Concepts/The Riemann-Stieltjes Integral/Definition of the Riemann-Stieltjes
-        Integral
-    - file: Elementary Concepts/The Riemann-Stieltjes Integral/Linear Properties
-    - file: Elementary Concepts/The Riemann-Stieltjes Integral/Integration by Parts
-    - file: Elementary Concepts/The Riemann-Stieltjes Integral/Change of Variables
-    - file: Elementary Concepts/The Riemann-Stieltjes Integral/Monotonically Increasing
-        Integrators
-    - file: Elementary Concepts/The Riemann-Stieltjes Integral/Integrators of Bounded
-        Variation
-    - file: Elementary Concepts/The Riemann-Stieltjes Integral/Existence of Riemann-Stieltjes
-        Integrals
-    - file: Elementary Concepts/The Riemann-Stieltjes Integral/Mean Value Theorem
-        for Riemann-Stieltjes Integrals
-    - file: Elementary Concepts/The Riemann-Stieltjes Integral/Integration and Differentiation
-  - file: Elementary Concepts/The Reimann Integral/index
-    sections:
-    - file: Elementary Concepts/The Reimann Integral/Fundamental Theorem of Calculus
-    - file: Elementary Concepts/The Reimann Integral/Reduction from Riemann-Stieltjes
-        Integrals to Reimann Integrals
-    - file: Elementary Concepts/The Reimann Integral/Change of Variables
-  - file: Elementary Concepts/Improper Integrals/index
-    sections:
-    - file: Elementary Concepts/Improper Integrals/Improper Integral of the First
-        Kind
-    - file: Elementary Concepts/Improper Integrals/Dirichlet's Test and Abel's Test
-        for Improper Integrals
-  - file: Elementary Concepts/Sequences and Series of Functions/index
-    sections:
-    - file: Elementary Concepts/Sequences and Series of Functions/Discussion of Main
-        Problem
-    - file: Elementary Concepts/Sequences and Series of Functions/Uniform Convergence
-    - file: Elementary Concepts/Sequences and Series of Functions/Uniform Convergence
-        and Continuity
-    - file: Elementary Concepts/Sequences and Series of Functions/Uniform Convergence
-        and Integration
-    - file: Elementary Concepts/Sequences and Series of Functions/Uniform Convergence
-        and Differentiation
-  - file: Elementary Concepts/Some Special Functions/index
-    sections:
-    - file: Elementary Concepts/Some Special Functions/Power Series
-    - file: Elementary Concepts/Some Special Functions/Exponential Function
-    - file: Elementary Concepts/Some Special Functions/Logarithm
-    - file: Elementary Concepts/Some Special Functions/Power Function
-- caption: Multivariable Mathematical Analysis
-  chapters:
-  - file: Multivariable Mathematical Analysis/Functions of Several Variables/index
-    sections:
-    - file: Multivariable Mathematical Analysis/Functions of Several Variables/Linear
-        Transformations
-    - file: Multivariable Mathematical Analysis/Functions of Several Variables/Differentiation
-    - file: Multivariable Mathematical Analysis/Functions of Several Variables/Mean
-        Value Theorem
-    - file: Multivariable Mathematical Analysis/Functions of Several Variables/Continuously
-        Differentiable Functions
-    - file: Multivariable Mathematical Analysis/Functions of Several Variables/Contraction
-        Principle
-    - file: Multivariable Mathematical Analysis/Functions of Several Variables/Inverse
-        Function Theorem
-    - file: Multivariable Mathematical Analysis/Functions of Several Variables/Implicit
-        Function Theorem
 root: intro

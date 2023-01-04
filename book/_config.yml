@@ -59,16 +59,16 @@ sphinx:
     mathjax_config:
       tex:
         macros:
-          # Common Number Sets
+          # common number sets
           "R": "\\mathbb{R}" # Real numbers
           "C": "\\mathbb{C}" # Complex numbers
-          "F": "\\mathbb{F}" # Field (often stands for real or complex field)
+          "FF": "\\mathbb{F}" # Field (often stands for real or complex field)
           "N": "\\mathbb{N}" # Natural numbers
           "Ns": "\\mathbb{N^\\ast}" # Positive natural numbers
           "Z": "\\mathbb{Z}" # Integers
           "Q": "\\mathbb{Q}" # Rational numbers
           
-          # Common Operators
+          # common operators
           "floor": ["\\lfloor#1\\rfloor", 1]
           "bmat": ["\\left[\\begin{array}"] # Begin a (square) matrix env
           "emat": ["\\end{array}\\right]"] # End a matrix env
@@ -82,3 +82,8 @@ sphinx:
 
           # Linear Algebra
           "v": ["\\mathbf{#1}", 1] # Vector; lowercase symbol in bold font
+          "Span": ["\\mathop{\\mathrm{span}}"]
+          "im": ["\\mathop{\\mathrm{im}}"]
+          "ker": ["\\mathop{\\mathrm{ker}}"]
+          "row": ["\\mathop{\\mathrm{row}}"]
+          "col": ["\\mathop{\\mathrm{col}}"]
