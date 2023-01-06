@@ -595,22 +595,19 @@ f(x) =  \sqrt[3]{x(x-1)} ,
 <p>Theoretically, the graph of  <span class="math notranslate nohighlight">\(f^\prime\)</span>  in  <a class="reference internal" href="#fig-5"><span class="std std-numref">Fig. 7</span></a>  will tend to  <span class="math notranslate nohighlight">\(-\infty\)</span>  and  <span class="math notranslate nohighlight">\(\infty\)</span>  as  <span class="math notranslate nohighlight">\(x\)</span>  approaches  <span class="math notranslate nohighlight">\(0\)</span>  and  <span class="math notranslate nohighlight">\(1\)</span> , respectively. The reason why the absolute values of the derivatives near the endpoints shown in the graph are only about  <span class="math notranslate nohighlight">\(3000\)</span>  is because of the limited computational precision of the computer.</p>
 </div>
 </div>
-</div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-
-By {prf:ref}`thm:10`, we know a function is strictly increasing if its derivative is always positive, and it is strictly decreasing if its derivative is always negative. Suppose now we only know that $f^\prime$ is nonzero in some open interval, what can we conclude? Thanks to the intermediate value theorem, or Darboux&#39;s theorem, $f^\prime$ is either always positive or always negative. Hence, we can conclude that $f$ must be strictly monotonic.
-
-
-````{prf:theorem}
-Suppose  $f$  has a derivative (finite or infinite) in  $(a, b)$ , and is continuous at endpoints  $a$  and  $b$ . If  $f^\prime(x) \neq 0 \; \forall x \in (a, b)$ , then  $f$  is strictly monotonic on  $[a, b]$ .
-</pre></div>
+</div><p>By <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:10">Theorem 15</a>, we know a function is strictly increasing if its derivative is always positive, and it is strictly decreasing if its derivative is always negative. Suppose now we only know that <span class="math notranslate nohighlight">\(f^\prime\)</span> is nonzero in some open interval, what can we conclude? Thanks to the intermediate value theorem, or Darboux’s theorem, <span class="math notranslate nohighlight">\(f^\prime\)</span> is either always positive or always negative. Hence, we can conclude that <span class="math notranslate nohighlight">\(f\)</span> must be strictly monotonic.</p>
+<div class="proof theorem admonition" id="theorem-4">
+<p class="admonition-title"><span class="caption-number">Theorem 18 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Suppose  <span class="math notranslate nohighlight">\(f\)</span>  has a derivative (finite or infinite) in  <span class="math notranslate nohighlight">\((a, b)\)</span> , and is continuous at endpoints  <span class="math notranslate nohighlight">\(a\)</span>  and  <span class="math notranslate nohighlight">\(b\)</span> . If  <span class="math notranslate nohighlight">\(f^\prime(x) \neq 0 \; \forall x \in (a, b)\)</span> , then  <span class="math notranslate nohighlight">\(f\)</span>  is strictly monotonic on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
 </div>
-<div class="proof admonition" id="proof">
+</div><div class="proof admonition" id="proof">
 <p>Proof. Pick a point  <span class="math notranslate nohighlight">\(x_1 \in (a, b)\)</span> . Suppose  <span class="math notranslate nohighlight">\(f^\prime(x_0) &gt; 0\)</span> . Let  <span class="math notranslate nohighlight">\(x_0\)</span>  be fixed, and choose an arbitrary point  <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>  other than  <span class="math notranslate nohighlight">\(x_0\)</span> . We claim that  <span class="math notranslate nohighlight">\(f^\prime(x) &gt; 0\)</span> . Otherwise, if  <span class="math notranslate nohighlight">\(f^\prime(x) &lt; 0\)</span> , then by  <a class="reference internal" href="#thm:13">Theorem 17</a> , there exists some point  <span class="math notranslate nohighlight">\(c\)</span>  in between  <span class="math notranslate nohighlight">\(x_0\)</span>  and  <span class="math notranslate nohighlight">\(x\)</span>  such that  <span class="math notranslate nohighlight">\(f^\prime(c) = 0\)</span> , which contradicts the given condition that  <span class="math notranslate nohighlight">\(f^\prime\)</span>  is nonzero in  <span class="math notranslate nohighlight">\((a, b)\)</span> . In this case, we have  <span class="math notranslate nohighlight">\(f^\prime(x) &gt; 0 \; \forall x \in (a, b)\)</span> . It then follows from  <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:10">Theorem 15</a>  that  <span class="math notranslate nohighlight">\(f\)</span>  is strictly increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
 <p>If  <span class="math notranslate nohighlight">\(f^\prime(x_0) &lt; 0\)</span> , then a similar argument will show that  <span class="math notranslate nohighlight">\(f\)</span>  is strictly decreasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
 </div>
 <p>It is because the derivatives cannot have jump discontinuities that monotonic derivatives are necessarily continuous.</p>
-<div class="proof theorem admonition" id="theorem-4">
-<p class="admonition-title"><span class="caption-number">Theorem 18 </span></p>
+<div class="proof theorem admonition" id="theorem-5">
+<p class="admonition-title"><span class="caption-number">Theorem 19 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(f^\prime\)</span>  exits, and is monotonic in  <span class="math notranslate nohighlight">\((a, b)\)</span> . Then  <span class="math notranslate nohighlight">\(f^\prime\)</span>  is continuous in  <span class="math notranslate nohighlight">\((a, b)\)</span> .</p>
 </div>
