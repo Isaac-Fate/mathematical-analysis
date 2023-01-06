@@ -102,11 +102,11 @@ where  $\phi(x)$  is continuous at  $c$  with  $\phi(c) = f^\prime(c) > 0$ . Sin
 ````
 
 
-The **local extremum**\index{local extremum} of a function is the largest or smallest value within some *open ball*.
+The **local extremum** of a function is the largest or smallest value within some *open ball*.
 
 
 ````{prf:definition}
-Let  $f$  be a real-valued function defined on a subset  $A$  of a metric space  $(X, d)$ , and suppose  $p \in A$ . Then  $f$  is said to have a  **local maximum** \index{local maximum}  at  $p$  if
+Let  $f$  be a real-valued function defined on a subset  $A$  of a metric space  $(X, d)$ , and suppose  $p \in A$ . Then  $f$  is said to have a  **local maximum**   at  $p$  if
 
 ```{math}
 \begin{align*}
@@ -115,7 +115,7 @@ f(x)  \leq  f(p)
 \end{align*}
 ```
 
-for some open ball  $B_\delta(p)$ . An analogous definition exists for  **local minimum** \index{local minimum} .
+for some open ball  $B_\delta(p)$ . An analogous definition exists for  **local minimum**  .
 ````
 
 
@@ -191,7 +191,7 @@ Review  {prf:ref}`eg:1` . Note that  $f(0) = f(4) = 0$ . And the derivative vani
 ````
 
 
-The **mean value theorem**\index{mean value theorem} is a generalization of Rolle's theorem. Roughly speaking it says $f$ has a derivative value that equals the slope of the secant line joining two endpoints of the graph of $f$. The mean value theorem itself can be treated as a special case of an even more generalized version, the **generalized mean value theorem**\index{generalized mean value theorem}({prf:ref}`thm:7`).
+The **mean value theorem** is a generalization of Rolle's theorem. Roughly speaking it says $f$ has a derivative value that equals the slope of the secant line joining two endpoints of the graph of $f$. The mean value theorem itself can be treated as a special case of an even more generalized version, the **generalized mean value theorem**({prf:ref}`thm:7`).
 
 
 ````{prf:theorem} Mean Value Theorem

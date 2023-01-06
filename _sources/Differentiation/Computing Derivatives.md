@@ -2,9 +2,11 @@
 
 It is difficult in practice to compute the derivative of any function only using the definition. In this section, we shall introduce some theorems and standard rules that are helpful with computation. If one knows the derivatives of elementary functions (e.g., $x^a$, $e^x$, $\ln x$, $\sin x$, $\cos x$, etc.), then by applying these theorems, one should be able to compute the derivatives of any functions that are built up out of elementary functions using summations, differences, products, quotients, and compositions.
 
-\begin{note}
+
+````{note}
 In fact, these so-called elementary functions are not elementary at all. We shall present their definitions as well as their derivatives rigorously in later chapters.
-\end{note}## Algebra of Derivatives
+````
+## Algebra of Derivatives
 
 ````{prf:theorem}
 Suppose  $f$  and  $g$  are defined on  $(a, b)$  and are both differentiable at  $c \in (a, b)$ . Then the functions  $f + g$ ,  $f - g$ ,  $fg$  are also differentiable at  $c$ . If  $g(c) \neq 0$ , then the quotient  $f / g$  is also differentiable at  $c$ . And the formulas of their derivatives are given by
@@ -123,7 +125,7 @@ Then by applying statement 2, we conclude that  $f / g$  is also differentiable 
 ````
 ## The Chain Rule
 
-Taking compositions is a more fundamental and natural way of combining two functions apart from summations, products, etc. The next result, the **chain rule**\index{chain rule}, provides a method of computing the derivative of a composite function.
+Taking compositions is a more fundamental and natural way of combining two functions apart from summations, products, etc. The next result, the **chain rule**, provides a method of computing the derivative of a composite function.
 
 
 ````{prf:theorem}

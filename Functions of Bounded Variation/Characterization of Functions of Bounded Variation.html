@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Limit of a Function &#8212; Mathematical Analysis</title>
+    <title>Characterization of Functions of Bounded Variation &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -57,8 +57,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Continuous Functions" href="Continuous%20Functions.html" />
-    <link rel="prev" title="Limits and Continuity" href="index.html" />
+    <link rel="next" title="Riemann-Stieltjes Integral" href="../Riemann-Stieltjes%20Integral/index.html" />
+    <link rel="prev" title="Functions of Bounded Variation" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,33 +119,33 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
    Limits and Continuity
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Limit%20of%20a%20Function.html">
      Limit of a Function
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Continuous%20Functions.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html">
      Continuous Functions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Connectedness.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Connectedness.html">
      Connectedness
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Monotonic%20Functions.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Monotonic%20Functions.html">
      Monotonic Functions
     </a>
    </li>
@@ -193,18 +193,18 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    Functions of Bounded Variation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Characterization of Functions of Bounded Variation
     </a>
    </li>
@@ -342,7 +342,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https:/github.com/Isaac-Fate/mathematical-analysis/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FLimits and Continuity/Limit of a Function.html&body=Your%20issue%20content%20here."
+        <a href="https:/github.com/Isaac-Fate/mathematical-analysis/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FFunctions of Bounded Variation/Characterization of Functions of Bounded Variation.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -370,7 +370,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Limits and Continuity/Limit of a Function.md"
+        <a href="../_sources/Functions of Bounded Variation/Characterization of Functions of Bounded Variation.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -419,7 +419,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Limit of a Function</h1>
+                <h1>Characterization of Functions of Bounded Variation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -431,21 +431,20 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="limit-of-a-function">
-<h1>Limit of a Function<a class="headerlink" href="#limit-of-a-function" title="Permalink to this headline">#</a></h1>
-<div class="proof proposition admonition" id="pro:2">
-<p class="admonition-title"><span class="caption-number">Proposition 1 </span></p>
-<div class="proposition-content section" id="proof-content">
-<p>Let  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(g\)</span>  be complex-valued functions defined on a subset  <span class="math notranslate nohighlight">\(A\)</span>  of a metric space  <span class="math notranslate nohighlight">\((X, d)\)</span> , and  <span class="math notranslate nohighlight">\(p\)</span>  a limit point of  <span class="math notranslate nohighlight">\(A\)</span> . If  <span class="math notranslate nohighlight">\(\lim_{x \to p} f(x) = 0\)</span>  and  <span class="math notranslate nohighlight">\(g\)</span>  is bounded, then</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-\lim _ {x \to p}  f(x)g(x) = 0
-\end{align*}\]</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="characterization-of-functions-of-bounded-variation">
+<h1>Characterization of Functions of Bounded Variation<a class="headerlink" href="#characterization-of-functions-of-bounded-variation" title="Permalink to this headline">#</a></h1>
+<div class="proof theorem admonition" id="thm:22">
+<p class="admonition-title"><span class="caption-number">Theorem 21 </span> (Characterization of Functions of Bounded Variation)</p>
+<div class="theorem-content section" id="proof-content">
+<p>Characterization of Functions of Bounded Variation
+Let  <span class="math notranslate nohighlight">\(f\)</span>  be a real-valued function on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Then, the following statements are equivalent.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(f\)</span>  is of bounded variation on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p></li>
+<li><p>There exist two increasing functions  <span class="math notranslate nohighlight">\(g\)</span>  and  <span class="math notranslate nohighlight">\(h\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that  <span class="math notranslate nohighlight">\(f = g - h\)</span> .</p></li>
+<li><p>There exist two  <strong>strictly</strong>  increasing functions  <span class="math notranslate nohighlight">\(g\)</span>  and  <span class="math notranslate nohighlight">\(h\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that  <span class="math notranslate nohighlight">\(f = g - h\)</span> .</p></li>
+</ol>
 </div>
-</div><div class="proof admonition" id="proof">
-<p>Proof. TODO</p>
-</div>
-</div>
+</div></div>
 
     <script type="text/x-thebe-config">
     {
@@ -460,7 +459,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Limits and Continuity"
+            path: "./Functions of Bounded Variation"
         },
         predefinedOutput: true
     }
@@ -478,13 +477,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Limits and Continuity</p>
+            <p class="prev-next-title">Functions of Bounded Variation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Continuous%20Functions.html" title="next page">
+    <a class='right-next' id="next-link" href="../Riemann-Stieltjes%20Integral/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Continuous Functions</p>
+        <p class="prev-next-title">Riemann-Stieltjes Integral</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

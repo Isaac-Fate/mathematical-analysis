@@ -14,17 +14,17 @@ f^ \prime (x) =  \begin{cases}
 \end{align*}
 ```
 
-We plot the original function $f$ along with its derivative $f^\prime$ side by side in {ref}`fig:4`.
+We plot the original function $f$ along with its derivative $f^\prime$ side by side in {numref}`fig:4`.
 
 ```{figure} ../figures/graph-004.png
 ---
 name: fig:4
 ---
-Left: original function. Right: its derivative.
+Left: original function. Right: derivative.
 ```
 
 
-Note that the derivative $f^\prime$ is not continuous at $x = 0$ since the limit of $f^\prime(x)$ does not exist as $x \to 0$. This example shows that the derivative of a function may not be continuous, and hence theorems for continuous functions do not apply to derivatives in general. However, the **intermediate value theorem**\index{intermediate value theorem for derivatives} is an exception. The intermediate value theorem for derivatives is also known as the **Darboux's theorem**\index{Darboux's theorem}.
+Note that the derivative $f^\prime$ is not continuous at $x = 0$ since the limit of $f^\prime(x)$ does not exist as $x \to 0$. This example shows that the derivative of a function may not be continuous, and hence theorems for continuous functions do not apply to derivatives in general. However, the **intermediate value theorem** is an exception. The intermediate value theorem for derivatives is also known as the **Darboux's theorem**.
 
 
 ````{prf:theorem} Darboux
@@ -131,13 +131,13 @@ f^ \prime (x)
 \end{align*}
 ```
 
-Note that the derivative  $f^\prime$  is not continuous at  $x = 0$ . The graphs of  $f$  and  $f^\prime$  are shown in  {ref}`fig:6` .
+Note that the derivative  $f^\prime$  is not continuous at  $x = 0$ . The graphs of  $f$  and  $f^\prime$  are shown in  {numref}`fig:6` .
 
 ```{figure} ../figures/graph-007.png
 ---
 name: fig:6
 ---
-Left: original function. Right: its derivative.
+Left: original function. Right: derivative.
 ```
 ````
 
@@ -229,17 +229,18 @@ f(x) =  \sqrt[3]{x(x-1)} ,
 \end{align*}
 ```
 
-Note that the derivative exists as a finite number in  $(0, 1)$ . And it can be shown that  $f^\prime_{+}(0) = -\infty$  and  $f^\prime_{-}(1) = \infty$ . Then  {prf:ref}`thm:13`  tells us  $f^\prime$  takes all the real numbers in  $(0, 1)$ . See  {ref}`fig:5` .
+Note that the derivative exists as a finite number in  $(0, 1)$ . And it can be shown that  $f^\prime_{+}(0) = -\infty$  and  $f^\prime_{-}(1) = \infty$ . Then  {prf:ref}`thm:13`  tells us  $f^\prime$  takes all the real numbers in  $(0, 1)$ . See  {numref}`fig:5` .
 
 ```{figure} ../figures/graph-006.png
 ---
 name: fig:5
 ---
-Left: original function. Right: its derivative.
+Left: original function. Right: derivative.
 ```
-\begin{note}
-Theoretically, the graph of $f^\prime$ in \ref{fig:5} will tend to $-\infty$ and $\infty$ as $x$ approaches $0$ and $1$, respectively. The reason why the absolute values of the derivatives near the endpoints shown in the graph are only about $3000$ is because of the limited computational precision of the computer.
-\end{note}
+
+````{note}
+Theoretically, the graph of  $f^\prime$  in  {numref}`fig:5`  will tend to  $-\infty$  and  $\infty$  as  $x$  approaches  $0$  and  $1$ , respectively. The reason why the absolute values of the derivatives near the endpoints shown in the graph are only about  $3000$  is because of the limited computational precision of the computer.
+````
 ````
 
 

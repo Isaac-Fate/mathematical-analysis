@@ -1,2 +1,1 @@
 # Riemann-Stieltjes Integral
-\printindex
