@@ -27,7 +27,7 @@ for any refinement  $P$  of  $P_\varepsilon$  and for any choice of points  $t_k
 ```
 ````
 
-```{note}
+:::{note}
 To ease the nation, we will sometimes write
 
 ```{math}
@@ -37,7 +37,7 @@ To ease the nation, we will sometimes write
 ```
 
 without specifying the lower and upper limits of  $k$  if no confusion will be caused.
-```
+:::
 
 
 Recall {prf:ref}`def:1` only requires the existence of $A$. We now show that such number $A$ is also unique.

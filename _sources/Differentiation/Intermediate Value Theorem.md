@@ -238,9 +238,9 @@ name: fig:5
 Left: original function. Right: derivative.
 ```
 
-```{note}
+:::{note}
 Theoretically, the graph of  $f^\prime$  in  {numref}`fig:5`  will tend to  $-\infty$  and  $\infty$  as  $x$  approaches  $0$  and  $1$ , respectively. The reason why the absolute values of the derivatives near the endpoints shown in the graph are only about  $3000$  is because of the limited computational precision of the computer.
-```
+:::
 ````
 
 

@@ -3,9 +3,9 @@
 It is difficult in practice to compute the derivative of any function only using the definition. In this section, we shall introduce some theorems and standard rules that are helpful with computation. If one knows the derivatives of elementary functions (e.g., $x^a$, $e^x$, $\ln x$, $\sin x$, $\cos x$, etc.), then by applying these theorems, one should be able to compute the derivatives of any functions that are built up out of elementary functions using summations, differences, products, quotients, and compositions.
 
 
-```{note}
+:::{note}
 In fact, these so-called elementary functions are not elementary at all. We shall present their definitions as well as their derivatives rigorously in later chapters.
-```
+:::
 ## Algebra of Derivatives
 
 ````{prf:theorem}
