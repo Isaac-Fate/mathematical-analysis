@@ -1,0 +1,686 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step Functions as Integrators &#8212; Mathematical Analysis</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonition.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "row": ["\\mathop{\\mathrm{row}}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reduction of Riemann-Stieltjes Integrals to Finite Sums" href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html" />
+    <link rel="prev" title="Change of Variables" href="Change%20of%20Variables.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Mathematical Analysis</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to This Notebook on Mathematical Analysis
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
+   Limits and Continuity
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Limit%20of%20a%20Function.html">
+     Limit of a Function
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html">
+     Continuous Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Connectedness.html">
+     Connectedness
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Monotonic%20Functions.html">
+     Monotonic Functions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Differentiation/index.html">
+   Differentiation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Differentiation/Definition%20of%20Derivative.html">
+     Definition of Derivative
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Differentiation/Derivatives%20and%20Continuity.html">
+     Derivatives and Continuity
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Differentiation/Computing%20Derivatives.html">
+     Computing Derivatives
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html">
+     The Mean Value Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Differentiation/Intermediate%20Value%20Theorem.html">
+     Intermediate Value Theorem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Differentiation/Taylor%27s%20Theorem.html">
+     Taylor’s Theorem
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/index.html">
+   Functions of Bounded Variation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html">
+     Characterization of Functions of Bounded Variation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Riemann-Stieltjes Integral
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">
+     Definition of the Riemann-Stieltjes Integral
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Linear%20Properties.html">
+     Linear Properties
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Reduction%20to%20Riemann-Stieltjes%20Integrals.html">
+     Reduction to Riemann-Stieltjes Integrals
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Integration%20by%20Parts.html">
+     Integration by Parts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Change%20of%20Variables.html">
+     Change of Variables
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Step Functions as Integrators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">
+     Reduction of Riemann-Stieltjes Integrals to Finite Sums
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Monotonically%20Increasing%20Integrators.html">
+     Monotonically Increasing Integrators
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https:/github.com/Isaac-Fate/mathematical-analysis/mathematical-analysis"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https:/github.com/Isaac-Fate/mathematical-analysis/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Step Functions as Integrators.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Riemann-Stieltjes Integral/Step Functions as Integrators.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Step Functions as Integrators</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="step-functions-as-integrators">
+<h1>Step Functions as Integrators<a class="headerlink" href="#step-functions-as-integrators" title="Permalink to this headline">#</a></h1>
+<p>If the integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is a constant function on <span class="math notranslate nohighlight">\([a, b]\)</span>, then the <span class="math notranslate nohighlight">\(f\)</span> is always integrable with <span class="math notranslate nohighlight">\(\int_{a}^{b} f\; \mathrm{d}\alpha = 0\)</span> since the Stieltjes sum <span class="math notranslate nohighlight">\(S(P,f,\alpha) = 0\)</span> for any partition.</p>
+<p>What if <span class="math notranslate nohighlight">\(\alpha\)</span> is constant except for one jump or removable discontinuity at <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>? For example, <span class="math notranslate nohighlight">\(\alpha\)</span> may look like functions shown in <a class="reference internal" href="#fig-9"><span class="std std-numref">Fig. 10</span></a>.</p>
+<div class="figure align-default" id="fig-9">
+<img alt="../_images/step-func-integrator.png" src="../_images/step-func-integrator.png" />
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Left: <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x=0\)</span>. Middle: <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x=0\)</span>. Right: <span class="math notranslate nohighlight">\(\alpha(x)\)</span> has a removable discontinuity at <span class="math notranslate nohighlight">\(x=0\)</span>.</span><a class="headerlink" href="#fig-9" title="Permalink to this image">#</a></p>
+</div>
+<p>In this case, <span class="math notranslate nohighlight">\(f\)</span> may not be even integrable, and if it is, <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha\)</span> may not be zero.</p>
+<div class="proof theorem admonition" id="thm:24">
+<p class="admonition-title"><span class="caption-number">Theorem 29 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Let  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> . Define a function  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  as follows. The values of  <span class="math notranslate nohighlight">\(\alpha(a)\)</span> ,  <span class="math notranslate nohighlight">\(\alpha(b)\)</span>  and  <span class="math notranslate nohighlight">\(\alpha(c)\)</span>  are chosen arbitrarily, and elsewhere</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\alpha (x) =  \begin{cases}
+\alpha(a) &amp; a \leq x &lt; c \\
+\alpha(b) &amp; c &lt; x \leq b
+\end{cases}
+\end{align*}\end{split}\]</div>
+<p>Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is a bounded function defined on  <span class="math notranslate nohighlight">\([a, b]\)</span>  in such a way that</p>
+<ol class="simple">
+<li><p>at least one of  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is continuous from the left at  <span class="math notranslate nohighlight">\(c\)</span> , and</p></li>
+<li><p>at least one of  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is continuous from the right at  <span class="math notranslate nohighlight">\(c\)</span> .</p></li>
+</ol>
+<p>Then,  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  with</p>
+<div class="math notranslate nohighlight" id="equation-eq-40">
+<span class="eqno">(39)<a class="headerlink" href="#equation-eq-40" title="Permalink to this equation">#</a></span>\[\begin{align}
+\int _ {a} ^ {b}  f  \; \mathrm{d} \alpha
+= f(c)  [ \alpha (b) -  \alpha (a) ]
+\end{align}\]</div>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (Possible expressions of  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span> ) We first investigate the expression of the Stieltjes sum  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span> . Given any partition  <span class="math notranslate nohighlight">\(P\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . If  <span class="math notranslate nohighlight">\(c \notin P\)</span> , then we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+S(P,f, \alpha ) = f(c)  [ \alpha (b) -  \alpha (a) ]
+\end{align*}\]</div>
+<p>And if  <span class="math notranslate nohighlight">\(c \in P\)</span> , we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+S(P,f, \alpha )
+= f(c- \delta _1)  [ \alpha (c) -  \alpha (a) ]
++ f(c+ \delta _2)  [ \alpha (b) -  \alpha (c) ]
+\end{align*}\]</div>
+<p>where  <span class="math notranslate nohighlight">\(c-\delta_1\)</span>  and  <span class="math notranslate nohighlight">\(c+\delta_2\)</span> ( <span class="math notranslate nohighlight">\(\delta_1, \delta_2 \geq 0\)</span> ) are two points in the adjacent sub-intervals sharing the same endpoint  <span class="math notranslate nohighlight">\(c\)</span> . Note that  <span class="math notranslate nohighlight">\(\delta_1\)</span>  and  <span class="math notranslate nohighlight">\(\delta_2\)</span>  can not be too large. In fact, they satisfy that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+0  \leq \delta _1,  \delta _2  \leq \norm{P}
+\end{align*}\]</div>
+<p>Taking into consideration both cases, we have the following inequality for any partition  <span class="math notranslate nohighlight">\(P\)</span> :</p>
+<div class="math notranslate nohighlight" id="equation-eq-39">
+<span class="eqno">(40)<a class="headerlink" href="#equation-eq-39" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{multline}
+\abs{
+S(P,f,\alpha)
+- f(c) [\alpha(b) - \alpha(a)]
+} \\ \leq \abs{f(c-\delta_1) - f(c)} \abs{\alpha(c) - \alpha(a)}
++  \abs{f(c+\delta_2) - f(c)} \abs{\alpha(b) - \alpha(c)}
+\end{multline}\end{split}\]</div>
+<p>where of course  <span class="math notranslate nohighlight">\(0 \leq \delta_1, \delta_2 \leq \norm{P}\)</span> .</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In fact, the left-hand side of  <a class="reference internal" href="#equation-eq-39">(40)</a>  reduces to zero when  <span class="math notranslate nohighlight">\(c \notin P\)</span>  and the equality holds if  <span class="math notranslate nohighlight">\(c \in P\)</span> .</p>
+</div>
+<p>There are altogether four scenarios concerning the continuity of  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(\alpha\)</span>  at point  <span class="math notranslate nohighlight">\(c\)</span> , which are</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha(x)\)</span>  is continuous at  <span class="math notranslate nohighlight">\(x=c\)</span> .</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha(x)\)</span>  is continuous from the right at  <span class="math notranslate nohighlight">\(x=c\)</span> , and  <span class="math notranslate nohighlight">\(f(x)\)</span>  is continuous from the left at  <span class="math notranslate nohighlight">\(x=c\)</span> .</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha(x)\)</span>  is continuous from the left at  <span class="math notranslate nohighlight">\(x=c\)</span> , and  <span class="math notranslate nohighlight">\(f(x)\)</span>  is continuous from the right at  <span class="math notranslate nohighlight">\(x=c\)</span> .</p></li>
+<li><p><span class="math notranslate nohighlight">\(f(x)\)</span>  is continuous at  <span class="math notranslate nohighlight">\(x=c\)</span> .</p></li>
+</ol>
+<p>(Proof of 1) If  <span class="math notranslate nohighlight">\(\alpha(x)\)</span>  is continuous at  <span class="math notranslate nohighlight">\(x=c\)</span> , then  <span class="math notranslate nohighlight">\(\alpha\)</span>  is a constant function. In this case,  <span class="math notranslate nohighlight">\(f\)</span>  is certainly integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span>  with  <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha = 0\)</span> . And  <a class="reference internal" href="#equation-eq-40">(39)</a>  holds since its right-hand side is also zero for  <span class="math notranslate nohighlight">\(\alpha(a) = \alpha(b)\)</span> .</p>
+<p>(Proof of 2) Because  <span class="math notranslate nohighlight">\(\alpha(x)\)</span>  is continuous from the right at  <span class="math notranslate nohighlight">\(x=c\)</span> , we have  <span class="math notranslate nohighlight">\(\alpha(c) = \alpha(b)\)</span> , and the inequality  <a class="reference internal" href="#equation-eq-39">(40)</a>  reduces to</p>
+<div class="math notranslate nohighlight" id="equation-eq-41">
+<span class="eqno">(41)<a class="headerlink" href="#equation-eq-41" title="Permalink to this equation">#</a></span>\[\begin{align}
+\abs{
+S(P,f,\alpha)
+- f(c) [\alpha(b) - \alpha(a)]
+} \leq \abs{f(c-\delta_1) - f(c)} \abs{\alpha(c) - \alpha(a)}
+\end{align}\]</div>
+<p>Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , since  <span class="math notranslate nohighlight">\(f(x)\)</span>  is continuous from the left at  <span class="math notranslate nohighlight">\(x=c\)</span> , there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-42">
+<span class="eqno">(42)<a class="headerlink" href="#equation-eq-42" title="Permalink to this equation">#</a></span>\[\begin{align}
+- \delta  &lt; x - c &lt; 0
+\implies \abs{f(x) - f(c)}  &lt;  \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + 1}
+\end{align}\]</div>
+<p>Choose a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  with  <span class="math notranslate nohighlight">\(\norm{P_\varepsilon} &lt; \delta\)</span> . Let  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span>  be an arbitrary refinement. Applying  <a class="reference internal" href="#equation-eq-41">(41)</a>  to  <span class="math notranslate nohighlight">\(P\)</span> , we have  <span class="math notranslate nohighlight">\(\delta_1 &lt; \norm{P} \leq \norm{P_\varepsilon}&lt;\delta\)</span> . We may then apply  <a class="reference internal" href="#equation-eq-42">(42)</a> , and obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{multline*}
+\abs{
+S(P,f,\alpha)
+- f(c) [\alpha(b) - \alpha(a)]
+} \leq \abs{f(c-\delta_1) - f(c)} \abs{\alpha(c) - \alpha(a)} \\
+&lt;  \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + 1} \abs{\alpha(c) - \alpha(a)}
+&lt;  \varepsilon
+\end{multline*}\end{split}\]</div>
+<p>This implies  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and  <a class="reference internal" href="#equation-eq-40">(39)</a>  holds.</p>
+<p>(Proof of 3) The proof, in this case, is similar to that of 2.</p>
+<p>(Proof of 4) Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> . Because  <span class="math notranslate nohighlight">\(f(x)\)</span>  is continuous at  <span class="math notranslate nohighlight">\(x=c\)</span> , there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-43">
+<span class="eqno">(43)<a class="headerlink" href="#equation-eq-43" title="Permalink to this equation">#</a></span>\[\begin{align}
+\abs{x - c}  &lt;  \delta \implies \abs{f(x) - f(c)}  &lt;  \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + \abs{\alpha(b) - \alpha(c)} + 1}
+\end{align}\]</div>
+<p>Choose a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  with  <span class="math notranslate nohighlight">\(\norm{P_\varepsilon} &lt; \delta\)</span> . Let  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span> . Applying  <a class="reference internal" href="#equation-eq-39">(40)</a>  to  <span class="math notranslate nohighlight">\(P\)</span> , we have  <span class="math notranslate nohighlight">\(0 \leq \delta_1, \delta_2 \leq \norm{P} \leq \norm{P_\varepsilon} &lt; \delta\)</span> . Then  <a class="reference internal" href="#equation-eq-39">(40)</a>  and  <a class="reference internal" href="#equation-eq-43">(43)</a>  yield</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{multline*}
+\abs{
+S(P,f,\alpha)
+- f(c) [\alpha(b) - \alpha(a)]
+} \\
+&lt;    \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + \abs{\alpha(b) - \alpha(c)} + 1} ( \abs{\alpha(c) - \alpha(a)}
++  \abs{\alpha(b) - \alpha(c)} )
+&lt;  \varepsilon
+\end{multline*}\end{split}\]</div>
+<p>Hence,  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> , and  <a class="reference internal" href="#equation-eq-40">(39)</a>  holds. This completes the proof.</p>
+</div>
+<div class="proof example admonition" id="eg:3">
+<p class="admonition-title"><span class="caption-number">Example 9 </span></p>
+<div class="example-content section" id="proof-content">
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+f(x) =  \begin{cases}
+\frac{\abs{\sin(x)}}{x} &amp;x \neq 0 \\
+-1 &amp;x = 0
+\end{cases} \quad \text{and} \quad \alpha (x) =  \begin{cases}
+-1 &amp;x &lt; 0 \\
+1 &amp;x \geq 0
+\end{cases} ,
+\quad  x  \in[-3\pi, 3\pi]
+\end{align*}\end{split}\]</div>
+<p><a class="reference internal" href="#fig-10"><span class="std std-numref">Fig. 11</span></a>  exhibits the graphs of these two functions.</p>
+<div class="figure align-default" id="fig-10">
+<img alt="../_images/graph-009.png" src="../_images/graph-009.png" />
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Left: integrand <span class="math notranslate nohighlight">\(f\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(0\)</span>. Right: integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(0\)</span>.</span><a class="headerlink" href="#fig-10" title="Permalink to this image">#</a></p>
+</div>
+<p>The integrator  <span class="math notranslate nohighlight">\(\alpha\)</span>  is constant except for a jump discontinuity at  <span class="math notranslate nohighlight">\(0\)</span> . We note that  <span class="math notranslate nohighlight">\(\alpha\)</span>  is continuous from the  <em>right</em>  at  <span class="math notranslate nohighlight">\(0\)</span> , and  <span class="math notranslate nohighlight">\(f\)</span>  is continuous from the  <em>left</em>  at  <span class="math notranslate nohighlight">\(0\)</span> . Hence, the conditions in  <a class="reference internal" href="#thm:24">Theorem 29</a>  are satisfied, and we conclude  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>  with</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\int _ {-3\pi} ^ {3\pi} f  \; \mathrm{d} \alpha
+= f(0) [ \alpha (3 \pi ) -  \alpha (-3 \pi ) ]
+= f(0)  \cdot  2 = -2
+\end{align*}\]</div>
+</div>
+</div><div class="proof example admonition" id="example-2">
+<p class="admonition-title"><span class="caption-number">Example 10 </span></p>
+<div class="example-content section" id="proof-content">
+<p>If we alter the function  <span class="math notranslate nohighlight">\(f\)</span>  in the example above ( <a class="reference internal" href="#eg:3">Example 9</a> ) by re-defining  <span class="math notranslate nohighlight">\(f(0) = 1\)</span>  and keep the integrator  <span class="math notranslate nohighlight">\(\alpha\)</span>  unchanged, then  <span class="math notranslate nohighlight">\(f\)</span>  is no longer integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span> . Now,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+f(x) =  \begin{cases}
+\frac{\abs{\sin(x)}}{x} &amp;x \neq 0 \\
+1 &amp;x = 0
+\end{cases} \quad \text{and} \quad \alpha (x) =  \begin{cases}
+-1 &amp;x &lt; 0 \\
+1 &amp;x \geq 0
+\end{cases} ,
+\quad  x  \in[-3\pi, 3\pi]
+\end{align*}\end{split}\]</div>
+<p>Note that we cannot apply  <a class="reference internal" href="#thm:24">Theorem 29</a>  here since neither the integrand nor the integrator is continuous from the left of  <span class="math notranslate nohighlight">\(0\)</span> .</p>
+<p>To show that  <span class="math notranslate nohighlight">\(f\)</span>  is indeed not integrable, we consider  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>  and  <span class="math notranslate nohighlight">\([0, 3\pi]\)</span>  separately. It is evident that  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([0, 3\pi]\)</span>  with  <span class="math notranslate nohighlight">\(\int_{0}^{3\pi}f \; \mathrm{d}\alpha = 0\)</span> . We now consider the other half interval  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> . Given any partition  <span class="math notranslate nohighlight">\(P = \{x_0, x_1, \ldots, x_n\}\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> , we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+S(P,f, \alpha )
+= f(t_n)  [ \alpha (x_n) -  \alpha (x_ {n-1} ) ]
+= 2 f(t_n)
+=  \begin{cases}
+2 \abs{\sin(t_n)} / t_n &lt; 0 &amp;t_n &lt; 0\\
+1 &amp;t_n = 0
+\end{cases}
+\end{align*}\end{split}\]</div>
+<p>Therefore,  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>  since for any partition  <span class="math notranslate nohighlight">\(P\)</span> , we can always choose the last point  <span class="math notranslate nohighlight">\(t_n\)</span>  such that the Stieltjes sum  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>  does not fall in a neighborhood of some number. Finally, by  <a class="reference internal" href="Linear%20Properties.html#thm:25">Theorem 25</a> ,  <span class="math notranslate nohighlight">\(f\)</span>  cannot be integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span>  on the whole interval  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> .</p>
+<p>As a matter of fact,  <span class="math notranslate nohighlight">\(f \notin \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>  if we re-define  <span class="math notranslate nohighlight">\(f(0)\)</span>  other than  <span class="math notranslate nohighlight">\(1\)</span>  while keep  <span class="math notranslate nohighlight">\(\alpha\)</span>  unchanged.</p>
+</div>
+</div></div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "Isaac-Fate/mathematical-analysis",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Riemann-Stieltjes Integral"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Change%20of%20Variables.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Change of Variables</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Reduction of Riemann-Stieltjes Integrals to Finite Sums</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Isaac FEI<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

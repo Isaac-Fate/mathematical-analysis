@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reduction to Riemann-Stieltjes Integrals &#8212; Mathematical Analysis</title>
+    <title>Reduction of Riemann-Stieltjes Integrals to Finite Sums &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,13 +52,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "row": ["\\mathop{\\mathrm{row}}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Integration by Parts" href="Integration%20by%20Parts.html" />
-    <link rel="prev" title="Linear Properties" href="Linear%20Properties.html" />
+    <link rel="next" title="Monotonically Increasing Integrators" href="Monotonically%20Increasing%20Integrators.html" />
+    <link rel="prev" title="Step Functions as Integrators" href="Step%20Functions%20as%20Integrators.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -230,8 +228,8 @@ const thebe_selector_output = ".output, .cell_output"
      Linear Properties
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Reduction%20to%20Riemann-Stieltjes%20Integrals.html">
      Reduction to Riemann-Stieltjes Integrals
     </a>
    </li>
@@ -250,8 +248,8 @@ const thebe_selector_output = ".output, .cell_output"
      Step Functions as Integrators
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Reduction of Riemann-Stieltjes Integrals to Finite Sums
     </a>
    </li>
@@ -352,7 +350,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https:/github.com/Isaac-Fate/mathematical-analysis/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Reduction to Riemann-Stieltjes Integrals.html&body=Your%20issue%20content%20here."
+        <a href="https:/github.com/Isaac-Fate/mathematical-analysis/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Reduction of Riemann-Stieltjes Integrals to Finite Sums.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -380,7 +378,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Riemann-Stieltjes Integral/Reduction to Riemann-Stieltjes Integrals.md"
+        <a href="../_sources/Riemann-Stieltjes Integral/Reduction of Riemann-Stieltjes Integrals to Finite Sums.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -429,7 +427,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Reduction to Riemann-Stieltjes Integrals</h1>
+                <h1>Reduction of Riemann-Stieltjes Integrals to Finite Sums</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -441,84 +439,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="reduction-to-riemann-stieltjes-integrals">
-<h1>Reduction to Riemann-Stieltjes Integrals<a class="headerlink" href="#reduction-to-riemann-stieltjes-integrals" title="Permalink to this headline">#</a></h1>
-<p>In the definition of Riemann-Stieltjes integral, <span class="math notranslate nohighlight">\(\mathrm{d} \alpha\)</span> is merely a symbol which emphasizes that the integrator is <span class="math notranslate nohighlight">\(\alpha\)</span>. However, it is tempting to associate this symbol with the concept of differentials, and then replace it with <span class="math notranslate nohighlight">\(\alpha^\prime(x) \; \mathrm{d} x\)</span>. As stated in the following theorem, we can indeed do this under some conditions.</p>
-<div class="proof theorem admonition" id="thm:23">
-<p class="admonition-title"><span class="caption-number">Theorem 26 </span></p>
-<div class="theorem-content section" id="proof-content">
-<p>Suppose  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and  <span class="math notranslate nohighlight">\(\alpha\)</span>  has a continuous derivative  <span class="math notranslate nohighlight">\(\alpha^\prime\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Then the Riemann integral  <span class="math notranslate nohighlight">\(f \alpha^\prime\)</span>  exits, i.e.,  <span class="math notranslate nohighlight">\(f \alpha^\prime \in \mathfrak{R}\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and we have</p>
-<div class="math notranslate nohighlight" id="equation-eq-38">
-<span class="eqno">(28)<a class="headerlink" href="#equation-eq-38" title="Permalink to this equation">#</a></span>\[\begin{align}
-\int _ {a} ^ {b}  f(x)  \; \mathrm{d} \alpha (x)
-=  \int _ {a} ^ {b}  f(x)  \alpha ^ \prime (x)  \; \mathrm{d} x
-\end{align}\]</div>
-</div>
-</div><div class="proof admonition" id="proof">
-<p>Proof. We first do some preliminary work. Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is bounded by a positive number  <span class="math notranslate nohighlight">\(M &gt; 0\)</span> , i.e.,  <span class="math notranslate nohighlight">\(\abs{f(x)} \leq M \; \forall x \in[a, b]\)</span> , and let  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  be chosen arbitrarily.</p>
-<p>Then, we make use of the continuity of  <span class="math notranslate nohighlight">\(\alpha^\prime\)</span> . Note that  <span class="math notranslate nohighlight">\(\alpha^\prime\)</span>  is uniformly continuity on  <span class="math notranslate nohighlight">\([a, b]\)</span>  since the closed interval is compact. Then there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
-<div class="math notranslate nohighlight" id="equation-eq-34">
-<span class="eqno">(29)<a class="headerlink" href="#equation-eq-34" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{s-t}  &lt;  \delta \implies \abs{\alpha^\prime(s) - \alpha^\prime(t)}  &lt;  \frac{\varepsilon / 2}{M(b-a)}
-\end{align}\]</div>
-<p>Let  <span class="math notranslate nohighlight">\(P_\varepsilon^\prime\)</span>  be a partition on  <span class="math notranslate nohighlight">\([a, b]\)</span>  with mesh less than  <span class="math notranslate nohighlight">\(\delta\)</span> , i.e.,  <span class="math notranslate nohighlight">\(\norm{P} &lt; \delta\)</span> .</p>
-<p>Because  <span class="math notranslate nohighlight">\(f \in \mathfrak{\alpha}\)</span> , there exists a partition, say  <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span> , such that</p>
-<div class="math notranslate nohighlight" id="equation-eq-35">
-<span class="eqno">(30)<a class="headerlink" href="#equation-eq-35" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}  &lt;  \varepsilon  / 2
-\quad \forall  P  \supset  P_ \varepsilon ^ {\prime\prime}
-\end{align}\]</div>
-<p>holds for any refinement  <span class="math notranslate nohighlight">\(P\)</span> .</p>
-<p>Let partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  be the refinement of both partitions  <span class="math notranslate nohighlight">\(P_\varepsilon^\prime\)</span>  and  <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span> , i.e.,  <span class="math notranslate nohighlight">\(P = P_\varepsilon^\prime \cup P_\varepsilon^{\prime\prime}\)</span> . Then for any refinement  <span class="math notranslate nohighlight">\(P\)</span>  of  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> , we have</p>
-<div class="math notranslate nohighlight" id="equation-eq-36">
-<span class="eqno">(31)<a class="headerlink" href="#equation-eq-36" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{multline}
-\abs{S(P, f\alpha^\prime) - \int_{a}^{b}f \; \mathrm{d}\alpha} \leq \abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}
-+  \abs{S(P, f, \alpha) - \int_{a}^{b}f \; \mathrm{d}\alpha} \\
-&lt;  \abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}  +  \varepsilon  / 2
-\end{multline}\end{split}\]</div>
-<p>where the last inequality follows from  <a class="reference internal" href="#equation-eq-35">(30)</a> .</p>
-<p>We now work on  <span class="math notranslate nohighlight">\(\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}\)</span> . We have</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}
-=  \abs{
-\sum_{k} f(t_k) \alpha^\prime(t_k) (x_k - x_{k-1})
-- \sum_{k} f(t_k) [\alpha(x_{k}) - \alpha(x_{k-1})]
-}
-\end{align*}\]</div>
-<p>Applying the mean value theorem ( <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 12</a> ) to  <span class="math notranslate nohighlight">\(\alpha\)</span>  on each sub-interval  <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>  leads to</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-\sum _ {k}  f(t_k)  \alpha ^ \prime (t_k) (x_k - x_ {k-1} )
--  \sum _ {k}  f(t_k)  [ \alpha (x_ {k} ) -  \alpha (x_ {k-1} ) ]
-=  \sum _ {k}  f(t_k)  [ \alpha ^ \prime (t_k) -  \alpha ^ \prime ( \xi _k) ] (x_k - x_ {k-1} )
-\end{align*}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(\xi_k \in (x_{k-1}, x_k)\)</span> . It then follows that</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{alignat*}
-2 \abs{S(P, f\alpha^\prime) - S(P, f, \alpha)} &amp;=&amp;  \; &amp;  \abs{\sum_{k} f(t_k) [\alpha^\prime(t_k) - \alpha^\prime(\xi_k)] (x_k - x_{k-1})} \\ &amp; \leq &amp;&amp;  \sum _ {k} \abs{f(t_k)} \abs{\alpha^\prime(t_k) - \alpha^\prime(\xi_k)} \Delta  x_k  \\ &amp;&amp;&amp; \text{recall $\abs{f} \leq M$} \\ &amp; \leq &amp;&amp; M  \sum _ {k} \abs{\alpha^\prime(t_k) - \alpha^\prime(\xi_k)} \Delta  x_k
-\end{alignat*}\end{split}\]</div>
-<p>Note that  <span class="math notranslate nohighlight">\(\abs{t_k - \xi_k} \leq \norm{P} \leq \norm{P_\varepsilon^\prime} &lt; \delta\)</span> . Hence, by  <a class="reference internal" href="#equation-eq-34">(29)</a> , we have</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{\alpha^\prime(t_k) - \alpha^\prime(\xi_k)}
-&lt;  \frac{\varepsilon / 2}{M(b-a)}
-\end{align*}\]</div>
-<p>Then,  <span class="math notranslate nohighlight">\(\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}\)</span>  is finally bounded by</p>
-<div class="math notranslate nohighlight" id="equation-eq-37">
-<span class="eqno">(32)<a class="headerlink" href="#equation-eq-37" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}
-&lt; M  \frac{\varepsilon / 2}{M(b-a)} \sum _k  \Delta  x_k
-=  M  \frac{\varepsilon / 2}{M(b-a)} (b-a)
-=  \varepsilon  / 2
-\end{align}\]</div>
-<p>Combining  <a class="reference internal" href="#equation-eq-36">(31)</a>  and  <a class="reference internal" href="#equation-eq-37">(32)</a> , we obtain</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{S(P, f\alpha^\prime) - \int_{a}^{b}f \; \mathrm{d}\alpha}  &lt;  \varepsilon
-\end{align*}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(P\)</span>  is an arbitrary refinement of the chosen  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> . This implies  <span class="math notranslate nohighlight">\(f \alpha^\prime\)</span>  is Riemann integrable, and  <a class="reference internal" href="#equation-eq-38">(28)</a>  indeed holds.</p>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="reduction-of-riemann-stieltjes-integrals-to-finite-sums">
+<h1>Reduction of Riemann-Stieltjes Integrals to Finite Sums<a class="headerlink" href="#reduction-of-riemann-stieltjes-integrals-to-finite-sums" title="Permalink to this headline">#</a></h1>
 </div>
 
     <script type="text/x-thebe-config">
@@ -548,17 +470,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Linear%20Properties.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Step%20Functions%20as%20Integrators.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Linear Properties</p>
+            <p class="prev-next-title">Step Functions as Integrators</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Integration%20by%20Parts.html" title="next page">
+    <a class='right-next' id="next-link" href="Monotonically%20Increasing%20Integrators.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Integration by Parts</p>
+        <p class="prev-next-title">Monotonically Increasing Integrators</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -360,3 +360,17 @@ S(P^{\prime\prime}, f, \alpha)
 
 Therefore,  $f \in \mathfrak{R}(\alpha)$  on  $[a, c]$  and  {eq}`eq:27`  holds.
 ````
+
+````{prf:theorem}
+:label: thm:25
+The existence of two integrals in  {eq}`eq:44`  will imply the existence of the third one.
+
+```{math}
+:label: eq:44
+\begin{align}
+\int _a^b f  \; \mathrm{d} \alpha
+=  \int _a^c f  \; \mathrm{d} \alpha
++  \int _c^b f  \; \mathrm{d} \alpha
+\end{align}
+```
+````
