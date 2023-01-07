@@ -1,3 +1,9 @@
+```{index} local extremum
+```
+```{index} mean value theorem
+```
+```{index} generalized mean value theorem
+```
 # The Mean Value Theorem
 ## Local Extrema
 

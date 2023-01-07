@@ -1,3 +1,7 @@
+```{index} intermediate value theorem for derivatives
+```
+```{index} Darboux's theorem
+```
 # Intermediate Value Theorem
 
 

@@ -1,3 +1,7 @@
+```{index} one-sided derivatives
+```
+```{index} infinite derivative
+```
 # Definition of Derivative
 
 Observe the slopes of secant lines (displayed as dashed lines) of the curve shown in {numref}`fig:1`

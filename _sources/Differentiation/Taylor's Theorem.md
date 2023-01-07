@@ -1,3 +1,5 @@
+```{index} Taylor's theorem
+```
 # Taylor's Theorem
 
 

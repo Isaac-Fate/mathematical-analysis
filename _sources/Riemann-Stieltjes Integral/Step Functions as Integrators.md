@@ -177,6 +177,46 @@ S(P,f,\alpha)
 Hence,  $f \in \mathfrak{R}(\alpha)$ , and  {eq}`eq:40`  holds. This completes the proof.
 ````
 
+It should be emphasized that there are cases where $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ while the conditions in the above theorem are not satisfied.
+
+
+````{prf:example}
+Let
+
+```{math}
+\begin{align*}
+f(x) =  \alpha (x) =  \begin{cases}
+-1 &x < 0 \\
+0 &x=0 \\
+1 &x > 0
+\end{cases} ,
+\quad  x  \in[-1, 1]
+\end{align*}
+```
+
+Note that neither  $f$  nor  $\alpha$  is continuous from the left at  $0$ . (And also neither  $f$  nor  $\alpha$  is continuous from the right at  $0$ .) Hence, the conditions in  {prf:ref}`thm:24`  are not satisfied.
+
+However, we now show that  $f$  is integrable. Let  $P$  be any partition on  $[-1, 1]$ . If  $0 \notin P$ , then
+
+```{math}
+\begin{align*}
+S(P,f, \alpha ) = f(0) [ \alpha (1) -  \alpha (-1) ]  = 0
+\end{align*}
+```
+
+And if  $0 \in P$ , we then have
+
+```{math}
+\begin{align*}
+S(P,f, \alpha ) = f(- \delta _1) [ \alpha (0) -  \alpha (-1) ]  + f( \delta _2) [ \alpha (1) -  \alpha (0) ]
+= (-1) [ 0-(-1) ]  + 1  \cdot[1 - 0]
+= 0
+\end{align*}
+```
+
+where  $\delta_1, \delta_2 \geq 0$ . Hence,  $S(P,f,\alpha) = 0$  no matter what partition and representative points we choose. It follows that  $f \in \mathfrak{R}(\alpha)$  on  $[-1, 1]$  with  $\int_{-1}^{1} f \; \mathrm{d}\alpha = 0$ .
+````
+
 ````{prf:example}
 :label: eg:3
 Let
@@ -246,7 +286,11 @@ S(P,f, \alpha )
 \end{align*}
 ```
 
-Therefore,  $f$  is not integrable with respect to  $\alpha$  on  $[-3\pi, 0]$  since for any partition  $P$ , we can always choose the last point  $t_n$  such that the Stieltjes sum  $S(P,f,\alpha)$  does not fall in a neighborhood of some number. Finally, by  {prf:ref}`thm:25` ,  $f$  cannot be integrable with respect to  $\alpha$  on the whole interval  $[-3\pi, 3\pi]$ .
+Therefore,  $f$  is not integrable with respect to  $\alpha$  on  $[-3\pi, 0]$  since for any partition  $P$ , we can always choose the last point  $t_n$  such that the Stieltjes sum  $S(P,f,\alpha)$  does not fall in any neighborhood of some number. Finally, by  {prf:ref}`thm:25` ,  $f$  cannot be integrable with respect to  $\alpha$  on the whole interval  $[-3\pi, 3\pi]$ .
 
 As a matter of fact,  $f \notin \mathfrak{R}(\alpha)$  on  $[-3\pi, 3\pi]$  if we re-define  $f(0)$  other than  $1$  while keep  $\alpha$  unchanged.
+````
+
+````{admonition} Exercise 9
+Let  $f$  be a constant function on  $[a, b]$  except for  *finitely*  many points. Show that  $f$  is Riemann integrable on  $[a, b]$ .
 ````
