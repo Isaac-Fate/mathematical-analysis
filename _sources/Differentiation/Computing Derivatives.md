@@ -29,10 +29,16 @@ The proof we present here is done by exploiting {prf:ref}`thm:1`, and it may dif
 Since  $f$  and  $g$  are differentiable at  $c$ . It follows from  {prf:ref}`thm:1`  that there exists functions  $\phi_1$  and  $\phi_2$  on  $(a, b)$  that are continuous at  $c$ , and satisfy
 
 ```{math}
+:label: eq:4
+\begin{align}
+f(x) - f(c) = (x - c)  \phi _1^ \prime (x)
+\end{align}
+```
+
+```{math}
 :label: eq:5
 \begin{align}
-f(x) - f(c) &= (x - c)  \phi _1^ \prime (x)   \\
-g(x) - g(c) &= (x - c)  \phi _2^ \prime (x)
+g(x) - g(c) = (x - c)  \phi _2^ \prime (x)
 \end{align}
 ```
 

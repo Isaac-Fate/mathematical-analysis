@@ -1,5 +1,9 @@
 ```{index} local extremum
 ```
+```{index} local maximum
+```
+```{index} local minimum
+```
 ```{index} mean value theorem
 ```
 ```{index} generalized mean value theorem

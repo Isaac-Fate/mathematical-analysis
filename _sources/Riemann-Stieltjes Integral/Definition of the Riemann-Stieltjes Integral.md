@@ -32,7 +32,7 @@ To ease the nation, we will sometimes write
 
 ```{math}
 \begin{align*}
-\sum _ {k}  f(t_k)  \delta \alpha _k
+\sum _ {k}  f(t_k)  \Delta \alpha _k
 \end{align*}
 ```
 

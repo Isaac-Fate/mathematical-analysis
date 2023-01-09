@@ -1,6 +1,14 @@
+```{index} differentiable functions
+```
+```{index} derivative
+```
 ```{index} one-sided derivatives
 ```
 ```{index} infinite derivative
+```
+```{index} right-hand derivative
+```
+```{index} left-hand derivative
 ```
 # Definition of Derivative
 

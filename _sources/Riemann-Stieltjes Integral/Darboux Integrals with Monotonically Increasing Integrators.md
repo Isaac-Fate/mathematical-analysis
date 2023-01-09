@@ -1,5 +1,9 @@
 ```{index} Darboux integrals
 ```
+```{index} upper Riemann-Stieltjes sum
+```
+```{index} lower Riemann-Stieltjes sum
+```
 ```{index} upper Darboux sum
 ```
 ```{index} lower Darboux sum
@@ -271,6 +275,6 @@ Consider the Dirichlet function
 \end{align*}
 ```
 
-restricted on  $[0,1]$ . For any partition  $P = \{0=x_0, x_1, \ldots, x_n=1\}$ , the infimum of  $\ind_{\Q}$  on each sub-interval  $[x_{k-1}, x_k]$  is  $0$ . Hence,  $L(P,\ind_{\Q}) = \sum_{k=1}^n 0 \cdot (x_k - x_{k-1}) = 0$ , which implies the lower Darboux sum is always  $0$ . Therefore, the lower integral is  $0$ , i.e.,  $\lowint_a^b \ind_\Q(x) \; \mathrm{d}x = 0$ . Similarly, because the supremum of the Dirichlet function is  $1$  in each sub-interval, the upper Darboux sum is always  $1$ . Hence,  $\upint_a^b \ind_\Q(x) \; \mathrm{d}x = 1$ . In this case, the lower integral is strictly less than the upper integral.
+restricted on  $[0,1]$ . For any partition  $P = \{0=x_0, x_1, \ldots, x_n=1\}$ , the infimum of  $\ind_{\Q}$  on each sub-interval  $[x_{k-1}, x_k]$  is  $0$ . Hence,  $L(P,\ind_{\Q}) = \sum_{k=1}^n 0 \cdot (x_k - x_{k-1}) = 0$ , which implies the lower Darboux sum is always  $0$ . Therefore, the lower integral is  $0$ , i.e.,  $\lowint_0^1 \ind_\Q(x) \; \mathrm{d}x = 0$ . Similarly, because the supremum of the Dirichlet function is  $1$  in each sub-interval, the upper Darboux sum is always  $1$ . Hence,  $\upint_0^1 \ind_\Q(x) \; \mathrm{d}x = 1$ . In this case, the lower integral is strictly less than the upper integral.
 ````
 \printindex
