@@ -52,7 +52,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "row": ["\\mathop{\\mathrm{row}}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "row": ["\\mathop{\\mathrm{row}}"], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -256,8 +256,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Monotonically%20Increasing%20Integrators.html">
-     Monotonically Increasing Integrators
+    <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html">
+     Darboux Integrals with Monotonically Increasing Integrators
     </a>
    </li>
   </ul>
@@ -606,7 +606,12 @@ f(x) =  \begin{cases}
 \end{cases} ,
 \quad  x  \in[-3\pi, 3\pi]
 \end{align*}\end{split}\]</div>
-<p><a class="reference internal" href="#fig-10"><span class="std std-numref">Fig. 11</span></a>  exhibits the graphs of these two functions.</p>
+<p>Let us take for granted that the following limit exists:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\lim _ {x \to 0} \frac{\sin (x)}{x}  = 1
+\end{align*}\]</div>
+<p>Then we note that the left and right limits of  <span class="math notranslate nohighlight">\(f\)</span>  both exist but are not equal.  <a class="reference internal" href="#fig-10"><span class="std std-numref">Fig. 11</span></a>  exhibits the graphs of these two functions.</p>
 <div class="figure align-default" id="fig-10">
 <img alt="../_images/graph-009.png" src="../_images/graph-009.png" />
 <p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Left: integrand <span class="math notranslate nohighlight">\(f\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(0\)</span>. Right: integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(0\)</span>.</span><a class="headerlink" href="#fig-10" title="Permalink to this image">#</a></p>
@@ -619,7 +624,7 @@ f(x) =  \begin{cases}
 = f(0)  \cdot  2 = -2
 \end{align*}\]</div>
 </div>
-</div><div class="proof example admonition" id="example-3">
+</div><div class="proof example admonition" id="eg:4">
 <p class="admonition-title"><span class="caption-number">Example 11 </span></p>
 <div class="example-content section" id="proof-content">
 <p>If we alter the function  <span class="math notranslate nohighlight">\(f\)</span>  in the example above ( <a class="reference internal" href="#eg:3">Example 10</a> ) by re-defining  <span class="math notranslate nohighlight">\(f(0) = 1\)</span>  and keep the integrator  <span class="math notranslate nohighlight">\(\alpha\)</span>  unchanged, then  <span class="math notranslate nohighlight">\(f\)</span>  is no longer integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span> . Now,</p>
@@ -642,11 +647,38 @@ S(P,f, \alpha )
 = f(t_n)  [ \alpha (x_n) -  \alpha (x_ {n-1} ) ]
 = 2 f(t_n)
 =  \begin{cases}
-2 \abs{\sin(t_n)} / t_n &lt; 0 &amp;t_n &lt; 0\\
-1 &amp;t_n = 0
+2 \abs{\sin(t_n)} / t_n &amp;t_n &lt; 0\\
+2 &amp;t_n = 0
 \end{cases}
 \end{align*}\end{split}\]</div>
-<p>Therefore,  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>  since for any partition  <span class="math notranslate nohighlight">\(P\)</span> , we can always choose the last point  <span class="math notranslate nohighlight">\(t_n\)</span>  such that the Stieltjes sum  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>  does not fall in any neighborhood of some number. Finally, by  <a class="reference internal" href="Linear%20Properties.html#thm:25">Theorem 25</a> ,  <span class="math notranslate nohighlight">\(f\)</span>  cannot be integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span>  on the whole interval  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> .</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Intuitively, we know  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>  since for any partition  <span class="math notranslate nohighlight">\(P\)</span> , we can always choose the last point  <span class="math notranslate nohighlight">\(t_n\)</span>  such that the Stieltjes sum  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>  does not fall in any neighborhood of some number. But we still have to prove this rigorously by the definition.</p>
+</div>
+<p>We shall prove by contradiction. Assume  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>  with  <span class="math notranslate nohighlight">\(\int_{-3\pi}^{0} f \; \mathrm{d}\alpha = A\)</span> . Since  <span class="math notranslate nohighlight">\(2\abs{\sin x} / x \to -2\)</span>  as  <span class="math notranslate nohighlight">\(x \to 0^{-}\)</span> , there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+-3 &lt;  \frac{2\abs{\sin x}}{x}  &lt; -1
+\quad \forall  x  \in (- \delta , 0)
+\end{align*}\]</div>
+<p>Choose  <span class="math notranslate nohighlight">\(\varepsilon = 1\)</span> . For all partitions  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> , we can always find a refinement  <span class="math notranslate nohighlight">\(P=\{x_0, x_1, \ldots, x_n\}\)</span>  such that  <span class="math notranslate nohighlight">\(x_{n-1} &gt; -\delta\)</span> . We choose the last representative  <span class="math notranslate nohighlight">\(t_n \in[x_{n-1}, x_n]\)</span>  in two ways. Letting  <span class="math notranslate nohighlight">\(t_n\)</span>  be some number in that sub-interval other than  <span class="math notranslate nohighlight">\(0\)</span>  yields a Riemann-Stieltjes sum in between  <span class="math notranslate nohighlight">\(-3\)</span>  and  <span class="math notranslate nohighlight">\(-2\)</span> , i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+S(P,f, \alpha ) = 2  \abs{\sin(t_n)}  / t_n  \in (-3, -1)
+\end{align*}\]</div>
+<p>since  <span class="math notranslate nohighlight">\(-\delta &lt; t_n &lt; 0\)</span> . On the other hand, letting  <span class="math notranslate nohighlight">\(t^\prime_n = 0\)</span>  leads to another Riemann-Stieltjes sum</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+S^ \prime (P,f, \alpha ) = 2
+\end{align*}\]</div>
+<p>We have the following inequality:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\abs{S(P,f,\alpha) - A}  +  \abs{S^\prime(P,f,\alpha) - A} \geq \abs{S(P,f,\alpha) - S^\prime(P,f,\alpha)}
+&gt; 3 &gt; 2 \varepsilon
+\end{align*}\]</div>
+<p>This implies that at least one of  <span class="math notranslate nohighlight">\(\abs{S(P,f,\alpha) - A} \)</span>  and  <span class="math notranslate nohighlight">\( \abs{S^\prime(P,f,\alpha) - A} \)</span>  is greater than  <span class="math notranslate nohighlight">\(\varepsilon\)</span> , which leads to a contradiction. Hence,  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> .</p>
+<p>Finally, by  <a class="reference internal" href="Linear%20Properties.html#thm:25">Theorem 25</a> ,  <span class="math notranslate nohighlight">\(f\)</span>  cannot be integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span>  on the whole interval  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> .</p>
 <p>As a matter of fact,  <span class="math notranslate nohighlight">\(f \notin \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>  if we re-define  <span class="math notranslate nohighlight">\(f(0)\)</span>  other than  <span class="math notranslate nohighlight">\(1\)</span>  while keep  <span class="math notranslate nohighlight">\(\alpha\)</span>  unchanged.</p>
 </div>
 </div><div class="admonition-exercise-9 admonition">

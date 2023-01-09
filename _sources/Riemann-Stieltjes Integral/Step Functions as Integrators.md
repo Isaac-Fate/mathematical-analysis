@@ -233,7 +233,16 @@ f(x) =  \begin{cases}
 \quad  x  \in[-3\pi, 3\pi]
 \end{align*}
 ```
-{numref}`fig:10`  exhibits the graphs of these two functions.
+
+Let us take for granted that the following limit exists:
+
+```{math}
+\begin{align*}
+\lim _ {x \to 0} \frac{\sin (x)}{x}  = 1
+\end{align*}
+```
+
+Then we note that the left and right limits of  $f$  both exist but are not equal.  {numref}`fig:10`  exhibits the graphs of these two functions.
 
 
 ```{figure} ../figures/graph-009.png
@@ -255,6 +264,7 @@ The integrator  $\alpha$  is constant except for a jump discontinuity at  $0$ . 
 ````
 
 ````{prf:example}
+:label: eg:4
 If we alter the function  $f$  in the example above ( {prf:ref}`eg:3` ) by re-defining  $f(0) = 1$  and keep the integrator  $\alpha$  unchanged, then  $f$  is no longer integrable with respect to  $\alpha$ . Now,
 
 ```{math}
@@ -280,13 +290,53 @@ S(P,f, \alpha )
 = f(t_n)  [ \alpha (x_n) -  \alpha (x_ {n-1} ) ]
 = 2 f(t_n)
 =  \begin{cases}
-2 \abs{\sin(t_n)} / t_n < 0 &t_n < 0\\
-1 &t_n = 0
+2 \abs{\sin(t_n)} / t_n &t_n < 0\\
+2 &t_n = 0
 \end{cases}
 \end{align*}
 ```
 
-Therefore,  $f$  is not integrable with respect to  $\alpha$  on  $[-3\pi, 0]$  since for any partition  $P$ , we can always choose the last point  $t_n$  such that the Stieltjes sum  $S(P,f,\alpha)$  does not fall in any neighborhood of some number. Finally, by  {prf:ref}`thm:25` ,  $f$  cannot be integrable with respect to  $\alpha$  on the whole interval  $[-3\pi, 3\pi]$ .
+:::{note}
+Intuitively, we know  $f$  is not integrable with respect to  $\alpha$  on  $[-3\pi, 0]$  since for any partition  $P$ , we can always choose the last point  $t_n$  such that the Stieltjes sum  $S(P,f,\alpha)$  does not fall in any neighborhood of some number. But we still have to prove this rigorously by the definition.
+:::
+
+We shall prove by contradiction. Assume  $f \in \mathfrak{R}(\alpha)$  on  $[-3\pi, 0]$  with  $\int_{-3\pi}^{0} f \; \mathrm{d}\alpha = A$ . Since  $2\abs{\sin x} / x \to -2$  as  $x \to 0^{-}$ , there exists  $\delta > 0$  such that
+
+```{math}
+\begin{align*}
+-3 <  \frac{2\abs{\sin x}}{x}  < -1
+\quad \forall  x  \in (- \delta , 0)
+\end{align*}
+```
+
+Choose  $\varepsilon = 1$ . For all partitions  $P_\varepsilon$ , we can always find a refinement  $P=\{x_0, x_1, \ldots, x_n\}$  such that  $x_{n-1} > -\delta$ . We choose the last representative  $t_n \in[x_{n-1}, x_n]$  in two ways. Letting  $t_n$  be some number in that sub-interval other than  $0$  yields a Riemann-Stieltjes sum in between  $-3$  and  $-2$ , i.e.,
+
+```{math}
+\begin{align*}
+S(P,f, \alpha ) = 2  \abs{\sin(t_n)}  / t_n  \in (-3, -1)
+\end{align*}
+```
+
+since  $-\delta < t_n < 0$ . On the other hand, letting  $t^\prime_n = 0$  leads to another Riemann-Stieltjes sum
+
+```{math}
+\begin{align*}
+S^ \prime (P,f, \alpha ) = 2
+\end{align*}
+```
+
+We have the following inequality:
+
+```{math}
+\begin{align*}
+\abs{S(P,f,\alpha) - A}  +  \abs{S^\prime(P,f,\alpha) - A} \geq \abs{S(P,f,\alpha) - S^\prime(P,f,\alpha)}
+> 3 > 2 \varepsilon
+\end{align*}
+```
+
+This implies that at least one of  $\abs{S(P,f,\alpha) - A} $  and  $ \abs{S^\prime(P,f,\alpha) - A} $  is greater than  $\varepsilon$ , which leads to a contradiction. Hence,  $f$  is not integrable on  $[-3\pi, 0]$ .
+
+Finally, by  {prf:ref}`thm:25` ,  $f$  cannot be integrable with respect to  $\alpha$  on the whole interval  $[-3\pi, 3\pi]$ .
 
 As a matter of fact,  $f \notin \mathfrak{R}(\alpha)$  on  $[-3\pi, 3\pi]$  if we re-define  $f(0)$  other than  $1$  while keep  $\alpha$  unchanged.
 ````
