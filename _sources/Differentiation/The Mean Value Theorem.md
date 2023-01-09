@@ -312,9 +312,9 @@ The following theorem is an immediate result of the mean value theorem, which pr
 :label: thm:10
 Suppose  $f$  has a derivative (finite or infinite) at each point in  $(a, b)$ , and itself is continuous at the endpoints  $a$  and  $b$ .
 
-1. If  $f^\prime(x) > 0 \; \forall x \in (a, b)$ , then  $f$  is strictly increasing on  $[a, b]$ .
-2. If  $f^\prime(x) < 0 \; \forall x \in (a, b)$ , then  $f$  is strictly decreasing on  $[a, b]$ .
-3. If  $f^\prime(x) = 0 \; \forall x \in (a, b)$ , then  $f$  is constant on  $[a, b]$ .
+- (1) If  $f^\prime(x) > 0 \; \forall x \in (a, b)$ , then  $f$  is strictly increasing on  $[a, b]$ .
+- (2) If  $f^\prime(x) < 0 \; \forall x \in (a, b)$ , then  $f$  is strictly decreasing on  $[a, b]$ .
+- (3) If  $f^\prime(x) = 0 \; \forall x \in (a, b)$ , then  $f$  is constant on  $[a, b]$ .
 ````
 
 ````{prf:proof}

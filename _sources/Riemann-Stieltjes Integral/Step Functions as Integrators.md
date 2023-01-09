@@ -34,8 +34,8 @@ Let  $c \in (a, b)$ . Define a function  $\alpha$  on  $[a, b]$  as follows. The
 
 Suppose  $f$  is a bounded function defined on  $[a, b]$  in such a way that
 
-1. at least one of  $f$  and  $\alpha$  is continuous from the left at  $c$ , and
-2. at least one of  $f$  and  $\alpha$  is continuous from the right at  $c$ .
+- (1) at least one of  $f$  and  $\alpha$  is continuous from the left at  $c$ , and
+- (2) at least one of  $f$  and  $\alpha$  is continuous from the right at  $c$ .
 
 Then,  $f \in \mathfrak{R}(\alpha)$  on  $[a, b]$  with
 
@@ -98,10 +98,10 @@ In fact, the left-hand side of  {eq}`eq:39`  reduces to zero when  $c \notin P$ 
 
 There are altogether four scenarios concerning the continuity of  $f$  and  $\alpha$  at point  $c$ , which are
 
-1. $\alpha(x)$  is continuous at  $x=c$ .
-2. $\alpha(x)$  is continuous from the right at  $x=c$ , and  $f(x)$  is continuous from the left at  $x=c$ .
-3. $\alpha(x)$  is continuous from the left at  $x=c$ , and  $f(x)$  is continuous from the right at  $x=c$ .
-4. $f(x)$  is continuous at  $x=c$ .
+- (1) $\alpha(x)$  is continuous at  $x=c$ .
+- (2) $\alpha(x)$  is continuous from the right at  $x=c$ , and  $f(x)$  is continuous from the left at  $x=c$ .
+- (3) $\alpha(x)$  is continuous from the left at  $x=c$ , and  $f(x)$  is continuous from the right at  $x=c$ .
+- (4) $f(x)$  is continuous at  $x=c$ .
 
 
 (Proof of 1) If  $\alpha(x)$  is continuous at  $x=c$ , then  $\alpha$  is a constant function. In this case,  $f$  is certainly integrable with respect to  $\alpha$  with  $\int_{a}^{b} f \; \mathrm{d}\alpha = 0$ . And  {eq}`eq:40`  holds since its right-hand side is also zero for  $\alpha(a) = \alpha(b)$ .

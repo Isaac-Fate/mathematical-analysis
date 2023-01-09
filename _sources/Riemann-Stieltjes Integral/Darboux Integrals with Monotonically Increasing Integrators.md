@@ -87,7 +87,7 @@ The following theorem states that not only $L(P,f,\alpha) \leq U(P,f,\alpha)$ fo
 :label: thm:26
 Suppose  $\alpha$  is increasing on  $[a, b]$ . We have the following statements.
 
-1. If  $P^\prime \supset P$ , then
+- (1) If  $P^\prime \supset P$ , then
 
 ```{math}
 \begin{align*}
@@ -96,7 +96,7 @@ U(P^ \prime ,f, \alpha )  \leq  U(P,f, \alpha )
 L(P^ \prime ,f, \alpha )  \geq  L(P,f, \alpha )
 \end{align*}
 ```
-2. For any two partitions  $P_1$  and  $P_2$  on  $[a, b]$ , we have
+- (2) For any two partitions  $P_1$  and  $P_2$  on  $[a, b]$ , we have
 
 ```{math}
 \begin{align*}

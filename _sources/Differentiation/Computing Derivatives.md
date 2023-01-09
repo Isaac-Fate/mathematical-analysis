@@ -13,9 +13,9 @@ In fact, these so-called elementary functions are not elementary at all. We shal
 ````{prf:theorem}
 Suppose  $f$  and  $g$  are defined on  $(a, b)$  and are both differentiable at  $c \in (a, b)$ . Then the functions  $f + g$ ,  $f - g$ ,  $fg$  are also differentiable at  $c$ . If  $g(c) \neq 0$ , then the quotient  $f / g$  is also differentiable at  $c$ . And the formulas of their derivatives are given by
 
-1. $(f \pm g)^\prime(c) = f^\prime(c) \pm g^\prime(c)$ ,
-2. $(f g)^\prime(c) = f^\prime(c) g(c) + f(c) g^\prime(c)$ ,
-3. $(f / g)^\prime(c) = \frac{f^\prime(c) g(c) - f(c) g^\prime(c)}{ g^2(c) }$ , provided  $g(c) \neq 0$ .
+- (1) $(f \pm g)^\prime(c) = f^\prime(c) \pm g^\prime(c)$ ,
+- (2) $(f g)^\prime(c) = f^\prime(c) g(c) + f(c) g^\prime(c)$ ,
+- (3) $(f / g)^\prime(c) = \frac{f^\prime(c) g(c) - f(c) g^\prime(c)}{ g^2(c) }$ , provided  $g(c) \neq 0$ .
 ````
 
 ````{prf:remark}
@@ -117,7 +117,7 @@ Since  $-\phi_2(x) / [g(x)g(c)]$  is continuous at  $c$ , we conclude from  {prf
 
 ```{math}
 \begin{align*}
-\left(\ frac {1} {g} \right)^ \prime (c)
+\left( \frac{1}{g} \right)^ \prime (c)
 =  \frac{-\phi_2(c)}{g(c)g(c)}
 =  \frac{-g^\prime(c)}{g^2(c)}
 \end{align*}
