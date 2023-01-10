@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Definition of the Riemann-Stieltjes Integral &#8212; Mathematical Analysis</title>
+    <title>Riemann’s Condition &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -57,8 +57,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Linear Properties" href="Linear%20Properties.html" />
-    <link rel="prev" title="Riemann-Stieltjes Integral" href="index.html" />
+    <link rel="next" title="Index" href="../genindex.html" />
+    <link rel="prev" title="Darboux Integrals with Monotonically Increasing Integrators" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -220,8 +220,8 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">
      Definition of the Riemann-Stieltjes Integral
     </a>
    </li>
@@ -260,8 +260,8 @@ const thebe_selector_output = ".output, .cell_output"
      Darboux Integrals with Monotonically Increasing Integrators
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann%27s%20Condition.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Riemann’s Condition
     </a>
    </li>
@@ -362,7 +362,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Definition of the Riemann-Stieltjes Integral.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Riemann's Condition.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -390,7 +390,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Riemann-Stieltjes Integral/Definition of the Riemann-Stieltjes Integral.md"
+        <a href="../_sources/Riemann-Stieltjes Integral/Riemann's Condition.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -439,7 +439,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Definition of the Riemann-Stieltjes Integral</h1>
+                <h1>Riemann’s Condition</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -451,66 +451,131 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="definition-of-the-riemann-stieltjes-integral">
-<h1>Definition of the Riemann-Stieltjes Integral<a class="headerlink" href="#definition-of-the-riemann-stieltjes-integral" title="Permalink to this headline">#</a></h1>
-<div class="proof definition admonition" id="def:1">
-<p class="admonition-title"><span class="caption-number">Definition 4 </span></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="riemann-s-condition">
+<span id="index-0"></span><h1>Riemann’s Condition<a class="headerlink" href="#riemann-s-condition" title="Permalink to this headline">#</a></h1>
+<p>In Darboux’s formulation, the integral exists if and only if the upper and lower integrals are equal to each other. We now show that this is equivalent to the criterion of the existence of integrals from our definition (<a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1">Definition 4</a>). Furthermore, we will introduce another equivalent condition, <strong>Riemann’s condition</strong>, which is convenient to use in proofs.</p>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span class="caption-number">Definition 7 </span> (Riemann’s Condition)</p>
 <div class="definition-content section" id="proof-content">
-<p>Suppose that  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(\alpha\)</span>  are  <strong>real-valued bounded</strong>  functions on  <span class="math notranslate nohighlight">\([a,b]\)</span> . Let  <span class="math notranslate nohighlight">\(P = \left\{x_0, x_1, \ldots, x_n\right \}\)</span>  be a partition on  <span class="math notranslate nohighlight">\([a, b]\)</span>  and  <span class="math notranslate nohighlight">\(t_k\)</span>  a point in the sub-interval  <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> . A sum of the form</p>
+<p>Riemann’s Condition
+Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is bounded and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Function  <span class="math notranslate nohighlight">\(f\)</span>  is said to satisfy  <strong>Riemann’s condition</strong>  w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  if for any  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-S(P,f, \alpha )
-=  \sum _ {k=1} ^n f(t_k)  \Delta \alpha _k
+U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \varepsilon
 \end{align*}\]</div>
-<p>is called a Riemann-Stieltjes sum of  <span class="math notranslate nohighlight">\(f\)</span>  with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span> . We say  <span class="math notranslate nohighlight">\(f\)</span>  is Riemann-integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span> , and write  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a,b]\)</span>  if there exists a number  <span class="math notranslate nohighlight">\(A\)</span>  having the following property: for any given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  such that</p>
+<p>for any refinement  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span> .</p>
+</div>
+</div><p>Essentially, Riemann’s condition requires that the upper and lower sums should be arbitrarily close.</p>
+<p>The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann’s condition are equivalent.</p>
+<div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span class="caption-number">Theorem 34 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is bounded and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Then the following statements are equivalent.</p>
+<ul class="simple">
+<li><p>(1) <span class="math notranslate nohighlight">\(f\)</span>  is integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , i.e.,  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p></li>
+<li><p>(2) <span class="math notranslate nohighlight">\(f\)</span>  satisfies Riemann’s condition w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p></li>
+<li><p>(3) The upper and lower integrals are equal to each other, i.e.,  <span class="math notranslate nohighlight">\(\upint_a^b f \; \mathrm{d}\alpha = \lowint_a^b f \; \mathrm{d}\alpha\)</span> .</p></li>
+</ul>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. If  <span class="math notranslate nohighlight">\(\alpha\)</span>  is constant, then this theorem holds trivially. We assume  <span class="math notranslate nohighlight">\(\alpha\)</span>  is non-constant in the rest of the proof.</p>
+<p>(Proof of 1  <span class="math notranslate nohighlight">\(\implies\)</span>  2) Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , since  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-60">
+<span class="eqno">(60)<a class="headerlink" href="#equation-eq-60" title="Permalink to this equation">#</a></span>\[\begin{align}
+\abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}  &lt;  \varepsilon  / 6
+\end{align}\]</div>
+<p>for any refinement  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span>  and for any choice of representative  <span class="math notranslate nohighlight">\(t_k\)</span>  in each sub-interval  <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> . Let this partition  <span class="math notranslate nohighlight">\(P\)</span>  be fixed for now.</p>
+<p>Let  <span class="math notranslate nohighlight">\(M_k\)</span>  and  <span class="math notranslate nohighlight">\(m_k\)</span>  be as in  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#def:2">Definition 5</a> . We can choose each  <span class="math notranslate nohighlight">\(t_k^\prime \in[x_{k-1}, x_k]\)</span>  such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+M_k -  \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
+&lt; f(t_k^ \prime )
+\leq  M_k
+\end{align*}\]</div>
+<p>Multiplying by  <span class="math notranslate nohighlight">\(\Delta \alpha_k\)</span>  and then summing up over  <span class="math notranslate nohighlight">\(k\)</span>  yields</p>
+<div class="math notranslate nohighlight" id="equation-eq-61">
+<span class="eqno">(61)<a class="headerlink" href="#equation-eq-61" title="Permalink to this equation">#</a></span>\[\begin{align}
+U(P,f, \alpha ) -  \varepsilon  / 3
+&lt; S^ \prime (P,f, \alpha )
+\leq  U(P,f, \alpha )
+\end{align}\]</div>
+<p>where  <span class="math notranslate nohighlight">\(S^\prime(P,f,\alpha) = \sum_{k} f(t_k^\prime) \Delta\alpha_k\)</span> . We can instead choose each  <span class="math notranslate nohighlight">\(t_k^{\prime\prime} \in[x_{k-1}, x_k]\)</span>  such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+m_k +  \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
+&gt; f(t_k^ {\prime\prime} )
+\geq  m_k
+\end{align*}\]</div>
+<p>Similarly, we then have</p>
+<div class="math notranslate nohighlight" id="equation-eq-62">
+<span class="eqno">(62)<a class="headerlink" href="#equation-eq-62" title="Permalink to this equation">#</a></span>\[\begin{align}
+L(P,f, \alpha ) +  \varepsilon  / 3
+&gt; S^ {\prime\prime} (P,f, \alpha )
+\geq  L(P,f, \alpha )
+\end{align}\]</div>
+<p>where  <span class="math notranslate nohighlight">\(S^{\prime\prime}(P,f,\alpha) = \sum_{k} f(t_k^{\prime\prime}) \Delta\alpha_k\)</span> . By combining  <a class="reference internal" href="#equation-eq-61">(61)</a>  and  <a class="reference internal" href="#equation-eq-62">(62)</a> , we will obtain the following two inequalities.</p>
+<div class="math notranslate nohighlight" id="equation-eq-63">
+<span class="eqno">(63)<a class="headerlink" href="#equation-eq-63" title="Permalink to this equation">#</a></span>\[\begin{align}
+0
+\leq  U(P,f, \alpha ) - S^ {\prime} (P,f, \alpha )
+&lt;  \varepsilon  / 3
+\end{align}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-64">
+<span class="eqno">(64)<a class="headerlink" href="#equation-eq-64" title="Permalink to this equation">#</a></span>\[\begin{align}
+0
+\leq  S^ {\prime\prime} (P,f, \alpha ) - L(P,f, \alpha )
+&lt;  \varepsilon  / 3
+\end{align}\]</div>
+<p>Recall the Riemann-Stieltjes sums  <span class="math notranslate nohighlight">\(S^{\prime}(P,f,\alpha)\)</span>  and  <span class="math notranslate nohighlight">\(S^{\prime\prime}(P,f,\alpha)\)</span>  are formed with the same partition  <span class="math notranslate nohighlight">\(P\)</span> . Hence, they both satisfy  <a class="reference internal" href="#equation-eq-61">(61)</a> . Their difference is then bounded by</p>
+<div class="math notranslate nohighlight" id="equation-eq-65">
+<span class="eqno">(65)<a class="headerlink" href="#equation-eq-65" title="Permalink to this equation">#</a></span>\[\begin{align}
+\abs{S^{\prime}(P,f,\alpha) - S^{\prime\prime}(P,f,\alpha)} \leq \abs{S^{\prime}(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}
++  \abs{S^{\prime\prime}(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}
+&lt;  \varepsilon  / 3
+\end{align}\]</div>
+<p>Then, the difference between the upper and lower sums can be bounded as follows.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignat*}
+2 &amp;&amp; \; &amp; U(P,f, \alpha ) - L(P,f, \alpha )  \\ &amp; \leq &amp;&amp;  \abs{U(P,f,\alpha) - S^\prime(P,f,\alpha)}
++  \abs{S^\prime(P,f,\alpha) - S^{\prime\prime}(P,f,\alpha)}
++  \abs{S^{\prime\prime}(P,f,\alpha) - L(P,f,\alpha)} \\ &amp;&lt;&amp;&amp;  \varepsilon  / 3 +  \varepsilon  / 3 +  \varepsilon  / 3  \\ &amp;=&amp;&amp;  \varepsilon
+\end{alignat*}\end{split}\]</div>
+<p>where the last inequality follows from  <a class="reference internal" href="#equation-eq-63">(63)</a> ,  <a class="reference internal" href="#equation-eq-64">(64)</a>  and  <a class="reference internal" href="#equation-eq-65">(65)</a> . Therefore, Riemann’s condition is satisfied since the above inequality holds for any refinement  <span class="math notranslate nohighlight">\(P\)</span>  of  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> .</p>
+<p>(Proof of 2  <span class="math notranslate nohighlight">\(\implies\)</span>  3) Let  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  be arbitrary. By Riemann’s condition, there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \varepsilon
+\end{align*}\]</div>
+<p>for any refinement  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span> . Because  <span class="math notranslate nohighlight">\(\upint_a^b f \; \mathrm{d}\alpha \leq U(P,f,\alpha)\)</span>  and  <span class="math notranslate nohighlight">\(\lowint_a^b f \; \mathrm{d}\alpha \geq L(P,f,\alpha)\)</span> , it follows that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+0  \leq \upint _a^b f  \; \mathrm{d} \alpha  -  \lowint _a^b f  \; \mathrm{d} \alpha
+&lt;  \varepsilon
+\end{align*}\]</div>
+<p>Therefore, the upper and lower integrals are equal to each other since the above inequality holds for any  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> .</p>
+<p>(Proof of 3  <span class="math notranslate nohighlight">\(\implies\)</span>  1) Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> . There exist partitions  <span class="math notranslate nohighlight">\(P_1\)</span>  and  <span class="math notranslate nohighlight">\(P_2\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P_1,f, \alpha ) &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon \quad \text{and} \quad
+L(P_2,f, \alpha ) &gt;  \lowint _a^b f  \; \mathrm{d} \alpha  -  \varepsilon
+\end{align*}\]</div>
+<p>Let  <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span>  and  <span class="math notranslate nohighlight">\(P\)</span>  be any of its refinements. By  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 30</a>  and  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#equation-eq-46">(45)</a> , it is clear</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\lowint _a^b f  \; \mathrm{d} \alpha  -  \varepsilon
+&lt; L(P,f, \alpha )
+\leq  S(P,f, \alpha )
+\leq  U(p,f, \alpha )
+&lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon
+\end{align*}\]</div>
+<p>holds for any choice of  <span class="math notranslate nohighlight">\(t_k\)</span>  in each sub-interval  <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> . Since the upper and lower integrals have the same value, say  <span class="math notranslate nohighlight">\(A\)</span> , it then follows that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \abs{S(P,f,\alpha) - A}  &lt;  \varepsilon
 \end{align*}\]</div>
-<p>for any refinement  <span class="math notranslate nohighlight">\(P\)</span>  of  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  and for any choice of points  <span class="math notranslate nohighlight">\(t_k\)</span> . (Note that  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>  depends on  <span class="math notranslate nohighlight">\(t_k\)</span> .) Moreover, the number  <span class="math notranslate nohighlight">\(A\)</span>  is  <strong>uniquely</strong>  determined if it exists (this is proved in  <a class="reference internal" href="#pro:3">Proposition 3</a> ) and is denoted by</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-\int _a^b f  \; \mathrm{d} \alpha
-\end{align*}\]</div>
+<p>Therefore, indeed  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> . This completes the proof.</p>
 </div>
-</div><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To ease the nation, we will sometimes write</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-\sum _ {k}  f(t_k)  \Delta \alpha _k
-\end{align*}\]</div>
-<p>without specifying the lower and upper limits of  <span class="math notranslate nohighlight">\(k\)</span>  if no confusion will be caused.</p>
-</div>
-<p>Recall <a class="reference internal" href="#def:1">Definition 4</a> only requires the existence of <span class="math notranslate nohighlight">\(A\)</span>. We now show that such number <span class="math notranslate nohighlight">\(A\)</span> is also unique.</p>
-<div class="proof proposition admonition" id="pro:3">
-<p class="admonition-title"><span class="caption-number">Proposition 3 </span></p>
-<div class="proposition-content section" id="proof-content">
-<p>Let  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>  be as in  <a class="reference internal" href="#def:1">Definition 4</a> . If  <span class="math notranslate nohighlight">\(A\)</span>  and  <span class="math notranslate nohighlight">\(A^\prime\)</span>  both satisfy the property stated in  <a class="reference internal" href="#def:1">Definition 4</a> , then  <span class="math notranslate nohighlight">\(A = A^\prime\)</span> .</p>
-</div>
-</div><div class="proof admonition" id="proof">
-<p>Proof. Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , by the property in  <a class="reference internal" href="#def:1">Definition 4</a> , there exist partitions  <span class="math notranslate nohighlight">\(P_1\)</span>  and  <span class="math notranslate nohighlight">\(P_2\)</span>  such that</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{S(P_1,f,\alpha) - A} &amp;&lt;  \varepsilon  / 2 &amp;
-\abs{S(P_2,f,\alpha) - A^\prime} &amp;&lt;  \varepsilon  / 2
-\end{align*}\]</div>
-<p>Let  <span class="math notranslate nohighlight">\(P = P_1 \cup P_2\)</span> . We have</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{S(P,f,\alpha) - A} &amp;&lt;  \varepsilon  / 2 &amp;
-\abs{S(P,f,\alpha) - A^\prime} &amp;&lt;  \varepsilon  / 2
-\end{align*}\]</div>
-<p>It then follows that</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{A - A^\prime} \leq \abs{S(P,f,\alpha) - A}  +
-\abs{S(P,f,\alpha) - A^\prime}
-&lt;  \varepsilon  / 2 +  \varepsilon  / 2
-=  \varepsilon
-\end{align*}\]</div>
-<p>Since  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  is arbitrary, we must have  <span class="math notranslate nohighlight">\(A = A^\prime\)</span> .</p>
-</div>
+<p>\printindex</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -540,17 +605,17 @@ S(P,f, \alpha )
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Riemann-Stieltjes Integral</p>
+            <p class="prev-next-title">Darboux Integrals with Monotonically Increasing Integrators</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Linear%20Properties.html" title="next page">
+    <a class='right-next' id="next-link" href="../genindex.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Linear Properties</p>
+        <p class="prev-next-title">Index</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

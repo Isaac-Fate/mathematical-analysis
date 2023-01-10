@@ -265,7 +265,7 @@ The integrator  $\alpha$  is constant except for a jump discontinuity at  $0$ . 
 
 ````{prf:example}
 :label: eg:4
-If we alter the function  $f$  in the example above ( {prf:ref}`eg:3` ) by re-defining  $f(0) = 1$  and keep the integrator  $\alpha$  unchanged, then  $f$  is no longer integrable with respect to  $\alpha$ . Now,
+If we alter the function  $f$  in the example above ( {prf:ref}`eg:3` ) by re-defining  $f(0) = 1$  while keeping the integrator  $\alpha$  unchanged, then  $f$  is no longer integrable w.r.t.  $\alpha$ . Now,
 
 ```{math}
 \begin{align*}
@@ -297,7 +297,7 @@ S(P,f, \alpha )
 ```
 
 :::{note}
-Intuitively, we know  $f$  is not integrable with respect to  $\alpha$  on  $[-3\pi, 0]$  since for any partition  $P$ , we can always choose the last point  $t_n$  such that the Stieltjes sum  $S(P,f,\alpha)$  does not fall in any neighborhood of some number. But we still have to prove this rigorously by the definition.
+Intuitively, we know  $f$  is not integrable w.r.t.  $\alpha$  on  $[-3\pi, 0]$  since for any partition  $P$ , we can always choose the last point  $t_n$  such that the Stieltjes sum  $S(P,f,\alpha)$  does not fall in any neighborhood of some number. But we still have to prove this rigorously by the definition.
 :::
 
 We shall prove by contradiction. Assume  $f \in \mathfrak{R}(\alpha)$  on  $[-3\pi, 0]$  with  $\int_{-3\pi}^{0} f \; \mathrm{d}\alpha = A$ . Since  $2\abs{\sin x} / x \to -2$  as  $x \to 0^{-}$ , there exists  $\delta > 0$  such that

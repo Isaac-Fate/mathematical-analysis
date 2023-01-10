@@ -1,0 +1,184 @@
+```{index} Riemann's condition
+```
+# Riemann's Condition
+
+In Darboux's formulation, the integral exists if and only if the upper and lower integrals are equal to each other. We now show that this is equivalent to the criterion of the existence of integrals from our definition ({prf:ref}`def:1`). Furthermore, we will introduce another equivalent condition, **Riemann's condition**, which is convenient to use in proofs.
+
+
+````{prf:definition} Riemann's Condition
+Riemann's Condition
+Suppose  $f$  is bounded and  $\alpha$  is increasing on  $[a, b]$ . Function  $f$  is said to satisfy  **Riemann's condition**  w.r.t.  $\alpha$  on  $[a, b]$  if for any  $\varepsilon > 0$ , there exists a partition  $P_\varepsilon$  on  $[a, b]$  such that
+
+```{math}
+\begin{align*}
+U(P,f, \alpha ) - L(P,f, \alpha ) <  \varepsilon
+\end{align*}
+```
+
+for any refinement  $P \supset P_\varepsilon$ .
+````
+
+Essentially, Riemann's condition requires that the upper and lower sums should be arbitrarily close.
+
+
+The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann's condition are equivalent.
+
+
+````{prf:theorem}
+Suppose  $f$  is bounded and  $\alpha$  is increasing on  $[a, b]$ . Then the following statements are equivalent.
+
+- (1) $f$  is integrable w.r.t.  $\alpha$  on  $[a, b]$ , i.e.,  $f \in \mathfrak{R}(\alpha)$  on  $[a, b]$ .
+- (2) $f$  satisfies Riemann's condition w.r.t.  $\alpha$  on  $[a, b]$ .
+- (3) The upper and lower integrals are equal to each other, i.e.,  $\upint_a^b f \; \mathrm{d}\alpha = \lowint_a^b f \; \mathrm{d}\alpha$ .
+````
+
+````{prf:proof}
+If  $\alpha$  is constant, then this theorem holds trivially. We assume  $\alpha$  is non-constant in the rest of the proof.
+
+(Proof of 1  $\implies$  2) Given  $\varepsilon > 0$ , since  $f \in \mathfrak{R}(\alpha)$ , there exists a partition  $P_\varepsilon$  on  $[a, b]$  such that
+
+```{math}
+:label: eq:60
+\begin{align}
+\abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}  <  \varepsilon  / 6
+\end{align}
+```
+
+for any refinement  $P \supset P_\varepsilon$  and for any choice of representative  $t_k$  in each sub-interval  $[x_{k-1}, x_k]$ . Let this partition  $P$  be fixed for now.
+
+Let  $M_k$  and  $m_k$  be as in  {prf:ref}`def:2` . We can choose each  $t_k^\prime \in[x_{k-1}, x_k]$  such that
+
+```{math}
+\begin{align*}
+M_k -  \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
+< f(t_k^ \prime )
+\leq  M_k
+\end{align*}
+```
+
+Multiplying by  $\Delta \alpha_k$  and then summing up over  $k$  yields
+
+```{math}
+:label: eq:61
+\begin{align}
+U(P,f, \alpha ) -  \varepsilon  / 3
+< S^ \prime (P,f, \alpha )
+\leq  U(P,f, \alpha )
+\end{align}
+```
+
+where  $S^\prime(P,f,\alpha) = \sum_{k} f(t_k^\prime) \Delta\alpha_k$ . We can instead choose each  $t_k^{\prime\prime} \in[x_{k-1}, x_k]$  such that
+
+```{math}
+\begin{align*}
+m_k +  \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
+> f(t_k^ {\prime\prime} )
+\geq  m_k
+\end{align*}
+```
+
+Similarly, we then have
+
+```{math}
+:label: eq:62
+\begin{align}
+L(P,f, \alpha ) +  \varepsilon  / 3
+> S^ {\prime\prime} (P,f, \alpha )
+\geq  L(P,f, \alpha )
+\end{align}
+```
+
+where  $S^{\prime\prime}(P,f,\alpha) = \sum_{k} f(t_k^{\prime\prime}) \Delta\alpha_k$ . By combining  {eq}`eq:61`  and  {eq}`eq:62` , we will obtain the following two inequalities.
+
+```{math}
+:label: eq:63
+\begin{align}
+0
+\leq  U(P,f, \alpha ) - S^ {\prime} (P,f, \alpha )
+<  \varepsilon  / 3
+\end{align}
+```
+
+```{math}
+:label: eq:64
+\begin{align}
+0
+\leq  S^ {\prime\prime} (P,f, \alpha ) - L(P,f, \alpha )
+<  \varepsilon  / 3
+\end{align}
+```
+
+Recall the Riemann-Stieltjes sums  $S^{\prime}(P,f,\alpha)$  and  $S^{\prime\prime}(P,f,\alpha)$  are formed with the same partition  $P$ . Hence, they both satisfy  {eq}`eq:61` . Their difference is then bounded by
+
+```{math}
+:label: eq:65
+\begin{align}
+\abs{S^{\prime}(P,f,\alpha) - S^{\prime\prime}(P,f,\alpha)} \leq \abs{S^{\prime}(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}
++  \abs{S^{\prime\prime}(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}
+<  \varepsilon  / 3
+\end{align}
+```
+
+Then, the difference between the upper and lower sums can be bounded as follows.
+
+```{math}
+\begin{alignat*}
+2 && \; & U(P,f, \alpha ) - L(P,f, \alpha )  \\ & \leq &&  \abs{U(P,f,\alpha) - S^\prime(P,f,\alpha)}
++  \abs{S^\prime(P,f,\alpha) - S^{\prime\prime}(P,f,\alpha)}
++  \abs{S^{\prime\prime}(P,f,\alpha) - L(P,f,\alpha)} \\ &<&&  \varepsilon  / 3 +  \varepsilon  / 3 +  \varepsilon  / 3  \\ &=&&  \varepsilon
+\end{alignat*}
+```
+
+where the last inequality follows from  {eq}`eq:63` ,  {eq}`eq:64`  and  {eq}`eq:65` . Therefore, Riemann's condition is satisfied since the above inequality holds for any refinement  $P$  of  $P_\varepsilon$ .
+
+(Proof of 2  $\implies$  3) Let  $\varepsilon > 0$  be arbitrary. By Riemann's condition, there exists a partition  $P_\varepsilon$  such that
+
+```{math}
+\begin{align*}
+U(P,f, \alpha ) - L(P,f, \alpha ) <  \varepsilon
+\end{align*}
+```
+
+for any refinement  $P \supset P_\varepsilon$ . Because  $\upint_a^b f \; \mathrm{d}\alpha \leq U(P,f,\alpha)$  and  $\lowint_a^b f \; \mathrm{d}\alpha \geq L(P,f,\alpha)$ , it follows that
+
+```{math}
+\begin{align*}
+0  \leq \upint _a^b f  \; \mathrm{d} \alpha  -  \lowint _a^b f  \; \mathrm{d} \alpha
+<  \varepsilon
+\end{align*}
+```
+
+Therefore, the upper and lower integrals are equal to each other since the above inequality holds for any  $\varepsilon > 0$ .
+
+(Proof of 3  $\implies$  1) Given  $\varepsilon > 0$ . There exist partitions  $P_1$  and  $P_2$  on  $[a, b]$  such that
+
+```{math}
+\begin{align*}
+U(P_1,f, \alpha ) <  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon \quad \text{and} \quad
+L(P_2,f, \alpha ) >  \lowint _a^b f  \; \mathrm{d} \alpha  -  \varepsilon
+\end{align*}
+```
+
+Let  $P_\varepsilon = P_1 \cup P_2$  and  $P$  be any of its refinements. By  {prf:ref}`thm:26`  and  {eq}`eq:46` , it is clear
+
+```{math}
+\begin{align*}
+\lowint _a^b f  \; \mathrm{d} \alpha  -  \varepsilon
+< L(P,f, \alpha )
+\leq  S(P,f, \alpha )
+\leq  U(p,f, \alpha )
+<  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon
+\end{align*}
+```
+
+holds for any choice of  $t_k$  in each sub-interval  $[x_{k-1}, x_k]$ . Since the upper and lower integrals have the same value, say  $A$ , it then follows that
+
+```{math}
+\begin{align*}
+\abs{S(P,f,\alpha) - A}  <  \varepsilon
+\end{align*}
+```
+
+Therefore, indeed  $f \in \mathfrak{R}(\alpha)$ . This completes the proof.
+````
+\printindex

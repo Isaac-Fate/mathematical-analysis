@@ -260,6 +260,11 @@ const thebe_selector_output = ".output, .cell_output"
      Darboux Integrals with Monotonically Increasing Integrators
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Riemann%27s%20Condition.html">
+     Riemann’s Condition
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -627,7 +632,7 @@ f(x) =  \begin{cases}
 </div><div class="proof example admonition" id="eg:4">
 <p class="admonition-title"><span class="caption-number">Example 11 </span></p>
 <div class="example-content section" id="proof-content">
-<p>If we alter the function  <span class="math notranslate nohighlight">\(f\)</span>  in the example above ( <a class="reference internal" href="#eg:3">Example 10</a> ) by re-defining  <span class="math notranslate nohighlight">\(f(0) = 1\)</span>  and keep the integrator  <span class="math notranslate nohighlight">\(\alpha\)</span>  unchanged, then  <span class="math notranslate nohighlight">\(f\)</span>  is no longer integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span> . Now,</p>
+<p>If we alter the function  <span class="math notranslate nohighlight">\(f\)</span>  in the example above ( <a class="reference internal" href="#eg:3">Example 10</a> ) by re-defining  <span class="math notranslate nohighlight">\(f(0) = 1\)</span>  while keeping the integrator  <span class="math notranslate nohighlight">\(\alpha\)</span>  unchanged, then  <span class="math notranslate nohighlight">\(f\)</span>  is no longer integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span> . Now,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
 f(x) =  \begin{cases}
@@ -653,7 +658,7 @@ S(P,f, \alpha )
 \end{align*}\end{split}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Intuitively, we know  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>  since for any partition  <span class="math notranslate nohighlight">\(P\)</span> , we can always choose the last point  <span class="math notranslate nohighlight">\(t_n\)</span>  such that the Stieltjes sum  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>  does not fall in any neighborhood of some number. But we still have to prove this rigorously by the definition.</p>
+<p>Intuitively, we know  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>  since for any partition  <span class="math notranslate nohighlight">\(P\)</span> , we can always choose the last point  <span class="math notranslate nohighlight">\(t_n\)</span>  such that the Stieltjes sum  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>  does not fall in any neighborhood of some number. But we still have to prove this rigorously by the definition.</p>
 </div>
 <p>We shall prove by contradiction. Assume  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>  with  <span class="math notranslate nohighlight">\(\int_{-3\pi}^{0} f \; \mathrm{d}\alpha = A\)</span> . Since  <span class="math notranslate nohighlight">\(2\abs{\sin x} / x \to -2\)</span>  as  <span class="math notranslate nohighlight">\(x \to 0^{-}\)</span> , there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
 <div class="math notranslate nohighlight">

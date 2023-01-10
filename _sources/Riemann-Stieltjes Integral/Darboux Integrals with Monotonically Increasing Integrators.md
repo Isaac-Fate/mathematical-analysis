@@ -27,6 +27,7 @@ Thanks to {prf:ref}`thm:22`, which states that every function of bounded variati
 
 
 ````{prf:definition}
+:label: def:2
 Let  $f$  be a bounded function on  $[a, b]$ , and  $P = \{a=x_0, x_1, \ldots, x_n=b\}$  a partition. In each sub-interval  $[x_{k-1}, x_k]$ , we use the symbols  $M_k$  and  $m_k$  to denote
 
 ```{math}
@@ -264,6 +265,7 @@ There exist cases where the inequality {eq}`eq:48` is strict.
 
 
 ````{prf:example}
+:label: eg:5
 Consider the Dirichlet function
 
 ```{math}
@@ -277,4 +279,285 @@ Consider the Dirichlet function
 
 restricted on  $[0,1]$ . For any partition  $P = \{0=x_0, x_1, \ldots, x_n=1\}$ , the infimum of  $\ind_{\Q}$  on each sub-interval  $[x_{k-1}, x_k]$  is  $0$ . Hence,  $L(P,\ind_{\Q}) = \sum_{k=1}^n 0 \cdot (x_k - x_{k-1}) = 0$ , which implies the lower Darboux sum is always  $0$ . Therefore, the lower integral is  $0$ , i.e.,  $\lowint_0^1 \ind_\Q(x) \; \mathrm{d}x = 0$ . Similarly, because the supremum of the Dirichlet function is  $1$  in each sub-interval, the upper Darboux sum is always  $1$ . Hence,  $\upint_0^1 \ind_\Q(x) \; \mathrm{d}x = 1$ . In this case, the lower integral is strictly less than the upper integral.
 ````
-\printindex
+
+In the following theorems, we introduce some properties of upper and lower integrals.
+
+
+````{prf:theorem}
+Suppose that  $f$  is bounded and  $\alpha$  is increasing on  $[a, b]$ . Let  $c \in (a, b)$ . We have
+
+- (1) $\upint_a^b f \; \mathrm{d}\alpha = \upint_a^c f \; \mathrm{d}\alpha + \upint_c^b f \; \mathrm{d}\alpha$
+- (2) $\lowint_a^b f \; \mathrm{d}\alpha = \lowint_a^c f \; \mathrm{d}\alpha + \lowint_c^b f \; \mathrm{d}\alpha$
+````
+
+````{prf:proof}
+We only prove 1, the equality concerning the upper integrals, since 2 can be proved similarly.
+
+Given  $\varepsilon > 0$ , there exist a partition  $P_1$  on  $[a, c]$  and a partition  $P_2$  on  $[c, b]$  such that
+
+```{math}
+:label: eq:49
+\begin{align}
+U(P_1,f, \alpha ) <  \upint _a^c f  \; \mathrm{d} \alpha  +  \varepsilon /2
+\quad \text{and} \quad
+U(P_2,f, \alpha ) <  \upint _c^b f  \; \mathrm{d} \alpha  +  \varepsilon /2
+\end{align}
+```
+
+Let  $P = P_1 \cup P_2$ . Note that  $P$  is a partition on  $[a, b]$ , Furthermore, the upper Riemann-Stieltjes sum  $U(P,f,\alpha)$  is given by
+
+```{math}
+:label: eq:50
+\begin{align}
+U(P,f, \alpha ) = U(P_1,f, \alpha ) + U(P_2,f, \alpha )
+\end{align}
+```
+
+But
+
+```{math}
+:label: eq:51
+\begin{align}
+U(P,f, \alpha )  \geq \upint _a^b f  \; \mathrm{d} \alpha
+\end{align}
+```
+
+Combining  {eq}`eq:49` ,  {eq}`eq:50`  and  {eq}`eq:51`  together, we have
+
+```{math}
+\begin{align*}
+\upint _a^b f  \; \mathrm{d} \alpha
+<  \upint _a^c f  \; \mathrm{d} \alpha  +  \upint _c^b f  \; \mathrm{d} \alpha  +  \varepsilon
+\end{align*}
+```
+
+Since the above inequality holds for any  $\varepsilon > 0$ . It follows that
+
+```{math}
+:label: eq:52
+\begin{align}
+\upint _a^b f  \; \mathrm{d} \alpha \leq \upint _a^c f  \; \mathrm{d} \alpha  +  \upint _c^b f  \; \mathrm{d} \alpha
+\end{align}
+```
+
+On the other hand, letting  $\varepsilon > 0$  be chosen arbitrarily, there exists a partition  $P$  on  $[a, b]$  such that
+
+```{math}
+:label: eq:53
+\begin{align}
+U(P,f, \alpha ) <  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon
+\end{align}
+```
+
+We want to split  $P$  into two partitions, one on  $[a,c]$  and the other on  $[c, b]$ . But we need to ensure that  $c$  is in  $P$ . To do so, we consider a refinement  $P^\prime = P \cup \{c\}$ . By  {prf:ref}`thm:26` , we know that the upper Riemann-Stieltjes sum concerning  $P^\prime$  is reduced, i.e.,
+
+```{math}
+:label: eq:54
+\begin{align}
+U(P^ \prime ,f, \alpha )  \leq  U(P,f, \alpha ) <  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon
+\end{align}
+```
+
+where the second inequality follows from  {eq}`eq:53` . Let  $P_1$  and  $P_2$  be given by
+
+```{math}
+\begin{align*}
+P_1 =  \set{x \in P^\prime}{x \leq c} \quad \text{and} \quad
+P_2 =  \set{x \in P^\prime}{x \geq c}
+\end{align*}
+```
+
+Note that indeed  $P_1$  and  $P_2$  are partitions on  $[a, c]$  and  $[c, b]$ , respectively. We have
+
+```{math}
+:label: eq:55
+\begin{align}
+U(P^ \prime ,f, \alpha ) = U(P_1,f, \alpha ) + U(P_2,f, \alpha )
+\end{align}
+```
+
+Moreover, The two upper Riemann-Stieltjes sums are bounded below by the corresponding upper integrals, that is,
+
+```{math}
+:label: eq:56
+\begin{align}
+U(P_1,f, \alpha )  \geq \upint _a^c f  \; \mathrm{d} \alpha \quad \text{and} \quad
+U(P_2,f, \alpha )  \geq \upint _c^b f  \; \mathrm{d} \alpha
+\end{align}
+```
+
+Then, by combining  {eq}`eq:54` ,  {eq}`eq:55`  and  {eq}`eq:56` , we obtain
+
+```{math}
+\begin{align*}
+\int _a^b f  \; \mathrm{d} \alpha  +  \varepsilon
+>  \int _a^c f  \; \mathrm{d} \alpha
++  \int _c^b f  \; \mathrm{d} \alpha
+\end{align*}
+```
+
+Similarly, since the above inequality holds for any  $\varepsilon > 0$ , we have
+
+```{math}
+:label: eq:57
+\begin{align}
+\int _a^b f  \; \mathrm{d} \alpha \geq \int _a^c f  \; \mathrm{d} \alpha
++  \int _c^b f  \; \mathrm{d} \alpha
+\end{align}
+```
+
+Finally, the equation
+
+```{math}
+\begin{align*}
+\upint _a^b f  \; \mathrm{d} \alpha  =  \upint _a^c f  \; \mathrm{d} \alpha  +  \upint _c^b f  \; \mathrm{d} \alpha
+\end{align*}
+```
+
+follows from  {eq}`eq:52`  and  {eq}`eq:57` .
+````
+
+However, some equations of integrals will not be valid for upper and lower integrals. For example, the following equation is a special case of {prf:ref}`thm:18`.
+
+```{math}
+\begin{align*}
+\int _ {a} ^ {b} (f+g)  \; \mathrm{d} \alpha
+=  \int _ {a} ^ {b}  f  \; \mathrm{d} \alpha
++  \int _ {a} ^ {b}  g  \; \mathrm{d} \alpha
+\end{align*}
+```
+
+It will not hold if we replace the integrals with upper and lower integrals. To fix this, we also need to replace equality with inequality, as stated in the next theorem.
+
+
+````{prf:theorem}
+Suppose that  $f$  and  $g$  are bounded and  $\alpha$  is increasing on  $[a, b]$ . We have
+
+- (1) $\upint_a^b (f+g) \; \mathrm{d}\alpha \leq \upint_a^b f \; \mathrm{d}\alpha + \upint_a^b g \; \mathrm{d}\alpha$
+- (2) $\lowint_a^b (f+g) \; \mathrm{d}\alpha \geq \lowint_a^b f \; \mathrm{d}\alpha + \lowint_a^b g \; \mathrm{d}\alpha$
+````
+
+````{prf:proof}
+We only prove 1. Given  $\varepsilon > 0$ , there exist partitions  $P_1$  and  $P_2$  on  $[a, b]$  such that
+
+```{math}
+\begin{align*}
+U(P_1,f, \alpha ) <  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon /2
+\quad \text{and} \quad
+U(P_2,g, \alpha ) <  \upint _a^b g  \; \mathrm{d} \alpha  +  \varepsilon /2
+\end{align*}
+```
+
+Let  $P = P_1 \cup P_2$ . It follows from  {prf:ref}`thm:26`  that
+
+```{math}
+\begin{align*}
+U(P,f, \alpha )  \leq  U(P_1,f, \alpha ) <  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon /2
+\quad \text{and} \quad
+U(P,g, \alpha )  \leq  U(P_2,g, \alpha ) <  \upint _a^b g  \; \mathrm{d} \alpha  +  \varepsilon /2
+\end{align*}
+```
+
+Adding the two inequalities above yields
+
+```{math}
+:label: eq:58
+\begin{align}
+U(P,f, \alpha ) + U(P,g, \alpha )
+<  \upint _a^b f  \; \mathrm{d} \alpha  +   \upint _a^b g  \; \mathrm{d} \alpha  +  \varepsilon
+\end{align}
+```
+
+Write  $P=\{ x_0, x_1, \ldots, x_n \}$ . Let  $M_k$ ,  $M_k^\prime$  and  $M_k^{\prime\prime}$  denote
+
+```{math}
+\begin{align*}
+M_k &=  \sup \set{f(x) + g(x)}{x \in[x_{k-1}, x_k]} \\
+M_k^ \prime &=  \sup \set{f(x)}{x \in[x_{k-1}, x_k]} \\
+M_k^ {\prime\prime} &=  \sup \set{g(x)}{x \in[x_{k-1}, x_k]}
+\end{align*}
+```
+
+It is clear that
+
+```{math}
+\begin{align*}
+M_k  \leq  M_k^ \prime  + M_k^ {\prime\prime} \quad \forall  k = 1,  \ldots , n
+\end{align*}
+```
+
+since  $f(x) + g(x) \leq M_k^\prime + M_k^{\prime\prime} \; \forall x \in[x_{k-1}, x_k]$ . It then follows that
+
+```{math}
+\begin{align*}
+U(P,f+g, \alpha )  \leq  U(P,f, \alpha ) + U(P,g, \alpha )
+\end{align*}
+```
+
+Because  $U(P,f+g,\alpha)$  is bounded below by its upper integral, we further have
+
+```{math}
+:label: eq:59
+\begin{align}
+\upint _a^b (f+g)  \; \mathrm{d} \alpha \leq  U(P,f+g, \alpha )  \leq  U(P,f, \alpha ) + U(P,g, \alpha )
+\end{align}
+```
+
+Combining inequalities  {eq}`eq:58`  and  {eq}`eq:59` , we obtain
+
+```{math}
+\begin{align*}
+\upint _a^b (f+g)  \; \mathrm{d} \alpha
+<  \upint _a^b f  \; \mathrm{d} \alpha  +   \upint _a^b g  \; \mathrm{d} \alpha  +  \varepsilon
+\end{align*}
+```
+
+Because the above inequality holds for any  $\varepsilon > 0$ , we finally have the inequality
+
+```{math}
+\begin{align*}
+\upint _a^b (f+g)  \; \mathrm{d} \alpha \leq \upint _a^b f  \; \mathrm{d} \alpha  +   \upint _a^b g  \; \mathrm{d} \alpha
+\end{align*}
+```
+
+as desired.
+````
+
+The following is an example where both inequalities are strict.
+
+
+````{prf:example}
+Let functions
+
+```{math}
+\begin{align*}
+f =  \ind _ \Q \quad \text{and} \quad
+g = - \ind _ \Q
+\end{align*}
+```
+
+be restricted on  $[0, 1]$ . We have calculated the upper and lower integrals of  $f$  in  {prf:ref}`eg:5` . We can do the same for  $g$  similarly. The results are as follows.
+
+```{math}
+\begin{align*}
+\upint _0^1 f(x)  \; \mathrm{d} x = 1,
+\quad \lowint _0^1 f(x)  \; \mathrm{d} x = 0,
+\quad \upint _0^1 g(x)  \; \mathrm{d} x = 0,
+\quad \text{and} \quad \lowint _0^1 g(x)  \; \mathrm{d} x = -1,
+\end{align*}
+```
+
+Note that the sum of the two functions is zero, i.e.,  $f + g = 0$ . Hence, we have
+
+```{math}
+\begin{align*}
+\upint _0^1 (f+g)(x)  \; \mathrm{d} x
+= 0
+< 1
+=  \upint _0^1 f(x)  \; \mathrm{d} x +  \upint _0^1 g(x)  \; \mathrm{d} x  \\ \lowint _0^1 (f+g)(x)  \; \mathrm{d} x
+= 0
+> -1
+=  \lowint _0^1 f(x)  \; \mathrm{d} x +  \lowint _0^1 g(x)  \; \mathrm{d} x
+\end{align*}
+```
+````
