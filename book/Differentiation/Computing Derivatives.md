@@ -1,17 +1,21 @@
+```{index} chain rule
+```
 # Computing Derivatives
 
 It is difficult in practice to compute the derivative of any function only using the definition. In this section, we shall introduce some theorems and standard rules that are helpful with computation. If one knows the derivatives of elementary functions (e.g., $x^a$, $e^x$, $\ln x$, $\sin x$, $\cos x$, etc.), then by applying these theorems, one should be able to compute the derivatives of any functions that are built up out of elementary functions using summations, differences, products, quotients, and compositions.
 
-\begin{note}
+
+:::{note}
 In fact, these so-called elementary functions are not elementary at all. We shall present their definitions as well as their derivatives rigorously in later chapters.
-\end{note}## Algebra of Derivatives
+:::
+## Algebra of Derivatives
 
 ````{prf:theorem}
 Suppose  $f$  and  $g$  are defined on  $(a, b)$  and are both differentiable at  $c \in (a, b)$ . Then the functions  $f + g$ ,  $f - g$ ,  $fg$  are also differentiable at  $c$ . If  $g(c) \neq 0$ , then the quotient  $f / g$  is also differentiable at  $c$ . And the formulas of their derivatives are given by
 
-1. $(f \pm g)^\prime(c) = f^\prime(c) \pm g^\prime(c)$ ,
-2. $(f g)^\prime(c) = f^\prime(c) g(c) + f(c) g^\prime(c)$ ,
-3. $(f / g)^\prime(c) = \frac{f^\prime(c) g(c) - f(c) g^\prime(c)}{ g^2(c) }$ , provided  $g(c) \neq 0$ .
+- (1) $(f \pm g)^\prime(c) = f^\prime(c) \pm g^\prime(c)$ ,
+- (2) $(f g)^\prime(c) = f^\prime(c) g(c) + f(c) g^\prime(c)$ ,
+- (3) $(f / g)^\prime(c) = \frac{f^\prime(c) g(c) - f(c) g^\prime(c)}{ g^2(c) }$ , provided  $g(c) \neq 0$ .
 ````
 
 ````{prf:remark}
@@ -25,10 +29,16 @@ The proof we present here is done by exploiting {prf:ref}`thm:1`, and it may dif
 Since  $f$  and  $g$  are differentiable at  $c$ . It follows from  {prf:ref}`thm:1`  that there exists functions  $\phi_1$  and  $\phi_2$  on  $(a, b)$  that are continuous at  $c$ , and satisfy
 
 ```{math}
+:label: eq:4
+\begin{align}
+f(x) - f(c) = (x - c)  \phi _1^ \prime (x)
+\end{align}
+```
+
+```{math}
 :label: eq:5
 \begin{align}
-f(x) - f(c) &= (x - c)  \phi _1^ \prime (x)   \\
-g(x) - g(c) &= (x - c)  \phi _2^ \prime (x)
+g(x) - g(c) = (x - c)  \phi _2^ \prime (x)
 \end{align}
 ```
 
@@ -107,7 +117,7 @@ Since  $-\phi_2(x) / [g(x)g(c)]$  is continuous at  $c$ , we conclude from  {prf
 
 ```{math}
 \begin{align*}
-\left(\ frac {1} {g} \right)^ \prime (c)
+\left( \frac{1}{g} \right)^ \prime (c)
 =  \frac{-\phi_2(c)}{g(c)g(c)}
 =  \frac{-g^\prime(c)}{g^2(c)}
 \end{align*}
@@ -123,7 +133,7 @@ Then by applying statement 2, we conclude that  $f / g$  is also differentiable 
 ````
 ## The Chain Rule
 
-Taking compositions is a more fundamental and natural way of combining two functions apart from summations, products, etc. The next result, the **chain rule**\index{chain rule}, provides a method of computing the derivative of a composite function.
+Taking compositions is a more fundamental and natural way of combining two functions apart from summations, products, etc. The next result, the **chain rule**, provides a method of computing the derivative of a composite function.
 
 
 ````{prf:theorem}

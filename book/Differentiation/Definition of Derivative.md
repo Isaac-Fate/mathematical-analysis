@@ -1,6 +1,18 @@
+```{index} differentiable functions
+```
+```{index} derivative
+```
+```{index} one-sided derivatives
+```
+```{index} infinite derivative
+```
+```{index} right-hand derivative
+```
+```{index} left-hand derivative
+```
 # Definition of Derivative
 
-Observe the slopes of secant lines (displayed as dashed lines) of the curve shown in {ref}`fig:1`
+Observe the slopes of secant lines (displayed as dashed lines) of the curve shown in {numref}`fig:1`
 ```{figure} ../figures/secant-lines-and-a-tangent-line.png
 ---
 name: fig:1
@@ -9,11 +21,11 @@ Secant lines and a tangent line of curve $y=e^x$.
 ```
 
 
-All secant lines have a common point of intersection, $(0, 1)$. And as the other intersection point gets closer and closer to $(0, 1)$, the slope of the secant line tends to converge to some number. This number, the limiting slope, is precisely the **derivative** of this curve/function at $x=0$, which we shall soon define. We can draw a straight line passing through the point $(0,1)$ with the limiting slope. This line is then called the tangent of the curve at point $(0,1)$, as illustrated in {ref}`fig:1`.
+All secant lines have a common point of intersection, $(0, 1)$. And as the other intersection point gets closer and closer to $(0, 1)$, the slope of the secant line tends to converge to some number. This number, the limiting slope, is precisely the **derivative** of this curve/function at $x=0$, which we shall soon define. We can draw a straight line passing through the point $(0,1)$ with the limiting slope. This line is then called the tangent of the curve at point $(0,1)$, as illustrated in {numref}`fig:1`.
 
 
 ````{prf:definition}
-Let  $f$  be defined on an open interval  $(a, b)$ , and let  $c \in (a, b)$  an interior point. Then  $f$  is said to be  **differentiable** \index{differentiable functions}  at  $c$  if the limit
+Let  $f$  be defined on an open interval  $(a, b)$ , and let  $c \in (a, b)$  an interior point. Then  $f$  is said to be  **differentiable**   at  $c$  if the limit
 
 ```{math}
 \begin{align*}
@@ -21,7 +33,7 @@ Let  $f$  be defined on an open interval  $(a, b)$ , and let  $c \in (a, b)$  an
 \end{align*}
 ```
 
-exists. This limit, denoted by  $f^\prime(c)$ , is called the  **derivative** \index{derivative}  of  $f$  at point  $c$ .
+exists. This limit, denoted by  $f^\prime(c)$ , is called the  **derivative**   of  $f$  at point  $c$ .
 ````
 
 If $f^\prime(c)$ exists $\forall c \in I$ for some interval $I$, then we can define a function $f^\prime$ on $I$, which is called the derivative of $f$. Here the word *derivative* means a function instead of just a number.
@@ -122,7 +134,7 @@ We have
 
 Note the limit of the above expression is zero as  $h \to 0$  by  {prf:ref}`pro:2`  since  $\lim_{h\to 0} h = 0$  and  $\sin (1/h^2)$  is bounded by  $1$ . Hence,  $f^\prime(0) = 0$  by  {prf:ref}`pro:1` .
 
-The graph of  $f(x)$  is shown in  {ref}`fig:2` . As we can see,  $f(x)$  is clamped between curves  $y=x^2$  and  $y=-x^2$  with the same tangents  $y=0$  at  $x=0$ . And we have shown  $f^\prime(0)=0$ , which means that the tangent of  $f(x)$  is also  $y=0$  at  $x=0$ . What conjecture can you make?
+The graph of  $f(x)$  is shown in  {numref}`fig:2` . As we can see,  $f(x)$  is clamped between curves  $y=x^2$  and  $y=-x^2$  with the same tangents  $y=0$  at  $x=0$ . And we have shown  $f^\prime(0)=0$ , which means that the tangent of  $f(x)$  is also  $y=0$  at  $x=0$ . What conjecture can you make?
 
 
 ```{figure} ../figures/graph-001.png
@@ -136,13 +148,13 @@ Moreover, we observe that  $f(x)$  crosses its tangent line at  $x=0$  infinitel
 ````
 ## One-Sided Derivatives and Infinite Derivatives
 
-So far, the point at which the derivative is defined has to be an *interior* point. Sometimes, we are required to consider the derivatives at the endpoints of the interval. For example, as we shall see in more detail in \ref{chap:1}, we need to take the derivative of function $F(x) = \int_a^x f(t) \mathrm{d}t$ at $x=a$. Hence, we are motivated to define the **one-sided derivatives**\index{one-sided derivatives}.
+So far, the point at which the derivative is defined has to be an *interior* point. Sometimes, we are required to consider the derivatives at the endpoints of the interval. For example, as we shall see in more detail in \ref{chap:1}, we need to take the derivative of function $F(x) = \int_a^x f(t) \mathrm{d}t$ at $x=a$. Hence, we are motivated to define the **one-sided derivatives**.
 
-If we consider the derivative of $f$, $f^\prime$ as a function, then $f^\prime(x)$ may tend to infinity as $x$ approaches an endpoint. In addition, sometimes we need to interpret the meaning of vertical tangent lines. This leads to the definition of **infinite derivatives**\index{infinite derivative}.
+If we consider the derivative of $f$, $f^\prime$ as a function, then $f^\prime(x)$ may tend to infinity as $x$ approaches an endpoint. In addition, sometimes we need to interpret the meaning of vertical tangent lines. This leads to the definition of **infinite derivatives**.
 
 
 ````{prf:definition}
-Let  $f$  be defined on a closed interval  $I$ . Suppose  $f$  is continuous at point  $c \in I$ . Then  $f$  is said to have a  **right-hand derivative** \index{right-hand derivative}  at  $c$  if the right-hand limit
+Let  $f$  be defined on a closed interval  $I$ . Suppose  $f$  is continuous at point  $c \in I$ . Then  $f$  is said to have a  **right-hand derivative**   at  $c$  if the right-hand limit
 
 ```{math}
 \begin{align*}
@@ -150,7 +162,7 @@ Let  $f$  be defined on a closed interval  $I$ . Suppose  $f$  is continuous at 
 \end{align*}
 ```
 
-exists as a finite number, or the limit is  $\infty$  or  $-\infty$ . This right-hand derivative shall be denoted by  $f^\prime_{+}(c)$ . The  **left-hand derivative** \index{left-hand derivative} , denoted by  $f^\prime_{-}(c)$ , is defined similarly. In addition, if  $c$  is an interior point, and  $f^\prime_{+}(c) = f^\prime_{-}(c) = \infty$ , then we write  $f^\prime(c) = \infty$ .  $f^\prime(c) = -\infty$  is similarly defined.
+exists as a finite number, or the limit is  $\infty$  or  $-\infty$ . This right-hand derivative shall be denoted by  $f^\prime_{+}(c)$ . The  **left-hand derivative**  , denoted by  $f^\prime_{-}(c)$ , is defined similarly. In addition, if  $c$  is an interior point, and  $f^\prime_{+}(c) = f^\prime_{-}(c) = \infty$ , then we write  $f^\prime(c) = \infty$ .  $f^\prime(c) = -\infty$  is similarly defined.
 ````
 
 ````{prf:remark}
@@ -191,7 +203,7 @@ f(x) =  \sqrt[3]{x^2 (x-1) (x-2)}
 \end{align*}
 ```
 
-Its graph is shown in  {ref}`fig:3` .
+Its graph is shown in  {numref}`fig:3` .
 
 
 ```{figure} ../figures/graph-003.png

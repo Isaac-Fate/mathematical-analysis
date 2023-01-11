@@ -7,7 +7,7 @@ The next theorem helps to reduce some theorems on derivatives to theorems on con
 :label: thm:1
 Let  $f$  be a function defined on  $(a, b)$ , and  $c \in (a, b)$  a fixed point in that interval. We have the following statements:
 
-1. If  $f$  is differentiable at  $c$ , then there exists a function  $\phi$  on  $(a, b)$  which is continuous at  $c$ , and satisfies
+- (1) If  $f$  is differentiable at  $c$ , then there exists a function  $\phi$  on  $(a, b)$  which is continuous at  $c$ , and satisfies
 
 ```{math}
 :label: eq:1
@@ -18,7 +18,7 @@ f(x) - f(c) = (x - c)  \phi (x)
 ```
 
 And  $f^\prime(c) = \phi(c)$ .
-2. Conversely, if there exists a function  $\phi$  on  $(a, b)$  which is continuous at  $c$ , and satisfies  {eq}`eq:1` , then  $f$  is differentiable at  $c$  with  $f^\prime(c) = \phi(c)$ .
+- (2) Conversely, if there exists a function  $\phi$  on  $(a, b)$  which is continuous at  $c$ , and satisfies  {eq}`eq:1` , then  $f$  is differentiable at  $c$  with  $f^\prime(c) = \phi(c)$ .
 ````
 
 The function $\phi$ is precisely the slope of function $f$'s secant line.

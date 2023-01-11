@@ -14,6 +14,22 @@ chapters:
   - file: Differentiation/Intermediate Value Theorem
   - file: Differentiation/Taylor's Theorem
 - file: Functions of Bounded Variation/index
+  sections:
+  - file: Functions of Bounded Variation/Characterization of Functions of Bounded
+      Variation
 - file: Riemann-Stieltjes Integral/index
+  sections:
+  - file: Riemann-Stieltjes Integral/Definition of the Riemann-Stieltjes Integral
+  - file: Riemann-Stieltjes Integral/Linear Properties
+  - file: Riemann-Stieltjes Integral/Reduction to Riemann-Stieltjes Integrals
+  - file: Riemann-Stieltjes Integral/Integration by Parts
+  - file: Riemann-Stieltjes Integral/Change of Variables
+  - file: Riemann-Stieltjes Integral/Step Functions as Integrators
+  - file: Riemann-Stieltjes Integral/Reduction of Riemann-Stieltjes Integrals to Finite
+      Sums
+  - file: Riemann-Stieltjes Integral/Darboux Integrals with Monotonically Increasing
+      Integrators
+  - file: Riemann-Stieltjes Integral/Riemann's Condition
+- file: genindex.md
 format: jb-book
 root: intro

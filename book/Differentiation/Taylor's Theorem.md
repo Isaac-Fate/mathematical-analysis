@@ -1,3 +1,5 @@
+```{index} Taylor's theorem
+```
 # Taylor's Theorem
 
 
@@ -41,7 +43,7 @@ p^ {(k)} _n(0) = f^ {(k)} (0)
 \end{align*}
 ```
 
-Hence, it is reasonable to approximate  $f(x)$  with  $p_n(x)$  near point  $x = 0$ .  {ref}`fig:7`  compares  $f$  with  $p_n$  with several choices of  $n$ .
+Hence, it is reasonable to approximate  $f(x)$  with  $p_n(x)$  near point  $x = 0$ .  {numref}`fig:7`  compares  $f$  with  $p_n$  with several choices of  $n$ .
 
 
 ```{figure} ../figures/graph-008.png
@@ -61,7 +63,7 @@ In general, a function $f$ can be approximated by the polynomial
 \end{align*}
 ```
 
-at point $c$ provided that $f$ has up to $(n+1)$-th order derivative. The reason why we approximate $f$ with a polynomial of $n$ degree is that we have a remainder term, which makes use of the $(n+1)$-th order derivative. The remainder tells us how accurate the approximation is. The formal statement is described in the following theorem, the **Taylor's theorem**\index{Taylor's theorem}.
+at point $c$ provided that $f$ has up to $(n+1)$-th order derivative. The reason why we approximate $f$ with a polynomial of $n$ degree is that we have a remainder term, which makes use of the $(n+1)$-th order derivative. The remainder tells us how accurate the approximation is. The formal statement is described in the following theorem, the **Taylor's theorem**.
 
 
 ````{prf:theorem} Taylor
@@ -252,7 +254,7 @@ Hence, it is adequate to approximate  $\ln(0.6)$  by  $p_2(0.6)$ . The approxima
 \end{align*}
 ```
 
-We can also visualize the result in  {ref}`fig:8` . As we can see, the approximated value is quite close to the true value. And the absolute error is actually much less than the required bound,  $0.1$ .
+We can also visualize the result in  {numref}`fig:8` . As we can see, the approximated value is quite close to the true value. And the absolute error is actually much less than the required bound,  $0.1$ .
 
 ```{figure} ../figures/taylor-approx.png
 ---

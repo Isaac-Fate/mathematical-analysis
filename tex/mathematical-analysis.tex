@@ -438,8 +438,10 @@ The proof we present here is done by exploiting Theorem~\ref{thm:1}, and it may 
 \begin{proof}
     Since $f$ and $g$ are differentiable at $c$. It follows from Theorem~\ref{thm:1} that there exists functions $\phi_1$ and $\phi_2$ on $(a, b)$ that are continuous at $c$, and satisfy
     \begin{align}
-        f(x) - f(c) &= (x - c) \phi_1^\prime(x) \label{eq:4}  \\
-        g(x) - g(c) &= (x - c) \phi_2^\prime(x) \label{eq:5}  
+        f(x) - f(c) = (x - c) \phi_1^\prime(x) \label{eq:4}
+    \end{align}
+    \begin{align}
+        g(x) - g(c) = (x - c) \phi_2^\prime(x) \label{eq:5}  
     \end{align}
     with
     \begin{align}
@@ -494,7 +496,7 @@ The proof we present here is done by exploiting Theorem~\ref{thm:1}, and it may 
     \end{align*}
     Since $-\phi_2(x) / [g(x)g(c)]$ is continuous at $c$, we conclude from Theorem~\ref{thm:1} that $1/g$ is differentiable at $c$, and 
     \begin{align*}
-        \left(\frac{1}{g}\right)^\prime (c)
+        \left( \frac{1}{g} \right)^\prime (c)
         = \frac{-\phi_2(c)}{g(c)g(c)}
         = \frac{-g^\prime(c)}{g^2(c)}
     \end{align*}
@@ -1241,6 +1243,7 @@ is the remainder. The smaller the absolute value of $r_n(x)$ is, the more accura
 \end{theorem}
 
 %==============================
+
 \chapter{Riemann-Stieltjes Integral} \label{chap:1}
 
 \section{Definition of the Riemann-Stieltjes Integral}
@@ -1265,7 +1268,7 @@ is the remainder. The smaller the absolute value of $r_n(x)$ is, the more accura
 \begin{note}
     To ease the nation, we will sometimes write
     \begin{align*}
-        \sum_{k} f(t_k) \delta \alpha_k
+        \sum_{k} f(t_k) \Delta \alpha_k
     \end{align*}
     without specifying the lower and upper limits of $k$ if no confusion will be caused.
 \end{note}
@@ -1568,6 +1571,103 @@ is the remainder. The smaller the absolute value of $r_n(x)$ is, the more accura
 
 \end{proof}
 
+\begin{theorem} \label{thm:25}
+    The existence of two integrals in \eqref{eq:44} will imply the existence of the third one.
+    \begin{align}
+        \int_a^b f \; \mathrm{d}\alpha
+        = \int_a^c f \; \mathrm{d}\alpha
+        + \int_c^b f \; \mathrm{d}\alpha
+        \label{eq:44}
+    \end{align}
+\end{theorem}
+
+%------------------------------
+
+\section{Reduction to Riemann-Stieltjes Integrals}
+
+\par In the definition of Riemann-Stieltjes integral, $\mathrm{d} \alpha$ is merely a symbol which emphasizes that the integrator is $\alpha$. However, it is tempting to associate this symbol with the concept of differentials, and then replace it with $\alpha^\prime(x) \; \mathrm{d} x$. As stated in the following theorem, we can indeed do this under some conditions.
+
+\begin{theorem} \label{thm:23}
+    Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and $\alpha$ has a continuous derivative $\alpha^\prime$ on $[a, b]$. Then the Riemann integral $f \alpha^\prime$ exits, i.e., $f \alpha^\prime \in \mathfrak{R}$ on $[a, b]$, and we have 
+    \begin{align}
+        \int_{a}^{b} f(x) \; \mathrm{d}\alpha(x)
+        = \int_{a}^{b} f(x) \alpha^\prime(x) \; \mathrm{d}x
+        \label{eq:38}
+    \end{align}
+\end{theorem}
+
+\begin{proof}
+    We first do some preliminary work. Suppose $f$ is bounded by a positive number $M > 0$, i.e., $\abs{f(x)} \leq M \; \forall x \in [a, b]$, and let $\varepsilon > 0$ be chosen arbitrarily. 
+
+    \par Then, we make use of the continuity of $\alpha^\prime$. Note that $\alpha^\prime$ is uniformly continuity on $[a, b]$ since the closed interval is compact. Then there exists $\delta > 0$ such that 
+    \begin{align}
+        \abs{s-t} < \delta
+        \implies \abs{\alpha^\prime(s) - \alpha^\prime(t)} < \frac{\varepsilon / 2}{M(b-a)}
+        \label{eq:34}
+    \end{align}
+    Let $P_\varepsilon^\prime$ be a partition on $[a, b]$ with mesh less than $\delta$, i.e., $\norm{P} < \delta$.
+
+    \par Because $f \in \mathfrak{\alpha}$, there exists a partition, say $P_\varepsilon^{\prime\prime}$, such that 
+    \begin{align}
+        \abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha} < \varepsilon / 2
+        \quad \forall P \supset P_\varepsilon^{\prime\prime}
+        \label{eq:35}
+    \end{align}
+    holds for any refinement $P$.
+
+    Let partition $P_\varepsilon$ be the refinement of both partitions $P_\varepsilon^\prime$ and $P_\varepsilon^{\prime\prime}$, i.e., $P = P_\varepsilon^\prime \cup P_\varepsilon^{\prime\prime}$. Then for any refinement $P$ of $P_\varepsilon$, we have 
+    \begin{multline}
+        \abs{S(P, f\alpha^\prime) - \int_{a}^{b}f \; \mathrm{d}\alpha}
+        \leq \abs{S(P, f\alpha^\prime) - S(P, f, \alpha)} 
+            + \abs{S(P, f, \alpha) - \int_{a}^{b}f \; \mathrm{d}\alpha} \\
+        < \abs{S(P, f\alpha^\prime) - S(P, f, \alpha)} + \varepsilon / 2
+        \label{eq:36}
+    \end{multline}
+    where the last inequality follows from \eqref{eq:35}. 
+
+    \par We now work on $\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}$. We have 
+    \begin{align*}
+        \abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}
+        = \abs{
+            \sum_{k} f(t_k) \alpha^\prime(t_k) (x_k - x_{k-1})
+            - \sum_{k} f(t_k) [\alpha(x_{k}) - \alpha(x_{k-1})]
+        }
+    \end{align*}
+    Applying the mean value theorem (Theorem~\ref{thm:8}) to $\alpha$ on each sub-interval $[x_{k-1}, x_k]$ leads to 
+    \begin{align*}
+        \sum_{k} f(t_k) \alpha^\prime(t_k) (x_k - x_{k-1})
+            - \sum_{k} f(t_k) [\alpha(x_{k}) - \alpha(x_{k-1})]
+        = \sum_{k} f(t_k) [\alpha^\prime(t_k) - \alpha^\prime(\xi_k)] (x_k - x_{k-1})
+    \end{align*}
+    where $\xi_k \in (x_{k-1}, x_k)$. It then follows that 
+    \begin{alignat*}{2}
+        \abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}
+        &=& \; & \abs{\sum_{k} f(t_k) [\alpha^\prime(t_k) - \alpha^\prime(\xi_k)] (x_k - x_{k-1})} \\ 
+        &\leq&& \sum_{k} \abs{f(t_k)} \abs{\alpha^\prime(t_k) - \alpha^\prime(\xi_k)} \Delta x_k \\ 
+        &&&\text{recall $\abs{f} \leq M$} \\
+        &\leq&& M \sum_{k} \abs{\alpha^\prime(t_k) - \alpha^\prime(\xi_k)} \Delta x_k
+    \end{alignat*}
+    Note that $\abs{t_k - \xi_k} \leq \norm{P} \leq \norm{P_\varepsilon^\prime} < \delta$. Hence, by \eqref{eq:34}, we have 
+    \begin{align*}
+        \abs{\alpha^\prime(t_k) - \alpha^\prime(\xi_k)}
+        < \frac{\varepsilon / 2}{M(b-a)}
+    \end{align*}
+    Then, $\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}$ is finally bounded by
+    \begin{align}
+        \abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}
+        < M \frac{\varepsilon / 2}{M(b-a)} \sum_k \Delta x_k
+        =  M \frac{\varepsilon / 2}{M(b-a)} (b-a)
+        = \varepsilon / 2
+        \label{eq:37}
+    \end{align}
+
+    \par Combining \eqref{eq:36} and \eqref{eq:37}, we obtain
+    \begin{align*}
+        \abs{S(P, f\alpha^\prime) - \int_{a}^{b}f \; \mathrm{d}\alpha} < \varepsilon
+    \end{align*}
+    where $P$ is an arbitrary refinement of the chosen $P_\varepsilon$. This implies $f \alpha^\prime$ is Riemann integrable, and \eqref{eq:38} indeed holds. 
+\end{proof}
+
 %------------------------------
 
 \section{Integration by Parts}
@@ -1640,11 +1740,20 @@ is the remainder. The smaller the absolute value of $r_n(x)$ is, the more accura
     \end{align*}
     This implies that $\alpha \in \mathfrak{R}(f)$ on $[a, b]$, and 
     \begin{align*}
-        \int_a^b f \;\mathrm{d}\alpha
+        \int_a^b \alpha \;\mathrm{d} f
         = -\int_a^b f \;\mathrm{d}\alpha 
         + f(b)\alpha(b) - f(a)\alpha(a)
     \end{align*}
 \end{proof}
+
+%------------------------------
+
+\begin{exercise}
+    Evaluate the integral 
+    \begin{align*}
+        \int_{a}^{b} x \cos(x) \; \mathrm{d}x
+    \end{align*}
+\end{exercise}
 
 %------------------------------
 
@@ -1723,13 +1832,788 @@ is the remainder. The smaller the absolute value of $r_n(x)$ is, the more accura
 
 %------------------------------
 
-\section{Monotonically Increasing Integrators}
+\section{Step Functions as Integrators}
+
+\par If the integrator $\alpha$ is a constant function on $[a, b]$, then the $f$ is always integrable with $\int_{a}^{b} f\; \mathrm{d}\alpha = 0$ since the Stieltjes sum $S(P,f,\alpha) = 0$ for any partition. 
+
+\par What if $\alpha$ is constant except for one jump or removable discontinuity at $c \in (a, b)$? For example, $\alpha$ may look like functions shown in Figure~\ref{fig:9}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.2]{figures/step-func-integrator.png}
+    \caption{Left: $\alpha(x)$ is continuous from the right at $x=0$. Middle: $\alpha(x)$ is continuous from the left at $x=0$. Right: $\alpha(x)$ has a removable discontinuity at $x=0$.}
+    \label{fig:9}
+\end{figure}
+
+\noindent In this case, $f$ may not be even integrable, and if it is, $\int_{a}^{b} f \; \mathrm{d}\alpha$ may not be zero.
+
+\begin{theorem} \label{thm:24}
+    Let $c \in (a, b)$. Define a function $\alpha$ on $[a, b]$ as follows. The values of $\alpha(a)$, $\alpha(b)$ and $\alpha(c)$ are chosen arbitrarily, and elsewhere
+    \begin{align*}
+        \alpha(x) = \begin{cases}
+            \alpha(a) & a \leq x < c \\
+            \alpha(b) & c < x \leq b
+        \end{cases}
+    \end{align*}
+    Suppose $f$ is a bounded function defined on $[a, b]$ in such a way that
+    \begin{enumerate}
+        \item at least one of $f$ and $\alpha$ is continuous from the left at $c$, and
+        \item at least one of $f$ and $\alpha$ is continuous from the right at $c$.
+    \end{enumerate}
+    Then, $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ with 
+    \begin{align}
+        \int_{a}^{b} f \; \mathrm{d}\alpha
+        = f(c) [\alpha(b) - \alpha(a)]
+        \label{eq:40}
+    \end{align}
+\end{theorem}
+
+\begin{proof}
+    (Possible expressions of $S(P,f,\alpha)$) We first investigate the expression of the Stieltjes sum $S(P,f,\alpha)$. Given any partition $P$ on $[a, b]$. If $c \notin P$, then we have 
+    \begin{align*}
+        S(P,f,\alpha) = f(c) [\alpha(b) - \alpha(a)]
+    \end{align*}
+    And if $c \in P$, we have 
+    \begin{align*}
+        S(P,f,\alpha) 
+        = f(c-\delta_1) [\alpha(c) - \alpha(a)]
+        + f(c+\delta_2) [\alpha(b) - \alpha(c)]
+    \end{align*}
+    where $c-\delta_1$ and $c+\delta_2$ ($\delta_1, \delta_2 \geq 0$) are two points in the adjacent sub-intervals sharing the same endpoint $c$. Note that $\delta_1$ and $\delta_2$ can not be too large. In fact, they satisfy that 
+    \begin{align*}
+        0 \leq \delta_1, \delta_2 \leq \norm{P}
+    \end{align*}
+    Taking into consideration both cases, we have the following inequality for any partition $P$:
+    \begin{multline}
+        \abs{
+            S(P,f,\alpha)
+            - f(c) [\alpha(b) - \alpha(a)]
+        } \\
+        \leq \abs{f(c-\delta_1) - f(c)} \abs{\alpha(c) - \alpha(a)}
+        + \abs{f(c+\delta_2) - f(c)} \abs{\alpha(b) - \alpha(c)}
+        \label{eq:39}
+    \end{multline}
+    where of course $0 \leq \delta_1, \delta_2 \leq \norm{P}$. 
+
+    \begin{note}
+        In fact, the left-hand side of \eqref{eq:39} reduces to zero when $c \notin P$ and the equality holds if $c \in P$.
+    \end{note}
+
+    \par There are altogether four scenarios concerning the continuity of $f$ and $\alpha$ at point $c$, which are 
+    \begin{enumerate}
+        \item $\alpha(x)$ is continuous at $x=c$.
+        \item $\alpha(x)$ is continuous from the right at $x=c$, and $f(x)$ is continuous from the left at $x=c$.
+        \item $\alpha(x)$ is continuous from the left at $x=c$, and $f(x)$ is continuous from the right at $x=c$.
+        \item $f(x)$ is continuous at $x=c$.
+    \end{enumerate}
+
+    \par (Proof of 1) If $\alpha(x)$ is continuous at $x=c$, then $\alpha$ is a constant function. In this case, $f$ is certainly integrable with respect to $\alpha$ with $\int_{a}^{b} f \; \mathrm{d}\alpha = 0$. And \eqref{eq:40} holds since its right-hand side is also zero for $\alpha(a) = \alpha(b)$.
+
+    \par (Proof of 2) Because $\alpha(x)$ is continuous from the right at $x=c$, we have $\alpha(c) = \alpha(b)$, and the inequality \eqref{eq:39} reduces to 
+    \begin{align}
+        \abs{
+            S(P,f,\alpha)
+            - f(c) [\alpha(b) - \alpha(a)]
+        }
+        \leq \abs{f(c-\delta_1) - f(c)} \abs{\alpha(c) - \alpha(a)}
+        \label{eq:41}
+    \end{align} 
+    Given $\varepsilon > 0$, since $f(x)$ is continuous from the left at $x=c$, there exists $\delta > 0$ such that 
+    \begin{align}
+        -\delta < x - c < 0
+        \implies \abs{f(x) - f(c)} < \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + 1}
+        \label{eq:42}
+    \end{align}
+    Choose a partition $P_\varepsilon$ on $[a, b]$ with $\norm{P_\varepsilon} < \delta$. Let $P \supset P_\varepsilon$ be an arbitrary refinement. Applying \eqref{eq:41} to $P$, we have $\delta_1 < \norm{P} \leq \norm{P_\varepsilon}<\delta$. We may then apply \eqref{eq:42}, and obtain
+    \begin{multline*}
+        \abs{
+            S(P,f,\alpha)
+            - f(c) [\alpha(b) - \alpha(a)]
+        }
+        \leq \abs{f(c-\delta_1) - f(c)} \abs{\alpha(c) - \alpha(a)} \\
+        < \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + 1} \abs{\alpha(c) - \alpha(a)}
+        < \varepsilon
+    \end{multline*}
+    This implies $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and \eqref{eq:40} holds.
+
+    \par (Proof of 3) The proof, in this case, is similar to that of 2.
+
+    \par (Proof of 4) Given $\varepsilon > 0$. Because $f(x)$ is continuous at $x=c$, there exists $\delta > 0$ such that 
+    \begin{align}
+        \abs{x - c} < \delta
+        \implies \abs{f(x) - f(c)} < \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + \abs{\alpha(b) - \alpha(c)} + 1}
+        \label{eq:43}
+    \end{align}
+    Choose a partition $P_\varepsilon$ with $\norm{P_\varepsilon} < \delta$. Let $P \supset P_\varepsilon$. Applying \eqref{eq:39} to $P$, we have $0 \leq \delta_1, \delta_2 \leq \norm{P} \leq \norm{P_\varepsilon} < \delta$. Then \eqref{eq:39} and \eqref{eq:43} yield 
+    \begin{multline*}
+        \abs{
+            S(P,f,\alpha)
+            - f(c) [\alpha(b) - \alpha(a)]
+        } \\
+        <   \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + \abs{\alpha(b) - \alpha(c)} + 1} (\abs{\alpha(c) - \alpha(a)}
+        + \abs{\alpha(b) - \alpha(c)})
+        < \varepsilon
+    \end{multline*}
+    Hence, $f \in \mathfrak{R}(\alpha)$, and \eqref{eq:40} holds. This completes the proof.
+\end{proof}
+
+It should be emphasized that there are cases where $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ while the conditions in the above theorem are not satisfied.
+
+\begin{example}
+    Let 
+    \begin{align*}
+        f(x) = \alpha(x) = \begin{cases}
+            -1 &x < 0 \\ 
+            0 &x=0 \\ 
+            1 &x > 0
+        \end{cases}, 
+        \quad x \in [-1, 1]
+    \end{align*}
+    Note that neither $f$ nor $\alpha$ is continuous from the left at $0$. (And also neither $f$ nor $\alpha$ is continuous from the right at $0$.) Hence, the conditions in Theorem~\ref{thm:24} are not satisfied.
+    
+    However, we now show that $f$ is integrable. Let $P$ be any partition on $[-1, 1]$. If $0 \notin P$, then 
+    \begin{align*}
+        S(P,f,\alpha) = f(0)[\alpha(1) - \alpha(-1)] = 0
+    \end{align*}
+    And if $0 \in P$, we then have
+    \begin{align*}
+        S(P,f,\alpha) = f(-\delta_1)[\alpha(0) - \alpha(-1)] + f(\delta_2)[\alpha(1) - \alpha(0)]
+        = (-1)[0-(-1)] + 1 \cdot [1 - 0]
+        = 0
+    \end{align*}
+    where $\delta_1, \delta_2 \geq 0$. Hence, $S(P,f,\alpha) = 0$ no matter what partition and representative points we choose. It follows that $f \in \mathfrak{R}(\alpha)$ on $[-1, 1]$ with $\int_{-1}^{1} f \; \mathrm{d}\alpha = 0$.
+\end{example}
+
+\begin{example}
+    Let 
+    \begin{align*}
+        f(x) = \begin{cases}
+            \frac{\abs{\sin(x)}}{x} &x \neq 0 \\
+            -1 &x = 0
+        \end{cases}
+        \quad\text{and}\quad 
+        \alpha(x) = \begin{cases}
+            -1 &x < 0 \\
+            1 &x \geq 0
+        \end{cases},
+        \quad x \in [-3\pi, 3\pi]
+    \end{align*}
+    Let us take for granted that the following limit exists:
+    \begin{align*}
+        \lim_{x \to 0} \frac{\sin (x)}{x} = 1
+    \end{align*}
+    Then we note that the left and right limits of $f$ both exist but are not equal. Figure~\ref{fig:10} exhibits the graphs of these two functions. 
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.2]{figures/graph-009.png}
+        \caption{Left: integrand $f$ is continuous from the left at $0$. Right: integrator $\alpha$ is continuous from the right at $0$.}
+        \label{fig:10}
+    \end{figure}
+    
+    The integrator $\alpha$ is constant except for a jump discontinuity at $0$. We note that $\alpha$ is continuous from the \textit{right} at $0$, and $f$ is continuous from the \textit{left} at $0$. Hence, the conditions in Theorem~\ref{thm:24} are satisfied, and we conclude $f \in \mathfrak{R}(\alpha)$ on $[-3\pi, 3\pi]$ with 
+    \begin{align*}
+        \int_{-3\pi}^{3\pi}f \; \mathrm{d}\alpha
+        = f(0)[\alpha(3\pi) - \alpha(-3\pi)]
+        = f(0) \cdot 2 = -2
+    \end{align*} 
+    \label{eg:3}
+\end{example}
+
+\begin{example}
+    If we alter the function $f$ in the example above (Example~\ref{eg:3}) by re-defining $f(0) = 1$ while keeping the integrator $\alpha$ unchanged, then $f$ is no longer integrable w.r.t. $\alpha$. Now, 
+    \begin{align*}
+        f(x) = \begin{cases}
+            \frac{\abs{\sin(x)}}{x} &x \neq 0 \\
+            1 &x = 0
+        \end{cases}
+        \quad\text{and}\quad 
+        \alpha(x) = \begin{cases}
+            -1 &x < 0 \\
+            1 &x \geq 0
+        \end{cases},
+        \quad x \in [-3\pi, 3\pi]
+    \end{align*}
+    Note that we cannot apply Theorem~\ref{thm:24} here since neither the integrand nor the integrator is continuous from the left of $0$.
+
+    To show that $f$ is indeed not integrable, we consider $f$ and $\alpha$ on $[-3\pi, 0]$ and $[0, 3\pi]$ separately. It is evident that $f \in \mathfrak{R}(\alpha)$ on $[0, 3\pi]$ with $\int_{0}^{3\pi}f \; \mathrm{d}\alpha = 0$. We now consider the other half interval $[-3\pi, 0]$. Given any partition $P = \{x_0, x_1, \ldots, x_n\}$ on $[-3\pi, 0]$, we have 
+    \begin{align*}
+        S(P,f,\alpha)
+        = f(t_n) [\alpha(x_n) - \alpha(x_{n-1})]
+        = 2 f(t_n)
+        = \begin{cases}
+            2 \abs{\sin(t_n)} / t_n &t_n < 0\\ 
+            2 &t_n = 0
+        \end{cases}
+    \end{align*}
+
+    \begin{note}
+        Intuitively, we know $f$ is not integrable w.r.t. $\alpha$ on $[-3\pi, 0]$ since for any partition $P$, we can always choose the last point $t_n$ such that the Stieltjes sum $S(P,f,\alpha)$ does not fall in any neighborhood of some number. But we still have to prove this rigorously by the definition.
+    \end{note}
+
+    We shall prove by contradiction. Assume $f \in \mathfrak{R}(\alpha)$ on $[-3\pi, 0]$ with $\int_{-3\pi}^{0} f \; \mathrm{d}\alpha = A$. Since $2\abs{\sin x} / x \to -2$ as $x \to 0^{-}$, there exists $\delta > 0$ such that 
+    \begin{align*}
+        -3 < \frac{2\abs{\sin x}}{x} < -1
+        \quad \forall x \in (-\delta, 0)
+    \end{align*}
+    Choose $\varepsilon = 1$. For all partitions $P_\varepsilon$, we can always find a refinement $P=\{x_0, x_1, \ldots, x_n\}$ such that $x_{n-1} > -\delta$. We choose the last representative $t_n \in [x_{n-1}, x_n]$ in two ways. Letting $t_n$ be some number in that sub-interval other than $0$ yields a Riemann-Stieltjes sum in between $-3$ and $-2$, i.e., 
+    \begin{align*}
+        S(P,f,\alpha) = 2 \abs{\sin(t_n)} / t_n \in (-3, -1)
+    \end{align*}
+    since $-\delta < t_n < 0$. On the other hand, letting $t^\prime_n = 0$ leads to another Riemann-Stieltjes sum
+    \begin{align*}
+        S^\prime(P,f,\alpha) = 2
+    \end{align*}
+    We have the following inequality:
+    \begin{align*}
+        \abs{S(P,f,\alpha) - A} + \abs{S^\prime(P,f,\alpha) - A} 
+        \geq \abs{S(P,f,\alpha) - S^\prime(P,f,\alpha)}
+        > 3 > 2\varepsilon
+    \end{align*}
+    This implies that at least one of $\abs{S(P,f,\alpha) - A} $ and $ \abs{S^\prime(P,f,\alpha) - A} $ is greater than $\varepsilon$, which leads to a contradiction. Hence, $f$ is not integrable on $[-3\pi, 0]$.
+    
+    Finally, by Theorem~\ref{thm:25}, $f$ cannot be integrable with respect to $\alpha$ on the whole interval $[-3\pi, 3\pi]$.
+
+    As a matter of fact, $f \notin \mathfrak{R}(\alpha)$ on $[-3\pi, 3\pi]$ if we re-define $f(0)$ other than $1$ while keep $\alpha$ unchanged.
+    \label{eg:4}
+\end{example}
+
+\begin{exercise}
+    Let $f$ be a constant function on $[a, b]$ except for \textit{finitely} many points. Show that $f$ is Riemann integrable on $[a, b]$.
+
+    \noindent [Hint: You may find the theorem of integration by parts (Theorem~\ref{thm:20}) helpful.]
+\end{exercise}
+
+%------------------------------
+
+\section{Reduction of Riemann-Stieltjes Integrals to Finite Sums}
+
+
+%------------------------------
+
+\section{Darboux Integrals with Monotonically Increasing Integrators}
+
+In this section, we shall introduce another formulation of integrals, which is known as the \textbf{Darboux integrals}\index{Darboux integrals}. As we noted before, the Riemann-Stieltjes sum $S(P,f,\alpha)$ also depends on the choice of representatives, $ t_k$s. This uncertainty increases the difficulty of proving assertions related to integrals. For example, as we have seen in Example~\ref{eg:4}, it takes quite a lot of work to prove that integral does not exist. Hence, we need Darboux's formulation, which has the advantage of being easier to apply in computations or proofs.
 
 \par It is much easier to study and prove some properties of the Riemann-Stieltjes integrals if we require that $\alpha$ is monotonically increasing. 
 
 \par Thanks to Theorem~\ref{thm:22}, which states that every function of bounded variation can express as a difference of two increasing functions, almost all the properties introduced in this section can be extended with ease to integrators of bounded variation. 
 
+
+\begin{definition} \label{def:2}
+    Let $f$ be a bounded function on $[a, b]$, and $P = \{a=x_0, x_1, \ldots, x_n=b\}$ a partition. In each sub-interval $[x_{k-1}, x_k]$, we use the symbols $M_k$ and $m_k$ to denote
+    \begin{align*}
+        M_k = \sup\set{f(x)}{x \in [x_{k-1}, x_k]}
+        \quad\text{and}\quad
+        m_k = \inf\set{f(x)}{x \in [x_{k-1}, x_k]}
+    \end{align*}
+    (The supremum and infimum are well-defined since we assume $f$ is bounded.) The \textbf{upper Riemann-Stieltjes sum}\index{upper Riemann-Stieltjes sum} $U(P,f,\alpha)$ and \textbf{lower Riemann-Stieltjes sum}\index{lower Riemann-Stieltjes sum} $L(P,f,\alpha)$ are defined by 
+    \begin{align*}
+        U(P,f,\alpha) = \sum_{k=1}^n M_k \Delta \alpha_k 
+        \quad\text{and}\quad
+        L(P,f,\alpha) = \sum_{k=1}^n m_k \Delta \alpha_k 
+    \end{align*}
+\end{definition}
+
+If $\alpha(x) = x$, we write $U(P,f)$ and $L(P,f)$ with the specification of $\alpha$ dropped. And in this case, $U(P,f)$ and $L(P,f)$ are called the \textbf{upper and lower Darboux sum}\index{upper Darboux sum}\index{lower Darboux sum}.
+
+\begin{note}
+    From the definition, we note that, unlike $S(P,f,\alpha)$, $U(P,f,\alpha)$ and $L(P,f,\alpha)$ only depend on $P$, $f$ and $\alpha$.
+\end{note}
+
+On each sub-interval $[x_{k-1}, x_k]$, by definition, we have 
+\begin{align}
+    m_k \leq f(x) \leq M_k
+    \quad \forall x \in [x_{k-1}, x_k]
+    \label{eq:46}
+\end{align}
+It follows that 
+\begin{align}
+    L(P,f,\alpha) \leq U(P,f,\alpha)
+    \label{eq:45}
+\end{align}
+If we pick a representative $t_k \in [x_{k-1}, x_k]$ in each interval and assume $\alpha$ is monotonically increasing, then \eqref{eq:46} yields
+\begin{align*}
+    L(P,f,\alpha) \leq S(P,f,\alpha) \leq U(P,f,\alpha)
+\end{align*}
+The following theorem states that not only $L(P,f,\alpha) \leq U(P,f,\alpha)$ for the same partition $P$, but also $L(P_1,f,\alpha) \leq U(P_2,f,\alpha)$ for any two partitions $P_1$ and $P_2$. The theorem also says the upper sums will decrease as the partition gets finer and finer while the lower sums will increase.
+
+\begin{theorem} \label{thm:26}
+    Suppose $\alpha$ is increasing on $[a, b]$. We have the following statements.
+    \begin{enumerate}
+        \item If $P^\prime \supset P$, then 
+        \begin{align*}
+            U(P^\prime,f,\alpha) \leq U(P,f,\alpha)
+            \quad\text{and}\quad
+            L(P^\prime,f,\alpha) \geq L(P,f,\alpha)
+        \end{align*}
+        \item For any two partitions $P_1$ and $P_2$ on $[a, b]$, we have 
+        \begin{align*}
+            L(P_1, f, \alpha) \leq U(P_2, f, \alpha)
+        \end{align*}
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    (Proof of 1) We only prove $U(P^\prime,f,\alpha) \leq U(P,f,\alpha)$ since the proof for lower sums is similar. Note that it suffices to prove the case where $P^\prime$ has exactly one point, say $c$, more than $P$.
+    \begin{note}
+        If $P^\prime$ has $m$ points more than $P$, then we can construct a chain of partitions:
+        \begin{align*}
+            P^\prime = P_1 \supset P_2 \cdots \supset P_m = P
+        \end{align*}
+        in such a way that $P_i$ has one point more than $P_{i+1}$. Then by applying the inequality $U(P_i,f,\alpha) \leq U(P_{i+1},f,\alpha)$, which is assumed proved, we obtain
+        \begin{align*}
+            U(P^\prime,f,\alpha) \leq U(P_2,f,\alpha) \leq \cdots \leq U(P,f,\alpha)
+        \end{align*}
+    \end{note}
+    Suppose $P=\{x_0,x_1,\ldots,x_n\}$, and point $c$ is in between $x_{i-1}$ and $x_i$. The upper sum $U(P^\prime,f,\alpha)$ is then 
+    \begin{align*}
+        U(P^\prime,f,\alpha)
+        = \sum_{k=1, k \neq i}^n M_k \Delta \alpha_k
+            + M^\prime[\alpha(c) - \alpha(x_{i-1})]
+            + M^{\prime\prime}[\alpha(x_{i})-\alpha(c)]
+    \end{align*}
+    where 
+    \begin{align*}
+        M^\prime = \sup\set{f(x)}{x \in [x_{i-1}, c]}
+        \quad\text{and}\quad
+        M^{\prime\prime} = \sup\set{f(x)}{x \in [c, x_i]}
+    \end{align*}
+    Since $M_i \geq M^\prime, M^{\prime\prime}$, we have 
+    \begin{align*}
+        M^\prime[\alpha(c) - \alpha(x_{i-1})]
+        + M^{\prime\prime}[\alpha(x_{i})-\alpha(c)]
+        \leq M_i \Delta \alpha_i
+    \end{align*}
+    Hence, $U(P^\prime,f,\alpha) \leq U(P,f,\alpha)$.
+
+    (Proof of 2) Let $P$ be a common refinement of $P_1$ and $P_2$, say $P = P_1 \cup P_2$. Applying what we have just proved, it follows that 
+    \begin{align*}
+        L(P,f,\alpha) \geq L(P_1,f,\alpha)
+        \quad \text{and} \quad
+        U(P,f,\alpha) \leq U(P_2,f,\alpha)
+    \end{align*}
+    As noted before in \eqref{eq:45}, $L(P,f,\alpha) \leq U(P,f,\alpha)$. Therefore, 
+    \begin{align*}
+        L(P_1,f,\alpha) \leq L(P,f,\alpha)
+        \leq U(P,f,\alpha) \leq U(P_2,f,\alpha)
+    \end{align*}
+\end{proof}
+
+%------------------------------
+
+In particular, since every partition is a refinement of the trivial partition $P_0 = \{a, b\}$, Theorem~\ref{thm:26} leads to 
+\begin{align}
+    \inf_{x\in[a,b]} f(x) [\alpha(b) - \alpha(a)] 
+    \leq L(P_1, f, \alpha) \leq U(P_2, f, \alpha)
+    \leq \sup_{x\in[a,b]} f(x) [\alpha(b) - \alpha(a)] 
+    \label{eq:47}
+\end{align}
+What \eqref{eq:47} implies is that all the upper and lower Riemann-Stieltjes sums are bounded. Therefore, the infimum of upper sums and supremum of lower sums both exist as \textit{finite} numbers, which gives rise to the definition of \textbf{upper and lower Riemann-Stieltjes integrals}\index{upper Riemann-Stieltjes integral}\index{lower Riemann-Stieltjes integral}.
+
+\begin{definition}
+    Suppose $f$ is bounded and $\alpha$ is monotonically increasing on $[a, b]$. The upper and lower Riemann-Stieltjes integrals, written as $\upint_a^b f \; \mathrm{d}\alpha$ and $\lowint_a^b f \; \mathrm{d}\alpha$, are defined by 
+    \begin{align*}
+        \upint_a^b f \; \mathrm{d}\alpha
+        = \inf \set{U(P,f,\alpha)}{P \in \mathcal{P}[a,b]}
+        \quad \text{and} \quad
+        \lowint_a^b f \; \mathrm{d}\alpha
+        = \sup \set{L(P,f,\alpha)}{P \in \mathcal{P}[a,b]}
+    \end{align*}
+\end{definition}
+
+%------------------------------
+
+Sometimes, we will just say upper and lower integrals for short.
+
+As indicated by the names, one should expect that the lower integral should be less than or equal to the upper integral. This is indeed the case.
+
+\begin{theorem}
+    Suppose $\alpha$ is increasing on $[a, b]$. We have 
+    \begin{align}
+        \lowint_a^b f \; \mathrm{d}\alpha
+        \leq \upint_a^b f \; \mathrm{d}\alpha
+        \label{eq:48}
+    \end{align}
+\end{theorem}
+
+\begin{proof}
+    Given $\varepsilon > 0$, there exists a partition $P_\varepsilon$ such that 
+    \begin{align*}
+        U(P_\varepsilon,f,\alpha) < \upint_a^b f \; \mathrm{d}\alpha + \varepsilon
+    \end{align*}
+    By Theorem~\ref{thm:26}, for any partition $P$, we have 
+    \begin{align*}
+        L(P,f,\alpha) \leq U(P_\varepsilon,f,\alpha)
+    \end{align*}
+    It then follows that 
+    \begin{align*}
+        L(P,f,\alpha) < \upint_a^b f \; \mathrm{d}\alpha + \varepsilon
+        \quad \forall P \in \mathcal{P}[a,b]
+    \end{align*}
+    This implies that $\upint_a^b f \; \mathrm{d}\alpha + \varepsilon$ is an upper bound of all the lower Riemann-Stieltjes sums. Thus, it must be no less than their supremum, that is, 
+    \begin{align*}
+        \lowint_a^b f \; \mathrm{d}\alpha
+        \leq
+        \upint_a^b f \; \mathrm{d}\alpha + \varepsilon
+    \end{align*}
+    Since the above inequality holds for any positive number $\varepsilon > 0$, we have 
+    \begin{align*}
+        \lowint_a^b f \; \mathrm{d}\alpha
+        \leq \upint_a^b f \; \mathrm{d}\alpha
+    \end{align*}
+\end{proof}
+
+There exist cases where the inequality \eqref{eq:48} is strict.
+
+\begin{example}
+    Consider the Dirichlet function
+    \begin{align*}
+        \ind_{\Q} (x) = \begin{cases}
+            1 &x \in \Q\\ 
+            0 &x \notin \Q
+        \end{cases}
+    \end{align*}
+    restricted on $[0,1]$. For any partition $P = \{0=x_0, x_1, \ldots, x_n=1\}$, the infimum of $\ind_{\Q}$ on each sub-interval $[x_{k-1}, x_k]$ is $0$. Hence, $L(P,\ind_{\Q}) = \sum_{k=1}^n 0 \cdot (x_k - x_{k-1}) = 0$, which implies the lower Darboux sum is always $0$. Therefore, the lower integral is $0$, i.e., $\lowint_0^1 \ind_\Q(x) \; \mathrm{d}x = 0$. Similarly, because the supremum of the Dirichlet function is $1$ in each sub-interval, the upper Darboux sum is always $1$. Hence, $\upint_0^1 \ind_\Q(x) \; \mathrm{d}x = 1$. In this case, the lower integral is strictly less than the upper integral.
+    \label{eg:5}
+\end{example}
+
+%------------------------------
+
+In the following theorems, we introduce some properties of upper and lower integrals.
+
+\begin{theorem}
+    Suppose that $f$ is bounded and $\alpha$ is increasing on $[a, b]$. Let $c \in (a, b)$. We have 
+    \begin{enumerate}
+        \item $\upint_a^b f \; \mathrm{d}\alpha = \upint_a^c f \; \mathrm{d}\alpha + \upint_c^b f \; \mathrm{d}\alpha$
+        \item $\lowint_a^b f \; \mathrm{d}\alpha = \lowint_a^c f \; \mathrm{d}\alpha + \lowint_c^b f \; \mathrm{d}\alpha$
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    We only prove 1, the equality concerning the upper integrals, since 2 can be proved similarly. 
+
+    Given $\varepsilon > 0$, there exist a partition $P_1$ on $[a, c]$ and a partition $P_2$ on $[c, b]$ such that 
+    \begin{align}
+        U(P_1,f,\alpha) < \upint_a^c f \; \mathrm{d}\alpha + \varepsilon/2
+        \quad \text{and} \quad
+        U(P_2,f,\alpha) < \upint_c^b f \; \mathrm{d}\alpha + \varepsilon/2
+        \label{eq:49}
+    \end{align}
+    Let $P = P_1 \cup P_2$. Note that $P$ is a partition on $[a, b]$, Furthermore, the upper Riemann-Stieltjes sum $U(P,f,\alpha)$ is given by 
+    \begin{align}
+        U(P,f,\alpha) = U(P_1,f,\alpha) + U(P_2,f,\alpha)
+        \label{eq:50}
+    \end{align}
+    But 
+    \begin{align}
+        U(P,f,\alpha) \geq \upint_a^b f \; \mathrm{d}\alpha
+        \label{eq:51}
+    \end{align}
+    Combining \eqref{eq:49}, \eqref{eq:50} and \eqref{eq:51} together, we have 
+    \begin{align*}
+        \upint_a^b f \; \mathrm{d}\alpha
+        < \upint_a^c f \; \mathrm{d}\alpha + \upint_c^b f \; \mathrm{d}\alpha + \varepsilon
+    \end{align*}
+    Since the above inequality holds for any $\varepsilon > 0$. It follows that 
+    \begin{align}
+        \upint_a^b f \; \mathrm{d}\alpha
+        \leq \upint_a^c f \; \mathrm{d}\alpha + \upint_c^b f \; \mathrm{d}\alpha
+        \label{eq:52}
+    \end{align}
+
+    On the other hand, letting $\varepsilon > 0$ be chosen arbitrarily, there exists a partition $P$ on $[a, b]$ such that 
+    \begin{align}
+        U(P,f,\alpha) < \upint_a^b f \; \mathrm{d}\alpha + \varepsilon
+        \label{eq:53}
+    \end{align}
+    We want to split $P$ into two partitions, one on $[a,c]$ and the other on $[c, b]$. But we need to ensure that $c$ is in $P$. To do so, we consider a refinement $P^\prime = P \cup \{c\}$. By Theorem~\ref{thm:26}, we know that the upper Riemann-Stieltjes sum concerning $P^\prime$ is reduced, i.e., 
+    \begin{align}
+        U(P^\prime,f,\alpha) \leq U(P,f,\alpha) < \upint_a^b f \; \mathrm{d}\alpha + \varepsilon
+        \label{eq:54}
+    \end{align}
+    where the second inequality follows from \eqref{eq:53}. Let $P_1$ and $P_2$ be given by 
+    \begin{align*}
+        P_1 = \set{x \in P^\prime}{x \leq c}
+        \quad \text{and} \quad 
+        P_2 = \set{x \in P^\prime}{x \geq c}
+    \end{align*}
+    Note that indeed $P_1$ and $P_2$ are partitions on $[a, c]$ and $[c, b]$, respectively. We have 
+    \begin{align}
+        U(P^\prime,f,\alpha) = U(P_1,f,\alpha) + U(P_2,f,\alpha)
+        \label{eq:55}
+    \end{align}
+    Moreover, The two upper Riemann-Stieltjes sums are bounded below by the corresponding upper integrals, that is, 
+    \begin{align}
+        U(P_1,f,\alpha) \geq \upint_a^c f \; \mathrm{d}\alpha
+        \quad\text{and}\quad 
+        U(P_2,f,\alpha) \geq \upint_c^b f \; \mathrm{d}\alpha
+        \label{eq:56}
+    \end{align}
+    Then, by combining \eqref{eq:54}, \eqref{eq:55} and \eqref{eq:56}, we obtain
+    \begin{align*}
+        \int_a^b f \; \mathrm{d}\alpha + \varepsilon
+        > \int_a^c f \; \mathrm{d}\alpha
+        + \int_c^b f \; \mathrm{d}\alpha
+    \end{align*}
+    Similarly, since the above inequality holds for any $\varepsilon > 0$, we have 
+    \begin{align}
+        \int_a^b f \; \mathrm{d}\alpha
+        \geq \int_a^c f \; \mathrm{d}\alpha
+        + \int_c^b f \; \mathrm{d}\alpha
+        \label{eq:57}
+    \end{align}
+
+    Finally, the equation 
+    \begin{align*}
+        \upint_a^b f \; \mathrm{d}\alpha = \upint_a^c f \; \mathrm{d}\alpha + \upint_c^b f \; \mathrm{d}\alpha
+    \end{align*}
+    follows from \eqref{eq:52} and \eqref{eq:57}.
+\end{proof}
+
+%------------------------------
+
+However, some equations of integrals will not be valid for upper and lower integrals. For example, the following equation is a special case of Theorem~\ref{thm:18}.
+\begin{align*}
+    \int_{a}^{b} (f+g) \; \mathrm{d}\alpha
+    = \int_{a}^{b} f \; \mathrm{d}\alpha
+    + \int_{a}^{b} g \; \mathrm{d}\alpha
+\end{align*}
+It will not hold if we replace the integrals with upper and lower integrals. To fix this, we also need to replace equality with inequality, as stated in the next theorem. 
+
+\begin{theorem}
+    Suppose that $f$ and $g$ are bounded and $\alpha$ is increasing on $[a, b]$. We have 
+    \begin{enumerate}
+        \item $\upint_a^b (f+g) \; \mathrm{d}\alpha \leq \upint_a^b f \; \mathrm{d}\alpha + \upint_a^b g \; \mathrm{d}\alpha$
+        \item $\lowint_a^b (f+g) \; \mathrm{d}\alpha \geq \lowint_a^b f \; \mathrm{d}\alpha + \lowint_a^b g \; \mathrm{d}\alpha$
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    We only prove 1. Given $\varepsilon > 0$, there exist partitions $P_1$ and $P_2$ on $[a, b]$ such that 
+    \begin{align*}
+        U(P_1,f,\alpha) < \upint_a^b f \; \mathrm{d}\alpha + \varepsilon/2
+        \quad \text{and} \quad
+        U(P_2,g,\alpha) < \upint_a^b g \; \mathrm{d}\alpha + \varepsilon/2
+    \end{align*}
+    Let $P = P_1 \cup P_2$. It follows from Theorem~\ref{thm:26} that 
+    \begin{align*}
+        U(P,f,\alpha) \leq U(P_1,f,\alpha) < \upint_a^b f \; \mathrm{d}\alpha + \varepsilon/2
+        \quad \text{and} \quad
+        U(P,g,\alpha) \leq U(P_2,g,\alpha) < \upint_a^b g \; \mathrm{d}\alpha + \varepsilon/2
+    \end{align*}
+    Adding the two inequalities above yields 
+    \begin{align}
+        U(P,f,\alpha) + U(P,g,\alpha) 
+        < \upint_a^b f \; \mathrm{d}\alpha +  \upint_a^b g \; \mathrm{d}\alpha + \varepsilon
+        \label{eq:58}
+    \end{align}
+
+    Write $P=\{ x_0, x_1, \ldots, x_n \}$. Let $M_k$, $M_k^\prime$ and $M_k^{\prime\prime}$ denote
+    \begin{align*}
+        M_k &= \sup \set{f(x) + g(x)}{x \in [x_{k-1}, x_k]} \\ 
+        M_k^\prime &= \sup \set{f(x)}{x \in [x_{k-1}, x_k]} \\ 
+        M_k^{\prime\prime} &= \sup \set{g(x)}{x \in [x_{k-1}, x_k]}
+    \end{align*}
+    It is clear that 
+    \begin{align*}
+        M_k \leq M_k^\prime + M_k^{\prime\prime}
+        \quad \forall k = 1, \ldots, n
+    \end{align*}
+    since $f(x) + g(x) \leq M_k^\prime + M_k^{\prime\prime} \; \forall x \in [x_{k-1}, x_k]$. It then follows that 
+    \begin{align*}
+        U(P,f+g,\alpha) \leq U(P,f,\alpha) + U(P,g,\alpha)
+    \end{align*}
+    Because $U(P,f+g,\alpha)$ is bounded below by its upper integral, we further have
+    \begin{align}
+        \upint_a^b (f+g) \; \mathrm{d}\alpha
+        \leq U(P,f+g,\alpha) \leq U(P,f,\alpha) + U(P,g,\alpha)
+        \label{eq:59}
+    \end{align}
+
+    Combining inequalities \eqref{eq:58} and \eqref{eq:59}, we obtain
+    \begin{align*}
+        \upint_a^b (f+g) \; \mathrm{d}\alpha
+        < \upint_a^b f \; \mathrm{d}\alpha +  \upint_a^b g \; \mathrm{d}\alpha + \varepsilon
+    \end{align*}
+    Because the above inequality holds for any $\varepsilon > 0$, we finally have the inequality
+    \begin{align*}
+        \upint_a^b (f+g) \; \mathrm{d}\alpha
+        \leq \upint_a^b f \; \mathrm{d}\alpha +  \upint_a^b g \; \mathrm{d}\alpha
+    \end{align*}
+    as desired.
+\end{proof}
+
+The following is an example where both inequalities are strict.
+
+\begin{example}
+    Let functions
+    \begin{align*}
+        f = \ind_\Q 
+        \quad \text{and} \quad 
+        g = -\ind_\Q
+    \end{align*}
+    be restricted on $[0, 1]$. We have calculated the upper and lower integrals of $f$ in Example~\ref{eg:5}. We can do the same for $g$ similarly. The results are as follows.
+    \begin{align*}
+        \upint_0^1 f(x) \; \mathrm{d}x = 1,
+        \quad 
+        \lowint_0^1 f(x) \; \mathrm{d}x = 0,
+        \quad
+        \upint_0^1 g(x) \; \mathrm{d}x = 0,
+        \quad \text{and} \quad
+        \lowint_0^1 g(x) \; \mathrm{d}x = -1,
+    \end{align*}
+    Note that the sum of the two functions is zero, i.e., $f + g = 0$. Hence, we have
+    \begin{align*}
+        \upint_0^1 (f+g)(x) \; \mathrm{d}x 
+        = 0 
+        < 1 
+        = \upint_0^1 f(x) \; \mathrm{d}x + \upint_0^1 g(x) \; \mathrm{d}x \\
+        \lowint_0^1 (f+g)(x) \; \mathrm{d}x 
+        = 0
+        > -1 
+        = \lowint_0^1 f(x) \; \mathrm{d}x + \lowint_0^1 g(x) \; \mathrm{d}x
+    \end{align*}
+\end{example}
+
+%------------------------------
+
+\section{Riemann's Condition}
+
+In Darboux's formulation, the integral exists if and only if the upper and lower integrals are equal to each other. We now show that this is equivalent to the criterion of the existence of integrals from our definition (Definition~\ref{def:1}). Furthermore, we will introduce another equivalent condition, \textbf{Riemann's condition}\index{Riemann's condition}, which is convenient to use in proofs.
+
+\begin{definition}[Riemann's Condition]
+    Suppose $f$ is bounded and $\alpha$ is increasing on $[a, b]$. Function $f$ is said to satisfy \textbf{Riemann's condition} w.r.t. $\alpha$ on $[a, b]$ if for any $\varepsilon > 0$, there exists a partition $P_\varepsilon$ on $[a, b]$ such that 
+    \begin{align*}
+        U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon
+    \end{align*}
+    for any refinement $P \supset P_\varepsilon$.
+\end{definition}
+
+Essentially, Riemann's condition requires that the upper and lower sums should be arbitrarily close.
+
+%------------------------------
+
+The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann's condition are equivalent.
+
+\begin{theorem}
+    Suppose $f$ is bounded and $\alpha$ is increasing on $[a, b]$. Then the following statements are equivalent.
+    \begin{enumerate}
+        \item $f$ is integrable w.r.t. $\alpha$ on $[a, b]$, i.e., $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+        \item $f$ satisfies Riemann's condition w.r.t. $\alpha$ on $[a, b]$.
+        \item The upper and lower integrals are equal to each other, i.e., $\upint_a^b f \; \mathrm{d}\alpha = \lowint_a^b f \; \mathrm{d}\alpha$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    If $\alpha$ is constant, then this theorem holds trivially. We assume $\alpha$ is non-constant in the rest of the proof.
+
+    (Proof of 1 $\implies$ 2) Given $\varepsilon > 0$, since $f \in \mathfrak{R}(\alpha)$, there exists a partition $P_\varepsilon$ on $[a, b]$ such that 
+    \begin{align}
+        \abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha} < \varepsilon / 6
+        \label{eq:60}
+    \end{align}
+    for any refinement $P \supset P_\varepsilon$ and for any choice of representative $t_k$ in each sub-interval $[x_{k-1}, x_k]$. Let this partition $P$ be fixed for now. 
+
+    Let $M_k$ and $m_k$ be as in Definition~\ref{def:2}. We can choose each $t_k^\prime \in [x_{k-1}, x_k]$ such that 
+    \begin{align*}
+        M_k - \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
+        < f(t_k^\prime)
+        \leq M_k
+    \end{align*}
+    Multiplying by $\Delta \alpha_k$ and then summing up over $k$ yields
+    \begin{align}
+        U(P,f,\alpha) - \varepsilon / 3
+        < S^\prime(P,f,\alpha)
+        \leq U(P,f,\alpha)
+        \label{eq:61}
+    \end{align}
+    where $S^\prime(P,f,\alpha) = \sum_{k} f(t_k^\prime) \Delta\alpha_k$. We can instead choose each $t_k^{\prime\prime} \in [x_{k-1}, x_k]$ such that 
+    \begin{align*}
+        m_k + \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
+        > f(t_k^{\prime\prime}) 
+        \geq m_k 
+    \end{align*}
+    Similarly, we then have 
+    \begin{align}
+        L(P,f,\alpha) + \varepsilon / 3
+        > S^{\prime\prime}(P,f,\alpha)
+        \geq L(P,f,\alpha) 
+        \label{eq:62}
+    \end{align}
+    where $S^{\prime\prime}(P,f,\alpha) = \sum_{k} f(t_k^{\prime\prime}) \Delta\alpha_k$. By combining \eqref{eq:61} and \eqref{eq:62}, we will obtain the following two inequalities. 
+    \begin{align}
+        0
+        \leq U(P,f,\alpha) - S^{\prime}(P,f,\alpha) 
+        < \varepsilon / 3
+        \label{eq:63}
+    \end{align}
+    \begin{align}
+        0
+        \leq S^{\prime\prime}(P,f,\alpha) - L(P,f,\alpha)
+        < \varepsilon / 3
+        \label{eq:64}
+    \end{align}
+
+    Recall the Riemann-Stieltjes sums $S^{\prime}(P,f,\alpha)$ and $S^{\prime\prime}(P,f,\alpha)$ are formed with the same partition $P$. Hence, they both satisfy \eqref{eq:61}. Their difference is then bounded by 
+    \begin{align}
+        \abs{S^{\prime}(P,f,\alpha) - S^{\prime\prime}(P,f,\alpha)}
+        \leq \abs{S^{\prime}(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}
+        + \abs{S^{\prime\prime}(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}
+        < \varepsilon / 3
+        \label{eq:65}
+    \end{align} 
+
+    Then, the difference between the upper and lower sums can be bounded as follows.
+    \begin{alignat*}{2}
+        &&\;& U(P,f,\alpha) - L(P,f,\alpha) \\
+        &\leq&& \abs{U(P,f,\alpha) - S^\prime(P,f,\alpha)}
+        + \abs{S^\prime(P,f,\alpha) - S^{\prime\prime}(P,f,\alpha)}
+        + \abs{S^{\prime\prime}(P,f,\alpha) - L(P,f,\alpha)} \\
+        &<&& \varepsilon / 3 + \varepsilon / 3 + \varepsilon / 3 \\
+        &=&& \varepsilon
+    \end{alignat*}
+    where the last inequality follows from \eqref{eq:63}, \eqref{eq:64} and \eqref{eq:65}. Therefore, Riemann's condition is satisfied since the above inequality holds for any refinement $P$ of $P_\varepsilon$.
+
+    (Proof of 2 $\implies$ 3) Let $\varepsilon > 0$ be arbitrary. By Riemann's condition, there exists a partition $P_\varepsilon$ such that 
+    \begin{align*}
+        U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon
+    \end{align*}
+    for any refinement $P \supset P_\varepsilon$. Because $\upint_a^b f \; \mathrm{d}\alpha \leq U(P,f,\alpha)$ and $\lowint_a^b f \; \mathrm{d}\alpha \geq L(P,f,\alpha)$, it follows that 
+    \begin{align*}
+        0 \leq \upint_a^b f \; \mathrm{d}\alpha - \lowint_a^b f \; \mathrm{d}\alpha
+        < \varepsilon
+    \end{align*}
+    Therefore, the upper and lower integrals are equal to each other since the above inequality holds for any $\varepsilon > 0$.
+
+    (Proof of 3 $\implies$ 1) Given $\varepsilon > 0$. There exist partitions $P_1$ and $P_2$ on $[a, b]$ such that 
+    \begin{align*}
+        U(P_1,f,\alpha) < \upint_a^b f \; \mathrm{d}\alpha + \varepsilon
+        \quad \text{and} \quad 
+        L(P_2,f,\alpha) > \lowint_a^b f \; \mathrm{d}\alpha - \varepsilon
+    \end{align*}
+    Let $P_\varepsilon = P_1 \cup P_2$ and $P$ be any of its refinements. By Theorem~\ref{thm:26} and \eqref{eq:46}, it is clear
+    \begin{align*}
+        \lowint_a^b f \; \mathrm{d}\alpha - \varepsilon
+        < L(P,f,\alpha)
+        \leq S(P,f,\alpha)
+        \leq U(p,f,\alpha)
+        < \upint_a^b f \; \mathrm{d}\alpha + \varepsilon
+    \end{align*}
+    holds for any choice of $t_k$ in each sub-interval $[x_{k-1}, x_k]$. Since the upper and lower integrals have the same value, say $A$, it then follows that 
+    \begin{align*}
+        \abs{S(P,f,\alpha) - A} < \varepsilon
+    \end{align*}
+    Therefore, indeed $f \in \mathfrak{R}(\alpha)$. This completes the proof.
+\end{proof}
+
+%------------------------------
+
+\section{Comparison Theorems}
+
+
 %==============================
+
 % print index page
 \printindex
 

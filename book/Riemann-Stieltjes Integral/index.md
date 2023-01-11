@@ -1,2 +1,3 @@
 # Riemann-Stieltjes Integral
-\printindex
+````{tableofcontents}
+````

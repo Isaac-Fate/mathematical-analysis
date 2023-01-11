@@ -10,3 +10,5 @@ Extrema
 extrema
 extremum
 Rolle
+Stieltjes
+infimum

@@ -1,5 +1,6 @@
 **/.DS_Store
 
+# auxiliary files when compiling LaTeX 
 tex/*.aux
 tex/*.bbl
 tex/*.bcf
@@ -15,5 +16,5 @@ tex/*.idx
 tex/*.ind
 tex/*.ilg
 
-/book/_build
-/scripts
+# Jupyter Book
+/book
