@@ -25,6 +25,7 @@ The following states that the existence of Riemann-Stieltjes integrals, the exis
 
 
 ````{prf:theorem}
+:label: thm:28
 Suppose  $f$  is bounded and  $\alpha$  is increasing on  $[a, b]$ . Then the following statements are equivalent.
 
 - (1) $f$  is integrable w.r.t.  $\alpha$  on  $[a, b]$ , i.e.,  $f \in \mathfrak{R}(\alpha)$  on  $[a, b]$ .
@@ -181,4 +182,111 @@ holds for any choice of  $t_k$  in each sub-interval  $[x_{k-1}, x_k]$ . Since t
 
 Therefore, indeed  $f \in \mathfrak{R}(\alpha)$ . This completes the proof.
 ````
-\printindex
+
+As one should expect, the integral $\int_{a}^{b} f \; \mathrm{d}\alpha$ has to be equal to the upper and lower integrals whenever $f$ is integrable.
+
+
+````{prf:corollary}
+Suppose  $\alpha$  be increasing on  $[a, b]$ . If  $f \in \mathfrak{R}(\alpha)$  on  $[a, b]$ , then
+
+```{math}
+\begin{align*}
+\int _ {a} ^ {b}  f  \; \mathrm{d} \alpha
+=  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha
+=  \lowint _ {a} ^ {b}  f  \; \mathrm{d} \alpha
+\end{align*}
+```
+````
+
+````{prf:proof}
+Given  $\varepsilon > 0$ , there exist partitions  $P_1$  and  $P_2$  on  $[a, b]$  such that
+
+```{math}
+\begin{align*}
+U(P_1,f, \alpha ) <  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  +  \varepsilon \quad \text{and} \quad
+L(P_2,f, \alpha ) >  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  -  \varepsilon
+\end{align*}
+```
+
+Let  $P_\varepsilon = P_1 \cup P_2$ . For any refinement  $P \supset P_\varepsilon$ , we have
+
+```{math}
+\begin{align*}
+\upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  -  \varepsilon
+< L(P,f, \alpha )
+\leq  S(P,f, \alpha )
+\leq  U(P,f, \alpha )
+<  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  +  \varepsilon
+\end{align*}
+```
+
+The upper and lower integrals are equal, say to  $A$ , by  {prf:ref}`thm:8` . It follows that
+
+```{math}
+\begin{align*}
+\abs{S(P,f,\alpha) - A}  <  \varepsilon
+\end{align*}
+```
+
+By  {prf:ref}`def:1` ,  $A = \int_{a}^{b} f \; \mathrm{d}\alpha$ .
+````
+
+As an exercise, we reconsider {prf:ref}`eg:4` and prove that $f$ is not integrable w.r.t. $\alpha$.
+
+
+````{admonition} Exercise 10
+Let functions  $f$  and  $\alpha$  be given by
+
+```{math}
+\begin{align*}
+f(x) =  \begin{cases}
+\frac{\abs{\sin(x)}}{x} &x \neq 0 \\
+1 &x = 0
+\end{cases} \quad \text{and} \quad \alpha (x) =  \begin{cases}
+-1 &x < 0 \\
+1 &x \geq 0
+\end{cases} ,
+\quad  x  \in[-3\pi, 3\pi]
+\end{align*}
+```
+
+Show that  $f \notin \mathfrak{R}(\alpha)$  on  $[-3\pi, 3\pi]$ .
+````
+
+````{admonition} Solution
+:class: tip, dropdown
+It suffices to prove  $f$  is not integrable w.r.t.  $\alpha$  on  $[-3\pi, 0]$  since  $f \in \mathfrak{R}(\alpha)$  on  $[0, 3\pi]$ .
+
+Note that For any partition  $P = \{x_0, x_1, \ldots, x_n\}$  on  $[-3\pi, 0]$ , only the last sub-integral  $[x_{n-1}, x_n = 0]$  contributes to the upper and lower sums. Furthermore, using the hint, we know
+
+```{math}
+\begin{align*}
+M_n = 1
+\quad \text{and} \quad
+m_n = -1
+\end{align*}
+```
+
+Then the upper and lower sums are given by
+
+```{math}
+\begin{align*}
+U(P,f, \alpha ) = M_n  [ \alpha (0) -  \alpha (x_ {n-1} ) ]  = 2
+\quad \text{and} \quad
+L(P,f, \alpha ) = m_n  [ \alpha (0) -  \alpha (x_ {n-1} ) ]  = -2
+\end{align*}
+```
+
+Since the above equations hold for any partition  $P$  on  $[-3\pi, 0]$ , we have
+
+```{math}
+\begin{align*}
+\upint _ {-3\pi} ^0 = 2
+\quad \text{and} \quad \lowint _ {-3\pi} ^0 = -2
+\end{align*}
+```
+
+Therefore, by  {prf:ref}`thm:28` ,  $f$  is not integrable w.r.t.  $\alpha$  on  $[-3\pi, 0]$ , and hence on  $[-3\pi, 3\pi]$ .
+
+This proof is way cleaner than the one given in  {prf:ref}`eg:4`  thanks to Darboux's formulation of integrals.
+````

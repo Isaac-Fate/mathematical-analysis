@@ -117,17 +117,34 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to This Notebook on Mathematical Analysis
+                    Preface
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Limits%20and%20Continuity/index.html">
-   Limits and Continuity
+  <a class="reference internal" href="Set%20Theory/index.html">
+   Set Theory
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Set%20Theory/Properties%20of%20Suprema%20and%20Infima.html">
+     Properties of Suprema and Infima
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Limits%20and%20Continuity/index.html">
+   Limits and Continuity
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -158,8 +175,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="Differentiation/index.html">
    Differentiation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -200,8 +217,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="Functions%20of%20Bounded%20Variation/index.html">
    Functions of Bounded Variation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -217,8 +234,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="Riemann-Stieltjes%20Integral/index.html">
    Riemann-Stieltjes Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -268,7 +285,17 @@ const thebe_selector_output = ".output, .cell_output"
      Riemann’s Condition
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Comparison%20Theorems.html">
+     Comparison Theorems
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="references.html">
+   References
+  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="genindex.html">
@@ -414,6 +441,7 @@ title="Open an issue"
    <div class="modindex-jumpbox">
    <a href="#cap-cor:1"><strong>cor:1</strong></a> | 
    <a href="#cap-corollary-14"><strong>corollary-14</strong></a> | 
+   <a href="#cap-corollary-2"><strong>corollary-2</strong></a> | 
    <a href="#cap-def:1"><strong>def:1</strong></a> | 
    <a href="#cap-def:2"><strong>def:2</strong></a> | 
    <a href="#cap-definition-0"><strong>definition-0</strong></a> | 
@@ -430,6 +458,7 @@ title="Open an issue"
    <a href="#cap-example-6"><strong>example-6</strong></a> | 
    <a href="#cap-example-7"><strong>example-7</strong></a> | 
    <a href="#cap-example-8"><strong>example-8</strong></a> | 
+   <a href="#cap-lem:1"><strong>lem:1</strong></a> | 
    <a href="#cap-lemma-2"><strong>lemma-2</strong></a> | 
    <a href="#cap-pro:1"><strong>pro:1</strong></a> | 
    <a href="#cap-pro:2"><strong>pro:2</strong></a> | 
@@ -464,6 +493,8 @@ title="Open an issue"
    <a href="#cap-thm:24"><strong>thm:24</strong></a> | 
    <a href="#cap-thm:25"><strong>thm:25</strong></a> | 
    <a href="#cap-thm:26"><strong>thm:26</strong></a> | 
+   <a href="#cap-thm:27"><strong>thm:27</strong></a> | 
+   <a href="#cap-thm:28"><strong>thm:28</strong></a> | 
    <a href="#cap-thm:3"><strong>thm:3</strong></a> | 
    <a href="#cap-thm:4"><strong>thm:4</strong></a> | 
    <a href="#cap-thm:5"><strong>thm:5</strong></a> | 
@@ -489,6 +520,14 @@ title="Open an issue"
        <td></td>
        <td>
        <a href="Differentiation/The%20Mean%20Value%20Theorem.html#corollary-14"><code class="xref">corollary-14</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
+       <em>corollary</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-corollary-2"><td></td><td>
+       <strong>corollary-2</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Riemann-Stieltjes%20Integral/Riemann%27s%20Condition.html#corollary-2"><code class="xref">corollary-2</code></a> <em>(Riemann-Stieltjes Integral/Riemann&#39;s Condition)</em></td><td>
        <em>corollary</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-def:1"><td></td><td>
@@ -619,6 +658,14 @@ title="Open an issue"
        <a href="Differentiation/The%20Mean%20Value%20Theorem.html#example-8"><code class="xref">example-8</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
        <em>example</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-lem:1"><td></td><td>
+       <strong>lem:1</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Riemann-Stieltjes%20Integral/Comparison%20Theorems.html#lem:1"><code class="xref">lem:1</code></a> <em>(Riemann-Stieltjes Integral/Comparison Theorems)</em></td><td>
+       <em>lemma</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-lemma-2"><td></td><td>
        <strong>lemma-2</strong></td><td></td></tr>
      <tr>
@@ -696,7 +743,7 @@ title="Open an issue"
      <tr>
        <td></td>
        <td>
-       <a href="Riemann-Stieltjes%20Integral/Riemann%27s%20Condition.html#theorem-1"><code class="xref">theorem-1</code></a> <em>(Riemann-Stieltjes Integral/Riemann&#39;s Condition)</em></td><td>
+       <a href="Riemann-Stieltjes%20Integral/Comparison%20Theorems.html#theorem-1"><code class="xref">theorem-1</code></a> <em>(Riemann-Stieltjes Integral/Comparison Theorems)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-theorem-12"><td></td><td>
@@ -889,6 +936,22 @@ title="Open an issue"
        <td></td>
        <td>
        <a href="Riemann-Stieltjes%20Integral/Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26"><code class="xref">thm:26</code></a> <em>(Riemann-Stieltjes Integral/Darboux Integrals with Monotonically Increasing Integrators)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm:27"><td></td><td>
+       <strong>thm:27</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Set%20Theory/Properties%20of%20Suprema%20and%20Infima.html#thm:27"><code class="xref">thm:27</code></a> <em>(Set Theory/Properties of Suprema and Infima)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm:28"><td></td><td>
+       <strong>thm:28</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="Riemann-Stieltjes%20Integral/Riemann%27s%20Condition.html#thm:28"><code class="xref">thm:28</code></a> <em>(Riemann-Stieltjes Integral/Riemann&#39;s Condition)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-thm:3"><td></td><td>

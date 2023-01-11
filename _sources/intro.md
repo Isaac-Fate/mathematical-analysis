@@ -1,8 +1,6 @@
-# Welcome to This Notebook on Mathematical Analysis
+# Preface
 
-This notebook introduces some fundamental topics on mathematical analysis.
+We will mainly follow the structure of {cite}`apostolMathematicalAnalysisModern1974` in our book.
 
-```{tableofcontents}
-```
-
-## References
+````{tableofcontents}
+````

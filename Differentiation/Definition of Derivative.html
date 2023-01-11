@@ -114,17 +114,34 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome to This Notebook on Mathematical Analysis
+                    Preface
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
-   Limits and Continuity
+  <a class="reference internal" href="../Set%20Theory/index.html">
+   Set Theory
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Set%20Theory/Properties%20of%20Suprema%20and%20Infima.html">
+     Properties of Suprema and Infima
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
+   Limits and Continuity
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -155,8 +172,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="index.html">
    Differentiation
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -197,8 +214,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/index.html">
    Functions of Bounded Variation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -214,8 +231,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Riemann-Stieltjes%20Integral/index.html">
    Riemann-Stieltjes Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -265,7 +282,17 @@ const thebe_selector_output = ".output, .cell_output"
      Riemann’s Condition
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Comparison%20Theorems.html">
+     Comparison Theorems
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   References
+  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../genindex.html">
@@ -513,7 +540,7 @@ title="Print to PDF"
 <div class="proposition-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be defined on  <span class="math notranslate nohighlight">\((a, b)\)</span> . Then  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  if and only if</p>
 <div class="math notranslate nohighlight" id="equation-eq-3">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lim _ {h \to 0} \frac{f(c+h) - f(c)}{h}
 \end{align}\]</div>
 <p>exists. In that case,  <span class="math notranslate nohighlight">\(f^\prime(c) = \lim_{h \to 0} [ f(c+h) - f(c) ] / h\)</span> .</p>
@@ -530,8 +557,8 @@ title="Print to PDF"
 \abs{\frac{f(c+h) - f(h)}{h} - f^\prime(c)}
 =  \abs{\frac{f(c+h) - f(h)}{(c+h) - c} - f^\prime(c)}  &lt;  \varepsilon
 \end{align*}\]</div>
-<p>This implies the limit  <a class="reference internal" href="#equation-eq-3">(4)</a>  exists, and it equals  <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> .</p>
-<p>Conversely, suppose the limit  <a class="reference internal" href="#equation-eq-3">(4)</a>  exists, say it equals  <span class="math notranslate nohighlight">\(L\)</span> . Then for  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+<p>This implies the limit  <a class="reference internal" href="#equation-eq-3">(7)</a>  exists, and it equals  <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> .</p>
+<p>Conversely, suppose the limit  <a class="reference internal" href="#equation-eq-3">(7)</a>  exists, say it equals  <span class="math notranslate nohighlight">\(L\)</span> . Then for  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \abs{h}  &lt;  \delta \implies \abs{\frac{f(c+h) - f(c)}{h} - L}  &lt;  \varepsilon

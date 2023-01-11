@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Index" href="../genindex.html" />
+    <link rel="next" title="Comparison Theorems" href="Comparison%20Theorems.html" />
     <link rel="prev" title="Darboux Integrals with Monotonically Increasing Integrators" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -114,17 +114,34 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome to This Notebook on Mathematical Analysis
+                    Preface
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
-   Limits and Continuity
+  <a class="reference internal" href="../Set%20Theory/index.html">
+   Set Theory
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Set%20Theory/Properties%20of%20Suprema%20and%20Infima.html">
+     Properties of Suprema and Infima
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
+   Limits and Continuity
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -155,8 +172,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Differentiation/index.html">
    Differentiation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -197,8 +214,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/index.html">
    Functions of Bounded Variation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -214,8 +231,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="index.html">
    Riemann-Stieltjes Integral
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -265,7 +282,17 @@ const thebe_selector_output = ".output, .cell_output"
      Riemann’s Condition
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Comparison%20Theorems.html">
+     Comparison Theorems
+    </a>
+   </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   References
+  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../genindex.html">
@@ -467,8 +494,8 @@ U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \varepsilon
 </div>
 </div><p>Essentially, Riemann’s condition requires that the upper and lower sums should be arbitrarily close.</p>
 <p>The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann’s condition are equivalent.</p>
-<div class="proof theorem admonition" id="theorem-1">
-<p class="admonition-title"><span class="caption-number">Theorem 34 </span></p>
+<div class="proof theorem admonition" id="thm:28">
+<p class="admonition-title"><span class="caption-number">Theorem 35 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is bounded and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Then the following statements are equivalent.</p>
 <ul class="simple">
@@ -481,7 +508,7 @@ U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \varepsilon
 <p>Proof. If  <span class="math notranslate nohighlight">\(\alpha\)</span>  is constant, then this theorem holds trivially. We assume  <span class="math notranslate nohighlight">\(\alpha\)</span>  is non-constant in the rest of the proof.</p>
 <p>(Proof of 1  <span class="math notranslate nohighlight">\(\implies\)</span>  2) Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , since  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-60">
-<span class="eqno">(60)<a class="headerlink" href="#equation-eq-60" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(63)<a class="headerlink" href="#equation-eq-60" title="Permalink to this equation">#</a></span>\[\begin{align}
 \abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}  &lt;  \varepsilon  / 6
 \end{align}\]</div>
 <p>for any refinement  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span>  and for any choice of representative  <span class="math notranslate nohighlight">\(t_k\)</span>  in each sub-interval  <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> . Let this partition  <span class="math notranslate nohighlight">\(P\)</span>  be fixed for now.</p>
@@ -494,7 +521,7 @@ M_k -  \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
 \end{align*}\]</div>
 <p>Multiplying by  <span class="math notranslate nohighlight">\(\Delta \alpha_k\)</span>  and then summing up over  <span class="math notranslate nohighlight">\(k\)</span>  yields</p>
 <div class="math notranslate nohighlight" id="equation-eq-61">
-<span class="eqno">(61)<a class="headerlink" href="#equation-eq-61" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(64)<a class="headerlink" href="#equation-eq-61" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P,f, \alpha ) -  \varepsilon  / 3
 &lt; S^ \prime (P,f, \alpha )
 \leq  U(P,f, \alpha )
@@ -508,27 +535,27 @@ m_k +  \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
 \end{align*}\]</div>
 <p>Similarly, we then have</p>
 <div class="math notranslate nohighlight" id="equation-eq-62">
-<span class="eqno">(62)<a class="headerlink" href="#equation-eq-62" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(65)<a class="headerlink" href="#equation-eq-62" title="Permalink to this equation">#</a></span>\[\begin{align}
 L(P,f, \alpha ) +  \varepsilon  / 3
 &gt; S^ {\prime\prime} (P,f, \alpha )
 \geq  L(P,f, \alpha )
 \end{align}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(S^{\prime\prime}(P,f,\alpha) = \sum_{k} f(t_k^{\prime\prime}) \Delta\alpha_k\)</span> . By combining  <a class="reference internal" href="#equation-eq-61">(61)</a>  and  <a class="reference internal" href="#equation-eq-62">(62)</a> , we will obtain the following two inequalities.</p>
+<p>where  <span class="math notranslate nohighlight">\(S^{\prime\prime}(P,f,\alpha) = \sum_{k} f(t_k^{\prime\prime}) \Delta\alpha_k\)</span> . By combining  <a class="reference internal" href="#equation-eq-61">(64)</a>  and  <a class="reference internal" href="#equation-eq-62">(65)</a> , we will obtain the following two inequalities.</p>
 <div class="math notranslate nohighlight" id="equation-eq-63">
-<span class="eqno">(63)<a class="headerlink" href="#equation-eq-63" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(66)<a class="headerlink" href="#equation-eq-63" title="Permalink to this equation">#</a></span>\[\begin{align}
 0
 \leq  U(P,f, \alpha ) - S^ {\prime} (P,f, \alpha )
 &lt;  \varepsilon  / 3
 \end{align}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-64">
-<span class="eqno">(64)<a class="headerlink" href="#equation-eq-64" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(67)<a class="headerlink" href="#equation-eq-64" title="Permalink to this equation">#</a></span>\[\begin{align}
 0
 \leq  S^ {\prime\prime} (P,f, \alpha ) - L(P,f, \alpha )
 &lt;  \varepsilon  / 3
 \end{align}\]</div>
-<p>Recall the Riemann-Stieltjes sums  <span class="math notranslate nohighlight">\(S^{\prime}(P,f,\alpha)\)</span>  and  <span class="math notranslate nohighlight">\(S^{\prime\prime}(P,f,\alpha)\)</span>  are formed with the same partition  <span class="math notranslate nohighlight">\(P\)</span> . Hence, they both satisfy  <a class="reference internal" href="#equation-eq-61">(61)</a> . Their difference is then bounded by</p>
+<p>Recall the Riemann-Stieltjes sums  <span class="math notranslate nohighlight">\(S^{\prime}(P,f,\alpha)\)</span>  and  <span class="math notranslate nohighlight">\(S^{\prime\prime}(P,f,\alpha)\)</span>  are formed with the same partition  <span class="math notranslate nohighlight">\(P\)</span> . Hence, they both satisfy  <a class="reference internal" href="#equation-eq-61">(64)</a> . Their difference is then bounded by</p>
 <div class="math notranslate nohighlight" id="equation-eq-65">
-<span class="eqno">(65)<a class="headerlink" href="#equation-eq-65" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(68)<a class="headerlink" href="#equation-eq-65" title="Permalink to this equation">#</a></span>\[\begin{align}
 \abs{S^{\prime}(P,f,\alpha) - S^{\prime\prime}(P,f,\alpha)} \leq \abs{S^{\prime}(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}
 +  \abs{S^{\prime\prime}(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}
 &lt;  \varepsilon  / 3
@@ -540,7 +567,7 @@ L(P,f, \alpha ) +  \varepsilon  / 3
 +  \abs{S^\prime(P,f,\alpha) - S^{\prime\prime}(P,f,\alpha)}
 +  \abs{S^{\prime\prime}(P,f,\alpha) - L(P,f,\alpha)} \\ &amp;&lt;&amp;&amp;  \varepsilon  / 3 +  \varepsilon  / 3 +  \varepsilon  / 3  \\ &amp;=&amp;&amp;  \varepsilon
 \end{alignat*}\end{split}\]</div>
-<p>where the last inequality follows from  <a class="reference internal" href="#equation-eq-63">(63)</a> ,  <a class="reference internal" href="#equation-eq-64">(64)</a>  and  <a class="reference internal" href="#equation-eq-65">(65)</a> . Therefore, Riemann’s condition is satisfied since the above inequality holds for any refinement  <span class="math notranslate nohighlight">\(P\)</span>  of  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> .</p>
+<p>where the last inequality follows from  <a class="reference internal" href="#equation-eq-63">(66)</a> ,  <a class="reference internal" href="#equation-eq-64">(67)</a>  and  <a class="reference internal" href="#equation-eq-65">(68)</a> . Therefore, Riemann’s condition is satisfied since the above inequality holds for any refinement  <span class="math notranslate nohighlight">\(P\)</span>  of  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> .</p>
 <p>(Proof of 2  <span class="math notranslate nohighlight">\(\implies\)</span>  3) Let  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  be arbitrary. By Riemann’s condition, there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -559,7 +586,7 @@ U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \varepsilon
 U(P_1,f, \alpha ) &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon \quad \text{and} \quad
 L(P_2,f, \alpha ) &gt;  \lowint _a^b f  \; \mathrm{d} \alpha  -  \varepsilon
 \end{align*}\]</div>
-<p>Let  <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span>  and  <span class="math notranslate nohighlight">\(P\)</span>  be any of its refinements. By  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 30</a>  and  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#equation-eq-46">(45)</a> , it is clear</p>
+<p>Let  <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span>  and  <span class="math notranslate nohighlight">\(P\)</span>  be any of its refinements. By  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 31</a>  and  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#equation-eq-46">(48)</a> , it is clear</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \lowint _a^b f  \; \mathrm{d} \alpha  -  \varepsilon
@@ -575,7 +602,84 @@ L(P_2,f, \alpha ) &gt;  \lowint _a^b f  \; \mathrm{d} \alpha  -  \varepsilon
 \end{align*}\]</div>
 <p>Therefore, indeed  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> . This completes the proof.</p>
 </div>
-<p>\printindex</p>
+<p>As one should expect, the integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha\)</span> has to be equal to the upper and lower integrals whenever <span class="math notranslate nohighlight">\(f\)</span> is integrable.</p>
+<div class="proof corollary admonition" id="corollary-2">
+<p class="admonition-title"><span class="caption-number">Corollary 3 </span></p>
+<div class="corollary-content section" id="proof-content">
+<p>Suppose  <span class="math notranslate nohighlight">\(\alpha\)</span>  be increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . If  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\int _ {a} ^ {b}  f  \; \mathrm{d} \alpha
+=  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha
+=  \lowint _ {a} ^ {b}  f  \; \mathrm{d} \alpha
+\end{align*}\]</div>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , there exist partitions  <span class="math notranslate nohighlight">\(P_1\)</span>  and  <span class="math notranslate nohighlight">\(P_2\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P_1,f, \alpha ) &lt;  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  +  \varepsilon \quad \text{and} \quad
+L(P_2,f, \alpha ) &gt;  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  -  \varepsilon
+\end{align*}\]</div>
+<p>Let  <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span> . For any refinement  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span> , we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  -  \varepsilon
+&lt; L(P,f, \alpha )
+\leq  S(P,f, \alpha )
+\leq  U(P,f, \alpha )
+&lt;  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  +  \varepsilon
+\end{align*}\]</div>
+<p>The upper and lower integrals are equal, say to  <span class="math notranslate nohighlight">\(A\)</span> , by  <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 13</a> . It follows that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\abs{S(P,f,\alpha) - A}  &lt;  \varepsilon
+\end{align*}\]</div>
+<p>By  <a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1">Definition 4</a> ,  <span class="math notranslate nohighlight">\(A = \int_{a}^{b} f \; \mathrm{d}\alpha\)</span> .</p>
+</div>
+<p>As an exercise, we reconsider <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 11</a> and prove that <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<div class="admonition-exercise-10 admonition">
+<p class="admonition-title">Exercise 10</p>
+<p>Let functions  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(\alpha\)</span>  be given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+f(x) =  \begin{cases}
+\frac{\abs{\sin(x)}}{x} &amp;x \neq 0 \\
+1 &amp;x = 0
+\end{cases} \quad \text{and} \quad \alpha (x) =  \begin{cases}
+-1 &amp;x &lt; 0 \\
+1 &amp;x \geq 0
+\end{cases} ,
+\quad  x  \in[-3\pi, 3\pi]
+\end{align*}\end{split}\]</div>
+<p>Show that  <span class="math notranslate nohighlight">\(f \notin \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> .</p>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>It suffices to prove  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>  since  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([0, 3\pi]\)</span> .</p>
+<p>Note that For any partition  <span class="math notranslate nohighlight">\(P = \{x_0, x_1, \ldots, x_n\}\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> , only the last sub-integral  <span class="math notranslate nohighlight">\([x_{n-1}, x_n = 0]\)</span>  contributes to the upper and lower sums. Furthermore, using the hint, we know</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+M_n = 1
+\quad \text{and} \quad
+m_n = -1
+\end{align*}\]</div>
+<p>Then the upper and lower sums are given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P,f, \alpha ) = M_n  [ \alpha (0) -  \alpha (x_ {n-1} ) ]  = 2
+\quad \text{and} \quad
+L(P,f, \alpha ) = m_n  [ \alpha (0) -  \alpha (x_ {n-1} ) ]  = -2
+\end{align*}\]</div>
+<p>Since the above equations hold for any partition  <span class="math notranslate nohighlight">\(P\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> , we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\upint _ {-3\pi} ^0 = 2
+\quad \text{and} \quad \lowint _ {-3\pi} ^0 = -2
+\end{align*}\]</div>
+<p>Therefore, by  <a class="reference internal" href="#thm:28">Theorem 35</a> ,  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> , and hence on  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> .</p>
+<p>This proof is way cleaner than the one given in  <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 11</a>  thanks to Darboux’s formulation of integrals.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -612,10 +716,10 @@ L(P_2,f, \alpha ) &gt;  \lowint _a^b f  \; \mathrm{d} \alpha  -  \varepsilon
             <p class="prev-next-title">Darboux Integrals with Monotonically Increasing Integrators</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../genindex.html" title="next page">
+    <a class='right-next' id="next-link" href="Comparison%20Theorems.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Index</p>
+        <p class="prev-next-title">Comparison Theorems</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
