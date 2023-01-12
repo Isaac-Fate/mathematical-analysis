@@ -1,1 +1,0 @@
-# Uniform Convergence and Integration

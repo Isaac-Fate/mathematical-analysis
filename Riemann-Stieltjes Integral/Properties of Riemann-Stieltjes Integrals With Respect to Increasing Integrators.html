@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Comparison Theorems &#8212; Mathematical Analysis</title>
+    <title>Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -284,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Comparison Theorems
+     Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators
     </a>
    </li>
   </ul>
@@ -389,7 +389,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Comparison Theorems.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -417,7 +417,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Riemann-Stieltjes Integral/Comparison Theorems.md"
+        <a href="../_sources/Riemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -454,23 +454,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-theorem">
+   Comparison Theorem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applying-continuous-functions-to-integrable-functions">
+   Applying Continuous Functions to Integrable Functions
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Comparison Theorems</h1>
+                <h1>Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparison-theorem">
+   Comparison Theorem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#applying-continuous-functions-to-integrable-functions">
+   Applying Continuous Functions to Integrable Functions
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -478,8 +525,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="comparison-theorems">
-<h1>Comparison Theorems<a class="headerlink" href="#comparison-theorems" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="properties-of-riemann-stieltjes-integrals-with-respect-to-increasing-integrators">
+<h1>Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators<a class="headerlink" href="#properties-of-riemann-stieltjes-integrals-with-respect-to-increasing-integrators" title="Permalink to this headline">#</a></h1>
+<div class="section" id="comparison-theorem">
+<h2>Comparison Theorem<a class="headerlink" href="#comparison-theorem" title="Permalink to this headline">#</a></h2>
 <p>It is very common in practice to compare the values of two integrals. Intuitively,</p>
 <div class="math notranslate nohighlight" id="equation-eq-69">
 <span class="eqno">(69)<a class="headerlink" href="#equation-eq-69" title="Permalink to this equation">#</a></span>\[\begin{align}
@@ -510,7 +559,7 @@ L(P,f, \alpha ) =  \inf _ {x \in[a, b]}  f(x)  [ \alpha (b) -  \alpha (a) ] \geq
 <p>Note that  <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha = \lowint_a^b f \; \mathrm{d}\alpha\)</span>  since  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> . The proof is then complete.</p>
 </div>
 <p>Inequality <a class="reference internal" href="#equation-eq-69">(69)</a> can be proved easily by applying the above lemma and <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 24</a>.</p>
-<div class="proof theorem admonition" id="theorem-1">
+<div class="proof theorem admonition" id="thm:30">
 <p class="admonition-title"><span class="caption-number">Theorem 36 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose that  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing and  <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . If  <span class="math notranslate nohighlight">\(f(x) \leq g(x) \; \forall x \in[a, b]\)</span> , then we have the inequality</p>
@@ -532,7 +581,172 @@ L(P,f, \alpha ) =  \inf _ {x \in[a, b]}  f(x)  [ \alpha (b) -  \alpha (a) ] \geq
 -  \int _ {a} ^ {b}  f  \; \mathrm{d} \alpha \geq  0
 \end{align*}\]</div>
 </div>
+</div>
+<div class="section" id="applying-continuous-functions-to-integrable-functions">
+<h2>Applying Continuous Functions to Integrable Functions<a class="headerlink" href="#applying-continuous-functions-to-integrable-functions" title="Permalink to this headline">#</a></h2>
+<p>Suppose we know <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. The following theorem tells us that we can produce more integrable functions by applying continuous functions to <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<div class="proof theorem admonition" id="thm:29">
+<p class="admonition-title"><span class="caption-number">Theorem 37 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Suppose that  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing and  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Let  <span class="math notranslate nohighlight">\(M\)</span>  and  <span class="math notranslate nohighlight">\(m\)</span>  denote the supremum and infimum of  <span class="math notranslate nohighlight">\(f\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . If function  <span class="math notranslate nohighlight">\(\phi: [m, M] \to \R\)</span>  is continuous, then the composite function  <span class="math notranslate nohighlight">\(\phi \circ f\)</span>  is also integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , i.e.,  <span class="math notranslate nohighlight">\(\phi \circ f \in \mathfrak{R}(\alpha)\)</span> .</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. In the following proof, we assume that  <span class="math notranslate nohighlight">\(\alpha\)</span>  is non-constant.</p>
+<p>Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> . Since  <span class="math notranslate nohighlight">\(\phi\)</span>  is uniformly continuous on  <span class="math notranslate nohighlight">\([m, M]\)</span> , there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-70">
+<span class="eqno">(70)<a class="headerlink" href="#equation-eq-70" title="Permalink to this equation">#</a></span>\[\begin{align}
+\abs{s - t}  &lt;  \delta \implies \abs{\phi(s) - \phi(t)}  &lt;  \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)}
+\end{align}\]</div>
+<p>Suppose that  <span class="math notranslate nohighlight">\(\phi\)</span>  is bounded by a positive number  <span class="math notranslate nohighlight">\(A &gt; 0\)</span> , i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\abs{\phi}  &lt; A
+\end{align*}\]</div>
+<p>Because  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-71">
+<span class="eqno">(71)<a class="headerlink" href="#equation-eq-71" title="Permalink to this equation">#</a></span>\[\begin{align}
+U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \frac{\varepsilon \delta}{4A}
+\end{align}\]</div>
+<p>for any refinement  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span> .</p>
+<p>Write  <span class="math notranslate nohighlight">\(P = \{x_0,x_1, \ldots, x_n\}\)</span> . We now separate the indices of sub-intervals into two sets in the following way.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+I &amp;=  \set{k=1,\ldots,n}{M_k(f) - m_k(f) &lt; \delta} \\
+J &amp;=  \set{k=1,\ldots,n}{M_k(f) - m_k(f) \geq \delta}
+\end{align*}\end{split}\]</div>
+<p>We first consider the sub-intervals whose indices belong to  <span class="math notranslate nohighlight">\(I\)</span> . Suppose  <span class="math notranslate nohighlight">\(k \in I\)</span> . Since  <span class="math notranslate nohighlight">\(M_k(f) - m_k(f) &lt; \delta\)</span> , it follows from  <a class="reference internal" href="#equation-eq-70">(70)</a>  that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\abs{\phi[f(s)] - \phi[f(t)]}
+&lt;  \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)} \quad \forall  s,t  \in[x_{k-1}, x_{k}]
+\end{align*}\]</div>
+<p>Then by  <a class="reference internal" href="../Set%20Theory/Properties%20of%20Suprema%20and%20Infima.html#thm:27">Theorem 1</a> , we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+M_k( \phi \circ  f) - m_k( \phi \circ  f)
+=  \sup _ {s,t \in[x_{k-1}, x_k]} \abs{\phi[f(s)] - \phi[f(t)]} \leq \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)}
+\end{align*}\]</div>
+<p>Summing up over  <span class="math notranslate nohighlight">\(k \in I\)</span>  yields</p>
+<div class="math notranslate nohighlight" id="equation-eq-72">
+<span class="eqno">(72)<a class="headerlink" href="#equation-eq-72" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum _ {k \in I} \left[ M_k( \phi \circ  f) - m_k( \phi \circ  f)  \right] \Delta \alpha _k
+\leq \varepsilon  / 2
+\end{align}\]</div>
+<p>Now, suppose  <span class="math notranslate nohighlight">\(k \in J\)</span> . Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\sum _ {k \in I} \left[ M_k( \phi \circ  f) - m_k( \phi \circ  f)  \right] \Delta \alpha _k
+\leq  U(P,f, \alpha )
+&lt;  \frac{\varepsilon \delta}{4 A}
+\end{align*}\]</div>
+<p>where the last inequality follows from  <a class="reference internal" href="#equation-eq-71">(71)</a> . Because  <span class="math notranslate nohighlight">\(M_k(f) - m_k(f) \geq \delta\)</span> , we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\delta \sum _ {k \in I} \Delta \alpha _k
+\leq \sum _ {k \in I} \left[ M_k( \phi \circ  f) - m_k( \phi \circ  f)  \right] \Delta \alpha _k
+&lt;  \frac{\varepsilon \delta}{4 A}
+\end{align*}\]</div>
+<p>which further implies</p>
+<div class="math notranslate nohighlight" id="equation-eq-73">
+<span class="eqno">(73)<a class="headerlink" href="#equation-eq-73" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum _ {k \in I} \Delta \alpha _k
+&lt;  \frac{\varepsilon}{4 A}
+\end{align}\]</div>
+<p>Recall that  <span class="math notranslate nohighlight">\(\abs{\phi} &lt; A\)</span> . Hence, the difference  <span class="math notranslate nohighlight">\(M_k(\phi \circ f) - m_k(\phi \circ f)\)</span>  is bounded above by</p>
+<div class="math notranslate nohighlight" id="equation-eq-74">
+<span class="eqno">(74)<a class="headerlink" href="#equation-eq-74" title="Permalink to this equation">#</a></span>\[\begin{align}
+M_k( \phi \circ  f) - m_k( \phi \circ  f)
+&lt; 2A
+\end{align}\]</div>
+<p>Combining inequalities  <a class="reference internal" href="#equation-eq-73">(73)</a>  and  <a class="reference internal" href="#equation-eq-74">(74)</a> , we obtain</p>
+<div class="math notranslate nohighlight" id="equation-eq-75">
+<span class="eqno">(75)<a class="headerlink" href="#equation-eq-75" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum _ {k \in I} \left[ M_k( \phi \circ  f) - m_k( \phi \circ  f)  \right] \Delta \alpha _k
+&lt;  \varepsilon  / 2
+\end{align}\]</div>
+<p>Note that the difference  <span class="math notranslate nohighlight">\(U(P,\phi \circ f, \alpha) - L(P,\phi \circ f, \alpha)\)</span>  can be summed up as follows.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{multline*}
+U(P, \phi \circ  f,  \alpha ) - L(P, \phi \circ  f,  \alpha )
+=  \sum _ {k=1} ^n  \left[ M_k( \phi \circ  f) - m_k( \phi \circ  f)  \right] \Delta \alpha _k  \\
+=  \sum _ {k \in I} \left[ M_k( \phi \circ  f) - M_k( \phi \circ  f)  \right] \Delta \alpha _k
++  \sum _ {k \in J} \left[ M_k( \phi \circ  f) - m_k( \phi \circ  f)  \right] \Delta \alpha _k
+\end{multline*}\end{split}\]</div>
+<p>Finally, by applying  <a class="reference internal" href="#equation-eq-72">(72)</a>  and  <a class="reference internal" href="#equation-eq-75">(75)</a> , the difference of upper and lower sums are bounded by</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P, \phi \circ  f,  \alpha ) - L(P, \phi \circ  f,  \alpha ) &lt;  \varepsilon
+\end{align*}\]</div>
+<p>Therefore, the composite function  <span class="math notranslate nohighlight">\(\phi \circ f\)</span>  satisfies Riemann’s condition, and hence  <span class="math notranslate nohighlight">\(\phi \circ f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  by  <a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 35</a> .</p>
+</div>
+<p>Note that the absolute value function <span class="math notranslate nohighlight">\(\phi(x) = \abs{x}\)</span> is continuous. Applying it to an integrable function <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>, we immediately conclude that <span class="math notranslate nohighlight">\(\abs{f}\)</span> is also integrable.</p>
+<div class="proof theorem admonition" id="thm:31">
+<p class="admonition-title"><span class="caption-number">Theorem 38 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Suppose  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing. If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then  <span class="math notranslate nohighlight">\(\abs{f} \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-76">
+<span class="eqno">(76)<a class="headerlink" href="#equation-eq-76" title="Permalink to this equation">#</a></span>\[\begin{align}
+\abs{\int_{a}^{b} f \; \mathrm{d}\alpha} \leq \int _ {a} ^ {b} \abs{f} \; \mathrm{d} \alpha
+\end{align}\]</div>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. First, we note that  <span class="math notranslate nohighlight">\(\abs{f} \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  by  <a class="reference internal" href="#thm:29">Theorem 37</a>  since  <span class="math notranslate nohighlight">\(\phi(x) = \abs{x}\)</span>  is continuous.</p>
+<p>It then follows from the inequality</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+- \abs{f} \leq  f  \leq \abs{f}
+\end{align*}\]</div>
+<p>and  <a class="reference internal" href="#thm:30">Theorem 36</a>  that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+- \int _ {a} ^ {b} \abs{f} \; \mathrm{d} \alpha
+=  \int _ {a} ^ {b}  - \abs{f} \; \mathrm{d} \alpha \leq \int _ {a} ^ {b}  f  \; \mathrm{d} \alpha \leq \int _ {a} ^ {b} \abs{f} \; \mathrm{d} \alpha
+\end{align*}\]</div>
+<p>This completes the proof.</p>
+</div>
+<p>The converse of this theorem is not true. That is, <span class="math notranslate nohighlight">\(f\)</span> is not necessarily integrable if <span class="math notranslate nohighlight">\(\abs{f}\)</span> is integrable.</p>
+<div class="proof example admonition" id="example-4">
+<p class="admonition-title"><span class="caption-number">Example 14 </span></p>
+<div class="example-content section" id="proof-content">
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(x) =  \ind _ {\Q} (x) -  \ind _ {\R \setminus \Q} (x),
+\quad  x  \in[a, b]
+\end{align*}\]</div>
+<p>and  <span class="math notranslate nohighlight">\(\alpha\)</span>  be any  <em>non-constant</em>  increasing function on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
+<p>Note that the absolute value of  <span class="math notranslate nohighlight">\(f\)</span> ,  <span class="math notranslate nohighlight">\(\abs{f} = 1\)</span>  is constant, and hence  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . And</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\int _ {a} ^ {b}  f  \; \mathrm{d} \alpha  = 0
+\end{align*}\]</div>
+<p>But  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([a,b]\)</span>  since</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\upint _a^b f  \; \mathrm{d} \alpha  =  \alpha (b) -  \alpha (a) &gt; 0
+\quad \text{and} \quad \lowint _a^b f  \; \mathrm{d} \alpha  =  \alpha (a) -  \alpha (b) &lt; 0
+\end{align*}\]</div>
+<p>The upper and lower integrals are not equal to each other for we have assumed  <span class="math notranslate nohighlight">\(\alpha\)</span>  is non-constant.</p>
+</div>
+</div><div class="admonition-exercise-11 admonition">
+<p class="admonition-title">Exercise 11</p>
+<p>Prove the existence of  <span class="math notranslate nohighlight">\(\int_a^b \abs{f} \; \mathrm{d}\alpha\)</span>  in  <a class="reference internal" href="#thm:31">Theorem 38</a>  without using  <a class="reference internal" href="#thm:29">Theorem 37</a> .</p>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>TODO</p>
+</div>
+<p>Put <span class="math notranslate nohighlight">\(\phi(x) = x^2\)</span> in <a class="reference internal" href="#thm:29">Theorem 37</a>, and we will have another remarkable conclusion which says the square of <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(f^2\)</span>, is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> whenever <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>.</p>
+<div class="proof theorem admonition" id="theorem-5">
+<p class="admonition-title"><span class="caption-number">Theorem 39 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Suppose  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing. If  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then its square  <span class="math notranslate nohighlight">\(f^2\)</span>  is also integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span> , i.e.,  <span class="math notranslate nohighlight">\(f^2 \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
 <p>\printindex</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
