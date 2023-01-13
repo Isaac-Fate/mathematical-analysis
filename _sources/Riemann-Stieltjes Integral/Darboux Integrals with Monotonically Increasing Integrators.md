@@ -17,15 +17,6 @@
 In this section, we shall introduce another formulation of integrals, which is known as the **Darboux integrals**. As we noted before, the Riemann-Stieltjes sum $S(P,f,\alpha)$ also depends on the choice of representatives, $ t_k$s. This uncertainty increases the difficulty of proving assertions related to integrals. For example, as we have seen in {prf:ref}`eg:4`, it takes quite a lot of work to prove that integral does not exist. Hence, we need Darboux's formulation, which has the advantage of being easier to apply in computations or proofs.
 
 
-
-It is much easier to study and prove some properties of the Riemann-Stieltjes integrals if we require that $\alpha$ is monotonically increasing.
-
-
-
-Thanks to {prf:ref}`thm:22`, which states that every function of bounded variation can express as a difference of two increasing functions, almost all the properties introduced in this section can be extended with ease to integrators of bounded variation.
-
-
-
 ````{prf:definition}
 :label: def:2
 Let  $f$  be a bounded function on  $[a, b]$ , and  $P = \{a=x_0, x_1, \ldots, x_n=b\}$  a partition. In each sub-interval  $[x_{k-1}, x_k]$ , we use the symbols  $M_k$  and  $m_k$  to denote

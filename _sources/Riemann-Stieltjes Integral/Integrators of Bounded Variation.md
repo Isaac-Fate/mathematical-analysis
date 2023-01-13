@@ -2,41 +2,13 @@
 
 If $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$ on $[a, b]$ where $\alpha_1$ and $\alpha_2$ are both increasing functions, then we know from {prf:ref}`thm:19` that $f \in \mathfrak{R}(\alpha)$ where $\alpha = \alpha_1 - \alpha_2$. Moreover, by {prf:ref}`thm:22`, we are immediately informed that $\alpha$ is of bounded variation.
 
-Now, let us think about the converse of this statement. Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ where $\alpha$ if of bounded variation. Can we assert that $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$ on $[a, b]$ where $\alpha_1$ and $\alpha_2$ are any increasing functions satisfying $\alpha = \alpha_1 - \alpha_2$? Unfortunately, this is not true in general. Consider the following example.
+Now, let us think about the converse of this statement. Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ where $\alpha$ if of bounded variation. Can we assert that $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$ on $[a, b]$ where $\alpha_1$ and $\alpha_2$ are any increasing functions satisfying $\alpha = \alpha_1 - \alpha_2$? Unfortunately, this is not true in general. For example, the Dirichlet function $\ind_\Q$ is integrable w.r.t. $\alpha(x) = 0$ on $[0, 1]$. We can write $\alpha(x) = 0 = x - x$. But clearly $\ind_\Q \notin \mathfrak{R}$ on $[0, 1]$.
 
-
-````{prf:example}
-Let  $f$  be the Dirichlet function, i.e.,
-
-```{math}
-\begin{align*}
-f(x) =  \begin{cases}
-1 &x \in \Q \\
-0 & x \notin \Q
-\end{cases}
-\end{align*}
-```
-
-Let
-
-```{math}
-\begin{align*}
-\alpha _1(x) =  \alpha _2(x) = x
-\end{align*}
-```
-
-Note that  $f$  is not integrable with respect to  $x$  on any closed interval  $[a, b]$  since  $\overline{\int}_a^b f \; \mathrm{d}x = b-a$  and  $\underline{\int}_a^b f \; \mathrm{d}x = 0$ .
-
-
-
-However, if we let  $\alpha = \alpha_1 - \alpha_2 = 0$ , then it is evident that  $f \in \mathfrak{R}(\alpha)$ , and  $\int_a^b f \; \mathrm{d}\alpha = 0$  since  $S(P, f, \alpha = 0) = 0$  for any partition on  $[a, b]$ .
-````
-
-The preceding example shows that we can not decompose $\alpha$ into any two increasing functions, with respect to which $f$ is integrable.
-
+However, as the next theorem will state, $f$ is always integrable w.r.t. the total variation $V_a^x(\alpha)$ of $\alpha$ provided that $f \in \mathfrak{R}(\alpha)$.
 
 
 ````{prf:theorem}
+:label: thm:37
 If  $f \in \mathfrak{R}(\alpha)$  on  $[a, b]$ , then  $f \in \mathfrak{R}(V_a^x(\alpha))$  on  $[a, b]$  where  $V_a^x(\alpha)$  is the total variation of  $\alpha$ , which is regarded as a function of  $x$  as in  {prf:ref}`def:3` .
 ````
 
@@ -134,7 +106,7 @@ Note that  $P \supset P_\varepsilon \supset P^\prime_\varepsilon$ . It then foll
 ```{math}
 \begin{align*}
 \sum _ {k=1} ^n  \Delta  V_k
-\leq  V_a^b( \alpha )
+= V_a^b( \alpha )
 < V(P,  \alpha )
 +  \frac{\varepsilon}{3A}
 =  \sum _ {k=1} ^n  \abs{\Delta\alpha_k}

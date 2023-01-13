@@ -1,4 +1,81 @@
 # Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators
+
+It is much easier to study and prove some properties of the Riemann-Stieltjes integrals if we require that $\alpha$ is monotonically increasing.
+
+Thanks to {prf:ref}`thm:37`, which we will prove in \ref{sec:1}, almost all the properties introduced in this section can be extended with ease to integrators of bounded variation.
+
+
+## Integrability on Sub-Intervals
+
+Let $c \in (a, b)$ be a point that splits the interval into two parts. If $f$ is integrable w.r.t. $\alpha$ on the entire interval $[a, b]$, then it is also integrable on both of the sub-intervals.
+
+
+````{prf:lemma}
+:label: lem:3
+Suppose  $\alpha$  is increasing on  $[a, b]$ . Let  $c \in (a, b)$  be an interior point. If  $f \in \mathfrak{R}(\alpha)$  on  $[a, b]$ , then  $f \in \mathfrak{R}(\alpha)$  on  $[a, c]$  and  $f \in \mathfrak{R}(\alpha)$  on  $[c, b]$
+````
+
+````{prf:proof}
+We only prove  $f \in \mathfrak{R}(\alpha)$  on  $[a, c]$ . Given  $\varepsilon > 0$ . By  {prf:ref}`thm:28` , there exists a partition  $P_\varepsilon$  on  $[a, b]$  such that
+
+```{math}
+\begin{align*}
+U(P,f, \alpha ) - L(P,f, \alpha ) <  \varepsilon \quad \forall  P  \supset  P_ \varepsilon
+\end{align*}
+```
+
+Let  $P_\varepsilon^\prime = (P_\varepsilon \cup \{ c \}) \cap[a, c]$ . Note that  $P_\varepsilon^\prime$  is a partition on  $[a, c]$ . Now, let  $P^\prime$  be a refinement of  $ P_\varepsilon^\prime$  on  $[a, c]$ , and  $P$  a refinement of  $P_\varepsilon$  on  $[a, b]$ . It is evident that
+
+```{math}
+\begin{align*}
+P^ {\prime\prime}  = P^ \prime \cup (P  \cap[c, b] )
+\end{align*}
+```
+
+is a refinement of  $P_\varepsilon$ . Therefore, we have
+
+```{math}
+\begin{align*}
+U(P^ {\prime\prime} ,f, \alpha ) - L(P^ {\prime\prime} ,f, \alpha ) <  \varepsilon
+\end{align*}
+```
+
+:::{note}
+$P^{\prime\prime}$  can be regarded as a partition formed by adding points to  $P^\prime$  that are greater than  $c$ .
+:::
+
+Then it is clear
+
+```{math}
+\begin{multline*}
+U(P^ {\prime} ,f, \alpha ) - L(P^ {\prime} ,f, \alpha )
+=  \sum _ {k \text{ such that } x_k \leq c} (M_k - m_k)  \Delta \alpha _k  \\ \leq \sum _ {k} (M_k - m_k)  \Delta \alpha _k
+\leq  U(P^ {\prime\prime} ,f, \alpha ) - L(P^ {\prime\prime} ,f, \alpha )
+\end{multline*}
+```
+
+Hence,
+
+```{math}
+\begin{align*}
+U(P^ {\prime} ,f, \alpha ) - L(P^ {\prime} ,f, \alpha ) <  \varepsilon
+\end{align*}
+```
+
+which implies  $f \in \mathfrak{R}(\alpha)$  on  $[a, c]$  by  {prf:ref}`thm:28` .
+````
+
+In fact, $f$ is integrable on all sub-intervals of $[a, b]$.
+
+
+
+````{prf:theorem}
+Suppose  $\alpha$  is increasing on  $[a, b]$ . Let  $[c, d] \subset[a, b]$  be a sub-interval. If  $f \in \mathfrak{R}(\alpha)$  on  $[a, b]$ , then  $f \in \mathfrak{R}(\alpha)$  on  $[c, d]$ .
+````
+
+````{prf:proof}
+Without loss of generality, assume  $a < c < d < b$ .  {prf:ref}`lem:3`  implies that  $f$  is integrable w.r.t.  $\alpha$  on  $[a, c]$  and  $[a, d]$ . We then conclude the proof using  {prf:ref}`thm:18` .
+````
 ## Comparison Theorem
 
 It is very common in practice to compare the values of two integrals. Intuitively,
