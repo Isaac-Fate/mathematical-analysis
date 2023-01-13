@@ -221,6 +221,21 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/Definition%20of%20Functions%20of%20Bounded%20Variation.html">
+     Definition of Functions of Bounded Variation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/Total%20Variation.html">
+     Total Variation
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/Additive%20Property%20of%20Total%20Variation.html">
+     Additive Property of Total Variation
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html">
      Characterization of Functions of Bounded Variation
     </a>
@@ -287,12 +302,12 @@ const thebe_selector_output = ".output, .cell_output"
      Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Integrators%20of%20Bounded%20Variation.html">
+     Integrators of Bounded Variation
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../references.html">
-   References
-  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../genindex.html">
@@ -481,7 +496,7 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="definition-of-the-riemann-stieltjes-integral">
 <h1>Definition of the Riemann-Stieltjes Integral<a class="headerlink" href="#definition-of-the-riemann-stieltjes-integral" title="Permalink to this headline">#</a></h1>
 <div class="proof definition admonition" id="def:1">
-<p class="admonition-title"><span class="caption-number">Definition 4 </span></p>
+<p class="admonition-title"><span class="caption-number">Definition 7 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>Suppose that  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(\alpha\)</span>  are  <strong>real-valued bounded</strong>  functions on  <span class="math notranslate nohighlight">\([a,b]\)</span> . Let  <span class="math notranslate nohighlight">\(P = \left\{x_0, x_1, \ldots, x_n\right \}\)</span>  be a partition on  <span class="math notranslate nohighlight">\([a, b]\)</span>  and  <span class="math notranslate nohighlight">\(t_k\)</span>  a point in the sub-interval  <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> . A sum of the form</p>
 <div class="math notranslate nohighlight">
@@ -509,14 +524,14 @@ S(P,f, \alpha )
 \end{align*}\]</div>
 <p>without specifying the lower and upper limits of  <span class="math notranslate nohighlight">\(k\)</span>  if no confusion will be caused.</p>
 </div>
-<p>Recall <a class="reference internal" href="#def:1">Definition 4</a> only requires the existence of <span class="math notranslate nohighlight">\(A\)</span>. We now show that such number <span class="math notranslate nohighlight">\(A\)</span> is also unique.</p>
+<p>Recall <a class="reference internal" href="#def:1">Definition 7</a> only requires the existence of <span class="math notranslate nohighlight">\(A\)</span>. We now show that such number <span class="math notranslate nohighlight">\(A\)</span> is also unique.</p>
 <div class="proof proposition admonition" id="pro:3">
 <p class="admonition-title"><span class="caption-number">Proposition 3 </span></p>
 <div class="proposition-content section" id="proof-content">
-<p>Let  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>  be as in  <a class="reference internal" href="#def:1">Definition 4</a> . If  <span class="math notranslate nohighlight">\(A\)</span>  and  <span class="math notranslate nohighlight">\(A^\prime\)</span>  both satisfy the property stated in  <a class="reference internal" href="#def:1">Definition 4</a> , then  <span class="math notranslate nohighlight">\(A = A^\prime\)</span> .</p>
+<p>Let  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>  be as in  <a class="reference internal" href="#def:1">Definition 7</a> . If  <span class="math notranslate nohighlight">\(A\)</span>  and  <span class="math notranslate nohighlight">\(A^\prime\)</span>  both satisfy the property stated in  <a class="reference internal" href="#def:1">Definition 7</a> , then  <span class="math notranslate nohighlight">\(A = A^\prime\)</span> .</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , by the property in  <a class="reference internal" href="#def:1">Definition 4</a> , there exist partitions  <span class="math notranslate nohighlight">\(P_1\)</span>  and  <span class="math notranslate nohighlight">\(P_2\)</span>  such that</p>
+<p>Proof. Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , by the property in  <a class="reference internal" href="#def:1">Definition 7</a> , there exist partitions  <span class="math notranslate nohighlight">\(P_1\)</span>  and  <span class="math notranslate nohighlight">\(P_2\)</span>  such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \abs{S(P_1,f,\alpha) - A} &amp;&lt;  \varepsilon  / 2 &amp;

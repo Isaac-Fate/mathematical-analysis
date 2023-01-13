@@ -313,10 +313,42 @@ Put $\phi(x) = x^2$ in {prf:ref}`thm:29`, and we will have another remarkable co
 
 
 ````{prf:theorem}
+:label: thm:32
 Suppose  $\alpha$  is increasing. If  $f \in \mathfrak{R}(\alpha)$  on  $[a, b]$ , then its square  $f^2$  is also integrable w.r.t.  $\alpha$ , i.e.,  $f^2 \in \mathfrak{R}(\alpha)$  on  $[a, b]$ .
 ````
 
 ````{prf:proof}
+Because  $\phi(x) = x^2$  is continuous on  $\R$ , it is of course continuous on the closed interval joining the infimum and supremum of  $f$ ,  $[m, M]$ . Then by  {prf:ref}`thm:29` ,  $f^2 \in \mathfrak{R}(\alpha)$  on  $[a, b]$ .
+````
+
+An alternative proof without using {prf:ref}`thm:29` is left as an exercise.
+
+
+````{admonition} Exercise 12
+Prove  {prf:ref}`thm:32`  without using  {prf:ref}`thm:29` . But feel free to use  {prf:ref}`thm:31` .
+````
+
+````{admonition} Solution
+:class: tip, dropdown
 TODO
 ````
-\printindex
+
+An immediate consequence of the above theorem is as follows, which states the product of two integrable functions is also integrable.
+
+
+````{prf:theorem}
+Suppose  $\alpha$  is increasing. If  $f, g \in \mathfrak{R}(\alpha)$  on  $[a, b]$ , then  $fg \in \mathfrak{R}(\alpha)$  on  $[a, b]$ .
+````
+
+````{prf:proof}
+Note that the product  $fg$  can be written as
+
+```{math}
+\begin{align*}
+f g =  \frac{1}{4} [ (f + g)^2 - (f - g)^2
+]
+\end{align*}
+```
+
+Then this theorem follows directly from  {prf:ref}`thm:18`  and  {prf:ref}`thm:32` .
+````
