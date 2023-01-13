@@ -318,7 +318,7 @@ Suppose  $\alpha$  is increasing. If  $f \in \mathfrak{R}(\alpha)$  on  $[a, b]$
 ````
 
 ````{prf:proof}
-Because  $\phi(x) = x^2$  is continuous on  $\R$ , it is of course continuous on the closed interval joining the infimum and supremum of  $f$ ,  $[m, M]$ . Then by  {prf:ref}`thm:29` ,  $f^2 \in \mathfrak{R}(\alpha)$  on  $[a, b]$ .
+Because  $\phi(x) = x^2$  is continuous on  $\R$ , it is, of course, continuous on the closed interval joining the infimum and supremum of  $f$ ,  $[m, M]$ . Then by  {prf:ref}`thm:29` ,  $f^2 \in \mathfrak{R}(\alpha)$  on  $[a, b]$ .
 ````
 
 An alternative proof without using {prf:ref}`thm:29` is left as an exercise.

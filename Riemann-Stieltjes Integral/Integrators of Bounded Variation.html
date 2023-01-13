@@ -52,6 +52,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -493,6 +495,177 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="integrators-of-bounded-variation">
 <h1>Integrators of Bounded Variation<a class="headerlink" href="#integrators-of-bounded-variation" title="Permalink to this headline">#</a></h1>
+<p>If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha_1)\)</span> and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha_2)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> where <span class="math notranslate nohighlight">\(\alpha_1\)</span> and <span class="math notranslate nohighlight">\(\alpha_2\)</span> are both increasing functions, then we know from <a class="reference internal" href="Linear%20Properties.html#thm:19">Theorem 29</a> that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> where <span class="math notranslate nohighlight">\(\alpha = \alpha_1 - \alpha_2\)</span>. Moreover, by <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html#thm:22">Theorem 27</a>, we are immediately informed that <span class="math notranslate nohighlight">\(\alpha\)</span> is of bounded variation.</p>
+<p>Now, let us think about the converse of this statement. Suppose <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> where <span class="math notranslate nohighlight">\(\alpha\)</span> if of bounded variation. Can we assert that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha_1)\)</span> and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha_2)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> where <span class="math notranslate nohighlight">\(\alpha_1\)</span> and <span class="math notranslate nohighlight">\(\alpha_2\)</span> are any increasing functions satisfying <span class="math notranslate nohighlight">\(\alpha = \alpha_1 - \alpha_2\)</span>? Unfortunately, this is not true in general. Consider the following example.</p>
+<div class="proof example admonition" id="example-0">
+<p class="admonition-title"><span class="caption-number">Example 16 </span></p>
+<div class="example-content section" id="proof-content">
+<p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be the Dirichlet function, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+f(x) =  \begin{cases}
+1 &amp;x \in \Q \\
+0 &amp; x \notin \Q
+\end{cases}
+\end{align*}\end{split}\]</div>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\alpha _1(x) =  \alpha _2(x) = x
+\end{align*}\]</div>
+<p>Note that  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable with respect to  <span class="math notranslate nohighlight">\(x\)</span>  on any closed interval  <span class="math notranslate nohighlight">\([a, b]\)</span>  since  <span class="math notranslate nohighlight">\(\overline{\int}_a^b f \; \mathrm{d}x = b-a\)</span>  and  <span class="math notranslate nohighlight">\(\underline{\int}_a^b f \; \mathrm{d}x = 0\)</span> .</p>
+<p>However, if we let  <span class="math notranslate nohighlight">\(\alpha = \alpha_1 - \alpha_2 = 0\)</span> , then it is evident that  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> , and  <span class="math notranslate nohighlight">\(\int_a^b f \; \mathrm{d}\alpha = 0\)</span>  since  <span class="math notranslate nohighlight">\(S(P, f, \alpha = 0) = 0\)</span>  for any partition on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
+</div>
+</div><p>The preceding example shows that we can not decompose <span class="math notranslate nohighlight">\(\alpha\)</span> into any two increasing functions, with respect to which <span class="math notranslate nohighlight">\(f\)</span> is integrable.</p>
+<div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span class="caption-number">Theorem 45 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>If  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(V_a^x(\alpha))\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  where  <span class="math notranslate nohighlight">\(V_a^x(\alpha)\)</span>  is the total variation of  <span class="math notranslate nohighlight">\(\alpha\)</span> , which is regarded as a function of  <span class="math notranslate nohighlight">\(x\)</span>  as in  <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/Additive%20Property%20of%20Total%20Variation.html#def:3">Definition 6</a> .</p>
+</div>
+</div><p>Before presenting the proof, we first introduce some notations we shall use as well as the general strategy of this proof.</p>
+<p>For a sub-interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> in the partition <span class="math notranslate nohighlight">\(P = \{ x_0, \ldots, x_n \}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, we adopt the following notation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+M_k =  \sup _ {x \in[x_{k-1}, x_k]}  f(x),
+\quad
+m_k =  \inf _ {x \in[x_{k-1}, x_k]}  f(x)
+\quad \text{and} \quad \Delta  V_k = V_ {x_{k-1}} ^ {x_k} ( \alpha )
+\end{align*}\]</div>
+<p>And we write <span class="math notranslate nohighlight">\(V(x)\)</span> instead of <span class="math notranslate nohighlight">\(V_a^x(\alpha)\)</span> to emphasize that the total variation is a function of <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Observe that <span class="math notranslate nohighlight">\(V(x)\)</span> is monotonically increasing, hence we shall prove <span class="math notranslate nohighlight">\(f\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(V(x)\)</span> mainly relies on Riemann’s condition (<a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 39</a>). We intend to bound the difference between the upper and the lower sum, which is shown in the following, with an arbitrarily small positive number.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+U(P,f,V) - L(P,f,V)
+&amp;=  \sum _k (M_k - m_k)  \Delta  V_k  \\ &amp;=  \sum _k (M_k - m_k)  \left( \Delta  V_k -  \abs{\Delta\alpha_k} \right) +  \sum _k (M_k - m_k)  \abs{\Delta\alpha_k}
+\end{align*}\end{split}\]</div>
+<p>Therefore, we shall focus on bounding each of the two terms on the right-hand side of the above equation.</p>
+<p>We now present the proof as follows.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. If  <span class="math notranslate nohighlight">\(f\)</span>  is a constant function, then this theorem holds trivially. We assume that  <span class="math notranslate nohighlight">\(f\)</span>  is non-constant in the rest of the proof. Let  <span class="math notranslate nohighlight">\(A\)</span>  be given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+A =  \sup _ {x \in[a, b]}  f(x) -  \inf _ {x \in[a, b]}  f(x)
+\end{align*}\]</div>
+<p>Since  <span class="math notranslate nohighlight">\(f\)</span>  is non-constant, it is clear that  <span class="math notranslate nohighlight">\(A &gt; 0\)</span> .</p>
+<p>Let  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  be chosen arbitrarily. Since  <span class="math notranslate nohighlight">\(\alpha\)</span>  is of bounded variation on  <span class="math notranslate nohighlight">\([a, b]\)</span> , by the definition of total variations, there exists a partition  <span class="math notranslate nohighlight">\(P^\prime_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-85">
+<span class="eqno">(85)<a class="headerlink" href="#equation-eq-85" title="Permalink to this equation">#</a></span>\[\begin{align}
+V_a^b( \alpha )
+&lt; V(P,  \alpha )
++  \frac{\varepsilon}{3A} \quad \forall  P  \supset  P^ \prime _ \varepsilon
+\end{align}\]</div>
+<p>We shall use this inequality later.</p>
+<p>Now, we prepare another inequality that will be in use. Because  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P^{\prime\prime}_\varepsilon\)</span>  such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-86">
+<span class="eqno">(86)<a class="headerlink" href="#equation-eq-86" title="Permalink to this equation">#</a></span>\[\begin{align}
+\abs{
+\sum \left(f(s_k) - f(t_k)\right)\Delta \alpha_k
+}  &lt;  \frac{\varepsilon}{3} \quad \forall  P  \supset  P^ {\prime\prime} _ \varepsilon
+\end{align}\]</div>
+<p>where  <span class="math notranslate nohighlight">\(s_k\)</span>  and  <span class="math notranslate nohighlight">\(t_k\)</span>  are any two points in the  <span class="math notranslate nohighlight">\(k\)</span> -th subinterval of  <span class="math notranslate nohighlight">\(P\)</span> .</p>
+<p>Let  <span class="math notranslate nohighlight">\(P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon\)</span> , and let  <span class="math notranslate nohighlight">\(P = \left\{x_0, \ldots, x_n\right \} \supset P_\varepsilon\)</span>  be a refinement. We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+U(P,f,V) - L(P,f,V)
+&amp;=  \sum _ {k=1} ^n (M_k - m_k)  \Delta  V_k  \\ &amp;=  \sum _ {k=1} ^n (M_k - m_k)  \left( \Delta  V_k -  \abs{\Delta\alpha_k} \right) +  \sum _ {k=1} ^n (M_k - m_k)  \abs{\Delta\alpha_k}
+\end{align*}\end{split}\]</div>
+<p>Recall  <span class="math notranslate nohighlight">\(A = \sup f - \inf f\)</span> . Hence, the right-hand side of the equality above can be further enlarged to</p>
+<div class="math notranslate nohighlight" id="equation-eq-87">
+<span class="eqno">(87)<a class="headerlink" href="#equation-eq-87" title="Permalink to this equation">#</a></span>\[\begin{align}
+U(P,f,V) - L(P,f,V)
+\leq  A  \sum _ {k=1} ^n  \left( \Delta  V_k -  \abs{\Delta\alpha_k} \right) +  \sum _ {k=1} ^n (M_k - m_k)  \abs{\Delta\alpha_k}
+\end{align}\]</div>
+<p>Note that  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon \supset P^\prime_\varepsilon\)</span> . It then follows from  <a class="reference internal" href="#equation-eq-85">(85)</a>  that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\sum _ {k=1} ^n  \Delta  V_k
+\leq  V_a^b( \alpha )
+&lt; V(P,  \alpha )
++  \frac{\varepsilon}{3A}
+=  \sum _ {k=1} ^n  \abs{\Delta\alpha_k}
++  \frac{\varepsilon}{3A}
+\end{align*}\]</div>
+<p>Rearranging the terms, we obtain</p>
+<div class="math notranslate nohighlight" id="equation-eq-88">
+<span class="eqno">(88)<a class="headerlink" href="#equation-eq-88" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum _ {k=1} ^n  \left( \Delta  V_k -  \abs{\Delta\alpha_k} \right) &lt;  \frac{\varepsilon}{3A}
+\end{align}\]</div>
+<p>By combining  <a class="reference internal" href="#equation-eq-87">(87)</a>  and  <a class="reference internal" href="#equation-eq-88">(88)</a> , we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-89">
+<span class="eqno">(89)<a class="headerlink" href="#equation-eq-89" title="Permalink to this equation">#</a></span>\[\begin{align}
+U(P,f,V) - L(P,f,V)
+&lt;  \frac{\varepsilon}{3}
++  \sum _ {k=1} ^n (M_k - m_k)  \abs{\Delta\alpha_k}
+\end{align}\]</div>
+<p>It requires much more work to bound the term  <span class="math notranslate nohighlight">\(\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}\)</span>  in  <a class="reference internal" href="#equation-eq-89">(89)</a> . Let  <span class="math notranslate nohighlight">\(h\)</span>  be a positive number given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+h =  \frac{\varepsilon}{3(V_a^b (\alpha) + 1)}
+\end{align*}\]</div>
+<p>Let  <span class="math notranslate nohighlight">\(I(P), J(P) \subset \left\{0, 1, \ldots, n\right \}\)</span>  be defined as</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+I(P) &amp;=  \set{k}{\Delta\alpha_k \geq 0} &amp;
+J(P) &amp;=  \set{k}{\Delta\alpha_k &lt; 0}
+\end{align*}\]</div>
+<p>For  <span class="math notranslate nohighlight">\(k \in I(P)\)</span> , we can choose a pair of points,  <span class="math notranslate nohighlight">\(s_k\)</span>  and  <span class="math notranslate nohighlight">\(t_k\)</span> , in the  <span class="math notranslate nohighlight">\(k\)</span> -th subinterval of  <span class="math notranslate nohighlight">\(P\)</span>  such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+M_k - m_k &lt; f(s_k) - f(t_k) + h
+\end{align*}\]</div>
+<p>In this case,</p>
+<div class="math notranslate nohighlight" id="equation-eq-90">
+<span class="eqno">(90)<a class="headerlink" href="#equation-eq-90" title="Permalink to this equation">#</a></span>\[\begin{align}
+(M_k - m_k) \abs{\Delta\alpha_k}
+&lt;  \left(f (s_k) - f(t_k) + h \right)\ abs {\Delta\alpha_k}
+=   \left(f (s_k) - f(t_k) + h \right) \Delta \alpha _k
+\end{align}\]</div>
+<p>On the other hand, for  <span class="math notranslate nohighlight">\(k \in J(P)\)</span> , we can choose a pair of points,  <span class="math notranslate nohighlight">\(s_k\)</span>  and  <span class="math notranslate nohighlight">\(t_k\)</span> , in the  <span class="math notranslate nohighlight">\(k\)</span> -th subinterval of  <span class="math notranslate nohighlight">\(P\)</span>  such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+M_k - m_k &lt; -f(s_k) + f(t_k) + h
+\end{align*}\]</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight" id="equation-eq-91">
+<span class="eqno">(91)<a class="headerlink" href="#equation-eq-91" title="Permalink to this equation">#</a></span>\[\begin{align}
+(M_k - m_k) \abs{\Delta\alpha_k}
+&lt;  \left(- f(s_k) + f(t_k) + h \right)\ abs {\Delta\alpha_k}
+=   \left(f (s_k) - f(t_k) - h \right) \Delta \alpha _k
+\end{align}\]</div>
+<p>Compare  <a class="reference internal" href="#equation-eq-90">(90)</a>  and  <a class="reference internal" href="#equation-eq-91">(91)</a> , we conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+(M_k - m_k) \abs{\Delta\alpha_k}
+&lt;  \left(f (s_k) - f(t_k) \right) \Delta \alpha _k
++ h  \abs{\Delta\alpha_k} \quad \forall  k  \in \left\{0 , 1,  \ldots , n \right \}
+\end{align*}\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\sum _ {k=1} ^n (M_k - m_k)  \abs{\Delta\alpha_k} &amp;&lt;  \sum _ {k=1} ^n  \left(f (s_k) - f(t_k) \right) \Delta \alpha _k + h  \sum _ {k=1} ^n  \abs{\Delta\alpha_k} \\ &amp; \leq \sum _ {k=1} ^n  \left(f (s_k) - f(t_k) \right) \Delta \alpha _k + h V_a^b ( \alpha )  \\ &amp;&lt;  \frac{\varepsilon}{3}  +  \sum _ {k=1} ^n  \left(f (s_k) - f(t_k) \right)\ Delta \alpha _k  \\ &amp; \leq \frac{\varepsilon}{3}  +  \abs{\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k}
+\end{align*}\end{split}\]</div>
+<p>In summary,</p>
+<div class="math notranslate nohighlight" id="equation-eq-92">
+<span class="eqno">(92)<a class="headerlink" href="#equation-eq-92" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum _ {k=1} ^n (M_k - m_k)  \abs{\Delta\alpha_k}
+&lt;  \frac{\varepsilon}{3}  +  \abs{\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k}
+\end{align}\]</div>
+<p>Since  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon \supset P^{\prime\prime}_\varepsilon\)</span> , we may apply  <a class="reference internal" href="#equation-eq-86">(86)</a>  to  <a class="reference internal" href="#equation-eq-92">(92)</a>  and obtain that</p>
+<div class="math notranslate nohighlight" id="equation-eq-93">
+<span class="eqno">(93)<a class="headerlink" href="#equation-eq-93" title="Permalink to this equation">#</a></span>\[\begin{align}
+\sum _ {k=1} ^n (M_k - m_k)  \abs{\Delta\alpha_k}
+&lt;  \frac{\varepsilon}{3}  +  \frac{\varepsilon}{3}
+=  \frac{2\varepsilon}{3}
+\end{align}\]</div>
+<p>Finally, by combining  <a class="reference internal" href="#equation-eq-89">(89)</a>  and  <a class="reference internal" href="#equation-eq-93">(93)</a> , we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P,f,V) - L(P,f,V)
+&lt;  \frac{\varepsilon}{3}  +  \frac{2\varepsilon}{3}
+=  \varepsilon
+\end{align*}\]</div>
+<p>Therefore,  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(V(x))\)</span>  by  <a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 39</a>  since  <span class="math notranslate nohighlight">\(V(x)\)</span>  is increasing.</p>
+</div>
 <p>\printindex</p>
 </div>
 
