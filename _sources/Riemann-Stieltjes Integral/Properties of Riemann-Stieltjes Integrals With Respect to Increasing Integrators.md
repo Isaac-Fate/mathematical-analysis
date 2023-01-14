@@ -414,6 +414,7 @@ An immediate consequence of the above theorem is as follows, which states the pr
 
 
 ````{prf:theorem}
+:label: thm:38
 Suppose  $\alpha$  is increasing. If  $f, g \in \mathfrak{R}(\alpha)$  on  $[a, b]$ , then  $fg \in \mathfrak{R}(\alpha)$  on  $[a, b]$ .
 ````
 
@@ -428,4 +429,99 @@ f g =  \frac{1}{4} [ (f + g)^2 - (f - g)^2
 ```
 
 Then this theorem follows directly from  {prf:ref}`thm:18`  and  {prf:ref}`thm:32` .
+````
+## Riemann-Stieltjes Integral with a Variable Upper Limit
+
+We know by {prf:ref}`thm:38` that the product $fg$ is integrable w.r.t. $\alpha$ whenever $f$ and $g$ are integrable. The next theorem provides an alternative view of the integral $\int_{a}^{b} f g \; \mathrm{d}\alpha$. As we will see, we can define a function $G$ in such a way that the symbol $g \; \mathrm{d}\alpha$ in the original integral can be replaced with $\mathrm{d}G$. Or we can replace $f \; \mathrm{d}\alpha$ with $\mathrm{d}F$ by defining a function $F$.
+
+
+````{prf:theorem}
+:label: thm:39
+Suppose that  $\alpha$  is increasing, and  $f, g \in \mathfrak{R}(\alpha)$  on  $[a, b]$ . Define
+
+```{math}
+\begin{align*}
+F(x) =  \int _ {a} ^ {x}  f  \; \mathrm{d} \alpha \quad \text{and} \quad
+G(x) =  \int _ {a} ^ {x}  g  \; \mathrm{d} \alpha ,
+\quad  x  \in[a, b]
+\end{align*}
+```
+
+Then  $f \in \mathfrak{R}(G)$  and  $g \in \mathfrak{R}(F)$  on  $[a, b]$ (of course  $fg \in \mathfrak{R}(\alpha)$  by  {prf:ref}`thm:38` ), and we have
+
+```{math}
+\begin{align*}
+\int _ {a} ^ {b}  fg  \; \mathrm{d} \alpha
+=  \int _ {a} ^ {b}  f  \; \mathrm{d} G
+=  \int _ {a} ^ {b}  g  \; \mathrm{d} F
+\end{align*}
+```
+````
+
+````{prf:proof}
+We only prove  $f \in \mathfrak{R}(G)$  and  $\int_{a}^{b} f g \; \mathrm{d}\alpha = \int_{a}^{b} f \; \mathrm{d}G$ . Suppose  $g$  is bounded by some positive number, say  $A$ , i.e.,  $\abs{g(x)} < A \; \forall x \in[a, b]$ . Given  $\varepsilon > 0$ , since  $f g \in \mathfrak{R}(\alpha)$ , there exists a partition  $P_\varepsilon$  on  $[a, b]$  such that
+
+```{math}
+:label: eq:96
+\begin{align}
+\abs{U(P,f,\alpha) - L(P,f,\alpha)}  <  \varepsilon  / A
+\end{align}
+```
+
+holds for any refinement  $P$  of  $P_\varepsilon$ . Let  $P = \{x_0, x_1, \ldots, x_n\} \supset P_\varepsilon$  and  $t_k \in[x_{k-1}, x_k]$ . We have
+
+```{math}
+:label: eq:94
+\begin{align}
+S(P,f, G)
+&=  \sum _k f(t_k)  \Delta  G  \nonumber \\ &=  \sum _k f(t_k)  \int _ {x_{k-1}} ^ {x_k}  g  \; \mathrm{d} \alpha \nonumber \\ &=  \sum _k  \int _ {x_{k-1}} ^ {x_k}  f(t_k) g(t)  \; \mathrm{d} \alpha (t)
+\end{align}
+```
+
+On the other hand, we can write
+
+```{math}
+:label: eq:95
+\begin{align}
+\int _ {a} ^ {b}  f g   \; \mathrm{d} \alpha
+=  \sum _k  \int _ {x_{k-1}} ^ {x_k}  f(t) g(t)  \; \mathrm{d} \alpha (t)
+\end{align}
+```
+
+Subtracting  {eq}`eq:94`  and  {eq}`eq:95`  yields
+
+```{math}
+\begin{align*}
+S(P,f, G) -  \int _ {a} ^ {b}  f g   \; \mathrm{d} \alpha
+=  \sum _k  \int _ {x_{k-1}} ^ {x_k} [ f(t_k) - f(t) ]  g(t)  \; \mathrm{d} \alpha (t)
+\end{align*}
+```
+
+It then follows from  {prf:ref}`thm:31`  that
+
+```{math}
+\begin{align*}
+\abs{S(P,f, G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha} & \leq \sum _k  \abs{
+\int_{x_{k-1}}^{x_k} [f(t_k) - f(t)] g(t) \; \mathrm{d}\alpha(t)
+} \\ & \leq \sum _k  \int _ {x_{k-1}} ^ {x_k} \abs{f(t_k) - f(t)} \abs{g(t)} \; \mathrm{d} \alpha (t)  \\ & \leq \sum _k  \int _ {x_{k-1}} ^ {x_k} (M_k - m_k)  \abs{g(t)} \; \mathrm{d} \alpha (t)  \\ &=  \sum _k (M_k - m_k)  \int _ {x_{k-1}} ^ {x_k} \abs{g(t)} \; \mathrm{d} \alpha (t)
+\end{align*}
+```
+
+Recall  $\abs{g} \leq A$ . Using  {prf:ref}`thm:30` , we obtain
+
+```{math}
+\begin{align*}
+\abs{S(P,f, G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha} & \leq \sum _k (M_k - m_k)  \int _ {x_{k-1}} ^ {x_k}  A  \; \mathrm{d} \alpha (t)  \\ &= A  \sum _k (M_k - m_k)  \Delta \alpha _k  \\ &= A (U(P,f, \alpha ) - L(P,f, \alpha ))
+\end{align*}
+```
+
+Hence,
+
+```{math}
+\begin{align*}
+\abs{S(P,f,G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha}  <  \varepsilon
+\end{align*}
+```
+
+by  {eq}`eq:96` . Therefore,  $f$  is integrable w.r.t.  $G$  on  $[a, b]$  with  $\int_{a}^{b} f \; \mathrm{d}G = \int_{a}^{b} f g  \; \mathrm{d}\alpha$ .
 ````

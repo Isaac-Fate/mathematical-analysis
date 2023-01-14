@@ -241,4 +241,3 @@ U(P,f,V) - L(P,f,V)
 
 Therefore,  $f \in \mathfrak{R}(V(x))$  by  {prf:ref}`thm:28`  since  $V(x)$  is increasing.
 ````
-\printindex
