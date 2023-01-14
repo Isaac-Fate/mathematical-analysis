@@ -5,5 +5,27 @@
             "scheme": "file",
             "pattern": "tex/mathematical-analysis.tex"
         }
+    ],
+    "latex-workshop.latex.recipes": [    
+        {
+            "name": "pdflatex 📄",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "Compile Rnw files",
+            "tools": [
+                "rnw2tex",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "Compile Jnw files",
+            "tools": [
+                "jnw2tex",
+                "latexmk"
+            ]
+        }
     ]
 }

@@ -12,3 +12,5 @@ extremum
 Rolle
 Stieltjes
 infimum
+Suprema
+Infima

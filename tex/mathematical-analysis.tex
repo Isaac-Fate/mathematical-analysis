@@ -25,9 +25,77 @@
 %------------------------------
 
 %==============================
+
+\chapter{Set Theory}
+
+%------------------------------
+
+\section{Properties of Suprema and Infima}
+
+\begin{theorem} \label{thm:27}
+    Let $f: X \to \R$ be a real-valued function. We have the following equation.
+    \begin{align}
+        \sup_{x \in X} f(x) - \inf_{x \in X} f(x)
+        = \sup_{x,y \in X} [f(x) - f(y)]
+        \label{eq:66}
+    \end{align}
+\end{theorem}
+
+\begin{proof}
+    Let $M$ and $m$ denote 
+    \begin{align*}
+        M = \sup_{x \in X} f(x)
+        \quad\text{and}\quad
+        m = \inf_{x \in X} f(x)
+    \end{align*}
+    We have 
+    \begin{align*}
+        f(x) - f(y) \leq M - m
+        \quad \forall x,y \in X
+    \end{align*}
+    It then follows that 
+    \begin{align}
+        \sup_{x,y \in X} [f(x) - f(y)]
+        \leq M - m
+        \label{eq:67}
+    \end{align}
+
+    On the other hand, given $\varepsilon > 0$, there exists $x, y \in X$ such that 
+    \begin{align}
+        f(x) > M - \varepsilon / 2
+        \quad \text{and} \quad 
+        f(y) < m + \varepsilon / 2
+    \end{align} 
+    It follows that 
+    \begin{align*}
+        \sup_{x,y \in X} [f(x) - f(y)]
+        \geq f(x) - f(y)
+        > M - m - \varepsilon
+    \end{align*}
+    Because 
+    \begin{align*}
+        \sup_{x,y \in X} [f(x) - f(y)]
+        > M - m - \varepsilon
+    \end{align*}
+    holds for any $\varepsilon > 0$, we have 
+    \begin{align}
+        \sup_{x,y \in X} [f(x) - f(y)]
+        \geq M - m
+        \label{eq:68}
+    \end{align}
+    Then, equation \eqref{eq:66} follows from \eqref{eq:67} and \eqref{eq:68}.
+\end{proof}
+
+%==============================
+
+\chapter{Numerical Sequences and Series}
+
+%==============================
+
 \chapter{Limits and Continuity}
 
 %------------------------------
+
 \section{Limit of a Function}
 
 %------------------------------
@@ -41,6 +109,27 @@
 \begin{proof}
     % TODO
 \end{proof}
+
+%------------------------------
+
+\section{Computing Limits}
+
+The basic rules of computing limits are listed in the next theorem.
+
+\begin{theorem}
+    Let $f$ and $g$ be complex-valued functions defined on a subset $S$ of a metric space $(X,d)$. Let $p$ be an accumulation point of $S$, and suppose that the following limits exist:
+    \begin{align*}
+        \lim_{x \to p} f(x) = a
+        \quad \text{and} \quad 
+        \lim_{x \to p} g(x) = b
+    \end{align*}
+    We have
+    \begin{enumerate}
+        \item $\lim_{x \to p}[f(x) \pm g(x)] = a \pm b$,
+        \item $\lim_{x \to p}f(x) g(x) = a b$,
+        \item $\lim_{x \to p} f(x) / g(x) = a / b$ provided that $b \neq 0$.
+    \end{enumerate}
+\end{theorem}
 
 %------------------------------
 
@@ -83,6 +172,14 @@ The next theorem states that the composite function of continuous functions is a
         \quad \text{and} \quad
         f(q) = \inf f(K)
     \end{align*}
+\end{theorem}
+
+%------------------------------
+
+\section{Continuity of Composite Functions}
+
+\begin{theorem} \label{thm:41}
+    Let $(X, d_X)$, $(Y, d_Y)$ and $(Z, d_Z)$ be metric spaces. Let $f: X \to Y$ and $g: f(X) \to Z$ be functions. If $f$ is continuous at point $p \in X$ and $g$ is continuous at $f(p)$, then the composite function $f \circ g$ is continuous at $p$.
 \end{theorem}
 
 %------------------------------
@@ -1231,7 +1328,316 @@ is the remainder. The smaller the absolute value of $r_n(x)$ is, the more accura
 
 %------------------------------
 
+\section{Definition of Functions of Bounded Variation}
+
+%------------------------------
+
+\begin{definition}
+    Let $f: [a, b] \to \R$ be a function. For a partition $P = \{ x_0, x_1, \ldots, x_n \}$ on $[a, b]$, write
+    \begin{align*}
+        V(P, f) := \sum_{k=1}^n \abs{\Delta f_k} = \sum_{k=1}^n \abs{f(x_k) - f(x_{k-1})}
+    \end{align*}
+    If there exists $M > 0$ such that
+    \begin{align*}
+        V(P, f) < M
+    \end{align*}
+    holds for all partition $P$, then we say $f$ is of bounded variation on $[a, b]$.
+\end{definition}
+
+%------------------------------
+
+\begin{theorem} \label{thm:35}
+    If $f$ is of bounded variation on $[a, b]$, then $f$ is bounded on $[a, b]$.
+\end{theorem}
+
+\begin{remark}
+    The converse is not true. That is, if $f$ is a bounded function, then it may not be of bounded variation (see Example~\ref{eg:6}).
+\end{remark}
+
+\begin{proof}
+    Pick any $x \in [a, b]$. Consider the partition $P = \left\{a, b\right\} \cup \left\{x\right\}$. Since $f$ is of bounded variation, we have 
+    \begin{align*}
+        \abs{\abs{f(x)} - \abs{f(a)}}
+        \leq \abs{f(x) - f(a)}
+        \leq V(P, f)
+        < M
+    \end{align*}
+    where $M$ is a constant that is independent of $x$. It follows that 
+    \begin{align*}
+        \abs{f(x)} \leq \abs{f(a)} + M
+        \quad \forall x \in [a, b]
+    \end{align*}
+    Therefore, $f$ is bounded on $[a, b]$.
+\end{proof}
+
+\begin{example}
+    Let $f: [0, 1] \to \R$ be given by 
+    \begin{align*}
+        f(x) = \begin{cases}
+            x\cos \frac{\pi}{x} &0 < x \leq 1 \\
+            0 &x = 0
+        \end{cases}
+    \end{align*}
+    Note that $f$ is a bounded continuous function on $[0, 1]$. We now show that $f$ is however not of bounded variation. Consider a sequence of partitions 
+    \begin{align*}
+        P_1 &= \left\{
+            0, \frac{1}{3}, \frac{1}{2}, 1
+        \right\} \\ 
+        P_2 &= \left\{
+            0, 
+            \frac{1}{5}, \frac{1}{4},
+            \frac{1}{3}, \frac{1}{2}, 
+            1
+        \right\} \\ 
+        P_3 &= \left\{
+            0, 
+            \frac{1}{7}, \frac{1}{6},
+            \frac{1}{5}, \frac{1}{4},
+            \frac{1}{3}, \frac{1}{2}, 
+            1
+        \right\} \\ 
+        &\vdots \\ 
+        P_n &= \left\{
+            0, 1
+        \right\} \cup \bigcup_{k=1}^n \left\{
+            \frac{1}{2k+1}, \frac{1}{2k}
+        \right\} \\ 
+        &\vdots
+    \end{align*}
+    For partition $P_n$, the sum 
+    \begin{align*}
+        V(P, f)
+        &> \sum_{k=1}^n \abs{
+            f\left( \frac{1}{2k} \right) 
+            - f\left( \frac{1}{2k+1} \right)
+        } \\
+        &= \sum_{k=1}^n \abs{
+            \frac{1}{2k}\cos(2k\pi) 
+            - \frac{1}{2k+1}\cos((2k+1)\pi)
+        } \\ 
+        &= \sum_{k=1}^n (
+            \frac{1}{2k}
+            + \frac{1}{2k+1}
+        ) \\ 
+        &= \sum_{k=2}^{2n+1} \frac{1}{k}
+    \end{align*}
+    Since the series $\sum \frac{1}{k} = \infty$, we can always find a partition such that the sum $\sum \abs{\Delta f_k}$ exceeds any given positive number. Therefore, $f$ is not of bounded variation on $[0, 1]$ though it is bounded.
+    \label{eg:6}
+\end{example}
+
+\par Recall the definition of uniform continuity. The condition of uniform continuity, to some extent, eliminates the functions that tend to infinity at some points while the condition of bounded variation eliminates the functions that \textit{oscillate}. 
+
+%------------------------------
+
+\begin{theorem} \label{thm:36}
+    If $f$ is a monotonic function on $[a, b]$, then $f$ is of bounded variation on $[a, b]$.
+\end{theorem}
+
+\begin{proof}
+    Without loss of generality, we assume $f$ is increasing. For any partition $P = \left\{x_0, \ldots, x_n\right\}$ on $[a, b]$, we have 
+    \begin{align*}
+        \sum_{k=1}^n \abs{\Delta f_k}
+        = \sum_{k=1}^n \abs{f(x_k) - f(x_{k-1})}
+        = \sum_{k=1}^n f(x_k) - f(x_{k-1})
+        = f(b) - f(a)
+    \end{align*}
+    This completes the proof since $f(b) - f(a)$ is independent of $P$.
+\end{proof}
+
+%------------------------------
+
+\section{Total Variation}
+
+%------------------------------
+
+\begin{definition}
+    Let $f$ be of bounded variation on $[a, b]$. The total variation of $f$ on $[a, b]$ is defined by 
+    \begin{align*}
+        V_a^b (f) 
+        := \sup_{P \in \mathcal{P}[a, b]} V(P, f) 
+    \end{align*}
+    where $\mathcal{P}[a, b]$ is the collection of all partitions on $[a, b]$.
+\end{definition}
+
+\begin{note}
+    We will sometimes write $V(f)$ instead of $V_a^b (f)$ to ease the notation if it does not confuse.
+\end{note}
+
+%------------------------------
+
+\begin{theorem} \label{thm:33}
+    If $f$ and $g$ are each of bounded variation on $[a, b]$, then $f \pm g$ and $f g$ are also of bounded variation. Moreover, 
+    \begin{align}
+        V(f \pm g) \leq V(f) + V(g) 
+        \label{eq:77}
+    \end{align}
+    and 
+    \begin{align}
+        V(f g) &\leq \sup_{x\in [a, b]} \abs{g(x)} V(f) + \sup_{x \in [a, b]} \abs{f(x)} V(g)
+        \label{eq:78}
+    \end{align}
+\end{theorem}
+
+\begin{proof}
+    (Proof of $f \pm g$ being of bounded variation) We have 
+    \begin{align*}
+        V(P, f \pm g)
+        &= \sum_{k=1}^n \abs{(f \pm g)(x_k) - (f \pm g)(x_{k-1})} \\ 
+        &= \sum_{k=1}^n \abs{( f(x_k) - f(x_{k-1}) ) \pm ( g(x_k) - g(x_{k-1}) )} \\ 
+        &\leq \sum_{k=1}^n \abs{\Delta f_k} + \abs{\Delta g_k} \\ 
+        &= V(P, f) + V(P, g) \\ 
+        &\leq V(f) + V(g)
+    \end{align*}
+    Since $f$ and $g$ are both of bounded variation, $V(f), V(g) < \infty$. Therefore, $V(P, f \pm g)$ is bounded above by a finite number for any partition $P$, which implies the function $f \pm g$ is of bounded variation. Taking supremum over all $P$'s on 
+    \begin{align*}
+        V(P, f \pm g) \leq V(f) + V(g)
+    \end{align*}
+    we obtain \eqref{eq:77}.
+    
+    \par (Proof of $f g$ being of bounded variation) For any partition $P$ on $[a, b]$, we have 
+    \begin{align*}
+        V(P, f g)
+        &= \sum_{k=1}^n \abs{f(x_k) g(x_k) - f(x_{k-1}) g(x_{k-1})} \\ 
+        &= \sum_{k=1}^n \abs{
+            f(x_k) g(x_k) 
+            - f(x_{k-1}) g(x_k) 
+            + f(x_{k-1}) g(x_k) 
+            - f(x_{k-1}) g(x_{k-1})
+        } \\  
+        &= \sum_{k=1}^n \abs{
+            g(x_k) \Delta f_k
+            + f(x_{k-1}) \Delta g_k
+        } \\ 
+        &\leq \sup\abs{g} V(P, f) + \sup\abs{f} V(P, g) \\ 
+        &\leq \sup\abs{g} V(f) + \sup\abs{f} V(g)
+    \end{align*}
+    Similarly, because $f$ and $g$ are of bounded variation, $V(f)$ and $V(g)$ are finite. Moreover, by Theorem~\ref{thm:35}, $f$ and $g$ are bounded on $[a, b]$, which implies $\sup\abs{f}, \sup\abs{g} < \infty$. Hence, $V(P, f g)$ is bounded above by a finite number for any partition, which implies $fg$ is also of bounded variation, and \eqref{eq:78} holds.
+\end{proof}
+
+%------------------------------
+
+\section{Additive Property of Total Variation}
+
+%------------------------------
+
+\begin{theorem} \label{thm:34}
+    Let $f$ be of bounded variation on $[a, b]$. For a point $c \in (a, b)$, we have $f$ is of bounded variation on $[a, c]$ and $[c, b]$, and 
+    \begin{align}
+        V_a^b(f) = V_a^c(f) + V_c^b(f)
+        \label{eq:79}
+    \end{align}
+\end{theorem}
+
+\begin{proof}
+    Let $P^\prime$ be a partition on $[a, c]$ and $P^{\prime\prime}$ a partition on $[c, b]$. Note that $P = P^\prime \cup P^{\prime\prime}$ forms a partition on $[a, b]$. We have
+    \begin{align*}
+        V_a^b(P, f) = V_a^c(P^\prime, f) + V_c^b(P^{\prime\prime}, f)
+    \end{align*}
+    Since $f$ is of bounded variation on $[a, b]$, it follows that 
+    \begin{align}
+        \infty > V_a^b(f) 
+        \geq V_a^b(P, f) 
+        = V_a^c(P^\prime, f) + V_c^b(P^{\prime\prime}, f)
+        \label{eq:80}
+    \end{align}
+    Note that \eqref{eq:80} holds for any partition $P^\prime$ on $[a, c]$ and any partition $P^{\prime\prime}$ on $[c, b]$. Therefore, $f$ is of bounded variation on $[a, c]$ and $[c, b]$, i.e., $V_a^c(f), V_c^b(f) < \infty$.
+
+    Taking the supremum over all partitions on $[a, c]$ followed by taking the supremum over all partitions on $[a, c]$ on \eqref{eq:80}, we obtain
+    \begin{align}
+        V_a^b(f) 
+        \geq \sup_{P^\prime \in \mathcal{P}[a, c]} V_a^c(P^\prime, f) 
+        + \sup_{P^{\prime\prime} \in \mathcal{P}[c, b]} V_c^b(P^{\prime\prime}, f)
+        = V_a^c(f) + V_c^b(f)
+        \label{eq:81}
+    \end{align}
+
+    \par Now, let $P$ be a partition on $[a, b]$. Let
+    \begin{align*}
+        P^\prime &= (P \cap [a, c]) \cup \{ c \} & 
+        P^{\prime\prime} &= P \cap [c, b] \cup \{ c \}
+    \end{align*}
+    There are two cases. If $c \in P$, then
+    \begin{align*}
+        V_a^b(P, f) 
+        = V_a^c(P^\prime, f) + V_c^b(P^{\prime\prime}, f)
+    \end{align*}
+    If $c \notin P$, then 
+    \begin{align*}
+        V_a^b(P, f) 
+        \leq V_a^c(P^\prime, f) + V_c^b(P^{\prime\prime}, f)
+    \end{align*}
+    Either way, it holds that 
+    \begin{align}
+        V_a^b(P, f) 
+        \leq V_a^c(P^\prime, f) + V_c^b(P^{\prime\prime}, f)
+        \leq V_a^c(f) + V_c^b(f)
+        \label{eq:82}
+    \end{align}
+    Taking the supremum over all partitions on $[a, b]$ on \eqref{eq:82}, we have 
+    \begin{align}
+        V_a^b(f)
+        = \sup_{P \in \mathcal{P}[a, b]} V_a^b(P, f) 
+        \leq V_a^c(f) + V_c^b(f)
+        \label{eq:83}
+    \end{align}
+
+    Equation \eqref{eq:79} then follows from \eqref{eq:80} and \eqref{eq:83}.
+\end{proof}
+
+The total variation of a function with the same lower and upper limits is defined as zero, i.e., $V_x^x(f) = 0$ so that \eqref{eq:79} holds for $c = a$ and $c = b$.
+
+\begin{definition} \label{def:3}
+    Suppose that $f$ is of bounded variation on $[a, b]$. The total variation
+    \begin{align*}
+        V_a^x(f) \quad a \leq x \leq b
+    \end{align*}
+    can be regarded as a function of $x$ on $[a, b]$ with an addition definition $V_a^a(f) := 0$.
+\end{definition}
+
+%------------------------------
+
 \section{Characterization of Functions of Bounded Variation}
+
+In fact, all functions of bounded variation can be written as a difference between two increasing functions.
+
+%------------------------------
+
+\begin{lemma} \label{lem:2}
+    Let $f$ be of bounded variation on $[a, b]$. Define $V(x) := V_a^x(f)$ ($a \leq x \leq b$). Then 
+    \begin{enumerate}
+        \item $V$ is increasing on $[a, b]$
+        \item $V-f$ is increasing on $[a, b]$
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    (Proof of 1) By Theorem~\ref{thm:34} and Definition~\ref{def:3}, we know $V(x)$ is well-defined, and 
+    \begin{align*}
+        V(x+h) - V(x) = V_x^{x+h}(f) \geq 0
+    \end{align*}
+    where $h > 0$. Therefore, $V$ is indeed increasing on $[a, b]$.
+
+    (Proof of 2) Fix $x \in [a, b]$. Let $h$ be such that $0 \leq x < x+h \leq b$. Let a partition $P$ on $[x, x+h]$ be given by 
+    \begin{align*}
+        P = \{ x, x+h \}
+    \end{align*}
+    We have 
+    \begin{align}
+        V_x^{x+h}(P, f) = \abs{f(x+h) - f(x)} 
+        \leq V_x^{x+h}(f)
+        \label{eq:84}
+    \end{align}
+    It then follows from \eqref{eq:84} that 
+    \begin{align*}
+        (V-f)(x+h) - (V-f)(x)
+        &= V_x^{x+h}(f) - (f(x+h) - f(x)) \\ 
+        &\geq V_x^{x+h}(f) - \abs{f(x+h) - f(x)} \\ 
+        &\geq 0
+    \end{align*}
+    Hence, $V-f$ is also an increasing function on $[a, b]$.
+\end{proof}
+
+%------------------------------
 
 \begin{theorem}[Characterization of Functions of Bounded Variation] \label{thm:22}
     Let $f$ be a real-valued function on $[a, b]$. Then, the following statements are equivalent.
@@ -2093,12 +2499,7 @@ It should be emphasized that there are cases where $f \in \mathfrak{R}(\alpha)$ 
 
 \section{Darboux Integrals with Monotonically Increasing Integrators}
 
-In this section, we shall introduce another formulation of integrals, which is known as the \textbf{Darboux integrals}\index{Darboux integrals}. As we noted before, the Riemann-Stieltjes sum $S(P,f,\alpha)$ also depends on the choice of representatives, $ t_k$s. This uncertainty increases the difficulty of proving assertions related to integrals. For example, as we have seen in Example~\ref{eg:4}, it takes quite a lot of work to prove that integral does not exist. Hence, we need Darboux's formulation, which has the advantage of being easier to apply in computations or proofs.
-
-\par It is much easier to study and prove some properties of the Riemann-Stieltjes integrals if we require that $\alpha$ is monotonically increasing. 
-
-\par Thanks to Theorem~\ref{thm:22}, which states that every function of bounded variation can express as a difference of two increasing functions, almost all the properties introduced in this section can be extended with ease to integrators of bounded variation. 
-
+In this section, we shall introduce another formulation of integrals, which is known as the \textbf{Darboux integrals}\index{Darboux integrals}. As we noted before, the Riemann-Stieltjes sum $S(P,f,\alpha)$ also depends on the choice of representatives, $ t_k$s. This uncertainty increases the difficulty of proving assertions related to integrals. For example, as we have seen in Example~\ref{eg:4}, it takes quite a lot of work to prove that integral does not exist. Hence, we need Darboux's formulation, which has the advantage of being easier to apply in computations or proofs. 
 
 \begin{definition} \label{def:2}
     Let $f$ be a bounded function on $[a, b]$, and $P = \{a=x_0, x_1, \ldots, x_n=b\}$ a partition. In each sub-interval $[x_{k-1}, x_k]$, we use the symbols $M_k$ and $m_k$ to denote
@@ -2496,7 +2897,7 @@ Essentially, Riemann's condition requires that the upper and lower sums should b
 
 The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann's condition are equivalent.
 
-\begin{theorem}
+\begin{theorem} \label{thm:28}
     Suppose $f$ is bounded and $\alpha$ is increasing on $[a, b]$. Then the following statements are equivalent.
     \begin{enumerate}
         \item $f$ is integrable w.r.t. $\alpha$ on $[a, b]$, i.e., $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
@@ -2607,12 +3008,796 @@ The following states that the existence of Riemann-Stieltjes integrals, the exis
     Therefore, indeed $f \in \mathfrak{R}(\alpha)$. This completes the proof.
 \end{proof}
 
+As one should expect, the integral $\int_{a}^{b} f \; \mathrm{d}\alpha$ has to be equal to the upper and lower integrals whenever $f$ is integrable.
+
+\begin{corollary}
+    Suppose $\alpha$ be increasing on $[a, b]$. If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then 
+    \begin{align*}
+        \int_{a}^{b} f \; \mathrm{d}\alpha
+        = \upint_{a}^{b} f \; \mathrm{d}\alpha
+        = \lowint_{a}^{b} f \; \mathrm{d}\alpha
+    \end{align*}
+\end{corollary}
+
+\begin{proof}
+    Given $\varepsilon > 0$, there exist partitions $P_1$ and $P_2$ on $[a, b]$ such that 
+    \begin{align*}
+        U(P_1,f,\alpha) < \upint_{a}^{b} f \; \mathrm{d}\alpha + \varepsilon
+        \quad\text{and}\quad
+        L(P_2,f,\alpha) > \upint_{a}^{b} f \; \mathrm{d}\alpha - \varepsilon
+    \end{align*}
+    Let $P_\varepsilon = P_1 \cup P_2$. For any refinement $P \supset P_\varepsilon$, we have 
+    \begin{align*}
+        \upint_{a}^{b} f \; \mathrm{d}\alpha - \varepsilon
+        < L(P,f,\alpha)
+        \leq S(P,f,\alpha)
+        \leq U(P,f,\alpha)
+        < \upint_{a}^{b} f \; \mathrm{d}\alpha + \varepsilon
+    \end{align*}
+    The upper and lower integrals are equal, say to $A$, by Theorem~\ref{thm:8}. It follows that 
+    \begin{align*}
+        \abs{S(P,f,\alpha) - A} < \varepsilon
+    \end{align*}
+    By Definition~\ref{def:1}, $A = \int_{a}^{b} f \; \mathrm{d}\alpha$.
+\end{proof}
+
+As an exercise, we reconsider Example~\ref{eg:4} and prove that $f$ is not integrable w.r.t. $\alpha$.
+
+\begin{exercise}
+    Let functions $f$ and $\alpha$ be given by
+    \begin{align*}
+        f(x) = \begin{cases}
+            \frac{\abs{\sin(x)}}{x} &x \neq 0 \\
+            1 &x = 0
+        \end{cases}
+        \quad\text{and}\quad 
+        \alpha(x) = \begin{cases}
+            -1 &x < 0 \\
+            1 &x \geq 0
+        \end{cases},
+        \quad x \in [-3\pi, 3\pi]
+    \end{align*}
+    Show that $f \notin \mathfrak{R}(\alpha)$ on $[-3\pi, 3\pi]$.
+
+    \noindent [Hint: $\sin x < x \; \forall x > 0$.]
+\end{exercise}
+
+\begin{solution}
+    It suffices to prove $f$ is not integrable w.r.t. $\alpha$ on $[-3\pi, 0]$ since $f \in \mathfrak{R}(\alpha)$ on $[0, 3\pi]$.
+
+    Note that For any partition $P = \{x_0, x_1, \ldots, x_n\}$ on $[-3\pi, 0]$, only the last sub-integral $[x_{n-1}, x_n = 0]$ contributes to the upper and lower sums. Furthermore, using the hint, we know 
+    \begin{align*}
+        M_n = 1
+        \quad \text{and} \quad 
+        m_n = -1
+    \end{align*} 
+    Then the upper and lower sums are given by
+    \begin{align*}
+        U(P,f,\alpha) = M_n [\alpha(0) - \alpha(x_{n-1})] = 2
+        \quad\text{and}\quad
+        L(P,f,\alpha) = m_n [\alpha(0) - \alpha(x_{n-1})] = -2
+    \end{align*}
+    Since the above equations hold for any partition $P$ on $[-3\pi, 0]$, we have 
+    \begin{align*}
+        \upint_{-3\pi}^0 = 2
+        \quad\text{and}\quad
+        \lowint_{-3\pi}^0 = -2
+    \end{align*}
+    Therefore, by Theorem~\ref{thm:28}, $f$ is not integrable w.r.t. $\alpha$ on $[-3\pi, 0]$, and hence on $[-3\pi, 3\pi]$.
+
+    This proof is way cleaner than the one given in Example~\ref{eg:4} thanks to Darboux's formulation of integrals.
+\end{solution}
+
 %------------------------------
 
-\section{Comparison Theorems}
+\section{Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators}
 
+It is much easier to study and prove some properties of the Riemann-Stieltjes integrals if we require that $\alpha$ is monotonically increasing. 
+
+Thanks to Theorem~\ref{thm:37}, which we will prove in Section~\ref{sec:1}, almost all the properties introduced in this section can be extended with ease to integrators of bounded variation.
+
+%------------------------------
+
+\subsection{Integrability on Sub-Intervals}
+
+Let $c \in (a, b)$ be a point that splits the interval into two parts. If $f$ is integrable w.r.t. $\alpha$ on the entire interval $[a, b]$, then it is also integrable on both of the sub-intervals.
+
+\begin{lemma} \label{lem:3}
+    Suppose $\alpha$ is increasing on $[a, b]$. Let $c \in (a, b)$ be an interior point. If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $f \in \mathfrak{R}(\alpha)$ on $[a, c]$ and $f \in \mathfrak{R}(\alpha)$ on $[c, b]$
+\end{lemma}
+
+\begin{proof}
+    We only prove $f \in \mathfrak{R}(\alpha)$ on $[a, c]$. Given $\varepsilon > 0$. By Theorem~\ref{thm:28}, there exists a partition $P_\varepsilon$ on $[a, b]$ such that 
+    \begin{align*}
+        U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon
+        \quad \forall P \supset P_\varepsilon
+    \end{align*}
+    Let $P_\varepsilon^\prime = (P_\varepsilon \cup \{ c \}) \cap [a, c]$. Note that $P_\varepsilon^\prime$ is a partition on $[a, c]$. Now, let $P^\prime$ be a refinement of $ P_\varepsilon^\prime$ on $[a, c]$, and $P$ a refinement of $P_\varepsilon$ on $[a, b]$. It is evident that 
+    \begin{align*}
+        P^{\prime\prime} = P^\prime \cup (P \cap [c, b])
+    \end{align*} 
+    is a refinement of $P_\varepsilon$. Therefore, we have 
+    \begin{align*}
+        U(P^{\prime\prime},f,\alpha) - L(P^{\prime\prime},f,\alpha) < \varepsilon
+    \end{align*}
+    \begin{note}
+        $P^{\prime\prime}$ can be regarded as a partition formed by adding points to $P^\prime$ that are greater than $c$.
+    \end{note}
+    Then it is clear 
+    \begin{multline*}
+        U(P^{\prime},f,\alpha) - L(P^{\prime},f,\alpha)
+        = \sum_{k \text{ such that } x_k \leq c} (M_k - m_k) \Delta \alpha_k \\
+        \leq \sum_{k} (M_k - m_k) \Delta \alpha_k
+        \leq U(P^{\prime\prime},f,\alpha) - L(P^{\prime\prime},f,\alpha)
+    \end{multline*}
+    Hence,
+    \begin{align*}
+        U(P^{\prime},f,\alpha) - L(P^{\prime},f,\alpha) < \varepsilon
+    \end{align*}
+    which implies $f \in \mathfrak{R}(\alpha)$ on $[a, c]$ by Theorem~\ref{thm:28}.
+\end{proof}
+
+In fact, $f$ is integrable on all sub-intervals of $[a, b]$.
+
+
+\begin{theorem} \label{thm:40}
+    Suppose $\alpha$ is increasing on $[a, b]$. Let $[c, d] \subset [a, b]$ be a sub-interval. If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $f \in \mathfrak{R}(\alpha)$ on $[c, d]$.
+\end{theorem}
+
+\begin{proof}
+    Without loss of generality, assume $a < c < d < b$. Lemma~\ref{lem:3} implies that $f$ is integrable w.r.t. $\alpha$ on $[a, c]$ and $[a, d]$. We then conclude the proof using Theorem~\ref{thm:18}.
+\end{proof}
+
+%------------------------------
+
+\subsection{Comparison Theorem}
+
+It is very common in practice to compare the values of two integrals. Intuitively,
+\begin{align}
+    \int_{a}^{b} f \; \mathrm{d}\alpha
+    \leq \int_{a}^{b} g \; \mathrm{d}\alpha
+    \label{eq:69}
+\end{align}
+provided that $f \leq g$ and $\alpha$ is increasing. The proof of this inequality follows from the following lemma, which says the integral of $f$ w.r.t. $\alpha$ is non-negative whenever $f$ stays non-negative and $\alpha$ is increasing on $[a, b]$. Note that this is a special case of inequality \eqref{eq:69}.
+
+\begin{lemma} \label{lem:1}
+    Suppose that $\alpha$ is increasing and $f \in \mathfrak{R}(\alpha)$ on $[a, b]$. If $f(x) \geq 0 \; \forall x \in [a, b]$, then 
+    \begin{align*}
+        \int_{a}^{b} f \; \mathrm{d}\alpha \geq 0
+    \end{align*}
+\end{lemma}
+
+\begin{proof}
+    Consider the trivial partition $P = \{a, b\}$. We have
+    \begin{align*}
+        L(P,f,\alpha) = \inf_{x \in [a, b]} f(x) [\alpha(b) - \alpha(a)]
+        \geq 0
+    \end{align*}
+    It then follows that 
+    \begin{align*}
+        \lowint_a^b f \; \mathrm{d}\alpha
+        \geq L(P,f,\alpha)
+        \geq 0
+    \end{align*}
+    Note that $\int_{a}^{b} f \; \mathrm{d}\alpha = \lowint_a^b f \; \mathrm{d}\alpha$ since $f \in \mathfrak{R}(\alpha)$. The proof is then complete.
+\end{proof}
+
+Inequality \eqref{eq:69} can be proved easily by applying the above lemma and Theorem~\ref{thm:18}.
+
+\begin{theorem} \label{thm:30}
+    Suppose that $\alpha$ is increasing and $f, g \in \mathfrak{R}(\alpha)$ on $[a, b]$. If $f(x) \leq g(x) \; \forall x \in [a, b]$, then we have the inequality
+    \begin{align*}
+        \int_{a}^{b} f \; \mathrm{d}\alpha 
+        \leq \int_{a}^{b} g \; \mathrm{d}\alpha
+    \end{align*}
+\end{theorem}
+
+\begin{proof}
+    Note that the difference $(g-f)(x) \geq 0 \; \forall x \in [a, b]$. Furthermore, $(g-f) \in \mathfrak{R}(\alpha)$ on $[a, b]$ by Theorem~\ref{thm:18}. Then Lemma~\ref{lem:1} gives 
+    \begin{align*}
+        \int_{a}^{b} (g-f) \; \mathrm{d}\alpha \geq 0
+    \end{align*}
+    Using Theorem~\ref{thm:18} again to split the integrand, we have
+    \begin{align*}
+        \int_{a}^{b} g \; \mathrm{d}\alpha
+        - \int_{a}^{b} f \; \mathrm{d}\alpha
+        \geq 0
+    \end{align*}
+\end{proof}
+
+%------------------------------
+
+\subsection{Applying Continuous Functions to Integrable Functions}
+
+Suppose we know $f \in \mathfrak{R}(\alpha)$ on $[a, b]$. The following theorem tells us that we can produce more integrable functions by applying continuous functions to $f$.
+
+\begin{theorem} \label{thm:29}
+    Suppose that $\alpha$ is increasing and $f \in \mathfrak{R}(\alpha)$ on $[a, b]$. Let $M$ and $m$ denote the supremum and infimum of $f$ on $[a, b]$. If function $\phi: [m, M] \to \R$ is continuous, then the composite function $\phi \circ f$ is also integrable w.r.t. $\alpha$ on $[a, b]$, i.e., $\phi \circ f \in \mathfrak{R}(\alpha)$.
+\end{theorem}
+
+\begin{proof}
+    In the following proof, we assume that $\alpha$ is non-constant.
+
+    Given $\varepsilon > 0$. Since $\phi$ is uniformly continuous on $[m, M]$, there exists $\delta > 0$ such that 
+    \begin{align}
+        \abs{s - t} < \delta
+        \implies \abs{\phi(s) - \phi(t)} < \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)}
+        \label{eq:70}
+    \end{align}
+    Suppose that $\phi$ is bounded by a positive number $A > 0$, i.e., 
+    \begin{align*}
+        \abs{\phi} < A
+    \end{align*}
+    Because $f \in \mathfrak{R}(\alpha)$, there exists a partition $P_\varepsilon$ on $[a, b]$ such that 
+    \begin{align}
+        U(P,f,\alpha) - L(P,f,\alpha) < \frac{\varepsilon \delta}{4A}
+        \label{eq:71}
+    \end{align}
+    for any refinement $P \supset P_\varepsilon$.
+
+    Write $P = \{x_0,x_1, \ldots, x_n\}$. We now separate the indices of sub-intervals into two sets in the following way.
+    \begin{align*}
+        I &= \set{k=1,\ldots,n}{M_k(f) - m_k(f) < \delta} \\ 
+        J &= \set{k=1,\ldots,n}{M_k(f) - m_k(f) \geq \delta}
+    \end{align*}
+
+    We first consider the sub-intervals whose indices belong to $I$. Suppose $k \in I$. Since $M_k(f) - m_k(f) < \delta$, it follows from \eqref{eq:70} that 
+    \begin{align*}
+        \abs{\phi[f(s)] - \phi[f(t)]}
+        < \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)}
+        \quad \forall s,t \in [x_{k-1}, x_{k}]
+    \end{align*}
+    Then by Theorem~\ref{thm:27}, we have 
+    \begin{align*}
+        M_k(\phi \circ f) - m_k(\phi \circ f)
+        = \sup_{s,t \in [x_{k-1}, x_k]} \abs{\phi[f(s)] - \phi[f(t)]}
+        \leq \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)}
+    \end{align*}
+    Summing up over $k \in I$ yields
+    \begin{align}
+        \sum_{k \in I} \left[ M_k(\phi \circ f) - m_k(\phi \circ f) \right] \Delta \alpha_k
+        \leq \varepsilon / 2
+        \label{eq:72}
+    \end{align}
+    
+    Now, suppose $k \in J$. Note that 
+    \begin{align*}
+        \sum_{k \in I} \left[ M_k(\phi \circ f) - m_k(\phi \circ f) \right] \Delta \alpha_k
+        \leq U(P,f,\alpha)
+        < \frac{\varepsilon \delta}{4 A}
+    \end{align*}
+    where the last inequality follows from \eqref{eq:71}. Because $M_k(f) - m_k(f) \geq \delta$, we have 
+    \begin{align*}
+        \delta \sum_{k \in I} \Delta \alpha_k
+        \leq \sum_{k \in I} \left[ M_k(\phi \circ f) - m_k(\phi \circ f) \right] \Delta \alpha_k
+        < \frac{\varepsilon \delta}{4 A}
+    \end{align*}
+    which further implies
+    \begin{align}
+        \sum_{k \in I} \Delta \alpha_k
+        < \frac{\varepsilon}{4 A}
+        \label{eq:73}
+    \end{align}
+    Recall that $\abs{\phi} < A$. Hence, the difference $M_k(\phi \circ f) - m_k(\phi \circ f)$ is bounded above by 
+    \begin{align}
+        M_k(\phi \circ f) - m_k(\phi \circ f)
+        < 2A
+        \label{eq:74}
+    \end{align}
+    Combining inequalities \eqref{eq:73} and \eqref{eq:74}, we obtain 
+    \begin{align}
+        \sum_{k \in I} \left[ M_k(\phi \circ f) - m_k(\phi \circ f) \right] \Delta \alpha_k
+        < \varepsilon / 2
+        \label{eq:75}
+    \end{align}
+
+    Note that the difference $U(P,\phi \circ f, \alpha) - L(P,\phi \circ f, \alpha)$ can be summed up as follows.
+    \begin{multline*}
+        U(P,\phi \circ f, \alpha) - L(P,\phi \circ f, \alpha)
+        = \sum_{k=1}^n \left[ M_k(\phi \circ f) - m_k(\phi \circ f) \right] \Delta \alpha_k \\ 
+        = \sum_{k \in I} \left[ M_k(\phi \circ f) - M_k(\phi \circ f) \right] \Delta \alpha_k
+        + \sum_{k \in J} \left[ M_k(\phi \circ f) - m_k(\phi \circ f) \right] \Delta \alpha_k
+    \end{multline*}
+    Finally, by applying \eqref{eq:72} and \eqref{eq:75}, the difference of upper and lower sums are bounded by 
+    \begin{align*}
+        U(P,\phi \circ f, \alpha) - L(P,\phi \circ f, \alpha) < \varepsilon
+    \end{align*}
+    Therefore, the composite function $\phi \circ f$ satisfies Riemann's condition, and hence $\phi \circ f \in \mathfrak{R}(\alpha)$ on $[a, b]$ by Theorem~\ref{thm:28}.
+\end{proof}
+
+%------------------------------
+
+Note that the absolute value function $\phi(x) = \abs{x}$ is continuous. Applying it to an integrable function $f \in \mathfrak{R}(\alpha)$, we immediately conclude that $\abs{f}$ is also integrable.
+
+\begin{theorem} \label{thm:31}
+    Suppose $\alpha$ is increasing. If$f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $\abs{f} \in \mathfrak{R}(\alpha)$ on $[a, b]$, and we have 
+    \begin{align}
+        \abs{\int_{a}^{b} f \; \mathrm{d}\alpha}
+        \leq \int_{a}^{b} \abs{f} \; \mathrm{d}\alpha
+        \label{eq:76}
+    \end{align}
+\end{theorem}
+
+\begin{proof}
+    First, we note that $\abs{f} \in \mathfrak{R}(\alpha)$ on $[a, b]$ by Theorem~\ref{thm:29} since $\phi(x) = \abs{x}$ is continuous.
+
+    It then follows from the inequality
+    \begin{align*}
+        -\abs{f} \leq f \leq \abs{f}
+    \end{align*}
+    and Theorem~\ref{thm:30} that 
+    \begin{align*}
+        -\int_{a}^{b} \abs{f} \; \mathrm{d}\alpha
+        = \int_{a}^{b} -\abs{f} \; \mathrm{d}\alpha
+        \leq \int_{a}^{b} f \; \mathrm{d}\alpha
+        \leq \int_{a}^{b} \abs{f} \; \mathrm{d}\alpha
+    \end{align*}
+    This completes the proof.
+\end{proof}
+
+The converse of this theorem is not true. That is, $f$ is not necessarily integrable if $\abs{f}$ is integrable.
+
+\begin{example}
+    Let 
+    \begin{align*}
+        f(x) = \ind_{\Q}(x) - \ind_{\R \setminus \Q}(x),
+        \quad x \in [a, b]
+    \end{align*}
+    and $\alpha$ be any \textit{non-constant} increasing function on $[a, b]$.
+    
+    Note that the absolute value of $f$, $\abs{f} = 1$ is constant, and hence $f \in \mathfrak{R}(\alpha)$ on $[a, b]$. And 
+    \begin{align*}
+        \int_{a}^{b} f \; \mathrm{d}\alpha = 0
+    \end{align*}
+
+    But $f$ is not integrable w.r.t. $\alpha$ on $[a,b]$ since 
+    \begin{align*}
+        \upint_a^b f \; \mathrm{d}\alpha = \alpha(b) - \alpha(a) > 0
+        \quad \text{and} \quad 
+        \lowint_a^b f \; \mathrm{d}\alpha = \alpha(a) - \alpha(b) < 0
+    \end{align*}
+    The upper and lower integrals are not equal to each other for we have assumed $\alpha$ is non-constant.
+\end{example}
+
+\begin{exercise}
+    Prove the existence of $\int_a^b \abs{f} \; \mathrm{d}\alpha$ in Theorem~\ref{thm:31} without using Theorem~\ref{thm:29}.
+\end{exercise}
+
+\begin{solution}
+    % TODO
+\end{solution}
+
+%------------------------------
+
+Put $\phi(x) = x^2$ in Theorem~\ref{thm:29}, and we will have another remarkable conclusion which says the square of $f$, $f^2$, is integrable w.r.t. $\alpha$ whenever $f \in \mathfrak{R}(\alpha)$.
+
+\begin{theorem} \label{thm:32}
+    Suppose $\alpha$ is increasing. If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then its square $f^2$ is also integrable w.r.t. $\alpha$, i.e., $f^2 \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+\end{theorem}
+
+\begin{proof}
+    Because $\phi(x) = x^2$ is continuous on $\R$, it is, of course, continuous on the closed interval joining the infimum and supremum of $f$, $[m, M]$. Then by Theorem~\ref{thm:29}, $f^2 \in \mathfrak{R}(\alpha)$ on $[a, b]$. 
+\end{proof}
+
+An alternative proof without using Theorem~\ref{thm:29} is left as an exercise.
+
+\begin{exercise}
+    Prove Theorem~\ref{thm:32} without using Theorem~\ref{thm:29}. But feel free to use Theorem~\ref{thm:31}.
+\end{exercise}
+
+\begin{solution}
+    % TODO
+\end{solution}
+
+%------------------------------
+
+An immediate consequence of the above theorem is as follows, which states the product of two integrable functions is also integrable.
+
+\begin{theorem} \label{thm:38}
+    Suppose $\alpha$ is increasing. If $f, g \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $fg \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+\end{theorem}
+
+\begin{proof}
+    Note that the product $fg$ can be written as 
+    \begin{align*}
+        f g = \frac{1}{4} [
+            (f + g)^2 - (f - g)^2
+        ]
+    \end{align*}
+    Then this theorem follows directly from Theorem~\ref{thm:18} and Theorem~\ref{thm:32}.
+\end{proof}
+
+%------------------------------
+
+\subsection{Riemann-Stieltjes Integral with a Variable Upper Limit}
+
+We know by Theorem~\ref{thm:38} that the product $fg$ is integrable w.r.t. $\alpha$ whenever $f$ and $g$ are integrable. The next theorem provides an alternative view of the integral $\int_{a}^{b} f g \; \mathrm{d}\alpha$. As we will see, we can define a function $G$ in such a way that the symbol $g \; \mathrm{d}\alpha$ in the original integral can be replaced with $\mathrm{d}G$. Or we can replace $f \; \mathrm{d}\alpha$ with $\mathrm{d}F$ by defining a function $F$.
+
+\begin{theorem} \label{thm:39}
+    Suppose that $\alpha$ is increasing, and $f, g \in \mathfrak{R}(\alpha)$ on $[a, b]$. Define 
+    \begin{align*}
+        F(x) = \int_{a}^{x} f \; \mathrm{d}\alpha
+        \quad\text{and}\quad
+        G(x) = \int_{a}^{x} g \; \mathrm{d}\alpha,
+        \quad x \in [a, b]
+    \end{align*}
+    Then $f \in \mathfrak{R}(G)$ and $g \in \mathfrak{R}(F)$ on $[a, b]$ (of course $fg \in \mathfrak{R}(\alpha)$ by Theorem~\ref{thm:38}), and we have 
+    \begin{align*}
+        \int_{a}^{b} fg \; \mathrm{d}\alpha
+        = \int_{a}^{b} f \; \mathrm{d}G
+        = \int_{a}^{b} g \; \mathrm{d}F
+    \end{align*}
+\end{theorem}
+
+\begin{proof}
+    We only prove $f \in \mathfrak{R}(G)$ and $\int_{a}^{b} f g \; \mathrm{d}\alpha = \int_{a}^{b} f \; \mathrm{d}G$. Suppose $g$ is bounded by some positive number, say $A$, i.e., $\abs{g(x)} < A \; \forall x \in [a, b]$. Given $\varepsilon > 0$, since $f g \in \mathfrak{R}(\alpha)$, there exists a partition $P_\varepsilon$ on $[a, b]$ such that 
+    \begin{align}
+        \abs{U(P,f,\alpha) - L(P,f,\alpha)} < \varepsilon / A
+        \label{eq:96}
+    \end{align}
+    holds for any refinement $P$ of $P_\varepsilon$. Let $P = \{x_0, x_1, \ldots, x_n\} \supset P_\varepsilon$ and $t_k \in [x_{k-1}, x_k]$. We have
+    \begin{align}
+        S(P,f, G) 
+        &= \sum_k f(t_k) \Delta G \nonumber \\
+        &= \sum_k f(t_k) \int_{x_{k-1}}^{x_k} g \; \mathrm{d}\alpha \nonumber \\ 
+        &= \sum_k \int_{x_{k-1}}^{x_k} f(t_k) g(t) \; \mathrm{d}\alpha(t)
+        \label{eq:94}
+    \end{align}
+    On the other hand, we can write
+    \begin{align}
+        \int_{a}^{b} f g  \; \mathrm{d}\alpha
+        = \sum_k \int_{x_{k-1}}^{x_k} f(t) g(t) \; \mathrm{d}\alpha(t)
+        \label{eq:95}
+    \end{align}
+    Subtracting \eqref{eq:94} and \eqref{eq:95} yields
+    \begin{align*}
+        S(P,f, G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha
+        = \sum_k \int_{x_{k-1}}^{x_k} [f(t_k) - f(t)] g(t) \; \mathrm{d}\alpha(t)
+    \end{align*}
+    
+    It then follows from Theorem~\ref{thm:31} that 
+    \begin{align*}
+        \abs{S(P,f, G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha}
+        &\leq \sum_k \abs{
+                \int_{x_{k-1}}^{x_k} [f(t_k) - f(t)] g(t) \; \mathrm{d}\alpha(t)
+            } \\
+        &\leq \sum_k \int_{x_{k-1}}^{x_k} \abs{f(t_k) - f(t)} \abs{g(t)} \; \mathrm{d}\alpha(t) \\
+        &\leq \sum_k \int_{x_{k-1}}^{x_k} (M_k - m_k) \abs{g(t)} \; \mathrm{d}\alpha(t) \\
+        &= \sum_k (M_k - m_k) \int_{x_{k-1}}^{x_k} \abs{g(t)} \; \mathrm{d}\alpha(t)
+    \end{align*}
+    Recall $\abs{g} \leq A$. Using Theorem~\ref{thm:30}, we obtain
+    \begin{align*}
+        \abs{S(P,f, G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha}
+        &\leq \sum_k (M_k - m_k) \int_{x_{k-1}}^{x_k} A \; \mathrm{d}\alpha(t) \\
+        &= A \sum_k (M_k - m_k) \Delta\alpha_k \\ 
+        &= A (U(P,f,\alpha) - L(P,f,\alpha))
+    \end{align*}
+    Hence, 
+    \begin{align*}
+        \abs{S(P,f,G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha} < \varepsilon
+    \end{align*}
+    by \eqref{eq:96}. Therefore, $f$ is integrable w.r.t. $G$ on $[a, b]$ with $\int_{a}^{b} f \; \mathrm{d}G = \int_{a}^{b} f g  \; \mathrm{d}\alpha$.
+\end{proof}
+
+\begin{example}
+    Let
+    \begin{align*}
+        \alpha(x)
+        = \begin{cases}
+            1 &x \geq 0 \\ 
+            0 &x < 0
+        \end{cases},
+        \quad
+        -1 \leq x \leq 1
+    \end{align*}
+    And let $f$ and $g$ be any two functions defined on $[-1, 1]$ that are continuous from the left at $x=0$. By Theorem~\ref{thm:24} and Theorem~\ref{thm:40}, we know both functions are integrable w.r.t. $\alpha$ on $[-1, x]$ if $-1 < x \leq 1$ with 
+    \begin{align*}
+        F(x) = \int_{-1}^x f \; \mathrm{d}\alpha = \begin{cases}
+            f(0) &x \geq 0 \\ 
+            0 &x < 0
+        \end{cases}
+        \quad \text{and} \quad 
+        G(x) = \int_{-1}^x g \; \mathrm{d}\alpha = \begin{cases}
+            g(0) &x \geq 0 \\ 
+            0 &x < 0
+        \end{cases}
+    \end{align*}
+    Note that $F$ and $G$ are also step functions that are continuous from the right at $x = 0$. Hence, by applying Theorem~\ref{thm:24} again, we have 
+    \begin{align*}
+        \int_{-1}^{1} f \; \mathrm{d}G = f(0)g(0)
+        \quad \text{and} \quad 
+        \int_{-1}^{1} g \; \mathrm{d}F = f(0)g(0)
+    \end{align*}
+
+    On the other hand, since the product $f g$ is continuous from the left at $x=0$, it follows from Theorem~\ref{thm:24} that \begin{align*}
+        \int_{-1}^{1} f g \; \mathrm{d}\alpha
+        = f(0)g(0)
+    \end{align*}
+
+    The results agree with Theorem~\ref{thm:39} as expected.
+\end{example}
+
+%------------------------------
+
+\section{Integrators of Bounded Variation}
+\label{sec:1}
+
+If $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$ on $[a, b]$ where $\alpha_1$ and $\alpha_2$ are both increasing functions, then we know from Theorem~\ref{thm:19} that $f \in \mathfrak{R}(\alpha)$ where $\alpha = \alpha_1 - \alpha_2$. Moreover, by Theorem~\ref{thm:22}, we are immediately informed that $\alpha$ is of bounded variation. 
+
+Now, let us think about the converse of this statement. Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ where $\alpha$ if of bounded variation. Can we assert that $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$ on $[a, b]$ where $\alpha_1$ and $\alpha_2$ are any increasing functions satisfying $\alpha = \alpha_1 - \alpha_2$? Unfortunately, this is not true in general. For example, the Dirichlet function $\ind_\Q$ is integrable w.r.t. $\alpha(x) = 0$ on $[0, 1]$. We can write $\alpha(x) = 0 = x - x$. But clearly $\ind_\Q \notin \mathfrak{R}$ on $[0, 1]$.
+
+However, as the next theorem will state, $f$ is always integrable w.r.t. the total variation $V_a^x(\alpha)$ of $\alpha$ provided that $f \in \mathfrak{R}(\alpha)$.
+
+\begin{theorem} \label{thm:37}
+    If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $f \in \mathfrak{R}(V_a^x(\alpha))$ on $[a, b]$ where $V_a^x(\alpha)$ is the total variation of $\alpha$, which is regarded as a function of $x$ as in Definition~\ref{def:3}.
+\end{theorem}
+
+Before presenting the proof, we first introduce some notations we shall use as well as the general strategy of this proof.
+
+For a sub-interval $[x_{k-1}, x_k]$ in the partition $P = \{ x_0, \ldots, x_n \}$ on $[a, b]$, we adopt the following notation:
+\begin{align*}
+    M_k = \sup_{x \in [x_{k-1}, x_k]} f(x),
+    \quad
+    m_k = \inf_{x \in [x_{k-1}, x_k]} f(x)
+    \quad\text{and}\quad
+    \Delta V_k = V_{x_{k-1}}^{x_k}(\alpha)
+\end{align*}
+And we write $V(x)$ instead of $V_a^x(\alpha)$ to emphasize that the total variation is a function of $x$.
+
+Observe that $V(x)$ is monotonically increasing, hence we shall prove $f$ is integrable w.r.t. $V(x)$ mainly relies on Riemann's condition (Theorem~\ref{thm:28}). We intend to bound the difference between the upper and the lower sum, which is shown in the following, with an arbitrarily small positive number.
+\begin{align*}
+    U(P,f,V) - L(P,f,V)
+    &= \sum_k (M_k - m_k) \Delta V_k \\ 
+    &= \sum_k (M_k - m_k) \left( \Delta V_k - \abs{\Delta\alpha_k} \right)
+    + \sum_k (M_k - m_k) \abs{\Delta\alpha_k}
+\end{align*}
+Therefore, we shall focus on bounding each of the two terms on the right-hand side of the above equation.
+
+We now present the proof as follows.
+
+\begin{proof}
+    If $f$ is a constant function, then this theorem holds trivially. We assume that $f$ is non-constant in the rest of the proof. Let $A$ be given by 
+    \begin{align*}
+        A = \sup_{x \in [a, b]} f(x) - \inf_{x \in [a, b]} f(x)
+    \end{align*}
+    Since $f$ is non-constant, it is clear that $A > 0$.
+    
+    Let $\varepsilon > 0$ be chosen arbitrarily. Since $\alpha$ is of bounded variation on $[a, b]$, by the definition of total variations, there exists a partition $P^\prime_\varepsilon$ on $[a, b]$ such that 
+    \begin{align}
+        V_a^b(\alpha) 
+        < V(P, \alpha)
+        + \frac{\varepsilon}{3A}
+        \quad \forall P \supset P^\prime_\varepsilon
+        \label{eq:85}
+    \end{align}
+    We shall use this inequality later.
+
+    \par Now, we prepare another inequality that will be in use. Because $f \in \mathfrak{R}(\alpha)$, there exists a partition $P^{\prime\prime}_\varepsilon$ such that
+    \begin{align}
+        \abs{
+            \sum \left(f(s_k) - f(t_k)\right) 
+            \Delta \alpha_k
+        } < \frac{\varepsilon}{3}
+        \quad \forall P \supset P^{\prime\prime}_\varepsilon
+        \label{eq:86}
+    \end{align}
+    where $s_k$ and $t_k$ are any two points in the $k$-th subinterval of $P$.
+
+    \par Let $P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon$, and let $P = \left\{x_0, \ldots, x_n\right\} \supset P_\varepsilon$ be a refinement. We have 
+    \begin{align*}
+        U(P,f,V) - L(P,f,V)
+        &= \sum_{k=1}^n (M_k - m_k) \Delta V_k \\ 
+        &= \sum_{k=1}^n (M_k - m_k) \left( \Delta V_k - \abs{\Delta\alpha_k} \right)
+        + \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+    \end{align*}
+    Recall $A = \sup f - \inf f$. Hence, the right-hand side of the equality above can be further enlarged to
+    \begin{align}
+        U(P,f,V) - L(P,f,V)
+        \leq A \sum_{k=1}^n \left( \Delta V_k - \abs{\Delta\alpha_k} \right)
+        + \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+        \label{eq:87}
+    \end{align}
+    Note that $P \supset P_\varepsilon \supset P^\prime_\varepsilon$. It then follows from \eqref{eq:85} that 
+    \begin{align*}
+        \sum_{k=1}^n \Delta V_k
+        = V_a^b(\alpha) 
+        < V(P, \alpha)
+        + \frac{\varepsilon}{3A}
+        = \sum_{k=1}^n \abs{\Delta\alpha_k}
+        + \frac{\varepsilon}{3A}
+    \end{align*}
+    Rearranging the terms, we obtain 
+    \begin{align}
+        \sum_{k=1}^n \left( \Delta V_k - \abs{\Delta\alpha_k} \right)
+        < \frac{\varepsilon}{3A}
+        \label{eq:88}
+    \end{align}
+    By combining \eqref{eq:87} and \eqref{eq:88}, we have 
+    \begin{align}
+        U(P,f,V) - L(P,f,V)
+        < \frac{\varepsilon}{3}
+        + \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+        \label{eq:89}
+    \end{align}
+
+    It requires much more work to bound the term $\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}$ in \eqref{eq:89}. Let $h$ be a positive number given by 
+    \begin{align*}
+        h = \frac{\varepsilon}{3(V_a^b (\alpha) + 1)}
+    \end{align*}
+    Let $I(P), J(P) \subset \left\{0, 1, \ldots, n\right\}$ be defined as 
+    \begin{align*}
+        I(P) &= \set{k}{\Delta\alpha_k \geq 0} & 
+        J(P) &= \set{k}{\Delta\alpha_k < 0}
+    \end{align*}
+
+    For $k \in I(P)$, we can choose a pair of points, $s_k$ and $t_k$, in the $k$-th subinterval of $P$ such that 
+    \begin{align*}
+        M_k - m_k < f(s_k) - f(t_k) + h
+    \end{align*}
+    In this case, 
+    \begin{align}
+        (M_k - m_k)\abs{\Delta\alpha_k}
+        < \left(f(s_k) - f(t_k) + h\right)\abs{\Delta\alpha_k}
+        =  \left(f(s_k) - f(t_k) + h\right) \Delta\alpha_k
+        \label{eq:90}
+    \end{align}
+
+    On the other hand, for $k \in J(P)$, we can choose a pair of points, $s_k$ and $t_k$, in the $k$-th subinterval of $P$ such that 
+    \begin{align*}
+        M_k - m_k < -f(s_k) + f(t_k) + h
+    \end{align*}
+    It then follows that
+    \begin{align}
+        (M_k - m_k)\abs{\Delta\alpha_k}
+        < \left(-f(s_k) + f(t_k) + h\right)\abs{\Delta\alpha_k}
+        =  \left(f(s_k) - f(t_k) - h\right) \Delta\alpha_k
+        \label{eq:91}
+    \end{align}
+
+    Compare \eqref{eq:90} and \eqref{eq:91}, we conclude
+    \begin{align*}
+        (M_k - m_k)\abs{\Delta\alpha_k}
+        < \left(f(s_k) - f(t_k)\right) \Delta\alpha_k
+        + h \abs{\Delta\alpha_k}
+        \quad \forall k \in \left\{0, 1, \ldots, n\right\}
+    \end{align*}
+    Therefore, 
+    \begin{align*}
+        \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+        &< \sum_{k=1}^n \left(f(s_k) - f(t_k)\right) \Delta\alpha_k + h \sum_{k=1}^n \abs{\Delta\alpha_k} \\ 
+        &\leq \sum_{k=1}^n \left(f(s_k) - f(t_k)\right) \Delta\alpha_k + h V_a^b (\alpha) \\ 
+        &< \frac{\varepsilon}{3} + \sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k \\ 
+        &\leq \frac{\varepsilon}{3} + \abs{\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k}
+    \end{align*}
+    In summary,
+    \begin{align}
+        \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+        < \frac{\varepsilon}{3} + \abs{\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k}
+        \label{eq:92}
+    \end{align}
+    Since $P \supset P_\varepsilon \supset P^{\prime\prime}_\varepsilon$, we may apply \eqref{eq:86} to \eqref{eq:92} and obtain that 
+    \begin{align}
+        \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+        < \frac{\varepsilon}{3} + \frac{\varepsilon}{3}
+        = \frac{2\varepsilon}{3}
+        \label{eq:93}
+    \end{align}
+
+    \par Finally, by combining \eqref{eq:89} and \eqref{eq:93}, we have 
+    \begin{align*}
+        U(P,f,V) - L(P,f,V)
+        < \frac{\varepsilon}{3} + \frac{2\varepsilon}{3}
+        = \varepsilon
+    \end{align*}
+    Therefore, $f \in \mathfrak{R}(V(x))$ by Theorem~\ref{thm:28} since $V(x)$ is increasing.
+\end{proof}
+
+%------------------------------
+
+\section{Existence of Riemann-Stieltjes Integrals}
+
+%------------------------------
+
+\subsection{Sufficient Conditions}
+
+
+
+%------------------------------
+
+\subsection{Necessary Conditions}
 
 %==============================
+
+\chapter{Sequences and Series of Functions}
+
+%------------------------------
+
+\section{Uniform Convergence}
+
+\begin{theorem}[Cauchy's Criterion] \label{thm:42}
+    % TODO
+\end{theorem}
+
+%------------------------------
+
+\section{Uniform Convergence and Continuity}
+
+%------------------------------
+
+If we assume $f_n$ converges to $f$ uniformly, then we can interchange the two limiting processes, that is, 
+\begin{align*}
+    \lim_{x \to p} \lim_{n \to \infty} f_n(x)
+    = \lim_{n \to \infty} \lim_{x \to p} f_n(x)
+\end{align*}
+
+\begin{theorem}
+    Suppose $f_n \to f$ uniformly on $S$, and let $p$ be an accumulation point $S$. If the limit
+    \begin{align*}
+        A_n = \lim_{x \to p} f(x)
+    \end{align*}
+    exist for all $n \in \N^\ast$, then the sequence $\{A_n\}$ converges, say to $A$. Furthermore, the limit $\lim_{x \to p}f(x)$ also exists, and we have 
+    \begin{align*}
+        \lim_{x \to p}f(x) = A
+    \end{align*}
+    In other words, we can write 
+    \begin{align}
+        \lim_{x \to p} \lim_{n \to \infty} f_n(x)
+        = \lim_{n \to \infty} \lim_{x \to p} f_n(x)
+        \label{eq:97}
+    \end{align}
+\end{theorem}
+
+\begin{note}
+    One way to remember this theorem is that if the inner limits on both sides of \eqref{eq:97} exist, then the outer limits also exist and are equal to each other.
+\end{note}
+
+\begin{proof}
+    We first show that the sequence of limits $\{A_n\}$ converges. Given $\varepsilon > 0$, by Cauchy's criterion (Theorem~\ref{thm:42}), there exists an integer $N \in \N^\ast$ such that
+    \begin{align*}
+        \abs{f_m(x) - f_n(x)} < \varepsilon
+        \quad \forall m,n \geq N \; \forall x \in S
+    \end{align*}
+    Note that the absolute value function is continuous and both $f_m(x)$ and $f_n(x)$ have limits at point $p$. Using the rules of computing limits, we obtain
+    \begin{align*}
+        \varepsilon \geq \lim_{x \to p} \abs{f_m(x) - f_n(x)}
+        = \abs{ \lim_{x \to p} f_m(x) - \lim_{x \to p} f_n(x) }
+        = \abs{A_m - A_n}
+    \end{align*}
+    Therefore $\{A_n\}$ indeed converges by Cauchy's criterion for sequences. Let $A$ denote the limit of $\{A_n\}$.
+
+    Next, we shall prove $f(x)$ has a limit as $ x \to p$. We choose (another) arbitrary positive number $\varepsilon > 0$. Since $f_n \to f$ uniformly on $S$, there exist $N_1 \in \N^\ast$ such that 
+    \begin{align}
+        \abs{f(x) - f_n(x)} < \varepsilon
+        \quad \forall n \geq N_1
+        \label{eq:98}
+    \end{align}
+    Meanwhile, since we have proved $\{A_n\}$ converges to $A$, there exist $N_2 \in \N^\ast$ such that 
+    \begin{align}
+        \abs{A_n - A}
+        < \varepsilon / 3
+        \quad \forall n \geq N_2
+        \label{eq:99}
+    \end{align}
+    Let $N = \max\{N_1, N_2\}$. Because the limit of $\lim_{x \to p} f_N(x) = A_N$, there exist a neighborhood $V$ of $p$ in which
+    \begin{align}
+        \abs{f_N(x) - A_n} < \varepsilon / 3
+        \quad \forall x \in V \cap S
+        \label{eq:100}
+    \end{align}
+    We have 
+    \begin{align*}
+        \abs{f(x) - A}
+        \leq \abs{f(x) - f_N(x)}
+        + \abs{f_N(x) - A_N}
+        + \abs{A_N - A}
+        < \varepsilon
+        \quad \forall x \in V \cap S
+    \end{align*}
+    where the last inequality follows from \eqref{eq:98}, \eqref{eq:99} and \eqref{eq:100}. This completes the proof.
+\end{proof}
+
+%==============================
+
 
 % print index page
 \printindex

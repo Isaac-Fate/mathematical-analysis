@@ -1,3 +1,5 @@
+using Plots, LaTeXStrings
+
 # 3/4 circle
 begin
     t = 0:0.001:2pi*(3/4)

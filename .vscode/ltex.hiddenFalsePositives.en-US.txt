@@ -1,2 +1,3 @@
 {"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QLet \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be a real-valued function on \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
 {"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QLet our exploration begins with real-valued functions defined on real numbers.\\E$"}
+{"rule":"A_INFINITIVE","sentence":"^\\QLet \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q be an accumulate point of \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q, and suppose that\\E$"}
