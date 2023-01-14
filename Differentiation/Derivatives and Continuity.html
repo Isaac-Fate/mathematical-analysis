@@ -136,6 +136,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/index.html">
+   Numerical Sequences and Series
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
    Limits and Continuity
@@ -152,8 +157,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Computing%20Limits.html">
+     Computing Limits
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html">
      Continuous Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Continuity%20of%20Composite%20Functions.html">
+     Continuity of Composite Functions
     </a>
    </li>
    <li class="toctree-l2">
@@ -310,6 +325,28 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Existence%20of%20Riemann-Stieltjes%20Integrals.html">
      Existence of Riemann-Stieltjes Integrals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/index.html">
+   Sequences and Series of Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html">
+     Uniform Convergence
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html">
+     Uniform Convergence and Continuity
     </a>
    </li>
   </ul>
@@ -502,7 +539,7 @@ title="Print to PDF"
 <h1>Derivatives and Continuity<a class="headerlink" href="#derivatives-and-continuity" title="Permalink to this headline">#</a></h1>
 <p>The next theorem helps to reduce some theorems on derivatives to theorems on continuity.</p>
 <div class="proof theorem admonition" id="thm:1">
-<p class="admonition-title"><span class="caption-number">Theorem 6 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 8 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be a function defined on  <span class="math notranslate nohighlight">\((a, b)\)</span> , and  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  a fixed point in that interval. We have the following statements:</p>
 <ul class="simple">
@@ -541,14 +578,14 @@ f(x) - f(c) = (x - c)  \phi (x)
 \end{align*}\]</div>
 <p>This implies  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c\)</span> , and  <span class="math notranslate nohighlight">\(f^\prime(c) = \phi(c)\)</span> .</p>
 </div>
-<p>With the help of <a class="reference internal" href="#thm:1">Theorem 6</a>, we can easily show that <span class="math notranslate nohighlight">\(f\)</span> must be continuous at <span class="math notranslate nohighlight">\(c\)</span> if it is differentiable there.</p>
+<p>With the help of <a class="reference internal" href="#thm:1">Theorem 8</a>, we can easily show that <span class="math notranslate nohighlight">\(f\)</span> must be continuous at <span class="math notranslate nohighlight">\(c\)</span> if it is differentiable there.</p>
 <div class="proof theorem admonition" id="thm:2">
-<p class="admonition-title"><span class="caption-number">Theorem 7 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 9 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be defined on  <span class="math notranslate nohighlight">\((a, b)\)</span> . If  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> , then it is continuous at  <span class="math notranslate nohighlight">\(c\)</span> .</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. By  <a class="reference internal" href="#thm:1">Theorem 6</a> , there exists a function  <span class="math notranslate nohighlight">\(\phi\)</span>  on  <span class="math notranslate nohighlight">\((a, b)\)</span>  such that  <span class="math notranslate nohighlight">\(\phi\)</span>  is continuous at  <span class="math notranslate nohighlight">\(c\)</span> , and</p>
+<p>Proof. By  <a class="reference internal" href="#thm:1">Theorem 8</a> , there exists a function  <span class="math notranslate nohighlight">\(\phi\)</span>  on  <span class="math notranslate nohighlight">\((a, b)\)</span>  such that  <span class="math notranslate nohighlight">\(\phi\)</span>  is continuous at  <span class="math notranslate nohighlight">\(c\)</span> , and</p>
 <div class="math notranslate nohighlight" id="equation-eq-2">
 <span class="eqno">(9)<a class="headerlink" href="#equation-eq-2" title="Permalink to this equation">#</a></span>\[\begin{align}
 f(x) - f(c) = (x - c)  \phi (x)

@@ -136,6 +136,11 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/index.html">
+   Numerical Sequences and Series
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
    Limits and Continuity
@@ -152,8 +157,18 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Computing%20Limits.html">
+     Computing Limits
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html">
      Continuous Functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Continuity%20of%20Composite%20Functions.html">
+     Continuity of Composite Functions
     </a>
    </li>
    <li class="toctree-l2">
@@ -310,6 +325,28 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="Existence%20of%20Riemann-Stieltjes%20Integrals.html">
      Existence of Riemann-Stieltjes Integrals
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/index.html">
+   Sequences and Series of Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html">
+     Uniform Convergence
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html">
+     Uniform Convergence and Continuity
     </a>
    </li>
   </ul>
@@ -515,7 +552,7 @@ U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \varepsilon
 </div><p>Essentially, Riemann’s condition requires that the upper and lower sums should be arbitrarily close.</p>
 <p>The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann’s condition are equivalent.</p>
 <div class="proof theorem admonition" id="thm:28">
-<p class="admonition-title"><span class="caption-number">Theorem 39 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 41 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is bounded and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Then the following statements are equivalent.</p>
 <ul class="simple">
@@ -606,7 +643,7 @@ U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \varepsilon
 U(P_1,f, \alpha ) &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon \quad \text{and} \quad
 L(P_2,f, \alpha ) &gt;  \lowint _a^b f  \; \mathrm{d} \alpha  -  \varepsilon
 \end{align*}\]</div>
-<p>Let  <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span>  and  <span class="math notranslate nohighlight">\(P\)</span>  be any of its refinements. By  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 35</a>  and  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#equation-eq-46">(56)</a> , it is clear</p>
+<p>Let  <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span>  and  <span class="math notranslate nohighlight">\(P\)</span>  be any of its refinements. By  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 37</a>  and  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#equation-eq-46">(56)</a> , it is clear</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \lowint _a^b f  \; \mathrm{d} \alpha  -  \varepsilon
@@ -650,7 +687,7 @@ L(P_2,f, \alpha ) &gt;  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  -  \varepsi
 \leq  U(P,f, \alpha )
 &lt;  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  +  \varepsilon
 \end{align*}\]</div>
-<p>The upper and lower integrals are equal, say to  <span class="math notranslate nohighlight">\(A\)</span> , by  <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 13</a> . It follows that</p>
+<p>The upper and lower integrals are equal, say to  <span class="math notranslate nohighlight">\(A\)</span> , by  <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 15</a> . It follows that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \abs{S(P,f,\alpha) - A}  &lt;  \varepsilon
@@ -697,7 +734,7 @@ L(P,f, \alpha ) = m_n  [ \alpha (0) -  \alpha (x_ {n-1} ) ]  = -2
 \upint _ {-3\pi} ^0 = 2
 \quad \text{and} \quad \lowint _ {-3\pi} ^0 = -2
 \end{align*}\]</div>
-<p>Therefore, by  <a class="reference internal" href="#thm:28">Theorem 39</a> ,  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> , and hence on  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> .</p>
+<p>Therefore, by  <a class="reference internal" href="#thm:28">Theorem 41</a> ,  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> , and hence on  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> .</p>
 <p>This proof is way cleaner than the one given in  <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 12</a>  thanks to Darboux’s formulation of integrals.</p>
 </div>
 </div>

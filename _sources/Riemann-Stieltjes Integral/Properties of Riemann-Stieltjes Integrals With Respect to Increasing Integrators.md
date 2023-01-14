@@ -70,6 +70,7 @@ In fact, $f$ is integrable on all sub-intervals of $[a, b]$.
 
 
 ````{prf:theorem}
+:label: thm:40
 Suppose  $\alpha$  is increasing on  $[a, b]$ . Let  $[c, d] \subset[a, b]$  be a sub-interval. If  $f \in \mathfrak{R}(\alpha)$  on  $[a, b]$ , then  $f \in \mathfrak{R}(\alpha)$  on  $[c, d]$ .
 ````
 
@@ -524,4 +525,54 @@ Hence,
 ```
 
 by  {eq}`eq:96` . Therefore,  $f$  is integrable w.r.t.  $G$  on  $[a, b]$  with  $\int_{a}^{b} f \; \mathrm{d}G = \int_{a}^{b} f g  \; \mathrm{d}\alpha$ .
+````
+
+````{prf:example}
+Let
+
+```{math}
+\begin{align*}
+\alpha (x)
+=  \begin{cases}
+1 &x \geq 0 \\
+0 &x < 0
+\end{cases} ,
+\quad
+-1  \leq  x  \leq  1
+\end{align*}
+```
+
+And let  $f$  and  $g$  be any two functions defined on  $[-1, 1]$  that are continuous from the left at  $x=0$ . By  {prf:ref}`thm:24`  and  {prf:ref}`thm:40` , we know both functions are integrable w.r.t.  $\alpha$  on  $[-1, x]$  if  $-1 < x \leq 1$  with
+
+```{math}
+\begin{align*}
+F(x) =  \int _ {-1} ^x f  \; \mathrm{d} \alpha  =  \begin{cases}
+f(0) &x \geq 0 \\
+0 &x < 0
+\end{cases} \quad \text{and} \quad
+G(x) =  \int _ {-1} ^x g  \; \mathrm{d} \alpha  =  \begin{cases}
+g(0) &x \geq 0 \\
+0 &x < 0
+\end{cases}
+\end{align*}
+```
+
+Note that  $F$  and  $G$  are also step functions that are continuous from the right at  $x = 0$ . Hence, by applying  {prf:ref}`thm:24`  again, we have
+
+```{math}
+\begin{align*}
+\int _ {-1} ^ {1}  f  \; \mathrm{d} G = f(0)g(0)
+\quad \text{and} \quad \int _ {-1} ^ {1}  g  \; \mathrm{d} F = f(0)g(0)
+\end{align*}
+```
+
+On the other hand, since the product  $f g$  is continuous from the left at  $x=0$ , it follows from  {prf:ref}`thm:24`  that
+```{math}
+\begin{align*}
+\int _ {-1} ^ {1}  f g  \; \mathrm{d} \alpha
+= f(0)g(0)
+\end{align*}
+```
+
+The results agree with  {prf:ref}`thm:39`  as expected.
 ````
