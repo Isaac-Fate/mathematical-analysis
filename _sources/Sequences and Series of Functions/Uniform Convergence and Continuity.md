@@ -1,6 +1,6 @@
 # Uniform Convergence and Continuity
 
-If we assume $f_n$ converges to $f$ uniformly, then we can interchange the two limiting processes, that is,
+If we assume $f_n$ converges to $f$ uniformly, then we can interchange the two limit processes, that is,
 
 ```{math}
 \begin{align*}
@@ -10,6 +10,7 @@ If we assume $f_n$ converges to $f$ uniformly, then we can interchange the two l
 ```
 
 ````{prf:theorem}
+:label: thm:43
 Suppose  $f_n \to f$  uniformly on  $S$ , and let  $p$  be an accumulation point  $S$ . If the limit
 
 ```{math}
@@ -105,4 +106,3 @@ We have
 
 where the last inequality follows from  {eq}`eq:98` ,  {eq}`eq:99`  and  {eq}`eq:100` . This completes the proof.
 ````
-\printindex
