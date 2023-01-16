@@ -1,10 +1,76 @@
+```{index} term-by-term differentiation
+```
 # Uniform Convergence and Differentiation
 
+In this section, we study the conditions that allow us to swap the limit and derivative symbols:
+
+```{math}
+:label: eq:104
+\begin{align}
+\odvs{\lim_{n \to \infty} f_n(x)}{x}
+=  \lim _ {n \to \infty} \odvs{f_n(x)}{x}
+\end{align}
+```
+
+However, assuming $f_n \to f$ uniformly on $S$ is not sufficient to guarantee that {eq}`eq:104` holds. The following is an example.
+
+
+````{prf:example}
+Let
+
+```{math}
+\begin{align*}
+f_n(x) =  \frac{\sin nx}{\sqrt{n}} ,
+\quad  x  \in \R
+\end{align*}
+```
+
+Because  $\abs{\sin nx}$  is bounded by  $1$  and  $1 / \sqrt{n} \to 0$  as  $n \to \infty$ , the limit of  $f_n$  is  $f(x) = 0$ . Note that
+
+```{math}
+\begin{align*}
+M_n =  \sup _ {x \in \R} \abs{f_n(x) - f(x)}
+=  \sup _ {x \in \R} \frac{\abs{\sin nx}}{\sqrt{n}}
+=  \frac{1}{\sqrt{n}}
+\end{align*}
+```
+
+Since  $\lim_{n \to \infty} M_n = 0$ ,  $f_n \to f$  uniformly on  $\R$ .
+
+It is clear  $f^\prime(x) = 0$ . We now show that the limiting derivative of  $f_n$  is not  $f^\prime$  in general. We have
+
+```{math}
+\begin{align*}
+f^ \prime _n(x) =  \sqrt{n} \cos  nx
+\end{align*}
+```
+
+We note that the limit of  $f^\prime_n(x)$  will not exist as a finite number for most of  $x$ s as  $n \to \infty$ . In particular,  $f^\prime_n(0) = \sqrt{n}$  and hence  $\lim_{n \to \infty} f^\prime_n(0) = \infty$ . A plot of  $f_n$  and  $f^\prime_n$  is shown in  {numref}`fig:11` .
+
+
+```{figure} ../figures/graph-010.png
+---
+name: fig:11
+---
+Left: $f_n(x) = (\sin nx) / \sqrt{n}$. Right: $f^\prime_n(x)$.
+```
+````
+
 ````{prf:theorem}
+:label: thm:44
 Let  $\{f_n\}$  be a sequence of real-valued functions each of which has a finite derivative at every point in  $(a, b)$ . Suppose there exists a point  $x_0 \in (a, b)$  such that the numerical sequence  $\{f_n(x_0)\}$  converges. Suppose further that there exists a function  $g$  such that  $f^\prime_n \to g$  uniformly on  $(a, b)$ . Then
 
 - (1) there exists a function  $f$  such that  $f_n \to f$  uniformly on  $(a, b)$ , and
 - (2) $f^\prime(x)$  exists everywhere in  $(a, b)$  with  $f^\prime(x) = g(x)$ .
+
+In this case, we can write
+
+```{math}
+\begin{align*}
+\odvs{\lim_{n \to \infty} f_n(x)}{x}
+=  \lim _ {n \to \infty} \odvs{f_n(x)}{x}
+\end{align*}
+```
 ````
 
 ````{prf:proof}
@@ -72,11 +138,19 @@ also holds by  {eq}`eq:101` . Therefore, we have
 
 which implies that  $\{f_n\}$  converges uniformly on  $(a, b)$ . Suppose that the limit function is  $f$ .
 
-Let  $c \in (a, b)$ . Define
+Let  $c \in (a, b)$ . By  {prf:ref}`thm:1` , there exists a continuous function  $\phi$  defined on  $(a, b)$  such that
 
 ```{math}
 \begin{align*}
-\phi _n(x) =  \frac{f_n(x) - f_n(c)}{x-c}
+f_n(x) - f_n(c) = (x - c)  \phi _n(x)
+\end{align*}
+```
+
+with  $\phi_n(c) = f^\prime_n(c)$ , i.e.,
+
+```{math}
+\begin{align*}
+\lim _ {x \to c} \phi _n(x)=  f^ \prime _n(c)
 \end{align*}
 ```
 
@@ -93,23 +167,15 @@ We want to show
 using  {prf:ref}`thm:43` .
 :::
 
-Note that  $\lim_{x \to c}\phi_n(x)$  exists since  $f^\prime(c)$  exists, and
+Note that  $\lim_{n \to \infty}\phi_n(x)$  exists, and
 
 ```{math}
 \begin{align*}
-\lim _ {x \to c} \phi _n(x) = f^ \prime _n(c)
+\lim _ {n \to \infty} \phi _n(x) =  \frac{f(x) - f(c)}{x - c}  =:  \phi (x)
 \end{align*}
 ```
 
-On the other hand, the limit  $\lim_{n \to \infty}\phi_n(x)$  also exists since we have proved  $f_n(x)$  exists for each  $x$  as  $n \to \infty$ . We have
-
-```{math}
-\begin{align*}
-\lim _ {n \to \infty} \phi _n(x) =  \frac{f(x) - f(c)}{x - c}
-\end{align*}
-```
-
-Then by  {prf:ref}`thm:43` , the limits  $\lim_{n \to \infty} f^\prime_n(c)$  and  $\lim_{x \to c} [f(x) - f(c)] / (x - c)$  both exist and are equal to each other that is,
+We claim that  $\phi_n \to \phi$  uniformly on  $(a, b)$ . The proof of this assertion is left as an exercise. (See  {ref}`Exercise 13<ex:4>` .) Since both the limits  $\lim_{x \to c} \phi_n(x)$  and  $\lim_{n \to \infty} \phi_n(x)$  exist, and  $\phi_n(x)$  converges uniformly on  $(a, b)$ , by  {prf:ref}`thm:43` , the limits  $\lim_{n \to \infty} f^\prime_n(c)$  and  $\lim_{x \to c} [f(x) - f(c)] / (x - c)$  both exist and are equal to each other, that is,
 
 ```{math}
 \begin{align*}
@@ -128,4 +194,64 @@ f^ \prime (c) =  \lim _ {n \to \infty}  f^ \prime _n(c) = g(c)
 
 This completes the proof.
 ````
+
+````{admonition} Exercise 13
+:name: ex:4
+Complete the above proof by showing  $\phi_n \to \phi$  uniformly on  $(a, b)$ .
+````
+
+````{admonition} Solution
+:class: tip, dropdown
+Given  $\varepsilon > 0$ , since  $f_n \to f$  uniformly on  $(a, b)$ , there exist an integer  $N \in \N^\ast$  such that
+
+```{math}
+\begin{align*}
+\abs{f_n(x) - f(x)}  < (b - a)  \varepsilon  / 2
+\quad \forall  n  \geq  N  \; \forall  x  \in (a, b)
+\end{align*}
+```
+
+Let  $n \geq N$ . We then have
+
+```{math}
+\begin{align*}
+\abs{\phi_n(x) - \phi(x)} & \leq \frac{\abs{ [f_n(x) - f(x)] - [f_n(c) - f(c)] }}{\abs{x - c}} \\ & \leq \frac{\abs{f_n(x) - f(x)} + \abs{f_n(c) - f(c)}}{b - a} \\ &<  \frac{(b - a) \varepsilon / 2 + (b - a) \varepsilon / 2}{b - a} \\ &=  \varepsilon
+\end{align*}
+```
+
+Because
+
+```{math}
+\begin{align*}
+\abs{\phi_n(x) - \phi(x)}  <  \varepsilon
+\end{align*}
+```
+
+holds for all  $n \geq N$  and for all  $x \in (a, b)$ , we conclude that  $\phi_n \to \phi$  uniformly on  $(a, b)$ .
+````
+
+The following theorem is another version of {prf:ref}`thm:44` in terms of a series of functions $\sum f_n$.
+
+
+````{prf:theorem}
+:label: thm:45
+Let  $\sum f_n$  be a series of real-valued functions each of which has a finite derivative at every point in  $(a, b)$ . Suppose there exists a point  $x_0 \in (a, b)$  such that the numerical series  $\sum f_n(x_0)$  converges. Suppose further that there exists a function  $g$  such that  $\sum f^\prime_n \to g$  uniformly on  $(a, b)$ . Then
+
+- (1) there exists a function  $f$  such that  $\sum f_n \to f$  uniformly on  $(a, b)$ , and
+- (2) $f^\prime(x)$  exists everywhere in  $(a, b)$  with  $f^\prime(x) = g(x)$ .
+
+In this case, we can write
+
+```{math}
+:label: eq:103
+\begin{align}
+\odvs{\sum f_n(x)}{x}
+=  \sum \odvs{f_n(x)}{x}
+\end{align}
+```
+````
+
+:::{note}
+Equation  {eq}`eq:103`  is also known as  **term-by-term differentiation**  .
+:::
 \printindex
