@@ -6,7 +6,6 @@ In Darboux's formulation, the integral exists if and only if the upper and lower
 
 
 ````{prf:definition} Riemann's Condition
-Riemann's Condition
 Suppose  $f$  is bounded and  $\alpha$  is increasing on  $[a, b]$ . Function  $f$  is said to satisfy  **Riemann's condition**  w.r.t.  $\alpha$  on  $[a, b]$  if for any  $\varepsilon > 0$ , there exists a partition  $P_\varepsilon$  on  $[a, b]$  such that
 
 ```{math}

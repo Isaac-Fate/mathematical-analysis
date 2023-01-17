@@ -180,7 +180,6 @@ If a function starts from point $a$ and ends at point $b$ with the same level of
 
 ````{prf:theorem} Rolle
 :label: thm:9
-Rolle
 Let  $f$  be defined on  $[a, b]$ . Suppose  $f^\prime(x)$  exists (as finite or infinite number) for each  $x \in (a, b)$ , and  $f$  is continuous at the endpoints  $a$  and  $b$ . If  $f(a) = f(b)$ , then there exists  $c \in (a, b)$  such that
 
 ```{math}
@@ -206,7 +205,6 @@ The **mean value theorem** is a generalization of Rolle's theorem. Roughly speak
 
 ````{prf:theorem} Mean Value Theorem
 :label: thm:8
-Mean Value Theorem
 Suppose  $f$  has a derivative (finite or infinite) at each point of  $(a, b)$ , and suppose  $f$  is continuous at endpoints  $a$  and  $b$ . Then there exists  $c \in (a, b)$  such that
 
 ```{math}
@@ -218,7 +216,6 @@ f(b) - f(a) = f^ \prime (c) (b - a)
 
 ````{prf:theorem} Generalized Mean Value Theorem
 :label: thm:7
-Generalized Mean Value Theorem
 Let  $f$  and  $g$  be two functions, each having a derivative (finite or infinite) at each point in  $(a, b)$ . Suppose  $f$  and  $g$  are both continuous at endpoints  $a$  and  $b$ , and  $f^\prime(x)$  and  $g^\prime(x)$  do not assume infinite values simultaneously. Then there exists  $c \in (a, b)$  such that
 
 ```{math}

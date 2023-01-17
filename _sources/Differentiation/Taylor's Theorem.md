@@ -68,7 +68,6 @@ at point $c$ provided that $f$ has up to $(n+1)$-th order derivative. The reason
 
 ````{prf:theorem} Taylor
 :label: thm:16
-Taylor
 Let  $f$  be a function having  $(n+1)$ -th order derivative everywhere in  $(a, b)$ , and suppose  $f^{(n)}$  is continuous on  $[a, b]$ . Let  $c \in (a, b)$  be an interior point. Then for every  $x \in[a, b]$  other than  $c$ , we have
 
 ```{math}

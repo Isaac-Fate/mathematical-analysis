@@ -33,7 +33,6 @@ Note that the derivative $f^\prime$ is not continuous at $x = 0$ since the limit
 
 ````{prf:theorem} Darboux
 :label: thm:12
-Darboux
 Suppose  $f$  is defined on  $[a, b]$ , and it has a derivative (finite or infinite) at each point in  $(a, b)$ . Assume also that the one-sided derivatives  $f^\prime_{+}(a)$  and  $f^\prime_{-}(b)$  both exist as finite numbers, and  $f^\prime_{+}(a) \neq f^\prime_{-}(b)$ . If  $k$  is a number in between  $f^\prime_{+}(a)$  and  $f^\prime_{-}(b)$ , then there exists an interior point  $c \in (a, b)$  such that
 
 ```{math}
