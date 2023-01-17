@@ -136,17 +136,34 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/index.html">
    Numerical Sequences and Series
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
+     Subseries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Double%20Series.html">
+     Double Series
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
    Limits and Continuity
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -187,8 +204,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Differentiation/index.html">
    Differentiation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -229,8 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/index.html">
    Functions of Bounded Variation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +278,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Riemann-Stieltjes%20Integral/index.html">
    Riemann-Stieltjes Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -333,8 +350,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="index.html">
    Sequences and Series of Functions
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -549,7 +566,7 @@ title="Print to PDF"
 =  \lim _ {n \to \infty} \lim _ {x \to p}  f_n(x)
 \end{align*}\]</div>
 <div class="proof theorem admonition" id="thm:43">
-<p class="admonition-title"><span class="caption-number">Theorem 53 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 57 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(f_n \to f\)</span>  uniformly on  <span class="math notranslate nohighlight">\(S\)</span> , and let  <span class="math notranslate nohighlight">\(p\)</span>  be an accumulation point  <span class="math notranslate nohighlight">\(S\)</span> . If the limit</p>
 <div class="math notranslate nohighlight">
@@ -563,17 +580,17 @@ A_n =  \lim _ {x \to p}  f(x)
 \end{align*}\]</div>
 <p>In other words, we can write</p>
 <div class="math notranslate nohighlight" id="equation-eq-97">
-<span class="eqno">(97)<a class="headerlink" href="#equation-eq-97" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(98)<a class="headerlink" href="#equation-eq-97" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lim _ {x \to p} \lim _ {n \to \infty}  f_n(x)
 =  \lim _ {n \to \infty} \lim _ {x \to p}  f_n(x)
 \end{align}\]</div>
 </div>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>One way to remember this theorem is that if the inner limits on both sides of  <a class="reference internal" href="#equation-eq-97">(97)</a>  exist, then the outer limits also exist and are equal to each other.</p>
+<p>One way to remember this theorem is that if the inner limits on both sides of  <a class="reference internal" href="#equation-eq-97">(98)</a>  exist, then the outer limits also exist and are equal to each other.</p>
 </div>
 <div class="proof admonition" id="proof">
-<p>Proof. We first show that the sequence of limits  <span class="math notranslate nohighlight">\(\{A_n\}\)</span>  converges. Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , by Cauchy’s criterion ( <a class="reference internal" href="Uniform%20Convergence.html#thm:42">Theorem 52</a> ), there exists an integer  <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span>  such that</p>
+<p>Proof. We first show that the sequence of limits  <span class="math notranslate nohighlight">\(\{A_n\}\)</span>  converges. Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , by Cauchy’s criterion ( <a class="reference internal" href="Uniform%20Convergence.html#thm:42">Theorem 56</a> ), there exists an integer  <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span>  such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \abs{f_m(x) - f_n(x)}  &lt;  \varepsilon \quad \forall  m,n  \geq  N  \; \forall  x  \in  S
@@ -588,19 +605,19 @@ A_n =  \lim _ {x \to p}  f(x)
 <p>Therefore  <span class="math notranslate nohighlight">\(\{A_n\}\)</span>  indeed converges by Cauchy’s criterion for sequences. Let  <span class="math notranslate nohighlight">\(A\)</span>  denote the limit of  <span class="math notranslate nohighlight">\(\{A_n\}\)</span> .</p>
 <p>Next, we shall prove  <span class="math notranslate nohighlight">\(f(x)\)</span>  has a limit as  <span class="math notranslate nohighlight">\( x \to p\)</span> . We choose (another) arbitrary positive number  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> . Since  <span class="math notranslate nohighlight">\(f_n \to f\)</span>  uniformly on  <span class="math notranslate nohighlight">\(S\)</span> , there exist  <span class="math notranslate nohighlight">\(N_1 \in \N^\ast\)</span>  such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-98">
-<span class="eqno">(98)<a class="headerlink" href="#equation-eq-98" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(99)<a class="headerlink" href="#equation-eq-98" title="Permalink to this equation">#</a></span>\[\begin{align}
 \abs{f(x) - f_n(x)}  &lt;  \varepsilon \quad \forall  n  \geq  N_1
 \end{align}\]</div>
 <p>Meanwhile, since we have proved  <span class="math notranslate nohighlight">\(\{A_n\}\)</span>  converges to  <span class="math notranslate nohighlight">\(A\)</span> , there exist  <span class="math notranslate nohighlight">\(N_2 \in \N^\ast\)</span>  such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-99">
-<span class="eqno">(99)<a class="headerlink" href="#equation-eq-99" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(100)<a class="headerlink" href="#equation-eq-99" title="Permalink to this equation">#</a></span>\[\begin{align}
 \abs{A_n - A}
 &lt;  \varepsilon  / 3
 \quad \forall  n  \geq  N_2
 \end{align}\]</div>
 <p>Let  <span class="math notranslate nohighlight">\(N = \max\{N_1, N_2\}\)</span> . Because the limit of  <span class="math notranslate nohighlight">\(\lim_{x \to p} f_N(x) = A_N\)</span> , there exist a neighborhood  <span class="math notranslate nohighlight">\(V\)</span>  of  <span class="math notranslate nohighlight">\(p\)</span>  in which</p>
 <div class="math notranslate nohighlight" id="equation-eq-100">
-<span class="eqno">(100)<a class="headerlink" href="#equation-eq-100" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(101)<a class="headerlink" href="#equation-eq-100" title="Permalink to this equation">#</a></span>\[\begin{align}
 \abs{f_N(x) - A_n}  &lt;  \varepsilon  / 3
 \quad \forall  x  \in  V  \cap  S
 \end{align}\]</div>
@@ -612,7 +629,7 @@ A_n =  \lim _ {x \to p}  f(x)
 +  \abs{A_N - A}
 &lt;  \varepsilon \quad \forall  x  \in  V  \cap  S
 \end{align*}\]</div>
-<p>where the last inequality follows from  <a class="reference internal" href="#equation-eq-98">(98)</a> ,  <a class="reference internal" href="#equation-eq-99">(99)</a>  and  <a class="reference internal" href="#equation-eq-100">(100)</a> . This completes the proof.</p>
+<p>where the last inequality follows from  <a class="reference internal" href="#equation-eq-98">(99)</a> ,  <a class="reference internal" href="#equation-eq-99">(100)</a>  and  <a class="reference internal" href="#equation-eq-100">(101)</a> . This completes the proof.</p>
 </div>
 </div>
 

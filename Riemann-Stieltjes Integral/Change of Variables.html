@@ -136,17 +136,34 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/index.html">
    Numerical Sequences and Series
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
+     Subseries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Double%20Series.html">
+     Double Series
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
    Limits and Continuity
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -187,8 +204,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Differentiation/index.html">
    Differentiation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -229,8 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/index.html">
    Functions of Bounded Variation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +278,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="index.html">
    Riemann-Stieltjes Integral
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -333,8 +350,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/index.html">
    Sequences and Series of Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -543,7 +560,7 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="change-of-variables">
 <h1>Change of Variables<a class="headerlink" href="#change-of-variables" title="Permalink to this headline">#</a></h1>
 <div class="proof theorem admonition" id="thm:21">
-<p class="admonition-title"><span class="caption-number">Theorem 35 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 39 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and  <span class="math notranslate nohighlight">\(\phi\)</span>  is a  <strong>strictly monotonic continuous</strong>  function on a closed interval  <span class="math notranslate nohighlight">\(I\)</span>  with endpoints  <span class="math notranslate nohighlight">\(c\)</span>  and  <span class="math notranslate nohighlight">\(d\)</span> . ( <span class="math notranslate nohighlight">\(I\)</span>  is either  <span class="math notranslate nohighlight">\([c, d]\)</span>  or  <span class="math notranslate nohighlight">\([d, c]\)</span> .) Assume</p>
 <div class="math notranslate nohighlight">
@@ -587,7 +604,7 @@ P^ \prime  :=  \phi (P) :=  \left\{\ phi (y_0),  \ldots ,  \phi (y_n) \right \}
 \end{align*}\]</div>
 <p>(Existence of the Integral) Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , since  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P^\prime_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-32">
-<span class="eqno">(49)<a class="headerlink" href="#equation-eq-32" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(50)<a class="headerlink" href="#equation-eq-32" title="Permalink to this equation">#</a></span>\[\begin{align}
 \abs{S(P^\prime, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha}  &lt;  \varepsilon \quad \forall  P^ \prime \supset  P^ \prime _ \varepsilon
 \end{align}\]</div>
 <p>Let partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([c, d]\)</span>  be given by  <span class="math notranslate nohighlight">\(P_\varepsilon = \phi^{-1}(P^\prime_\varepsilon)\)</span> . For any refinement  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span> , we have</p>
@@ -605,10 +622,10 @@ S(P, h,  \beta )
 \end{align*}\end{split}\]</div>
 <p>where  <span class="math notranslate nohighlight">\(P^\prime = \phi(P)\)</span> . In summary,</p>
 <div class="math notranslate nohighlight" id="equation-eq-33">
-<span class="eqno">(50)<a class="headerlink" href="#equation-eq-33" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(51)<a class="headerlink" href="#equation-eq-33" title="Permalink to this equation">#</a></span>\[\begin{align}
 S(P, h,  \beta ) = S(P^ \prime ,  \phi ,  \alpha )
 \end{align}\]</div>
-<p>What is left to show is that  <span class="math notranslate nohighlight">\(P^\prime \supset P^\prime_\varepsilon\)</span> . For any point  <span class="math notranslate nohighlight">\(x \in P^\prime_\varepsilon\)</span> , we have  <span class="math notranslate nohighlight">\(\phi^{-1}(x) \in P_\varepsilon\)</span>  since  <span class="math notranslate nohighlight">\(P_\varepsilon = \phi^{-1}(P_\varepsilon)\)</span> . Recall that  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span> . Thus,  <span class="math notranslate nohighlight">\(\phi^{-1}(x) \in P\)</span> . And because  <span class="math notranslate nohighlight">\(P^\prime = \phi(P)\)</span> , we have  <span class="math notranslate nohighlight">\(x = \phi(\phi^{-1}(x)) \in P^\prime\)</span> . Therefore, indeed  <span class="math notranslate nohighlight">\(P^\prime \supset P^\prime_\varepsilon\)</span> . It then follows from  <a class="reference internal" href="#equation-eq-32">(49)</a>  and  <a class="reference internal" href="#equation-eq-33">(50)</a>  that</p>
+<p>What is left to show is that  <span class="math notranslate nohighlight">\(P^\prime \supset P^\prime_\varepsilon\)</span> . For any point  <span class="math notranslate nohighlight">\(x \in P^\prime_\varepsilon\)</span> , we have  <span class="math notranslate nohighlight">\(\phi^{-1}(x) \in P_\varepsilon\)</span>  since  <span class="math notranslate nohighlight">\(P_\varepsilon = \phi^{-1}(P_\varepsilon)\)</span> . Recall that  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span> . Thus,  <span class="math notranslate nohighlight">\(\phi^{-1}(x) \in P\)</span> . And because  <span class="math notranslate nohighlight">\(P^\prime = \phi(P)\)</span> , we have  <span class="math notranslate nohighlight">\(x = \phi(\phi^{-1}(x)) \in P^\prime\)</span> . Therefore, indeed  <span class="math notranslate nohighlight">\(P^\prime \supset P^\prime_\varepsilon\)</span> . It then follows from  <a class="reference internal" href="#equation-eq-32">(50)</a>  and  <a class="reference internal" href="#equation-eq-33">(51)</a>  that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \abs{S(P, h, \beta) - \int_a^b f \; \mathrm{d}\alpha}  &lt;  \varepsilon \quad \forall  P  \supset  P_ \varepsilon

@@ -136,17 +136,34 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/index.html">
    Numerical Sequences and Series
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
+     Subseries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Double%20Series.html">
+     Double Series
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
    Limits and Continuity
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -187,8 +204,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Differentiation/index.html">
    Differentiation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -229,8 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="index.html">
    Functions of Bounded Variation
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +278,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Riemann-Stieltjes%20Integral/index.html">
    Riemann-Stieltjes Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -333,8 +350,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/index.html">
    Sequences and Series of Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -543,11 +560,11 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="additive-property-of-total-variation">
 <h1>Additive Property of Total Variation<a class="headerlink" href="#additive-property-of-total-variation" title="Permalink to this headline">#</a></h1>
 <div class="proof theorem admonition" id="thm:34">
-<p class="admonition-title"><span class="caption-number">Theorem 28 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 32 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be of bounded variation on  <span class="math notranslate nohighlight">\([a, b]\)</span> . For a point  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> , we have  <span class="math notranslate nohighlight">\(f\)</span>  is of bounded variation on  <span class="math notranslate nohighlight">\([a, c]\)</span>  and  <span class="math notranslate nohighlight">\([c, b]\)</span> , and</p>
 <div class="math notranslate nohighlight" id="equation-eq-79">
-<span class="eqno">(31)<a class="headerlink" href="#equation-eq-79" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(32)<a class="headerlink" href="#equation-eq-79" title="Permalink to this equation">#</a></span>\[\begin{align}
 V_a^b(f) = V_a^c(f) + V_c^b(f)
 \end{align}\]</div>
 </div>
@@ -559,15 +576,15 @@ V_a^b(P, f) = V_a^c(P^ \prime , f) + V_c^b(P^ {\prime\prime} , f)
 \end{align*}\]</div>
 <p>Since  <span class="math notranslate nohighlight">\(f\)</span>  is of bounded variation on  <span class="math notranslate nohighlight">\([a, b]\)</span> , it follows that</p>
 <div class="math notranslate nohighlight" id="equation-eq-80">
-<span class="eqno">(32)<a class="headerlink" href="#equation-eq-80" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(33)<a class="headerlink" href="#equation-eq-80" title="Permalink to this equation">#</a></span>\[\begin{align}
 \infty  &gt; V_a^b(f)
 \geq  V_a^b(P, f)
 = V_a^c(P^ \prime , f) + V_c^b(P^ {\prime\prime} , f)
 \end{align}\]</div>
-<p>Note that  <a class="reference internal" href="#equation-eq-80">(32)</a>  holds for any partition  <span class="math notranslate nohighlight">\(P^\prime\)</span>  on  <span class="math notranslate nohighlight">\([a, c]\)</span>  and any partition  <span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span>  on  <span class="math notranslate nohighlight">\([c, b]\)</span> . Therefore,  <span class="math notranslate nohighlight">\(f\)</span>  is of bounded variation on  <span class="math notranslate nohighlight">\([a, c]\)</span>  and  <span class="math notranslate nohighlight">\([c, b]\)</span> , i.e.,  <span class="math notranslate nohighlight">\(V_a^c(f), V_c^b(f) &lt; \infty\)</span> .</p>
-<p>Taking the supremum over all partitions on  <span class="math notranslate nohighlight">\([a, c]\)</span>  followed by taking the supremum over all partitions on  <span class="math notranslate nohighlight">\([a, c]\)</span>  on  <a class="reference internal" href="#equation-eq-80">(32)</a> , we obtain</p>
+<p>Note that  <a class="reference internal" href="#equation-eq-80">(33)</a>  holds for any partition  <span class="math notranslate nohighlight">\(P^\prime\)</span>  on  <span class="math notranslate nohighlight">\([a, c]\)</span>  and any partition  <span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span>  on  <span class="math notranslate nohighlight">\([c, b]\)</span> . Therefore,  <span class="math notranslate nohighlight">\(f\)</span>  is of bounded variation on  <span class="math notranslate nohighlight">\([a, c]\)</span>  and  <span class="math notranslate nohighlight">\([c, b]\)</span> , i.e.,  <span class="math notranslate nohighlight">\(V_a^c(f), V_c^b(f) &lt; \infty\)</span> .</p>
+<p>Taking the supremum over all partitions on  <span class="math notranslate nohighlight">\([a, c]\)</span>  followed by taking the supremum over all partitions on  <span class="math notranslate nohighlight">\([a, c]\)</span>  on  <a class="reference internal" href="#equation-eq-80">(33)</a> , we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-81">
-<span class="eqno">(33)<a class="headerlink" href="#equation-eq-81" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(34)<a class="headerlink" href="#equation-eq-81" title="Permalink to this equation">#</a></span>\[\begin{align}
 V_a^b(f)
 \geq \sup _ {P^\prime \in \mathcal{P}[a, c]}  V_a^c(P^ \prime , f)
 +  \sup _ {P^{\prime\prime} \in \mathcal{P}[c, b]}  V_c^b(P^ {\prime\prime} , f)
@@ -593,23 +610,23 @@ V_a^b(P, f)
 \end{align*}\]</div>
 <p>Either way, it holds that</p>
 <div class="math notranslate nohighlight" id="equation-eq-82">
-<span class="eqno">(34)<a class="headerlink" href="#equation-eq-82" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(35)<a class="headerlink" href="#equation-eq-82" title="Permalink to this equation">#</a></span>\[\begin{align}
 V_a^b(P, f)
 \leq  V_a^c(P^ \prime , f) + V_c^b(P^ {\prime\prime} , f)
 \leq  V_a^c(f) + V_c^b(f)
 \end{align}\]</div>
-<p>Taking the supremum over all partitions on  <span class="math notranslate nohighlight">\([a, b]\)</span>  on  <a class="reference internal" href="#equation-eq-82">(34)</a> , we have</p>
+<p>Taking the supremum over all partitions on  <span class="math notranslate nohighlight">\([a, b]\)</span>  on  <a class="reference internal" href="#equation-eq-82">(35)</a> , we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-83">
-<span class="eqno">(35)<a class="headerlink" href="#equation-eq-83" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(36)<a class="headerlink" href="#equation-eq-83" title="Permalink to this equation">#</a></span>\[\begin{align}
 V_a^b(f)
 =  \sup _ {P \in \mathcal{P}[a, b]}  V_a^b(P, f)
 \leq  V_a^c(f) + V_c^b(f)
 \end{align}\]</div>
-<p>Equation  <a class="reference internal" href="#equation-eq-79">(31)</a>  then follows from  <a class="reference internal" href="#equation-eq-80">(32)</a>  and  <a class="reference internal" href="#equation-eq-83">(35)</a> .</p>
+<p>Equation  <a class="reference internal" href="#equation-eq-79">(32)</a>  then follows from  <a class="reference internal" href="#equation-eq-80">(33)</a>  and  <a class="reference internal" href="#equation-eq-83">(36)</a> .</p>
 </div>
-<p>The total variation of a function with the same lower and upper limits is defined as zero, i.e., <span class="math notranslate nohighlight">\(V_x^x(f) = 0\)</span> so that <a class="reference internal" href="#equation-eq-79">(31)</a> holds for <span class="math notranslate nohighlight">\(c = a\)</span> and <span class="math notranslate nohighlight">\(c = b\)</span>.</p>
+<p>The total variation of a function with the same lower and upper limits is defined as zero, i.e., <span class="math notranslate nohighlight">\(V_x^x(f) = 0\)</span> so that <a class="reference internal" href="#equation-eq-79">(32)</a> holds for <span class="math notranslate nohighlight">\(c = a\)</span> and <span class="math notranslate nohighlight">\(c = b\)</span>.</p>
 <div class="proof definition admonition" id="def:3">
-<p class="admonition-title"><span class="caption-number">Definition 6 </span></p>
+<p class="admonition-title"><span class="caption-number">Definition 7 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>Suppose that  <span class="math notranslate nohighlight">\(f\)</span>  is of bounded variation on  <span class="math notranslate nohighlight">\([a, b]\)</span> . The total variation</p>
 <div class="math notranslate nohighlight">

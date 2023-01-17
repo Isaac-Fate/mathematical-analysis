@@ -542,7 +542,7 @@ Let
 \end{align*}
 ```
 
-And let  $f$  and  $g$  be any two functions defined on  $[-1, 1]$  that are continuous from the left at  $x=0$ . By  {prf:ref}`thm:24`  and  {prf:ref}`thm:40` , we know both functions are integrable w.r.t.  $\alpha$  on  $[-1, x]$  if  $-1 < x \leq 1$  with
+Suppose  $f$  and  $g$  are any two functions defined on  $[-1, 1]$  being continuous from the left at  $x=0$ . By  {prf:ref}`thm:24`  and  {prf:ref}`thm:40` , we know both functions are integrable w.r.t.  $\alpha$  on  $[-1, x]$  if  $-1 < x \leq 1$  with
 
 ```{math}
 \begin{align*}

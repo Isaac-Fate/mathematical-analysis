@@ -136,17 +136,34 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/index.html">
    Numerical Sequences and Series
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
+     Subseries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Double%20Series.html">
+     Double Series
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
    Limits and Continuity
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -187,8 +204,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Differentiation/index.html">
    Differentiation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -229,8 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/index.html">
    Functions of Bounded Variation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +278,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Riemann-Stieltjes%20Integral/index.html">
    Riemann-Stieltjes Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -333,8 +350,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="index.html">
    Sequences and Series of Functions
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -544,7 +561,7 @@ title="Print to PDF"
 <span id="index-2"></span><h1>Uniform Convergence<a class="headerlink" href="#uniform-convergence" title="Permalink to this headline">#</a></h1>
 <p>As mentioned, only assuming <span class="math notranslate nohighlight">\(f_n(x) \to f(x)\)</span> for each <span class="math notranslate nohighlight">\(x \in S\)</span> is not enough to preserve certain properties of <span class="math notranslate nohighlight">\(f_n\)</span>. Hence, we need a stronger version of convergence than pointwise convergence. The condition <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n(x) = f(x)\)</span> says at a given point <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(f_n(x)\)</span> will get closer and closer to <span class="math notranslate nohighlight">\(f(x)\)</span>. Chances are that <span class="math notranslate nohighlight">\(f_n(x_1)\)</span> and <span class="math notranslate nohighlight">\(f_n(x_2)\)</span> may not converge to <span class="math notranslate nohighlight">\(f(x_1)\)</span> and <span class="math notranslate nohighlight">\(f(x_2)\)</span> at the same speed. Now, we want <span class="math notranslate nohighlight">\(f_n(x)\)</span> to get close to <span class="math notranslate nohighlight">\(f(x)\)</span><em>uniformly</em> at the same pace for all <span class="math notranslate nohighlight">\(x \in S\)</span>. This gives rise to the definition of <strong>uniform convergence</strong>.</p>
 <div class="proof definition admonition" id="definition-0">
-<p class="admonition-title"><span class="caption-number">Definition 11 </span></p>
+<p class="admonition-title"><span class="caption-number">Definition 12 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(S\)</span>  be a subset of a metric space. A sequence of functions  <span class="math notranslate nohighlight">\(\{f_n\}\)</span>  is said to converge to  <span class="math notranslate nohighlight">\(f\)</span>  uniformly on  <span class="math notranslate nohighlight">\(S\)</span>  if for every  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , there exists an integer  <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span>  such that</p>
 <div class="math notranslate nohighlight">
@@ -555,7 +572,7 @@ title="Print to PDF"
 </div>
 </div><p>The next theorem is useful to check whether <span class="math notranslate nohighlight">\(\{f_n\}\)</span> converges uniformly.</p>
 <div class="proof theorem admonition" id="thm:46">
-<p class="admonition-title"><span class="caption-number">Theorem 50 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 54 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(f_n \to f\)</span>  on  <span class="math notranslate nohighlight">\(S\)</span> . Then  <span class="math notranslate nohighlight">\(f_n \to f\)</span>  uniformly on  <span class="math notranslate nohighlight">\(S\)</span>  if and only if</p>
 <div class="math notranslate nohighlight">
@@ -593,7 +610,7 @@ M_n
 <p>This implies that the sequence  <span class="math notranslate nohighlight">\(\{M_n\}\)</span>  converges to  <span class="math notranslate nohighlight">\(0\)</span> .</p>
 </div>
 <div class="proof example admonition" id="example-2">
-<p class="admonition-title"><span class="caption-number">Example 17 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 18 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
@@ -608,10 +625,10 @@ f_n(x) =  \frac{1}{nx} ,
 =  \sup _ {x \in (0, 1)} \frac{1}{nx}
 =  \infty
 \end{align*}\]</div>
-<p>for every  <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span> . Therefore, by  <a class="reference internal" href="#thm:46">Theorem 50</a> , the convergence is not uniform.</p>
+<p>for every  <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span> . Therefore, by  <a class="reference internal" href="#thm:46">Theorem 54</a> , the convergence is not uniform.</p>
 </div>
 </div><div class="proof example admonition" id="example-3">
-<p class="admonition-title"><span class="caption-number">Example 18 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 19 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
@@ -634,7 +651,7 @@ M_n =  \sup _ {x \in (0, 1)} \abs{f_n(x) - f(x)}
 \quad \forall  n  \in \N ^ \ast \; \forall  x  \in  S
 \end{align*}\]</div>
 <div class="proof theorem admonition" id="theorem-4">
-<p class="admonition-title"><span class="caption-number">Theorem 51 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 55 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(\{f_n\}\)</span>  is uniformly bounded on  <span class="math notranslate nohighlight">\(S\)</span> . Then  <span class="math notranslate nohighlight">\(f_n \to f\)</span>  uniformly on  <span class="math notranslate nohighlight">\(S\)</span>  if and only if</p>
 <div class="math notranslate nohighlight">
@@ -645,7 +662,7 @@ M_n =  \sup _ {x \in (0, 1)} \abs{f_n(x) - f(x)}
 </div>
 </div><p>Similar to the situation we encountered when dealing with numerical sequences and series, sometimes we want to prove that <span class="math notranslate nohighlight">\(\{f_n\}\)</span> converges uniformly without knowing its limit.</p>
 <div class="proof theorem admonition" id="thm:42">
-<p class="admonition-title"><span class="caption-number">Theorem 52 </span> (Cauchy’s Criterion)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 56 </span> (Cauchy’s Criterion)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Cauchy’s Criterion
 A sequence of functions  <span class="math notranslate nohighlight">\(\{f_n\}\)</span>  converges uniformly on  <span class="math notranslate nohighlight">\(S\)</span>  if and only if for any  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , there exists  <span class="math notranslate nohighlight">\(N \in N^\ast\)</span>  such that</p>

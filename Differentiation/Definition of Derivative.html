@@ -136,17 +136,34 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/index.html">
    Numerical Sequences and Series
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
+     Subseries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Double%20Series.html">
+     Double Series
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
    Limits and Continuity
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -187,8 +204,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="index.html">
    Differentiation
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -229,8 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/index.html">
    Functions of Bounded Variation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +278,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Riemann-Stieltjes%20Integral/index.html">
    Riemann-Stieltjes Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -333,8 +350,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/index.html">
    Sequences and Series of Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -586,7 +603,7 @@ title="Print to PDF"
 </div>
 <p>All secant lines have a common point of intersection, <span class="math notranslate nohighlight">\((0, 1)\)</span>. And as the other intersection point gets closer and closer to <span class="math notranslate nohighlight">\((0, 1)\)</span>, the slope of the secant line tends to converge to some number. This number, the limiting slope, is precisely the <strong>derivative</strong> of this curve/function at <span class="math notranslate nohighlight">\(x=0\)</span>, which we shall soon define. We can draw a straight line passing through the point <span class="math notranslate nohighlight">\((0,1)\)</span> with the limiting slope. This line is then called the tangent of the curve at point <span class="math notranslate nohighlight">\((0,1)\)</span>, as illustrated in <a class="reference internal" href="#fig-1"><span class="std std-numref">Fig. 1</span></a>.</p>
 <div class="proof definition admonition" id="definition-0">
-<p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
+<p class="admonition-title"><span class="caption-number">Definition 2 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be defined on an open interval  <span class="math notranslate nohighlight">\((a, b)\)</span> , and let  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  an interior point. Then  <span class="math notranslate nohighlight">\(f\)</span>  is said to be  <strong>differentiable</strong>   at  <span class="math notranslate nohighlight">\(c\)</span>  if the limit</p>
 <div class="math notranslate nohighlight">
@@ -602,7 +619,7 @@ title="Print to PDF"
 <div class="proposition-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be defined on  <span class="math notranslate nohighlight">\((a, b)\)</span> . Then  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  if and only if</p>
 <div class="math notranslate nohighlight" id="equation-eq-3">
-<span class="eqno">(7)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(8)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lim _ {h \to 0} \frac{f(c+h) - f(c)}{h}
 \end{align}\]</div>
 <p>exists. In that case,  <span class="math notranslate nohighlight">\(f^\prime(c) = \lim_{h \to 0} [ f(c+h) - f(c) ] / h\)</span> .</p>
@@ -619,8 +636,8 @@ title="Print to PDF"
 \abs{\frac{f(c+h) - f(h)}{h} - f^\prime(c)}
 =  \abs{\frac{f(c+h) - f(h)}{(c+h) - c} - f^\prime(c)}  &lt;  \varepsilon
 \end{align*}\]</div>
-<p>This implies the limit  <a class="reference internal" href="#equation-eq-3">(7)</a>  exists, and it equals  <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> .</p>
-<p>Conversely, suppose the limit  <a class="reference internal" href="#equation-eq-3">(7)</a>  exists, say it equals  <span class="math notranslate nohighlight">\(L\)</span> . Then for  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+<p>This implies the limit  <a class="reference internal" href="#equation-eq-3">(8)</a>  exists, and it equals  <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> .</p>
+<p>Conversely, suppose the limit  <a class="reference internal" href="#equation-eq-3">(8)</a>  exists, say it equals  <span class="math notranslate nohighlight">\(L\)</span> . Then for  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \abs{h}  &lt;  \delta \implies \abs{\frac{f(c+h) - f(c)}{h} - L}  &lt;  \varepsilon
@@ -675,7 +692,7 @@ x^2 \sin \frac{1}{x^2} &amp;x \neq 0 \\
 <p>So far, the point at which the derivative is defined has to be an <em>interior</em> point. Sometimes, we are required to consider the derivatives at the endpoints of the interval. For example, as we shall see in more detail in \ref{chap:1}, we need to take the derivative of function <span class="math notranslate nohighlight">\(F(x) = \int_a^x f(t) \mathrm{d}t\)</span> at <span class="math notranslate nohighlight">\(x=a\)</span>. Hence, we are motivated to define the <strong>one-sided derivatives</strong>.</p>
 <p>If we consider the derivative of <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(f^\prime\)</span> as a function, then <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> may tend to infinity as <span class="math notranslate nohighlight">\(x\)</span> approaches an endpoint. In addition, sometimes we need to interpret the meaning of vertical tangent lines. This leads to the definition of <strong>infinite derivatives</strong>.</p>
 <div class="proof definition admonition" id="definition-2">
-<p class="admonition-title"><span class="caption-number">Definition 2 </span></p>
+<p class="admonition-title"><span class="caption-number">Definition 3 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be defined on a closed interval  <span class="math notranslate nohighlight">\(I\)</span> . Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is continuous at point  <span class="math notranslate nohighlight">\(c \in I\)</span> . Then  <span class="math notranslate nohighlight">\(f\)</span>  is said to have a  <strong>right-hand derivative</strong>   at  <span class="math notranslate nohighlight">\(c\)</span>  if the right-hand limit</p>
 <div class="math notranslate nohighlight">
@@ -691,7 +708,7 @@ x^2 \sin \frac{1}{x^2} &amp;x \neq 0 \\
 </div>
 </div><p>It is not very intuitive to imagine, at first thought, a continuous function having infinite derivatives. But there are quite a lot of such examples.</p>
 <div class="proof example admonition" id="eg:1">
-<p class="admonition-title"><span class="caption-number">Example 1 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 2 </span></p>
 <div class="example-content section" id="proof-content">
 <p>The first example is constructed by cutting a circle in the middle. If we cut a circle in half and stick the lower half to the right of the upper one, then we have a function with a vertical tangent line in the middle. The explicit expression of this function is</p>
 <div class="math notranslate nohighlight">
@@ -708,7 +725,7 @@ f(x) =  \begin{cases}
 <p>The function is continuous and one can show that  <span class="math notranslate nohighlight">\(f^\prime(2) = -\infty\)</span> .</p>
 </div>
 </div><div class="proof example admonition" id="eg:2">
-<p class="admonition-title"><span class="caption-number">Example 2 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 3 </span></p>
 <div class="example-content section" id="proof-content">
 <p>The following next example includes both positive and negative intuitive derivatives, and a point at which the right and left-hand side derivatives are  <span class="math notranslate nohighlight">\(\infty\)</span>  and  <span class="math notranslate nohighlight">\(-\infty\)</span> , respectively. Consider the function</p>
 <div class="math notranslate nohighlight">

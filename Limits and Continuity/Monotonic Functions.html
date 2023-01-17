@@ -136,17 +136,34 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/index.html">
    Numerical Sequences and Series
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
+     Subseries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Double%20Series.html">
+     Double Series
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
    Limits and Continuity
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -187,8 +204,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Differentiation/index.html">
    Differentiation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -229,8 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/index.html">
    Functions of Bounded Variation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +278,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Riemann-Stieltjes%20Integral/index.html">
    Riemann-Stieltjes Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -333,8 +350,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/index.html">
    Sequences and Series of Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -543,7 +560,7 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="monotonic-functions">
 <h1>Monotonic Functions<a class="headerlink" href="#monotonic-functions" title="Permalink to this headline">#</a></h1>
 <div class="proof theorem admonition" id="thm:15">
-<p class="admonition-title"><span class="caption-number">Theorem 7 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 11 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>If  <span class="math notranslate nohighlight">\(f\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then  <span class="math notranslate nohighlight">\(f(c+)\)</span>  and  <span class="math notranslate nohighlight">\(f(c-)\)</span>  both exists for every  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> , and we have</p>
 <div class="math notranslate nohighlight">
@@ -552,7 +569,7 @@ f(c-)  \leq  f(c)  \leq  f(c+)
 \end{align*}\]</div>
 <p>As the endpoints, we have  <span class="math notranslate nohighlight">\(f(a+)\)</span>  and  <span class="math notranslate nohighlight">\(f(b-)\)</span>  both exists and</p>
 <div class="math notranslate nohighlight" id="equation-eq-18">
-<span class="eqno">(6)<a class="headerlink" href="#equation-eq-18" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-18" title="Permalink to this equation">#</a></span>\[\begin{align}
 f(a)  \leq  f(a+)
 \quad \text{and} \quad
 f(b-)  \leq  f(b)
@@ -596,7 +613,7 @@ B =  \set{f(x)}{c &lt; x \leq b}
 \[\begin{align*}
 f(c)  \leq  f(c+)
 \end{align*}\]</div>
-<p>(Existence of  <span class="math notranslate nohighlight">\(f(a+)\)</span>  and  <span class="math notranslate nohighlight">\(f(b-)\)</span> ) The existence of  <span class="math notranslate nohighlight">\(f(a+)\)</span>  and  <span class="math notranslate nohighlight">\(f(b-)\)</span>  along with  <a class="reference internal" href="#equation-eq-18">(6)</a>  can be proved by the exact argument as before.</p>
+<p>(Existence of  <span class="math notranslate nohighlight">\(f(a+)\)</span>  and  <span class="math notranslate nohighlight">\(f(b-)\)</span> ) The existence of  <span class="math notranslate nohighlight">\(f(a+)\)</span>  and  <span class="math notranslate nohighlight">\(f(b-)\)</span>  along with  <a class="reference internal" href="#equation-eq-18">(7)</a>  can be proved by the exact argument as before.</p>
 </div>
 </div>
 

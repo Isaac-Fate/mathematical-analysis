@@ -136,17 +136,34 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/index.html">
    Numerical Sequences and Series
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
+     Subseries
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Double%20Series.html">
+     Double Series
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
    Limits and Continuity
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -187,8 +204,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="index.html">
    Differentiation
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -229,8 +246,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/index.html">
    Functions of Bounded Variation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -261,8 +278,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Riemann-Stieltjes%20Integral/index.html">
    Riemann-Stieltjes Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -333,8 +350,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/index.html">
    Sequences and Series of Functions
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -559,7 +576,7 @@ f^ \prime (x) =  \begin{cases}
 </div>
 <p>Note that the derivative <span class="math notranslate nohighlight">\(f^\prime\)</span> is not continuous at <span class="math notranslate nohighlight">\(x = 0\)</span> since the limit of <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> does not exist as <span class="math notranslate nohighlight">\(x \to 0\)</span>. This example shows that the derivative of a function may not be continuous, and hence theorems for continuous functions do not apply to derivatives in general. However, the <strong>intermediate value theorem</strong> is an exception. The intermediate value theorem for derivatives is also known as the <strong>Darboux’s theorem</strong>.</p>
 <div class="proof theorem admonition" id="thm:12">
-<p class="admonition-title"><span class="caption-number">Theorem 19 </span> (Darboux)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 23 </span> (Darboux)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Darboux
 Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is defined on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and it has a derivative (finite or infinite) at each point in  <span class="math notranslate nohighlight">\((a, b)\)</span> . Assume also that the one-sided derivatives  <span class="math notranslate nohighlight">\(f^\prime_{+}(a)\)</span>  and  <span class="math notranslate nohighlight">\(f^\prime_{-}(b)\)</span>  both exist as finite numbers, and  <span class="math notranslate nohighlight">\(f^\prime_{+}(a) \neq f^\prime_{-}(b)\)</span> . If  <span class="math notranslate nohighlight">\(k\)</span>  is a number in between  <span class="math notranslate nohighlight">\(f^\prime_{+}(a)\)</span>  and  <span class="math notranslate nohighlight">\(f^\prime_{-}(b)\)</span> , then there exists an interior point  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  such that</p>
@@ -570,7 +587,7 @@ f^ \prime (c) = k
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Note that  <span class="math notranslate nohighlight">\(f\)</span>  is continuous on the entire closed interval  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
-<p>We first consider the case where  <span class="math notranslate nohighlight">\(k = [f(b) - f(a)] / (b-a)\)</span> . Then by applying the mean value theorem ( <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:8">Theorem 15</a> ), there exists  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  such that  <span class="math notranslate nohighlight">\(f^\prime(c) = [f(b) - f(a)] / (b-a) = k\)</span> .</p>
+<p>We first consider the case where  <span class="math notranslate nohighlight">\(k = [f(b) - f(a)] / (b-a)\)</span> . Then by applying the mean value theorem ( <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:8">Theorem 19</a> ), there exists  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  such that  <span class="math notranslate nohighlight">\(f^\prime(c) = [f(b) - f(a)] / (b-a) = k\)</span> .</p>
 <p>Now, we suppose  <span class="math notranslate nohighlight">\(k \neq[f(b) - f(a)] / (b-a)\)</span> . We note that either  <span class="math notranslate nohighlight">\(f^\prime_{+}(a) \neq[f(b) - f(a)] / (b-a)\)</span>  or  <span class="math notranslate nohighlight">\(f^\prime_{-}(b) \neq[f(b) - f(a)] / (b-a)\)</span>  since  <span class="math notranslate nohighlight">\(f^\prime_{+}(a) \neq f^\prime_{-}(b)\)</span> . In other words,  <span class="math notranslate nohighlight">\(k\)</span>  is either in between  <span class="math notranslate nohighlight">\(f^\prime_{+}(a)\)</span>  and  <span class="math notranslate nohighlight">\([f(b) - f(a)] / (b-a)\)</span>  to it is in between  <span class="math notranslate nohighlight">\(f^\prime_{-}(b)\)</span>  and  <span class="math notranslate nohighlight">\([f(b) - f(a)] / (b-a)\)</span> .</p>
 <p>Without loss of generality, we may assume  <span class="math notranslate nohighlight">\(k\)</span>  is in between  <span class="math notranslate nohighlight">\(f^\prime_{+}(a)\)</span>  and  <span class="math notranslate nohighlight">\([f(b) - f(a)] / (b-a)\)</span> . Define a function  <span class="math notranslate nohighlight">\(\phi\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  by</p>
 <div class="math notranslate nohighlight">
@@ -582,12 +599,12 @@ f^\prime_{+}(a)
 &amp;x = a
 \end{cases}
 \end{align*}\end{split}\]</div>
-<p>Note that  <span class="math notranslate nohighlight">\(\phi\)</span>  is continuous on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and  <span class="math notranslate nohighlight">\(k\)</span>  is in between  <span class="math notranslate nohighlight">\(\phi(a)\)</span>  and  <span class="math notranslate nohighlight">\(\phi(b)\)</span> . Hence, we may apply the intermediate values theorem for continuous functions ( <a class="reference internal" href="../Limits%20and%20Continuity/Connectedness.html#thm:11">Theorem 6</a> ) to  <span class="math notranslate nohighlight">\(\phi\)</span> , there is a number  <span class="math notranslate nohighlight">\(d \in (a, b)\)</span>  such that</p>
+<p>Note that  <span class="math notranslate nohighlight">\(\phi\)</span>  is continuous on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and  <span class="math notranslate nohighlight">\(k\)</span>  is in between  <span class="math notranslate nohighlight">\(\phi(a)\)</span>  and  <span class="math notranslate nohighlight">\(\phi(b)\)</span> . Hence, we may apply the intermediate values theorem for continuous functions ( <a class="reference internal" href="../Limits%20and%20Continuity/Connectedness.html#thm:11">Theorem 10</a> ) to  <span class="math notranslate nohighlight">\(\phi\)</span> , there is a number  <span class="math notranslate nohighlight">\(d \in (a, b)\)</span>  such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 k =  \phi (d) =  \frac{f(d) - f(a)}{d - a}
 \end{align*}\]</div>
-<p>Then applying the mean value theorem ( <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:8">Theorem 15</a> ) to the fraction on the right-hand side of the above equation, we have</p>
+<p>Then applying the mean value theorem ( <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:8">Theorem 19</a> ) to the fraction on the right-hand side of the above equation, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 k =  \frac{f(d) - f(a)}{d - a}
@@ -607,7 +624,7 @@ f^\prime_{-}(b)
 </div>
 <p>Essentially, Darboux’s theorem tells us that though the derivative may not be continuous, it cannot have any <em>jump discontinuities</em>. The following is another classical example in addition to the one in <a class="reference internal" href="Definition%20of%20Derivative.html#ex-1"><span class="std std-ref">Exercise 2</span></a>.</p>
 <div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 6 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 7 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Consider the function</p>
 <div class="math notranslate nohighlight">
@@ -635,9 +652,9 @@ f^ \prime (x)
 <p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Left: original function. Right: derivative.</span><a class="headerlink" href="#fig-6" title="Permalink to this image">#</a></p>
 </div>
 </div>
-</div><p>Actually, there is no need to require that <span class="math notranslate nohighlight">\(f^\prime_{+}(a)\)</span> and <span class="math notranslate nohighlight">\(f^\prime_{-}(b)\)</span> to be finite numbers in <a class="reference internal" href="#thm:12">Theorem 19</a>. The following theorem is an extension, and its proof is somewhat neater and more interesting than that of <a class="reference internal" href="#thm:12">Theorem 19</a>.</p>
+</div><p>Actually, there is no need to require that <span class="math notranslate nohighlight">\(f^\prime_{+}(a)\)</span> and <span class="math notranslate nohighlight">\(f^\prime_{-}(b)\)</span> to be finite numbers in <a class="reference internal" href="#thm:12">Theorem 23</a>. The following theorem is an extension, and its proof is somewhat neater and more interesting than that of <a class="reference internal" href="#thm:12">Theorem 23</a>.</p>
 <div class="proof theorem admonition" id="thm:13">
-<p class="admonition-title"><span class="caption-number">Theorem 20 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 24 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is defined on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and it has a derivative (finite or infinite) at each point in  <span class="math notranslate nohighlight">\((a, b)\)</span> . Assume also that the one-sided derivatives  <span class="math notranslate nohighlight">\(f^\prime_{+}(a)\)</span>  and  <span class="math notranslate nohighlight">\(f^\prime_{-}(b)\)</span>  both exist (each of the two can either be finite or infinite), and  <span class="math notranslate nohighlight">\(f^\prime_{+}(a) \neq f^\prime_{-}(b)\)</span> . If  <span class="math notranslate nohighlight">\(k\)</span>  is a number in between  <span class="math notranslate nohighlight">\(f^\prime_{+}(a)\)</span>  and  <span class="math notranslate nohighlight">\(f^\prime_{-}(b)\)</span> , then there exists an interior point  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  such that</p>
 <div class="math notranslate nohighlight">
@@ -653,27 +670,27 @@ g(x) = f(x) - kx
 \end{align*}\]</div>
 <p>Note that  <span class="math notranslate nohighlight">\(g\)</span>  is continuous on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and the derivative of  <span class="math notranslate nohighlight">\(g\)</span>  exists at each point in  <span class="math notranslate nohighlight">\((a, b)\)</span> . Furthermore, the one-sided derivatives of  <span class="math notranslate nohighlight">\(g\)</span> ,  <span class="math notranslate nohighlight">\(g^\prime_{+}(a)\)</span>  and  <span class="math notranslate nohighlight">\(g^\prime_{-}(b)\)</span> , both exist, which are given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-17">
-<span class="eqno">(21)<a class="headerlink" href="#equation-eq-17" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(22)<a class="headerlink" href="#equation-eq-17" title="Permalink to this equation">#</a></span>\[\begin{align}
 g^ \prime _ {+} (a) = f^ \prime _ {+} (a) - k
 \quad \text{and} \quad
 g^ \prime _ {-} (b) = f^ \prime _ {-} (b) - k
 \end{align}\]</div>
-<p>It should be emphasized that  <a class="reference internal" href="#equation-eq-17">(21)</a>  also holds for infinite values.</p>
-<p>Because we assume  <span class="math notranslate nohighlight">\(f^\prime_{+}(a) &lt; k &lt;  f^\prime_{-}(b)\)</span> ,  <a class="reference internal" href="#equation-eq-17">(21)</a>  yields</p>
+<p>It should be emphasized that  <a class="reference internal" href="#equation-eq-17">(22)</a>  also holds for infinite values.</p>
+<p>Because we assume  <span class="math notranslate nohighlight">\(f^\prime_{+}(a) &lt; k &lt;  f^\prime_{-}(b)\)</span> ,  <a class="reference internal" href="#equation-eq-17">(22)</a>  yields</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 g^ \prime _ {+} (a) &lt; 0
 \quad \text{and} \quad
 g^ \prime _ {-} (b) &gt; 0
 \end{align*}\]</div>
-<p>It then follows from  <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:14">Theorem 12</a>  that there exist points  <span class="math notranslate nohighlight">\(t_1\)</span>  and  <span class="math notranslate nohighlight">\(t_2\)</span>  at which</p>
+<p>It then follows from  <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:14">Theorem 16</a>  that there exist points  <span class="math notranslate nohighlight">\(t_1\)</span>  and  <span class="math notranslate nohighlight">\(t_2\)</span>  at which</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 g(t_1) &lt; g(a)
 \quad \text{and} \quad
 g(t_2) &lt; g(b)
 \end{align*}\]</div>
-<p>This implies that  <span class="math notranslate nohighlight">\(g\)</span>  must attain its minimum at some interior point  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  rather than at the endpoints. Then by applying  <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:5">Theorem 13</a> , we have</p>
+<p>This implies that  <span class="math notranslate nohighlight">\(g\)</span>  must attain its minimum at some interior point  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  rather than at the endpoints. Then by applying  <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:5">Theorem 17</a> , we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 g^ \prime (c) = 0
@@ -686,7 +703,7 @@ f^ \prime (c) = k
 <p>This completes the proof.</p>
 </div>
 <div class="proof example admonition" id="example-3">
-<p class="admonition-title"><span class="caption-number">Example 7 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 8 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Consider a function defined on  <span class="math notranslate nohighlight">\([0, 1]\)</span>  given by</p>
 <div class="math notranslate nohighlight">
@@ -694,7 +711,7 @@ f^ \prime (c) = k
 f(x) =  \sqrt[3]{x(x-1)} ,
 \quad  x  \in[0, 1]
 \end{align*}\]</div>
-<p>Note that the derivative exists as a finite number in  <span class="math notranslate nohighlight">\((0, 1)\)</span> . And it can be shown that  <span class="math notranslate nohighlight">\(f^\prime_{+}(0) = -\infty\)</span>  and  <span class="math notranslate nohighlight">\(f^\prime_{-}(1) = \infty\)</span> . Then  <a class="reference internal" href="#thm:13">Theorem 20</a>  tells us  <span class="math notranslate nohighlight">\(f^\prime\)</span>  takes all the real numbers in  <span class="math notranslate nohighlight">\((0, 1)\)</span> . See  <a class="reference internal" href="#fig-5"><span class="std std-numref">Fig. 7</span></a> .</p>
+<p>Note that the derivative exists as a finite number in  <span class="math notranslate nohighlight">\((0, 1)\)</span> . And it can be shown that  <span class="math notranslate nohighlight">\(f^\prime_{+}(0) = -\infty\)</span>  and  <span class="math notranslate nohighlight">\(f^\prime_{-}(1) = \infty\)</span> . Then  <a class="reference internal" href="#thm:13">Theorem 24</a>  tells us  <span class="math notranslate nohighlight">\(f^\prime\)</span>  takes all the real numbers in  <span class="math notranslate nohighlight">\((0, 1)\)</span> . See  <a class="reference internal" href="#fig-5"><span class="std std-numref">Fig. 7</span></a> .</p>
 <div class="figure align-default" id="fig-5">
 <img alt="../_images/graph-006.png" src="../_images/graph-006.png" />
 <p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Left: original function. Right: derivative.</span><a class="headerlink" href="#fig-5" title="Permalink to this image">#</a></p>
@@ -704,24 +721,24 @@ f(x) =  \sqrt[3]{x(x-1)} ,
 <p>Theoretically, the graph of  <span class="math notranslate nohighlight">\(f^\prime\)</span>  in  <a class="reference internal" href="#fig-5"><span class="std std-numref">Fig. 7</span></a>  will tend to  <span class="math notranslate nohighlight">\(-\infty\)</span>  and  <span class="math notranslate nohighlight">\(\infty\)</span>  as  <span class="math notranslate nohighlight">\(x\)</span>  approaches  <span class="math notranslate nohighlight">\(0\)</span>  and  <span class="math notranslate nohighlight">\(1\)</span> , respectively. The reason why the absolute values of the derivatives near the endpoints shown in the graph are only about  <span class="math notranslate nohighlight">\(3000\)</span>  is because of the limited computational precision of the computer.</p>
 </div>
 </div>
-</div><p>By <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:10">Theorem 18</a>, we know a function is strictly increasing if its derivative is always positive, and it is strictly decreasing if its derivative is always negative. Suppose now we only know that <span class="math notranslate nohighlight">\(f^\prime\)</span> is nonzero in some open interval, what can we conclude? Thanks to the intermediate value theorem, or Darboux’s theorem, <span class="math notranslate nohighlight">\(f^\prime\)</span> is either always positive or always negative. Hence, we can conclude that <span class="math notranslate nohighlight">\(f\)</span> must be strictly monotonic.</p>
+</div><p>By <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:10">Theorem 22</a>, we know a function is strictly increasing if its derivative is always positive, and it is strictly decreasing if its derivative is always negative. Suppose now we only know that <span class="math notranslate nohighlight">\(f^\prime\)</span> is nonzero in some open interval, what can we conclude? Thanks to the intermediate value theorem, or Darboux’s theorem, <span class="math notranslate nohighlight">\(f^\prime\)</span> is either always positive or always negative. Hence, we can conclude that <span class="math notranslate nohighlight">\(f\)</span> must be strictly monotonic.</p>
 <div class="proof theorem admonition" id="theorem-4">
-<p class="admonition-title"><span class="caption-number">Theorem 21 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 25 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(f\)</span>  has a derivative (finite or infinite) in  <span class="math notranslate nohighlight">\((a, b)\)</span> , and is continuous at endpoints  <span class="math notranslate nohighlight">\(a\)</span>  and  <span class="math notranslate nohighlight">\(b\)</span> . If  <span class="math notranslate nohighlight">\(f^\prime(x) \neq 0 \; \forall x \in (a, b)\)</span> , then  <span class="math notranslate nohighlight">\(f\)</span>  is strictly monotonic on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Pick a point  <span class="math notranslate nohighlight">\(x_1 \in (a, b)\)</span> . Suppose  <span class="math notranslate nohighlight">\(f^\prime(x_0) &gt; 0\)</span> . Let  <span class="math notranslate nohighlight">\(x_0\)</span>  be fixed, and choose an arbitrary point  <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>  other than  <span class="math notranslate nohighlight">\(x_0\)</span> . We claim that  <span class="math notranslate nohighlight">\(f^\prime(x) &gt; 0\)</span> . Otherwise, if  <span class="math notranslate nohighlight">\(f^\prime(x) &lt; 0\)</span> , then by  <a class="reference internal" href="#thm:13">Theorem 20</a> , there exists some point  <span class="math notranslate nohighlight">\(c\)</span>  in between  <span class="math notranslate nohighlight">\(x_0\)</span>  and  <span class="math notranslate nohighlight">\(x\)</span>  such that  <span class="math notranslate nohighlight">\(f^\prime(c) = 0\)</span> , which contradicts the given condition that  <span class="math notranslate nohighlight">\(f^\prime\)</span>  is nonzero in  <span class="math notranslate nohighlight">\((a, b)\)</span> . In this case, we have  <span class="math notranslate nohighlight">\(f^\prime(x) &gt; 0 \; \forall x \in (a, b)\)</span> . It then follows from  <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:10">Theorem 18</a>  that  <span class="math notranslate nohighlight">\(f\)</span>  is strictly increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
+<p>Proof. Pick a point  <span class="math notranslate nohighlight">\(x_1 \in (a, b)\)</span> . Suppose  <span class="math notranslate nohighlight">\(f^\prime(x_0) &gt; 0\)</span> . Let  <span class="math notranslate nohighlight">\(x_0\)</span>  be fixed, and choose an arbitrary point  <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>  other than  <span class="math notranslate nohighlight">\(x_0\)</span> . We claim that  <span class="math notranslate nohighlight">\(f^\prime(x) &gt; 0\)</span> . Otherwise, if  <span class="math notranslate nohighlight">\(f^\prime(x) &lt; 0\)</span> , then by  <a class="reference internal" href="#thm:13">Theorem 24</a> , there exists some point  <span class="math notranslate nohighlight">\(c\)</span>  in between  <span class="math notranslate nohighlight">\(x_0\)</span>  and  <span class="math notranslate nohighlight">\(x\)</span>  such that  <span class="math notranslate nohighlight">\(f^\prime(c) = 0\)</span> , which contradicts the given condition that  <span class="math notranslate nohighlight">\(f^\prime\)</span>  is nonzero in  <span class="math notranslate nohighlight">\((a, b)\)</span> . In this case, we have  <span class="math notranslate nohighlight">\(f^\prime(x) &gt; 0 \; \forall x \in (a, b)\)</span> . It then follows from  <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:10">Theorem 22</a>  that  <span class="math notranslate nohighlight">\(f\)</span>  is strictly increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
 <p>If  <span class="math notranslate nohighlight">\(f^\prime(x_0) &lt; 0\)</span> , then a similar argument will show that  <span class="math notranslate nohighlight">\(f\)</span>  is strictly decreasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
 </div>
 <p>It is because the derivatives cannot have jump discontinuities that monotonic derivatives are necessarily continuous.</p>
 <div class="proof theorem admonition" id="theorem-5">
-<p class="admonition-title"><span class="caption-number">Theorem 22 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 26 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(f^\prime\)</span>  exits, and is monotonic in  <span class="math notranslate nohighlight">\((a, b)\)</span> . Then  <span class="math notranslate nohighlight">\(f^\prime\)</span>  is continuous in  <span class="math notranslate nohighlight">\((a, b)\)</span> .</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Without loss of generality, suppose that  <span class="math notranslate nohighlight">\(f^\prime\)</span>  is increasing. We shall prove by contradiction. Assume that  <span class="math notranslate nohighlight">\(f^\prime\)</span>  is discontinuous at  <span class="math notranslate nohighlight">\(x = c \in (a, b)\)</span> . By  <a class="reference internal" href="../Limits%20and%20Continuity/Monotonic%20Functions.html#thm:15">Theorem 7</a> , we have  <span class="math notranslate nohighlight">\(f^\prime(c-)\)</span>  and  <span class="math notranslate nohighlight">\(f^\prime(c+)\)</span>  both exist, and</p>
+<p>Proof. Without loss of generality, suppose that  <span class="math notranslate nohighlight">\(f^\prime\)</span>  is increasing. We shall prove by contradiction. Assume that  <span class="math notranslate nohighlight">\(f^\prime\)</span>  is discontinuous at  <span class="math notranslate nohighlight">\(x = c \in (a, b)\)</span> . By  <a class="reference internal" href="../Limits%20and%20Continuity/Monotonic%20Functions.html#thm:15">Theorem 11</a> , we have  <span class="math notranslate nohighlight">\(f^\prime(c-)\)</span>  and  <span class="math notranslate nohighlight">\(f^\prime(c+)\)</span>  both exist, and</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f^ \prime (c-)  \leq  f(c)  \leq  f^ \prime (c+)
@@ -743,7 +760,7 @@ f^ \prime (c-) &lt; k &lt; f^ \prime (c+)
 \quad \text{and} \quad
 k  \neq  f^ \prime (c)
 \end{align*}\]</div>
-<p>Applying  <a class="reference internal" href="#thm:13">Theorem 20</a>  to  <span class="math notranslate nohighlight">\(f^\prime\)</span>  on  <span class="math notranslate nohighlight">\([c-\delta, c+\delta]\)</span> , we conclude that there exists  <span class="math notranslate nohighlight">\(x_0 \in (c-\delta, c+\delta)\)</span>  such that  <span class="math notranslate nohighlight">\(f^\prime(x_0) = k\)</span> . But since  <span class="math notranslate nohighlight">\(f^\prime\)</span>  is increasing,  <span class="math notranslate nohighlight">\(f^\prime(c-) &lt; k = f^\prime(x_0)\)</span>  and  <span class="math notranslate nohighlight">\(k \neq f^\prime(c)\)</span> , we have  <span class="math notranslate nohighlight">\(x_0 &gt; c\)</span> . On the other hand, because  <span class="math notranslate nohighlight">\( f^\prime(x_0) = k &lt; f^\prime(c+) \)</span>  and  <span class="math notranslate nohighlight">\(k \neq f^\prime(c)\)</span> , we have  <span class="math notranslate nohighlight">\(x_0 &lt; c\)</span> . This leads to a contradiction.</p>
+<p>Applying  <a class="reference internal" href="#thm:13">Theorem 24</a>  to  <span class="math notranslate nohighlight">\(f^\prime\)</span>  on  <span class="math notranslate nohighlight">\([c-\delta, c+\delta]\)</span> , we conclude that there exists  <span class="math notranslate nohighlight">\(x_0 \in (c-\delta, c+\delta)\)</span>  such that  <span class="math notranslate nohighlight">\(f^\prime(x_0) = k\)</span> . But since  <span class="math notranslate nohighlight">\(f^\prime\)</span>  is increasing,  <span class="math notranslate nohighlight">\(f^\prime(c-) &lt; k = f^\prime(x_0)\)</span>  and  <span class="math notranslate nohighlight">\(k \neq f^\prime(c)\)</span> , we have  <span class="math notranslate nohighlight">\(x_0 &gt; c\)</span> . On the other hand, because  <span class="math notranslate nohighlight">\( f^\prime(x_0) = k &lt; f^\prime(c+) \)</span>  and  <span class="math notranslate nohighlight">\(k \neq f^\prime(c)\)</span> , we have  <span class="math notranslate nohighlight">\(x_0 &lt; c\)</span> . This leads to a contradiction.</p>
 </div>
 </div>
 
