@@ -234,8 +234,7 @@ where the last equality follows from  {prf:ref}`thm:48`  since every series  $\s
 \end{align*}
 ```
 
-because  $\sum_{n=1}^q ( \abs{b_1(n)} + \cdots
-+ \abs{b_p(n)} )$  is just a sum of finitely many terms of the series  $\sum \abs{a_n}$ . Letting  $q \to \infty$ , we obtain
+because  $\sum_{n=1}^q ( \abs{b_1(n)} + \cdots + \abs{b_p(n)} )$  is just a sum of finitely many terms of the series  $\sum \abs{a_n}$ . Letting  $q \to \infty$ , we obtain
 
 ```{math}
 \begin{align*}
