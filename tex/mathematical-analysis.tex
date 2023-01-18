@@ -90,6 +90,314 @@
 
 \chapter{Numerical Sequences and Series}
 
+We are interested in real or complex-valued sequences and series.
+
+%------------------------------
+
+\section{Infinite Series}
+
+%------------------------------
+
+The next theorem tells us that we can add two convergent series term by term. And we can also multiply a convergent series by a constant.
+
+\begin{theorem} \label{thm:48}
+    If $\sum a_n$ and $\sum b_n$ are two convergent series, then the series $\sum (\alpha a_n + \beta b_n)$ also converges where $\alpha$ and $\beta$ are constants. Furthermore, we have 
+    \begin{align*}
+        \sum_{n=1}^\infty (\alpha a_n + \beta b_n)
+        = \alpha \sum_{n=1}^\infty a_n 
+        + \beta \sum_{n=1}^\infty b_n
+    \end{align*}
+\end{theorem}
+
+\begin{proof}
+    % TODO
+\end{proof}
+
+%------------------------------
+
+\section{Subseries}
+
+Think about summing up countably many (real or complex) numbers:
+\begin{align*}
+    a_1, a_2, \ldots, a_n, \ldots
+\end{align*}
+If you do not have to sum them up in order one by one, how many ways can you think of? For example, one way is to first sum up all the terms with odd indices:
+\begin{align*}
+    s_1 = a_1 + a_3 + \cdots + a_{2k-1} + \cdots
+\end{align*}
+and then all the terms with even indices:
+\begin{align*}
+    s_2 = a_2 + a_4 + \cdots + a_{2k} + \cdots
+\end{align*}
+Finally, the total sum is $s_1 + s_2$. As a matter of fact, there are more ways of summing these numbers than one can imagine at first thought, some of which may be difficult to describe. The need for a precise description of summing countably many numbers in the way we want gives rise to the concept of \textbf{subseries}\index{subseries}.
+
+Suppose $s$ is the sum we will obtain by summing up the numbers in the way we like. A natural question to ask is whether $\sum a_n$ converges to $s$. The answer is yes by Theorem~\ref{thm:50}, which we will soon show provided that $\sum a_n$ converges absolutely.
+
+%------------------------------
+
+\begin{definition}
+    Let $f: \N^\ast \N^\ast$ be an \textbf{injective}/\textbf{one-to-one} function whose domain is $\N^\ast$ and whose range $f(\N^\ast)$ is a subset of $\N^\ast$. Let $\sum a_n$ and $\sum b_n$ be two series such that 
+    \begin{align*}
+        b_n = a_{f(n)}, 
+        \quad n \in \N^\ast
+    \end{align*}
+    Then we say $\sum b_n$ is a \textbf{subseries} of $\sum a_n$.
+\end{definition}
+
+To understand the definition, we note that a subseries of $\sum a_n$ can be constructed in the following way. Given a sequence
+\begin{align*}
+    a_1, a_2, \ldots a_n, \ldots
+\end{align*}
+We first extract a subsequence $\{a_{k_n}\}$ out of it:
+\begin{align*}
+    a_{k_1}, a_{k_2}, \ldots a_{k_n}, \ldots
+\end{align*}
+where $k_{n} < k_{n+1} \; \forall n \in \N^\ast$. And then we rearrange this subsequence into 
+\begin{align*}
+    a_{g(k_1)}, a_{g(k_2)}, \ldots a_{g(k_n)}, \ldots
+\end{align*}
+where $g$ is a bijection from $\set{k_n}{n \in \N^\ast}$ to itself. If we define $f(n) = g(k_n)$, then $\sum_{a_{f(n)}}$ is precisely a subseries of $\sum a_n$.
+
+\begin{example}
+    Consider the series $\sum a_n = \sum_{n=1}^\infty i^n$. We write down its first several terms:
+    \begin{align*}
+        \sum_{n=1}^\infty i^n
+        = i + (-1) + (-i) + 1 
+        + i + (-1) + (-i) + 1 + \cdots 
+    \end{align*}
+    Let 
+    \begin{align*}
+        f(n) = 2n - 1 + 2 \times (-1)^{n-1},
+        \quad n \in \N^\ast
+    \end{align*}
+    Note that $f$ is injective. The following expression of $f$ is more intuitive:
+    \begin{align*}
+        f(n) = \begin{cases}
+            2n + 1,
+            &\text{$n$ is odd} \\
+            2n - 3,
+            &\text{$n$ is even}
+        \end{cases}
+    \end{align*}
+    The first several values of $f$ are 
+    \begin{align*}
+        f(1) = 3,
+        \quad
+        f(2) = 1,
+        \quad
+        f(3) = 7,
+        \quad
+        f(4) = 5,
+        \ldots
+    \end{align*}
+    Hence, the subseries $\sum a_{f(n)}$ is 
+    \begin{align*}
+        \sum a_{f(n)} = (-i) + i + (-i) + i + \cdots
+    \end{align*}
+\end{example}
+
+%------------------------------
+
+\begin{theorem} \label{thm:49}
+    If $\sum a_n$ converges absolutely, then every subseries $\sum b_n$ also converges absolutely. And we have
+    \begin{align}
+        \abs{\sum_{n=1}^\infty b_n} 
+        \leq \sum_{n=1}^\infty \abs{b_n} 
+        \leq \sum_{n=1}^\infty \abs{a_n}
+        \label{eq:105}
+    \end{align}
+\end{theorem}
+
+\begin{proof}
+    Suppose $b_k = a_{f(k)} \; k \in \N^\ast$. Let integer $n$ be fixed, and let $N = \max \{ f(1), \ldots, f(n) \}$. Then we have 
+    \begin{align*}
+        \abs{\sum_{k=1}^n b_k} 
+        \leq \sum_{k=1}^n \abs{b_k} 
+        \leq \sum_{k=1}^N \abs{a_k}
+        \leq \sum_{k=1}^\infty \abs{a_k}
+    \end{align*}
+    Since 
+    \begin{align*}
+        \abs{\sum_{k=1}^n b_k} 
+        \leq \sum_{k=1}^n \abs{b_k}
+        \leq \sum_{k=1}^\infty \abs{a_k}
+    \end{align*}
+    holds for every $n \in \N^\ast$, we conclude that $\sum b_n$ converges absolutely. Then by sending $n \to \infty$, we see that \eqref{eq:105} indeed holds.
+\end{proof}
+
+%------------------------------
+
+To sum up
+\begin{align*}
+    a_1, a_2, \ldots, a_n, \ldots
+\end{align*}
+we first \textit{partition} them into several (possibly countably infinitely many) subseries
+\begin{align*}
+    \sum_{n=1}^\infty a_{f_1(n)}, \sum_{n=1}^\infty a_{f_2(n)}, \ldots, 
+    \sum_{n=1}^\infty a_{f_k(n)}, \ldots
+\end{align*}
+After that, we sum up all the subseries. Suppose the final sum is $s$, the next theorem says if $\sum a_n$ converges absolutely, then it must also converge to $s$. In other words, we can sum up an absolutely convergent series in whatever way we want without changing its sum!
+
+\begin{theorem} \label{thm:50}
+    Let $\{f_1, f_2, \ldots\}$ be a countable collection of functions defined on $\N^\ast$, each having the following properties:
+    \begin{enumerate}
+        \item $f_k$ is injective,
+        \item the range $f_k(\N^\ast)$ is a subset of $\N^\ast$, and
+        \item the collection of all function ranges form a partition of $\N^\ast$, that is, $\biguplus_{k=1}^\infty f_k(\N^\ast) = \N^\ast$.
+    \end{enumerate}
+    Suppose that $\sum a_n$ is an absolutely convergent series. Let $b_k(n)$ be defined by 
+    \begin{align*}
+        b_k(n) = a_{f_k(n)},
+        \quad
+        n \in \N^\ast, \;
+        k \in \N^\ast
+    \end{align*}
+    Then
+    \begin{enumerate}
+        \item each $\sum_n b_k(n)$ is an absolutely convergent subseries of $\sum a_n$, and 
+        \item if we let $s_k = \sum_{n=1}^\infty b_k(n)$, then $\sum s_k$ converges absolutely to the same sum as $\sum a_n$, that is, $\sum_{k=1}^\infty s_k = \sum_{n=1}^\infty a_n$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{note}
+    Pay attention to how the properties of $f_k$ being injective and $\biguplus_{k=1}^\infty f_k(\N^\ast)= \N^\ast$ are used in the proof below.
+\end{note}
+
+\begin{proof}
+    The first statement that $\sum_n b_k(n)$ is an absolutely convergent subseries of $\sum a_n$ immediately follows from Theorem~\ref{thm:49}. We now prove 2. 
+
+    We first show that $\sum s_k$ converges absolutely. The $p$-th partial sum of $\sum \abs{s_k}$ satisfies
+    \begin{align*}
+        \sum_{k=1}^p \abs{s_k}
+        &= \abs{s_1} + \cdots + \abs{s_p} \\ 
+        &= \abs{ \sum_{n=1}^\infty b_1(n) } + \cdots
+        + \abs{ \sum_{n=1}^\infty b_p(n) } \\ 
+        &\leq \sum_{n=1}^\infty \abs{b_1(n)} + \cdots
+        + \sum_{n=1}^\infty \abs{b_p(n)} \\
+        &= \sum_{n=1}^\infty ( \abs{b_1(n)} + \cdots
+        + \abs{b_p(n)} )
+    \end{align*}
+    where the last equality follows from Theorem~\ref{thm:48} since every series $\sum_{k} \abs{b_k(n)}$ converges. For any given $q \in \N^\ast$, we always have
+    \begin{align*}
+        \sum_{n=1}^q ( \abs{b_1(n)} + \cdots
+        + \abs{b_p(n)} )
+        \leq \sum_{n=1}^\infty \abs{a_n}
+    \end{align*}
+    because $\sum_{n=1}^q ( \abs{b_1(n)} + \cdots
+    + \abs{b_p(n)} )$ is just a sum of finitely many terms of the series $\sum \abs{a_n}$. Letting $q \to \infty$, we obtain
+    \begin{align*}
+        \sum_{k=1}^p \abs{s_k}
+        \leq \sum_{n=1}^\infty ( \abs{b_1(n)} + \cdots
+        + \abs{b_p(n)} )
+        \leq \sum_{n=1}^\infty \abs{a_n}
+    \end{align*}
+    Hence, all partial sums of $\sum \abs{s_k}$ are bounded above by $\sum_{n=1}^\infty \abs{a_n}$. Therefore, the series $\sum \abs{s_k}$ converges, i.e., $\sum s_k$ converges absolutely.
+
+    Suppose $\sum a_n$ converges to sum $a$. Given $\varepsilon > 0$, there exists $N \in \N^\ast$ such that 
+    \begin{align}
+        \abs{\sum_{n=1}^q a_n - s} < \varepsilon / 2
+        \quad \forall q \geq N
+        \label{eq:107}
+    \end{align}
+    For any integer $j \in \N^\ast$, there exists a \textit{unique} integer $k \in \N^\ast$ such that 
+    \begin{align*}
+        j \in f_k(\N^\ast)
+    \end{align*}
+    since $\biguplus_{k=1}^\infty f_k(\N^\ast) = \N^\ast$. (Existence of $k$ is due to $\bigcup_{k=1}^\infty f_k(\N^\ast) = \N^\ast$, and the uniqueness follows from the fact that these function ranges are mutually disjoint.) Furthermore, there exists a \textit{unique} integer $n \in \N^\ast$ such that 
+    \begin{align*}
+        f_k(n) = j
+    \end{align*}
+    since $f_k$ is injective. Therefore, any integer $j$ can uniquely determine a pair $(k, n)$ and hence we can define a function $g: \N^\ast \to \N^\ast \times \N^\ast$ by 
+    \begin{align*}
+        g(j) = (k, n)
+    \end{align*}
+    satisfying
+    \begin{align*}
+        f_k(n) = j
+    \end{align*}
+    Recall how we chose the integer $N$. Write
+    \begin{align*}
+        g(1) = (k_1, n_1), \ldots, g(N) = (k_N, n_N)
+    \end{align*}
+    Let 
+    \begin{align*}
+        K = \max \{ k_1, \ldots, k_N \}
+        \quad \text{and} \quad
+        M = \max \{ n_1, \ldots, n_N \}
+    \end{align*}
+    We claim that 
+    \begin{align}
+        \abs{\sum_{k=1}^p \sum_{n=1}^q b_k(n) - s} < \varepsilon / 2
+        \quad \forall p \geq K \;
+        \forall q \geq M
+        \label{eq:106}
+    \end{align}
+    The proof of \eqref{eq:106} is left as an exercise. See Exercise~\ref{ex:5}. Letting $q \to \infty$ in \eqref{eq:106} yields
+    \begin{align*}
+       \abs{\sum_{k=1}^p \sum_{n=1}^\infty b_k(n) - s} \leq \varepsilon / 2 < \varepsilon
+        \quad \forall p \geq K
+    \end{align*}
+    Recall each subseries $\sum_n b_k(n)$ converges absolutely, and $s_k = \sum_{n=1}^\infty b_k(n)$. Hence, we have 
+    \begin{align*}
+       \abs{\sum_{k=1}^p s_k - s}
+       < \varepsilon
+        \quad \forall p \geq K
+    \end{align*}
+    Note that the choice of $K$ only depends on $\varepsilon$ (through $N$). Therefore, the series $\sum s_k$ indeed converges to sum $a$.
+\end{proof}
+
+\begin{exercise}
+    Complete the above proof by proving the inequality \eqref{eq:106}.
+    \label{ex:5}
+\end{exercise}
+
+\begin{solution}
+    For each $j \in \{1, \ldots, N\}$, we have $g(j) = (k, n)$ where $k$ and $n$ satisfy
+    \begin{align*}
+        f_k(n) = j,
+        \quad k \leq K
+        \quad \text{and} \quad 
+        n \leq M
+    \end{align*}
+    This implies
+    \begin{align*}
+        \set{f_k(n)}{1 \leq k \leq p, 1 \leq n \leq q}
+        \supset \{1, \ldots, N\}
+    \end{align*}
+    provided that $p \geq K$ and $q \geq M$. Inequality \eqref{eq:106} then immediately follows from \eqref{eq:107} since
+    \begin{align*}
+        \sum_{k=1}^p \sum_{n=1}^q b_k(n)
+        = \sum_{k=1}^p \sum_{n=1}^q a_{f_k(n)}
+    \end{align*}
+    is a sum of terms including the first $N$ terms of $\sum a_n$.
+\end{solution}
+
+%------------------------------
+
+\section{Double Series}
+
+%------------------------------
+
+\begin{theorem} \label{thm:47}
+    Suppose double series $\sum a_{m,n}$ consists of non-negative terms. Then it converges if and only if the set of its partial sums is bounded above.
+\end{theorem}
+
+\begin{proof}
+    % TODO
+\end{proof}
+
+%------------------------------
+
+The absolute convergence of a double series will also imply convergence of itself.
+
+\begin{theorem}
+    A double series $\sum a_{m,n}$ converges if it converges absolutely.
+\end{theorem}
+
+\begin{proof}
+    % TODO
+\end{proof}
+
 %==============================
 
 \chapter{Limits and Continuity}
@@ -3490,7 +3798,7 @@ We know by Theorem~\ref{thm:38} that the product $fg$ is integrable w.r.t. $\alp
         \quad
         -1 \leq x \leq 1
     \end{align*}
-    And let $f$ and $g$ be any two functions defined on $[-1, 1]$ that are continuous from the left at $x=0$. By Theorem~\ref{thm:24} and Theorem~\ref{thm:40}, we know both functions are integrable w.r.t. $\alpha$ on $[-1, x]$ if $-1 < x \leq 1$ with 
+    Suppose $f$ and $g$ are any two functions defined on $[-1, 1]$ being continuous from the left at $x=0$. By Theorem~\ref{thm:24} and Theorem~\ref{thm:40}, we know both functions are integrable w.r.t. $\alpha$ on $[-1, x]$ if $-1 < x \leq 1$ with 
     \begin{align*}
         F(x) = \int_{-1}^x f \; \mathrm{d}\alpha = \begin{cases}
             f(0) &x \geq 0 \\ 
@@ -3714,9 +4022,165 @@ We now present the proof as follows.
 
 \section{Uniform Convergence}
 
-\begin{theorem}[Cauchy's Criterion] \label{thm:42}
-    % TODO
+As mentioned, only assuming $f_n(x) \to f(x)$ for each $x \in S$ is not enough to preserve certain properties of $f_n$. Hence, we need a stronger version of convergence than pointwise convergence. The condition $\lim_{n \to \infty} f_n(x) = f(x)$ says at a given point $x$, $f_n(x)$ will get closer and closer to $f(x)$. Chances are that $f_n(x_1)$ and $f_n(x_2)$ may not converge to $f(x_1)$ and $f(x_2)$ at the same speed. Now, we want $f_n(x)$ to get close to $f(x)$ \textit{uniformly} at the same pace for all $x \in S$. This gives rise to the definition of \textbf{uniform convergence}\index{uniform convergence}.
+
+\begin{definition}
+    Let $S$ be a subset of a metric space. A sequence of functions $\{f_n\}$ is said to converge to $f$ uniformly on $S$ if for every $\varepsilon > 0$, there exists an integer $N \in \N^\ast$ such that 
+    \begin{align*}
+        \abs{f_n(x) - f(x)} < \varepsilon
+        \quad \forall n \geq N \;
+        \forall x \in S
+    \end{align*}
+    Symbolically, we write $f_n \to f$ uniformly on $S$.
+\end{definition}
+
+%------------------------------
+
+The next theorem is useful to check whether $\{f_n\}$ converges uniformly.
+
+\begin{theorem} \label{thm:46}
+    Suppose $f_n \to f$ on $S$. Then $f_n \to f$ uniformly on $S$ if and only if
+    \begin{align*}
+        M_n = \sup_{x \in S} \abs{f_n(x) - f(x)} < \infty
+        \quad \forall n \geq N_0
+    \end{align*}
+    for some $N_0 \in \N^\ast$, and 
+    \begin{align*}
+        \lim_{n \to \infty} M_n = 0
+    \end{align*}
 \end{theorem}
+
+\begin{note}
+    To be clear, $M_n$ is only defined when $n \geq N_0$ for it has to be a real number.
+\end{note}
+
+\begin{proof}
+    (Sufficiency) If $\lim_{n \to \infty} M_n = 0$, then for any $\varepsilon > 0$ there exists $N \in \N^\ast$ (of course, $N \geq N_0$) such that 
+    \begin{align*}
+        \sup_{x \in S} \abs{f_n(x) - f(x)} < \varepsilon
+        \quad \forall n \geq N
+    \end{align*}
+    Therefore, $f_n \to f$ uniformly on $S$ by definition since $\abs{f_n(x) - f(x)} \leq \sup_{x \in S} \abs{f_n(x) - f(x)}$ for all $x \in S$.
+
+    (Necessity) Suppose $f_n \to f$ uniformly on $S$. Given $\varepsilon > 0$, there exists $N \in \N^\ast$ such that 
+    \begin{align*}
+        \abs{f_n(x) - f(x)} < \varepsilon
+        \quad \forall n \geq N \; 
+        \forall x \in S
+    \end{align*}
+    Taking the supremum over $x$, we have 
+    \begin{align*}
+        M_n
+        = \sup_{x \in S} \abs{f_n(x) - f(x)} \leq \varepsilon
+        \quad \forall n \geq N
+    \end{align*}
+    This implies that the sequence $\{M_n\}$ converges to $0$.
+\end{proof}
+
+\begin{example}
+    Let
+    \begin{align*}
+        f_n(x) = \frac{1}{nx},
+        \quad x \in (0, 1)
+    \end{align*}
+    The limit of $\{f_n(x)\}$ at each $x$ is zero as $n \to \infty$. Hence, $f_n \to f = 0$. Note that 
+    \begin{align*}
+        \sup_{x \in (0, 1)} \abs{f_n(x) - f(x)}
+        = \sup_{x \in (0, 1)} \frac{1}{nx}
+        = \infty
+    \end{align*}
+    for every $n \in \N^\ast$. Therefore, by Theorem~\ref{thm:46}, the convergence is not uniform.
+\end{example}
+
+\begin{example}
+    Let 
+    \begin{align*}
+        f_n(x) = \frac{1}{x} + \frac{1}{n},
+        \quad x \in (0, 1)
+    \end{align*}
+    Note that $f(x) = \lim_{n \to \infty} f_n(x) = 1 / x$. We have
+    \begin{align*}
+        M_n = \sup_{x \in (0, 1)} \abs{f_n(x) - f(x)}
+        = \frac{1}{n}
+    \end{align*}
+    Since $\lim_{n \to \infty} M_n = 0$, $f_n \to f$ uniformly on $(0, 1)$.
+\end{example}
+
+%------------------------------
+
+A sequence of functions $\{f_n\}$ is said to be \textbf{uniformly bounded}\index{uniformly bounded functions} on $S$ if there exists a positive constant $M > 0$ such that 
+\begin{align*}
+    \abs{f_n(x)} \leq M
+    \quad \forall n \in \N^\ast \; 
+    \forall x \in S
+\end{align*}
+
+
+\begin{theorem}
+    Suppose $\{f_n\}$ is uniformly bounded on $S$. Then $f_n \to f$ uniformly on $S$ if and only if
+    \begin{align*}
+        \lim_{n \to \infty} \norm{f_n - f} = 0
+    \end{align*}
+    where $\norm{\cdot}$ is the uniform norm on the set of bounded functions on $S$, $\mathcal{B}(S)$.
+\end{theorem}
+
+
+%------------------------------
+
+Similar to the situation we encountered when dealing with numerical sequences and series, sometimes we want to prove that $\{f_n\}$ converges uniformly without knowing its limit. 
+
+\begin{theorem}[Cauchy's Criterion] \label{thm:42}
+    A sequence of functions $\{f_n\}$ converges uniformly on $S$ if and only if for any $\varepsilon > 0$, there exists $N \in N^\ast$ such that 
+    \begin{align*}
+        \abs{f_m(x) - f_n(x)} < \varepsilon
+        \quad \forall m, n \geq N \;
+        \forall x \in S
+    \end{align*}
+    We say $\{f_n\}$ satisfies \textbf{Cauchy's criterion}\index{Cauchy's criterion for uniform convergence} if the above condition is met.
+\end{theorem}
+
+\begin{proof}
+    (Sufficiency) Suppose $\{f_n\}$ satisfies Cauchy's criterion. Fix $x \in S$, we know that the numerical sequence $\{f_n(x)\}$ is a Cauchy sequence. Hence, it has a limit, and we denote this limit by $f(x)$. In this way, we can define a function $f$ on $S$ such that 
+    \begin{align*}
+        f(x) = \lim_{n \to \infty} f_n(x)
+        \quad \forall x \in S
+    \end{align*}
+    Given $\varepsilon > 0$. By Cauchy's criterion, there exists $N \in \N^\ast$ such that 
+    \begin{align*}
+        \abs{f_m(x) - f_n(x)} < \varepsilon / 2
+        \quad \forall m, n \geq N \;
+        \forall x \in S
+    \end{align*}
+    \begin{note}
+        The reason why we choose $\varepsilon / 2$ is that when $m \to \infty$, the strict inequality will become a non-strict one.
+    \end{note}
+    Letting $m \to \infty$, we have
+    \begin{align*}
+        \abs{f(x) - f_n(x)}
+        = \lim_{m \to \infty} \abs{f_m(x) - f_n(x)} \leq \varepsilon / 2
+        < \varepsilon
+        \quad \forall n \geq N \;
+        \forall x \in S
+    \end{align*}
+    Therefore, $f_n \to f$ uniformly on $S$.
+
+    (Necessity) Conversely, suppose $f_n \to f$ uniformly on $S$ for some function $f$. Given $\varepsilon > 0$, by definition, there exists $N \in \N^\ast$ such that 
+    \begin{align*}
+        \abs{f_n(x) - f(x)} < \varepsilon / 2
+        \quad \forall n \geq N \; 
+        \forall x \in S
+    \end{align*}
+    Let $m, n \geq N$, we have 
+    \begin{align*}
+        \abs{f_m(x) - f_n(x)}
+        \leq \abs{f_m(x) - f(x)}
+        + \abs{f_n(x) - f(x)}
+        < \varepsilon / 2 + \varepsilon / 2
+        = \varepsilon
+        \quad \forall x \in S
+    \end{align*}
+    Hence, Cauchy's criterion is satisfied.
+\end{proof}
 
 %------------------------------
 
@@ -3724,13 +4188,13 @@ We now present the proof as follows.
 
 %------------------------------
 
-If we assume $f_n$ converges to $f$ uniformly, then we can interchange the two limiting processes, that is, 
+If we assume $f_n$ converges to $f$ uniformly, then we can interchange the two limit processes, that is, 
 \begin{align*}
     \lim_{x \to p} \lim_{n \to \infty} f_n(x)
     = \lim_{n \to \infty} \lim_{x \to p} f_n(x)
 \end{align*}
 
-\begin{theorem}
+\begin{theorem} \label{thm:43}
     Suppose $f_n \to f$ uniformly on $S$, and let $p$ be an accumulation point $S$. If the limit
     \begin{align*}
         A_n = \lim_{x \to p} f(x)
@@ -3795,6 +4259,187 @@ If we assume $f_n$ converges to $f$ uniformly, then we can interchange the two l
     \end{align*}
     where the last inequality follows from \eqref{eq:98}, \eqref{eq:99} and \eqref{eq:100}. This completes the proof.
 \end{proof}
+
+%------------------------------
+
+\section{Uniform Convergence and Differentiation}
+
+In this section, we study the conditions that allow us to swap the limit and derivative symbols:
+\begin{align}
+    \odvs{\lim_{n \to \infty} f_n(x)}{x}
+    = \lim_{n \to \infty} \odvs{f_n(x)}{x}
+    \label{eq:104}
+\end{align}
+
+However, assuming $f_n \to f$ uniformly on $S$ is not sufficient to guarantee that \eqref{eq:104} holds. The following is an example.
+
+\begin{example}
+    Let 
+    \begin{align*}
+        f_n(x) = \frac{\sin nx}{\sqrt{n}}, 
+        \quad x \in \R
+    \end{align*}
+    Because $\abs{\sin nx}$ is bounded by $1$ and $1 / \sqrt{n} \to 0$ as $n \to \infty$, the limit of $f_n$ is $f(x) = 0$. Note that 
+    \begin{align*}
+        M_n = \sup_{x \in \R} \abs{f_n(x) - f(x)}
+        = \sup_{x \in \R} \frac{\abs{\sin nx}}{\sqrt{n}}
+        = \frac{1}{\sqrt{n}}
+    \end{align*}
+    Since $\lim_{n \to \infty} M_n = 0$, $f_n \to f$ uniformly on $\R$.
+
+    It is clear $f^\prime(x) = 0$. We now show that the limiting derivative of $f_n$ is not $f^\prime$ in general. We have 
+    \begin{align*}
+        f^\prime_n(x) = \sqrt{n} \cos nx
+    \end{align*}
+    We note that the limit of $f^\prime_n(x)$ will not exist as a finite number for most of $x$s as $n \to \infty$. In particular, $f^\prime_n(0) = \sqrt{n}$ and hence $\lim_{n \to \infty} f^\prime_n(0) = \infty$. A plot of $f_n$ and $f^\prime_n$ is shown in Figure~\ref{fig:11}.
+
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[scale=0.2]{figures/graph-010.png}
+        \caption{Left: $f_n(x) = (\sin nx) / \sqrt{n}$. Right: $f^\prime_n(x)$.}
+        \label{fig:11}
+    \end{figure}
+\end{example}
+
+\begin{theorem} \label{thm:44}
+    Let $\{f_n\}$ be a sequence of real-valued functions each of which has a finite derivative at every point in $(a, b)$. Suppose there exists a point $x_0 \in (a, b)$ such that the numerical sequence $\{f_n(x_0)\}$ converges. Suppose further that there exists a function $g$ such that $f^\prime_n \to g$ uniformly on $(a, b)$. Then 
+    \begin{enumerate}
+        \item there exists a function $f$ such that $f_n \to f$ uniformly on $(a, b)$, and
+        \item $f^\prime(x)$ exists everywhere in $(a, b)$ with $f^\prime(x) = g(x)$.
+    \end{enumerate}
+    In this case, we can write
+    \begin{align*}
+        \odvs{\lim_{n \to \infty} f_n(x)}{x}
+        = \lim_{n \to \infty} \odvs{f_n(x)}{x}
+    \end{align*}
+\end{theorem}
+
+\begin{proof}
+    We first show that $\{f_n\}$ converges uniformly on $(a, b)$. Given $\varepsilon > 0$, since $\{f_n(x_0)\}$ converges, by Cauchy's criterion for sequences,
+    \begin{align}
+        \abs{f_m(x_0) - f_n(x_0)} < \varepsilon / 2
+        \quad \forall m,n \geq N_1
+        \label{eq:101}
+    \end{align}
+    for some integer $N_1 \in \N^\ast$. Meanwhile, since $f^\prime_n \to g$ uniformly on $(a, b)$, it follows from Cauchy's criterion for uniform convergence (Theorem~\ref{thm:42}) that there exists $N_2 \in \N^\ast$ such that
+    \begin{align}
+        \abs{f^\prime_m(x) - f^\prime_n(x)} < \frac{\varepsilon / 2}{\abs{x - x_0} + 1}
+        \quad \forall m, n \geq N_2 \;
+        \forall x \in (a, b)
+        \label{eq:102}
+    \end{align}
+    Let $N = \max\{N_1, N_2\}$ and let $m, n \geq N$. Define function $h$ by 
+    \begin{align*}
+        h(x) = f_m(x) - f_n(x)
+    \end{align*}
+    Applying the mean value theorem (Theorem~\ref{thm:8}) to $h$, we obtain
+    \begin{align*}
+        [f_m(x) - f_n(x)] - [f_m(x_0) - f_n(x_0)]
+        = [f^\prime_m(\xi) - f^\prime_n(\xi)] (x - x_0)
+    \end{align*} 
+    where $x \neq x_0$ and $\xi$ is some number in between $x$ and $x_0$. We can then use \eqref{eq:101} and \eqref{eq:102} to bound the value of $\abs{f_m(x) - f_n(x)}$ ($x \neq x_0$) as follows:
+    \begin{align*}
+        \abs{f_m(x) - f_n(x)}
+        &\leq \abs{f_m(x_0) - f_n(x_0)}
+        + \abs{f^\prime_m(\xi) - f^\prime_n(\xi)} \abs{x - x_0} \\
+        &\leq \varepsilon / 2 + \frac{\varepsilon / 2}{\abs{x - x_0} + 1} \cdot \abs{x - x_0} \\ 
+        &< \varepsilon 
+        \quad \forall m,n \geq N \;
+        \forall x \in (a, b) \setminus \{x_0\}
+    \end{align*}
+    But since $m,n \geq N \geq N_1$, the inequality
+    \begin{align*}
+        \abs{f_m(x_0) - f_n(x_0)} < \varepsilon / 2 < \varepsilon
+    \end{align*}
+    also holds by \eqref{eq:101}. Therefore, we have
+    \begin{align*}
+        \abs{f_m(x) - f_n(x)}
+        < \varepsilon
+        \quad \forall m,n \geq N \;
+        \forall x \in (a, b)
+    \end{align*}
+    which implies that $\{f_n\}$ converges uniformly on $(a, b)$. Suppose that the limit function is $f$.
+
+    Let $c \in (a, b)$. By Theorem~\ref{thm:1}, there exists a continuous function $\phi$ defined on $(a, b)$ such that
+    \begin{align*}
+        f_n(x) - f_n(c) = (x - c) \phi_n(x)
+    \end{align*}
+    with $\phi_n(c) = f^\prime_n(c)$, i.e., 
+    \begin{align*}
+        \lim_{x \to c} \phi_n(x)=  f^\prime_n(c)
+    \end{align*}
+    \begin{note}
+        We want to show 
+        \begin{align*}
+            \lim_{x \to c} \lim_{n \to \infty} \phi_n(x)
+            = \lim_{n \to \infty} \lim_{x \to c} \phi_n(x)
+        \end{align*}
+        using Theorem~\ref{thm:43}.
+    \end{note}
+    Note that $\lim_{n \to \infty}\phi_n(x)$ exists, and 
+    \begin{align*}
+        \lim_{n \to \infty}\phi_n(x) = \frac{f(x) - f(c)}{x - c} =: \phi(x)
+    \end{align*}
+    We claim that $\phi_n \to \phi$ uniformly on $(a, b)$. The proof of this assertion is left as an exercise. (See Exercise~\ref{ex:4}.) Since both the limits $\lim_{x \to c} \phi_n(x)$ and $\lim_{n \to \infty} \phi_n(x)$ exist, and $\phi_n(x)$ converges uniformly on $(a, b)$, by Theorem~\ref{thm:43}, the limits $\lim_{n \to \infty} f^\prime_n(c)$ and $\lim_{x \to c} [f(x) - f(c)] / (x - c)$ both exist and are equal to each other, that is, 
+    \begin{align*}
+        \lim_{x \to c} \frac{f(x) - f(c)}{x - c}
+        = \lim_{n \to \infty} f^\prime_n(c)
+    \end{align*}
+    Therefore, $f$ has a derivative at $c$, and 
+    \begin{align*}
+        f^\prime(c) = \lim_{n \to \infty} f^\prime_n(c) = g(c)
+    \end{align*}
+    This completes the proof.
+\end{proof}
+
+\begin{exercise}
+    Complete the above proof by showing $\phi_n \to \phi$ uniformly on $(a, b)$.
+    \label{ex:4}
+\end{exercise}
+
+\begin{solution}
+    Given $\varepsilon > 0$, since $f_n \to f$ uniformly on $(a, b)$, there exist an integer $N \in \N^\ast$ such that 
+    \begin{align*}
+        \abs{f_n(x) - f(x)} < (b - a) \varepsilon / 2
+        \quad \forall n \geq N \;
+        \forall x \in (a, b)
+    \end{align*}
+    Let $n \geq N$. We then have
+    \begin{align*}
+        \abs{\phi_n(x) - \phi(x)}
+        &\leq \frac{\abs{ [f_n(x) - f(x)] - [f_n(c) - f(c)] }}{\abs{x - c}} \\ 
+        &\leq \frac{\abs{f_n(x) - f(x)} + \abs{f_n(c) - f(c)}}{b - a} \\
+        &< \frac{(b - a) \varepsilon / 2 + (b - a) \varepsilon / 2}{b - a} \\
+        &= \varepsilon
+    \end{align*}
+    Because 
+    \begin{align*}
+        \abs{\phi_n(x) - \phi(x)} < \varepsilon
+    \end{align*}
+    holds for all $n \geq N$ and for all $x \in (a, b)$, we conclude that $\phi_n \to \phi$ uniformly on $(a, b)$.
+\end{solution}
+
+%------------------------------
+
+The following theorem is another version of Theorem~\ref{thm:44} in terms of a series of functions $\sum f_n$.
+
+\begin{theorem} \label{thm:45}
+    Let $\sum f_n$ be a series of real-valued functions each of which has a finite derivative at every point in $(a, b)$. Suppose there exists a point $x_0 \in (a, b)$ such that the numerical series $\sum f_n(x_0)$ converges. Suppose further that there exists a function $g$ such that $\sum f^\prime_n \to g$ uniformly on $(a, b)$. Then 
+    \begin{enumerate}
+        \item there exists a function $f$ such that $\sum f_n \to f$ uniformly on $(a, b)$, and
+        \item $f^\prime(x)$ exists everywhere in $(a, b)$ with $f^\prime(x) = g(x)$.
+    \end{enumerate}
+    In this case, we can write
+    \begin{align}
+        \odvs{\sum f_n(x)}{x}
+        = \sum \odvs{f_n(x)}{x}
+        \label{eq:103}
+    \end{align}
+\end{theorem}
+
+\begin{note}
+    Equation \eqref{eq:103} is also known as \textbf{term-by-term differentiation}\index{term-by-term differentiation}.
+\end{note}
 
 %==============================
 
