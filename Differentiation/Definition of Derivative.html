@@ -147,6 +147,11 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html">
+     Infinite Series
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
      Subseries
     </a>
@@ -619,7 +624,7 @@ title="Print to PDF"
 <div class="proposition-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be defined on  <span class="math notranslate nohighlight">\((a, b)\)</span> . Then  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  if and only if</p>
 <div class="math notranslate nohighlight" id="equation-eq-3">
-<span class="eqno">(8)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lim _ {h \to 0} \frac{f(c+h) - f(c)}{h}
 \end{align}\]</div>
 <p>exists. In that case,  <span class="math notranslate nohighlight">\(f^\prime(c) = \lim_{h \to 0} [ f(c+h) - f(c) ] / h\)</span> .</p>
@@ -636,8 +641,8 @@ title="Print to PDF"
 \abs{\frac{f(c+h) - f(h)}{h} - f^\prime(c)}
 =  \abs{\frac{f(c+h) - f(h)}{(c+h) - c} - f^\prime(c)}  &lt;  \varepsilon
 \end{align*}\]</div>
-<p>This implies the limit  <a class="reference internal" href="#equation-eq-3">(8)</a>  exists, and it equals  <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> .</p>
-<p>Conversely, suppose the limit  <a class="reference internal" href="#equation-eq-3">(8)</a>  exists, say it equals  <span class="math notranslate nohighlight">\(L\)</span> . Then for  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+<p>This implies the limit  <a class="reference internal" href="#equation-eq-3">(10)</a>  exists, and it equals  <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> .</p>
+<p>Conversely, suppose the limit  <a class="reference internal" href="#equation-eq-3">(10)</a>  exists, say it equals  <span class="math notranslate nohighlight">\(L\)</span> . Then for  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \abs{h}  &lt;  \delta \implies \abs{\frac{f(c+h) - f(c)}{h} - L}  &lt;  \varepsilon
@@ -653,12 +658,12 @@ title="Print to PDF"
 \end{align*}\]</div>
 <p>Therefore, the limit  <span class="math notranslate nohighlight">\([f(x) - f(c)]/(x - c)\)</span>  exists, which is equal to  <span class="math notranslate nohighlight">\(L\)</span> . By the definition of derivatives,  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c\)</span> , and  <span class="math notranslate nohighlight">\(f^\prime(c) = L\)</span> .</p>
 </div>
-<div class="admonition-exercise-1 admonition">
-<p class="admonition-title">Exercise 1</p>
+<div class="admonition-exercise-2 admonition">
+<p class="admonition-title">Exercise 2</p>
 <p>Calculate the derivative of  <span class="math notranslate nohighlight">\(e^x\)</span>  at  <span class="math notranslate nohighlight">\(x = 0\)</span> .</p>
 </div>
-<div class="admonition-exercise-2 admonition" id="ex-1">
-<p class="admonition-title">Exercise 2</p>
+<div class="admonition-exercise-3 admonition" id="ex-1">
+<p class="admonition-title">Exercise 3</p>
 <p>Calculate the derivative of</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}

@@ -204,7 +204,7 @@ Note that  $\phi_2(f(x))$  is continuous at  $c$  by  {prf:ref}`thm:3` . And the
 which is exactly  {eq}`eq:9` .
 ````
 
-````{admonition} Exercise 3
+````{admonition} Exercise 4
 :name: ex:2
 Calculate the derivative of
 
@@ -217,7 +217,7 @@ g(x) = x  \sin \frac{1}{x} \ind \{ x  \neq  0 \}
 for  $x \neq 0$ . Does the derivative exist at  $x = 0$ ?
 ````
 
-````{admonition} Exercise 4
+````{admonition} Exercise 5
 :name: ex:3
 Calculate the derivative of
 
@@ -227,5 +227,5 @@ f(x) = x^2  \sin \frac{1}{x^2} \ind \{ x  \neq  0 \}
 \end{align*}
 ```
 
-for all  $x \in \R$ . Recall we have already calculated its derivative at  $x = 0$  in  {ref}`Exercise 2<ex:1>` , which is  $f^\prime(0) = 0$ .
+for all  $x \in \R$ . Recall we have already calculated its derivative at  $x = 0$  in  {ref}`Exercise 3<ex:1>` , which is  $f^\prime(0) = 0$ .
 ````

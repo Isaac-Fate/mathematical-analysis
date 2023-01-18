@@ -147,6 +147,11 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html">
+     Infinite Series
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
      Subseries
     </a>
@@ -563,7 +568,8 @@ title="Print to PDF"
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 11 </span> (Riemann’s Condition)</p>
 <div class="definition-content section" id="proof-content">
-<p>Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is bounded and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Function  <span class="math notranslate nohighlight">\(f\)</span>  is said to satisfy  <strong>Riemann’s condition</strong>  w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  if for any  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
+<p>Riemann’s Condition
+Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is bounded and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Function  <span class="math notranslate nohighlight">\(f\)</span>  is said to satisfy  <strong>Riemann’s condition</strong>  w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  if for any  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \varepsilon
@@ -573,7 +579,7 @@ U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \varepsilon
 </div><p>Essentially, Riemann’s condition requires that the upper and lower sums should be arbitrarily close.</p>
 <p>The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann’s condition are equivalent.</p>
 <div class="proof theorem admonition" id="thm:28">
-<p class="admonition-title"><span class="caption-number">Theorem 45 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 46 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is bounded and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Then the following statements are equivalent.</p>
 <ul class="simple">
@@ -586,7 +592,7 @@ U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \varepsilon
 <p>Proof. If  <span class="math notranslate nohighlight">\(\alpha\)</span>  is constant, then this theorem holds trivially. We assume  <span class="math notranslate nohighlight">\(\alpha\)</span>  is non-constant in the rest of the proof.</p>
 <p>(Proof of 1  <span class="math notranslate nohighlight">\(\implies\)</span>  2) Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , since  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-60">
-<span class="eqno">(72)<a class="headerlink" href="#equation-eq-60" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(74)<a class="headerlink" href="#equation-eq-60" title="Permalink to this equation">#</a></span>\[\begin{align}
 \abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}  &lt;  \varepsilon  / 6
 \end{align}\]</div>
 <p>for any refinement  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span>  and for any choice of representative  <span class="math notranslate nohighlight">\(t_k\)</span>  in each sub-interval  <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> . Let this partition  <span class="math notranslate nohighlight">\(P\)</span>  be fixed for now.</p>
@@ -599,7 +605,7 @@ M_k -  \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
 \end{align*}\]</div>
 <p>Multiplying by  <span class="math notranslate nohighlight">\(\Delta \alpha_k\)</span>  and then summing up over  <span class="math notranslate nohighlight">\(k\)</span>  yields</p>
 <div class="math notranslate nohighlight" id="equation-eq-61">
-<span class="eqno">(73)<a class="headerlink" href="#equation-eq-61" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(75)<a class="headerlink" href="#equation-eq-61" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P,f, \alpha ) -  \varepsilon  / 3
 &lt; S^ \prime (P,f, \alpha )
 \leq  U(P,f, \alpha )
@@ -613,27 +619,27 @@ m_k +  \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
 \end{align*}\]</div>
 <p>Similarly, we then have</p>
 <div class="math notranslate nohighlight" id="equation-eq-62">
-<span class="eqno">(74)<a class="headerlink" href="#equation-eq-62" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(76)<a class="headerlink" href="#equation-eq-62" title="Permalink to this equation">#</a></span>\[\begin{align}
 L(P,f, \alpha ) +  \varepsilon  / 3
 &gt; S^ {\prime\prime} (P,f, \alpha )
 \geq  L(P,f, \alpha )
 \end{align}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(S^{\prime\prime}(P,f,\alpha) = \sum_{k} f(t_k^{\prime\prime}) \Delta\alpha_k\)</span> . By combining  <a class="reference internal" href="#equation-eq-61">(73)</a>  and  <a class="reference internal" href="#equation-eq-62">(74)</a> , we will obtain the following two inequalities.</p>
+<p>where  <span class="math notranslate nohighlight">\(S^{\prime\prime}(P,f,\alpha) = \sum_{k} f(t_k^{\prime\prime}) \Delta\alpha_k\)</span> . By combining  <a class="reference internal" href="#equation-eq-61">(75)</a>  and  <a class="reference internal" href="#equation-eq-62">(76)</a> , we will obtain the following two inequalities.</p>
 <div class="math notranslate nohighlight" id="equation-eq-63">
-<span class="eqno">(75)<a class="headerlink" href="#equation-eq-63" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(77)<a class="headerlink" href="#equation-eq-63" title="Permalink to this equation">#</a></span>\[\begin{align}
 0
 \leq  U(P,f, \alpha ) - S^ {\prime} (P,f, \alpha )
 &lt;  \varepsilon  / 3
 \end{align}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-64">
-<span class="eqno">(76)<a class="headerlink" href="#equation-eq-64" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(78)<a class="headerlink" href="#equation-eq-64" title="Permalink to this equation">#</a></span>\[\begin{align}
 0
 \leq  S^ {\prime\prime} (P,f, \alpha ) - L(P,f, \alpha )
 &lt;  \varepsilon  / 3
 \end{align}\]</div>
-<p>Recall the Riemann-Stieltjes sums  <span class="math notranslate nohighlight">\(S^{\prime}(P,f,\alpha)\)</span>  and  <span class="math notranslate nohighlight">\(S^{\prime\prime}(P,f,\alpha)\)</span>  are formed with the same partition  <span class="math notranslate nohighlight">\(P\)</span> . Hence, they both satisfy  <a class="reference internal" href="#equation-eq-61">(73)</a> . Their difference is then bounded by</p>
+<p>Recall the Riemann-Stieltjes sums  <span class="math notranslate nohighlight">\(S^{\prime}(P,f,\alpha)\)</span>  and  <span class="math notranslate nohighlight">\(S^{\prime\prime}(P,f,\alpha)\)</span>  are formed with the same partition  <span class="math notranslate nohighlight">\(P\)</span> . Hence, they both satisfy  <a class="reference internal" href="#equation-eq-61">(75)</a> . Their difference is then bounded by</p>
 <div class="math notranslate nohighlight" id="equation-eq-65">
-<span class="eqno">(77)<a class="headerlink" href="#equation-eq-65" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(79)<a class="headerlink" href="#equation-eq-65" title="Permalink to this equation">#</a></span>\[\begin{align}
 \abs{S^{\prime}(P,f,\alpha) - S^{\prime\prime}(P,f,\alpha)} \leq \abs{S^{\prime}(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}
 +  \abs{S^{\prime\prime}(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}
 &lt;  \varepsilon  / 3
@@ -645,7 +651,7 @@ L(P,f, \alpha ) +  \varepsilon  / 3
 +  \abs{S^\prime(P,f,\alpha) - S^{\prime\prime}(P,f,\alpha)}
 +  \abs{S^{\prime\prime}(P,f,\alpha) - L(P,f,\alpha)} \\ &amp;&lt;&amp;&amp;  \varepsilon  / 3 +  \varepsilon  / 3 +  \varepsilon  / 3  \\ &amp;=&amp;&amp;  \varepsilon
 \end{alignat*}\end{split}\]</div>
-<p>where the last inequality follows from  <a class="reference internal" href="#equation-eq-63">(75)</a> ,  <a class="reference internal" href="#equation-eq-64">(76)</a>  and  <a class="reference internal" href="#equation-eq-65">(77)</a> . Therefore, Riemann’s condition is satisfied since the above inequality holds for any refinement  <span class="math notranslate nohighlight">\(P\)</span>  of  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> .</p>
+<p>where the last inequality follows from  <a class="reference internal" href="#equation-eq-63">(77)</a> ,  <a class="reference internal" href="#equation-eq-64">(78)</a>  and  <a class="reference internal" href="#equation-eq-65">(79)</a> . Therefore, Riemann’s condition is satisfied since the above inequality holds for any refinement  <span class="math notranslate nohighlight">\(P\)</span>  of  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> .</p>
 <p>(Proof of 2  <span class="math notranslate nohighlight">\(\implies\)</span>  3) Let  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  be arbitrary. By Riemann’s condition, there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -664,7 +670,7 @@ U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \varepsilon
 U(P_1,f, \alpha ) &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon \quad \text{and} \quad
 L(P_2,f, \alpha ) &gt;  \lowint _a^b f  \; \mathrm{d} \alpha  -  \varepsilon
 \end{align*}\]</div>
-<p>Let  <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span>  and  <span class="math notranslate nohighlight">\(P\)</span>  be any of its refinements. By  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 41</a>  and  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#equation-eq-46">(57)</a> , it is clear</p>
+<p>Let  <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span>  and  <span class="math notranslate nohighlight">\(P\)</span>  be any of its refinements. By  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 42</a>  and  <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#equation-eq-46">(59)</a> , it is clear</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \lowint _a^b f  \; \mathrm{d} \alpha  -  \varepsilon
@@ -708,7 +714,7 @@ L(P_2,f, \alpha ) &gt;  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  -  \varepsi
 \leq  U(P,f, \alpha )
 &lt;  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  +  \varepsilon
 \end{align*}\]</div>
-<p>The upper and lower integrals are equal, say to  <span class="math notranslate nohighlight">\(A\)</span> , by  <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 19</a> . It follows that</p>
+<p>The upper and lower integrals are equal, say to  <span class="math notranslate nohighlight">\(A\)</span> , by  <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 20</a> . It follows that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \abs{S(P,f,\alpha) - A}  &lt;  \varepsilon
@@ -716,8 +722,8 @@ L(P_2,f, \alpha ) &gt;  \upint _ {a} ^ {b}  f  \; \mathrm{d} \alpha  -  \varepsi
 <p>By  <a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1">Definition 8</a> ,  <span class="math notranslate nohighlight">\(A = \int_{a}^{b} f \; \mathrm{d}\alpha\)</span> .</p>
 </div>
 <p>As an exercise, we reconsider <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 13</a> and prove that <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
-<div class="admonition-exercise-10 admonition">
-<p class="admonition-title">Exercise 10</p>
+<div class="admonition-exercise-11 admonition">
+<p class="admonition-title">Exercise 11</p>
 <p>Let functions  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(\alpha\)</span>  be given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -755,7 +761,7 @@ L(P,f, \alpha ) = m_n  [ \alpha (0) -  \alpha (x_ {n-1} ) ]  = -2
 \upint _ {-3\pi} ^0 = 2
 \quad \text{and} \quad \lowint _ {-3\pi} ^0 = -2
 \end{align*}\]</div>
-<p>Therefore, by  <a class="reference internal" href="#thm:28">Theorem 45</a> ,  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> , and hence on  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> .</p>
+<p>Therefore, by  <a class="reference internal" href="#thm:28">Theorem 46</a> ,  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> , and hence on  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> .</p>
 <p>This proof is way cleaner than the one given in  <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 13</a>  thanks to Darboux’s formulation of integrals.</p>
 </div>
 </div>

@@ -68,6 +68,7 @@ at point $c$ provided that $f$ has up to $(n+1)$-th order derivative. The reason
 
 ````{prf:theorem} Taylor
 :label: thm:16
+Taylor
 Let  $f$  be a function having  $(n+1)$ -th order derivative everywhere in  $(a, b)$ , and suppose  $f^{(n)}$  is continuous on  $[a, b]$ . Let  $c \in (a, b)$  be an interior point. Then for every  $x \in[a, b]$  other than  $c$ , we have
 
 ```{math}
@@ -197,7 +198,7 @@ is the remainder. The smaller the absolute value of $r_n(x)$ is, the more accura
 
 
 
-````{admonition} Exercise 7
+````{admonition} Exercise 8
 Use Taylor's theorem ( {prf:ref}`thm:16` ) to approximate the value of  $\ln(0.6)$  so that the absolute error is less than  $0.1$ .
 ````
 

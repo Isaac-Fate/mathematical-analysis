@@ -147,6 +147,11 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html">
+     Infinite Series
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
      Subseries
     </a>
@@ -560,9 +565,10 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="integration-by-parts">
 <h1>Integration by Parts<a class="headerlink" href="#integration-by-parts" title="Permalink to this headline">#</a></h1>
 <div class="proof theorem admonition" id="thm:20">
-<p class="admonition-title"><span class="caption-number">Theorem 38 </span> (Integration by Parts)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 39 </span> (Integration by Parts)</p>
 <div class="theorem-content section" id="proof-content">
-<p>If  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then  <span class="math notranslate nohighlight">\(\alpha \in \mathfrak{R}(f)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and</p>
+<p>Integration by Parts
+If  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then  <span class="math notranslate nohighlight">\(\alpha \in \mathfrak{R}(f)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \int _a^b f  \; \mathrm{d} \alpha
@@ -578,12 +584,12 @@ title="Print to PDF"
 </div><div class="proof admonition" id="proof">
 <p>Proof. Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , since  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-28">
-<span class="eqno">(46)<a class="headerlink" href="#equation-eq-28" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(48)<a class="headerlink" href="#equation-eq-28" title="Permalink to this equation">#</a></span>\[\begin{align}
 \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha}  &lt;  \varepsilon \quad \forall  P  \supset  P_ \varepsilon
 \end{align}\]</div>
 <p>Let  <span class="math notranslate nohighlight">\(P = \left\{x_0, x_1, \ldots, x_n\right \} \supset P_\varepsilon\)</span>  be any refinement of  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> . The Riemann-Stieltjes sum of  <span class="math notranslate nohighlight">\(\alpha\)</span>  with respect to  <span class="math notranslate nohighlight">\(f\)</span>  is</p>
 <div class="math notranslate nohighlight" id="equation-eq-29">
-<span class="eqno">(47)<a class="headerlink" href="#equation-eq-29" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(49)<a class="headerlink" href="#equation-eq-29" title="Permalink to this equation">#</a></span>\[\begin{align}
 S(P,  \alpha , f)
 =  \sum _ {k=1} ^n  \alpha (t_k) (f(x_k) - f(x_ {k-1} ))
 =  \sum _ {k=1} ^n  \alpha (t_k) f(x_k)
@@ -591,7 +597,7 @@ S(P,  \alpha , f)
 \end{align}\]</div>
 <p>Let</p>
 <div class="math notranslate nohighlight" id="equation-eq-30">
-<span class="eqno">(48)<a class="headerlink" href="#equation-eq-30" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(50)<a class="headerlink" href="#equation-eq-30" title="Permalink to this equation">#</a></span>\[\begin{align}
 P^ \ast  = P  \cup \set{t_k}{1 \leq k \leq n}
 \end{align}\]</div>
 <p>Denote by  <span class="math notranslate nohighlight">\(A\)</span>  the value</p>
@@ -601,23 +607,23 @@ A = f(b) \alpha (b) - f(a) \alpha (a)
 \end{align*}\]</div>
 <p>Note that  <span class="math notranslate nohighlight">\(A\)</span>  can be written as</p>
 <div class="math notranslate nohighlight" id="equation-eq-31">
-<span class="eqno">(49)<a class="headerlink" href="#equation-eq-31" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(51)<a class="headerlink" href="#equation-eq-31" title="Permalink to this equation">#</a></span>\[\begin{align}
 A =  \sum _ {k=1} ^n f(x_k)  \alpha (x_k)
 -  \sum _ {k=1} ^n f(x_ {k-1} )  \alpha (x_ {k-1} )
 \end{align}\]</div>
-<p>Subtracting  <a class="reference internal" href="#equation-eq-29">(47)</a>  from  <a class="reference internal" href="#equation-eq-31">(49)</a> , we obtain</p>
+<p>Subtracting  <a class="reference internal" href="#equation-eq-29">(49)</a>  from  <a class="reference internal" href="#equation-eq-31">(51)</a> , we obtain</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 A - S(P,  \alpha , f)
 =  \sum _ {k=1} ^n f(x_k) ( \alpha (x_k) -  \alpha (t_k))
 +  \sum _ {k=1} ^n f(x_ {k-1} ) ( \alpha (t_k) -  \alpha (x_ {k-1} ))
 \end{align*}\]</div>
-<p>By recalling the construction of  <span class="math notranslate nohighlight">\(P^\ast\)</span>  in  <a class="reference internal" href="#equation-eq-30">(48)</a> , we observe that the right-hand side of the above equation is precisely the Riemann-Stieltjes sum  <span class="math notranslate nohighlight">\(S(P^\ast, f, \alpha)\)</span> . That is,</p>
+<p>By recalling the construction of  <span class="math notranslate nohighlight">\(P^\ast\)</span>  in  <a class="reference internal" href="#equation-eq-30">(50)</a> , we observe that the right-hand side of the above equation is precisely the Riemann-Stieltjes sum  <span class="math notranslate nohighlight">\(S(P^\ast, f, \alpha)\)</span> . That is,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 A - S(P,  \alpha , f) = S(P^ \ast , f,  \alpha )
 \end{align*}\]</div>
-<p>Since  <span class="math notranslate nohighlight">\(P^\ast \supset P \supset P_\varepsilon\)</span> , it follows from  <a class="reference internal" href="#equation-eq-28">(46)</a>  that</p>
+<p>Since  <span class="math notranslate nohighlight">\(P^\ast \supset P \supset P_\varepsilon\)</span> , it follows from  <a class="reference internal" href="#equation-eq-28">(48)</a>  that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \abs{A - S(P, \alpha, f) - \int_a^b f \; \mathrm{d}\alpha}
@@ -637,8 +643,8 @@ A - S(P,  \alpha , f) = S(P^ \ast , f,  \alpha )
 + f(b) \alpha (b) - f(a) \alpha (a)
 \end{align*}\]</div>
 </div>
-<div class="admonition-exercise-8 admonition">
-<p class="admonition-title">Exercise 8</p>
+<div class="admonition-exercise-9 admonition">
+<p class="admonition-title">Exercise 9</p>
 <p>Evaluate the integral</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}

@@ -147,6 +147,11 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html">
+     Infinite Series
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
      Subseries
     </a>
@@ -561,20 +566,20 @@ title="Print to PDF"
 <h1>Derivatives and Continuity<a class="headerlink" href="#derivatives-and-continuity" title="Permalink to this headline">#</a></h1>
 <p>The next theorem helps to reduce some theorems on derivatives to theorems on continuity.</p>
 <div class="proof theorem admonition" id="thm:1">
-<p class="admonition-title"><span class="caption-number">Theorem 12 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 13 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be a function defined on  <span class="math notranslate nohighlight">\((a, b)\)</span> , and  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  a fixed point in that interval. We have the following statements:</p>
 <ul class="simple">
 <li><p>(1) If  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c\)</span> , then there exists a function  <span class="math notranslate nohighlight">\(\phi\)</span>  on  <span class="math notranslate nohighlight">\((a, b)\)</span>  which is continuous at  <span class="math notranslate nohighlight">\(c\)</span> , and satisfies</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-eq-1">
-<span class="eqno">(9)<a class="headerlink" href="#equation-eq-1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-1" title="Permalink to this equation">#</a></span>\[\begin{align}
 f(x) - f(c) = (x - c)  \phi (x)
 \quad \forall  x  \in (a, b)
 \end{align}\]</div>
 <p>And  <span class="math notranslate nohighlight">\(f^\prime(c) = \phi(c)\)</span> .</p>
 <ul class="simple">
-<li><p>(2) Conversely, if there exists a function  <span class="math notranslate nohighlight">\(\phi\)</span>  on  <span class="math notranslate nohighlight">\((a, b)\)</span>  which is continuous at  <span class="math notranslate nohighlight">\(c\)</span> , and satisfies  <a class="reference internal" href="#equation-eq-1">(9)</a> , then  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c\)</span>  with  <span class="math notranslate nohighlight">\(f^\prime(c) = \phi(c)\)</span> .</p></li>
+<li><p>(2) Conversely, if there exists a function  <span class="math notranslate nohighlight">\(\phi\)</span>  on  <span class="math notranslate nohighlight">\((a, b)\)</span>  which is continuous at  <span class="math notranslate nohighlight">\(c\)</span> , and satisfies  <a class="reference internal" href="#equation-eq-1">(11)</a> , then  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c\)</span>  with  <span class="math notranslate nohighlight">\(f^\prime(c) = \phi(c)\)</span> .</p></li>
 </ul>
 </div>
 </div><p>The function <span class="math notranslate nohighlight">\(\phi\)</span> is precisely the slope of function <span class="math notranslate nohighlight">\(f\)</span>’s secant line.</p>
@@ -586,8 +591,8 @@ f(x) - f(c) = (x - c)  \phi (x)
 \quad  x  \neq  c
 \quad \text{and} \quad \phi (c) =  \lim _ {x \to c} \frac{f(x) - f(c)}{x - c}
 \end{align*}\]</div>
-<p>Note that  <span class="math notranslate nohighlight">\(\phi(c)\)</span>  is well-defined since the limit (which equals  <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> ) indeed exists by the definition of the derivative of  <span class="math notranslate nohighlight">\(f\)</span>  at  <span class="math notranslate nohighlight">\(c\)</span> . Notice also that by defining function  <span class="math notranslate nohighlight">\(\phi\)</span>  in this way, it is automatically continuous at  <span class="math notranslate nohighlight">\(c\)</span> . And of course, the equation  <a class="reference internal" href="#equation-eq-1">(9)</a>  holds.</p>
-<p>(Proof of 2) It follows from  <a class="reference internal" href="#equation-eq-1">(9)</a>  that</p>
+<p>Note that  <span class="math notranslate nohighlight">\(\phi(c)\)</span>  is well-defined since the limit (which equals  <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> ) indeed exists by the definition of the derivative of  <span class="math notranslate nohighlight">\(f\)</span>  at  <span class="math notranslate nohighlight">\(c\)</span> . Notice also that by defining function  <span class="math notranslate nohighlight">\(\phi\)</span>  in this way, it is automatically continuous at  <span class="math notranslate nohighlight">\(c\)</span> . And of course, the equation  <a class="reference internal" href="#equation-eq-1">(11)</a>  holds.</p>
+<p>(Proof of 2) It follows from  <a class="reference internal" href="#equation-eq-1">(11)</a>  that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \phi (x) =  \frac{f(x) - f(c)}{x - c} \quad \forall  x  \neq  c
@@ -600,20 +605,20 @@ f(x) - f(c) = (x - c)  \phi (x)
 \end{align*}\]</div>
 <p>This implies  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c\)</span> , and  <span class="math notranslate nohighlight">\(f^\prime(c) = \phi(c)\)</span> .</p>
 </div>
-<p>With the help of <a class="reference internal" href="#thm:1">Theorem 12</a>, we can easily show that <span class="math notranslate nohighlight">\(f\)</span> must be continuous at <span class="math notranslate nohighlight">\(c\)</span> if it is differentiable there.</p>
+<p>With the help of <a class="reference internal" href="#thm:1">Theorem 13</a>, we can easily show that <span class="math notranslate nohighlight">\(f\)</span> must be continuous at <span class="math notranslate nohighlight">\(c\)</span> if it is differentiable there.</p>
 <div class="proof theorem admonition" id="thm:2">
-<p class="admonition-title"><span class="caption-number">Theorem 13 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 14 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be defined on  <span class="math notranslate nohighlight">\((a, b)\)</span> . If  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> , then it is continuous at  <span class="math notranslate nohighlight">\(c\)</span> .</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. By  <a class="reference internal" href="#thm:1">Theorem 12</a> , there exists a function  <span class="math notranslate nohighlight">\(\phi\)</span>  on  <span class="math notranslate nohighlight">\((a, b)\)</span>  such that  <span class="math notranslate nohighlight">\(\phi\)</span>  is continuous at  <span class="math notranslate nohighlight">\(c\)</span> , and</p>
+<p>Proof. By  <a class="reference internal" href="#thm:1">Theorem 13</a> , there exists a function  <span class="math notranslate nohighlight">\(\phi\)</span>  on  <span class="math notranslate nohighlight">\((a, b)\)</span>  such that  <span class="math notranslate nohighlight">\(\phi\)</span>  is continuous at  <span class="math notranslate nohighlight">\(c\)</span> , and</p>
 <div class="math notranslate nohighlight" id="equation-eq-2">
-<span class="eqno">(10)<a class="headerlink" href="#equation-eq-2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-2" title="Permalink to this equation">#</a></span>\[\begin{align}
 f(x) - f(c) = (x - c)  \phi (x)
 \quad \forall  x  \in (a, b)
 \end{align}\]</div>
-<p>Since the limit of the right-hand side in  <a class="reference internal" href="#equation-eq-2">(10)</a>  exists as  <span class="math notranslate nohighlight">\(x \to c\)</span> , the limit of the left-hand side also exists, and</p>
+<p>Since the limit of the right-hand side in  <a class="reference internal" href="#equation-eq-2">(12)</a>  exists as  <span class="math notranslate nohighlight">\(x \to c\)</span> , the limit of the left-hand side also exists, and</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \lim _ {x \to c}  f(x) - f(c)

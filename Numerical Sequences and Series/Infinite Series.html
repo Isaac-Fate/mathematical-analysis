@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reduction of Riemann-Stieltjes Integrals to Finite Sums &#8212; Mathematical Analysis</title>
+    <title>Infinite Series &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,11 +52,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Darboux Integrals with Monotonically Increasing Integrators" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html" />
-    <link rel="prev" title="Step Functions as Integrators" href="Step%20Functions%20as%20Integrators.html" />
+    <link rel="next" title="Subseries" href="Subseries.html" />
+    <link rel="prev" title="Numerical Sequences and Series" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -134,28 +136,28 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    Numerical Sequences and Series
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Infinite Series
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
+    <a class="reference internal" href="Subseries.html">
      Subseries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Double%20Series.html">
+    <a class="reference internal" href="Double%20Series.html">
      Double Series
     </a>
    </li>
@@ -277,73 +279,73 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Riemann-Stieltjes%20Integral/index.html">
    Riemann-Stieltjes Integral
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">
      Definition of the Riemann-Stieltjes Integral
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Linear%20Properties.html">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Linear%20Properties.html">
      Linear Properties
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Reduction%20to%20Riemann-Stieltjes%20Integrals.html">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Reduction%20to%20Riemann-Stieltjes%20Integrals.html">
      Reduction to Riemann-Stieltjes Integrals
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Integration%20by%20Parts.html">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Integration%20by%20Parts.html">
      Integration by Parts
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Change%20of%20Variables.html">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Change%20of%20Variables.html">
      Change of Variables
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Step%20Functions%20as%20Integrators.html">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Step%20Functions%20as%20Integrators.html">
      Step Functions as Integrators
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">
      Reduction of Riemann-Stieltjes Integrals to Finite Sums
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html">
      Darboux Integrals with Monotonically Increasing Integrators
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Riemann%27s%20Condition.html">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Riemann%27s%20Condition.html">
      Riemann’s Condition
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html">
      Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Integrators%20of%20Bounded%20Variation.html">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Integrators%20of%20Bounded%20Variation.html">
      Integrators of Bounded Variation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Existence%20of%20Riemann-Stieltjes%20Integrals.html">
+    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Existence%20of%20Riemann-Stieltjes%20Integrals.html">
      Existence of Riemann-Stieltjes Integrals
     </a>
    </li>
@@ -471,7 +473,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Reduction of Riemann-Stieltjes Integrals to Finite Sums.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FNumerical Sequences and Series/Infinite Series.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -499,7 +501,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Riemann-Stieltjes Integral/Reduction of Riemann-Stieltjes Integrals to Finite Sums.md"
+        <a href="../_sources/Numerical Sequences and Series/Infinite Series.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -548,7 +550,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Reduction of Riemann-Stieltjes Integrals to Finite Sums</h1>
+                <h1>Infinite Series</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -560,8 +562,23 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="reduction-of-riemann-stieltjes-integrals-to-finite-sums">
-<h1>Reduction of Riemann-Stieltjes Integrals to Finite Sums<a class="headerlink" href="#reduction-of-riemann-stieltjes-integrals-to-finite-sums" title="Permalink to this headline">#</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="infinite-series">
+<h1>Infinite Series<a class="headerlink" href="#infinite-series" title="Permalink to this headline">#</a></h1>
+<p>The next theorem tells us that we can add two convergent series term by term. And we can also multiply a convergent series by a constant.</p>
+<div class="proof theorem admonition" id="thm:48">
+<p class="admonition-title"><span class="caption-number">Theorem 2 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>If  <span class="math notranslate nohighlight">\(\sum a_n\)</span>  and  <span class="math notranslate nohighlight">\(\sum b_n\)</span>  are two convergent series, then the series  <span class="math notranslate nohighlight">\(\sum (\alpha a_n + \beta b_n)\)</span>  also converges where  <span class="math notranslate nohighlight">\(\alpha\)</span>  and  <span class="math notranslate nohighlight">\(\beta\)</span>  are constants. Furthermore, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+\sum _ {n=1} ^ \infty ( \alpha  a_n +  \beta  b_n)
+=  \alpha \sum _ {n=1} ^ \infty  a_n
++  \beta \sum _ {n=1} ^ \infty  b_n
+\end{align*}\]</div>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -577,7 +594,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Riemann-Stieltjes Integral"
+            path: "./Numerical Sequences and Series"
         },
         predefinedOutput: true
     }
@@ -591,17 +608,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Step%20Functions%20as%20Integrators.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Step Functions as Integrators</p>
+            <p class="prev-next-title">Numerical Sequences and Series</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html" title="next page">
+    <a class='right-next' id="next-link" href="Subseries.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Darboux Integrals with Monotonically Increasing Integrators</p>
+        <p class="prev-next-title">Subseries</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
