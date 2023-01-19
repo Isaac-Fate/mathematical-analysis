@@ -161,6 +161,11 @@ const thebe_selector_output = ".output, .cell_output"
      Double Series
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
+     Rearrangement Theorem for Double Series
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -566,7 +571,7 @@ title="Print to PDF"
 <h1>Characterization of Functions of Bounded Variation<a class="headerlink" href="#characterization-of-functions-of-bounded-variation" title="Permalink to this headline">#</a></h1>
 <p>In fact, all functions of bounded variation can be written as a difference between two increasing functions.</p>
 <div class="proof lemma admonition" id="lem:2">
-<p class="admonition-title"><span class="caption-number">Lemma 1 </span></p>
+<p class="admonition-title"><span class="caption-number">Lemma 2 </span></p>
 <div class="lemma-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be of bounded variation on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Define  <span class="math notranslate nohighlight">\(V(x) := V_a^x(f)\)</span> ( <span class="math notranslate nohighlight">\(a \leq x \leq b\)</span> ). Then</p>
 <ul class="simple">
@@ -575,7 +580,7 @@ title="Print to PDF"
 </ul>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (Proof of 1) By  <a class="reference internal" href="Additive%20Property%20of%20Total%20Variation.html#thm:34">Theorem 33</a>  and  <a class="reference internal" href="Additive%20Property%20of%20Total%20Variation.html#def:3">Definition 7</a> , we know  <span class="math notranslate nohighlight">\(V(x)\)</span>  is well-defined, and</p>
+<p>Proof. (Proof of 1) By  <a class="reference internal" href="Additive%20Property%20of%20Total%20Variation.html#thm:34">Theorem 34</a>  and  <a class="reference internal" href="Additive%20Property%20of%20Total%20Variation.html#def:3">Definition 8</a> , we know  <span class="math notranslate nohighlight">\(V(x)\)</span>  is well-defined, and</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 V(x+h) - V(x) = V_x^ {x+h} (f)  \geq  0
@@ -588,10 +593,10 @@ P =  \{  x, x+h  \}
 \end{align*}\]</div>
 <p>We have</p>
 <div class="math notranslate nohighlight" id="equation-eq-84">
-<span class="eqno">(39)<a class="headerlink" href="#equation-eq-84" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(41)<a class="headerlink" href="#equation-eq-84" title="Permalink to this equation">#</a></span>\[\begin{align}
 V_x^ {x+h} (P, f) =  \abs{f(x+h) - f(x)} \leq  V_x^ {x+h} (f)
 \end{align}\]</div>
-<p>It then follows from  <a class="reference internal" href="#equation-eq-84">(39)</a>  that</p>
+<p>It then follows from  <a class="reference internal" href="#equation-eq-84">(41)</a>  that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
 (V-f)(x+h) - (V-f)(x)
@@ -600,10 +605,9 @@ V_x^ {x+h} (P, f) =  \abs{f(x+h) - f(x)} \leq  V_x^ {x+h} (f)
 <p>Hence,  <span class="math notranslate nohighlight">\(V-f\)</span>  is also an increasing function on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
 </div>
 <div class="proof theorem admonition" id="thm:22">
-<p class="admonition-title"><span class="caption-number">Theorem 34 </span> (Characterization of Functions of Bounded Variation)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 35 </span> (Characterization of Functions of Bounded Variation)</p>
 <div class="theorem-content section" id="proof-content">
-<p>Characterization of Functions of Bounded Variation
-Let  <span class="math notranslate nohighlight">\(f\)</span>  be a real-valued function on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Then, the following statements are equivalent.</p>
+<p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be a real-valued function on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Then, the following statements are equivalent.</p>
 <ul class="simple">
 <li><p>(1) <span class="math notranslate nohighlight">\(f\)</span>  is of bounded variation on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p></li>
 <li><p>(2) There exist two increasing functions  <span class="math notranslate nohighlight">\(g\)</span>  and  <span class="math notranslate nohighlight">\(h\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that  <span class="math notranslate nohighlight">\(f = g - h\)</span> .</p></li>

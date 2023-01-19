@@ -99,11 +99,11 @@ Choose  $x$  such that  $\abs{x - c} < \delta$ , we have
 Therefore, the limit  $[f(x) - f(c)]/(x - c)$  exists, which is equal to  $L$ . By the definition of derivatives,  $f$  is differentiable at  $c$ , and  $f^\prime(c) = L$ .
 ````
 
-````{admonition} Exercise 2
+````{admonition} Exercise 3
 Calculate the derivative of  $e^x$  at  $x = 0$ .
 ````
 
-````{admonition} Exercise 3
+````{admonition} Exercise 4
 :name: ex:1
 Calculate the derivative of
 

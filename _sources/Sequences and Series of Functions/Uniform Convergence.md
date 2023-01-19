@@ -149,7 +149,6 @@ Similar to the situation we encountered when dealing with numerical sequences an
 
 ````{prf:theorem} Cauchy's Criterion
 :label: thm:42
-Cauchy's Criterion
 A sequence of functions  $\{f_n\}$  converges uniformly on  $S$  if and only if for any  $\varepsilon > 0$ , there exists  $N \in N^\ast$  such that
 
 ```{math}

@@ -161,6 +161,11 @@ const thebe_selector_output = ".output, .cell_output"
      Double Series
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
+     Rearrangement Theorem for Double Series
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -566,7 +571,7 @@ title="Print to PDF"
 <span id="index-6"></span><h1>Darboux Integrals with Monotonically Increasing Integrators<a class="headerlink" href="#darboux-integrals-with-monotonically-increasing-integrators" title="Permalink to this headline">#</a></h1>
 <p>In this section, we shall introduce another formulation of integrals, which is known as the <strong>Darboux integrals</strong>. As we noted before, the Riemann-Stieltjes sum <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span> also depends on the choice of representatives, <span class="math notranslate nohighlight">\( t_k\)</span>s. This uncertainty increases the difficulty of proving assertions related to integrals. For example, as we have seen in <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 13</a>, it takes quite a lot of work to prove that integral does not exist. Hence, we need Darboux’s formulation, which has the advantage of being easier to apply in computations or proofs.</p>
 <div class="proof definition admonition" id="def:2">
-<p class="admonition-title"><span class="caption-number">Definition 9 </span></p>
+<p class="admonition-title"><span class="caption-number">Definition 10 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be a bounded function on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and  <span class="math notranslate nohighlight">\(P = \{a=x_0, x_1, \ldots, x_n=b\}\)</span>  a partition. In each sub-interval  <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> , we use the symbols  <span class="math notranslate nohighlight">\(M_k\)</span>  and  <span class="math notranslate nohighlight">\(m_k\)</span>  to denote</p>
 <div class="math notranslate nohighlight">
@@ -589,23 +594,23 @@ L(P,f, \alpha ) =  \sum _ {k=1} ^n m_k  \Delta \alpha _k
 </div>
 <p>On each sub-interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>, by definition, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-46">
-<span class="eqno">(59)<a class="headerlink" href="#equation-eq-46" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(61)<a class="headerlink" href="#equation-eq-46" title="Permalink to this equation">#</a></span>\[\begin{align}
 m_k  \leq  f(x)  \leq  M_k
 \quad \forall  x  \in[x_{k-1}, x_k]
 \end{align}\]</div>
 <p>It follows that</p>
 <div class="math notranslate nohighlight" id="equation-eq-45">
-<span class="eqno">(60)<a class="headerlink" href="#equation-eq-45" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(62)<a class="headerlink" href="#equation-eq-45" title="Permalink to this equation">#</a></span>\[\begin{align}
 L(P,f, \alpha )  \leq  U(P,f, \alpha )
 \end{align}\]</div>
-<p>If we pick a representative <span class="math notranslate nohighlight">\(t_k \in[x_{k-1}, x_k]\)</span> in each interval and assume <span class="math notranslate nohighlight">\(\alpha\)</span> is monotonically increasing, then <a class="reference internal" href="#equation-eq-46">(59)</a> yields</p>
+<p>If we pick a representative <span class="math notranslate nohighlight">\(t_k \in[x_{k-1}, x_k]\)</span> in each interval and assume <span class="math notranslate nohighlight">\(\alpha\)</span> is monotonically increasing, then <a class="reference internal" href="#equation-eq-46">(61)</a> yields</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 L(P,f, \alpha )  \leq  S(P,f, \alpha )  \leq  U(P,f, \alpha )
 \end{align*}\]</div>
 <p>The following theorem states that not only <span class="math notranslate nohighlight">\(L(P,f,\alpha) \leq U(P,f,\alpha)\)</span> for the same partition <span class="math notranslate nohighlight">\(P\)</span>, but also <span class="math notranslate nohighlight">\(L(P_1,f,\alpha) \leq U(P_2,f,\alpha)\)</span> for any two partitions <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(P_2\)</span>. The theorem also says the upper sums will decrease as the partition gets finer and finer while the lower sums will increase.</p>
 <div class="proof theorem admonition" id="thm:26">
-<p class="admonition-title"><span class="caption-number">Theorem 42 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 43 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . We have the following statements.</p>
 <ul class="simple">
@@ -668,22 +673,22 @@ L(P,f, \alpha )  \geq  L(P_1,f, \alpha )
 \quad \text{and} \quad
 U(P,f, \alpha )  \leq  U(P_2,f, \alpha )
 \end{align*}\]</div>
-<p>As noted before in  <a class="reference internal" href="#equation-eq-45">(60)</a> ,  <span class="math notranslate nohighlight">\(L(P,f,\alpha) \leq U(P,f,\alpha)\)</span> . Therefore,</p>
+<p>As noted before in  <a class="reference internal" href="#equation-eq-45">(62)</a> ,  <span class="math notranslate nohighlight">\(L(P,f,\alpha) \leq U(P,f,\alpha)\)</span> . Therefore,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 L(P_1,f, \alpha )  \leq  L(P,f, \alpha )
 \leq  U(P,f, \alpha )  \leq  U(P_2,f, \alpha )
 \end{align*}\]</div>
 </div>
-<p>In particular, since every partition is a refinement of the trivial partition <span class="math notranslate nohighlight">\(P_0 = \{a, b\}\)</span>, <a class="reference internal" href="#thm:26">Theorem 42</a> leads to</p>
+<p>In particular, since every partition is a refinement of the trivial partition <span class="math notranslate nohighlight">\(P_0 = \{a, b\}\)</span>, <a class="reference internal" href="#thm:26">Theorem 43</a> leads to</p>
 <div class="math notranslate nohighlight" id="equation-eq-47">
-<span class="eqno">(61)<a class="headerlink" href="#equation-eq-47" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(63)<a class="headerlink" href="#equation-eq-47" title="Permalink to this equation">#</a></span>\[\begin{align}
 \inf _ {x\in[a,b]}  f(x)  [ \alpha (b) -  \alpha (a) ] \leq  L(P_1, f,  \alpha )  \leq  U(P_2, f,  \alpha )
 \leq \sup _ {x\in[a,b]}  f(x)  [ \alpha (b) -  \alpha (a) ]
 \end{align}\]</div>
-<p>What <a class="reference internal" href="#equation-eq-47">(61)</a> implies is that all the upper and lower Riemann-Stieltjes sums are bounded. Therefore, the infimum of upper sums and supremum of lower sums both exist as <em>finite</em> numbers, which gives rise to the definition of <strong>upper and lower Riemann-Stieltjes integrals</strong>.</p>
+<p>What <a class="reference internal" href="#equation-eq-47">(63)</a> implies is that all the upper and lower Riemann-Stieltjes sums are bounded. Therefore, the infimum of upper sums and supremum of lower sums both exist as <em>finite</em> numbers, which gives rise to the definition of <strong>upper and lower Riemann-Stieltjes integrals</strong>.</p>
 <div class="proof definition admonition" id="definition-2">
-<p class="admonition-title"><span class="caption-number">Definition 10 </span></p>
+<p class="admonition-title"><span class="caption-number">Definition 11 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is bounded and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is monotonically increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . The upper and lower Riemann-Stieltjes integrals, written as  <span class="math notranslate nohighlight">\(\upint_a^b f \; \mathrm{d}\alpha\)</span>  and  <span class="math notranslate nohighlight">\(\lowint_a^b f \; \mathrm{d}\alpha\)</span> , are defined by</p>
 <div class="math notranslate nohighlight">
@@ -696,11 +701,11 @@ L(P_1,f, \alpha )  \leq  L(P,f, \alpha )
 </div><p>Sometimes, we will just say upper and lower integrals for short.</p>
 <p>As indicated by the names, one should expect that the lower integral should be less than or equal to the upper integral. This is indeed the case.</p>
 <div class="proof theorem admonition" id="theorem-3">
-<p class="admonition-title"><span class="caption-number">Theorem 43 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 44 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . We have</p>
 <div class="math notranslate nohighlight" id="equation-eq-48">
-<span class="eqno">(62)<a class="headerlink" href="#equation-eq-48" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(64)<a class="headerlink" href="#equation-eq-48" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lowint _a^b f  \; \mathrm{d} \alpha \leq \upint _a^b f  \; \mathrm{d} \alpha
 \end{align}\]</div>
 </div>
@@ -710,7 +715,7 @@ L(P_1,f, \alpha )  \leq  L(P,f, \alpha )
 \[\begin{align*}
 U(P_ \varepsilon ,f, \alpha ) &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon
 \end{align*}\]</div>
-<p>By  <a class="reference internal" href="#thm:26">Theorem 42</a> , for any partition  <span class="math notranslate nohighlight">\(P\)</span> , we have</p>
+<p>By  <a class="reference internal" href="#thm:26">Theorem 43</a> , for any partition  <span class="math notranslate nohighlight">\(P\)</span> , we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 L(P,f, \alpha )  \leq  U(P_ \varepsilon ,f, \alpha )
@@ -731,7 +736,7 @@ L(P,f, \alpha ) &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon \quad 
 \lowint _a^b f  \; \mathrm{d} \alpha \leq \upint _a^b f  \; \mathrm{d} \alpha
 \end{align*}\]</div>
 </div>
-<p>There exist cases where the inequality <a class="reference internal" href="#equation-eq-48">(62)</a> is strict.</p>
+<p>There exist cases where the inequality <a class="reference internal" href="#equation-eq-48">(64)</a> is strict.</p>
 <div class="proof example admonition" id="eg:5">
 <p class="admonition-title"><span class="caption-number">Example 14 </span></p>
 <div class="example-content section" id="proof-content">
@@ -747,7 +752,7 @@ L(P,f, \alpha ) &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon \quad 
 </div>
 </div><p>In the following theorems, we introduce some properties of upper and lower integrals.</p>
 <div class="proof theorem admonition" id="theorem-5">
-<p class="admonition-title"><span class="caption-number">Theorem 44 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 45 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose that  <span class="math notranslate nohighlight">\(f\)</span>  is bounded and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Let  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> . We have</p>
 <ul class="simple">
@@ -759,22 +764,22 @@ L(P,f, \alpha ) &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon \quad 
 <p>Proof. We only prove 1, the equality concerning the upper integrals, since 2 can be proved similarly.</p>
 <p>Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , there exist a partition  <span class="math notranslate nohighlight">\(P_1\)</span>  on  <span class="math notranslate nohighlight">\([a, c]\)</span>  and a partition  <span class="math notranslate nohighlight">\(P_2\)</span>  on  <span class="math notranslate nohighlight">\([c, b]\)</span>  such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-49">
-<span class="eqno">(63)<a class="headerlink" href="#equation-eq-49" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(65)<a class="headerlink" href="#equation-eq-49" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P_1,f, \alpha ) &lt;  \upint _a^c f  \; \mathrm{d} \alpha  +  \varepsilon /2
 \quad \text{and} \quad
 U(P_2,f, \alpha ) &lt;  \upint _c^b f  \; \mathrm{d} \alpha  +  \varepsilon /2
 \end{align}\]</div>
 <p>Let  <span class="math notranslate nohighlight">\(P = P_1 \cup P_2\)</span> . Note that  <span class="math notranslate nohighlight">\(P\)</span>  is a partition on  <span class="math notranslate nohighlight">\([a, b]\)</span> , Furthermore, the upper Riemann-Stieltjes sum  <span class="math notranslate nohighlight">\(U(P,f,\alpha)\)</span>  is given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-50">
-<span class="eqno">(64)<a class="headerlink" href="#equation-eq-50" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(66)<a class="headerlink" href="#equation-eq-50" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P,f, \alpha ) = U(P_1,f, \alpha ) + U(P_2,f, \alpha )
 \end{align}\]</div>
 <p>But</p>
 <div class="math notranslate nohighlight" id="equation-eq-51">
-<span class="eqno">(65)<a class="headerlink" href="#equation-eq-51" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(67)<a class="headerlink" href="#equation-eq-51" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P,f, \alpha )  \geq \upint _a^b f  \; \mathrm{d} \alpha
 \end{align}\]</div>
-<p>Combining  <a class="reference internal" href="#equation-eq-49">(63)</a> ,  <a class="reference internal" href="#equation-eq-50">(64)</a>  and  <a class="reference internal" href="#equation-eq-51">(65)</a>  together, we have</p>
+<p>Combining  <a class="reference internal" href="#equation-eq-49">(65)</a> ,  <a class="reference internal" href="#equation-eq-50">(66)</a>  and  <a class="reference internal" href="#equation-eq-51">(67)</a>  together, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \upint _a^b f  \; \mathrm{d} \alpha
@@ -782,20 +787,20 @@ U(P,f, \alpha )  \geq \upint _a^b f  \; \mathrm{d} \alpha
 \end{align*}\]</div>
 <p>Since the above inequality holds for any  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> . It follows that</p>
 <div class="math notranslate nohighlight" id="equation-eq-52">
-<span class="eqno">(66)<a class="headerlink" href="#equation-eq-52" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(68)<a class="headerlink" href="#equation-eq-52" title="Permalink to this equation">#</a></span>\[\begin{align}
 \upint _a^b f  \; \mathrm{d} \alpha \leq \upint _a^c f  \; \mathrm{d} \alpha  +  \upint _c^b f  \; \mathrm{d} \alpha
 \end{align}\]</div>
 <p>On the other hand, letting  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  be chosen arbitrarily, there exists a partition  <span class="math notranslate nohighlight">\(P\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-53">
-<span class="eqno">(67)<a class="headerlink" href="#equation-eq-53" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(69)<a class="headerlink" href="#equation-eq-53" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P,f, \alpha ) &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon
 \end{align}\]</div>
-<p>We want to split  <span class="math notranslate nohighlight">\(P\)</span>  into two partitions, one on  <span class="math notranslate nohighlight">\([a,c]\)</span>  and the other on  <span class="math notranslate nohighlight">\([c, b]\)</span> . But we need to ensure that  <span class="math notranslate nohighlight">\(c\)</span>  is in  <span class="math notranslate nohighlight">\(P\)</span> . To do so, we consider a refinement  <span class="math notranslate nohighlight">\(P^\prime = P \cup \{c\}\)</span> . By  <a class="reference internal" href="#thm:26">Theorem 42</a> , we know that the upper Riemann-Stieltjes sum concerning  <span class="math notranslate nohighlight">\(P^\prime\)</span>  is reduced, i.e.,</p>
+<p>We want to split  <span class="math notranslate nohighlight">\(P\)</span>  into two partitions, one on  <span class="math notranslate nohighlight">\([a,c]\)</span>  and the other on  <span class="math notranslate nohighlight">\([c, b]\)</span> . But we need to ensure that  <span class="math notranslate nohighlight">\(c\)</span>  is in  <span class="math notranslate nohighlight">\(P\)</span> . To do so, we consider a refinement  <span class="math notranslate nohighlight">\(P^\prime = P \cup \{c\}\)</span> . By  <a class="reference internal" href="#thm:26">Theorem 43</a> , we know that the upper Riemann-Stieltjes sum concerning  <span class="math notranslate nohighlight">\(P^\prime\)</span>  is reduced, i.e.,</p>
 <div class="math notranslate nohighlight" id="equation-eq-54">
-<span class="eqno">(68)<a class="headerlink" href="#equation-eq-54" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(70)<a class="headerlink" href="#equation-eq-54" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P^ \prime ,f, \alpha )  \leq  U(P,f, \alpha ) &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon
 \end{align}\]</div>
-<p>where the second inequality follows from  <a class="reference internal" href="#equation-eq-53">(67)</a> . Let  <span class="math notranslate nohighlight">\(P_1\)</span>  and  <span class="math notranslate nohighlight">\(P_2\)</span>  be given by</p>
+<p>where the second inequality follows from  <a class="reference internal" href="#equation-eq-53">(69)</a> . Let  <span class="math notranslate nohighlight">\(P_1\)</span>  and  <span class="math notranslate nohighlight">\(P_2\)</span>  be given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 P_1 =  \set{x \in P^\prime}{x \leq c} \quad \text{and} \quad
@@ -803,16 +808,16 @@ P_2 =  \set{x \in P^\prime}{x \geq c}
 \end{align*}\]</div>
 <p>Note that indeed  <span class="math notranslate nohighlight">\(P_1\)</span>  and  <span class="math notranslate nohighlight">\(P_2\)</span>  are partitions on  <span class="math notranslate nohighlight">\([a, c]\)</span>  and  <span class="math notranslate nohighlight">\([c, b]\)</span> , respectively. We have</p>
 <div class="math notranslate nohighlight" id="equation-eq-55">
-<span class="eqno">(69)<a class="headerlink" href="#equation-eq-55" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(71)<a class="headerlink" href="#equation-eq-55" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P^ \prime ,f, \alpha ) = U(P_1,f, \alpha ) + U(P_2,f, \alpha )
 \end{align}\]</div>
 <p>Moreover, The two upper Riemann-Stieltjes sums are bounded below by the corresponding upper integrals, that is,</p>
 <div class="math notranslate nohighlight" id="equation-eq-56">
-<span class="eqno">(70)<a class="headerlink" href="#equation-eq-56" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(72)<a class="headerlink" href="#equation-eq-56" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P_1,f, \alpha )  \geq \upint _a^c f  \; \mathrm{d} \alpha \quad \text{and} \quad
 U(P_2,f, \alpha )  \geq \upint _c^b f  \; \mathrm{d} \alpha
 \end{align}\]</div>
-<p>Then, by combining  <a class="reference internal" href="#equation-eq-54">(68)</a> ,  <a class="reference internal" href="#equation-eq-55">(69)</a>  and  <a class="reference internal" href="#equation-eq-56">(70)</a> , we obtain</p>
+<p>Then, by combining  <a class="reference internal" href="#equation-eq-54">(70)</a> ,  <a class="reference internal" href="#equation-eq-55">(71)</a>  and  <a class="reference internal" href="#equation-eq-56">(72)</a> , we obtain</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \int _a^b f  \; \mathrm{d} \alpha  +  \varepsilon
@@ -821,7 +826,7 @@ U(P_2,f, \alpha )  \geq \upint _c^b f  \; \mathrm{d} \alpha
 \end{align*}\]</div>
 <p>Similarly, since the above inequality holds for any  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-57">
-<span class="eqno">(71)<a class="headerlink" href="#equation-eq-57" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(73)<a class="headerlink" href="#equation-eq-57" title="Permalink to this equation">#</a></span>\[\begin{align}
 \int _a^b f  \; \mathrm{d} \alpha \geq \int _a^c f  \; \mathrm{d} \alpha
 +  \int _c^b f  \; \mathrm{d} \alpha
 \end{align}\]</div>
@@ -830,9 +835,9 @@ U(P_2,f, \alpha )  \geq \upint _c^b f  \; \mathrm{d} \alpha
 \[\begin{align*}
 \upint _a^b f  \; \mathrm{d} \alpha  =  \upint _a^c f  \; \mathrm{d} \alpha  +  \upint _c^b f  \; \mathrm{d} \alpha
 \end{align*}\]</div>
-<p>follows from  <a class="reference internal" href="#equation-eq-52">(66)</a>  and  <a class="reference internal" href="#equation-eq-57">(71)</a> .</p>
+<p>follows from  <a class="reference internal" href="#equation-eq-52">(68)</a>  and  <a class="reference internal" href="#equation-eq-57">(73)</a> .</p>
 </div>
-<p>However, some equations of integrals will not be valid for upper and lower integrals. For example, the following equation is a special case of <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 35</a>.</p>
+<p>However, some equations of integrals will not be valid for upper and lower integrals. For example, the following equation is a special case of <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 36</a>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \int _ {a} ^ {b} (f+g)  \; \mathrm{d} \alpha
@@ -841,7 +846,7 @@ U(P_2,f, \alpha )  \geq \upint _c^b f  \; \mathrm{d} \alpha
 \end{align*}\]</div>
 <p>It will not hold if we replace the integrals with upper and lower integrals. To fix this, we also need to replace equality with inequality, as stated in the next theorem.</p>
 <div class="proof theorem admonition" id="theorem-6">
-<p class="admonition-title"><span class="caption-number">Theorem 45 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 46 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose that  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(g\)</span>  are bounded and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . We have</p>
 <ul class="simple">
@@ -857,7 +862,7 @@ U(P_1,f, \alpha ) &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon /2
 \quad \text{and} \quad
 U(P_2,g, \alpha ) &lt;  \upint _a^b g  \; \mathrm{d} \alpha  +  \varepsilon /2
 \end{align*}\]</div>
-<p>Let  <span class="math notranslate nohighlight">\(P = P_1 \cup P_2\)</span> . It follows from  <a class="reference internal" href="#thm:26">Theorem 42</a>  that</p>
+<p>Let  <span class="math notranslate nohighlight">\(P = P_1 \cup P_2\)</span> . It follows from  <a class="reference internal" href="#thm:26">Theorem 43</a>  that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 U(P,f, \alpha )  \leq  U(P_1,f, \alpha ) &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +  \varepsilon /2
@@ -866,7 +871,7 @@ U(P,g, \alpha )  \leq  U(P_2,g, \alpha ) &lt;  \upint _a^b g  \; \mathrm{d} \alp
 \end{align*}\]</div>
 <p>Adding the two inequalities above yields</p>
 <div class="math notranslate nohighlight" id="equation-eq-58">
-<span class="eqno">(72)<a class="headerlink" href="#equation-eq-58" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(74)<a class="headerlink" href="#equation-eq-58" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P,f, \alpha ) + U(P,g, \alpha )
 &lt;  \upint _a^b f  \; \mathrm{d} \alpha  +   \upint _a^b g  \; \mathrm{d} \alpha  +  \varepsilon
 \end{align}\]</div>
@@ -889,10 +894,10 @@ U(P,f+g, \alpha )  \leq  U(P,f, \alpha ) + U(P,g, \alpha )
 \end{align*}\]</div>
 <p>Because  <span class="math notranslate nohighlight">\(U(P,f+g,\alpha)\)</span>  is bounded below by its upper integral, we further have</p>
 <div class="math notranslate nohighlight" id="equation-eq-59">
-<span class="eqno">(73)<a class="headerlink" href="#equation-eq-59" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(75)<a class="headerlink" href="#equation-eq-59" title="Permalink to this equation">#</a></span>\[\begin{align}
 \upint _a^b (f+g)  \; \mathrm{d} \alpha \leq  U(P,f+g, \alpha )  \leq  U(P,f, \alpha ) + U(P,g, \alpha )
 \end{align}\]</div>
-<p>Combining inequalities  <a class="reference internal" href="#equation-eq-58">(72)</a>  and  <a class="reference internal" href="#equation-eq-59">(73)</a> , we obtain</p>
+<p>Combining inequalities  <a class="reference internal" href="#equation-eq-58">(74)</a>  and  <a class="reference internal" href="#equation-eq-59">(75)</a> , we obtain</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \upint _a^b (f+g)  \; \mathrm{d} \alpha

@@ -161,6 +161,11 @@ const thebe_selector_output = ".output, .cell_output"
      Double Series
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
+     Rearrangement Theorem for Double Series
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -608,7 +613,7 @@ title="Print to PDF"
 </div>
 <p>All secant lines have a common point of intersection, <span class="math notranslate nohighlight">\((0, 1)\)</span>. And as the other intersection point gets closer and closer to <span class="math notranslate nohighlight">\((0, 1)\)</span>, the slope of the secant line tends to converge to some number. This number, the limiting slope, is precisely the <strong>derivative</strong> of this curve/function at <span class="math notranslate nohighlight">\(x=0\)</span>, which we shall soon define. We can draw a straight line passing through the point <span class="math notranslate nohighlight">\((0,1)\)</span> with the limiting slope. This line is then called the tangent of the curve at point <span class="math notranslate nohighlight">\((0,1)\)</span>, as illustrated in <a class="reference internal" href="#fig-1"><span class="std std-numref">Fig. 1</span></a>.</p>
 <div class="proof definition admonition" id="definition-0">
-<p class="admonition-title"><span class="caption-number">Definition 2 </span></p>
+<p class="admonition-title"><span class="caption-number">Definition 3 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be defined on an open interval  <span class="math notranslate nohighlight">\((a, b)\)</span> , and let  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  an interior point. Then  <span class="math notranslate nohighlight">\(f\)</span>  is said to be  <strong>differentiable</strong>   at  <span class="math notranslate nohighlight">\(c\)</span>  if the limit</p>
 <div class="math notranslate nohighlight">
@@ -624,7 +629,7 @@ title="Print to PDF"
 <div class="proposition-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be defined on  <span class="math notranslate nohighlight">\((a, b)\)</span> . Then  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  if and only if</p>
 <div class="math notranslate nohighlight" id="equation-eq-3">
-<span class="eqno">(10)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lim _ {h \to 0} \frac{f(c+h) - f(c)}{h}
 \end{align}\]</div>
 <p>exists. In that case,  <span class="math notranslate nohighlight">\(f^\prime(c) = \lim_{h \to 0} [ f(c+h) - f(c) ] / h\)</span> .</p>
@@ -641,8 +646,8 @@ title="Print to PDF"
 \abs{\frac{f(c+h) - f(h)}{h} - f^\prime(c)}
 =  \abs{\frac{f(c+h) - f(h)}{(c+h) - c} - f^\prime(c)}  &lt;  \varepsilon
 \end{align*}\]</div>
-<p>This implies the limit  <a class="reference internal" href="#equation-eq-3">(10)</a>  exists, and it equals  <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> .</p>
-<p>Conversely, suppose the limit  <a class="reference internal" href="#equation-eq-3">(10)</a>  exists, say it equals  <span class="math notranslate nohighlight">\(L\)</span> . Then for  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+<p>This implies the limit  <a class="reference internal" href="#equation-eq-3">(12)</a>  exists, and it equals  <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> .</p>
+<p>Conversely, suppose the limit  <a class="reference internal" href="#equation-eq-3">(12)</a>  exists, say it equals  <span class="math notranslate nohighlight">\(L\)</span> . Then for  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 \abs{h}  &lt;  \delta \implies \abs{\frac{f(c+h) - f(c)}{h} - L}  &lt;  \varepsilon
@@ -658,12 +663,12 @@ title="Print to PDF"
 \end{align*}\]</div>
 <p>Therefore, the limit  <span class="math notranslate nohighlight">\([f(x) - f(c)]/(x - c)\)</span>  exists, which is equal to  <span class="math notranslate nohighlight">\(L\)</span> . By the definition of derivatives,  <span class="math notranslate nohighlight">\(f\)</span>  is differentiable at  <span class="math notranslate nohighlight">\(c\)</span> , and  <span class="math notranslate nohighlight">\(f^\prime(c) = L\)</span> .</p>
 </div>
-<div class="admonition-exercise-2 admonition">
-<p class="admonition-title">Exercise 2</p>
+<div class="admonition-exercise-3 admonition">
+<p class="admonition-title">Exercise 3</p>
 <p>Calculate the derivative of  <span class="math notranslate nohighlight">\(e^x\)</span>  at  <span class="math notranslate nohighlight">\(x = 0\)</span> .</p>
 </div>
-<div class="admonition-exercise-3 admonition" id="ex-1">
-<p class="admonition-title">Exercise 3</p>
+<div class="admonition-exercise-4 admonition" id="ex-1">
+<p class="admonition-title">Exercise 4</p>
 <p>Calculate the derivative of</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -697,7 +702,7 @@ x^2 \sin \frac{1}{x^2} &amp;x \neq 0 \\
 <p>So far, the point at which the derivative is defined has to be an <em>interior</em> point. Sometimes, we are required to consider the derivatives at the endpoints of the interval. For example, as we shall see in more detail in \ref{chap:1}, we need to take the derivative of function <span class="math notranslate nohighlight">\(F(x) = \int_a^x f(t) \mathrm{d}t\)</span> at <span class="math notranslate nohighlight">\(x=a\)</span>. Hence, we are motivated to define the <strong>one-sided derivatives</strong>.</p>
 <p>If we consider the derivative of <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(f^\prime\)</span> as a function, then <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> may tend to infinity as <span class="math notranslate nohighlight">\(x\)</span> approaches an endpoint. In addition, sometimes we need to interpret the meaning of vertical tangent lines. This leads to the definition of <strong>infinite derivatives</strong>.</p>
 <div class="proof definition admonition" id="definition-2">
-<p class="admonition-title"><span class="caption-number">Definition 3 </span></p>
+<p class="admonition-title"><span class="caption-number">Definition 4 </span></p>
 <div class="definition-content section" id="proof-content">
 <p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be defined on a closed interval  <span class="math notranslate nohighlight">\(I\)</span> . Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is continuous at point  <span class="math notranslate nohighlight">\(c \in I\)</span> . Then  <span class="math notranslate nohighlight">\(f\)</span>  is said to have a  <strong>right-hand derivative</strong>   at  <span class="math notranslate nohighlight">\(c\)</span>  if the right-hand limit</p>
 <div class="math notranslate nohighlight">

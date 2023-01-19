@@ -5,7 +5,7 @@
 # Intermediate Value Theorem
 
 
-In {ref}`Exercise 5<ex:3>`, we have shown that the derivative of function $f(x) = x^2 \sin(1/x^2) \ind\{x \neq 0\}$ is given by
+In {ref}`Exercise 6<ex:3>`, we have shown that the derivative of function $f(x) = x^2 \sin(1/x^2) \ind\{x \neq 0\}$ is given by
 
 ```{math}
 \begin{align*}
@@ -33,7 +33,6 @@ Note that the derivative $f^\prime$ is not continuous at $x = 0$ since the limit
 
 ````{prf:theorem} Darboux
 :label: thm:12
-Darboux
 Suppose  $f$  is defined on  $[a, b]$ , and it has a derivative (finite or infinite) at each point in  $(a, b)$ . Assume also that the one-sided derivatives  $f^\prime_{+}(a)$  and  $f^\prime_{-}(b)$  both exist as finite numbers, and  $f^\prime_{+}(a) \neq f^\prime_{-}(b)$ . If  $k$  is a number in between  $f^\prime_{+}(a)$  and  $f^\prime_{-}(b)$ , then there exists an interior point  $c \in (a, b)$  such that
 
 ```{math}
@@ -105,7 +104,7 @@ f^\prime_{-}(b)
 ````
 
 
-Essentially, Darboux's theorem tells us that though the derivative may not be continuous, it cannot have any *jump discontinuities*. The following is another classical example in addition to the one in {ref}`Exercise 3<ex:1>`.
+Essentially, Darboux's theorem tells us that though the derivative may not be continuous, it cannot have any *jump discontinuities*. The following is another classical example in addition to the one in {ref}`Exercise 4<ex:1>`.
 
 
 ````{prf:example}

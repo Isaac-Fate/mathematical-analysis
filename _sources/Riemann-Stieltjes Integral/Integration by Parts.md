@@ -2,7 +2,6 @@
 
 ````{prf:theorem} Integration by Parts
 :label: thm:20
-Integration by Parts
 If  $f \in \mathfrak{R}(\alpha)$  on  $[a, b]$ , then  $\alpha \in \mathfrak{R}(f)$  on  $[a, b]$ , and
 
 ```{math}
@@ -114,7 +113,7 @@ This implies that  $\alpha \in \mathfrak{R}(f)$  on  $[a, b]$ , and
 ```
 ````
 
-````{admonition} Exercise 9
+````{admonition} Exercise 10
 Evaluate the integral
 
 ```{math}

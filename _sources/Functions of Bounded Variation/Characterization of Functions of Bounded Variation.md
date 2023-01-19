@@ -54,7 +54,6 @@ Hence,  $V-f$  is also an increasing function on  $[a, b]$ .
 
 ````{prf:theorem} Characterization of Functions of Bounded Variation
 :label: thm:22
-Characterization of Functions of Bounded Variation
 Let  $f$  be a real-valued function on  $[a, b]$ . Then, the following statements are equivalent.
 
 - (1) $f$  is of bounded variation on  $[a, b]$ .

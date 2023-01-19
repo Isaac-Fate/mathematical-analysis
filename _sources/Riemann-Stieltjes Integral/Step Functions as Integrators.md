@@ -341,6 +341,6 @@ Finally, by  {prf:ref}`thm:25` ,  $f$  cannot be integrable with respect to  $\a
 As a matter of fact,  $f \notin \mathfrak{R}(\alpha)$  on  $[-3\pi, 3\pi]$  if we re-define  $f(0)$  other than  $1$  while keep  $\alpha$  unchanged.
 ````
 
-````{admonition} Exercise 10
+````{admonition} Exercise 11
 Let  $f$  be a constant function on  $[a, b]$  except for  *finitely*  many points. Show that  $f$  is Riemann integrable on  $[a, b]$ .
 ````
