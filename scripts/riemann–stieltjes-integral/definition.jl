@@ -1,4 +1,4 @@
-using Plots
+using Plots; pyplot
 
 begin
     x = 0:0.01:pi/2
@@ -11,10 +11,11 @@ begin
     plot!(
         zeros(length(x)),
         g.(x), f.(x),
-        fillrange=(
-            zeros(length(x)),
-            g.(x), 2
-        )
+    )
+    surface!(
+        zeros(length(x)),
+        g.(x), f.(x),
+        alpha=0.3
     )
     xlabel!("\$x\$")
     ylabel!("\$g\$")
