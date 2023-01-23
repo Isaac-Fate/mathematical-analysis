@@ -52,7 +52,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -396,6 +396,11 @@ const thebe_selector_output = ".output, .cell_output"
      Uniform Convergence and Differentiation
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Power%20Series.html">
+     Power Series
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -594,9 +599,9 @@ r = \liminf_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\quad\text{and}\quad
 R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 <p>Then</p>
 <ul class="simple">
-<li><p>1️⃣ <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely if <span class="math notranslate nohighlight">\(R &lt; 1\)</span>,</p></li>
-<li><p>2️⃣ <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges if <span class="math notranslate nohighlight">\(r &gt; 1\)</span>, and</p></li>
-<li><p>3️⃣ the test is inclusive if <span class="math notranslate nohighlight">\(r \leq 1 \leq R\)</span>.</p></li>
+<li><p>➀ <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely if <span class="math notranslate nohighlight">\(R &lt; 1\)</span>,</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges if <span class="math notranslate nohighlight">\(r &gt; 1\)</span>, and</p></li>
+<li><p>➂ the test is inclusive if <span class="math notranslate nohighlight">\(r \leq 1 \leq R\)</span>.</p></li>
 </ul>
 </div>
 </div><div class="proof admonition" id="proof">
@@ -634,6 +639,43 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 <p>Therefore, <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges by <a class="reference internal" href="Infinite%20Series.html#cor:2">Corollary 1</a>.</p>
 <p>(Proof of 3) See <a class="reference internal" href="#eg:7">Example 1</a> and <a class="reference internal" href="#eg:8">Example 2</a>.</p>
 </div>
+<p id="index-0">Whenever the ratio test is inclusive, one can always try the <strong>root test</strong> as we shall soon introduce. It also has a close connection with the power series and the concept of the radius of convergence, which we shall cover in <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Power%20Series.html"><span class="doc">Power Series</span></a>.</p>
+<div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span class="caption-number">Theorem 7 </span> (Root Test)</p>
+<div class="theorem-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\sum a_n\)</span> be a series of complex numbers. Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\rho = \limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}\end{align*}\]</div>
+<p>Then</p>
+<ul class="simple">
+<li><p>➀ <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely if <span class="math notranslate nohighlight">\(\rho &lt; 1\)</span>,</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges if <span class="math notranslate nohighlight">\(\rho &gt; 1\)</span>, and</p></li>
+<li><p>➂ the test is inclusive if <span class="math notranslate nohighlight">\(\rho = 1\)</span>.</p></li>
+</ul>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (Proof of 1) Choose <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\rho + \varepsilon &lt; 1\)</span>. By the property of limit superior, there exists <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\sqrt[n]{\abs{a_n}} &lt; \rho + \varepsilon\quad\forall n \geq N
+\end{align*}\]</div>
+<p>Hence,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{a_n} &lt; (\rho+\varepsilon)^n
+\quad\forall n \geq N
+\end{align*}\]</div>
+<p>Note that the geometric series <span class="math notranslate nohighlight">\(\sum (\rho+\varepsilon)^n\)</span> converges. Hence, <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> converges by the comparison test. In other words, <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely.</p>
+<p>(Proof of 2) Choose <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\rho-\varepsilon &gt; 1\)</span>. Again by the property of limit superior, for any integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span>, we can always find an integer <span class="math notranslate nohighlight">\(n \geq N\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\sqrt[n]{\abs{a_n}} &gt; \rho - \varepsilon\end{align*}\]</div>
+<p>That is,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{a_n} &gt; (\rho - \varepsilon)^n
+\geq(\rho - \varepsilon)
+\end{align*}\]</div>
+<p>This implies that the sequence <span class="math notranslate nohighlight">\(\{\abs{a_n}\}\)</span> cannot converge to zero. Therefore, <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges by <a class="reference internal" href="Infinite%20Series.html#cor:2">Corollary 1</a>.</p>
+<p>(Proof of 3) See <a class="reference internal" href="#eg:7">Example 1</a> and <a class="reference internal" href="#eg:8">Example 2</a>.</p>
+</div>
+<p>We will see in the following two examples that neither the ratio test nor the root test will be helpful.</p>
 <div class="proof example admonition" id="eg:7">
 <p class="admonition-title"><span class="caption-number">Example 1 </span></p>
 <div class="example-content section" id="proof-content">
@@ -641,13 +683,22 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum a_n = \sum_{n=1}^\infty\frac{1}{n}\end{align*}\]</div>
 <p>We know that this series diverges.</p>
-<p>Since <span class="math notranslate nohighlight">\(\abs{ a_{n+1} / a_n } = n / (n+1)\)</span>, we have</p>
+<p>We first try the ratio test. Since <span class="math notranslate nohighlight">\(\abs{ a_{n+1} / a_n } = n / (n+1)\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\liminf_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
 = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
 = \lim_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
 = 1
 \end{align*}\]</div>
+<p>Because the limit inferior and limit superior of the ratio are both <span class="math notranslate nohighlight">\(1\)</span>, the ratio test is inclusive.</p>
+<p>As for the root test, we find</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
+= \lim_{n \to \infty}\sqrt[n]{\abs{a_n}}
+= \lim_{n \to \infty}\frac{1}{\sqrt[n]{n}}
+= 1
+\end{align*}\]</div>
+<p>Hence, the root test also fails.</p>
 </div>
 </div><div class="proof example admonition" id="eg:8">
 <p class="admonition-title"><span class="caption-number">Example 2 </span></p>
@@ -656,13 +707,23 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum a_n = \sum_{n=1}^\infty\frac{1}{n^2}\end{align*}\]</div>
 <p>This series converges.</p>
-<p>In this case, <span class="math notranslate nohighlight">\(\abs{ a_{n+1} / a_n } = n^2 / (n+1)^2\)</span>. We have</p>
+<p>For the ratio test, since <span class="math notranslate nohighlight">\(\abs{ a_{n+1} / a_n } = n^2 / (n+1)^2\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\liminf_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
 = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
 = \lim_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
 = 1
 \end{align*}\]</div>
+<p>The ratio test fails.</p>
+<p>Applying the root test, we find</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
+= \lim_{n \to \infty}\sqrt[n]{\abs{a_n}}
+= \lim_{n \to \infty}\frac{1}{\sqrt[n]{n^2}}
+= \lim_{n \to \infty}\brk{\frac{1}{\sqrt[n]{n}} \times \frac{1}{\sqrt[n]{n}}}
+= 1
+\end{align*}\]</div>
+<p>Hence, the root test also fails.</p>
 </div>
 </div></div>
 

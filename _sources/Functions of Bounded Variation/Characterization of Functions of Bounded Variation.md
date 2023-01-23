@@ -8,8 +8,8 @@ In fact, all functions of bounded variation can be written as a difference betwe
 :label: lem:2
 
 Let $f$ be of bounded variation on $[a, b]$. Define $V(x) := V_a^x(f)$($a \leq x \leq b$). Then
-- 1️⃣ $V$ is increasing on $[a, b]$
-- 2️⃣ $V-f$ is increasing on $[a, b]$
+- ➀ $V$ is increasing on $[a, b]$
+- ➁ $V-f$ is increasing on $[a, b]$
 ````
 
 ````{prf:proof}
@@ -55,7 +55,7 @@ Hence, $V-f$ is also an increasing function on $[a, b]$.
 :label: thm:22
 
 Let $f$ be a real-valued function on $[a, b]$. Then, the following statements are equivalent.
-- 1️⃣ $f$ is of bounded variation on $[a, b]$.
-- 2️⃣ There exist two increasing functions $g$ and $h$ on $[a, b]$ such that $f = g - h$.
-- 3️⃣ There exist two **strictly** increasing functions $g$ and $h$ on $[a, b]$ such that $f = g - h$.
+- ➀ $f$ is of bounded variation on $[a, b]$.
+- ➁ There exist two increasing functions $g$ and $h$ on $[a, b]$ such that $f = g - h$.
+- ➂ There exist two **strictly** increasing functions $g$ and $h$ on $[a, b]$ such that $f = g - h$.
 ````

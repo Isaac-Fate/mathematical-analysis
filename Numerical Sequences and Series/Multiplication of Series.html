@@ -52,7 +52,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -396,6 +396,11 @@ const thebe_selector_output = ".output, .cell_output"
      Uniform Convergence and Differentiation
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Power%20Series.html">
+     Power Series
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -595,7 +600,7 @@ c_n = \sum_{k=0}^{n} a_{n-k} b_k,
 <p>Then the series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty c_n\)</span> is called the <strong>Cauchy product</strong> of <span class="math notranslate nohighlight">\(\sum a_n\)</span> and <span class="math notranslate nohighlight">\(\sum b_n\)</span>.</p>
 </div>
 </div><div class="proof theorem admonition" id="theorem-1">
-<p class="admonition-title"><span class="caption-number">Theorem 12 </span> (Mertens)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 13 </span> (Mertens)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\sum a_n\)</span> and <span class="math notranslate nohighlight">\(\sum b_n\)</span> be two series that converge to sums <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, respectively. Suppose further that <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely. Then their Cauchy product <span class="math notranslate nohighlight">\(\sum c_n\)</span> also converges with sum <span class="math notranslate nohighlight">\(AB\)</span>. In this case, we can write</p>
 <div class="math notranslate nohighlight">

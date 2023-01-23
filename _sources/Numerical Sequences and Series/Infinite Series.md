@@ -58,7 +58,7 @@ If $\sum a_n$ converges, then the absolute value of its term tends to zero. That
 :label: thm:51
 
 If series $\sum a_n$ converges, then
-- 1️⃣ the set of its partial sums is bounded, that is,
+- ➀ the set of its partial sums is bounded, that is,
 
 ```{math}
 \begin{align*}\abs{\sum_{k=1}^n a_k}\leq A
@@ -66,7 +66,7 @@ If series $\sum a_n$ converges, then
 ```
 
 for some positive constant $A$, and
-- 2️⃣ even more generally, all finite sums of consecutive terms are bounded by a common constant, that is, there exists $A > 0$ such that
+- ➁ even more generally, all finite sums of consecutive terms are bounded by a common constant, that is, there exists $A > 0$ such that
 
 ```{math}
 \begin{align*}\abs{\sum_{k=m}^n a_k}\leq A

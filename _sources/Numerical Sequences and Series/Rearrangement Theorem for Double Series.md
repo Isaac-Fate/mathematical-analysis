@@ -76,9 +76,9 @@ Therefore, $\sum \abs{a_{m,n}}$ converges absolutely by {prf:ref}`thm:47`.
 ````{prf:theorem}
 
 Suppose $\sum a_{m,n}$ is an absolutely convergent double series with sum $s$. Let $g$ be an arrangement of double sequence $\{a_{m,n}\}$ into $\{b_k\}$. Then
-- 1️⃣ $\sum b_k$ converges absolutely to $s$.
-- 2️⃣ Series $\sum_n a_{m,n}$ converges absolutely for each $m \in \N^\ast$, and series $\sum_m a_{m,n}$ converges absolutely for each $n \in \N^\ast$.
-- 3️⃣ Let $r_m = \sum_{n=1}^\infty a_{m,n}$ and $c_n = \sum_{m=1}^\infty a_{m,n}$. Then the series $\sum r_m$ and $\sum c_n$ both converge absolutely to the same sum $s$, i.e.,
+- ➀ $\sum b_k$ converges absolutely to $s$.
+- ➁ Series $\sum_n a_{m,n}$ converges absolutely for each $m \in \N^\ast$, and series $\sum_m a_{m,n}$ converges absolutely for each $n \in \N^\ast$.
+- ➂ Let $r_m = \sum_{n=1}^\infty a_{m,n}$ and $c_n = \sum_{m=1}^\infty a_{m,n}$. Then the series $\sum r_m$ and $\sum c_n$ both converge absolutely to the same sum $s$, i.e.,
 
 ```{math}
 \begin{align*}\sum_{m=1}^\infty r_m
@@ -192,9 +192,9 @@ f_m(n) = g^{-1}( h_m(n) )
 This implies $\sum_n a_{m,n}$ is a subseries of $\sum b_k$. Because $\sum b_k$ converges absolutely, by {prf:ref}`thm:50`, $\sum_n a_{m,n}$ also converges absolutely. Similarly, each $\sum_m a_{m,n}$ also converges absolutely.
 
 Write $r_m = \sum_{n=1}^\infty a_{m,n}$. Define $f_m$ for each $m \in \N^\ast$ as in {eq}`eq:109`. It can be shown that
-- 1️⃣ $f_m$ is injective,
-- 2️⃣ $f_m(\N^\ast) \subset \N^\ast$, and
-- 3️⃣ $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.(See {ref}`Exercise 2<ex:6>`.) Hence, all the requirements of {prf:ref}`thm:50` are met. Therefore, $\sum r_m$ converges absolutely, and
+- ➀ $f_m$ is injective,
+- ➁ $f_m(\N^\ast) \subset \N^\ast$, and
+- ➂ $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.(See {ref}`Exercise 2<ex:6>`.) Hence, all the requirements of {prf:ref}`thm:50` are met. Therefore, $\sum r_m$ converges absolutely, and
 
 ```{math}
 \begin{align*}\sum_{m=1}^\infty r_m
@@ -211,9 +211,9 @@ Similarly, we can also show that $\sum c_n$ converges absolutely to $s$.
 :name: ex:6
 
 Complete the above proof by showing
-- 1️⃣ $f_m$ is injective,
-- 2️⃣ $f_m(\N^\ast) \subset \N^\ast$, and
-- 3️⃣ $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.
+- ➀ $f_m$ is injective,
+- ➁ $f_m(\N^\ast) \subset \N^\ast$, and
+- ➂ $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.
 Each function $f_m$ is defined by {eq}`eq:109`.
 
 ````

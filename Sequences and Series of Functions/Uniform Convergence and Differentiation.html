@@ -52,12 +52,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Index" href="../genindex.html" />
+    <link rel="next" title="Power Series" href="Power%20Series.html" />
     <link rel="prev" title="Uniform Convergence and Continuity" href="Uniform%20Convergence%20and%20Continuity.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -396,6 +396,11 @@ const thebe_selector_output = ".output, .cell_output"
      Uniform Convergence and Differentiation
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Power%20Series.html">
+     Power Series
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -616,12 +621,12 @@ f^\prime_n(x) = \sqrt{n}\cos nx
 </div>
 </div>
 </div><div class="proof theorem admonition" id="thm:44">
-<p class="admonition-title"><span class="caption-number">Theorem 65 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 66 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence of real-valued functions each of which has a finite derivative at every point in <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose there exists a point <span class="math notranslate nohighlight">\(x_0 \in (a, b)\)</span> such that the numerical sequence <span class="math notranslate nohighlight">\(\{f_n(x_0)\}\)</span> converges. Suppose further that there exists a function <span class="math notranslate nohighlight">\(g\)</span> such that <span class="math notranslate nohighlight">\(f^\prime_n \to g\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. Then</p>
 <ul class="simple">
-<li><p>1️⃣ there exists a function <span class="math notranslate nohighlight">\(f\)</span> such that <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, and</p></li>
-<li><p>2️⃣ <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> exists everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span> with <span class="math notranslate nohighlight">\(f^\prime(x) = g(x)\)</span>.
+<li><p>➀ there exists a function <span class="math notranslate nohighlight">\(f\)</span> such that <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, and</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> exists everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span> with <span class="math notranslate nohighlight">\(f^\prime(x) = g(x)\)</span>.
 In this case, we can write</p></li>
 </ul>
 <div class="math notranslate nohighlight">
@@ -634,7 +639,7 @@ In this case, we can write</p></li>
 <span class="eqno">(117)<a class="headerlink" href="#equation-eq-101" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{f_m(x_0) - f_n(x_0)} &lt; \varepsilon / 2
 \quad\forall m,n \geq N_1
 \end{align}\]</div>
-<p>for some integer <span class="math notranslate nohighlight">\(N_1 \in \N^\ast\)</span>. Meanwhile, since <span class="math notranslate nohighlight">\(f^\prime_n \to g\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, it follows from Cauchy’s criterion for uniform convergence (<a class="reference internal" href="Uniform%20Convergence.html#thm:42">Theorem 63</a>) that there exists <span class="math notranslate nohighlight">\(N_2 \in \N^\ast\)</span> such that</p>
+<p>for some integer <span class="math notranslate nohighlight">\(N_1 \in \N^\ast\)</span>. Meanwhile, since <span class="math notranslate nohighlight">\(f^\prime_n \to g\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, it follows from Cauchy’s criterion for uniform convergence (<a class="reference internal" href="Uniform%20Convergence.html#thm:42">Theorem 64</a>) that there exists <span class="math notranslate nohighlight">\(N_2 \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-102">
 <span class="eqno">(118)<a class="headerlink" href="#equation-eq-102" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{f^\prime_m(x) - f^\prime_n(x)} &lt; \frac{\varepsilon / 2}{\abs{x - x_0} + 1}\quad\forall m, n \geq N_2 \;\forall x \in(a, b)
 \end{align}\]</div>
@@ -643,7 +648,7 @@ In this case, we can write</p></li>
 \[\begin{align*}
 h(x) = f_m(x) - f_n(x)
 \end{align*}\]</div>
-<p>Applying the mean value theorem (<a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 26</a>) to <span class="math notranslate nohighlight">\(h\)</span>, we obtain</p>
+<p>Applying the mean value theorem (<a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 27</a>) to <span class="math notranslate nohighlight">\(h\)</span>, we obtain</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}[f_m(x) - f_n(x)] - [f_m(x_0) - f_n(x_0)]
 = [f^\prime_m(\xi) - f^\prime_n(\xi)](x - x_0)
@@ -661,7 +666,7 @@ h(x) = f_m(x) - f_n(x)
 &lt; \varepsilon\quad\forall m,n \geq N \;\forall x \in(a, b)
 \end{align*}\]</div>
 <p>which implies that <span class="math notranslate nohighlight">\(\{f_n\}\)</span> converges uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose that the limit function is <span class="math notranslate nohighlight">\(f\)</span>.</p>
-<p>Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. By <a class="reference internal" href="../Differentiation/Derivatives%20and%20Continuity.html#thm:1">Theorem 19</a>, there exists a continuous function <span class="math notranslate nohighlight">\(\phi\)</span> defined on <span class="math notranslate nohighlight">\((a, b)\)</span> such that</p>
+<p>Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. By <a class="reference internal" href="../Differentiation/Derivatives%20and%20Continuity.html#thm:1">Theorem 20</a>, there exists a continuous function <span class="math notranslate nohighlight">\(\phi\)</span> defined on <span class="math notranslate nohighlight">\((a, b)\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f_n(x) - f_n(c) = (x - c) \phi_n(x)
@@ -677,13 +682,13 @@ f_n(x) - f_n(c) = (x - c) \phi_n(x)
 \[\begin{align*}\lim_{x \to c}\lim_{n \to \infty}\phi_n(x)
 = \lim_{n \to \infty}\lim_{x \to c}\phi_n(x)
 \end{align*}\]</div>
-<p>using <a class="reference internal" href="Uniform%20Convergence%20and%20Continuity.html#thm:43">Theorem 64</a>.</p>
+<p>using <a class="reference internal" href="Uniform%20Convergence%20and%20Continuity.html#thm:43">Theorem 65</a>.</p>
 </div>
 <p>Note that <span class="math notranslate nohighlight">\(\lim_{n \to \infty}\phi_n(x)\)</span> exists, and</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{n \to \infty}\phi_n(x) = \frac{f(x) - f(c)}{x - c} =: \phi(x)
 \end{align*}\]</div>
-<p>We claim that <span class="math notranslate nohighlight">\(\phi_n \to \phi\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. The proof of this assertion is left as an exercise. (See <a class="reference internal" href="#ex-4"><span class="std std-ref">Exercise 15</span></a>.) Since both the limits <span class="math notranslate nohighlight">\(\lim_{x \to c} \phi_n(x)\)</span> and <span class="math notranslate nohighlight">\(\lim_{n \to \infty} \phi_n(x)\)</span> exist, and <span class="math notranslate nohighlight">\(\phi_n(x)\)</span> converges uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, by <a class="reference internal" href="Uniform%20Convergence%20and%20Continuity.html#thm:43">Theorem 64</a>, the limits <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f^\prime_n(c)\)</span> and <span class="math notranslate nohighlight">\(\lim_{x \to c} [f(x) - f(c)] / (x - c)\)</span> both exist and are equal to each other, that is,</p>
+<p>We claim that <span class="math notranslate nohighlight">\(\phi_n \to \phi\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. The proof of this assertion is left as an exercise. (See <a class="reference internal" href="#ex-4"><span class="std std-ref">Exercise 15</span></a>.) Since both the limits <span class="math notranslate nohighlight">\(\lim_{x \to c} \phi_n(x)\)</span> and <span class="math notranslate nohighlight">\(\lim_{n \to \infty} \phi_n(x)\)</span> exist, and <span class="math notranslate nohighlight">\(\phi_n(x)\)</span> converges uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, by <a class="reference internal" href="Uniform%20Convergence%20and%20Continuity.html#thm:43">Theorem 65</a>, the limits <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f^\prime_n(c)\)</span> and <span class="math notranslate nohighlight">\(\lim_{x \to c} [f(x) - f(c)] / (x - c)\)</span> both exist and are equal to each other, that is,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{x \to c}\frac{f(x) - f(c)}{x - c}
 = \lim_{n \to \infty} f^\prime_n(c)
@@ -714,14 +719,14 @@ f^\prime(c) = \lim_{n \to \infty} f^\prime_n(c) = g(c)
 \[\begin{align*}\abs{\phi_n(x) - \phi(x)} &lt; \varepsilon\end{align*}\]</div>
 <p>holds for all <span class="math notranslate nohighlight">\(n \geq N\)</span> and for all <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>, we conclude that <span class="math notranslate nohighlight">\(\phi_n \to \phi\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>.</p>
 </div>
-<p>The following theorem is another version of <a class="reference internal" href="#thm:44">Theorem 65</a> in terms of a series of functions <span class="math notranslate nohighlight">\(\sum f_n\)</span>.</p>
+<p>The following theorem is another version of <a class="reference internal" href="#thm:44">Theorem 66</a> in terms of a series of functions <span class="math notranslate nohighlight">\(\sum f_n\)</span>.</p>
 <div class="proof theorem admonition" id="thm:45">
-<p class="admonition-title"><span class="caption-number">Theorem 66 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 67 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\sum f_n\)</span> be a series of real-valued functions each of which has a finite derivative at every point in <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose there exists a point <span class="math notranslate nohighlight">\(x_0 \in (a, b)\)</span> such that the numerical series <span class="math notranslate nohighlight">\(\sum f_n(x_0)\)</span> converges. Suppose further that there exists a function <span class="math notranslate nohighlight">\(g\)</span> such that <span class="math notranslate nohighlight">\(\sum f^\prime_n \to g\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. Then</p>
 <ul class="simple">
-<li><p>1️⃣ there exists a function <span class="math notranslate nohighlight">\(f\)</span> such that <span class="math notranslate nohighlight">\(\sum f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, and</p></li>
-<li><p>2️⃣ <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> exists everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span> with <span class="math notranslate nohighlight">\(f^\prime(x) = g(x)\)</span>.
+<li><p>➀ there exists a function <span class="math notranslate nohighlight">\(f\)</span> such that <span class="math notranslate nohighlight">\(\sum f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, and</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> exists everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span> with <span class="math notranslate nohighlight">\(f^\prime(x) = g(x)\)</span>.
 In this case, we can write</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-eq-103">
@@ -768,10 +773,10 @@ In this case, we can write</p></li>
             <p class="prev-next-title">Uniform Convergence and Continuity</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../genindex.html" title="next page">
+    <a class='right-next' id="next-link" href="Power%20Series.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Index</p>
+        <p class="prev-next-title">Power Series</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

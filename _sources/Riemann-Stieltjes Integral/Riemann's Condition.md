@@ -29,9 +29,9 @@ The following states that the existence of Riemann-Stieltjes integrals, the exis
 :label: thm:28
 
 Suppose $f$ is bounded and $\alpha$ is increasing on $[a, b]$. Then the following statements are equivalent.
-- 1️⃣ $f$ is integrable w.r.t. $\alpha$ on $[a, b]$, i.e., $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
-- 2️⃣ $f$ satisfies Riemann's condition w.r.t. $\alpha$ on $[a, b]$.
-- 3️⃣ The upper and lower integrals are equal to each other, i.e., $\upint_a^b f \; \mathrm{d}\alpha = \lowint_a^b f \; \mathrm{d}\alpha$.
+- ➀ $f$ is integrable w.r.t. $\alpha$ on $[a, b]$, i.e., $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+- ➁ $f$ satisfies Riemann's condition w.r.t. $\alpha$ on $[a, b]$.
+- ➂ The upper and lower integrals are equal to each other, i.e., $\upint_a^b f \; \mathrm{d}\alpha = \lowint_a^b f \; \mathrm{d}\alpha$.
 ````
 
 ````{prf:proof}

@@ -11,9 +11,9 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}
 ```
 
 Then
-- 1️⃣ $\sum a_n$ converges absolutely if $R < 1$,
-- 2️⃣ $\sum a_n$ diverges if $r > 1$, and
-- 3️⃣ the test is inclusive if $r \leq 1 \leq R$.
+- ➀ $\sum a_n$ converges absolutely if $R < 1$,
+- ➁ $\sum a_n$ diverges if $r > 1$, and
+- ➂ the test is inclusive if $r \leq 1 \leq R$.
 ````
 
 ````{prf:proof}
@@ -76,6 +76,67 @@ Therefore, $\sum a_n$ diverges by {prf:ref}`cor:2`.
 
 ````
 
+```{index} root test
+```
+
+Whenever the ratio test is inclusive, one can always try the **root test** as we shall soon introduce. It also has a close connection with the power series and the concept of the radius of convergence, which we shall cover in {doc}`/Sequences and Series of Functions/Power Series`.
+
+
+````{prf:theorem} Root Test
+
+Let $\sum a_n$ be a series of complex numbers. Let
+
+```{math}
+\begin{align*}\rho = \limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}\end{align*}
+```
+
+Then
+- ➀ $\sum a_n$ converges absolutely if $\rho < 1$,
+- ➁ $\sum a_n$ diverges if $\rho > 1$, and
+- ➂ the test is inclusive if $\rho = 1$.
+````
+
+````{prf:proof}
+(Proof of 1) Choose $\varepsilon > 0$ such that $\rho + \varepsilon < 1$. By the property of limit superior, there exists $N \in \N^\ast$ such that
+
+```{math}
+\begin{align*}\sqrt[n]{\abs{a_n}} < \rho + \varepsilon\quad\forall n \geq N
+\end{align*}
+```
+
+Hence,
+
+```{math}
+\begin{align*}\abs{a_n} < (\rho+\varepsilon)^n
+\quad\forall n \geq N
+\end{align*}
+```
+
+Note that the geometric series $\sum (\rho+\varepsilon)^n$ converges. Hence, $\sum \abs{a_n}$ converges by the comparison test. In other words, $\sum a_n$ converges absolutely.
+
+(Proof of 2) Choose $\varepsilon > 0$ such that $\rho-\varepsilon > 1$. Again by the property of limit superior, for any integer $N \in \N^\ast$, we can always find an integer $n \geq N$ such that
+
+```{math}
+\begin{align*}\sqrt[n]{\abs{a_n}} > \rho - \varepsilon\end{align*}
+```
+
+That is,
+
+```{math}
+\begin{align*}\abs{a_n} > (\rho - \varepsilon)^n
+\geq(\rho - \varepsilon)
+\end{align*}
+```
+
+This implies that the sequence $\{\abs{a_n}\}$ cannot converge to zero. Therefore, $\sum a_n$ diverges by {prf:ref}`cor:2`.
+
+(Proof of 3) See {prf:ref}`eg:7` and {prf:ref}`eg:8`.
+
+````
+
+We will see in the following two examples that neither the ratio test nor the root test will be helpful.
+
+
 ````{prf:example}
 :label: eg:7
 
@@ -87,7 +148,7 @@ Let
 
 We know that this series diverges.
 
-Since $\abs{ a_{n+1} / a_n } = n / (n+1)$, we have
+We first try the ratio test. Since $\abs{ a_{n+1} / a_n } = n / (n+1)$, we have
 
 ```{math}
 \begin{align*}\liminf_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
@@ -96,6 +157,20 @@ Since $\abs{ a_{n+1} / a_n } = n / (n+1)$, we have
 = 1
 \end{align*}
 ```
+
+Because the limit inferior and limit superior of the ratio are both $1$, the ratio test is inclusive.
+
+As for the root test, we find
+
+```{math}
+\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
+= \lim_{n \to \infty}\sqrt[n]{\abs{a_n}}
+= \lim_{n \to \infty}\frac{1}{\sqrt[n]{n}}
+= 1
+\end{align*}
+```
+
+Hence, the root test also fails.
 
 ````
 
@@ -110,7 +185,7 @@ Let
 
 This series converges.
 
-In this case, $\abs{ a_{n+1} / a_n } = n^2 / (n+1)^2$. We have
+For the ratio test, since $\abs{ a_{n+1} / a_n } = n^2 / (n+1)^2$, we have
 
 ```{math}
 \begin{align*}\liminf_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
@@ -119,5 +194,20 @@ In this case, $\abs{ a_{n+1} / a_n } = n^2 / (n+1)^2$. We have
 = 1
 \end{align*}
 ```
+
+The ratio test fails.
+
+Applying the root test, we find
+
+```{math}
+\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
+= \lim_{n \to \infty}\sqrt[n]{\abs{a_n}}
+= \lim_{n \to \infty}\frac{1}{\sqrt[n]{n^2}}
+= \lim_{n \to \infty}\brk{\frac{1}{\sqrt[n]{n}} \times \frac{1}{\sqrt[n]{n}}}
+= 1
+\end{align*}
+```
+
+Hence, the root test also fails.
 
 ````

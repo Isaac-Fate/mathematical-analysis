@@ -14,7 +14,7 @@ Let $f$ and $g$ be complex-valued functions defined on a subset $S$ of a metric 
 ```
 
 We have
-- 1️⃣ $\lim_{x \to p}[f(x) \pm g(x)] = a \pm b$,
-- 2️⃣ $\lim_{x \to p}f(x) g(x) = a b$,
-- 3️⃣ $\lim_{x \to p} f(x) / g(x) = a / b$ provided that $b \neq 0$.
+- ➀ $\lim_{x \to p}[f(x) \pm g(x)] = a \pm b$,
+- ➁ $\lim_{x \to p}f(x) g(x) = a b$,
+- ➂ $\lim_{x \to p} f(x) / g(x) = a / b$ provided that $b \neq 0$.
 ````

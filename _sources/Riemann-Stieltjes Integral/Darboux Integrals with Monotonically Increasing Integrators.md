@@ -82,7 +82,7 @@ The following theorem states that not only $L(P,f,\alpha) \leq U(P,f,\alpha)$ fo
 :label: thm:26
 
 Suppose $\alpha$ is increasing on $[a, b]$. We have the following statements.
-- 1️⃣ If $P^\prime \supset P$, then
+- ➀ If $P^\prime \supset P$, then
 
 ```{math}
 \begin{align*}
@@ -91,7 +91,7 @@ U(P^\prime,f,\alpha) \leq U(P,f,\alpha)
 L(P^\prime,f,\alpha) \geq L(P,f,\alpha)
 \end{align*}
 ```
-- 2️⃣ For any two partitions $P_1$ and $P_2$ on $[a, b]$, we have
+- ➁ For any two partitions $P_1$ and $P_2$ on $[a, b]$, we have
 
 ```{math}
 \begin{align*}
@@ -281,8 +281,8 @@ In the following theorems, we introduce some properties of upper and lower integ
 ````{prf:theorem}
 
 Suppose that $f$ is bounded and $\alpha$ is increasing on $[a, b]$. Let $c \in (a, b)$. We have
-- 1️⃣ $\upint_a^b f \; \mathrm{d}\alpha = \upint_a^c f \; \mathrm{d}\alpha + \upint_c^b f \; \mathrm{d}\alpha$
-- 2️⃣ $\lowint_a^b f \; \mathrm{d}\alpha = \lowint_a^c f \; \mathrm{d}\alpha + \lowint_c^b f \; \mathrm{d}\alpha$
+- ➀ $\upint_a^b f \; \mathrm{d}\alpha = \upint_a^c f \; \mathrm{d}\alpha + \upint_c^b f \; \mathrm{d}\alpha$
+- ➁ $\lowint_a^b f \; \mathrm{d}\alpha = \lowint_a^c f \; \mathrm{d}\alpha + \lowint_c^b f \; \mathrm{d}\alpha$
 ````
 
 ````{prf:proof}
@@ -413,8 +413,8 @@ It will not hold if we replace the integrals with upper and lower integrals. To 
 ````{prf:theorem}
 
 Suppose that $f$ and $g$ are bounded and $\alpha$ is increasing on $[a, b]$. We have
-- 1️⃣ $\upint_a^b (f+g) \; \mathrm{d}\alpha \leq \upint_a^b f \; \mathrm{d}\alpha + \upint_a^b g \; \mathrm{d}\alpha$
-- 2️⃣ $\lowint_a^b (f+g) \; \mathrm{d}\alpha \geq \lowint_a^b f \; \mathrm{d}\alpha + \lowint_a^b g \; \mathrm{d}\alpha$
+- ➀ $\upint_a^b (f+g) \; \mathrm{d}\alpha \leq \upint_a^b f \; \mathrm{d}\alpha + \upint_a^b g \; \mathrm{d}\alpha$
+- ➁ $\lowint_a^b (f+g) \; \mathrm{d}\alpha \geq \lowint_a^b f \; \mathrm{d}\alpha + \lowint_a^b g \; \mathrm{d}\alpha$
 ````
 
 ````{prf:proof}

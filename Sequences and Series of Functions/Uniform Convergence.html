@@ -52,7 +52,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -396,6 +396,11 @@ const thebe_selector_output = ".output, .cell_output"
      Uniform Convergence and Differentiation
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Power%20Series.html">
+     Power Series
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -596,7 +601,7 @@ title="Print to PDF"
 </div>
 </div><p>The next theorem is useful to check whether <span class="math notranslate nohighlight">\(\{f_n\}\)</span> converges uniformly.</p>
 <div class="proof theorem admonition" id="thm:46">
-<p class="admonition-title"><span class="caption-number">Theorem 61 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 62 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f_n \to f\)</span> on <span class="math notranslate nohighlight">\(S\)</span>. Then <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span> if and only if</p>
 <div class="math notranslate nohighlight">
@@ -644,7 +649,7 @@ f_n(x) = \frac{1}{nx},
 \[\begin{align*}\sup_{x \in (0, 1)}\abs{f_n(x) - f(x)}
 = \sup_{x \in (0, 1)}\frac{1}{nx}
 = \infty\end{align*}\]</div>
-<p>for every <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span>. Therefore, by <a class="reference internal" href="#thm:46">Theorem 61</a>, the convergence is not uniform.</p>
+<p>for every <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span>. Therefore, by <a class="reference internal" href="#thm:46">Theorem 62</a>, the convergence is not uniform.</p>
 </div>
 </div><div class="proof example admonition" id="example-3">
 <p class="admonition-title"><span class="caption-number">Example 21 </span></p>
@@ -668,7 +673,7 @@ M_n = \sup_{x \in (0, 1)}\abs{f_n(x) - f(x)}
 \quad\forall n \in\N^\ast\;\forall x \in S
 \end{align*}\]</div>
 <div class="proof theorem admonition" id="theorem-4">
-<p class="admonition-title"><span class="caption-number">Theorem 62 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 63 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\{f_n\}\)</span> is uniformly bounded on <span class="math notranslate nohighlight">\(S\)</span>. Then <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span> if and only if</p>
 <div class="math notranslate nohighlight">
@@ -678,7 +683,7 @@ M_n = \sup_{x \in (0, 1)}\abs{f_n(x) - f(x)}
 </div>
 </div><p>Similar to the situation we encountered when dealing with numerical sequences and series, sometimes we want to prove that <span class="math notranslate nohighlight">\(\{f_n\}\)</span> converges uniformly without knowing its limit.</p>
 <div class="proof theorem admonition" id="thm:42">
-<p class="admonition-title"><span class="caption-number">Theorem 63 </span> (Cauchy’s Criterion)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 64 </span> (Cauchy’s Criterion)</p>
 <div class="theorem-content section" id="proof-content">
 <p>A sequence of functions <span class="math notranslate nohighlight">\(\{f_n\}\)</span> converges uniformly on <span class="math notranslate nohighlight">\(S\)</span> if and only if for any <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(N \in N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight" id="index-2">

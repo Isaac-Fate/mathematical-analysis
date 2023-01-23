@@ -52,7 +52,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -396,6 +396,11 @@ const thebe_selector_output = ".output, .cell_output"
      Uniform Convergence and Differentiation
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Power%20Series.html">
+     Power Series
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -586,7 +591,7 @@ title="Print to PDF"
 <h1>Reduction to Riemann-Stieltjes Integrals<a class="headerlink" href="#reduction-to-riemann-stieltjes-integrals" title="Permalink to this headline">#</a></h1>
 <p>In the definition of Riemann-Stieltjes integral, <span class="math notranslate nohighlight">\(\mathrm{d} \alpha\)</span> is merely a symbol which emphasizes that the integrator is <span class="math notranslate nohighlight">\(\alpha\)</span>. However, it is tempting to associate this symbol with the concept of differentials, and then replace it with <span class="math notranslate nohighlight">\(\alpha^\prime(x) \; \mathrm{d} x\)</span>. As stated in the following theorem, we can indeed do this under some conditions.</p>
 <div class="proof theorem admonition" id="thm:23">
-<p class="admonition-title"><span class="caption-number">Theorem 44 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 45 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(\alpha\)</span> has a continuous derivative <span class="math notranslate nohighlight">\(\alpha^\prime\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then the Riemann integral <span class="math notranslate nohighlight">\(f \alpha^\prime\)</span> exits, i.e., <span class="math notranslate nohighlight">\(f \alpha^\prime \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-38">
@@ -619,7 +624,7 @@ title="Print to PDF"
 \sum_{k} f(t_k) \alpha^\prime(t_k) (x_k - x_{k-1})
 - \sum_{k} f(t_k) [\alpha(x_{k}) - \alpha(x_{k-1})]
 }\end{align*}\]</div>
-<p>Applying the mean value theorem (<a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 26</a>) to <span class="math notranslate nohighlight">\(\alpha\)</span> on each sub-interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> leads to</p>
+<p>Applying the mean value theorem (<a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 27</a>) to <span class="math notranslate nohighlight">\(\alpha\)</span> on each sub-interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> leads to</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{k} f(t_k) \alpha^\prime(t_k) (x_k - x_{k-1})
 - \sum_{k} f(t_k) [\alpha(x_{k}) - \alpha(x_{k-1})]

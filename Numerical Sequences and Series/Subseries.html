@@ -52,7 +52,7 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -396,6 +396,11 @@ const thebe_selector_output = ".output, .cell_output"
      Uniform Convergence and Differentiation
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Power%20Series.html">
+     Power Series
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -597,7 +602,7 @@ s_1 = a_1 + a_3 + \cdots + a_{2k-1} + \cdots\end{align*}\]</div>
 \[\begin{align*}
 s_2 = a_2 + a_4 + \cdots + a_{2k} + \cdots\end{align*}\]</div>
 <p id="index-0">Finally, the total sum is <span class="math notranslate nohighlight">\(s_1 + s_2\)</span>. As a matter of fact, there are more ways of summing these numbers than one can imagine at first thought, some of which may be difficult to describe. The need for a precise description of summing countably many numbers in the way we want gives rise to the concept of <strong>subseries</strong>.</p>
-<p>Suppose <span class="math notranslate nohighlight">\(s\)</span> is the sum we will obtain by summing up the numbers in the way we like. A natural question to ask is whether <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges to <span class="math notranslate nohighlight">\(s\)</span>. The answer is yes by <a class="reference internal" href="#thm:50">Theorem 8</a>, which we will soon show provided that <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(s\)</span> is the sum we will obtain by summing up the numbers in the way we like. A natural question to ask is whether <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges to <span class="math notranslate nohighlight">\(s\)</span>. The answer is yes by <a class="reference internal" href="#thm:50">Theorem 9</a>, which we will soon show provided that <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely.</p>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
 <div class="definition-content section" id="proof-content">
@@ -659,7 +664,7 @@ f(4) = 5,
 \[\begin{align*}\sum a_{f(n)} = (-i) + i + (-i) + i + \cdots\end{align*}\]</div>
 </div>
 </div><div class="proof theorem admonition" id="thm:49">
-<p class="admonition-title"><span class="caption-number">Theorem 7 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 8 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely, then every subseries <span class="math notranslate nohighlight">\(\sum b_n\)</span> also converges absolutely. And we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-105">
@@ -684,13 +689,13 @@ a_1, a_2, \ldots, a_n, \ldots\end{align*}\]</div>
 \sum_{n=1}^\infty a_{f_k(n)}, \ldots\end{align*}\]</div>
 <p>After that, we sum up all the subseries. Suppose the final sum is <span class="math notranslate nohighlight">\(s\)</span>, the next theorem says if <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely, then it must also converge to <span class="math notranslate nohighlight">\(s\)</span>. In other words, we can sum up an absolutely convergent series in whatever way we want without changing its sum!</p>
 <div class="proof theorem admonition" id="thm:50">
-<p class="admonition-title"><span class="caption-number">Theorem 8 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 9 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{f_1, f_2, \ldots\}\)</span> be a countable collection of functions defined on <span class="math notranslate nohighlight">\(\N^\ast\)</span>, each having the following properties:</p>
 <ul class="simple">
-<li><p>1️⃣ <span class="math notranslate nohighlight">\(f_k\)</span> is injective,</p></li>
-<li><p>2️⃣ the range <span class="math notranslate nohighlight">\(f_k(\N^\ast)\)</span> is a subset of <span class="math notranslate nohighlight">\(\N^\ast\)</span>, and</p></li>
-<li><p>3️⃣ the collection of all function ranges form a partition of <span class="math notranslate nohighlight">\(\N^\ast\)</span>, that is, <span class="math notranslate nohighlight">\(\biguplus_{k=1}^\infty f_k(\N^\ast) = \N^\ast\)</span>.
+<li><p>➀ <span class="math notranslate nohighlight">\(f_k\)</span> is injective,</p></li>
+<li><p>➁ the range <span class="math notranslate nohighlight">\(f_k(\N^\ast)\)</span> is a subset of <span class="math notranslate nohighlight">\(\N^\ast\)</span>, and</p></li>
+<li><p>➂ the collection of all function ranges form a partition of <span class="math notranslate nohighlight">\(\N^\ast\)</span>, that is, <span class="math notranslate nohighlight">\(\biguplus_{k=1}^\infty f_k(\N^\ast) = \N^\ast\)</span>.
 Suppose that <span class="math notranslate nohighlight">\(\sum a_n\)</span> is an absolutely convergent series. Let <span class="math notranslate nohighlight">\(b_k(n)\)</span> be defined by</p></li>
 </ul>
 <div class="math notranslate nohighlight">
@@ -701,8 +706,8 @@ n \in\N^\ast, \;
 k \in\N^\ast\end{align*}\]</div>
 <p>Then</p>
 <ul class="simple">
-<li><p>1️⃣ each <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span> is an absolutely convergent subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span>, and</p></li>
-<li><p>2️⃣ if we let <span class="math notranslate nohighlight">\(s_k = \sum_{n=1}^\infty b_k(n)\)</span>, then <span class="math notranslate nohighlight">\(\sum s_k\)</span> converges absolutely to the same sum as <span class="math notranslate nohighlight">\(\sum a_n\)</span>, that is, <span class="math notranslate nohighlight">\(\sum_{k=1}^\infty s_k = \sum_{n=1}^\infty a_n\)</span>.</p></li>
+<li><p>➀ each <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span> is an absolutely convergent subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span>, and</p></li>
+<li><p>➁ if we let <span class="math notranslate nohighlight">\(s_k = \sum_{n=1}^\infty b_k(n)\)</span>, then <span class="math notranslate nohighlight">\(\sum s_k\)</span> converges absolutely to the same sum as <span class="math notranslate nohighlight">\(\sum a_n\)</span>, that is, <span class="math notranslate nohighlight">\(\sum_{k=1}^\infty s_k = \sum_{n=1}^\infty a_n\)</span>.</p></li>
 </ul>
 </div>
 </div><div class="admonition note">
@@ -710,7 +715,7 @@ k \in\N^\ast\end{align*}\]</div>
 <p>Pay attention to how the properties of <span class="math notranslate nohighlight">\(f_k\)</span> being injective and <span class="math notranslate nohighlight">\(\biguplus_{k=1}^\infty f_k(\N^\ast)= \N^\ast\)</span> are used in the proof below.</p>
 </div>
 <div class="proof admonition" id="proof">
-<p>Proof. The first statement that <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span> is an absolutely convergent subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span> immediately follows from <a class="reference internal" href="#thm:49">Theorem 7</a>. We now prove 2.</p>
+<p>Proof. The first statement that <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span> is an absolutely convergent subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span> immediately follows from <a class="reference internal" href="#thm:49">Theorem 8</a>. We now prove 2.</p>
 <p>We first show that <span class="math notranslate nohighlight">\(\sum s_k\)</span> converges absolutely. The <span class="math notranslate nohighlight">\(p\)</span>-th partial sum of <span class="math notranslate nohighlight">\(\sum \abs{s_k}\)</span> satisfies</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}\sum_{k=1}^p \abs{s_k}&amp;= \abs{s_1} + \cdots + \abs{s_p}\\&amp;= \abs{ \sum_{n=1}^\infty b_1(n) } + \cdots
