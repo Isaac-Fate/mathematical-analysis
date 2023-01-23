@@ -324,6 +324,7 @@ Suppose $f$ has a derivative (finite or infinite) at each point in $(a, b)$, and
 - ➀ If $f^\prime(x) > 0 \; \forall x \in (a, b)$, then $f$ is strictly increasing on $[a, b]$.
 - ➁ If $f^\prime(x) < 0 \; \forall x \in (a, b)$, then $f$ is strictly decreasing on $[a, b]$.
 - ➂ If $f^\prime(x) = 0 \; \forall x \in (a, b)$, then $f$ is constant on $[a, b]$.
+
 ````
 
 ````{prf:proof}

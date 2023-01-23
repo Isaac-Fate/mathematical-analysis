@@ -17,4 +17,5 @@ We have
 - ➀ $\lim_{x \to p}[f(x) \pm g(x)] = a \pm b$,
 - ➁ $\lim_{x \to p}f(x) g(x) = a b$,
 - ➂ $\lim_{x \to p} f(x) / g(x) = a / b$ provided that $b \neq 0$.
+
 ````

@@ -30,6 +30,7 @@ Let $c \in (a, b)$. Define a function $\alpha$ on $[a, b]$ as follows. The value
 Suppose $f$ is a bounded function defined on $[a, b]$ in such a way that
 - ➀ at least one of $f$ and $\alpha$ is continuous from the left at $c$, and
 - ➁ at least one of $f$ and $\alpha$ is continuous from the right at $c$.
+
 Then, $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ with
 
 ```{math}
@@ -87,7 +88,8 @@ There are altogether four scenarios concerning the continuity of $f$ and $\alpha
 - ➀ $\alpha(x)$ is continuous at $x=c$.
 - ➁ $\alpha(x)$ is continuous from the right at $x=c$, and $f(x)$ is continuous from the left at $x=c$.
 - ➂ $\alpha(x)$ is continuous from the left at $x=c$, and $f(x)$ is continuous from the right at $x=c$.
-- ➃ $f(x)$ is continuous at $x=c$.(Proof of 1) If $\alpha(x)$ is continuous at $x=c$, then $\alpha$ is a constant function. In this case, $f$ is certainly integrable with respect to $\alpha$ with $\int_{a}^{b} f \; \mathrm{d}\alpha = 0$. And {eq}`eq:40` holds since its right-hand side is also zero for $\alpha(a) = \alpha(b)$.
+- ➃ $f(x)$ is continuous at $x=c$.
+(Proof of 1) If $\alpha(x)$ is continuous at $x=c$, then $\alpha$ is a constant function. In this case, $f$ is certainly integrable with respect to $\alpha$ with $\int_{a}^{b} f \; \mathrm{d}\alpha = 0$. And {eq}`eq:40` holds since its right-hand side is also zero for $\alpha(a) = \alpha(b)$.
 
 (Proof of 2) Because $\alpha(x)$ is continuous from the right at $x=c$, we have $\alpha(c) = \alpha(b)$, and the inequality {eq}`eq:39` reduces to
 

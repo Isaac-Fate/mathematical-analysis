@@ -73,6 +73,7 @@ for some positive constant $A$, and
 \quad\forall m \in\N^\ast\;\forall n \geq m
 \end{align*}
 ```
+
 ````
 
 ````{prf:proof}

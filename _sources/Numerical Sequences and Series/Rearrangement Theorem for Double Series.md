@@ -95,6 +95,7 @@ If we expand $r_m$ and $c_n$, then we obtain the same equation as above in terms
 = s
 \end{align*}
 ```
+
 ````
 
 :::{note}
@@ -194,7 +195,8 @@ This implies $\sum_n a_{m,n}$ is a subseries of $\sum b_k$. Because $\sum b_k$ c
 Write $r_m = \sum_{n=1}^\infty a_{m,n}$. Define $f_m$ for each $m \in \N^\ast$ as in {eq}`eq:109`. It can be shown that
 - ➀ $f_m$ is injective,
 - ➁ $f_m(\N^\ast) \subset \N^\ast$, and
-- ➂ $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.(See {ref}`Exercise 2<ex:6>`.) Hence, all the requirements of {prf:ref}`thm:50` are met. Therefore, $\sum r_m$ converges absolutely, and
+- ➂ $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.
+(See {ref}`Exercise 2<ex:6>`.) Hence, all the requirements of {prf:ref}`thm:50` are met. Therefore, $\sum r_m$ converges absolutely, and
 
 ```{math}
 \begin{align*}\sum_{m=1}^\infty r_m
@@ -214,6 +216,7 @@ Complete the above proof by showing
 - ➀ $f_m$ is injective,
 - ➁ $f_m(\N^\ast) \subset \N^\ast$, and
 - ➂ $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.
+
 Each function $f_m$ is defined by {eq}`eq:109`.
 
 ````

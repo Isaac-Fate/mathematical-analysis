@@ -16,6 +16,7 @@ Suppose $f$ and $g$ are defined on $(a, b)$ and are both differentiable at $c \i
 - ➀ $(f \pm g)^\prime(c) = f^\prime(c) \pm g^\prime(c)$,
 - ➁ $(f g)^\prime(c) = f^\prime(c) g(c) + f(c) g^\prime(c)$,
 - ➂ $(f / g)^\prime(c) = \frac{f^\prime(c) g(c) - f(c) g^\prime(c)}{ g^2(c) }$, provided $g(c) \neq 0$.
+
 ````
 
 ````{prf:remark}
