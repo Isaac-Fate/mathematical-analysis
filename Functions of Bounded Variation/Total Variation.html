@@ -152,6 +152,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html">
+     The Comparison Test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html">
+     The Ratio Test and the Root Test
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
      Subseries
     </a>
@@ -164,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
      Rearrangement Theorem for Double Series
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html">
+     Multiplication of Series
     </a>
    </li>
   </ul>
@@ -570,62 +585,62 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="total-variation">
 <h1>Total Variation<a class="headerlink" href="#total-variation" title="Permalink to this headline">#</a></h1>
 <div class="proof definition admonition" id="definition-0">
-<p class="admonition-title"><span class="caption-number">Definition 7 </span></p>
+<p class="admonition-title"><span class="caption-number">Definition 8 </span></p>
 <div class="definition-content section" id="proof-content">
-<p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be of bounded variation on  <span class="math notranslate nohighlight">\([a, b]\)</span> . The total variation of  <span class="math notranslate nohighlight">\(f\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  is defined by</p>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>. The total variation of <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> is defined by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 V_a^b (f)
-:=  \sup _ {P \in \mathcal{P}[a, b]}  V(P, f)
+:= \sup_{P \in \mathcal{P}[a, b]} V(P, f)
 \end{align*}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(\mathcal{P}[a, b]\)</span>  is the collection of all partitions on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
+<p>where <span class="math notranslate nohighlight">\(\mathcal{P}[a, b]\)</span> is the collection of all partitions on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </div>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We will sometimes write  <span class="math notranslate nohighlight">\(V(f)\)</span>  instead of  <span class="math notranslate nohighlight">\(V_a^b (f)\)</span>  to ease the notation if it does not confuse.</p>
+<p>We will sometimes write <span class="math notranslate nohighlight">\(V(f)\)</span> instead of <span class="math notranslate nohighlight">\(V_a^b (f)\)</span> to ease the notation if it does not confuse.</p>
 </div>
 <div class="proof theorem admonition" id="thm:33">
-<p class="admonition-title"><span class="caption-number">Theorem 33 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 38 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>If  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(g\)</span>  are each of bounded variation on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then  <span class="math notranslate nohighlight">\(f \pm g\)</span>  and  <span class="math notranslate nohighlight">\(f g\)</span>  are also of bounded variation. Moreover,</p>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are each of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f \pm g\)</span> and <span class="math notranslate nohighlight">\(f g\)</span> are also of bounded variation. Moreover,</p>
 <div class="math notranslate nohighlight" id="equation-eq-77">
-<span class="eqno">(34)<a class="headerlink" href="#equation-eq-77" title="Permalink to this equation">#</a></span>\[\begin{align}
-V(f  \pm  g)  \leq  V(f) + V(g)
+<span class="eqno">(42)<a class="headerlink" href="#equation-eq-77" title="Permalink to this equation">#</a></span>\[\begin{align}
+V(f \pm g) \leq V(f) + V(g)
 \end{align}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq-78">
-<span class="eqno">(35)<a class="headerlink" href="#equation-eq-78" title="Permalink to this equation">#</a></span>\[\begin{align}
-V(f g) &amp; \leq \sup _ {x\in[a, b]} \abs{g(x)}  V(f) +  \sup _ {x \in[a, b]} \abs{f(x)}  V(g)
+<span class="eqno">(43)<a class="headerlink" href="#equation-eq-78" title="Permalink to this equation">#</a></span>\[\begin{align}
+V(f g) &amp;\leq\sup_{x\in[a, b]}\abs{g(x)} V(f) + \sup_{x \in[a, b]}\abs{f(x)} V(g)
 \end{align}\]</div>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (Proof of  <span class="math notranslate nohighlight">\(f \pm g\)</span>  being of bounded variation) We have</p>
+<p>Proof. (Proof of <span class="math notranslate nohighlight">\(f \pm g\)</span> being of bounded variation) We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
-V(P, f  \pm  g)
-&amp;=  \sum _ {k=1} ^n  \abs{(f \pm g)(x_k) - (f \pm g)(x_{k-1})} \\ &amp;=  \sum _ {k=1} ^n  \abs{( f(x_k) - f(x_{k-1}) ) \pm ( g(x_k) - g(x_{k-1}) )} \\ &amp; \leq \sum _ {k=1} ^n  \abs{\Delta f_k}  +  \abs{\Delta g_k} \\ &amp;= V(P, f) + V(P, g)  \\ &amp; \leq  V(f) + V(g)
+V(P, f \pm g)
+&amp;= \sum_{k=1}^n \abs{(f \pm g)(x_k) - (f \pm g)(x_{k-1})}\\&amp;= \sum_{k=1}^n \abs{( f(x_k) - f(x_{k-1}) ) \pm ( g(x_k) - g(x_{k-1}) )}\\&amp;\leq\sum_{k=1}^n \abs{\Delta f_k} + \abs{\Delta g_k}\\&amp;= V(P, f) + V(P, g) \\&amp;\leq V(f) + V(g)
 \end{align*}\end{split}\]</div>
-<p>Since  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(g\)</span>  are both of bounded variation,  <span class="math notranslate nohighlight">\(V(f), V(g) &lt; \infty\)</span> . Therefore,  <span class="math notranslate nohighlight">\(V(P, f \pm g)\)</span>  is bounded above by a finite number for any partition  <span class="math notranslate nohighlight">\(P\)</span> , which implies the function  <span class="math notranslate nohighlight">\(f \pm g\)</span>  is of bounded variation. Taking supremum over all  <span class="math notranslate nohighlight">\(P\)</span> ‘s on</p>
+<p>Since <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are both of bounded variation, <span class="math notranslate nohighlight">\(V(f), V(g) &lt; \infty\)</span>. Therefore, <span class="math notranslate nohighlight">\(V(P, f \pm g)\)</span> is bounded above by a finite number for any partition <span class="math notranslate nohighlight">\(P\)</span>, which implies the function <span class="math notranslate nohighlight">\(f \pm g\)</span> is of bounded variation. Taking supremum over all <span class="math notranslate nohighlight">\(P\)</span>’s on</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-V(P, f  \pm  g)  \leq  V(f) + V(g)
+V(P, f \pm g) \leq V(f) + V(g)
 \end{align*}\]</div>
-<p>we obtain  <a class="reference internal" href="#equation-eq-77">(34)</a> .</p>
-<p>(Proof of  <span class="math notranslate nohighlight">\(f g\)</span>  being of bounded variation) For any partition  <span class="math notranslate nohighlight">\(P\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , we have</p>
+<p>we obtain <a class="reference internal" href="#equation-eq-77">(42)</a>.</p>
+<p>(Proof of <span class="math notranslate nohighlight">\(f g\)</span> being of bounded variation) For any partition <span class="math notranslate nohighlight">\(P\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
 V(P, f g)
-&amp;=  \sum _ {k=1} ^n  \abs{f(x_k) g(x_k) - f(x_{k-1}) g(x_{k-1})} \\ &amp;=  \sum _ {k=1} ^n  \abs{
+&amp;= \sum_{k=1}^n \abs{f(x_k) g(x_k) - f(x_{k-1}) g(x_{k-1})}\\&amp;= \sum_{k=1}^n \abs{
 f(x_k) g(x_k)
 - f(x_{k-1}) g(x_k)
 + f(x_{k-1}) g(x_k)
 - f(x_{k-1}) g(x_{k-1})
-} \\ &amp;=  \sum _ {k=1} ^n  \abs{
+}\\&amp;= \sum_{k=1}^n \abs{
 g(x_k) \Delta f_k
 + f(x_{k-1}) \Delta g_k
-} \\ &amp; \leq \sup \abs{g}  V(P, f) +  \sup \abs{f}  V(P, g)  \\ &amp; \leq \sup \abs{g}  V(f) +  \sup \abs{f}  V(g)
+}\\&amp;\leq\sup\abs{g} V(P, f) + \sup\abs{f} V(P, g) \\&amp;\leq\sup\abs{g} V(f) + \sup\abs{f} V(g)
 \end{align*}\end{split}\]</div>
-<p>Similarly, because  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(g\)</span>  are of bounded variation,  <span class="math notranslate nohighlight">\(V(f)\)</span>  and  <span class="math notranslate nohighlight">\(V(g)\)</span>  are finite. Moreover, by  <a class="reference internal" href="Definition%20of%20Functions%20of%20Bounded%20Variation.html#thm:35">Theorem 31</a> ,  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(g\)</span>  are bounded on  <span class="math notranslate nohighlight">\([a, b]\)</span> , which implies  <span class="math notranslate nohighlight">\(\sup\abs{f}, \sup\abs{g} &lt; \infty\)</span> . Hence,  <span class="math notranslate nohighlight">\(V(P, f g)\)</span>  is bounded above by a finite number for any partition, which implies  <span class="math notranslate nohighlight">\(fg\)</span>  is also of bounded variation, and  <a class="reference internal" href="#equation-eq-78">(35)</a>  holds.</p>
+<p>Similarly, because <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are of bounded variation, <span class="math notranslate nohighlight">\(V(f)\)</span> and <span class="math notranslate nohighlight">\(V(g)\)</span> are finite. Moreover, by <a class="reference internal" href="Definition%20of%20Functions%20of%20Bounded%20Variation.html#thm:35">Theorem 36</a>, <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are bounded on <span class="math notranslate nohighlight">\([a, b]\)</span>, which implies <span class="math notranslate nohighlight">\(\sup\abs{f}, \sup\abs{g} &lt; \infty\)</span>. Hence, <span class="math notranslate nohighlight">\(V(P, f g)\)</span> is bounded above by a finite number for any partition, which implies <span class="math notranslate nohighlight">\(fg\)</span> is also of bounded variation, and <a class="reference internal" href="#equation-eq-78">(43)</a> holds.</p>
 </div>
 </div>
 

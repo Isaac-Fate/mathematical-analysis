@@ -152,6 +152,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html">
+     The Comparison Test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html">
+     The Ratio Test and the Root Test
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
      Subseries
     </a>
@@ -164,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
      Rearrangement Theorem for Double Series
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html">
+     Multiplication of Series
     </a>
    </li>
   </ul>
@@ -568,35 +583,33 @@ title="Print to PDF"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="taylor-s-theorem">
-<span id="index-0"></span><h1>Taylor’s Theorem<a class="headerlink" href="#taylor-s-theorem" title="Permalink to this headline">#</a></h1>
+<h1>Taylor’s Theorem<a class="headerlink" href="#taylor-s-theorem" title="Permalink to this headline">#</a></h1>
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(x = c\)</span>, then it can be approximated by</p>
 <div class="math notranslate nohighlight" id="equation-eq-19">
-<span class="eqno">(27)<a class="headerlink" href="#equation-eq-19" title="Permalink to this equation">#</a></span>\[\begin{align}
-f(x)  \approx  f(c) + f^ \prime (c)(x-c)
+<span class="eqno">(35)<a class="headerlink" href="#equation-eq-19" title="Permalink to this equation">#</a></span>\[\begin{align}
+f(x) \approx f(c) + f^\prime(c)(x-c)
 \end{align}\]</div>
-<p>when <span class="math notranslate nohighlight">\(\abs{x-c}\)</span> is small. Geometrically, <span class="math notranslate nohighlight">\(f\)</span> is close to its tangent line at <span class="math notranslate nohighlight">\(x=c\)</span> near the point of tangency. Another way to look at <a class="reference internal" href="#equation-eq-19">(27)</a> is that <span class="math notranslate nohighlight">\(f\)</span> is approximated by a polynomial of degree one whose first-order derivative at <span class="math notranslate nohighlight">\(x=c\)</span> is exactly <span class="math notranslate nohighlight">\(f^\prime(c)\)</span>. And the value of this polynomial at <span class="math notranslate nohighlight">\(x=c\)</span> is <span class="math notranslate nohighlight">\(f(c)\)</span>, that is, its zeroth-order derivative is <span class="math notranslate nohighlight">\(f(c)\)</span>. We can extend this idea by approximating <span class="math notranslate nohighlight">\(f\)</span> with higher degree polynomials whose derivatives of all orders match with that of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x = c\)</span>.</p>
+<p>when <span class="math notranslate nohighlight">\(\abs{x-c}\)</span> is small. Geometrically, <span class="math notranslate nohighlight">\(f\)</span> is close to its tangent line at <span class="math notranslate nohighlight">\(x=c\)</span> near the point of tangency. Another way to look at <a class="reference internal" href="#equation-eq-19">(35)</a> is that <span class="math notranslate nohighlight">\(f\)</span> is approximated by a polynomial of degree one whose first-order derivative at <span class="math notranslate nohighlight">\(x=c\)</span> is exactly <span class="math notranslate nohighlight">\(f^\prime(c)\)</span>. And the value of this polynomial at <span class="math notranslate nohighlight">\(x=c\)</span> is <span class="math notranslate nohighlight">\(f(c)\)</span>, that is, its zeroth-order derivative is <span class="math notranslate nohighlight">\(f(c)\)</span>. We can extend this idea by approximating <span class="math notranslate nohighlight">\(f\)</span> with higher degree polynomials whose derivatives of all orders match with that of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x = c\)</span>.</p>
 <div class="proof example admonition" id="example-0">
-<p class="admonition-title"><span class="caption-number">Example 9 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 11 </span></p>
 <div class="example-content section" id="proof-content">
-<p>Suppose we know any order derivative of the function  <span class="math notranslate nohighlight">\(f(x) = e^x\)</span>  is itself. That is,</p>
+<p>Suppose we know any order derivative of the function <span class="math notranslate nohighlight">\(f(x) = e^x\)</span> is itself. That is,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f^ {(k)} (x) = f(x) = e^x  \quad \forall  k = 0, 1, 2,  \ldots
-\end{align*}\]</div>
+f^{(k)}(x) = f(x) = e^x \quad\forall k = 0, 1, 2, \ldots\end{align*}\]</div>
 <p>Consider the polynomial</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 p_n(x)
-=  \sum _ {k=0} ^n  \frac{x^k}{k!}
-= 1 + x +  \frac{x^2}{2}  +  \frac{x^3}{6}  +  \cdots  +  \frac{x^n}{n!}
-\end{align*}\]</div>
+= \sum_{k=0}^n \frac{x^k}{k!}
+= 1 + x + \frac{x^2}{2} + \frac{x^3}{6} + \cdots + \frac{x^n}{n!}\end{align*}\]</div>
 <p>One can check that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-p^ {(k)} _n(0) = f^ {(k)} (0)
-\quad \forall  k = 0, 1,  \ldots , n
+p^{(k)}_n(0) = f^{(k)}(0)
+\quad\forall k = 0, 1, \ldots, n
 \end{align*}\]</div>
-<p>Hence, it is reasonable to approximate  <span class="math notranslate nohighlight">\(f(x)\)</span>  with  <span class="math notranslate nohighlight">\(p_n(x)\)</span>  near point  <span class="math notranslate nohighlight">\(x = 0\)</span> .  <a class="reference internal" href="#fig-7"><span class="std std-numref">Fig. 8</span></a>  compares  <span class="math notranslate nohighlight">\(f\)</span>  with  <span class="math notranslate nohighlight">\(p_n\)</span>  with several choices of  <span class="math notranslate nohighlight">\(n\)</span> .</p>
+<p>Hence, it is reasonable to approximate <span class="math notranslate nohighlight">\(f(x)\)</span> with <span class="math notranslate nohighlight">\(p_n(x)\)</span> near point <span class="math notranslate nohighlight">\(x = 0\)</span>. <a class="reference internal" href="#fig-7"><span class="std std-numref">Fig. 8</span></a> compares <span class="math notranslate nohighlight">\(f\)</span> with <span class="math notranslate nohighlight">\(p_n\)</span> with several choices of <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <div class="figure align-default" id="fig-7">
 <img alt="../_images/graph-008.png" src="../_images/graph-008.png" />
 <p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Approximations of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x=0\)</span>.</span><a class="headerlink" href="#fig-7" title="Permalink to this image">#</a></p>
@@ -604,82 +617,74 @@ p^ {(k)} _n(0) = f^ {(k)} (0)
 </div>
 </div><p>In general, a function <span class="math notranslate nohighlight">\(f\)</span> can be approximated by the polynomial</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\sum _ {k=0} ^ {n-1} \frac{f^{(k)}(c)}{k} (x-c)^k
-= f(c) + f^ \prime (c)(x-c) +  \cdots  +  \frac{f^{(n)}(c)}{n!} (x-c)^ {n}
-\end{align*}\]</div>
-<p>at point <span class="math notranslate nohighlight">\(c\)</span> provided that <span class="math notranslate nohighlight">\(f\)</span> has up to <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative. The reason why we approximate <span class="math notranslate nohighlight">\(f\)</span> with a polynomial of <span class="math notranslate nohighlight">\(n\)</span> degree is that we have a remainder term, which makes use of the <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative. The remainder tells us how accurate the approximation is. The formal statement is described in the following theorem, the <strong>Taylor’s theorem</strong>.</p>
+\[\begin{align*}\sum_{k=0}^{n-1}\frac{f^{(k)}(c)}{k}(x-c)^k
+= f(c) + f^\prime(c)(x-c) + \cdots + \frac{f^{(n)}(c)}{n!}(x-c)^{n}\end{align*}\]</div>
+<p id="index-0">at point <span class="math notranslate nohighlight">\(c\)</span> provided that <span class="math notranslate nohighlight">\(f\)</span> has up to <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative. The reason why we approximate <span class="math notranslate nohighlight">\(f\)</span> with a polynomial of <span class="math notranslate nohighlight">\(n\)</span> degree is that we have a remainder term, which makes use of the <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative. The remainder tells us how accurate the approximation is. The formal statement is described in the following theorem, the <strong>Taylor’s theorem</strong>.</p>
 <div class="proof theorem admonition" id="thm:16">
-<p class="admonition-title"><span class="caption-number">Theorem 29 </span> (Taylor)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 34 </span> (Taylor)</p>
 <div class="theorem-content section" id="proof-content">
-<p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be a function having  <span class="math notranslate nohighlight">\((n+1)\)</span> -th order derivative everywhere in  <span class="math notranslate nohighlight">\((a, b)\)</span> , and suppose  <span class="math notranslate nohighlight">\(f^{(n)}\)</span>  is continuous on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Let  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  be an interior point. Then for every  <span class="math notranslate nohighlight">\(x \in[a, b]\)</span>  other than  <span class="math notranslate nohighlight">\(c\)</span> , we have</p>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be a function having <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span>, and suppose <span class="math notranslate nohighlight">\(f^{(n)}\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> be an interior point. Then for every <span class="math notranslate nohighlight">\(x \in[a, b]\)</span> other than <span class="math notranslate nohighlight">\(c\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-20">
-<span class="eqno">(28)<a class="headerlink" href="#equation-eq-20" title="Permalink to this equation">#</a></span>\[\begin{align}
-f(x) =  \sum _ {k=0} ^ {n} \frac{f^{(k)}(c)}{k!} (x-c)^k +  \frac{f^{(n+1)}(\xi)}{(n+1)!} (x-c)^ {n+1}
-\end{align}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(\xi\)</span>  is some number in between  <span class="math notranslate nohighlight">\(x\)</span>  and  <span class="math notranslate nohighlight">\(c\)</span> .</p>
+<span class="eqno">(36)<a class="headerlink" href="#equation-eq-20" title="Permalink to this equation">#</a></span>\[\begin{align}
+f(x) = \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-c)^{n+1}\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\xi\)</span> is some number in between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(c\)</span>.</p>
 </div>
 </div><p>This theorem can be obtained as an immediate corollary of the following extension of the mean value theorem.</p>
 <div class="proof theorem admonition" id="thm:17">
-<p class="admonition-title"><span class="caption-number">Theorem 30 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 35 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Let  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(g\)</span>  be two functions each having  <span class="math notranslate nohighlight">\((n+1)\)</span> -th order derivative everywhere in  <span class="math notranslate nohighlight">\((a, b)\)</span> . Suppose that  <span class="math notranslate nohighlight">\(f^{(n)}\)</span>  and  <span class="math notranslate nohighlight">\(g^{(n)}\)</span>  are both continuous on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Let  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  be an interior point. Then for every  <span class="math notranslate nohighlight">\(x \in[a, b]\)</span>  other than  <span class="math notranslate nohighlight">\(c\)</span> , we have</p>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be two functions each having <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose that <span class="math notranslate nohighlight">\(f^{(n)}\)</span> and <span class="math notranslate nohighlight">\(g^{(n)}\)</span> are both continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> be an interior point. Then for every <span class="math notranslate nohighlight">\(x \in[a, b]\)</span> other than <span class="math notranslate nohighlight">\(c\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-21">
-<span class="eqno">(29)<a class="headerlink" href="#equation-eq-21" title="Permalink to this equation">#</a></span>\[\begin{align}
-\left[ f(x) -  \sum _ {k=0} ^ {n} \frac{f^{(k)}(c)}{k!} (x-c)^k
-\right] g^ {(n+1)} ( \xi )
-= f^ {(n+1)} ( \xi )  \left[ g(x) -  \sum _ {k=0} ^ {n} \frac{g^{(k)}(c)}{k!} (x-c)^k
-\right]
-\end{align}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(\xi\)</span>  is some number in between  <span class="math notranslate nohighlight">\(x\)</span>  and  <span class="math notranslate nohighlight">\(c\)</span> .</p>
+<span class="eqno">(37)<a class="headerlink" href="#equation-eq-21" title="Permalink to this equation">#</a></span>\[\begin{align}\left[f(x) - \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k
+\right]g^{(n+1)}(\xi)
+= f^{(n+1)}(\xi) \left[g(x) - \sum_{k=0}^{n}\frac{g^{(k)}(c)}{k!}(x-c)^k
+\right]\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\xi\)</span> is some number in between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(c\)</span>.</p>
 </div>
 </div><div class="proof remark admonition" id="remark-3">
 <p class="admonition-title"><span class="caption-number">Remark 5 </span></p>
 <div class="remark-content section" id="proof-content">
-<p>Taking  <span class="math notranslate nohighlight">\(g(x) = (x-c)^{n+1}\)</span> , we have</p>
+<p>Taking <span class="math notranslate nohighlight">\(g(x) = (x-c)^{n+1}\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-g^ {(n+1)} ( \xi ) = (n+1)!
-\quad \text{and} \quad \sum _ {k=0} ^ {n} \frac{g^{(k)}(c)}{k!} (x-c)^k = 0
+g^{(n+1)}(\xi) = (n+1)!
+\quad\text{and}\quad\sum_{k=0}^{n}\frac{g^{(k)}(c)}{k!}(x-c)^k = 0
 \end{align*}\]</div>
-<p>Then  <a class="reference internal" href="#equation-eq-21">(29)</a>  reduces to  <a class="reference internal" href="#equation-eq-20">(28)</a> , and hence this theorem reduces to  <a class="reference internal" href="#thm:16">Theorem 29</a> .</p>
+<p>Then <a class="reference internal" href="#equation-eq-21">(37)</a> reduces to <a class="reference internal" href="#equation-eq-20">(36)</a>, and hence this theorem reduces to <a class="reference internal" href="#thm:16">Theorem 34</a>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Define functions  <span class="math notranslate nohighlight">\(F(t)\)</span>  and  <span class="math notranslate nohighlight">\(G(t)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  by</p>
+<p>Proof. Define functions <span class="math notranslate nohighlight">\(F(t)\)</span> and <span class="math notranslate nohighlight">\(G(t)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-F(t) =  \sum _ {k=0} ^ {n} \frac{f^{(k)}(t)}{k!} (x-t)^k
-\quad \text{and} \quad
-G(t) =  \sum _ {k=0} ^ {n} \frac{g^{(k)}(t)}{k!} (x-t)^k
-\quad \forall  t  \in[a, b]
-\end{align*}\]</div>
-<p>Note that  <span class="math notranslate nohighlight">\(F\)</span>  and  <span class="math notranslate nohighlight">\(G\)</span>  are continuous on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and they have derivatives everywhere in  <span class="math notranslate nohighlight">\((a, b)\)</span> . Applying the generalized mean value theorem ( <a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:7">Theorem 22</a> ) to  <span class="math notranslate nohighlight">\(F(t)\)</span>  and  <span class="math notranslate nohighlight">\(G(t)\)</span>  on the closed interval joining points  <span class="math notranslate nohighlight">\(x\)</span>  and  <span class="math notranslate nohighlight">\(c\)</span> , we have</p>
+F(t) = \sum_{k=0}^{n}\frac{f^{(k)}(t)}{k!}(x-t)^k
+\quad\text{and}\quad
+G(t) = \sum_{k=0}^{n}\frac{g^{(k)}(t)}{k!}(x-t)^k
+\quad\forall t \in[a, b]\end{align*}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> are continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, and they have derivatives everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span>. Applying the generalized mean value theorem (<a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:7">Theorem 27</a>) to <span class="math notranslate nohighlight">\(F(t)\)</span> and <span class="math notranslate nohighlight">\(G(t)\)</span> on the closed interval joining points <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(c\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-22">
-<span class="eqno">(30)<a class="headerlink" href="#equation-eq-22" title="Permalink to this equation">#</a></span>\[\begin{align}
-[ F(x) - F(c) ]  G^ \prime ( \xi )
-= F^ \prime ( \xi )  [ G(x) - G(c) ]
-\end{align}\]</div>
-<p>for some number  <span class="math notranslate nohighlight">\(\xi\)</span>  in between  <span class="math notranslate nohighlight">\(x\)</span>  and  <span class="math notranslate nohighlight">\(c\)</span> .</p>
-<p>After a few steps of computation, we obtain derivatives  <span class="math notranslate nohighlight">\(F^\prime(t)\)</span>  and  <span class="math notranslate nohighlight">\(G^\prime(t)\)</span>  as follows.</p>
+<span class="eqno">(38)<a class="headerlink" href="#equation-eq-22" title="Permalink to this equation">#</a></span>\[\begin{align}[F(x) - F(c)] G^\prime(\xi)
+= F^\prime(\xi) [G(x) - G(c)]\end{align}\]</div>
+<p>for some number <span class="math notranslate nohighlight">\(\xi\)</span> in between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<p>After a few steps of computation, we obtain derivatives <span class="math notranslate nohighlight">\(F^\prime(t)\)</span> and <span class="math notranslate nohighlight">\(G^\prime(t)\)</span> as follows.</p>
 <div class="math notranslate nohighlight" id="equation-eq-23">
-<span class="eqno">(31)<a class="headerlink" href="#equation-eq-23" title="Permalink to this equation">#</a></span>\[\begin{align}
-F^ \prime (t) =  \frac{f^{(n+1)}(t)}{n!} (x-t)^ {n} \quad \text{and} \quad
-G^ \prime (t) =  \frac{g^{(n+1)}(t)}{n!} (x-t)^ {n} \quad \forall  t  \in (a, b)
+<span class="eqno">(39)<a class="headerlink" href="#equation-eq-23" title="Permalink to this equation">#</a></span>\[\begin{align}
+F^\prime(t) = \frac{f^{(n+1)}(t)}{n!}(x-t)^{n}\quad\text{and}\quad
+G^\prime(t) = \frac{g^{(n+1)}(t)}{n!}(x-t)^{n}\quad\forall t \in(a, b)
 \end{align}\]</div>
 <p>We also note that</p>
 <div class="math notranslate nohighlight" id="equation-eq-24">
-<span class="eqno">(32)<a class="headerlink" href="#equation-eq-24" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(40)<a class="headerlink" href="#equation-eq-24" title="Permalink to this equation">#</a></span>\[\begin{align}
 F(x) = f(x),
 \quad
-F(c) =  \sum _ {k=0} ^ {n} \frac{f^{(k)}(c)}{k!} (x-c)^k,
+F(c) = \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k,
 \quad
 G(x) = g(x),
-\quad \text{and} \quad
-G(c) =  \sum _ {k=0} ^ {n} \frac{g^{(k)}(c)}{k!} (x-c)^k
+\quad\text{and}\quad
+G(c) = \sum_{k=0}^{n}\frac{g^{(k)}(c)}{k!}(x-c)^k
 \end{align}\]</div>
-<p>Plugging  <a class="reference internal" href="#equation-eq-23">(31)</a>  and  <a class="reference internal" href="#equation-eq-24">(32)</a>  into  <a class="reference internal" href="#equation-eq-22">(30)</a>  leads to  <a class="reference internal" href="#equation-eq-21">(29)</a> .</p>
+<p>Plugging <a class="reference internal" href="#equation-eq-23">(39)</a> and <a class="reference internal" href="#equation-eq-24">(40)</a> into <a class="reference internal" href="#equation-eq-22">(38)</a> leads to <a class="reference internal" href="#equation-eq-21">(37)</a>.</p>
 </div>
-<p>We can rewrite <a class="reference internal" href="#equation-eq-20">(28)</a> as</p>
+<p>We can rewrite <a class="reference internal" href="#equation-eq-20">(36)</a> as</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f(x) = p_n(x) + r_n(x)
@@ -687,54 +692,48 @@ f(x) = p_n(x) + r_n(x)
 <p>where</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-p_n(x) =  \sum _ {k=0} ^ {n} \frac{f^{(k)}(c)}{k!} (x-c)^k
+p_n(x) = \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k
 \end{align*}\]</div>
 <p>is the polynomial approximation, and</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-r_n(x) =  \frac{f^{(n+1)}(\xi)}{(n+1)!} (x-c)^ {n+1}
-\end{align*}\]</div>
+r_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-c)^{n+1}\end{align*}\]</div>
 <p>is the remainder. The smaller the absolute value of <span class="math notranslate nohighlight">\(r_n(x)\)</span> is, the more accurate the approximation will be.</p>
 <div class="admonition-exercise-9 admonition">
 <p class="admonition-title">Exercise 9</p>
-<p>Use Taylor’s theorem ( <a class="reference internal" href="#thm:16">Theorem 29</a> ) to approximate the value of  <span class="math notranslate nohighlight">\(\ln(0.6)\)</span>  so that the absolute error is less than  <span class="math notranslate nohighlight">\(0.1\)</span> .</p>
+<p>Use Taylor’s theorem (<a class="reference internal" href="#thm:16">Theorem 34</a>) to approximate the value of <span class="math notranslate nohighlight">\(\ln(0.6)\)</span> so that the absolute error is less than <span class="math notranslate nohighlight">\(0.1\)</span>.</p>
 </div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
-<p>Putting  <span class="math notranslate nohighlight">\(f(x) = \ln(x)\)</span>  in  <a class="reference internal" href="#equation-eq-20">(28)</a> , we have</p>
+<p>Putting <span class="math notranslate nohighlight">\(f(x) = \ln(x)\)</span> in <a class="reference internal" href="#equation-eq-20">(36)</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
-p_n(x;c) &amp;=  \sum _ {k=0} ^ {n} \frac{f^{(k)}(c)}{k!} (x-c)^k
-=  \ln (c) +  \sum _ {k=1} ^ {n} \frac{(-1)^{k+1}}{k c^n} (x-c)^k  \\
-r_n(x;c) &amp;=  \frac{(-1)^{n+2}}{(n+1) \xi^{n+1}} (x-c)^ {n+1}
-\end{align*}\end{split}\]</div>
-<p>Since the value of  <span class="math notranslate nohighlight">\(\ln(x)\)</span>  at  <span class="math notranslate nohighlight">\(x=1\)</span>  is known, i.e.,  <span class="math notranslate nohighlight">\(\ln(1) = 0\)</span> , we can expand it about that point by putting  <span class="math notranslate nohighlight">\(c=1\)</span> . Then we have</p>
+p_n(x;c) &amp;= \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k
+= \ln(c) + \sum_{k=1}^{n}\frac{(-1)^{k+1}}{k c^n}(x-c)^k \\
+r_n(x;c) &amp;= \frac{(-1)^{n+2}}{(n+1) \xi^{n+1}}(x-c)^{n+1}\end{align*}\end{split}\]</div>
+<p>Since the value of <span class="math notranslate nohighlight">\(\ln(x)\)</span> at <span class="math notranslate nohighlight">\(x=1\)</span> is known, i.e., <span class="math notranslate nohighlight">\(\ln(1) = 0\)</span>, we can expand it about that point by putting <span class="math notranslate nohighlight">\(c=1\)</span>. Then we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-p_n(x) =  \sum _ {k=1} ^ {n} \frac{(-1)^{k+1}}{k} (x-1)^k
-\quad \text{and} \quad
-r_n(x) =  \frac{(-1)^{n+2}}{(n+1) \xi^{n+1}} (x-1)^ {n+1}
-\end{align*}\]</div>
-<p>To approximate  <span class="math notranslate nohighlight">\(\ln(0.6)\)</span>  by  <span class="math notranslate nohighlight">\(p_n(0.6)\)</span>  within the error bounds, we need to estimate the remainder  <span class="math notranslate nohighlight">\(r_n(0.6)\)</span> . Note that  <span class="math notranslate nohighlight">\(\xi\)</span>  is now some number in between  <span class="math notranslate nohighlight">\(0.6\)</span>  and  <span class="math notranslate nohighlight">\(1\)</span>  since  <span class="math notranslate nohighlight">\(x=0.6\)</span>  and  <span class="math notranslate nohighlight">\(c=1\)</span> . The absolute value of  <span class="math notranslate nohighlight">\(r_n(0.6)\)</span>  is bounded above by</p>
+p_n(x) = \sum_{k=1}^{n}\frac{(-1)^{k+1}}{k}(x-1)^k
+\quad\text{and}\quad
+r_n(x) = \frac{(-1)^{n+2}}{(n+1) \xi^{n+1}}(x-1)^{n+1}\end{align*}\]</div>
+<p>To approximate <span class="math notranslate nohighlight">\(\ln(0.6)\)</span> by <span class="math notranslate nohighlight">\(p_n(0.6)\)</span> within the error bounds, we need to estimate the remainder <span class="math notranslate nohighlight">\(r_n(0.6)\)</span>. Note that <span class="math notranslate nohighlight">\(\xi\)</span> is now some number in between <span class="math notranslate nohighlight">\(0.6\)</span> and <span class="math notranslate nohighlight">\(1\)</span> since <span class="math notranslate nohighlight">\(x=0.6\)</span> and <span class="math notranslate nohighlight">\(c=1\)</span>. The absolute value of <span class="math notranslate nohighlight">\(r_n(0.6)\)</span> is bounded above by</p>
 <div class="math notranslate nohighlight" id="equation-eq-25">
-<span class="eqno">(33)<a class="headerlink" href="#equation-eq-25" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{r_n(0.6)}  =  \frac{1}{n+1} \abs{\frac{0.6-1}{\xi}} ^ {n+1}
-&lt;  \frac{1}{n+1} \left(\ frac {0.4} {0.6} \right)^{n+1}
-=  \frac{1}{n+1} \left(\ frac {2} {3} \right)^{n+1}
-\end{align}\]</div>
-<p>We then estimate  <span class="math notranslate nohighlight">\(\abs{r_n(0.6)}\)</span>  using  <a class="reference internal" href="#equation-eq-25">(33)</a>  by trying the first few values of  <span class="math notranslate nohighlight">\(n\)</span> . We have</p>
+<span class="eqno">(41)<a class="headerlink" href="#equation-eq-25" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{r_n(0.6)} = \frac{1}{n+1}\abs{\frac{0.6-1}{\xi}}^{n+1}
+&lt; \frac{1}{n+1}\left(\frac{0.4}{0.6}\right)^{n+1}
+= \frac{1}{n+1}\left(\frac{2}{3}\right)^{n+1}\end{align}\]</div>
+<p>We then estimate <span class="math notranslate nohighlight">\(\abs{r_n(0.6)}\)</span> using <a class="reference internal" href="#equation-eq-25">(41)</a> by trying the first few values of <span class="math notranslate nohighlight">\(n\)</span>. We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-r_1(0.6) =  \frac{2}{9}  &gt; 0.1
-\quad \text{and} \quad
-r_2(0.6) =  \frac{8}{81}  &lt; 0.1
+r_1(0.6) = \frac{2}{9} &gt; 0.1
+\quad\text{and}\quad
+r_2(0.6) = \frac{8}{81} &lt; 0.1
 \end{align*}\]</div>
-<p>Hence, it is adequate to approximate  <span class="math notranslate nohighlight">\(\ln(0.6)\)</span>  by  <span class="math notranslate nohighlight">\(p_2(0.6)\)</span> . The approximated value is</p>
+<p>Hence, it is adequate to approximate <span class="math notranslate nohighlight">\(\ln(0.6)\)</span> by <span class="math notranslate nohighlight">\(p_2(0.6)\)</span>. The approximated value is</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\ln (0.6)  \approx  p_2(0.6) = (0.6-1) -  \frac{1}{2} \times (0.6-1)^2 = -0.48
+\[\begin{align*}\ln(0.6) \approx p_2(0.6) = (0.6-1) - \frac{1}{2}\times(0.6-1)^2 = -0.48
 \end{align*}\]</div>
-<p>We can also visualize the result in  <a class="reference internal" href="#fig-8"><span class="std std-numref">Fig. 9</span></a> . As we can see, the approximated value is quite close to the true value. And the absolute error is actually much less than the required bound,  <span class="math notranslate nohighlight">\(0.1\)</span> .</p>
+<p>We can also visualize the result in <a class="reference internal" href="#fig-8"><span class="std std-numref">Fig. 9</span></a>. As we can see, the approximated value is quite close to the true value. And the absolute error is actually much less than the required bound, <span class="math notranslate nohighlight">\(0.1\)</span>.</p>
 <div class="figure align-default" id="fig-8">
 <img alt="../_images/taylor-approx.png" src="../_images/taylor-approx.png" />
 <p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Approximation of <span class="math notranslate nohighlight">\(\ln(0.6)\)</span>.</span><a class="headerlink" href="#fig-8" title="Permalink to this image">#</a></p>

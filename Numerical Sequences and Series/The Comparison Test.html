@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Limits and Continuity &#8212; Mathematical Analysis</title>
+    <title>The Comparison Test &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,11 +52,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Limit of a Function" href="Limit%20of%20a%20Function.html" />
-    <link rel="prev" title="Multiplication of Series" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html" />
+    <link rel="next" title="The Ratio Test and the Root Test" href="The%20Ratio%20Test%20and%20the%20Root%20Test.html" />
+    <link rel="prev" title="Infinite Series" href="Infinite%20Series.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -134,90 +136,90 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    Numerical Sequences and Series
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html">
+    <a class="reference internal" href="Infinite%20Series.html">
      Infinite Series
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      The Comparison Test
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html">
+    <a class="reference internal" href="The%20Ratio%20Test%20and%20the%20Root%20Test.html">
      The Ratio Test and the Root Test
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
+    <a class="reference internal" href="Subseries.html">
      Subseries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Double%20Series.html">
+    <a class="reference internal" href="Double%20Series.html">
      Double Series
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
+    <a class="reference internal" href="Rearrangement%20Theorem%20for%20Double%20Series.html">
      Rearrangement Theorem for Double Series
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html">
+    <a class="reference internal" href="Multiplication%20of%20Series.html">
      Multiplication of Series
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
    Limits and Continuity
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Limit%20of%20a%20Function.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Limit%20of%20a%20Function.html">
      Limit of a Function
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Computing%20Limits.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Computing%20Limits.html">
      Computing Limits
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Continuous%20Functions.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html">
      Continuous Functions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Continuity%20of%20Composite%20Functions.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Continuity%20of%20Composite%20Functions.html">
      Continuity of Composite Functions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Connectedness.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Connectedness.html">
      Connectedness
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Monotonic%20Functions.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Monotonic%20Functions.html">
      Monotonic Functions
     </a>
    </li>
@@ -491,7 +493,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FLimits and Continuity/index.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FNumerical Sequences and Series/The Comparison Test.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -519,7 +521,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Limits and Continuity/index.md"
+        <a href="../_sources/Numerical Sequences and Series/The Comparison Test.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -568,7 +570,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Limits and Continuity</h1>
+                <h1>The Comparison Test</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -580,17 +582,25 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="limits-and-continuity">
-<h1>Limits and Continuity<a class="headerlink" href="#limits-and-continuity" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Limit%20of%20a%20Function.html">Limit of a Function</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Computing%20Limits.html">Computing Limits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Continuous%20Functions.html">Continuous Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Continuity%20of%20Composite%20Functions.html">Continuity of Composite Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Connectedness.html">Connectedness</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Monotonic%20Functions.html">Monotonic Functions</a></li>
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-comparison-test">
+<h1>The Comparison Test<a class="headerlink" href="#the-comparison-test" title="Permalink to this headline">#</a></h1>
+<div class="proof theorem admonition" id="thm:52">
+<p class="admonition-title"><span class="caption-number">Theorem 5 </span> (Comparison Test)</p>
+<div class="theorem-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> and <span class="math notranslate nohighlight">\(\{b_n\}\)</span> be two sequences with non-negative terms. If there exists an integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+a_n \leq b_n
+\quad\forall n \geq N
+\end{align*}\]</div>
+<p>then</p>
+<ul class="simple">
+<li><p>1️⃣ <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges if <span class="math notranslate nohighlight">\(\sum b_n\)</span> converges, and</p></li>
+<li><p>2️⃣ <span class="math notranslate nohighlight">\(\sum b_n\)</span> diverges if <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges.</p></li>
 </ul>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
 </div>
 </div>
 
@@ -607,7 +617,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Limits and Continuity"
+            path: "./Numerical Sequences and Series"
         },
         predefinedOutput: true
     }
@@ -621,17 +631,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Infinite%20Series.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Multiplication of Series</p>
+            <p class="prev-next-title">Infinite Series</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Limit%20of%20a%20Function.html" title="next page">
+    <a class='right-next' id="next-link" href="The%20Ratio%20Test%20and%20the%20Root%20Test.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Limit of a Function</p>
+        <p class="prev-next-title">The Ratio Test and the Root Test</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

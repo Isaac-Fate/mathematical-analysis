@@ -152,6 +152,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html">
+     The Comparison Test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html">
+     The Ratio Test and the Root Test
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
      Subseries
     </a>
@@ -164,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
      Rearrangement Theorem for Double Series
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html">
+     Multiplication of Series
     </a>
    </li>
   </ul>
@@ -570,60 +585,55 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="monotonic-functions">
 <h1>Monotonic Functions<a class="headerlink" href="#monotonic-functions" title="Permalink to this headline">#</a></h1>
 <div class="proof theorem admonition" id="thm:15">
-<p class="admonition-title"><span class="caption-number">Theorem 13 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 18 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>If  <span class="math notranslate nohighlight">\(f\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then  <span class="math notranslate nohighlight">\(f(c+)\)</span>  and  <span class="math notranslate nohighlight">\(f(c-)\)</span>  both exists for every  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> , and we have</p>
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f(c+)\)</span> and <span class="math notranslate nohighlight">\(f(c-)\)</span> both exists for every <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>, and we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f(c-)  \leq  f(c)  \leq  f(c+)
+f(c-) \leq f(c) \leq f(c+)
 \end{align*}\]</div>
-<p>As the endpoints, we have  <span class="math notranslate nohighlight">\(f(a+)\)</span>  and  <span class="math notranslate nohighlight">\(f(b-)\)</span>  both exists and</p>
+<p>As the endpoints, we have <span class="math notranslate nohighlight">\(f(a+)\)</span> and <span class="math notranslate nohighlight">\(f(b-)\)</span> both exists and</p>
 <div class="math notranslate nohighlight" id="equation-eq-18">
-<span class="eqno">(11)<a class="headerlink" href="#equation-eq-18" title="Permalink to this equation">#</a></span>\[\begin{align}
-f(a)  \leq  f(a+)
-\quad \text{and} \quad
-f(b-)  \leq  f(b)
+<span class="eqno">(19)<a class="headerlink" href="#equation-eq-18" title="Permalink to this equation">#</a></span>\[\begin{align}
+f(a) \leq f(a+)
+\quad\text{and}\quad
+f(b-) \leq f(b)
 \end{align}\]</div>
-<p>Analogous results exist for  <span class="math notranslate nohighlight">\(f\)</span>  being a decreasing function.</p>
+<p>Analogous results exist for <span class="math notranslate nohighlight">\(f\)</span> being a decreasing function.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We only prove this theorem for increasing functions. Let  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  be an interior point.</p>
-<p>(Existence of  <span class="math notranslate nohighlight">\(f(c-)\)</span> ) Define a set</p>
+<p>Proof. We only prove this theorem for increasing functions. Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> be an interior point.</p>
+<p>(Existence of <span class="math notranslate nohighlight">\(f(c-)\)</span>) Define a set</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-A =  \set{f(x)}{a \leq x &lt; c}
-\end{align*}\]</div>
-<p>Note that  <span class="math notranslate nohighlight">\(A\)</span>  is bounded above by  <span class="math notranslate nohighlight">\(f(c)\)</span>  since  <span class="math notranslate nohighlight">\(f\)</span>  is increasing. Then  <span class="math notranslate nohighlight">\(A\)</span>  has the least upper bound, say  <span class="math notranslate nohighlight">\(\alpha = \sup A\)</span> . We want to show that  <span class="math notranslate nohighlight">\(f(c-)\)</span>  exists and equals  <span class="math notranslate nohighlight">\(\alpha\)</span> . Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , by the property of  <span class="math notranslate nohighlight">\(\alpha\)</span> , there exists  <span class="math notranslate nohighlight">\(x_\varepsilon = (c - \delta) \in \left[a, c \right)\)</span>  such that ( <span class="math notranslate nohighlight">\(\delta\)</span>  depends on  <span class="math notranslate nohighlight">\(\varepsilon\)</span> )</p>
+A = \set{f(x)}{a \leq x &lt; c}\end{align*}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(A\)</span> is bounded above by <span class="math notranslate nohighlight">\(f(c)\)</span> since <span class="math notranslate nohighlight">\(f\)</span> is increasing. Then <span class="math notranslate nohighlight">\(A\)</span> has the least upper bound, say <span class="math notranslate nohighlight">\(\alpha = \sup A\)</span>. We want to show that <span class="math notranslate nohighlight">\(f(c-)\)</span> exists and equals <span class="math notranslate nohighlight">\(\alpha\)</span>. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, by the property of <span class="math notranslate nohighlight">\(\alpha\)</span>, there exists <span class="math notranslate nohighlight">\(x_\varepsilon = (c - \delta) \in \left[a, c \right)\)</span> such that (<span class="math notranslate nohighlight">\(\delta\)</span> depends on <span class="math notranslate nohighlight">\(\varepsilon\)</span>)</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f(c -  \delta ) &gt;  \alpha  -  \varepsilon
-\end{align*}\]</div>
-<p>Because  <span class="math notranslate nohighlight">\(f\)</span>  is increasing, we have</p>
+f(c - \delta) &gt; \alpha - \varepsilon\end{align*}\]</div>
+<p>Because <span class="math notranslate nohighlight">\(f\)</span> is increasing, we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\alpha \geq  f(x)  \geq  f(c- \delta ) &gt;  \alpha - \varepsilon \quad \forall  x  \in (c- \delta , c)
+\[\begin{align*}\alpha\geq f(x) \geq f(c-\delta) &gt; \alpha-\varepsilon\quad\forall x \in(c-\delta, c)
 \end{align*}\]</div>
 <p>This implies that</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{f(x) - \alpha}  &lt;  \varepsilon \quad \forall  x  \in (c- \delta , c)
+\[\begin{align*}\abs{f(x) - \alpha} &lt; \varepsilon\quad\forall x \in(c-\delta, c)
 \end{align*}\]</div>
-<p>Hence,  <span class="math notranslate nohighlight">\(\alpha\)</span>  is the left-hand limit of  <span class="math notranslate nohighlight">\(f\)</span>  at  <span class="math notranslate nohighlight">\(x = c\)</span> , i.e.,  <span class="math notranslate nohighlight">\(f(c-) = \alpha\)</span> . Recall  <span class="math notranslate nohighlight">\(A\)</span>  is bounded above by  <span class="math notranslate nohighlight">\(f(c)\)</span> . We have  <span class="math notranslate nohighlight">\(\alpha \leq f(c)\)</span> , i.e.,</p>
+<p>Hence, <span class="math notranslate nohighlight">\(\alpha\)</span> is the left-hand limit of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x = c\)</span>, i.e., <span class="math notranslate nohighlight">\(f(c-) = \alpha\)</span>. Recall <span class="math notranslate nohighlight">\(A\)</span> is bounded above by <span class="math notranslate nohighlight">\(f(c)\)</span>. We have <span class="math notranslate nohighlight">\(\alpha \leq f(c)\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f(c-)  \leq  f(c)
+f(c-) \leq f(c)
 \end{align*}\]</div>
-<p>(Existence of  <span class="math notranslate nohighlight">\(f(c+)\)</span> ) Define</p>
+<p>(Existence of <span class="math notranslate nohighlight">\(f(c+)\)</span>) Define</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-B =  \set{f(x)}{c &lt; x \leq b}
-\end{align*}\]</div>
-<p>Let  <span class="math notranslate nohighlight">\(\beta\)</span>  be the greatest lower bound of  <span class="math notranslate nohighlight">\(B\)</span> . A similar argument shows that  <span class="math notranslate nohighlight">\(f(c+)\)</span> , and  <span class="math notranslate nohighlight">\(f(c+) = \beta\)</span>  with</p>
+B = \set{f(x)}{c &lt; x \leq b}\end{align*}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(\beta\)</span> be the greatest lower bound of <span class="math notranslate nohighlight">\(B\)</span>. A similar argument shows that <span class="math notranslate nohighlight">\(f(c+)\)</span>, and <span class="math notranslate nohighlight">\(f(c+) = \beta\)</span> with</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f(c)  \leq  f(c+)
+f(c) \leq f(c+)
 \end{align*}\]</div>
-<p>(Existence of  <span class="math notranslate nohighlight">\(f(a+)\)</span>  and  <span class="math notranslate nohighlight">\(f(b-)\)</span> ) The existence of  <span class="math notranslate nohighlight">\(f(a+)\)</span>  and  <span class="math notranslate nohighlight">\(f(b-)\)</span>  along with  <a class="reference internal" href="#equation-eq-18">(11)</a>  can be proved by the exact argument as before.</p>
+<p>(Existence of <span class="math notranslate nohighlight">\(f(a+)\)</span> and <span class="math notranslate nohighlight">\(f(b-)\)</span>) The existence of <span class="math notranslate nohighlight">\(f(a+)\)</span> and <span class="math notranslate nohighlight">\(f(b-)\)</span> along with <a class="reference internal" href="#equation-eq-18">(19)</a> can be proved by the exact argument as before.</p>
 </div>
 </div>
 

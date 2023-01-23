@@ -152,6 +152,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html">
+     The Comparison Test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html">
+     The Ratio Test and the Root Test
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
      Subseries
     </a>
@@ -164,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
      Rearrangement Theorem for Double Series
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html">
+     Multiplication of Series
     </a>
    </li>
   </ul>
@@ -568,181 +583,155 @@ title="Print to PDF"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="uniform-convergence-and-differentiation">
-<span id="index-0"></span><h1>Uniform Convergence and Differentiation<a class="headerlink" href="#uniform-convergence-and-differentiation" title="Permalink to this headline">#</a></h1>
+<h1>Uniform Convergence and Differentiation<a class="headerlink" href="#uniform-convergence-and-differentiation" title="Permalink to this headline">#</a></h1>
 <p>In this section, we study the conditions that allow us to swap the limit and derivative symbols:</p>
 <div class="math notranslate nohighlight" id="equation-eq-104">
-<span class="eqno">(106)<a class="headerlink" href="#equation-eq-104" title="Permalink to this equation">#</a></span>\[\begin{align}
-\odvs{\lim_{n \to \infty} f_n(x)}{x}
-=  \lim _ {n \to \infty} \odvs{f_n(x)}{x}
-\end{align}\]</div>
-<p>However, assuming <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span> is not sufficient to guarantee that <a class="reference internal" href="#equation-eq-104">(106)</a> holds. The following is an example.</p>
+<span class="eqno">(116)<a class="headerlink" href="#equation-eq-104" title="Permalink to this equation">#</a></span>\[\begin{align}\odvs{\lim_{n \to \infty} f_n(x)}{x}
+= \lim_{n \to \infty}\odvs{f_n(x)}{x}\end{align}\]</div>
+<p>However, assuming <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span> is not sufficient to guarantee that <a class="reference internal" href="#equation-eq-104">(116)</a> holds. The following is an example.</p>
 <div class="proof example admonition" id="example-0">
-<p class="admonition-title"><span class="caption-number">Example 20 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 22 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f_n(x) =  \frac{\sin nx}{\sqrt{n}} ,
-\quad  x  \in \R
-\end{align*}\]</div>
-<p>Because  <span class="math notranslate nohighlight">\(\abs{\sin nx}\)</span>  is bounded by  <span class="math notranslate nohighlight">\(1\)</span>  and  <span class="math notranslate nohighlight">\(1 / \sqrt{n} \to 0\)</span>  as  <span class="math notranslate nohighlight">\(n \to \infty\)</span> , the limit of  <span class="math notranslate nohighlight">\(f_n\)</span>  is  <span class="math notranslate nohighlight">\(f(x) = 0\)</span> . Note that</p>
+f_n(x) = \frac{\sin nx}{\sqrt{n}},
+\quad x \in\R\end{align*}\]</div>
+<p>Because <span class="math notranslate nohighlight">\(\abs{\sin nx}\)</span> is bounded by <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(1 / \sqrt{n} \to 0\)</span> as <span class="math notranslate nohighlight">\(n \to \infty\)</span>, the limit of <span class="math notranslate nohighlight">\(f_n\)</span> is <span class="math notranslate nohighlight">\(f(x) = 0\)</span>. Note that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-M_n =  \sup _ {x \in \R} \abs{f_n(x) - f(x)}
-=  \sup _ {x \in \R} \frac{\abs{\sin nx}}{\sqrt{n}}
-=  \frac{1}{\sqrt{n}}
-\end{align*}\]</div>
-<p>Since  <span class="math notranslate nohighlight">\(\lim_{n \to \infty} M_n = 0\)</span> ,  <span class="math notranslate nohighlight">\(f_n \to f\)</span>  uniformly on  <span class="math notranslate nohighlight">\(\R\)</span> .</p>
-<p>It is clear  <span class="math notranslate nohighlight">\(f^\prime(x) = 0\)</span> . We now show that the limiting derivative of  <span class="math notranslate nohighlight">\(f_n\)</span>  is not  <span class="math notranslate nohighlight">\(f^\prime\)</span>  in general. We have</p>
+M_n = \sup_{x \in \R}\abs{f_n(x) - f(x)}
+= \sup_{x \in \R}\frac{\abs{\sin nx}}{\sqrt{n}}
+= \frac{1}{\sqrt{n}}\end{align*}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\lim_{n \to \infty} M_n = 0\)</span>, <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(\R\)</span>.</p>
+<p>It is clear <span class="math notranslate nohighlight">\(f^\prime(x) = 0\)</span>. We now show that the limiting derivative of <span class="math notranslate nohighlight">\(f_n\)</span> is not <span class="math notranslate nohighlight">\(f^\prime\)</span> in general. We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f^ \prime _n(x) =  \sqrt{n} \cos  nx
+f^\prime_n(x) = \sqrt{n}\cos nx
 \end{align*}\]</div>
-<p>We note that the limit of  <span class="math notranslate nohighlight">\(f^\prime_n(x)\)</span>  will not exist as a finite number for most of  <span class="math notranslate nohighlight">\(x\)</span> s as  <span class="math notranslate nohighlight">\(n \to \infty\)</span> . In particular,  <span class="math notranslate nohighlight">\(f^\prime_n(0) = \sqrt{n}\)</span>  and hence  <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f^\prime_n(0) = \infty\)</span> . A plot of  <span class="math notranslate nohighlight">\(f_n\)</span>  and  <span class="math notranslate nohighlight">\(f^\prime_n\)</span>  is shown in  <a class="reference internal" href="#fig-11"><span class="std std-numref">Fig. 12</span></a> .</p>
+<p>We note that the limit of <span class="math notranslate nohighlight">\(f^\prime_n(x)\)</span> will not exist as a finite number for most of <span class="math notranslate nohighlight">\(x\)</span>s as <span class="math notranslate nohighlight">\(n \to \infty\)</span>. In particular, <span class="math notranslate nohighlight">\(f^\prime_n(0) = \sqrt{n}\)</span> and hence <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f^\prime_n(0) = \infty\)</span>. A plot of <span class="math notranslate nohighlight">\(f_n\)</span> and <span class="math notranslate nohighlight">\(f^\prime_n\)</span> is shown in <a class="reference internal" href="#fig-11"><span class="std std-numref">Fig. 12</span></a>.</p>
 <div class="figure align-default" id="fig-11">
 <img alt="../_images/graph-010.png" src="../_images/graph-010.png" />
 <p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Left: <span class="math notranslate nohighlight">\(f_n(x) = (\sin nx) / \sqrt{n}\)</span>. Right: <span class="math notranslate nohighlight">\(f^\prime_n(x)\)</span>.</span><a class="headerlink" href="#fig-11" title="Permalink to this image">#</a></p>
 </div>
 </div>
 </div><div class="proof theorem admonition" id="thm:44">
-<p class="admonition-title"><span class="caption-number">Theorem 60 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 65 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Let  <span class="math notranslate nohighlight">\(\{f_n\}\)</span>  be a sequence of real-valued functions each of which has a finite derivative at every point in  <span class="math notranslate nohighlight">\((a, b)\)</span> . Suppose there exists a point  <span class="math notranslate nohighlight">\(x_0 \in (a, b)\)</span>  such that the numerical sequence  <span class="math notranslate nohighlight">\(\{f_n(x_0)\}\)</span>  converges. Suppose further that there exists a function  <span class="math notranslate nohighlight">\(g\)</span>  such that  <span class="math notranslate nohighlight">\(f^\prime_n \to g\)</span>  uniformly on  <span class="math notranslate nohighlight">\((a, b)\)</span> . Then</p>
+<p>Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence of real-valued functions each of which has a finite derivative at every point in <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose there exists a point <span class="math notranslate nohighlight">\(x_0 \in (a, b)\)</span> such that the numerical sequence <span class="math notranslate nohighlight">\(\{f_n(x_0)\}\)</span> converges. Suppose further that there exists a function <span class="math notranslate nohighlight">\(g\)</span> such that <span class="math notranslate nohighlight">\(f^\prime_n \to g\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. Then</p>
 <ul class="simple">
-<li><p>(1) there exists a function  <span class="math notranslate nohighlight">\(f\)</span>  such that  <span class="math notranslate nohighlight">\(f_n \to f\)</span>  uniformly on  <span class="math notranslate nohighlight">\((a, b)\)</span> , and</p></li>
-<li><p>(2) <span class="math notranslate nohighlight">\(f^\prime(x)\)</span>  exists everywhere in  <span class="math notranslate nohighlight">\((a, b)\)</span>  with  <span class="math notranslate nohighlight">\(f^\prime(x) = g(x)\)</span> .</p></li>
+<li><p>1️⃣ there exists a function <span class="math notranslate nohighlight">\(f\)</span> such that <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, and</p></li>
+<li><p>2️⃣ <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> exists everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span> with <span class="math notranslate nohighlight">\(f^\prime(x) = g(x)\)</span>.
+In this case, we can write</p></li>
 </ul>
-<p>In this case, we can write</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\odvs{\lim_{n \to \infty} f_n(x)}{x}
-=  \lim _ {n \to \infty} \odvs{f_n(x)}{x}
-\end{align*}\]</div>
+\[\begin{align*}\odvs{\lim_{n \to \infty} f_n(x)}{x}
+= \lim_{n \to \infty}\odvs{f_n(x)}{x}\end{align*}\]</div>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We first show that  <span class="math notranslate nohighlight">\(\{f_n\}\)</span>  converges uniformly on  <span class="math notranslate nohighlight">\((a, b)\)</span> . Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , since  <span class="math notranslate nohighlight">\(\{f_n(x_0)\}\)</span>  converges, by Cauchy’s criterion for sequences,</p>
+<p>Proof. We first show that <span class="math notranslate nohighlight">\(\{f_n\}\)</span> converges uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(\{f_n(x_0)\}\)</span> converges, by Cauchy’s criterion for sequences,</p>
 <div class="math notranslate nohighlight" id="equation-eq-101">
-<span class="eqno">(107)<a class="headerlink" href="#equation-eq-101" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{f_m(x_0) - f_n(x_0)}  &lt;  \varepsilon  / 2
-\quad \forall  m,n  \geq  N_1
+<span class="eqno">(117)<a class="headerlink" href="#equation-eq-101" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{f_m(x_0) - f_n(x_0)} &lt; \varepsilon / 2
+\quad\forall m,n \geq N_1
 \end{align}\]</div>
-<p>for some integer  <span class="math notranslate nohighlight">\(N_1 \in \N^\ast\)</span> . Meanwhile, since  <span class="math notranslate nohighlight">\(f^\prime_n \to g\)</span>  uniformly on  <span class="math notranslate nohighlight">\((a, b)\)</span> , it follows from Cauchy’s criterion for uniform convergence ( <a class="reference internal" href="Uniform%20Convergence.html#thm:42">Theorem 58</a> ) that there exists  <span class="math notranslate nohighlight">\(N_2 \in \N^\ast\)</span>  such that</p>
+<p>for some integer <span class="math notranslate nohighlight">\(N_1 \in \N^\ast\)</span>. Meanwhile, since <span class="math notranslate nohighlight">\(f^\prime_n \to g\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, it follows from Cauchy’s criterion for uniform convergence (<a class="reference internal" href="Uniform%20Convergence.html#thm:42">Theorem 63</a>) that there exists <span class="math notranslate nohighlight">\(N_2 \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-102">
-<span class="eqno">(108)<a class="headerlink" href="#equation-eq-102" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{f^\prime_m(x) - f^\prime_n(x)}  &lt;  \frac{\varepsilon / 2}{\abs{x - x_0} + 1} \quad \forall  m, n  \geq  N_2  \; \forall  x  \in (a, b)
+<span class="eqno">(118)<a class="headerlink" href="#equation-eq-102" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{f^\prime_m(x) - f^\prime_n(x)} &lt; \frac{\varepsilon / 2}{\abs{x - x_0} + 1}\quad\forall m, n \geq N_2 \;\forall x \in(a, b)
 \end{align}\]</div>
-<p>Let  <span class="math notranslate nohighlight">\(N = \max\{N_1, N_2\}\)</span>  and let  <span class="math notranslate nohighlight">\(m, n \geq N\)</span> . Define function  <span class="math notranslate nohighlight">\(h\)</span>  by</p>
+<p>Let <span class="math notranslate nohighlight">\(N = \max\{N_1, N_2\}\)</span> and let <span class="math notranslate nohighlight">\(m, n \geq N\)</span>. Define function <span class="math notranslate nohighlight">\(h\)</span> by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 h(x) = f_m(x) - f_n(x)
 \end{align*}\]</div>
-<p>Applying the mean value theorem ( <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 21</a> ) to  <span class="math notranslate nohighlight">\(h\)</span> , we obtain</p>
+<p>Applying the mean value theorem (<a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 26</a>) to <span class="math notranslate nohighlight">\(h\)</span>, we obtain</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-[ f_m(x) - f_n(x) ]  -  [ f_m(x_0) - f_n(x_0) ]
-=  [ f^ \prime _m( \xi ) - f^ \prime _n( \xi ) ] (x - x_0)
+\[\begin{align*}[f_m(x) - f_n(x)] - [f_m(x_0) - f_n(x_0)]
+= [f^\prime_m(\xi) - f^\prime_n(\xi)](x - x_0)
 \end{align*}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(x \neq x_0\)</span>  and  <span class="math notranslate nohighlight">\(\xi\)</span>  is some number in between  <span class="math notranslate nohighlight">\(x\)</span>  and  <span class="math notranslate nohighlight">\(x_0\)</span> . We can then use  <a class="reference internal" href="#equation-eq-101">(107)</a>  and  <a class="reference internal" href="#equation-eq-102">(108)</a>  to bound the value of  <span class="math notranslate nohighlight">\(\abs{f_m(x) - f_n(x)}\)</span> ( <span class="math notranslate nohighlight">\(x \neq x_0\)</span> ) as follows:</p>
+<p>where <span class="math notranslate nohighlight">\(x \neq x_0\)</span> and <span class="math notranslate nohighlight">\(\xi\)</span> is some number in between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(x_0\)</span>. We can then use <a class="reference internal" href="#equation-eq-101">(117)</a> and <a class="reference internal" href="#equation-eq-102">(118)</a> to bound the value of <span class="math notranslate nohighlight">\(\abs{f_m(x) - f_n(x)}\)</span>(<span class="math notranslate nohighlight">\(x \neq x_0\)</span>) as follows:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-\abs{f_m(x) - f_n(x)} &amp; \leq \abs{f_m(x_0) - f_n(x_0)}
-+  \abs{f^\prime_m(\xi) - f^\prime_n(\xi)} \abs{x - x_0} \\ &amp; \leq \varepsilon  / 2 +  \frac{\varepsilon / 2}{\abs{x - x_0} + 1} \cdot \abs{x - x_0} \\ &amp;&lt;  \varepsilon \quad \forall  m,n  \geq  N  \; \forall  x  \in (a, b)  \setminus \{ x_0 \}
-\end{align*}\end{split}\]</div>
-<p>But since  <span class="math notranslate nohighlight">\(m,n \geq N \geq N_1\)</span> , the inequality</p>
+\[\begin{split}\begin{align*}\abs{f_m(x) - f_n(x)}&amp;\leq\abs{f_m(x_0) - f_n(x_0)}
++ \abs{f^\prime_m(\xi) - f^\prime_n(\xi)}\abs{x - x_0}\\&amp;\leq\varepsilon / 2 + \frac{\varepsilon / 2}{\abs{x - x_0} + 1}\cdot\abs{x - x_0}\\&amp;&lt; \varepsilon\quad\forall m,n \geq N \;\forall x \in(a, b) \setminus\{x_0\}\end{align*}\end{split}\]</div>
+<p>But since <span class="math notranslate nohighlight">\(m,n \geq N \geq N_1\)</span>, the inequality</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{f_m(x_0) - f_n(x_0)}  &lt;  \varepsilon  / 2 &lt;  \varepsilon
+\[\begin{align*}\abs{f_m(x_0) - f_n(x_0)} &lt; \varepsilon / 2 &lt; \varepsilon\end{align*}\]</div>
+<p>also holds by <a class="reference internal" href="#equation-eq-101">(117)</a>. Therefore, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{f_m(x) - f_n(x)}
+&lt; \varepsilon\quad\forall m,n \geq N \;\forall x \in(a, b)
 \end{align*}\]</div>
-<p>also holds by  <a class="reference internal" href="#equation-eq-101">(107)</a> . Therefore, we have</p>
+<p>which implies that <span class="math notranslate nohighlight">\(\{f_n\}\)</span> converges uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose that the limit function is <span class="math notranslate nohighlight">\(f\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. By <a class="reference internal" href="../Differentiation/Derivatives%20and%20Continuity.html#thm:1">Theorem 19</a>, there exists a continuous function <span class="math notranslate nohighlight">\(\phi\)</span> defined on <span class="math notranslate nohighlight">\((a, b)\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-\abs{f_m(x) - f_n(x)}
-&lt;  \varepsilon \quad \forall  m,n  \geq  N  \; \forall  x  \in (a, b)
+f_n(x) - f_n(c) = (x - c) \phi_n(x)
 \end{align*}\]</div>
-<p>which implies that  <span class="math notranslate nohighlight">\(\{f_n\}\)</span>  converges uniformly on  <span class="math notranslate nohighlight">\((a, b)\)</span> . Suppose that the limit function is  <span class="math notranslate nohighlight">\(f\)</span> .</p>
-<p>Let  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> . By  <a class="reference internal" href="../Differentiation/Derivatives%20and%20Continuity.html#thm:1">Theorem 14</a> , there exists a continuous function  <span class="math notranslate nohighlight">\(\phi\)</span>  defined on  <span class="math notranslate nohighlight">\((a, b)\)</span>  such that</p>
+<p>with <span class="math notranslate nohighlight">\(\phi_n(c) = f^\prime_n(c)\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-f_n(x) - f_n(c) = (x - c)  \phi _n(x)
-\end{align*}\]</div>
-<p>with  <span class="math notranslate nohighlight">\(\phi_n(c) = f^\prime_n(c)\)</span> , i.e.,</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-\lim _ {x \to c} \phi _n(x)=  f^ \prime _n(c)
+\[\begin{align*}\lim_{x \to c}\phi_n(x)=  f^\prime_n(c)
 \end{align*}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We want to show</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\lim _ {x \to c} \lim _ {n \to \infty} \phi _n(x)
-=  \lim _ {n \to \infty} \lim _ {x \to c} \phi _n(x)
+\[\begin{align*}\lim_{x \to c}\lim_{n \to \infty}\phi_n(x)
+= \lim_{n \to \infty}\lim_{x \to c}\phi_n(x)
 \end{align*}\]</div>
-<p>using  <a class="reference internal" href="Uniform%20Convergence%20and%20Continuity.html#thm:43">Theorem 59</a> .</p>
+<p>using <a class="reference internal" href="Uniform%20Convergence%20and%20Continuity.html#thm:43">Theorem 64</a>.</p>
 </div>
-<p>Note that  <span class="math notranslate nohighlight">\(\lim_{n \to \infty}\phi_n(x)\)</span>  exists, and</p>
+<p>Note that <span class="math notranslate nohighlight">\(\lim_{n \to \infty}\phi_n(x)\)</span> exists, and</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\lim _ {n \to \infty} \phi _n(x) =  \frac{f(x) - f(c)}{x - c}  =:  \phi (x)
+\[\begin{align*}\lim_{n \to \infty}\phi_n(x) = \frac{f(x) - f(c)}{x - c} =: \phi(x)
 \end{align*}\]</div>
-<p>We claim that  <span class="math notranslate nohighlight">\(\phi_n \to \phi\)</span>  uniformly on  <span class="math notranslate nohighlight">\((a, b)\)</span> . The proof of this assertion is left as an exercise. (See  <a class="reference internal" href="#ex-4"><span class="std std-ref">Exercise 15</span></a> .) Since both the limits  <span class="math notranslate nohighlight">\(\lim_{x \to c} \phi_n(x)\)</span>  and  <span class="math notranslate nohighlight">\(\lim_{n \to \infty} \phi_n(x)\)</span>  exist, and  <span class="math notranslate nohighlight">\(\phi_n(x)\)</span>  converges uniformly on  <span class="math notranslate nohighlight">\((a, b)\)</span> , by  <a class="reference internal" href="Uniform%20Convergence%20and%20Continuity.html#thm:43">Theorem 59</a> , the limits  <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f^\prime_n(c)\)</span>  and  <span class="math notranslate nohighlight">\(\lim_{x \to c} [f(x) - f(c)] / (x - c)\)</span>  both exist and are equal to each other, that is,</p>
+<p>We claim that <span class="math notranslate nohighlight">\(\phi_n \to \phi\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. The proof of this assertion is left as an exercise. (See <a class="reference internal" href="#ex-4"><span class="std std-ref">Exercise 15</span></a>.) Since both the limits <span class="math notranslate nohighlight">\(\lim_{x \to c} \phi_n(x)\)</span> and <span class="math notranslate nohighlight">\(\lim_{n \to \infty} \phi_n(x)\)</span> exist, and <span class="math notranslate nohighlight">\(\phi_n(x)\)</span> converges uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, by <a class="reference internal" href="Uniform%20Convergence%20and%20Continuity.html#thm:43">Theorem 64</a>, the limits <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f^\prime_n(c)\)</span> and <span class="math notranslate nohighlight">\(\lim_{x \to c} [f(x) - f(c)] / (x - c)\)</span> both exist and are equal to each other, that is,</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\lim _ {x \to c} \frac{f(x) - f(c)}{x - c}
-=  \lim _ {n \to \infty}  f^ \prime _n(c)
+\[\begin{align*}\lim_{x \to c}\frac{f(x) - f(c)}{x - c}
+= \lim_{n \to \infty} f^\prime_n(c)
 \end{align*}\]</div>
-<p>Therefore,  <span class="math notranslate nohighlight">\(f\)</span>  has a derivative at  <span class="math notranslate nohighlight">\(c\)</span> , and</p>
+<p>Therefore, <span class="math notranslate nohighlight">\(f\)</span> has a derivative at <span class="math notranslate nohighlight">\(c\)</span>, and</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f^ \prime (c) =  \lim _ {n \to \infty}  f^ \prime _n(c) = g(c)
+f^\prime(c) = \lim_{n \to \infty} f^\prime_n(c) = g(c)
 \end{align*}\]</div>
 <p>This completes the proof.</p>
 </div>
 <div class="admonition-exercise-15 admonition" id="ex-4">
 <p class="admonition-title">Exercise 15</p>
-<p>Complete the above proof by showing  <span class="math notranslate nohighlight">\(\phi_n \to \phi\)</span>  uniformly on  <span class="math notranslate nohighlight">\((a, b)\)</span> .</p>
+<p>Complete the above proof by showing <span class="math notranslate nohighlight">\(\phi_n \to \phi\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>.</p>
 </div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
-<p>Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , since  <span class="math notranslate nohighlight">\(f_n \to f\)</span>  uniformly on  <span class="math notranslate nohighlight">\((a, b)\)</span> , there exist an integer  <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span>  such that</p>
+<p>Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, there exist an integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{f_n(x) - f(x)}  &lt; (b - a)  \varepsilon  / 2
-\quad \forall  n  \geq  N  \; \forall  x  \in (a, b)
+\[\begin{align*}\abs{f_n(x) - f(x)} &lt; (b - a) \varepsilon / 2
+\quad\forall n \geq N \;\forall x \in(a, b)
 \end{align*}\]</div>
-<p>Let  <span class="math notranslate nohighlight">\(n \geq N\)</span> . We then have</p>
+<p>Let <span class="math notranslate nohighlight">\(n \geq N\)</span>. We then have</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-\abs{\phi_n(x) - \phi(x)} &amp; \leq \frac{\abs{ [f_n(x) - f(x)] - [f_n(c) - f(c)] }}{\abs{x - c}} \\ &amp; \leq \frac{\abs{f_n(x) - f(x)} + \abs{f_n(c) - f(c)}}{b - a} \\ &amp;&lt;  \frac{(b - a) \varepsilon / 2 + (b - a) \varepsilon / 2}{b - a} \\ &amp;=  \varepsilon
-\end{align*}\end{split}\]</div>
+\[\begin{split}\begin{align*}\abs{\phi_n(x) - \phi(x)}&amp;\leq\frac{\abs{ [f_n(x) - f(x)] - [f_n(c) - f(c)] }}{\abs{x - c}}\\&amp;\leq\frac{\abs{f_n(x) - f(x)} + \abs{f_n(c) - f(c)}}{b - a}\\&amp;&lt; \frac{(b - a) \varepsilon / 2 + (b - a) \varepsilon / 2}{b - a}\\&amp;= \varepsilon\end{align*}\end{split}\]</div>
 <p>Because</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{\phi_n(x) - \phi(x)}  &lt;  \varepsilon
-\end{align*}\]</div>
-<p>holds for all  <span class="math notranslate nohighlight">\(n \geq N\)</span>  and for all  <span class="math notranslate nohighlight">\(x \in (a, b)\)</span> , we conclude that  <span class="math notranslate nohighlight">\(\phi_n \to \phi\)</span>  uniformly on  <span class="math notranslate nohighlight">\((a, b)\)</span> .</p>
+\[\begin{align*}\abs{\phi_n(x) - \phi(x)} &lt; \varepsilon\end{align*}\]</div>
+<p>holds for all <span class="math notranslate nohighlight">\(n \geq N\)</span> and for all <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>, we conclude that <span class="math notranslate nohighlight">\(\phi_n \to \phi\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>.</p>
 </div>
-<p>The following theorem is another version of <a class="reference internal" href="#thm:44">Theorem 60</a> in terms of a series of functions <span class="math notranslate nohighlight">\(\sum f_n\)</span>.</p>
+<p>The following theorem is another version of <a class="reference internal" href="#thm:44">Theorem 65</a> in terms of a series of functions <span class="math notranslate nohighlight">\(\sum f_n\)</span>.</p>
 <div class="proof theorem admonition" id="thm:45">
-<p class="admonition-title"><span class="caption-number">Theorem 61 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 66 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Let  <span class="math notranslate nohighlight">\(\sum f_n\)</span>  be a series of real-valued functions each of which has a finite derivative at every point in  <span class="math notranslate nohighlight">\((a, b)\)</span> . Suppose there exists a point  <span class="math notranslate nohighlight">\(x_0 \in (a, b)\)</span>  such that the numerical series  <span class="math notranslate nohighlight">\(\sum f_n(x_0)\)</span>  converges. Suppose further that there exists a function  <span class="math notranslate nohighlight">\(g\)</span>  such that  <span class="math notranslate nohighlight">\(\sum f^\prime_n \to g\)</span>  uniformly on  <span class="math notranslate nohighlight">\((a, b)\)</span> . Then</p>
+<p>Let <span class="math notranslate nohighlight">\(\sum f_n\)</span> be a series of real-valued functions each of which has a finite derivative at every point in <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose there exists a point <span class="math notranslate nohighlight">\(x_0 \in (a, b)\)</span> such that the numerical series <span class="math notranslate nohighlight">\(\sum f_n(x_0)\)</span> converges. Suppose further that there exists a function <span class="math notranslate nohighlight">\(g\)</span> such that <span class="math notranslate nohighlight">\(\sum f^\prime_n \to g\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. Then</p>
 <ul class="simple">
-<li><p>(1) there exists a function  <span class="math notranslate nohighlight">\(f\)</span>  such that  <span class="math notranslate nohighlight">\(\sum f_n \to f\)</span>  uniformly on  <span class="math notranslate nohighlight">\((a, b)\)</span> , and</p></li>
-<li><p>(2) <span class="math notranslate nohighlight">\(f^\prime(x)\)</span>  exists everywhere in  <span class="math notranslate nohighlight">\((a, b)\)</span>  with  <span class="math notranslate nohighlight">\(f^\prime(x) = g(x)\)</span> .</p></li>
+<li><p>1️⃣ there exists a function <span class="math notranslate nohighlight">\(f\)</span> such that <span class="math notranslate nohighlight">\(\sum f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, and</p></li>
+<li><p>2️⃣ <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> exists everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span> with <span class="math notranslate nohighlight">\(f^\prime(x) = g(x)\)</span>.
+In this case, we can write</p></li>
 </ul>
-<p>In this case, we can write</p>
 <div class="math notranslate nohighlight" id="equation-eq-103">
-<span class="eqno">(109)<a class="headerlink" href="#equation-eq-103" title="Permalink to this equation">#</a></span>\[\begin{align}
-\odvs{\sum f_n(x)}{x}
-=  \sum \odvs{f_n(x)}{x}
-\end{align}\]</div>
+<span class="eqno">(119)<a class="headerlink" href="#equation-eq-103" title="Permalink to this equation">#</a></span>\[\begin{align}\odvs{\sum f_n(x)}{x}
+= \sum\odvs{f_n(x)}{x}\end{align}\]</div>
 </div>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Equation  <a class="reference internal" href="#equation-eq-103">(109)</a>  is also known as  <strong>term-by-term differentiation</strong>  .</p>
+<p id="index-0">Equation <a class="reference internal" href="#equation-eq-103">(119)</a> is also known as <strong>term-by-term differentiation</strong>.</p>
 </div>
-<p>\printindex</p>
 </div>
 
     <script type="text/x-thebe-config">

@@ -152,6 +152,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html">
+     The Comparison Test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html">
+     The Ratio Test and the Root Test
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
      Subseries
     </a>
@@ -164,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
      Rearrangement Theorem for Double Series
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html">
+     Multiplication of Series
     </a>
    </li>
   </ul>
@@ -571,79 +586,64 @@ title="Print to PDF"
 <h1>Reduction to Riemann-Stieltjes Integrals<a class="headerlink" href="#reduction-to-riemann-stieltjes-integrals" title="Permalink to this headline">#</a></h1>
 <p>In the definition of Riemann-Stieltjes integral, <span class="math notranslate nohighlight">\(\mathrm{d} \alpha\)</span> is merely a symbol which emphasizes that the integrator is <span class="math notranslate nohighlight">\(\alpha\)</span>. However, it is tempting to associate this symbol with the concept of differentials, and then replace it with <span class="math notranslate nohighlight">\(\alpha^\prime(x) \; \mathrm{d} x\)</span>. As stated in the following theorem, we can indeed do this under some conditions.</p>
 <div class="proof theorem admonition" id="thm:23">
-<p class="admonition-title"><span class="caption-number">Theorem 39 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 44 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Suppose  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and  <span class="math notranslate nohighlight">\(\alpha\)</span>  has a continuous derivative  <span class="math notranslate nohighlight">\(\alpha^\prime\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Then the Riemann integral  <span class="math notranslate nohighlight">\(f \alpha^\prime\)</span>  exits, i.e.,  <span class="math notranslate nohighlight">\(f \alpha^\prime \in \mathfrak{R}\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and we have</p>
+<p>Suppose <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(\alpha\)</span> has a continuous derivative <span class="math notranslate nohighlight">\(\alpha^\prime\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then the Riemann integral <span class="math notranslate nohighlight">\(f \alpha^\prime\)</span> exits, i.e., <span class="math notranslate nohighlight">\(f \alpha^\prime \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-38">
-<span class="eqno">(45)<a class="headerlink" href="#equation-eq-38" title="Permalink to this equation">#</a></span>\[\begin{align}
-\int _ {a} ^ {b}  f(x)  \; \mathrm{d} \alpha (x)
-=  \int _ {a} ^ {b}  f(x)  \alpha ^ \prime (x)  \; \mathrm{d} x
+<span class="eqno">(53)<a class="headerlink" href="#equation-eq-38" title="Permalink to this equation">#</a></span>\[\begin{align}\int_{a}^{b} f(x) \;\mathrm{d}\alpha(x)
+= \int_{a}^{b} f(x) \alpha^\prime(x) \;\mathrm{d}x
 \end{align}\]</div>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We first do some preliminary work. Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is bounded by a positive number  <span class="math notranslate nohighlight">\(M &gt; 0\)</span> , i.e.,  <span class="math notranslate nohighlight">\(\abs{f(x)} \leq M \; \forall x \in[a, b]\)</span> , and let  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>  be chosen arbitrarily.</p>
-<p>Then, we make use of the continuity of  <span class="math notranslate nohighlight">\(\alpha^\prime\)</span> . Note that  <span class="math notranslate nohighlight">\(\alpha^\prime\)</span>  is uniformly continuity on  <span class="math notranslate nohighlight">\([a, b]\)</span>  since the closed interval is compact. Then there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+<p>Proof. We first do some preliminary work. Suppose <span class="math notranslate nohighlight">\(f\)</span> is bounded by a positive number <span class="math notranslate nohighlight">\(M &gt; 0\)</span>, i.e., <span class="math notranslate nohighlight">\(\abs{f(x)} \leq M \; \forall x \in[a, b]\)</span>, and let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be chosen arbitrarily.</p>
+<p>Then, we make use of the continuity of <span class="math notranslate nohighlight">\(\alpha^\prime\)</span>. Note that <span class="math notranslate nohighlight">\(\alpha^\prime\)</span> is uniformly continuity on <span class="math notranslate nohighlight">\([a, b]\)</span> since the closed interval is compact. Then there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-34">
-<span class="eqno">(46)<a class="headerlink" href="#equation-eq-34" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{s-t}  &lt;  \delta \implies \abs{\alpha^\prime(s) - \alpha^\prime(t)}  &lt;  \frac{\varepsilon / 2}{M(b-a)}
-\end{align}\]</div>
-<p>Let  <span class="math notranslate nohighlight">\(P_\varepsilon^\prime\)</span>  be a partition on  <span class="math notranslate nohighlight">\([a, b]\)</span>  with mesh less than  <span class="math notranslate nohighlight">\(\delta\)</span> , i.e.,  <span class="math notranslate nohighlight">\(\norm{P} &lt; \delta\)</span> .</p>
-<p>Because  <span class="math notranslate nohighlight">\(f \in \mathfrak{\alpha}\)</span> , there exists a partition, say  <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span> , such that</p>
+<span class="eqno">(54)<a class="headerlink" href="#equation-eq-34" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{s-t} &lt; \delta\implies\abs{\alpha^\prime(s) - \alpha^\prime(t)} &lt; \frac{\varepsilon / 2}{M(b-a)}\end{align}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(P_\varepsilon^\prime\)</span> be a partition on <span class="math notranslate nohighlight">\([a, b]\)</span> with mesh less than <span class="math notranslate nohighlight">\(\delta\)</span>, i.e., <span class="math notranslate nohighlight">\(\norm{P} &lt; \delta\)</span>.</p>
+<p>Because <span class="math notranslate nohighlight">\(f \in \mathfrak{\alpha}\)</span>, there exists a partition, say <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span>, such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-35">
-<span class="eqno">(47)<a class="headerlink" href="#equation-eq-35" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}  &lt;  \varepsilon  / 2
-\quad \forall  P  \supset  P_ \varepsilon ^ {\prime\prime}
-\end{align}\]</div>
-<p>holds for any refinement  <span class="math notranslate nohighlight">\(P\)</span> .</p>
-<p>Let partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  be the refinement of both partitions  <span class="math notranslate nohighlight">\(P_\varepsilon^\prime\)</span>  and  <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span> , i.e.,  <span class="math notranslate nohighlight">\(P = P_\varepsilon^\prime \cup P_\varepsilon^{\prime\prime}\)</span> . Then for any refinement  <span class="math notranslate nohighlight">\(P\)</span>  of  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> , we have</p>
+<span class="eqno">(55)<a class="headerlink" href="#equation-eq-35" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
+\quad\forall P \supset P_\varepsilon^{\prime\prime}\end{align}\]</div>
+<p>holds for any refinement <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<p>Let partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> be the refinement of both partitions <span class="math notranslate nohighlight">\(P_\varepsilon^\prime\)</span> and <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span>, i.e., <span class="math notranslate nohighlight">\(P = P_\varepsilon^\prime \cup P_\varepsilon^{\prime\prime}\)</span>. Then for any refinement <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-36">
-<span class="eqno">(48)<a class="headerlink" href="#equation-eq-36" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{multline}
-\abs{S(P, f\alpha^\prime) - \int_{a}^{b}f \; \mathrm{d}\alpha} \leq \abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}
-+  \abs{S(P, f, \alpha) - \int_{a}^{b}f \; \mathrm{d}\alpha} \\
-&lt;  \abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}  +  \varepsilon  / 2
+<span class="eqno">(56)<a class="headerlink" href="#equation-eq-36" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{multline}\abs{S(P, f\alpha^\prime) - \int_{a}^{b}f \; \mathrm{d}\alpha}\leq\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}
++ \abs{S(P, f, \alpha) - \int_{a}^{b}f \; \mathrm{d}\alpha}\\
+&lt; \abs{S(P, f\alpha^\prime) - S(P, f, \alpha)} + \varepsilon / 2
 \end{multline}\end{split}\]</div>
-<p>where the last inequality follows from  <a class="reference internal" href="#equation-eq-35">(47)</a> .</p>
-<p>We now work on  <span class="math notranslate nohighlight">\(\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}\)</span> . We have</p>
+<p>where the last inequality follows from <a class="reference internal" href="#equation-eq-35">(55)</a>.</p>
+<p>We now work on <span class="math notranslate nohighlight">\(\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}\)</span>. We have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}
-=  \abs{
+\[\begin{align*}\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}
+= \abs{
 \sum_{k} f(t_k) \alpha^\prime(t_k) (x_k - x_{k-1})
 - \sum_{k} f(t_k) [\alpha(x_{k}) - \alpha(x_{k-1})]
-}
-\end{align*}\]</div>
-<p>Applying the mean value theorem ( <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 21</a> ) to  <span class="math notranslate nohighlight">\(\alpha\)</span>  on each sub-interval  <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>  leads to</p>
+}\end{align*}\]</div>
+<p>Applying the mean value theorem (<a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 26</a>) to <span class="math notranslate nohighlight">\(\alpha\)</span> on each sub-interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> leads to</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\sum _ {k}  f(t_k)  \alpha ^ \prime (t_k) (x_k - x_ {k-1} )
--  \sum _ {k}  f(t_k)  [ \alpha (x_ {k} ) -  \alpha (x_ {k-1} ) ]
-=  \sum _ {k}  f(t_k)  [ \alpha ^ \prime (t_k) -  \alpha ^ \prime ( \xi _k) ] (x_k - x_ {k-1} )
+\[\begin{align*}\sum_{k} f(t_k) \alpha^\prime(t_k) (x_k - x_{k-1})
+- \sum_{k} f(t_k) [\alpha(x_{k}) - \alpha(x_{k-1})]
+= \sum_{k} f(t_k) [\alpha^\prime(t_k) - \alpha^\prime(\xi_k)](x_k - x_{k-1})
 \end{align*}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(\xi_k \in (x_{k-1}, x_k)\)</span> . It then follows that</p>
+<p>where <span class="math notranslate nohighlight">\(\xi_k \in (x_{k-1}, x_k)\)</span>. It then follows that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{alignat*}
-2 \abs{S(P, f\alpha^\prime) - S(P, f, \alpha)} &amp;=&amp;  \; &amp;  \abs{\sum_{k} f(t_k) [\alpha^\prime(t_k) - \alpha^\prime(\xi_k)] (x_k - x_{k-1})} \\ &amp; \leq &amp;&amp;  \sum _ {k} \abs{f(t_k)} \abs{\alpha^\prime(t_k) - \alpha^\prime(\xi_k)} \Delta  x_k  \\ &amp;&amp;&amp; \text{recall $\abs{f} \leq M$} \\ &amp; \leq &amp;&amp; M  \sum _ {k} \abs{\alpha^\prime(t_k) - \alpha^\prime(\xi_k)} \Delta  x_k
+\[\begin{split}\begin{alignat*}2\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}&amp;=&amp; \;&amp; \abs{\sum_{k} f(t_k) [\alpha^\prime(t_k) - \alpha^\prime(\xi_k)] (x_k - x_{k-1})}\\&amp;\leq&amp;&amp; \sum_{k}\abs{f(t_k)}\abs{\alpha^\prime(t_k) - \alpha^\prime(\xi_k)}\Delta x_k \\&amp;&amp;&amp;\text{recall $\abs{f} \leq M$}\\&amp;\leq&amp;&amp; M \sum_{k}\abs{\alpha^\prime(t_k) - \alpha^\prime(\xi_k)}\Delta x_k
 \end{alignat*}\end{split}\]</div>
-<p>Note that  <span class="math notranslate nohighlight">\(\abs{t_k - \xi_k} \leq \norm{P} \leq \norm{P_\varepsilon^\prime} &lt; \delta\)</span> . Hence, by  <a class="reference internal" href="#equation-eq-34">(46)</a> , we have</p>
+<p>Note that <span class="math notranslate nohighlight">\(\abs{t_k - \xi_k} \leq \norm{P} \leq \norm{P_\varepsilon^\prime} &lt; \delta\)</span>. Hence, by <a class="reference internal" href="#equation-eq-34">(54)</a>, we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{\alpha^\prime(t_k) - \alpha^\prime(\xi_k)}
-&lt;  \frac{\varepsilon / 2}{M(b-a)}
-\end{align*}\]</div>
-<p>Then,  <span class="math notranslate nohighlight">\(\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}\)</span>  is finally bounded by</p>
+\[\begin{align*}\abs{\alpha^\prime(t_k) - \alpha^\prime(\xi_k)}
+&lt; \frac{\varepsilon / 2}{M(b-a)}\end{align*}\]</div>
+<p>Then, <span class="math notranslate nohighlight">\(\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}\)</span> is finally bounded by</p>
 <div class="math notranslate nohighlight" id="equation-eq-37">
-<span class="eqno">(49)<a class="headerlink" href="#equation-eq-37" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}
-&lt; M  \frac{\varepsilon / 2}{M(b-a)} \sum _k  \Delta  x_k
-=  M  \frac{\varepsilon / 2}{M(b-a)} (b-a)
-=  \varepsilon  / 2
+<span class="eqno">(57)<a class="headerlink" href="#equation-eq-37" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{S(P, f\alpha^\prime) - S(P, f, \alpha)}
+&lt; M \frac{\varepsilon / 2}{M(b-a)}\sum_k \Delta x_k
+=  M \frac{\varepsilon / 2}{M(b-a)}(b-a)
+= \varepsilon / 2
 \end{align}\]</div>
-<p>Combining  <a class="reference internal" href="#equation-eq-36">(48)</a>  and  <a class="reference internal" href="#equation-eq-37">(49)</a> , we obtain</p>
+<p>Combining <a class="reference internal" href="#equation-eq-36">(56)</a> and <a class="reference internal" href="#equation-eq-37">(57)</a>, we obtain</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{S(P, f\alpha^\prime) - \int_{a}^{b}f \; \mathrm{d}\alpha}  &lt;  \varepsilon
-\end{align*}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(P\)</span>  is an arbitrary refinement of the chosen  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> . This implies  <span class="math notranslate nohighlight">\(f \alpha^\prime\)</span>  is Riemann integrable, and  <a class="reference internal" href="#equation-eq-38">(45)</a>  indeed holds.</p>
+\[\begin{align*}\abs{S(P, f\alpha^\prime) - \int_{a}^{b}f \; \mathrm{d}\alpha} &lt; \varepsilon\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(P\)</span> is an arbitrary refinement of the chosen <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>. This implies <span class="math notranslate nohighlight">\(f \alpha^\prime\)</span> is Riemann integrable, and <a class="reference internal" href="#equation-eq-38">(53)</a> indeed holds.</p>
 </div>
 </div>
 

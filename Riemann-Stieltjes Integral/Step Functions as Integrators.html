@@ -152,6 +152,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html">
+     The Comparison Test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html">
+     The Ratio Test and the Root Test
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
      Subseries
     </a>
@@ -164,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
      Rearrangement Theorem for Double Series
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html">
+     Multiplication of Series
     </a>
    </li>
   </ul>
@@ -577,234 +592,208 @@ title="Print to PDF"
 </div>
 <p>In this case, <span class="math notranslate nohighlight">\(f\)</span> may not be even integrable, and if it is, <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha\)</span> may not be zero.</p>
 <div class="proof theorem admonition" id="thm:24">
-<p class="admonition-title"><span class="caption-number">Theorem 42 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 47 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Let  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> . Define a function  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  as follows. The values of  <span class="math notranslate nohighlight">\(\alpha(a)\)</span> ,  <span class="math notranslate nohighlight">\(\alpha(b)\)</span>  and  <span class="math notranslate nohighlight">\(\alpha(c)\)</span>  are chosen arbitrarily, and elsewhere</p>
+<p>Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. Define a function <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> as follows. The values of <span class="math notranslate nohighlight">\(\alpha(a)\)</span>, <span class="math notranslate nohighlight">\(\alpha(b)\)</span> and <span class="math notranslate nohighlight">\(\alpha(c)\)</span> are chosen arbitrarily, and elsewhere</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-\alpha (x) =  \begin{cases}
+\[\begin{split}\begin{align*}\alpha(x) = \begin{cases}
 \alpha(a) &amp; a \leq x &lt; c \\
 \alpha(b) &amp; c &lt; x \leq b
-\end{cases}
-\end{align*}\end{split}\]</div>
-<p>Suppose  <span class="math notranslate nohighlight">\(f\)</span>  is a bounded function defined on  <span class="math notranslate nohighlight">\([a, b]\)</span>  in such a way that</p>
+\end{cases}\end{align*}\end{split}\]</div>
+<p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is a bounded function defined on <span class="math notranslate nohighlight">\([a, b]\)</span> in such a way that</p>
 <ul class="simple">
-<li><p>(1) at least one of  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is continuous from the left at  <span class="math notranslate nohighlight">\(c\)</span> , and</p></li>
-<li><p>(2) at least one of  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(\alpha\)</span>  is continuous from the right at  <span class="math notranslate nohighlight">\(c\)</span> .</p></li>
+<li><p>1️⃣ at least one of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(c\)</span>, and</p></li>
+<li><p>2️⃣ at least one of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(c\)</span>.
+Then, <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> with</p></li>
 </ul>
-<p>Then,  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  with</p>
 <div class="math notranslate nohighlight" id="equation-eq-40">
-<span class="eqno">(56)<a class="headerlink" href="#equation-eq-40" title="Permalink to this equation">#</a></span>\[\begin{align}
-\int _ {a} ^ {b}  f  \; \mathrm{d} \alpha
-= f(c)  [ \alpha (b) -  \alpha (a) ]
-\end{align}\]</div>
+<span class="eqno">(64)<a class="headerlink" href="#equation-eq-40" title="Permalink to this equation">#</a></span>\[\begin{align}\int_{a}^{b} f \;\mathrm{d}\alpha
+= f(c) [\alpha(b) - \alpha(a)]\end{align}\]</div>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (Possible expressions of  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span> ) We first investigate the expression of the Stieltjes sum  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span> . Given any partition  <span class="math notranslate nohighlight">\(P\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . If  <span class="math notranslate nohighlight">\(c \notin P\)</span> , then we have</p>
+<p>Proof. (Possible expressions of <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>) We first investigate the expression of the Stieltjes sum <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>. Given any partition <span class="math notranslate nohighlight">\(P\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(c \notin P\)</span>, then we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-S(P,f, \alpha ) = f(c)  [ \alpha (b) -  \alpha (a) ]
-\end{align*}\]</div>
-<p>And if  <span class="math notranslate nohighlight">\(c \in P\)</span> , we have</p>
+S(P,f,\alpha) = f(c) [\alpha(b) - \alpha(a)]\end{align*}\]</div>
+<p>And if <span class="math notranslate nohighlight">\(c \in P\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-S(P,f, \alpha )
-= f(c- \delta _1)  [ \alpha (c) -  \alpha (a) ]
-+ f(c+ \delta _2)  [ \alpha (b) -  \alpha (c) ]
-\end{align*}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(c-\delta_1\)</span>  and  <span class="math notranslate nohighlight">\(c+\delta_2\)</span> ( <span class="math notranslate nohighlight">\(\delta_1, \delta_2 \geq 0\)</span> ) are two points in the adjacent sub-intervals sharing the same endpoint  <span class="math notranslate nohighlight">\(c\)</span> . Note that  <span class="math notranslate nohighlight">\(\delta_1\)</span>  and  <span class="math notranslate nohighlight">\(\delta_2\)</span>  can not be too large. In fact, they satisfy that</p>
+S(P,f,\alpha)
+= f(c-\delta_1) [\alpha(c) - \alpha(a)]
++ f(c+\delta_2) [\alpha(b) - \alpha(c)]\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c-\delta_1\)</span> and <span class="math notranslate nohighlight">\(c+\delta_2\)</span>(<span class="math notranslate nohighlight">\(\delta_1, \delta_2 \geq 0\)</span>) are two points in the adjacent sub-intervals sharing the same endpoint <span class="math notranslate nohighlight">\(c\)</span>. Note that <span class="math notranslate nohighlight">\(\delta_1\)</span> and <span class="math notranslate nohighlight">\(\delta_2\)</span> can not be too large. In fact, they satisfy that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-0  \leq \delta _1,  \delta _2  \leq \norm{P}
-\end{align*}\]</div>
-<p>Taking into consideration both cases, we have the following inequality for any partition  <span class="math notranslate nohighlight">\(P\)</span> :</p>
+0 \leq\delta_1, \delta_2 \leq\norm{P}\end{align*}\]</div>
+<p>Taking into consideration both cases, we have the following inequality for any partition <span class="math notranslate nohighlight">\(P\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-39">
-<span class="eqno">(57)<a class="headerlink" href="#equation-eq-39" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{multline}
-\abs{
+<span class="eqno">(65)<a class="headerlink" href="#equation-eq-39" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{multline}\abs{
 S(P,f,\alpha)
 - f(c) [\alpha(b) - \alpha(a)]
-} \\ \leq \abs{f(c-\delta_1) - f(c)} \abs{\alpha(c) - \alpha(a)}
-+  \abs{f(c+\delta_2) - f(c)} \abs{\alpha(b) - \alpha(c)}
-\end{multline}\end{split}\]</div>
-<p>where of course  <span class="math notranslate nohighlight">\(0 \leq \delta_1, \delta_2 \leq \norm{P}\)</span> .</p>
+}\\\leq\abs{f(c-\delta_1) - f(c)}\abs{\alpha(c) - \alpha(a)}
++ \abs{f(c+\delta_2) - f(c)}\abs{\alpha(b) - \alpha(c)}\end{multline}\end{split}\]</div>
+<p>where of course <span class="math notranslate nohighlight">\(0 \leq \delta_1, \delta_2 \leq \norm{P}\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In fact, the left-hand side of  <a class="reference internal" href="#equation-eq-39">(57)</a>  reduces to zero when  <span class="math notranslate nohighlight">\(c \notin P\)</span>  and the equality holds if  <span class="math notranslate nohighlight">\(c \in P\)</span> .</p>
+<p>In fact, the left-hand side of <a class="reference internal" href="#equation-eq-39">(65)</a> reduces to zero when <span class="math notranslate nohighlight">\(c \notin P\)</span> and the equality holds if <span class="math notranslate nohighlight">\(c \in P\)</span>.</p>
 </div>
-<p>There are altogether four scenarios concerning the continuity of  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(\alpha\)</span>  at point  <span class="math notranslate nohighlight">\(c\)</span> , which are</p>
+<p>There are altogether four scenarios concerning the continuity of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> at point <span class="math notranslate nohighlight">\(c\)</span>, which are</p>
 <ul class="simple">
-<li><p>(1) <span class="math notranslate nohighlight">\(\alpha(x)\)</span>  is continuous at  <span class="math notranslate nohighlight">\(x=c\)</span> .</p></li>
-<li><p>(2) <span class="math notranslate nohighlight">\(\alpha(x)\)</span>  is continuous from the right at  <span class="math notranslate nohighlight">\(x=c\)</span> , and  <span class="math notranslate nohighlight">\(f(x)\)</span>  is continuous from the left at  <span class="math notranslate nohighlight">\(x=c\)</span> .</p></li>
-<li><p>(3) <span class="math notranslate nohighlight">\(\alpha(x)\)</span>  is continuous from the left at  <span class="math notranslate nohighlight">\(x=c\)</span> , and  <span class="math notranslate nohighlight">\(f(x)\)</span>  is continuous from the right at  <span class="math notranslate nohighlight">\(x=c\)</span> .</p></li>
-<li><p>(4) <span class="math notranslate nohighlight">\(f(x)\)</span>  is continuous at  <span class="math notranslate nohighlight">\(x=c\)</span> .</p></li>
+<li><p>1️⃣ <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous at <span class="math notranslate nohighlight">\(x=c\)</span>.</p></li>
+<li><p>2️⃣ <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x=c\)</span>, and <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x=c\)</span>.</p></li>
+<li><p>3️⃣ <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x=c\)</span>, and <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x=c\)</span>.</p></li>
+<li><p>4️⃣ <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous at <span class="math notranslate nohighlight">\(x=c\)</span>.(Proof of 1) If <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous at <span class="math notranslate nohighlight">\(x=c\)</span>, then <span class="math notranslate nohighlight">\(\alpha\)</span> is a constant function. In this case, <span class="math notranslate nohighlight">\(f\)</span> is certainly integrable with respect to <span class="math notranslate nohighlight">\(\alpha\)</span> with <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha = 0\)</span>. And <a class="reference internal" href="#equation-eq-40">(64)</a> holds since its right-hand side is also zero for <span class="math notranslate nohighlight">\(\alpha(a) = \alpha(b)\)</span>.</p></li>
 </ul>
-<p>(Proof of 1) If  <span class="math notranslate nohighlight">\(\alpha(x)\)</span>  is continuous at  <span class="math notranslate nohighlight">\(x=c\)</span> , then  <span class="math notranslate nohighlight">\(\alpha\)</span>  is a constant function. In this case,  <span class="math notranslate nohighlight">\(f\)</span>  is certainly integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span>  with  <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha = 0\)</span> . And  <a class="reference internal" href="#equation-eq-40">(56)</a>  holds since its right-hand side is also zero for  <span class="math notranslate nohighlight">\(\alpha(a) = \alpha(b)\)</span> .</p>
-<p>(Proof of 2) Because  <span class="math notranslate nohighlight">\(\alpha(x)\)</span>  is continuous from the right at  <span class="math notranslate nohighlight">\(x=c\)</span> , we have  <span class="math notranslate nohighlight">\(\alpha(c) = \alpha(b)\)</span> , and the inequality  <a class="reference internal" href="#equation-eq-39">(57)</a>  reduces to</p>
+<p>(Proof of 2) Because <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x=c\)</span>, we have <span class="math notranslate nohighlight">\(\alpha(c) = \alpha(b)\)</span>, and the inequality <a class="reference internal" href="#equation-eq-39">(65)</a> reduces to</p>
 <div class="math notranslate nohighlight" id="equation-eq-41">
-<span class="eqno">(58)<a class="headerlink" href="#equation-eq-41" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{
+<span class="eqno">(66)<a class="headerlink" href="#equation-eq-41" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{
 S(P,f,\alpha)
 - f(c) [\alpha(b) - \alpha(a)]
-} \leq \abs{f(c-\delta_1) - f(c)} \abs{\alpha(c) - \alpha(a)}
-\end{align}\]</div>
-<p>Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , since  <span class="math notranslate nohighlight">\(f(x)\)</span>  is continuous from the left at  <span class="math notranslate nohighlight">\(x=c\)</span> , there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+}\leq\abs{f(c-\delta_1) - f(c)}\abs{\alpha(c) - \alpha(a)}\end{align}\]</div>
+<p>Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x=c\)</span>, there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-42">
-<span class="eqno">(59)<a class="headerlink" href="#equation-eq-42" title="Permalink to this equation">#</a></span>\[\begin{align}
-- \delta  &lt; x - c &lt; 0
-\implies \abs{f(x) - f(c)}  &lt;  \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + 1}
-\end{align}\]</div>
-<p>Choose a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  with  <span class="math notranslate nohighlight">\(\norm{P_\varepsilon} &lt; \delta\)</span> . Let  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span>  be an arbitrary refinement. Applying  <a class="reference internal" href="#equation-eq-41">(58)</a>  to  <span class="math notranslate nohighlight">\(P\)</span> , we have  <span class="math notranslate nohighlight">\(\delta_1 &lt; \norm{P} \leq \norm{P_\varepsilon}&lt;\delta\)</span> . We may then apply  <a class="reference internal" href="#equation-eq-42">(59)</a> , and obtain</p>
+<span class="eqno">(67)<a class="headerlink" href="#equation-eq-42" title="Permalink to this equation">#</a></span>\[\begin{align}
+-\delta &lt; x - c &lt; 0
+\implies\abs{f(x) - f(c)} &lt; \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + 1}\end{align}\]</div>
+<p>Choose a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> with <span class="math notranslate nohighlight">\(\norm{P_\varepsilon} &lt; \delta\)</span>. Let <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span> be an arbitrary refinement. Applying <a class="reference internal" href="#equation-eq-41">(66)</a> to <span class="math notranslate nohighlight">\(P\)</span>, we have <span class="math notranslate nohighlight">\(\delta_1 &lt; \norm{P} \leq \norm{P_\varepsilon}&lt;\delta\)</span>. We may then apply <a class="reference internal" href="#equation-eq-42">(67)</a>, and obtain</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{multline*}
-\abs{
+\[\begin{split}\begin{multline*}\abs{
 S(P,f,\alpha)
 - f(c) [\alpha(b) - \alpha(a)]
-} \leq \abs{f(c-\delta_1) - f(c)} \abs{\alpha(c) - \alpha(a)} \\
-&lt;  \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + 1} \abs{\alpha(c) - \alpha(a)}
-&lt;  \varepsilon
-\end{multline*}\end{split}\]</div>
-<p>This implies  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and  <a class="reference internal" href="#equation-eq-40">(56)</a>  holds.</p>
+}\leq\abs{f(c-\delta_1) - f(c)}\abs{\alpha(c) - \alpha(a)}\\
+&lt; \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + 1}\abs{\alpha(c) - \alpha(a)}
+&lt; \varepsilon\end{multline*}\end{split}\]</div>
+<p>This implies <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <a class="reference internal" href="#equation-eq-40">(64)</a> holds.</p>
 <p>(Proof of 3) The proof, in this case, is similar to that of 2.</p>
-<p>(Proof of 4) Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> . Because  <span class="math notranslate nohighlight">\(f(x)\)</span>  is continuous at  <span class="math notranslate nohighlight">\(x=c\)</span> , there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+<p>(Proof of 4) Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. Because <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous at <span class="math notranslate nohighlight">\(x=c\)</span>, there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-43">
-<span class="eqno">(60)<a class="headerlink" href="#equation-eq-43" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{x - c}  &lt;  \delta \implies \abs{f(x) - f(c)}  &lt;  \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + \abs{\alpha(b) - \alpha(c)} + 1}
-\end{align}\]</div>
-<p>Choose a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  with  <span class="math notranslate nohighlight">\(\norm{P_\varepsilon} &lt; \delta\)</span> . Let  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span> . Applying  <a class="reference internal" href="#equation-eq-39">(57)</a>  to  <span class="math notranslate nohighlight">\(P\)</span> , we have  <span class="math notranslate nohighlight">\(0 \leq \delta_1, \delta_2 \leq \norm{P} \leq \norm{P_\varepsilon} &lt; \delta\)</span> . Then  <a class="reference internal" href="#equation-eq-39">(57)</a>  and  <a class="reference internal" href="#equation-eq-43">(60)</a>  yield</p>
+<span class="eqno">(68)<a class="headerlink" href="#equation-eq-43" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{x - c} &lt; \delta\implies\abs{f(x) - f(c)} &lt; \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + \abs{\alpha(b) - \alpha(c)} + 1}\end{align}\]</div>
+<p>Choose a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> with <span class="math notranslate nohighlight">\(\norm{P_\varepsilon} &lt; \delta\)</span>. Let <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span>. Applying <a class="reference internal" href="#equation-eq-39">(65)</a> to <span class="math notranslate nohighlight">\(P\)</span>, we have <span class="math notranslate nohighlight">\(0 \leq \delta_1, \delta_2 \leq \norm{P} \leq \norm{P_\varepsilon} &lt; \delta\)</span>. Then <a class="reference internal" href="#equation-eq-39">(65)</a> and <a class="reference internal" href="#equation-eq-43">(68)</a> yield</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{multline*}
-\abs{
+\[\begin{split}\begin{multline*}\abs{
 S(P,f,\alpha)
 - f(c) [\alpha(b) - \alpha(a)]
-} \\
-&lt;    \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + \abs{\alpha(b) - \alpha(c)} + 1} ( \abs{\alpha(c) - \alpha(a)}
-+  \abs{\alpha(b) - \alpha(c)} )
-&lt;  \varepsilon
-\end{multline*}\end{split}\]</div>
-<p>Hence,  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> , and  <a class="reference internal" href="#equation-eq-40">(56)</a>  holds. This completes the proof.</p>
+}\\
+&lt;   \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + \abs{\alpha(b) - \alpha(c)} + 1}(\abs{\alpha(c) - \alpha(a)}
++ \abs{\alpha(b) - \alpha(c)})
+&lt; \varepsilon\end{multline*}\end{split}\]</div>
+<p>Hence, <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>, and <a class="reference internal" href="#equation-eq-40">(64)</a> holds. This completes the proof.</p>
 </div>
 <p>It should be emphasized that there are cases where <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> while the conditions in the above theorem are not satisfied.</p>
 <div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 11 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 13 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
-f(x) =  \alpha (x) =  \begin{cases}
+f(x) = \alpha(x) = \begin{cases}
 -1 &amp;x &lt; 0 \\
 0 &amp;x=0 \\
 1 &amp;x &gt; 0
-\end{cases} ,
-\quad  x  \in[-1, 1]
-\end{align*}\end{split}\]</div>
-<p>Note that neither  <span class="math notranslate nohighlight">\(f\)</span>  nor  <span class="math notranslate nohighlight">\(\alpha\)</span>  is continuous from the left at  <span class="math notranslate nohighlight">\(0\)</span> . (And also neither  <span class="math notranslate nohighlight">\(f\)</span>  nor  <span class="math notranslate nohighlight">\(\alpha\)</span>  is continuous from the right at  <span class="math notranslate nohighlight">\(0\)</span> .) Hence, the conditions in  <a class="reference internal" href="#thm:24">Theorem 42</a>  are not satisfied.</p>
-<p>However, we now show that  <span class="math notranslate nohighlight">\(f\)</span>  is integrable. Let  <span class="math notranslate nohighlight">\(P\)</span>  be any partition on  <span class="math notranslate nohighlight">\([-1, 1]\)</span> . If  <span class="math notranslate nohighlight">\(0 \notin P\)</span> , then</p>
+\end{cases},
+\quad x \in[-1, 1]\end{align*}\end{split}\]</div>
+<p>Note that neither <span class="math notranslate nohighlight">\(f\)</span> nor <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(0\)</span>. (And also neither <span class="math notranslate nohighlight">\(f\)</span> nor <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(0\)</span>.) Hence, the conditions in <a class="reference internal" href="#thm:24">Theorem 47</a> are not satisfied.</p>
+<p>However, we now show that <span class="math notranslate nohighlight">\(f\)</span> is integrable. Let <span class="math notranslate nohighlight">\(P\)</span> be any partition on <span class="math notranslate nohighlight">\([-1, 1]\)</span>. If <span class="math notranslate nohighlight">\(0 \notin P\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-S(P,f, \alpha ) = f(0) [ \alpha (1) -  \alpha (-1) ]  = 0
+S(P,f,\alpha) = f(0)[\alpha(1) - \alpha(-1)] = 0
 \end{align*}\]</div>
-<p>And if  <span class="math notranslate nohighlight">\(0 \in P\)</span> , we then have</p>
+<p>And if <span class="math notranslate nohighlight">\(0 \in P\)</span>, we then have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-S(P,f, \alpha ) = f(- \delta _1) [ \alpha (0) -  \alpha (-1) ]  + f( \delta _2) [ \alpha (1) -  \alpha (0) ]
-= (-1) [ 0-(-1) ]  + 1  \cdot[1 - 0]
+S(P,f,\alpha) = f(-\delta_1)[\alpha(0) - \alpha(-1)] + f(\delta_2)[\alpha(1) - \alpha(0)]
+= (-1)[0-(-1)] + 1 \cdot[1 - 0]
 = 0
 \end{align*}\]</div>
-<p>where  <span class="math notranslate nohighlight">\(\delta_1, \delta_2 \geq 0\)</span> . Hence,  <span class="math notranslate nohighlight">\(S(P,f,\alpha) = 0\)</span>  no matter what partition and representative points we choose. It follows that  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([-1, 1]\)</span>  with  <span class="math notranslate nohighlight">\(\int_{-1}^{1} f \; \mathrm{d}\alpha = 0\)</span> .</p>
+<p>where <span class="math notranslate nohighlight">\(\delta_1, \delta_2 \geq 0\)</span>. Hence, <span class="math notranslate nohighlight">\(S(P,f,\alpha) = 0\)</span> no matter what partition and representative points we choose. It follows that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-1, 1]\)</span> with <span class="math notranslate nohighlight">\(\int_{-1}^{1} f \; \mathrm{d}\alpha = 0\)</span>.</p>
 </div>
 </div><div class="proof example admonition" id="eg:3">
-<p class="admonition-title"><span class="caption-number">Example 12 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 14 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
-f(x) =  \begin{cases}
+f(x) = \begin{cases}
 \frac{\abs{\sin(x)}}{x} &amp;x \neq 0 \\
 -1 &amp;x = 0
-\end{cases} \quad \text{and} \quad \alpha (x) =  \begin{cases}
+\end{cases}\quad\text{and}\quad\alpha(x) = \begin{cases}
 -1 &amp;x &lt; 0 \\
 1 &amp;x \geq 0
-\end{cases} ,
-\quad  x  \in[-3\pi, 3\pi]
-\end{align*}\end{split}\]</div>
+\end{cases},
+\quad x \in[-3\pi, 3\pi]\end{align*}\end{split}\]</div>
 <p>Let us take for granted that the following limit exists:</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\lim _ {x \to 0} \frac{\sin (x)}{x}  = 1
+\[\begin{align*}\lim_{x \to 0}\frac{\sin (x)}{x} = 1
 \end{align*}\]</div>
-<p>Then we note that the left and right limits of  <span class="math notranslate nohighlight">\(f\)</span>  both exist but are not equal.  <a class="reference internal" href="#fig-10"><span class="std std-numref">Fig. 11</span></a>  exhibits the graphs of these two functions.</p>
+<p>Then we note that the left and right limits of <span class="math notranslate nohighlight">\(f\)</span> both exist but are not equal. <a class="reference internal" href="#fig-10"><span class="std std-numref">Fig. 11</span></a> exhibits the graphs of these two functions.</p>
 <div class="figure align-default" id="fig-10">
 <img alt="../_images/graph-009.png" src="../_images/graph-009.png" />
 <p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Left: integrand <span class="math notranslate nohighlight">\(f\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(0\)</span>. Right: integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(0\)</span>.</span><a class="headerlink" href="#fig-10" title="Permalink to this image">#</a></p>
 </div>
-<p>The integrator  <span class="math notranslate nohighlight">\(\alpha\)</span>  is constant except for a jump discontinuity at  <span class="math notranslate nohighlight">\(0\)</span> . We note that  <span class="math notranslate nohighlight">\(\alpha\)</span>  is continuous from the  <em>right</em>  at  <span class="math notranslate nohighlight">\(0\)</span> , and  <span class="math notranslate nohighlight">\(f\)</span>  is continuous from the  <em>left</em>  at  <span class="math notranslate nohighlight">\(0\)</span> . Hence, the conditions in  <a class="reference internal" href="#thm:24">Theorem 42</a>  are satisfied, and we conclude  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>  with</p>
+<p>The integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is constant except for a jump discontinuity at <span class="math notranslate nohighlight">\(0\)</span>. We note that <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the <em>right</em> at <span class="math notranslate nohighlight">\(0\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> is continuous from the <em>left</em> at <span class="math notranslate nohighlight">\(0\)</span>. Hence, the conditions in <a class="reference internal" href="#thm:24">Theorem 47</a> are satisfied, and we conclude <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> with</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\int _ {-3\pi} ^ {3\pi} f  \; \mathrm{d} \alpha
-= f(0) [ \alpha (3 \pi ) -  \alpha (-3 \pi ) ]
-= f(0)  \cdot  2 = -2
+\[\begin{align*}\int_{-3\pi}^{3\pi}f \;\mathrm{d}\alpha
+= f(0)[\alpha(3\pi) - \alpha(-3\pi)]
+= f(0) \cdot 2 = -2
 \end{align*}\]</div>
 </div>
 </div><div class="proof example admonition" id="eg:4">
-<p class="admonition-title"><span class="caption-number">Example 13 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 15 </span></p>
 <div class="example-content section" id="proof-content">
-<p>If we alter the function  <span class="math notranslate nohighlight">\(f\)</span>  in the example above ( <a class="reference internal" href="#eg:3">Example 12</a> ) by re-defining  <span class="math notranslate nohighlight">\(f(0) = 1\)</span>  while keeping the integrator  <span class="math notranslate nohighlight">\(\alpha\)</span>  unchanged, then  <span class="math notranslate nohighlight">\(f\)</span>  is no longer integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span> . Now,</p>
+<p>If we alter the function <span class="math notranslate nohighlight">\(f\)</span> in the example above (<a class="reference internal" href="#eg:3">Example 14</a>) by re-defining <span class="math notranslate nohighlight">\(f(0) = 1\)</span> while keeping the integrator <span class="math notranslate nohighlight">\(\alpha\)</span> unchanged, then <span class="math notranslate nohighlight">\(f\)</span> is no longer integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span>. Now,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
-f(x) =  \begin{cases}
+f(x) = \begin{cases}
 \frac{\abs{\sin(x)}}{x} &amp;x \neq 0 \\
 1 &amp;x = 0
-\end{cases} \quad \text{and} \quad \alpha (x) =  \begin{cases}
+\end{cases}\quad\text{and}\quad\alpha(x) = \begin{cases}
 -1 &amp;x &lt; 0 \\
 1 &amp;x \geq 0
-\end{cases} ,
-\quad  x  \in[-3\pi, 3\pi]
-\end{align*}\end{split}\]</div>
-<p>Note that we cannot apply  <a class="reference internal" href="#thm:24">Theorem 42</a>  here since neither the integrand nor the integrator is continuous from the left of  <span class="math notranslate nohighlight">\(0\)</span> .</p>
-<p>To show that  <span class="math notranslate nohighlight">\(f\)</span>  is indeed not integrable, we consider  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>  and  <span class="math notranslate nohighlight">\([0, 3\pi]\)</span>  separately. It is evident that  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([0, 3\pi]\)</span>  with  <span class="math notranslate nohighlight">\(\int_{0}^{3\pi}f \; \mathrm{d}\alpha = 0\)</span> . We now consider the other half interval  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> . Given any partition  <span class="math notranslate nohighlight">\(P = \{x_0, x_1, \ldots, x_n\}\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> , we have</p>
+\end{cases},
+\quad x \in[-3\pi, 3\pi]\end{align*}\end{split}\]</div>
+<p>Note that we cannot apply <a class="reference internal" href="#thm:24">Theorem 47</a> here since neither the integrand nor the integrator is continuous from the left of <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>To show that <span class="math notranslate nohighlight">\(f\)</span> is indeed not integrable, we consider <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> and <span class="math notranslate nohighlight">\([0, 3\pi]\)</span> separately. It is evident that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([0, 3\pi]\)</span> with <span class="math notranslate nohighlight">\(\int_{0}^{3\pi}f \; \mathrm{d}\alpha = 0\)</span>. We now consider the other half interval <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>. Given any partition <span class="math notranslate nohighlight">\(P = \{x_0, x_1, \ldots, x_n\}\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
-S(P,f, \alpha )
-= f(t_n)  [ \alpha (x_n) -  \alpha (x_ {n-1} ) ]
+S(P,f,\alpha)
+= f(t_n) [\alpha(x_n) - \alpha(x_{n-1})]
 = 2 f(t_n)
-=  \begin{cases}
+= \begin{cases}
 2 \abs{\sin(t_n)} / t_n &amp;t_n &lt; 0\\
 2 &amp;t_n = 0
-\end{cases}
-\end{align*}\end{split}\]</div>
+\end{cases}\end{align*}\end{split}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Intuitively, we know  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>  since for any partition  <span class="math notranslate nohighlight">\(P\)</span> , we can always choose the last point  <span class="math notranslate nohighlight">\(t_n\)</span>  such that the Stieltjes sum  <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>  does not fall in any neighborhood of some number. But we still have to prove this rigorously by the definition.</p>
+<p>Intuitively, we know <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> since for any partition <span class="math notranslate nohighlight">\(P\)</span>, we can always choose the last point <span class="math notranslate nohighlight">\(t_n\)</span> such that the Stieltjes sum <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span> does not fall in any neighborhood of some number. But we still have to prove this rigorously by the definition.</p>
 </div>
-<p>We shall prove by contradiction. Assume  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>  with  <span class="math notranslate nohighlight">\(\int_{-3\pi}^{0} f \; \mathrm{d}\alpha = A\)</span> . Since  <span class="math notranslate nohighlight">\(2\abs{\sin x} / x \to -2\)</span>  as  <span class="math notranslate nohighlight">\(x \to 0^{-}\)</span> , there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+<p>We shall prove by contradiction. Assume <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> with <span class="math notranslate nohighlight">\(\int_{-3\pi}^{0} f \; \mathrm{d}\alpha = A\)</span>. Since <span class="math notranslate nohighlight">\(2\abs{\sin x} / x \to -2\)</span> as <span class="math notranslate nohighlight">\(x \to 0^{-}\)</span>, there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
--3 &lt;  \frac{2\abs{\sin x}}{x}  &lt; -1
-\quad \forall  x  \in (- \delta , 0)
+-3 &lt; \frac{2\abs{\sin x}}{x} &lt; -1
+\quad\forall x \in(-\delta, 0)
 \end{align*}\]</div>
-<p>Choose  <span class="math notranslate nohighlight">\(\varepsilon = 1\)</span> . For all partitions  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> , we can always find a refinement  <span class="math notranslate nohighlight">\(P=\{x_0, x_1, \ldots, x_n\}\)</span>  such that  <span class="math notranslate nohighlight">\(x_{n-1} &gt; -\delta\)</span> . We choose the last representative  <span class="math notranslate nohighlight">\(t_n \in[x_{n-1}, x_n]\)</span>  in two ways. Letting  <span class="math notranslate nohighlight">\(t_n\)</span>  be some number in that sub-interval other than  <span class="math notranslate nohighlight">\(0\)</span>  yields a Riemann-Stieltjes sum in between  <span class="math notranslate nohighlight">\(-3\)</span>  and  <span class="math notranslate nohighlight">\(-2\)</span> , i.e.,</p>
+<p>Choose <span class="math notranslate nohighlight">\(\varepsilon = 1\)</span>. For all partitions <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>, we can always find a refinement <span class="math notranslate nohighlight">\(P=\{x_0, x_1, \ldots, x_n\}\)</span> such that <span class="math notranslate nohighlight">\(x_{n-1} &gt; -\delta\)</span>. We choose the last representative <span class="math notranslate nohighlight">\(t_n \in[x_{n-1}, x_n]\)</span> in two ways. Letting <span class="math notranslate nohighlight">\(t_n\)</span> be some number in that sub-interval other than <span class="math notranslate nohighlight">\(0\)</span> yields a Riemann-Stieltjes sum in between <span class="math notranslate nohighlight">\(-3\)</span> and <span class="math notranslate nohighlight">\(-2\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-S(P,f, \alpha ) = 2  \abs{\sin(t_n)}  / t_n  \in (-3, -1)
+S(P,f,\alpha) = 2 \abs{\sin(t_n)} / t_n \in(-3, -1)
 \end{align*}\]</div>
-<p>since  <span class="math notranslate nohighlight">\(-\delta &lt; t_n &lt; 0\)</span> . On the other hand, letting  <span class="math notranslate nohighlight">\(t^\prime_n = 0\)</span>  leads to another Riemann-Stieltjes sum</p>
+<p>since <span class="math notranslate nohighlight">\(-\delta &lt; t_n &lt; 0\)</span>. On the other hand, letting <span class="math notranslate nohighlight">\(t^\prime_n = 0\)</span> leads to another Riemann-Stieltjes sum</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-S^ \prime (P,f, \alpha ) = 2
+S^\prime(P,f,\alpha) = 2
 \end{align*}\]</div>
 <p>We have the following inequality:</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{S(P,f,\alpha) - A}  +  \abs{S^\prime(P,f,\alpha) - A} \geq \abs{S(P,f,\alpha) - S^\prime(P,f,\alpha)}
-&gt; 3 &gt; 2 \varepsilon
-\end{align*}\]</div>
-<p>This implies that at least one of  <span class="math notranslate nohighlight">\(\abs{S(P,f,\alpha) - A} \)</span>  and  <span class="math notranslate nohighlight">\( \abs{S^\prime(P,f,\alpha) - A} \)</span>  is greater than  <span class="math notranslate nohighlight">\(\varepsilon\)</span> , which leads to a contradiction. Hence,  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable on  <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> .</p>
-<p>Finally, by  <a class="reference internal" href="Linear%20Properties.html#thm:25">Theorem 38</a> ,  <span class="math notranslate nohighlight">\(f\)</span>  cannot be integrable with respect to  <span class="math notranslate nohighlight">\(\alpha\)</span>  on the whole interval  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> .</p>
-<p>As a matter of fact,  <span class="math notranslate nohighlight">\(f \notin \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>  if we re-define  <span class="math notranslate nohighlight">\(f(0)\)</span>  other than  <span class="math notranslate nohighlight">\(1\)</span>  while keep  <span class="math notranslate nohighlight">\(\alpha\)</span>  unchanged.</p>
+\[\begin{align*}\abs{S(P,f,\alpha) - A} + \abs{S^\prime(P,f,\alpha) - A}\geq\abs{S(P,f,\alpha) - S^\prime(P,f,\alpha)}
+&gt; 3 &gt; 2\varepsilon\end{align*}\]</div>
+<p>This implies that at least one of <span class="math notranslate nohighlight">\(\abs{S(P,f,\alpha) - A} \)</span> and <span class="math notranslate nohighlight">\( \abs{S^\prime(P,f,\alpha) - A} \)</span> is greater than <span class="math notranslate nohighlight">\(\varepsilon\)</span>, which leads to a contradiction. Hence, <span class="math notranslate nohighlight">\(f\)</span> is not integrable on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>.</p>
+<p>Finally, by <a class="reference internal" href="Linear%20Properties.html#thm:25">Theorem 43</a>, <span class="math notranslate nohighlight">\(f\)</span> cannot be integrable with respect to <span class="math notranslate nohighlight">\(\alpha\)</span> on the whole interval <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>.</p>
+<p>As a matter of fact, <span class="math notranslate nohighlight">\(f \notin \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> if we re-define <span class="math notranslate nohighlight">\(f(0)\)</span> other than <span class="math notranslate nohighlight">\(1\)</span> while keep <span class="math notranslate nohighlight">\(\alpha\)</span> unchanged.</p>
 </div>
 </div><div class="admonition-exercise-11 admonition">
 <p class="admonition-title">Exercise 11</p>
-<p>Let  <span class="math notranslate nohighlight">\(f\)</span>  be a constant function on  <span class="math notranslate nohighlight">\([a, b]\)</span>  except for  <em>finitely</em>  many points. Show that  <span class="math notranslate nohighlight">\(f\)</span>  is Riemann integrable on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be a constant function on <span class="math notranslate nohighlight">\([a, b]\)</span> except for <em>finitely</em> many points. Show that <span class="math notranslate nohighlight">\(f\)</span> is Riemann integrable on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>[Hint: You may find the theorem of integration by parts (<a class="reference internal" href="Integration%20by%20Parts.html#thm:20">Theorem 45</a>) helpful.]</p>
 </div>
 </div>
 

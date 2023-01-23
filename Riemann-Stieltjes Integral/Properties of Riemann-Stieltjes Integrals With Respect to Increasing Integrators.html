@@ -152,6 +152,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html">
+     The Comparison Test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html">
+     The Ratio Test and the Root Test
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
      Subseries
     </a>
@@ -164,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
      Rearrangement Theorem for Double Series
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html">
+     Multiplication of Series
     </a>
    </li>
   </ul>
@@ -637,111 +652,100 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="properties-of-riemann-stieltjes-integrals-with-respect-to-increasing-integrators">
 <h1>Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators<a class="headerlink" href="#properties-of-riemann-stieltjes-integrals-with-respect-to-increasing-integrators" title="Permalink to this headline">#</a></h1>
 <p>It is much easier to study and prove some properties of the Riemann-Stieltjes integrals if we require that <span class="math notranslate nohighlight">\(\alpha\)</span> is monotonically increasing.</p>
-<p>Thanks to <a class="reference internal" href="Integrators%20of%20Bounded%20Variation.html#thm:37">Theorem 55</a>, which we will prove in \ref{sec:1}, almost all the properties introduced in this section can be extended with ease to integrators of bounded variation.</p>
+<p>Thanks to <a class="reference internal" href="Integrators%20of%20Bounded%20Variation.html#thm:37">Theorem 60</a>, which we will prove in <a class="reference internal" href="Integrators%20of%20Bounded%20Variation.html"><span class="doc">Integrators of Bounded Variation</span></a>, almost all the properties introduced in this section can be extended with ease to integrators of bounded variation.</p>
 <div class="section" id="integrability-on-sub-intervals">
 <h2>Integrability on Sub-Intervals<a class="headerlink" href="#integrability-on-sub-intervals" title="Permalink to this headline">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> be a point that splits the interval into two parts. If <span class="math notranslate nohighlight">\(f\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on the entire interval <span class="math notranslate nohighlight">\([a, b]\)</span>, then it is also integrable on both of the sub-intervals.</p>
 <div class="proof lemma admonition" id="lem:3">
 <p class="admonition-title"><span class="caption-number">Lemma 4 </span></p>
 <div class="lemma-content section" id="proof-content">
-<p>Suppose  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Let  <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>  be an interior point. If  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, c]\)</span>  and  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([c, b]\)</span></p>
+<p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> be an interior point. If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([c, b]\)</span></p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We only prove  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, c]\)</span> . Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> . By  <a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 47</a> , there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
+<p>Proof. We only prove <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span>. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. By <a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 52</a>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \varepsilon \quad \forall  P  \supset  P_ \varepsilon
-\end{align*}\]</div>
-<p>Let  <span class="math notranslate nohighlight">\(P_\varepsilon^\prime = (P_\varepsilon \cup \{ c \}) \cap[a, c]\)</span> . Note that  <span class="math notranslate nohighlight">\(P_\varepsilon^\prime\)</span>  is a partition on  <span class="math notranslate nohighlight">\([a, c]\)</span> . Now, let  <span class="math notranslate nohighlight">\(P^\prime\)</span>  be a refinement of  <span class="math notranslate nohighlight">\( P_\varepsilon^\prime\)</span>  on  <span class="math notranslate nohighlight">\([a, c]\)</span> , and  <span class="math notranslate nohighlight">\(P\)</span>  a refinement of  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . It is evident that</p>
+U(P,f,\alpha) - L(P,f,\alpha) &lt; \varepsilon\quad\forall P \supset P_\varepsilon\end{align*}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(P_\varepsilon^\prime = (P_\varepsilon \cup \{ c \}) \cap[a, c]\)</span>. Note that <span class="math notranslate nohighlight">\(P_\varepsilon^\prime\)</span> is a partition on <span class="math notranslate nohighlight">\([a, c]\)</span>. Now, let <span class="math notranslate nohighlight">\(P^\prime\)</span> be a refinement of <span class="math notranslate nohighlight">\( P_\varepsilon^\prime\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span>, and <span class="math notranslate nohighlight">\(P\)</span> a refinement of <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. It is evident that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-P^ {\prime\prime}  = P^ \prime \cup (P  \cap[c, b] )
+P^{\prime\prime} = P^\prime\cup(P \cap[c, b])
 \end{align*}\]</div>
-<p>is a refinement of  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> . Therefore, we have</p>
+<p>is a refinement of <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>. Therefore, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-U(P^ {\prime\prime} ,f, \alpha ) - L(P^ {\prime\prime} ,f, \alpha ) &lt;  \varepsilon
-\end{align*}\]</div>
+U(P^{\prime\prime},f,\alpha) - L(P^{\prime\prime},f,\alpha) &lt; \varepsilon\end{align*}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span>  can be regarded as a partition formed by adding points to  <span class="math notranslate nohighlight">\(P^\prime\)</span>  that are greater than  <span class="math notranslate nohighlight">\(c\)</span> .</p>
+<p><span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span> can be regarded as a partition formed by adding points to <span class="math notranslate nohighlight">\(P^\prime\)</span> that are greater than <span class="math notranslate nohighlight">\(c\)</span>.</p>
 </div>
 <p>Then it is clear</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{multline*}
-U(P^ {\prime} ,f, \alpha ) - L(P^ {\prime} ,f, \alpha )
-=  \sum _ {k \text{ such that } x_k \leq c} (M_k - m_k)  \Delta \alpha _k  \\ \leq \sum _ {k} (M_k - m_k)  \Delta \alpha _k
-\leq  U(P^ {\prime\prime} ,f, \alpha ) - L(P^ {\prime\prime} ,f, \alpha )
+U(P^{\prime},f,\alpha) - L(P^{\prime},f,\alpha)
+= \sum_{k \text{ such that } x_k \leq c}(M_k - m_k) \Delta\alpha_k \\\leq\sum_{k}(M_k - m_k) \Delta\alpha_k
+\leq U(P^{\prime\prime},f,\alpha) - L(P^{\prime\prime},f,\alpha)
 \end{multline*}\end{split}\]</div>
 <p>Hence,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-U(P^ {\prime} ,f, \alpha ) - L(P^ {\prime} ,f, \alpha ) &lt;  \varepsilon
-\end{align*}\]</div>
-<p>which implies  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, c]\)</span>  by  <a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 47</a> .</p>
+U(P^{\prime},f,\alpha) - L(P^{\prime},f,\alpha) &lt; \varepsilon\end{align*}\]</div>
+<p>which implies <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span> by <a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 52</a>.</p>
 </div>
 <p>In fact, <span class="math notranslate nohighlight">\(f\)</span> is integrable on all sub-intervals of <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 <div class="proof theorem admonition" id="thm:40">
-<p class="admonition-title"><span class="caption-number">Theorem 48 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 53 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Suppose  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Let  <span class="math notranslate nohighlight">\([c, d] \subset[a, b]\)</span>  be a sub-interval. If  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([c, d]\)</span> .</p>
+<p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\([c, d] \subset[a, b]\)</span> be a sub-interval. If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([c, d]\)</span>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Without loss of generality, assume  <span class="math notranslate nohighlight">\(a &lt; c &lt; d &lt; b\)</span> .  <a class="reference internal" href="#lem:3">Lemma 4</a>  implies that  <span class="math notranslate nohighlight">\(f\)</span>  is integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([a, c]\)</span>  and  <span class="math notranslate nohighlight">\([a, d]\)</span> . We then conclude the proof using  <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 36</a> .</p>
+<p>Proof. Without loss of generality, assume <span class="math notranslate nohighlight">\(a &lt; c &lt; d &lt; b\)</span>. <a class="reference internal" href="#lem:3">Lemma 4</a> implies that <span class="math notranslate nohighlight">\(f\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\([a, d]\)</span>. We then conclude the proof using <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 41</a>.</p>
 </div>
 </div>
 <div class="section" id="comparison-theorem">
 <h2>Comparison Theorem<a class="headerlink" href="#comparison-theorem" title="Permalink to this headline">#</a></h2>
 <p>It is very common in practice to compare the values of two integrals. Intuitively,</p>
 <div class="math notranslate nohighlight" id="equation-eq-69">
-<span class="eqno">(82)<a class="headerlink" href="#equation-eq-69" title="Permalink to this equation">#</a></span>\[\begin{align}
-\int _ {a} ^ {b}  f  \; \mathrm{d} \alpha \leq \int _ {a} ^ {b}  g  \; \mathrm{d} \alpha
-\end{align}\]</div>
-<p>provided that <span class="math notranslate nohighlight">\(f \leq g\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing. The proof of this inequality follows from the following lemma, which says the integral of <span class="math notranslate nohighlight">\(f\)</span> w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> is non-negative whenever <span class="math notranslate nohighlight">\(f\)</span> stays non-negative and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Note that this is a special case of inequality <a class="reference internal" href="#equation-eq-69">(82)</a>.</p>
+<span class="eqno">(91)<a class="headerlink" href="#equation-eq-69" title="Permalink to this equation">#</a></span>\[\begin{align}\int_{a}^{b} f \;\mathrm{d}\alpha\leq\int_{a}^{b} g \;\mathrm{d}\alpha\end{align}\]</div>
+<p>provided that <span class="math notranslate nohighlight">\(f \leq g\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing. The proof of this inequality follows from the following lemma, which says the integral of <span class="math notranslate nohighlight">\(f\)</span> w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> is non-negative whenever <span class="math notranslate nohighlight">\(f\)</span> stays non-negative and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Note that this is a special case of inequality <a class="reference internal" href="#equation-eq-69">(91)</a>.</p>
 <div class="proof lemma admonition" id="lem:1">
 <p class="admonition-title"><span class="caption-number">Lemma 5 </span></p>
 <div class="lemma-content section" id="proof-content">
-<p>Suppose that  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing and  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . If  <span class="math notranslate nohighlight">\(f(x) \geq 0 \; \forall x \in[a, b]\)</span> , then</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(f(x) \geq 0 \; \forall x \in[a, b]\)</span>, then</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\int _ {a} ^ {b}  f  \; \mathrm{d} \alpha \geq  0
+\[\begin{align*}\int_{a}^{b} f \;\mathrm{d}\alpha\geq 0
 \end{align*}\]</div>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Consider the trivial partition  <span class="math notranslate nohighlight">\(P = \{a, b\}\)</span> . We have</p>
+<p>Proof. Consider the trivial partition <span class="math notranslate nohighlight">\(P = \{a, b\}\)</span>. We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-L(P,f, \alpha ) =  \inf _ {x \in[a, b]}  f(x)  [ \alpha (b) -  \alpha (a) ] \geq  0
+L(P,f,\alpha) = \inf_{x \in[a, b]} f(x) [\alpha(b) - \alpha(a)]\geq 0
 \end{align*}\]</div>
 <p>It then follows that</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\lowint _a^b f  \; \mathrm{d} \alpha \geq  L(P,f, \alpha )
-\geq  0
+\[\begin{align*}\lowint_a^b f \;\mathrm{d}\alpha\geq L(P,f,\alpha)
+\geq 0
 \end{align*}\]</div>
-<p>Note that  <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha = \lowint_a^b f \; \mathrm{d}\alpha\)</span>  since  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> . The proof is then complete.</p>
+<p>Note that <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha = \lowint_a^b f \; \mathrm{d}\alpha\)</span> since <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>. The proof is then complete.</p>
 </div>
-<p>Inequality <a class="reference internal" href="#equation-eq-69">(82)</a> can be proved easily by applying the above lemma and <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 36</a>.</p>
+<p>Inequality <a class="reference internal" href="#equation-eq-69">(91)</a> can be proved easily by applying the above lemma and <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 41</a>.</p>
 <div class="proof theorem admonition" id="thm:30">
-<p class="admonition-title"><span class="caption-number">Theorem 49 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 54 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Suppose that  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing and  <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . If  <span class="math notranslate nohighlight">\(f(x) \leq g(x) \; \forall x \in[a, b]\)</span> , then we have the inequality</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing and <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(f(x) \leq g(x) \; \forall x \in[a, b]\)</span>, then we have the inequality</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\int _ {a} ^ {b}  f  \; \mathrm{d} \alpha \leq \int _ {a} ^ {b}  g  \; \mathrm{d} \alpha
-\end{align*}\]</div>
+\[\begin{align*}\int_{a}^{b} f \;\mathrm{d}\alpha\leq\int_{a}^{b} g \;\mathrm{d}\alpha\end{align*}\]</div>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Note that the difference  <span class="math notranslate nohighlight">\((g-f)(x) \geq 0 \; \forall x \in[a, b]\)</span> . Furthermore,  <span class="math notranslate nohighlight">\((g-f) \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  by  <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 36</a> . Then  <a class="reference internal" href="#lem:1">Lemma 5</a>  gives</p>
+<p>Proof. Note that the difference <span class="math notranslate nohighlight">\((g-f)(x) \geq 0 \; \forall x \in[a, b]\)</span>. Furthermore, <span class="math notranslate nohighlight">\((g-f) \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 41</a>. Then <a class="reference internal" href="#lem:1">Lemma 5</a> gives</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\int _ {a} ^ {b} (g-f)  \; \mathrm{d} \alpha \geq  0
+\[\begin{align*}\int_{a}^{b}(g-f) \;\mathrm{d}\alpha\geq 0
 \end{align*}\]</div>
-<p>Using  <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 36</a>  again to split the integrand, we have</p>
+<p>Using <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 41</a> again to split the integrand, we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\int _ {a} ^ {b}  g  \; \mathrm{d} \alpha
--  \int _ {a} ^ {b}  f  \; \mathrm{d} \alpha \geq  0
+\[\begin{align*}\int_{a}^{b} g \;\mathrm{d}\alpha
+- \int_{a}^{b} f \;\mathrm{d}\alpha\geq 0
 \end{align*}\]</div>
 </div>
 </div>
@@ -749,169 +753,145 @@ L(P,f, \alpha ) =  \inf _ {x \in[a, b]}  f(x)  [ \alpha (b) -  \alpha (a) ] \geq
 <h2>Applying Continuous Functions to Integrable Functions<a class="headerlink" href="#applying-continuous-functions-to-integrable-functions" title="Permalink to this headline">#</a></h2>
 <p>Suppose we know <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. The following theorem tells us that we can produce more integrable functions by applying continuous functions to <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <div class="proof theorem admonition" id="thm:29">
-<p class="admonition-title"><span class="caption-number">Theorem 50 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 55 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Suppose that  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing and  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Let  <span class="math notranslate nohighlight">\(M\)</span>  and  <span class="math notranslate nohighlight">\(m\)</span>  denote the supremum and infimum of  <span class="math notranslate nohighlight">\(f\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . If function  <span class="math notranslate nohighlight">\(\phi: [m, M] \to \R\)</span>  is continuous, then the composite function  <span class="math notranslate nohighlight">\(\phi \circ f\)</span>  is also integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , i.e.,  <span class="math notranslate nohighlight">\(\phi \circ f \in \mathfrak{R}(\alpha)\)</span> .</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(m\)</span> denote the supremum and infimum of <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. If function <span class="math notranslate nohighlight">\(\phi: [m, M] \to \R\)</span> is continuous, then the composite function <span class="math notranslate nohighlight">\(\phi \circ f\)</span> is also integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, i.e., <span class="math notranslate nohighlight">\(\phi \circ f \in \mathfrak{R}(\alpha)\)</span>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. In the following proof, we assume that  <span class="math notranslate nohighlight">\(\alpha\)</span>  is non-constant.</p>
-<p>Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> . Since  <span class="math notranslate nohighlight">\(\phi\)</span>  is uniformly continuous on  <span class="math notranslate nohighlight">\([m, M]\)</span> , there exists  <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>  such that</p>
+<p>Proof. In the following proof, we assume that <span class="math notranslate nohighlight">\(\alpha\)</span> is non-constant.</p>
+<p>Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. Since <span class="math notranslate nohighlight">\(\phi\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\([m, M]\)</span>, there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-70">
-<span class="eqno">(83)<a class="headerlink" href="#equation-eq-70" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{s - t}  &lt;  \delta \implies \abs{\phi(s) - \phi(t)}  &lt;  \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)}
-\end{align}\]</div>
-<p>Suppose that  <span class="math notranslate nohighlight">\(\phi\)</span>  is bounded by a positive number  <span class="math notranslate nohighlight">\(A &gt; 0\)</span> , i.e.,</p>
+<span class="eqno">(92)<a class="headerlink" href="#equation-eq-70" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{s - t} &lt; \delta\implies\abs{\phi(s) - \phi(t)} &lt; \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)}\end{align}\]</div>
+<p>Suppose that <span class="math notranslate nohighlight">\(\phi\)</span> is bounded by a positive number <span class="math notranslate nohighlight">\(A &gt; 0\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{\phi}  &lt; A
+\[\begin{align*}\abs{\phi} &lt; A
 \end{align*}\]</div>
-<p>Because  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
+<p>Because <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-71">
-<span class="eqno">(84)<a class="headerlink" href="#equation-eq-71" title="Permalink to this equation">#</a></span>\[\begin{align}
-U(P,f, \alpha ) - L(P,f, \alpha ) &lt;  \frac{\varepsilon \delta}{4A}
-\end{align}\]</div>
-<p>for any refinement  <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span> .</p>
-<p>Write  <span class="math notranslate nohighlight">\(P = \{x_0,x_1, \ldots, x_n\}\)</span> . We now separate the indices of sub-intervals into two sets in the following way.</p>
+<span class="eqno">(93)<a class="headerlink" href="#equation-eq-71" title="Permalink to this equation">#</a></span>\[\begin{align}
+U(P,f,\alpha) - L(P,f,\alpha) &lt; \frac{\varepsilon \delta}{4A}\end{align}\]</div>
+<p>for any refinement <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span>.</p>
+<p>Write <span class="math notranslate nohighlight">\(P = \{x_0,x_1, \ldots, x_n\}\)</span>. We now separate the indices of sub-intervals into two sets in the following way.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
-I &amp;=  \set{k=1,\ldots,n}{M_k(f) - m_k(f) &lt; \delta} \\
-J &amp;=  \set{k=1,\ldots,n}{M_k(f) - m_k(f) \geq \delta}
-\end{align*}\end{split}\]</div>
-<p>We first consider the sub-intervals whose indices belong to  <span class="math notranslate nohighlight">\(I\)</span> . Suppose  <span class="math notranslate nohighlight">\(k \in I\)</span> . Since  <span class="math notranslate nohighlight">\(M_k(f) - m_k(f) &lt; \delta\)</span> , it follows from  <a class="reference internal" href="#equation-eq-70">(83)</a>  that</p>
+I &amp;= \set{k=1,\ldots,n}{M_k(f) - m_k(f) &lt; \delta}\\
+J &amp;= \set{k=1,\ldots,n}{M_k(f) - m_k(f) \geq \delta}\end{align*}\end{split}\]</div>
+<p>We first consider the sub-intervals whose indices belong to <span class="math notranslate nohighlight">\(I\)</span>. Suppose <span class="math notranslate nohighlight">\(k \in I\)</span>. Since <span class="math notranslate nohighlight">\(M_k(f) - m_k(f) &lt; \delta\)</span>, it follows from <a class="reference internal" href="#equation-eq-70">(92)</a> that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{\phi[f(s)] - \phi[f(t)]}
+&lt; \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)}\quad\forall s,t \in[x_{k-1}, x_{k}]\end{align*}\]</div>
+<p>Then by <a class="reference internal" href="../Set%20Theory/Properties%20of%20Suprema%20and%20Infima.html#thm:27">Theorem 1</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-\abs{\phi[f(s)] - \phi[f(t)]}
-&lt;  \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)} \quad \forall  s,t  \in[x_{k-1}, x_{k}]
-\end{align*}\]</div>
-<p>Then by  <a class="reference internal" href="../Set%20Theory/Properties%20of%20Suprema%20and%20Infima.html#thm:27">Theorem 1</a> , we have</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-M_k( \phi \circ  f) - m_k( \phi \circ  f)
-=  \sup _ {s,t \in[x_{k-1}, x_k]} \abs{\phi[f(s)] - \phi[f(t)]} \leq \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)}
-\end{align*}\]</div>
-<p>Summing up over  <span class="math notranslate nohighlight">\(k \in I\)</span>  yields</p>
+M_k(\phi\circ f) - m_k(\phi\circ f)
+= \sup_{s,t \in[x_{k-1}, x_k]}\abs{\phi[f(s)] - \phi[f(t)]}\leq\frac{\varepsilon / 2}{\alpha(b) - \alpha(a)}\end{align*}\]</div>
+<p>Summing up over <span class="math notranslate nohighlight">\(k \in I\)</span> yields</p>
 <div class="math notranslate nohighlight" id="equation-eq-72">
-<span class="eqno">(85)<a class="headerlink" href="#equation-eq-72" title="Permalink to this equation">#</a></span>\[\begin{align}
-\sum _ {k \in I} \left[ M_k( \phi \circ  f) - m_k( \phi \circ  f)  \right] \Delta \alpha _k
-\leq \varepsilon  / 2
+<span class="eqno">(94)<a class="headerlink" href="#equation-eq-72" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{k \in I}\left[M_k(\phi\circ f) - m_k(\phi\circ f) \right]\Delta\alpha_k
+\leq\varepsilon / 2
 \end{align}\]</div>
-<p>Now, suppose  <span class="math notranslate nohighlight">\(k \in J\)</span> . Note that</p>
+<p>Now, suppose <span class="math notranslate nohighlight">\(k \in J\)</span>. Note that</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\sum _ {k \in I} \left[ M_k( \phi \circ  f) - m_k( \phi \circ  f)  \right] \Delta \alpha _k
-\leq  U(P,f, \alpha )
-&lt;  \frac{\varepsilon \delta}{4 A}
-\end{align*}\]</div>
-<p>where the last inequality follows from  <a class="reference internal" href="#equation-eq-71">(84)</a> . Because  <span class="math notranslate nohighlight">\(M_k(f) - m_k(f) \geq \delta\)</span> , we have</p>
+\[\begin{align*}\sum_{k \in I}\left[M_k(\phi\circ f) - m_k(\phi\circ f) \right]\Delta\alpha_k
+\leq U(P,f,\alpha)
+&lt; \frac{\varepsilon \delta}{4 A}\end{align*}\]</div>
+<p>where the last inequality follows from <a class="reference internal" href="#equation-eq-71">(93)</a>. Because <span class="math notranslate nohighlight">\(M_k(f) - m_k(f) \geq \delta\)</span>, we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\delta \sum _ {k \in I} \Delta \alpha _k
-\leq \sum _ {k \in I} \left[ M_k( \phi \circ  f) - m_k( \phi \circ  f)  \right] \Delta \alpha _k
-&lt;  \frac{\varepsilon \delta}{4 A}
-\end{align*}\]</div>
+\[\begin{align*}\delta\sum_{k \in I}\Delta\alpha_k
+\leq\sum_{k \in I}\left[M_k(\phi\circ f) - m_k(\phi\circ f) \right]\Delta\alpha_k
+&lt; \frac{\varepsilon \delta}{4 A}\end{align*}\]</div>
 <p>which further implies</p>
 <div class="math notranslate nohighlight" id="equation-eq-73">
-<span class="eqno">(86)<a class="headerlink" href="#equation-eq-73" title="Permalink to this equation">#</a></span>\[\begin{align}
-\sum _ {k \in I} \Delta \alpha _k
-&lt;  \frac{\varepsilon}{4 A}
-\end{align}\]</div>
-<p>Recall that  <span class="math notranslate nohighlight">\(\abs{\phi} &lt; A\)</span> . Hence, the difference  <span class="math notranslate nohighlight">\(M_k(\phi \circ f) - m_k(\phi \circ f)\)</span>  is bounded above by</p>
+<span class="eqno">(95)<a class="headerlink" href="#equation-eq-73" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{k \in I}\Delta\alpha_k
+&lt; \frac{\varepsilon}{4 A}\end{align}\]</div>
+<p>Recall that <span class="math notranslate nohighlight">\(\abs{\phi} &lt; A\)</span>. Hence, the difference <span class="math notranslate nohighlight">\(M_k(\phi \circ f) - m_k(\phi \circ f)\)</span> is bounded above by</p>
 <div class="math notranslate nohighlight" id="equation-eq-74">
-<span class="eqno">(87)<a class="headerlink" href="#equation-eq-74" title="Permalink to this equation">#</a></span>\[\begin{align}
-M_k( \phi \circ  f) - m_k( \phi \circ  f)
+<span class="eqno">(96)<a class="headerlink" href="#equation-eq-74" title="Permalink to this equation">#</a></span>\[\begin{align}
+M_k(\phi\circ f) - m_k(\phi\circ f)
 &lt; 2A
 \end{align}\]</div>
-<p>Combining inequalities  <a class="reference internal" href="#equation-eq-73">(86)</a>  and  <a class="reference internal" href="#equation-eq-74">(87)</a> , we obtain</p>
+<p>Combining inequalities <a class="reference internal" href="#equation-eq-73">(95)</a> and <a class="reference internal" href="#equation-eq-74">(96)</a>, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-75">
-<span class="eqno">(88)<a class="headerlink" href="#equation-eq-75" title="Permalink to this equation">#</a></span>\[\begin{align}
-\sum _ {k \in I} \left[ M_k( \phi \circ  f) - m_k( \phi \circ  f)  \right] \Delta \alpha _k
-&lt;  \varepsilon  / 2
+<span class="eqno">(97)<a class="headerlink" href="#equation-eq-75" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{k \in I}\left[M_k(\phi\circ f) - m_k(\phi\circ f) \right]\Delta\alpha_k
+&lt; \varepsilon / 2
 \end{align}\]</div>
-<p>Note that the difference  <span class="math notranslate nohighlight">\(U(P,\phi \circ f, \alpha) - L(P,\phi \circ f, \alpha)\)</span>  can be summed up as follows.</p>
+<p>Note that the difference <span class="math notranslate nohighlight">\(U(P,\phi \circ f, \alpha) - L(P,\phi \circ f, \alpha)\)</span> can be summed up as follows.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{multline*}
-U(P, \phi \circ  f,  \alpha ) - L(P, \phi \circ  f,  \alpha )
-=  \sum _ {k=1} ^n  \left[ M_k( \phi \circ  f) - m_k( \phi \circ  f)  \right] \Delta \alpha _k  \\
-=  \sum _ {k \in I} \left[ M_k( \phi \circ  f) - M_k( \phi \circ  f)  \right] \Delta \alpha _k
-+  \sum _ {k \in J} \left[ M_k( \phi \circ  f) - m_k( \phi \circ  f)  \right] \Delta \alpha _k
+U(P,\phi\circ f, \alpha) - L(P,\phi\circ f, \alpha)
+= \sum_{k=1}^n \left[M_k(\phi\circ f) - m_k(\phi\circ f) \right]\Delta\alpha_k \\
+= \sum_{k \in I}\left[M_k(\phi\circ f) - M_k(\phi\circ f) \right]\Delta\alpha_k
++ \sum_{k \in J}\left[M_k(\phi\circ f) - m_k(\phi\circ f) \right]\Delta\alpha_k
 \end{multline*}\end{split}\]</div>
-<p>Finally, by applying  <a class="reference internal" href="#equation-eq-72">(85)</a>  and  <a class="reference internal" href="#equation-eq-75">(88)</a> , the difference of upper and lower sums are bounded by</p>
+<p>Finally, by applying <a class="reference internal" href="#equation-eq-72">(94)</a> and <a class="reference internal" href="#equation-eq-75">(97)</a>, the difference of upper and lower sums are bounded by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-U(P, \phi \circ  f,  \alpha ) - L(P, \phi \circ  f,  \alpha ) &lt;  \varepsilon
-\end{align*}\]</div>
-<p>Therefore, the composite function  <span class="math notranslate nohighlight">\(\phi \circ f\)</span>  satisfies Riemann’s condition, and hence  <span class="math notranslate nohighlight">\(\phi \circ f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  by  <a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 47</a> .</p>
+U(P,\phi\circ f, \alpha) - L(P,\phi\circ f, \alpha) &lt; \varepsilon\end{align*}\]</div>
+<p>Therefore, the composite function <span class="math notranslate nohighlight">\(\phi \circ f\)</span> satisfies Riemann’s condition, and hence <span class="math notranslate nohighlight">\(\phi \circ f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 52</a>.</p>
 </div>
 <p>Note that the absolute value function <span class="math notranslate nohighlight">\(\phi(x) = \abs{x}\)</span> is continuous. Applying it to an integrable function <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>, we immediately conclude that <span class="math notranslate nohighlight">\(\abs{f}\)</span> is also integrable.</p>
 <div class="proof theorem admonition" id="thm:31">
-<p class="admonition-title"><span class="caption-number">Theorem 51 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 56 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Suppose  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing. If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then  <span class="math notranslate nohighlight">\(\abs{f} \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , and we have</p>
+<p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing. If<span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(\abs{f} \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-76">
-<span class="eqno">(89)<a class="headerlink" href="#equation-eq-76" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{\int_{a}^{b} f \; \mathrm{d}\alpha} \leq \int _ {a} ^ {b} \abs{f} \; \mathrm{d} \alpha
-\end{align}\]</div>
+<span class="eqno">(98)<a class="headerlink" href="#equation-eq-76" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\int_{a}^{b} f \; \mathrm{d}\alpha}\leq\int_{a}^{b}\abs{f}\;\mathrm{d}\alpha\end{align}\]</div>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. First, we note that  <span class="math notranslate nohighlight">\(\abs{f} \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  by  <a class="reference internal" href="#thm:29">Theorem 50</a>  since  <span class="math notranslate nohighlight">\(\phi(x) = \abs{x}\)</span>  is continuous.</p>
+<p>Proof. First, we note that <span class="math notranslate nohighlight">\(\abs{f} \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="#thm:29">Theorem 55</a> since <span class="math notranslate nohighlight">\(\phi(x) = \abs{x}\)</span> is continuous.</p>
 <p>It then follows from the inequality</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-- \abs{f} \leq  f  \leq \abs{f}
-\end{align*}\]</div>
-<p>and  <a class="reference internal" href="#thm:30">Theorem 49</a>  that</p>
+-\abs{f}\leq f \leq\abs{f}\end{align*}\]</div>
+<p>and <a class="reference internal" href="#thm:30">Theorem 54</a> that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-- \int _ {a} ^ {b} \abs{f} \; \mathrm{d} \alpha
-=  \int _ {a} ^ {b}  - \abs{f} \; \mathrm{d} \alpha \leq \int _ {a} ^ {b}  f  \; \mathrm{d} \alpha \leq \int _ {a} ^ {b} \abs{f} \; \mathrm{d} \alpha
-\end{align*}\]</div>
+-\int_{a}^{b}\abs{f}\;\mathrm{d}\alpha
+= \int_{a}^{b} -\abs{f}\;\mathrm{d}\alpha\leq\int_{a}^{b} f \;\mathrm{d}\alpha\leq\int_{a}^{b}\abs{f}\;\mathrm{d}\alpha\end{align*}\]</div>
 <p>This completes the proof.</p>
 </div>
 <p>The converse of this theorem is not true. That is, <span class="math notranslate nohighlight">\(f\)</span> is not necessarily integrable if <span class="math notranslate nohighlight">\(\abs{f}\)</span> is integrable.</p>
 <div class="proof example admonition" id="example-6">
-<p class="admonition-title"><span class="caption-number">Example 16 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 18 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f(x) =  \ind _ {\Q} (x) -  \ind _ {\R \setminus \Q} (x),
-\quad  x  \in[a, b]
-\end{align*}\]</div>
-<p>and  <span class="math notranslate nohighlight">\(\alpha\)</span>  be any  <em>non-constant</em>  increasing function on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
-<p>Note that the absolute value of  <span class="math notranslate nohighlight">\(f\)</span> ,  <span class="math notranslate nohighlight">\(\abs{f} = 1\)</span>  is constant, and hence  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . And</p>
+f(x) = \ind_{\Q}(x) - \ind_{\R \setminus \Q}(x),
+\quad x \in[a, b]\end{align*}\]</div>
+<p>and <span class="math notranslate nohighlight">\(\alpha\)</span> be any <em>non-constant</em> increasing function on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>Note that the absolute value of <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(\abs{f} = 1\)</span> is constant, and hence <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. And</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\int _ {a} ^ {b}  f  \; \mathrm{d} \alpha  = 0
+\[\begin{align*}\int_{a}^{b} f \;\mathrm{d}\alpha = 0
 \end{align*}\]</div>
-<p>But  <span class="math notranslate nohighlight">\(f\)</span>  is not integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([a,b]\)</span>  since</p>
+<p>But <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> since</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\upint _a^b f  \; \mathrm{d} \alpha  =  \alpha (b) -  \alpha (a) &gt; 0
-\quad \text{and} \quad \lowint _a^b f  \; \mathrm{d} \alpha  =  \alpha (a) -  \alpha (b) &lt; 0
+\[\begin{align*}\upint_a^b f \;\mathrm{d}\alpha = \alpha(b) - \alpha(a) &gt; 0
+\quad\text{and}\quad\lowint_a^b f \;\mathrm{d}\alpha = \alpha(a) - \alpha(b) &lt; 0
 \end{align*}\]</div>
-<p>The upper and lower integrals are not equal to each other for we have assumed  <span class="math notranslate nohighlight">\(\alpha\)</span>  is non-constant.</p>
+<p>The upper and lower integrals are not equal to each other for we have assumed <span class="math notranslate nohighlight">\(\alpha\)</span> is non-constant.</p>
 </div>
 </div><div class="admonition-exercise-13 admonition">
 <p class="admonition-title">Exercise 13</p>
-<p>Prove the existence of  <span class="math notranslate nohighlight">\(\int_a^b \abs{f} \; \mathrm{d}\alpha\)</span>  in  <a class="reference internal" href="#thm:31">Theorem 51</a>  without using  <a class="reference internal" href="#thm:29">Theorem 50</a> .</p>
+<p>Prove the existence of <span class="math notranslate nohighlight">\(\int_a^b \abs{f} \; \mathrm{d}\alpha\)</span> in <a class="reference internal" href="#thm:31">Theorem 56</a> without using <a class="reference internal" href="#thm:29">Theorem 55</a>.</p>
 </div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
 <p>TODO</p>
 </div>
-<p>Put <span class="math notranslate nohighlight">\(\phi(x) = x^2\)</span> in <a class="reference internal" href="#thm:29">Theorem 50</a>, and we will have another remarkable conclusion which says the square of <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(f^2\)</span>, is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> whenever <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>.</p>
+<p>Put <span class="math notranslate nohighlight">\(\phi(x) = x^2\)</span> in <a class="reference internal" href="#thm:29">Theorem 55</a>, and we will have another remarkable conclusion which says the square of <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(f^2\)</span>, is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> whenever <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>.</p>
 <div class="proof theorem admonition" id="thm:32">
-<p class="admonition-title"><span class="caption-number">Theorem 52 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 57 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Suppose  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing. If  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then its square  <span class="math notranslate nohighlight">\(f^2\)</span>  is also integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span> , i.e.,  <span class="math notranslate nohighlight">\(f^2 \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
+<p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing. If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then its square <span class="math notranslate nohighlight">\(f^2\)</span> is also integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span>, i.e., <span class="math notranslate nohighlight">\(f^2 \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Because  <span class="math notranslate nohighlight">\(\phi(x) = x^2\)</span>  is continuous on  <span class="math notranslate nohighlight">\(\R\)</span> , it is, of course, continuous on the closed interval joining the infimum and supremum of  <span class="math notranslate nohighlight">\(f\)</span> ,  <span class="math notranslate nohighlight">\([m, M]\)</span> . Then by  <a class="reference internal" href="#thm:29">Theorem 50</a> ,  <span class="math notranslate nohighlight">\(f^2 \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
+<p>Proof. Because <span class="math notranslate nohighlight">\(\phi(x) = x^2\)</span> is continuous on <span class="math notranslate nohighlight">\(\R\)</span>, it is, of course, continuous on the closed interval joining the infimum and supremum of <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\([m, M]\)</span>. Then by <a class="reference internal" href="#thm:29">Theorem 55</a>, <span class="math notranslate nohighlight">\(f^2 \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </div>
-<p>An alternative proof without using <a class="reference internal" href="#thm:29">Theorem 50</a> is left as an exercise.</p>
+<p>An alternative proof without using <a class="reference internal" href="#thm:29">Theorem 55</a> is left as an exercise.</p>
 <div class="admonition-exercise-14 admonition">
 <p class="admonition-title">Exercise 14</p>
-<p>Prove  <a class="reference internal" href="#thm:32">Theorem 52</a>  without using  <a class="reference internal" href="#thm:29">Theorem 50</a> . But feel free to use  <a class="reference internal" href="#thm:31">Theorem 51</a> .</p>
+<p>Prove <a class="reference internal" href="#thm:32">Theorem 57</a> without using <a class="reference internal" href="#thm:29">Theorem 55</a>. But feel free to use <a class="reference internal" href="#thm:31">Theorem 56</a>.</p>
 </div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
@@ -919,123 +899,110 @@ f(x) =  \ind _ {\Q} (x) -  \ind _ {\R \setminus \Q} (x),
 </div>
 <p>An immediate consequence of the above theorem is as follows, which states the product of two integrable functions is also integrable.</p>
 <div class="proof theorem admonition" id="thm:38">
-<p class="admonition-title"><span class="caption-number">Theorem 53 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 58 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Suppose  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing. If  <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> , then  <span class="math notranslate nohighlight">\(fg \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> .</p>
+<p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing. If <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(fg \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Note that the product  <span class="math notranslate nohighlight">\(fg\)</span>  can be written as</p>
+<p>Proof. Note that the product <span class="math notranslate nohighlight">\(fg\)</span> can be written as</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f g =  \frac{1}{4} [ (f + g)^2 - (f - g)^2
-]
-\end{align*}\]</div>
-<p>Then this theorem follows directly from  <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 36</a>  and  <a class="reference internal" href="#thm:32">Theorem 52</a> .</p>
+f g = \frac{1}{4}[(f + g)^2 - (f - g)^2
+]\end{align*}\]</div>
+<p>Then this theorem follows directly from <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 41</a> and <a class="reference internal" href="#thm:32">Theorem 57</a>.</p>
 </div>
 </div>
 <div class="section" id="riemann-stieltjes-integral-with-a-variable-upper-limit">
 <h2>Riemann-Stieltjes Integral with a Variable Upper Limit<a class="headerlink" href="#riemann-stieltjes-integral-with-a-variable-upper-limit" title="Permalink to this headline">#</a></h2>
-<p>We know by <a class="reference internal" href="#thm:38">Theorem 53</a> that the product <span class="math notranslate nohighlight">\(fg\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> whenever <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are integrable. The next theorem provides an alternative view of the integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f g \; \mathrm{d}\alpha\)</span>. As we will see, we can define a function <span class="math notranslate nohighlight">\(G\)</span> in such a way that the symbol <span class="math notranslate nohighlight">\(g \; \mathrm{d}\alpha\)</span> in the original integral can be replaced with <span class="math notranslate nohighlight">\(\mathrm{d}G\)</span>. Or we can replace <span class="math notranslate nohighlight">\(f \; \mathrm{d}\alpha\)</span> with <span class="math notranslate nohighlight">\(\mathrm{d}F\)</span> by defining a function <span class="math notranslate nohighlight">\(F\)</span>.</p>
+<p>We know by <a class="reference internal" href="#thm:38">Theorem 58</a> that the product <span class="math notranslate nohighlight">\(fg\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> whenever <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are integrable. The next theorem provides an alternative view of the integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f g \; \mathrm{d}\alpha\)</span>. As we will see, we can define a function <span class="math notranslate nohighlight">\(G\)</span> in such a way that the symbol <span class="math notranslate nohighlight">\(g \; \mathrm{d}\alpha\)</span> in the original integral can be replaced with <span class="math notranslate nohighlight">\(\mathrm{d}G\)</span>. Or we can replace <span class="math notranslate nohighlight">\(f \; \mathrm{d}\alpha\)</span> with <span class="math notranslate nohighlight">\(\mathrm{d}F\)</span> by defining a function <span class="math notranslate nohighlight">\(F\)</span>.</p>
 <div class="proof theorem admonition" id="thm:39">
-<p class="admonition-title"><span class="caption-number">Theorem 54 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 59 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Suppose that  <span class="math notranslate nohighlight">\(\alpha\)</span>  is increasing, and  <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> . Define</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing, and <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. Define</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-F(x) =  \int _ {a} ^ {x}  f  \; \mathrm{d} \alpha \quad \text{and} \quad
-G(x) =  \int _ {a} ^ {x}  g  \; \mathrm{d} \alpha ,
-\quad  x  \in[a, b]
-\end{align*}\]</div>
-<p>Then  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(G)\)</span>  and  <span class="math notranslate nohighlight">\(g \in \mathfrak{R}(F)\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span> (of course  <span class="math notranslate nohighlight">\(fg \in \mathfrak{R}(\alpha)\)</span>  by  <a class="reference internal" href="#thm:38">Theorem 53</a> ), and we have</p>
+F(x) = \int_{a}^{x} f \;\mathrm{d}\alpha\quad\text{and}\quad
+G(x) = \int_{a}^{x} g \;\mathrm{d}\alpha,
+\quad x \in[a, b]\end{align*}\]</div>
+<p>Then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(G)\)</span> and <span class="math notranslate nohighlight">\(g \in \mathfrak{R}(F)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>(of course <span class="math notranslate nohighlight">\(fg \in \mathfrak{R}(\alpha)\)</span> by <a class="reference internal" href="#thm:38">Theorem 58</a>), and we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\int _ {a} ^ {b}  fg  \; \mathrm{d} \alpha
-=  \int _ {a} ^ {b}  f  \; \mathrm{d} G
-=  \int _ {a} ^ {b}  g  \; \mathrm{d} F
+\[\begin{align*}\int_{a}^{b} fg \;\mathrm{d}\alpha
+= \int_{a}^{b} f \;\mathrm{d}G
+= \int_{a}^{b} g \;\mathrm{d}F
 \end{align*}\]</div>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We only prove  <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(G)\)</span>  and  <span class="math notranslate nohighlight">\(\int_{a}^{b} f g \; \mathrm{d}\alpha = \int_{a}^{b} f \; \mathrm{d}G\)</span> . Suppose  <span class="math notranslate nohighlight">\(g\)</span>  is bounded by some positive number, say  <span class="math notranslate nohighlight">\(A\)</span> , i.e.,  <span class="math notranslate nohighlight">\(\abs{g(x)} &lt; A \; \forall x \in[a, b]\)</span> . Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , since  <span class="math notranslate nohighlight">\(f g \in \mathfrak{R}(\alpha)\)</span> , there exists a partition  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  such that</p>
+<p>Proof. We only prove <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(G)\)</span> and <span class="math notranslate nohighlight">\(\int_{a}^{b} f g \; \mathrm{d}\alpha = \int_{a}^{b} f \; \mathrm{d}G\)</span>. Suppose <span class="math notranslate nohighlight">\(g\)</span> is bounded by some positive number, say <span class="math notranslate nohighlight">\(A\)</span>, i.e., <span class="math notranslate nohighlight">\(\abs{g(x)} &lt; A \; \forall x \in[a, b]\)</span>. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(f g \in \mathfrak{R}(\alpha)\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-96">
-<span class="eqno">(90)<a class="headerlink" href="#equation-eq-96" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{U(P,f,\alpha) - L(P,f,\alpha)}  &lt;  \varepsilon  / A
+<span class="eqno">(99)<a class="headerlink" href="#equation-eq-96" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{U(P,f,\alpha) - L(P,f,\alpha)} &lt; \varepsilon / A
 \end{align}\]</div>
-<p>holds for any refinement  <span class="math notranslate nohighlight">\(P\)</span>  of  <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> . Let  <span class="math notranslate nohighlight">\(P = \{x_0, x_1, \ldots, x_n\} \supset P_\varepsilon\)</span>  and  <span class="math notranslate nohighlight">\(t_k \in[x_{k-1}, x_k]\)</span> . We have</p>
+<p>holds for any refinement <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>. Let <span class="math notranslate nohighlight">\(P = \{x_0, x_1, \ldots, x_n\} \supset P_\varepsilon\)</span> and <span class="math notranslate nohighlight">\(t_k \in[x_{k-1}, x_k]\)</span>. We have</p>
 <div class="math notranslate nohighlight" id="equation-eq-94">
-<span class="eqno">(91)<a class="headerlink" href="#equation-eq-94" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}
+<span class="eqno">(100)<a class="headerlink" href="#equation-eq-94" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}
 S(P,f, G)
-&amp;=  \sum _k f(t_k)  \Delta  G  \nonumber \\ &amp;=  \sum _k f(t_k)  \int _ {x_{k-1}} ^ {x_k}  g  \; \mathrm{d} \alpha \nonumber \\ &amp;=  \sum _k  \int _ {x_{k-1}} ^ {x_k}  f(t_k) g(t)  \; \mathrm{d} \alpha (t)
+&amp;= \sum_k f(t_k) \Delta G \nonumber\\&amp;= \sum_k f(t_k) \int_{x_{k-1}}^{x_k} g \;\mathrm{d}\alpha\nonumber\\&amp;= \sum_k \int_{x_{k-1}}^{x_k} f(t_k) g(t) \;\mathrm{d}\alpha(t)
 \end{align}\end{split}\]</div>
 <p>On the other hand, we can write</p>
 <div class="math notranslate nohighlight" id="equation-eq-95">
-<span class="eqno">(92)<a class="headerlink" href="#equation-eq-95" title="Permalink to this equation">#</a></span>\[\begin{align}
-\int _ {a} ^ {b}  f g   \; \mathrm{d} \alpha
-=  \sum _k  \int _ {x_{k-1}} ^ {x_k}  f(t) g(t)  \; \mathrm{d} \alpha (t)
+<span class="eqno">(101)<a class="headerlink" href="#equation-eq-95" title="Permalink to this equation">#</a></span>\[\begin{align}\int_{a}^{b} f g  \;\mathrm{d}\alpha
+= \sum_k \int_{x_{k-1}}^{x_k} f(t) g(t) \;\mathrm{d}\alpha(t)
 \end{align}\]</div>
-<p>Subtracting  <a class="reference internal" href="#equation-eq-94">(91)</a>  and  <a class="reference internal" href="#equation-eq-95">(92)</a>  yields</p>
+<p>Subtracting <a class="reference internal" href="#equation-eq-94">(100)</a> and <a class="reference internal" href="#equation-eq-95">(101)</a> yields</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-S(P,f, G) -  \int _ {a} ^ {b}  f g   \; \mathrm{d} \alpha
-=  \sum _k  \int _ {x_{k-1}} ^ {x_k} [ f(t_k) - f(t) ]  g(t)  \; \mathrm{d} \alpha (t)
+S(P,f, G) - \int_{a}^{b} f g  \;\mathrm{d}\alpha
+= \sum_k \int_{x_{k-1}}^{x_k}[f(t_k) - f(t)] g(t) \;\mathrm{d}\alpha(t)
 \end{align*}\]</div>
-<p>It then follows from  <a class="reference internal" href="#thm:31">Theorem 51</a>  that</p>
+<p>It then follows from <a class="reference internal" href="#thm:31">Theorem 56</a> that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-\abs{S(P,f, G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha} &amp; \leq \sum _k  \abs{
+\[\begin{split}\begin{align*}\abs{S(P,f, G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha}&amp;\leq\sum_k \abs{
 \int_{x_{k-1}}^{x_k} [f(t_k) - f(t)] g(t) \; \mathrm{d}\alpha(t)
-} \\ &amp; \leq \sum _k  \int _ {x_{k-1}} ^ {x_k} \abs{f(t_k) - f(t)} \abs{g(t)} \; \mathrm{d} \alpha (t)  \\ &amp; \leq \sum _k  \int _ {x_{k-1}} ^ {x_k} (M_k - m_k)  \abs{g(t)} \; \mathrm{d} \alpha (t)  \\ &amp;=  \sum _k (M_k - m_k)  \int _ {x_{k-1}} ^ {x_k} \abs{g(t)} \; \mathrm{d} \alpha (t)
+}\\&amp;\leq\sum_k \int_{x_{k-1}}^{x_k}\abs{f(t_k) - f(t)}\abs{g(t)}\;\mathrm{d}\alpha(t) \\&amp;\leq\sum_k \int_{x_{k-1}}^{x_k}(M_k - m_k) \abs{g(t)}\;\mathrm{d}\alpha(t) \\&amp;= \sum_k (M_k - m_k) \int_{x_{k-1}}^{x_k}\abs{g(t)}\;\mathrm{d}\alpha(t)
 \end{align*}\end{split}\]</div>
-<p>Recall  <span class="math notranslate nohighlight">\(\abs{g} \leq A\)</span> . Using  <a class="reference internal" href="#thm:30">Theorem 49</a> , we obtain</p>
+<p>Recall <span class="math notranslate nohighlight">\(\abs{g} \leq A\)</span>. Using <a class="reference internal" href="#thm:30">Theorem 54</a>, we obtain</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-\abs{S(P,f, G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha} &amp; \leq \sum _k (M_k - m_k)  \int _ {x_{k-1}} ^ {x_k}  A  \; \mathrm{d} \alpha (t)  \\ &amp;= A  \sum _k (M_k - m_k)  \Delta \alpha _k  \\ &amp;= A (U(P,f, \alpha ) - L(P,f, \alpha ))
+\[\begin{split}\begin{align*}\abs{S(P,f, G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha}&amp;\leq\sum_k (M_k - m_k) \int_{x_{k-1}}^{x_k} A \;\mathrm{d}\alpha(t) \\&amp;= A \sum_k (M_k - m_k) \Delta\alpha_k \\&amp;= A (U(P,f,\alpha) - L(P,f,\alpha))
 \end{align*}\end{split}\]</div>
 <p>Hence,</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{S(P,f,G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha}  &lt;  \varepsilon
-\end{align*}\]</div>
-<p>by  <a class="reference internal" href="#equation-eq-96">(90)</a> . Therefore,  <span class="math notranslate nohighlight">\(f\)</span>  is integrable w.r.t.  <span class="math notranslate nohighlight">\(G\)</span>  on  <span class="math notranslate nohighlight">\([a, b]\)</span>  with  <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}G = \int_{a}^{b} f g  \; \mathrm{d}\alpha\)</span> .</p>
+\[\begin{align*}\abs{S(P,f,G) - \int_{a}^{b} f g  \; \mathrm{d}\alpha} &lt; \varepsilon\end{align*}\]</div>
+<p>by <a class="reference internal" href="#equation-eq-96">(99)</a>. Therefore, <span class="math notranslate nohighlight">\(f\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(G\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> with <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}G = \int_{a}^{b} f g  \; \mathrm{d}\alpha\)</span>.</p>
 </div>
 <div class="proof example admonition" id="example-10">
-<p class="admonition-title"><span class="caption-number">Example 17 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 19 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-\alpha (x)
-=  \begin{cases}
+\[\begin{split}\begin{align*}\alpha(x)
+= \begin{cases}
 1 &amp;x \geq 0 \\
 0 &amp;x &lt; 0
-\end{cases} ,
+\end{cases},
 \quad
--1  \leq  x  \leq  1
+-1 \leq x \leq 1
 \end{align*}\end{split}\]</div>
-<p>Suppose  <span class="math notranslate nohighlight">\(f\)</span>  and  <span class="math notranslate nohighlight">\(g\)</span>  are any two functions defined on  <span class="math notranslate nohighlight">\([-1, 1]\)</span>  being continuous from the left at  <span class="math notranslate nohighlight">\(x=0\)</span> . By  <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#thm:24">Theorem 42</a>  and  <a class="reference internal" href="#thm:40">Theorem 48</a> , we know both functions are integrable w.r.t.  <span class="math notranslate nohighlight">\(\alpha\)</span>  on  <span class="math notranslate nohighlight">\([-1, x]\)</span>  if  <span class="math notranslate nohighlight">\(-1 &lt; x \leq 1\)</span>  with</p>
+<p>Suppose <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are any two functions defined on <span class="math notranslate nohighlight">\([-1, 1]\)</span> being continuous from the left at <span class="math notranslate nohighlight">\(x=0\)</span>. By <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#thm:24">Theorem 47</a> and <a class="reference internal" href="#thm:40">Theorem 53</a>, we know both functions are integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-1, x]\)</span> if <span class="math notranslate nohighlight">\(-1 &lt; x \leq 1\)</span> with</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
-F(x) =  \int _ {-1} ^x f  \; \mathrm{d} \alpha  =  \begin{cases}
+F(x) = \int_{-1}^x f \;\mathrm{d}\alpha = \begin{cases}
 f(0) &amp;x \geq 0 \\
 0 &amp;x &lt; 0
-\end{cases} \quad \text{and} \quad
-G(x) =  \int _ {-1} ^x g  \; \mathrm{d} \alpha  =  \begin{cases}
+\end{cases}\quad\text{and}\quad
+G(x) = \int_{-1}^x g \;\mathrm{d}\alpha = \begin{cases}
 g(0) &amp;x \geq 0 \\
 0 &amp;x &lt; 0
-\end{cases}
-\end{align*}\end{split}\]</div>
-<p>Note that  <span class="math notranslate nohighlight">\(F\)</span>  and  <span class="math notranslate nohighlight">\(G\)</span>  are also step functions that are continuous from the right at  <span class="math notranslate nohighlight">\(x = 0\)</span> . Hence, by applying  <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#thm:24">Theorem 42</a>  again, we have</p>
+\end{cases}\end{align*}\end{split}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> are also step functions that are continuous from the right at <span class="math notranslate nohighlight">\(x = 0\)</span>. Hence, by applying <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#thm:24">Theorem 47</a> again, we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\int _ {-1} ^ {1}  f  \; \mathrm{d} G = f(0)g(0)
-\quad \text{and} \quad \int _ {-1} ^ {1}  g  \; \mathrm{d} F = f(0)g(0)
+\[\begin{align*}\int_{-1}^{1} f \;\mathrm{d}G = f(0)g(0)
+\quad\text{and}\quad\int_{-1}^{1} g \;\mathrm{d}F = f(0)g(0)
 \end{align*}\]</div>
-<p>On the other hand, since the product  <span class="math notranslate nohighlight">\(f g\)</span>  is continuous from the left at  <span class="math notranslate nohighlight">\(x=0\)</span> , it follows from  <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#thm:24">Theorem 42</a>  that</p>
+<p>On the other hand, since the product <span class="math notranslate nohighlight">\(f g\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x=0\)</span>, it follows from <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#thm:24">Theorem 47</a> that</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\int _ {-1} ^ {1}  f g  \; \mathrm{d} \alpha
+\[\begin{align*}\int_{-1}^{1} f g \;\mathrm{d}\alpha
 = f(0)g(0)
 \end{align*}\]</div>
-<p>The results agree with  <a class="reference internal" href="#thm:39">Theorem 54</a>  as expected.</p>
+<p>The results agree with <a class="reference internal" href="#thm:39">Theorem 59</a> as expected.</p>
 </div>
 </div></div>
 </div>

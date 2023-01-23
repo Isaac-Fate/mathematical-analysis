@@ -152,6 +152,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html">
+     The Comparison Test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html">
+     The Ratio Test and the Root Test
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
      Subseries
     </a>
@@ -164,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
      Rearrangement Theorem for Double Series
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html">
+     Multiplication of Series
     </a>
    </li>
   </ul>
@@ -571,75 +586,65 @@ title="Print to PDF"
 <h1>Uniform Convergence and Continuity<a class="headerlink" href="#uniform-convergence-and-continuity" title="Permalink to this headline">#</a></h1>
 <p>If we assume <span class="math notranslate nohighlight">\(f_n\)</span> converges to <span class="math notranslate nohighlight">\(f\)</span> uniformly, then we can interchange the two limit processes, that is,</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\lim _ {x \to p} \lim _ {n \to \infty}  f_n(x)
-=  \lim _ {n \to \infty} \lim _ {x \to p}  f_n(x)
+\[\begin{align*}\lim_{x \to p}\lim_{n \to \infty} f_n(x)
+= \lim_{n \to \infty}\lim_{x \to p} f_n(x)
 \end{align*}\]</div>
 <div class="proof theorem admonition" id="thm:43">
-<p class="admonition-title"><span class="caption-number">Theorem 59 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 64 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Suppose  <span class="math notranslate nohighlight">\(f_n \to f\)</span>  uniformly on  <span class="math notranslate nohighlight">\(S\)</span> , and let  <span class="math notranslate nohighlight">\(p\)</span>  be an accumulation point  <span class="math notranslate nohighlight">\(S\)</span> . If the limit</p>
+<p>Suppose <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span>, and let <span class="math notranslate nohighlight">\(p\)</span> be an accumulation point <span class="math notranslate nohighlight">\(S\)</span>. If the limit</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-A_n =  \lim _ {x \to p}  f(x)
+A_n = \lim_{x \to p} f(x)
 \end{align*}\]</div>
-<p>exist for all  <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span> , then the sequence  <span class="math notranslate nohighlight">\(\{A_n\}\)</span>  converges, say to  <span class="math notranslate nohighlight">\(A\)</span> . Furthermore, the limit  <span class="math notranslate nohighlight">\(\lim_{x \to p}f(x)\)</span>  also exists, and we have</p>
+<p>exist for all <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span>, then the sequence <span class="math notranslate nohighlight">\(\{A_n\}\)</span> converges, say to <span class="math notranslate nohighlight">\(A\)</span>. Furthermore, the limit <span class="math notranslate nohighlight">\(\lim_{x \to p}f(x)\)</span> also exists, and we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\lim _ {x \to p} f(x) = A
+\[\begin{align*}\lim_{x \to p}f(x) = A
 \end{align*}\]</div>
 <p>In other words, we can write</p>
 <div class="math notranslate nohighlight" id="equation-eq-97">
-<span class="eqno">(102)<a class="headerlink" href="#equation-eq-97" title="Permalink to this equation">#</a></span>\[\begin{align}
-\lim _ {x \to p} \lim _ {n \to \infty}  f_n(x)
-=  \lim _ {n \to \infty} \lim _ {x \to p}  f_n(x)
+<span class="eqno">(112)<a class="headerlink" href="#equation-eq-97" title="Permalink to this equation">#</a></span>\[\begin{align}\lim_{x \to p}\lim_{n \to \infty} f_n(x)
+= \lim_{n \to \infty}\lim_{x \to p} f_n(x)
 \end{align}\]</div>
 </div>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>One way to remember this theorem is that if the inner limits on both sides of  <a class="reference internal" href="#equation-eq-97">(102)</a>  exist, then the outer limits also exist and are equal to each other.</p>
+<p>One way to remember this theorem is that if the inner limits on both sides of <a class="reference internal" href="#equation-eq-97">(112)</a> exist, then the outer limits also exist and are equal to each other.</p>
 </div>
 <div class="proof admonition" id="proof">
-<p>Proof. We first show that the sequence of limits  <span class="math notranslate nohighlight">\(\{A_n\}\)</span>  converges. Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , by Cauchy’s criterion ( <a class="reference internal" href="Uniform%20Convergence.html#thm:42">Theorem 58</a> ), there exists an integer  <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span>  such that</p>
+<p>Proof. We first show that the sequence of limits <span class="math notranslate nohighlight">\(\{A_n\}\)</span> converges. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, by Cauchy’s criterion (<a class="reference internal" href="Uniform%20Convergence.html#thm:42">Theorem 63</a>), there exists an integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{f_m(x) - f_n(x)}  &lt;  \varepsilon \quad \forall  m,n  \geq  N  \; \forall  x  \in  S
+\[\begin{align*}\abs{f_m(x) - f_n(x)} &lt; \varepsilon\quad\forall m,n \geq N \;\forall x \in S
 \end{align*}\]</div>
-<p>Note that the absolute value function is continuous and both  <span class="math notranslate nohighlight">\(f_m(x)\)</span>  and  <span class="math notranslate nohighlight">\(f_n(x)\)</span>  have limits at point  <span class="math notranslate nohighlight">\(p\)</span> . Using the rules of computing limits, we obtain</p>
+<p>Note that the absolute value function is continuous and both <span class="math notranslate nohighlight">\(f_m(x)\)</span> and <span class="math notranslate nohighlight">\(f_n(x)\)</span> have limits at point <span class="math notranslate nohighlight">\(p\)</span>. Using the rules of computing limits, we obtain</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\varepsilon \geq \lim _ {x \to p} \abs{f_m(x) - f_n(x)}
-=  \abs{ \lim_{x \to p} f_m(x) - \lim_{x \to p} f_n(x) }
-=  \abs{A_m - A_n}
-\end{align*}\]</div>
-<p>Therefore  <span class="math notranslate nohighlight">\(\{A_n\}\)</span>  indeed converges by Cauchy’s criterion for sequences. Let  <span class="math notranslate nohighlight">\(A\)</span>  denote the limit of  <span class="math notranslate nohighlight">\(\{A_n\}\)</span> .</p>
-<p>Next, we shall prove  <span class="math notranslate nohighlight">\(f(x)\)</span>  has a limit as  <span class="math notranslate nohighlight">\( x \to p\)</span> . We choose (another) arbitrary positive number  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> . Since  <span class="math notranslate nohighlight">\(f_n \to f\)</span>  uniformly on  <span class="math notranslate nohighlight">\(S\)</span> , there exist  <span class="math notranslate nohighlight">\(N_1 \in \N^\ast\)</span>  such that</p>
+\[\begin{align*}\varepsilon\geq\lim_{x \to p}\abs{f_m(x) - f_n(x)}
+= \abs{ \lim_{x \to p} f_m(x) - \lim_{x \to p} f_n(x) }
+= \abs{A_m - A_n}\end{align*}\]</div>
+<p>Therefore <span class="math notranslate nohighlight">\(\{A_n\}\)</span> indeed converges by Cauchy’s criterion for sequences. Let <span class="math notranslate nohighlight">\(A\)</span> denote the limit of <span class="math notranslate nohighlight">\(\{A_n\}\)</span>.</p>
+<p>Next, we shall prove <span class="math notranslate nohighlight">\(f(x)\)</span> has a limit as <span class="math notranslate nohighlight">\( x \to p\)</span>. We choose (another) arbitrary positive number <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. Since <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span>, there exist <span class="math notranslate nohighlight">\(N_1 \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-98">
-<span class="eqno">(103)<a class="headerlink" href="#equation-eq-98" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{f(x) - f_n(x)}  &lt;  \varepsilon \quad \forall  n  \geq  N_1
+<span class="eqno">(113)<a class="headerlink" href="#equation-eq-98" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{f(x) - f_n(x)} &lt; \varepsilon\quad\forall n \geq N_1
 \end{align}\]</div>
-<p>Meanwhile, since we have proved  <span class="math notranslate nohighlight">\(\{A_n\}\)</span>  converges to  <span class="math notranslate nohighlight">\(A\)</span> , there exist  <span class="math notranslate nohighlight">\(N_2 \in \N^\ast\)</span>  such that</p>
+<p>Meanwhile, since we have proved <span class="math notranslate nohighlight">\(\{A_n\}\)</span> converges to <span class="math notranslate nohighlight">\(A\)</span>, there exist <span class="math notranslate nohighlight">\(N_2 \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-99">
-<span class="eqno">(104)<a class="headerlink" href="#equation-eq-99" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{A_n - A}
-&lt;  \varepsilon  / 3
-\quad \forall  n  \geq  N_2
+<span class="eqno">(114)<a class="headerlink" href="#equation-eq-99" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{A_n - A}
+&lt; \varepsilon / 3
+\quad\forall n \geq N_2
 \end{align}\]</div>
-<p>Let  <span class="math notranslate nohighlight">\(N = \max\{N_1, N_2\}\)</span> . Because the limit of  <span class="math notranslate nohighlight">\(\lim_{x \to p} f_N(x) = A_N\)</span> , there exist a neighborhood  <span class="math notranslate nohighlight">\(V\)</span>  of  <span class="math notranslate nohighlight">\(p\)</span>  in which</p>
+<p>Let <span class="math notranslate nohighlight">\(N = \max\{N_1, N_2\}\)</span>. Because the limit of <span class="math notranslate nohighlight">\(\lim_{x \to p} f_N(x) = A_N\)</span>, there exist a neighborhood <span class="math notranslate nohighlight">\(V\)</span> of <span class="math notranslate nohighlight">\(p\)</span> in which</p>
 <div class="math notranslate nohighlight" id="equation-eq-100">
-<span class="eqno">(105)<a class="headerlink" href="#equation-eq-100" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{f_N(x) - A_n}  &lt;  \varepsilon  / 3
-\quad \forall  x  \in  V  \cap  S
+<span class="eqno">(115)<a class="headerlink" href="#equation-eq-100" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{f_N(x) - A_n} &lt; \varepsilon / 3
+\quad\forall x \in V \cap S
 \end{align}\]</div>
 <p>We have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{f(x) - A} \leq \abs{f(x) - f_N(x)}
-+  \abs{f_N(x) - A_N}
-+  \abs{A_N - A}
-&lt;  \varepsilon \quad \forall  x  \in  V  \cap  S
+\[\begin{align*}\abs{f(x) - A}\leq\abs{f(x) - f_N(x)}
++ \abs{f_N(x) - A_N}
++ \abs{A_N - A}
+&lt; \varepsilon\quad\forall x \in V \cap S
 \end{align*}\]</div>
-<p>where the last inequality follows from  <a class="reference internal" href="#equation-eq-98">(103)</a> ,  <a class="reference internal" href="#equation-eq-99">(104)</a>  and  <a class="reference internal" href="#equation-eq-100">(105)</a> . This completes the proof.</p>
+<p>where the last inequality follows from <a class="reference internal" href="#equation-eq-98">(113)</a>, <a class="reference internal" href="#equation-eq-99">(114)</a> and <a class="reference internal" href="#equation-eq-100">(115)</a>. This completes the proof.</p>
 </div>
 </div>
 

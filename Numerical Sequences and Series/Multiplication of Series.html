@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Limits and Continuity &#8212; Mathematical Analysis</title>
+    <title>Multiplication of Series &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,11 +52,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Limit of a Function" href="Limit%20of%20a%20Function.html" />
-    <link rel="prev" title="Multiplication of Series" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html" />
+    <link rel="next" title="Limits and Continuity" href="../Limits%20and%20Continuity/index.html" />
+    <link rel="prev" title="Rearrangement Theorem for Double Series" href="Rearrangement%20Theorem%20for%20Double%20Series.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -134,90 +136,90 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    Numerical Sequences and Series
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html">
+    <a class="reference internal" href="Infinite%20Series.html">
      Infinite Series
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html">
+    <a class="reference internal" href="The%20Comparison%20Test.html">
      The Comparison Test
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html">
+    <a class="reference internal" href="The%20Ratio%20Test%20and%20the%20Root%20Test.html">
      The Ratio Test and the Root Test
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
+    <a class="reference internal" href="Subseries.html">
      Subseries
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Double%20Series.html">
+    <a class="reference internal" href="Double%20Series.html">
      Double Series
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
+    <a class="reference internal" href="Rearrangement%20Theorem%20for%20Double%20Series.html">
      Rearrangement Theorem for Double Series
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Multiplication of Series
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Limits%20and%20Continuity/index.html">
    Limits and Continuity
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Limit%20of%20a%20Function.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Limit%20of%20a%20Function.html">
      Limit of a Function
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Computing%20Limits.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Computing%20Limits.html">
      Computing Limits
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Continuous%20Functions.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html">
      Continuous Functions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Continuity%20of%20Composite%20Functions.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Continuity%20of%20Composite%20Functions.html">
      Continuity of Composite Functions
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Connectedness.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Connectedness.html">
      Connectedness
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Monotonic%20Functions.html">
+    <a class="reference internal" href="../Limits%20and%20Continuity/Monotonic%20Functions.html">
      Monotonic Functions
     </a>
    </li>
@@ -491,7 +493,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FLimits and Continuity/index.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FNumerical Sequences and Series/Multiplication of Series.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -519,7 +521,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Limits and Continuity/index.md"
+        <a href="../_sources/Numerical Sequences and Series/Multiplication of Series.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -568,7 +570,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Limits and Continuity</h1>
+                <h1>Multiplication of Series</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -580,17 +582,100 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="limits-and-continuity">
-<h1>Limits and Continuity<a class="headerlink" href="#limits-and-continuity" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Limit%20of%20a%20Function.html">Limit of a Function</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Computing%20Limits.html">Computing Limits</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Continuous%20Functions.html">Continuous Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Continuity%20of%20Composite%20Functions.html">Continuity of Composite Functions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Connectedness.html">Connectedness</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Monotonic%20Functions.html">Monotonic Functions</a></li>
-</ul>
+  <div class="tex2jax_ignore mathjax_ignore section" id="multiplication-of-series">
+<h1>Multiplication of Series<a class="headerlink" href="#multiplication-of-series" title="Permalink to this headline">#</a></h1>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span class="caption-number">Definition 3 </span></p>
+<div class="definition-content section" id="proof-content">
+<p>Given two complex-valued series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n\)</span> and <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty b_n\)</span>. Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+c_n = \sum_{k=0}^{n} a_{n-k} b_k,
+\quad n \in\N\end{align*}\]</div>
+<p>Then the series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty c_n\)</span> is called the <strong>Cauchy product</strong> of <span class="math notranslate nohighlight">\(\sum a_n\)</span> and <span class="math notranslate nohighlight">\(\sum b_n\)</span>.</p>
+</div>
+</div><div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span class="caption-number">Theorem 12 </span> (Mertens)</p>
+<div class="theorem-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\sum a_n\)</span> and <span class="math notranslate nohighlight">\(\sum b_n\)</span> be two series that converge to sums <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, respectively. Suppose further that <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely. Then their Cauchy product <span class="math notranslate nohighlight">\(\sum c_n\)</span> also converges with sum <span class="math notranslate nohighlight">\(AB\)</span>. In this case, we can write</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\sum_{n=0}^\infty c_n
+= \sum_{n=0}^\infty\sum_{k=0}^n a_{n-k} b_k
+= \sum_{n=0}^\infty a_n
+\sum_{n=0}^\infty b_n
+\end{align*}\]</div>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be chosen arbitrarily. Suppose <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> converges to <span class="math notranslate nohighlight">\(S\)</span>. By Cauchy’s criterion for series, there exist <span class="math notranslate nohighlight">\(N_1, N_2 \in \N^\ast\)</span> such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-110">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-110" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{k=m}^{m+j}\abs{a_k}
+&lt; \frac{\varepsilon / 2}{\abs{B} + \varepsilon}\quad\forall m \geq N_1 \;\forall j \in\N\end{align}\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-eq-111">
+<span class="eqno">(11)<a class="headerlink" href="#equation-eq-111" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\sum_{k=m}^{m+j} b_k}
+&lt; \frac{\varepsilon / 2}{S + 1}\quad\forall m \geq N_2 \;\forall j \in\N\end{align}\]</div>
+<p>Moreover, there also exists <span class="math notranslate nohighlight">\(N_3 \in \N^\ast\)</span> such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-112">
+<span class="eqno">(12)<a class="headerlink" href="#equation-eq-112" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\sum_{k=1}^m b_k - B}
+&lt; \varepsilon\quad\forall m \geq N_3
+\end{align}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(N = \max \{N_1, N_2, N_3\}\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(A_n\)</span>, <span class="math notranslate nohighlight">\(B_n\)</span> and <span class="math notranslate nohighlight">\(C_n\)</span> denote</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+A_n = \sum_{k=0}^n a_k,
+\quad
+B_n = \sum_{k=0}^n b_k,
+\quad\text{and}\quad
+C_n = \sum_{k=0}^n c_k
+\end{align*}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(n \geq 2N\)</span>. After a few steps of algebraic computation, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignat*}2
+A_n B_n - C_n
+&amp;=&amp; \;&amp; a_1 b_n \\&amp;&amp;&amp;+ a_2 (b_{n-1} + b_n) \\&amp;&amp;&amp;+ a_3 (b_{n-2} + b_{n-1} + b_n) \\&amp;&amp;&amp;+ \cdots\\&amp;&amp;&amp;+ a_n (b_1 + b_2 + \cdots + b_n)
+\end{alignat*}\end{split}\]</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight" id="equation-eq-113">
+<span class="eqno">(13)<a class="headerlink" href="#equation-eq-113" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{alignat}2\abs{A_n B_n - C_n}&amp;\leq&amp; \;&amp; \abs{a_1}\abs{b_n}\nonumber\\&amp;&amp;&amp;+ \cdots\nonumber\\&amp;&amp;&amp;+ \abs{a_{n-N}}\abs{b_{N+1} + \cdots + b_n}\nonumber\\&amp;&amp;&amp;+ \abs{a_{n-N+1}}\abs{b_{N} + \cdots + b_n}\nonumber\\&amp;&amp;&amp;+ \cdots\nonumber\\&amp;&amp;&amp;+ \abs{a_n}\abs{b_{1} + \cdots + b_n}\end{alignat}\end{split}\]</div>
+<p>Applying <a class="reference internal" href="#equation-eq-111">(11)</a> to the first <span class="math notranslate nohighlight">\(n-N\)</span> terms on right-hand side of <a class="reference internal" href="#equation-eq-113">(13)</a>, we find</p>
+<div class="math notranslate nohighlight" id="equation-eq-114">
+<span class="eqno">(14)<a class="headerlink" href="#equation-eq-114" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}\abs{a_1}\abs{b_n}
++ \cdots
++ \abs{a_{n-N}}\abs{b_{N+1} + \cdots + b_n}&amp;&lt; (\abs{a_1} + \cdots + \abs{a_{n-N}}) \frac{\varepsilon / 2}{S + 1}\nonumber\\&amp;\leq S \times\frac{\varepsilon / 2}{S + 1}\nonumber\\&amp;&lt; \varepsilon / 2
+\end{align}\end{split}\]</div>
+<p>Meanwhile, applying <a class="reference internal" href="#equation-eq-112">(12)</a> to the last <span class="math notranslate nohighlight">\(N\)</span> terms on the right-hand side of <a class="reference internal" href="#equation-eq-113">(13)</a> yields</p>
+<div class="math notranslate nohighlight" id="equation-eq-115">
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq-115" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{multline}\abs{a_{n-N+1}}\abs{b_{N} + \cdots + b_n}
++ \cdots
++ \abs{a_n}\abs{b_{1} + \cdots + b_n}\\
+&lt; \abs{a_{n-N+1}}(\abs{B} + \varepsilon)
++ \cdots
++ \abs{a_n}(\abs{B} + \varepsilon)
+= (\abs{a_{n-N+1}} + \cdots + \abs{a_n}) (\abs{B} + \varepsilon)
+\end{multline}\end{split}\]</div>
+<p>By using <a class="reference internal" href="#equation-eq-110">(10)</a>, the right-hand side of <a class="reference internal" href="#equation-eq-115">(15)</a> can be further enlarged to</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}(\abs{a_{n-N+1}} + \cdots + \abs{a_n}) (\abs{B} + \varepsilon)
+&lt; \frac{\varepsilon / 2}{\abs{B} + \varepsilon}\times(\abs{B} + \varepsilon)
+= \varepsilon / 2
+\end{align*}\]</div>
+<p>Hence,</p>
+<div class="math notranslate nohighlight" id="equation-eq-116">
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq-116" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{a_{n-N+1}}\abs{b_{N} + \cdots + b_n}
++ \cdots
++ \abs{a_n}\abs{b_{1} + \cdots + b_n}
+&lt; \varepsilon / 2
+\end{align}\]</div>
+<p>Combined with <a class="reference internal" href="#equation-eq-113">(13)</a>, <a class="reference internal" href="#equation-eq-114">(14)</a> and <a class="reference internal" href="#equation-eq-116">(16)</a>, we find</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{A_n B_n - C_n} &lt; \varepsilon\quad\forall n \geq 2N
+\end{align*}\]</div>
+<p>Therefore, the limit of <span class="math notranslate nohighlight">\(\{ A_n B_n - C_n \}\)</span> exists, and it equals zero, that is,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\lim_{n \to \infty} A_n B_n - C_n = 0
+\end{align*}\]</div>
+<p>But since <span class="math notranslate nohighlight">\(\lim_{n \to \infty} A_n = A\)</span> and <span class="math notranslate nohighlight">\(\lim_{n \to \infty} B_n = B\)</span>, by the algebraic properties of limits, we conclude that the limit of <span class="math notranslate nohighlight">\(\{C_n\}\)</span> also exists, and it equals <span class="math notranslate nohighlight">\(AB\)</span>. In other words, <span class="math notranslate nohighlight">\(\sum c_n\)</span> converges to <span class="math notranslate nohighlight">\(AB\)</span>.</p>
 </div>
 </div>
 
@@ -607,7 +692,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Limits and Continuity"
+            path: "./Numerical Sequences and Series"
         },
         predefinedOutput: true
     }
@@ -621,17 +706,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Rearrangement%20Theorem%20for%20Double%20Series.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Multiplication of Series</p>
+            <p class="prev-next-title">Rearrangement Theorem for Double Series</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Limit%20of%20a%20Function.html" title="next page">
+    <a class='right-next' id="next-link" href="../Limits%20and%20Continuity/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Limit of a Function</p>
+        <p class="prev-next-title">Limits and Continuity</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

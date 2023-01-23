@@ -58,7 +58,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Double Series" href="Double%20Series.html" />
-    <link rel="prev" title="Infinite Series" href="Infinite%20Series.html" />
+    <link rel="prev" title="The Ratio Test and the Root Test" href="The%20Ratio%20Test%20and%20the%20Root%20Test.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -151,6 +151,16 @@ const thebe_selector_output = ".output, .cell_output"
      Infinite Series
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="The%20Comparison%20Test.html">
+     The Comparison Test
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="The%20Ratio%20Test%20and%20the%20Root%20Test.html">
+     The Ratio Test and the Root Test
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Subseries
@@ -164,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="Rearrangement%20Theorem%20for%20Double%20Series.html">
      Rearrangement Theorem for Double Series
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Multiplication%20of%20Series.html">
+     Multiplication of Series
     </a>
    </li>
   </ul>
@@ -568,78 +583,67 @@ title="Print to PDF"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="subseries">
-<span id="index-0"></span><h1>Subseries<a class="headerlink" href="#subseries" title="Permalink to this headline">#</a></h1>
+<h1>Subseries<a class="headerlink" href="#subseries" title="Permalink to this headline">#</a></h1>
 <p>Think about summing up countably many (real or complex) numbers:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-a_1, a_2,  \ldots , a_n,  \ldots
-\end{align*}\]</div>
+a_1, a_2, \ldots, a_n, \ldots\end{align*}\]</div>
 <p>If you do not have to sum them up in order one by one, how many ways can you think of? For example, one way is to first sum up all the terms with odd indices:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-s_1 = a_1 + a_3 +  \cdots  + a_ {2k-1}  +  \cdots
-\end{align*}\]</div>
+s_1 = a_1 + a_3 + \cdots + a_{2k-1} + \cdots\end{align*}\]</div>
 <p>and then all the terms with even indices:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-s_2 = a_2 + a_4 +  \cdots  + a_ {2k}  +  \cdots
-\end{align*}\]</div>
-<p>Finally, the total sum is <span class="math notranslate nohighlight">\(s_1 + s_2\)</span>. As a matter of fact, there are more ways of summing these numbers than one can imagine at first thought, some of which may be difficult to describe. The need for a precise description of summing countably many numbers in the way we want gives rise to the concept of <strong>subseries</strong>.</p>
-<p>Suppose <span class="math notranslate nohighlight">\(s\)</span> is the sum we will obtain by summing up the numbers in the way we like. A natural question to ask is whether <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges to <span class="math notranslate nohighlight">\(s\)</span>. The answer is yes by <a class="reference internal" href="#thm:50">Theorem 4</a>, which we will soon show provided that <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely.</p>
+s_2 = a_2 + a_4 + \cdots + a_{2k} + \cdots\end{align*}\]</div>
+<p id="index-0">Finally, the total sum is <span class="math notranslate nohighlight">\(s_1 + s_2\)</span>. As a matter of fact, there are more ways of summing these numbers than one can imagine at first thought, some of which may be difficult to describe. The need for a precise description of summing countably many numbers in the way we want gives rise to the concept of <strong>subseries</strong>.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(s\)</span> is the sum we will obtain by summing up the numbers in the way we like. A natural question to ask is whether <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges to <span class="math notranslate nohighlight">\(s\)</span>. The answer is yes by <a class="reference internal" href="#thm:50">Theorem 8</a>, which we will soon show provided that <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely.</p>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
 <div class="definition-content section" id="proof-content">
-<p>Let  <span class="math notranslate nohighlight">\(f: \N^\ast \N^\ast\)</span>  be an  <strong>injective</strong> / <strong>one-to-one</strong>  function whose domain is  <span class="math notranslate nohighlight">\(\N^\ast\)</span>  and whose range  <span class="math notranslate nohighlight">\(f(\N^\ast)\)</span>  is a subset of  <span class="math notranslate nohighlight">\(\N^\ast\)</span> . Let  <span class="math notranslate nohighlight">\(\sum a_n\)</span>  and  <span class="math notranslate nohighlight">\(\sum b_n\)</span>  be two series such that</p>
+<p>Let <span class="math notranslate nohighlight">\(f: \N^\ast \N^\ast\)</span> be an <strong>injective</strong>/<strong>one-to-one</strong> function whose domain is <span class="math notranslate nohighlight">\(\N^\ast\)</span> and whose range <span class="math notranslate nohighlight">\(f(\N^\ast)\)</span> is a subset of <span class="math notranslate nohighlight">\(\N^\ast\)</span>. Let <span class="math notranslate nohighlight">\(\sum a_n\)</span> and <span class="math notranslate nohighlight">\(\sum b_n\)</span> be two series such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-b_n = a_ {f(n)} ,
-\quad  n  \in \N ^ \ast
-\end{align*}\]</div>
-<p>Then we say  <span class="math notranslate nohighlight">\(\sum b_n\)</span>  is a  <strong>subseries</strong>  of  <span class="math notranslate nohighlight">\(\sum a_n\)</span> .</p>
+b_n = a_{f(n)},
+\quad n \in\N^\ast\end{align*}\]</div>
+<p>Then we say <span class="math notranslate nohighlight">\(\sum b_n\)</span> is a <strong>subseries</strong> of <span class="math notranslate nohighlight">\(\sum a_n\)</span>.</p>
 </div>
 </div><p>To understand the definition, we note that a subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span> can be constructed in the following way. Given a sequence</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-a_1, a_2,  \ldots  a_n,  \ldots
-\end{align*}\]</div>
+a_1, a_2, \ldots a_n, \ldots\end{align*}\]</div>
 <p>We first extract a subsequence <span class="math notranslate nohighlight">\(\{a_{k_n}\}\)</span> out of it:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-a_ {k_1} , a_ {k_2} ,  \ldots  a_ {k_n} ,  \ldots
-\end{align*}\]</div>
+a_{k_1}, a_{k_2}, \ldots a_{k_n}, \ldots\end{align*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(k_{n} &lt; k_{n+1} \; \forall n \in \N^\ast\)</span>. And then we rearrange this subsequence into</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-a_ {g(k_1)} , a_ {g(k_2)} ,  \ldots  a_ {g(k_n)} ,  \ldots
-\end{align*}\]</div>
+a_{g(k_1)}, a_{g(k_2)}, \ldots a_{g(k_n)}, \ldots\end{align*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(g\)</span> is a bijection from <span class="math notranslate nohighlight">\(\set{k_n}{n \in \N^\ast}\)</span> to itself. If we define <span class="math notranslate nohighlight">\(f(n) = g(k_n)\)</span>, then <span class="math notranslate nohighlight">\(\sum_{a_{f(n)}}\)</span> is precisely a subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span>.</p>
 <div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 1 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 3 </span></p>
 <div class="example-content section" id="proof-content">
-<p>Consider the series  <span class="math notranslate nohighlight">\(\sum a_n = \sum_{n=1}^\infty i^n\)</span> . We write down its first several terms:</p>
+<p>Consider the series <span class="math notranslate nohighlight">\(\sum a_n = \sum_{n=1}^\infty i^n\)</span>. We write down its first several terms:</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\sum _ {n=1} ^ \infty  i^n
+\[\begin{align*}\sum_{n=1}^\infty i^n
 = i + (-1) + (-i) + 1
-+ i + (-1) + (-i) + 1 +  \cdots
-\end{align*}\]</div>
++ i + (-1) + (-i) + 1 + \cdots\end{align*}\]</div>
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f(n) = 2n - 1 + 2  \times (-1)^ {n-1} ,
-\quad  n  \in \N ^ \ast
-\end{align*}\]</div>
-<p>Note that  <span class="math notranslate nohighlight">\(f\)</span>  is injective. The following expression of  <span class="math notranslate nohighlight">\(f\)</span>  is more intuitive:</p>
+f(n) = 2n - 1 + 2 \times(-1)^{n-1},
+\quad n \in\N^\ast\end{align*}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(f\)</span> is injective. The following expression of <span class="math notranslate nohighlight">\(f\)</span> is more intuitive:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
-f(n) =  \begin{cases}
+f(n) = \begin{cases}
 2n + 1,
 &amp;\text{$n$ is odd} \\
 2n - 3,
 &amp;\text{$n$ is even}
-\end{cases}
-\end{align*}\end{split}\]</div>
-<p>The first several values of  <span class="math notranslate nohighlight">\(f\)</span>  are</p>
+\end{cases}\end{align*}\end{split}\]</div>
+<p>The first several values of <span class="math notranslate nohighlight">\(f\)</span> are</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f(1) = 3,
@@ -649,117 +653,98 @@ f(2) = 1,
 f(3) = 7,
 \quad
 f(4) = 5,
-\ldots
-\end{align*}\]</div>
-<p>Hence, the subseries  <span class="math notranslate nohighlight">\(\sum a_{f(n)}\)</span>  is</p>
+\ldots\end{align*}\]</div>
+<p>Hence, the subseries <span class="math notranslate nohighlight">\(\sum a_{f(n)}\)</span> is</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\sum  a_ {f(n)}  = (-i) + i + (-i) + i +  \cdots
-\end{align*}\]</div>
+\[\begin{align*}\sum a_{f(n)} = (-i) + i + (-i) + i + \cdots\end{align*}\]</div>
 </div>
 </div><div class="proof theorem admonition" id="thm:49">
-<p class="admonition-title"><span class="caption-number">Theorem 3 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 7 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>If  <span class="math notranslate nohighlight">\(\sum a_n\)</span>  converges absolutely, then every subseries  <span class="math notranslate nohighlight">\(\sum b_n\)</span>  also converges absolutely. And we have</p>
+<p>If <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely, then every subseries <span class="math notranslate nohighlight">\(\sum b_n\)</span> also converges absolutely. And we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-105">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq-105" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{\sum_{n=1}^\infty b_n} \leq \sum _ {n=1} ^ \infty \abs{b_n} \leq \sum _ {n=1} ^ \infty \abs{a_n}
-\end{align}\]</div>
+<span class="eqno">(5)<a class="headerlink" href="#equation-eq-105" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\sum_{n=1}^\infty b_n}\leq\sum_{n=1}^\infty\abs{b_n}\leq\sum_{n=1}^\infty\abs{a_n}\end{align}\]</div>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Suppose  <span class="math notranslate nohighlight">\(b_k = a_{f(k)} \; k \in \N^\ast\)</span> . Let integer  <span class="math notranslate nohighlight">\(n\)</span>  be fixed, and let  <span class="math notranslate nohighlight">\(N = \max \{ f(1), \ldots, f(n) \}\)</span> . Then we have</p>
+<p>Proof. Suppose <span class="math notranslate nohighlight">\(b_k = a_{f(k)} \; k \in \N^\ast\)</span>. Let integer <span class="math notranslate nohighlight">\(n\)</span> be fixed, and let <span class="math notranslate nohighlight">\(N = \max \{ f(1), \ldots, f(n) \}\)</span>. Then we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{\sum_{k=1}^n b_k} \leq \sum _ {k=1} ^n  \abs{b_k} \leq \sum _ {k=1} ^N  \abs{a_k} \leq \sum _ {k=1} ^ \infty \abs{a_k}
-\end{align*}\]</div>
+\[\begin{align*}\abs{\sum_{k=1}^n b_k}\leq\sum_{k=1}^n \abs{b_k}\leq\sum_{k=1}^N \abs{a_k}\leq\sum_{k=1}^\infty\abs{a_k}\end{align*}\]</div>
 <p>Since</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{\sum_{k=1}^n b_k} \leq \sum _ {k=1} ^n  \abs{b_k} \leq \sum _ {k=1} ^ \infty \abs{a_k}
-\end{align*}\]</div>
-<p>holds for every  <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span> , we conclude that  <span class="math notranslate nohighlight">\(\sum b_n\)</span>  converges absolutely. Then by sending  <span class="math notranslate nohighlight">\(n \to \infty\)</span> , we see that  <a class="reference internal" href="#equation-eq-105">(4)</a>  indeed holds.</p>
+\[\begin{align*}\abs{\sum_{k=1}^n b_k}\leq\sum_{k=1}^n \abs{b_k}\leq\sum_{k=1}^\infty\abs{a_k}\end{align*}\]</div>
+<p>holds for every <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span>, we conclude that <span class="math notranslate nohighlight">\(\sum b_n\)</span> converges absolutely. Then by sending <span class="math notranslate nohighlight">\(n \to \infty\)</span>, we see that <a class="reference internal" href="#equation-eq-105">(5)</a> indeed holds.</p>
 </div>
 <p>To sum up</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-a_1, a_2,  \ldots , a_n,  \ldots
-\end{align*}\]</div>
+a_1, a_2, \ldots, a_n, \ldots\end{align*}\]</div>
 <p>we first <em>partition</em> them into several (possibly countably infinitely many) subseries</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\sum _ {n=1} ^ \infty  a_ {f_1(n)} ,  \sum _ {n=1} ^ \infty  a_ {f_2(n)} ,  \ldots ,
-\sum _ {n=1} ^ \infty  a_ {f_k(n)} ,  \ldots
-\end{align*}\]</div>
+\[\begin{align*}\sum_{n=1}^\infty a_{f_1(n)}, \sum_{n=1}^\infty a_{f_2(n)}, \ldots,
+\sum_{n=1}^\infty a_{f_k(n)}, \ldots\end{align*}\]</div>
 <p>After that, we sum up all the subseries. Suppose the final sum is <span class="math notranslate nohighlight">\(s\)</span>, the next theorem says if <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely, then it must also converge to <span class="math notranslate nohighlight">\(s\)</span>. In other words, we can sum up an absolutely convergent series in whatever way we want without changing its sum!</p>
 <div class="proof theorem admonition" id="thm:50">
-<p class="admonition-title"><span class="caption-number">Theorem 4 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 8 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Let  <span class="math notranslate nohighlight">\(\{f_1, f_2, \ldots\}\)</span>  be a countable collection of functions defined on  <span class="math notranslate nohighlight">\(\N^\ast\)</span> , each having the following properties:</p>
+<p>Let <span class="math notranslate nohighlight">\(\{f_1, f_2, \ldots\}\)</span> be a countable collection of functions defined on <span class="math notranslate nohighlight">\(\N^\ast\)</span>, each having the following properties:</p>
 <ul class="simple">
-<li><p>(1) <span class="math notranslate nohighlight">\(f_k\)</span>  is injective,</p></li>
-<li><p>(2) the range  <span class="math notranslate nohighlight">\(f_k(\N^\ast)\)</span>  is a subset of  <span class="math notranslate nohighlight">\(\N^\ast\)</span> , and</p></li>
-<li><p>(3) the collection of all function ranges form a partition of  <span class="math notranslate nohighlight">\(\N^\ast\)</span> , that is,  <span class="math notranslate nohighlight">\(\biguplus_{k=1}^\infty f_k(\N^\ast) = \N^\ast\)</span> .</p></li>
+<li><p>1️⃣ <span class="math notranslate nohighlight">\(f_k\)</span> is injective,</p></li>
+<li><p>2️⃣ the range <span class="math notranslate nohighlight">\(f_k(\N^\ast)\)</span> is a subset of <span class="math notranslate nohighlight">\(\N^\ast\)</span>, and</p></li>
+<li><p>3️⃣ the collection of all function ranges form a partition of <span class="math notranslate nohighlight">\(\N^\ast\)</span>, that is, <span class="math notranslate nohighlight">\(\biguplus_{k=1}^\infty f_k(\N^\ast) = \N^\ast\)</span>.
+Suppose that <span class="math notranslate nohighlight">\(\sum a_n\)</span> is an absolutely convergent series. Let <span class="math notranslate nohighlight">\(b_k(n)\)</span> be defined by</p></li>
 </ul>
-<p>Suppose that  <span class="math notranslate nohighlight">\(\sum a_n\)</span>  is an absolutely convergent series. Let  <span class="math notranslate nohighlight">\(b_k(n)\)</span>  be defined by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-b_k(n) = a_ {f_k(n)} ,
+b_k(n) = a_{f_k(n)},
 \quad
-n  \in \N ^ \ast ,  \;
-k  \in \N ^ \ast
-\end{align*}\]</div>
+n \in\N^\ast, \;
+k \in\N^\ast\end{align*}\]</div>
 <p>Then</p>
 <ul class="simple">
-<li><p>(1) each  <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span>  is an absolutely convergent subseries of  <span class="math notranslate nohighlight">\(\sum a_n\)</span> , and</p></li>
-<li><p>(2) if we let  <span class="math notranslate nohighlight">\(s_k = \sum_{n=1}^\infty b_k(n)\)</span> , then  <span class="math notranslate nohighlight">\(\sum s_k\)</span>  converges absolutely to the same sum as  <span class="math notranslate nohighlight">\(\sum a_n\)</span> , that is,  <span class="math notranslate nohighlight">\(\sum_{k=1}^\infty s_k = \sum_{n=1}^\infty a_n\)</span> .</p></li>
+<li><p>1️⃣ each <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span> is an absolutely convergent subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span>, and</p></li>
+<li><p>2️⃣ if we let <span class="math notranslate nohighlight">\(s_k = \sum_{n=1}^\infty b_k(n)\)</span>, then <span class="math notranslate nohighlight">\(\sum s_k\)</span> converges absolutely to the same sum as <span class="math notranslate nohighlight">\(\sum a_n\)</span>, that is, <span class="math notranslate nohighlight">\(\sum_{k=1}^\infty s_k = \sum_{n=1}^\infty a_n\)</span>.</p></li>
 </ul>
 </div>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Pay attention to how the properties of  <span class="math notranslate nohighlight">\(f_k\)</span>  being injective and  <span class="math notranslate nohighlight">\(\biguplus_{k=1}^\infty f_k(\N^\ast)= \N^\ast\)</span>  are used in the proof below.</p>
+<p>Pay attention to how the properties of <span class="math notranslate nohighlight">\(f_k\)</span> being injective and <span class="math notranslate nohighlight">\(\biguplus_{k=1}^\infty f_k(\N^\ast)= \N^\ast\)</span> are used in the proof below.</p>
 </div>
 <div class="proof admonition" id="proof">
-<p>Proof. The first statement that  <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span>  is an absolutely convergent subseries of  <span class="math notranslate nohighlight">\(\sum a_n\)</span>  immediately follows from  <a class="reference internal" href="#thm:49">Theorem 3</a> . We now prove 2.</p>
-<p>We first show that  <span class="math notranslate nohighlight">\(\sum s_k\)</span>  converges absolutely. The  <span class="math notranslate nohighlight">\(p\)</span> -th partial sum of  <span class="math notranslate nohighlight">\(\sum \abs{s_k}\)</span>  satisfies</p>
+<p>Proof. The first statement that <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span> is an absolutely convergent subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span> immediately follows from <a class="reference internal" href="#thm:49">Theorem 7</a>. We now prove 2.</p>
+<p>We first show that <span class="math notranslate nohighlight">\(\sum s_k\)</span> converges absolutely. The <span class="math notranslate nohighlight">\(p\)</span>-th partial sum of <span class="math notranslate nohighlight">\(\sum \abs{s_k}\)</span> satisfies</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-\sum _ {k=1} ^p  \abs{s_k} &amp;=  \abs{s_1}  +  \cdots  +  \abs{s_p} \\ &amp;=  \abs{ \sum_{n=1}^\infty b_1(n) }  +  \cdots
-+  \abs{ \sum_{n=1}^\infty b_p(n) } \\ &amp; \leq \sum _ {n=1} ^ \infty \abs{b_1(n)}  +  \cdots
-+  \sum _ {n=1} ^ \infty \abs{b_p(n)} \\ &amp;=  \sum _ {n=1} ^ \infty (  \abs{b_1(n)}  +  \cdots
-+  \abs{b_p(n)} )
+\[\begin{split}\begin{align*}\sum_{k=1}^p \abs{s_k}&amp;= \abs{s_1} + \cdots + \abs{s_p}\\&amp;= \abs{ \sum_{n=1}^\infty b_1(n) } + \cdots
++ \abs{ \sum_{n=1}^\infty b_p(n) }\\&amp;\leq\sum_{n=1}^\infty\abs{b_1(n)} + \cdots
++ \sum_{n=1}^\infty\abs{b_p(n)}\\&amp;= \sum_{n=1}^\infty( \abs{b_1(n)} + \cdots
++ \abs{b_p(n)})
 \end{align*}\end{split}\]</div>
-<p>where the last equality follows from  <a class="reference internal" href="Infinite%20Series.html#thm:48">Theorem 2</a>  since every series  <span class="math notranslate nohighlight">\(\sum_{k} \abs{b_k(n)}\)</span>  converges. For any given  <span class="math notranslate nohighlight">\(q \in \N^\ast\)</span> , we always have</p>
+<p>where the last equality follows from <a class="reference internal" href="Infinite%20Series.html#thm:48">Theorem 2</a> since every series <span class="math notranslate nohighlight">\(\sum_{k} \abs{b_k(n)}\)</span> converges. For any given <span class="math notranslate nohighlight">\(q \in \N^\ast\)</span>, we always have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\sum _ {n=1} ^q (  \abs{b_1(n)}  +  \cdots
-+  \abs{b_p(n)} )
-\leq \sum _ {n=1} ^ \infty \abs{a_n}
-\end{align*}\]</div>
-<p>because  <span class="math notranslate nohighlight">\(\sum_{n=1}^q ( \abs{b_1(n)} + \cdots + \abs{b_p(n)} )\)</span>  is just a sum of finitely many terms of the series  <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> . Letting  <span class="math notranslate nohighlight">\(q \to \infty\)</span> , we obtain</p>
+\[\begin{align*}\sum_{n=1}^q ( \abs{b_1(n)} + \cdots
++ \abs{b_p(n)})
+\leq\sum_{n=1}^\infty\abs{a_n}\end{align*}\]</div>
+<p>because <span class="math notranslate nohighlight">\(\sum_{n=1}^q ( \abs{b_1(n)} + \cdots + \abs{b_p(n)} )\)</span> is just a sum of finitely many terms of the series <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span>. Letting <span class="math notranslate nohighlight">\(q \to \infty\)</span>, we obtain</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\sum _ {k=1} ^p  \abs{s_k} \leq \sum _ {n=1} ^ \infty (  \abs{b_1(n)}  +  \cdots
-+  \abs{b_p(n)} )
-\leq \sum _ {n=1} ^ \infty \abs{a_n}
-\end{align*}\]</div>
-<p>Hence, all partial sums of  <span class="math notranslate nohighlight">\(\sum \abs{s_k}\)</span>  are bounded above by  <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty \abs{a_n}\)</span> . Therefore, the series  <span class="math notranslate nohighlight">\(\sum \abs{s_k}\)</span>  converges, i.e.,  <span class="math notranslate nohighlight">\(\sum s_k\)</span>  converges absolutely.</p>
-<p>Suppose  <span class="math notranslate nohighlight">\(\sum a_n\)</span>  converges to sum  <span class="math notranslate nohighlight">\(a\)</span> . Given  <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> , there exists  <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span>  such that</p>
+\[\begin{align*}\sum_{k=1}^p \abs{s_k}\leq\sum_{n=1}^\infty( \abs{b_1(n)} + \cdots
++ \abs{b_p(n)})
+\leq\sum_{n=1}^\infty\abs{a_n}\end{align*}\]</div>
+<p>Hence, all partial sums of <span class="math notranslate nohighlight">\(\sum \abs{s_k}\)</span> are bounded above by <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty \abs{a_n}\)</span>. Therefore, the series <span class="math notranslate nohighlight">\(\sum \abs{s_k}\)</span> converges, i.e., <span class="math notranslate nohighlight">\(\sum s_k\)</span> converges absolutely.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges to sum <span class="math notranslate nohighlight">\(a\)</span>. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-107">
-<span class="eqno">(5)<a class="headerlink" href="#equation-eq-107" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{\sum_{n=1}^q a_n - s}  &lt;  \varepsilon  / 2
-\quad \forall  q  \geq  N
+<span class="eqno">(6)<a class="headerlink" href="#equation-eq-107" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\sum_{n=1}^q a_n - s} &lt; \varepsilon / 2
+\quad\forall q \geq N
 \end{align}\]</div>
-<p>For any integer  <span class="math notranslate nohighlight">\(j \in \N^\ast\)</span> , there exists a  <em>unique</em>  integer  <span class="math notranslate nohighlight">\(k \in \N^\ast\)</span>  such that</p>
+<p>For any integer <span class="math notranslate nohighlight">\(j \in \N^\ast\)</span>, there exists a <em>unique</em> integer <span class="math notranslate nohighlight">\(k \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-j  \in  f_k( \N ^ \ast )
+j \in f_k(\N^\ast)
 \end{align*}\]</div>
-<p>since  <span class="math notranslate nohighlight">\(\biguplus_{k=1}^\infty f_k(\N^\ast) = \N^\ast\)</span> . (Existence of  <span class="math notranslate nohighlight">\(k\)</span>  is due to  <span class="math notranslate nohighlight">\(\bigcup_{k=1}^\infty f_k(\N^\ast) = \N^\ast\)</span> , and the uniqueness follows from the fact that these function ranges are mutually disjoint.) Furthermore, there exists a  <em>unique</em>  integer  <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span>  such that</p>
+<p>since <span class="math notranslate nohighlight">\(\biguplus_{k=1}^\infty f_k(\N^\ast) = \N^\ast\)</span>. (Existence of <span class="math notranslate nohighlight">\(k\)</span> is due to <span class="math notranslate nohighlight">\(\bigcup_{k=1}^\infty f_k(\N^\ast) = \N^\ast\)</span>, and the uniqueness follows from the fact that these function ranges are mutually disjoint.) Furthermore, there exists a <em>unique</em> integer <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f_k(n) = j
 \end{align*}\]</div>
-<p>since  <span class="math notranslate nohighlight">\(f_k\)</span>  is injective. Therefore, any integer  <span class="math notranslate nohighlight">\(j\)</span>  can uniquely determine a pair  <span class="math notranslate nohighlight">\((k, n)\)</span>  and hence we can define a function  <span class="math notranslate nohighlight">\(g: \N^\ast \to \N^\ast \times \N^\ast\)</span>  by</p>
+<p>since <span class="math notranslate nohighlight">\(f_k\)</span> is injective. Therefore, any integer <span class="math notranslate nohighlight">\(j\)</span> can uniquely determine a pair <span class="math notranslate nohighlight">\((k, n)\)</span> and hence we can define a function <span class="math notranslate nohighlight">\(g: \N^\ast \to \N^\ast \times \N^\ast\)</span> by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 g(j) = (k, n)
@@ -769,62 +754,54 @@ g(j) = (k, n)
 \[\begin{align*}
 f_k(n) = j
 \end{align*}\]</div>
-<p>Recall how we chose the integer  <span class="math notranslate nohighlight">\(N\)</span> . Write</p>
+<p>Recall how we chose the integer <span class="math notranslate nohighlight">\(N\)</span>. Write</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-g(1) = (k_1, n_1),  \ldots , g(N) = (k_N, n_N)
+g(1) = (k_1, n_1), \ldots, g(N) = (k_N, n_N)
 \end{align*}\]</div>
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-K =  \max \{  k_1,  \ldots , k_N  \} \quad \text{and} \quad
-M =  \max \{  n_1,  \ldots , n_N  \}
-\end{align*}\]</div>
+K = \max\{ k_1, \ldots, k_N \}\quad\text{and}\quad
+M = \max\{ n_1, \ldots, n_N \}\end{align*}\]</div>
 <p>We claim that</p>
 <div class="math notranslate nohighlight" id="equation-eq-106">
-<span class="eqno">(6)<a class="headerlink" href="#equation-eq-106" title="Permalink to this equation">#</a></span>\[\begin{align}
-\abs{\sum_{k=1}^p \sum_{n=1}^q b_k(n) - s}  &lt;  \varepsilon  / 2
-\quad \forall  p  \geq  K  \; \forall  q  \geq  M
+<span class="eqno">(7)<a class="headerlink" href="#equation-eq-106" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\sum_{k=1}^p \sum_{n=1}^q b_k(n) - s} &lt; \varepsilon / 2
+\quad\forall p \geq K \;\forall q \geq M
 \end{align}\]</div>
-<p>The proof of  <a class="reference internal" href="#equation-eq-106">(6)</a>  is left as an exercise. See  <a class="reference internal" href="#ex-5"><span class="std std-ref">Exercise 1</span></a> . Letting  <span class="math notranslate nohighlight">\(q \to \infty\)</span>  in  <a class="reference internal" href="#equation-eq-106">(6)</a>  yields</p>
+<p>The proof of <a class="reference internal" href="#equation-eq-106">(7)</a> is left as an exercise. See <a class="reference internal" href="#ex-5"><span class="std std-ref">Exercise 1</span></a>. Letting <span class="math notranslate nohighlight">\(q \to \infty\)</span> in <a class="reference internal" href="#equation-eq-106">(7)</a> yields</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{\sum_{k=1}^p \sum_{n=1}^\infty b_k(n) - s} \leq \varepsilon  / 2 &lt;  \varepsilon \quad \forall  p  \geq  K
+\[\begin{align*}\abs{\sum_{k=1}^p \sum_{n=1}^\infty b_k(n) - s}\leq\varepsilon / 2 &lt; \varepsilon\quad\forall p \geq K
 \end{align*}\]</div>
-<p>Recall each subseries  <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span>  converges absolutely, and  <span class="math notranslate nohighlight">\(s_k = \sum_{n=1}^\infty b_k(n)\)</span> . Hence, we have</p>
+<p>Recall each subseries <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span> converges absolutely, and <span class="math notranslate nohighlight">\(s_k = \sum_{n=1}^\infty b_k(n)\)</span>. Hence, we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\abs{\sum_{k=1}^p s_k - s}
-&lt;  \varepsilon \quad \forall  p  \geq  K
+\[\begin{align*}\abs{\sum_{k=1}^p s_k - s}
+&lt; \varepsilon\quad\forall p \geq K
 \end{align*}\]</div>
-<p>Note that the choice of  <span class="math notranslate nohighlight">\(K\)</span>  only depends on  <span class="math notranslate nohighlight">\(\varepsilon\)</span> (through  <span class="math notranslate nohighlight">\(N\)</span> ). Therefore, the series  <span class="math notranslate nohighlight">\(\sum s_k\)</span>  indeed converges to sum  <span class="math notranslate nohighlight">\(a\)</span> .</p>
+<p>Note that the choice of <span class="math notranslate nohighlight">\(K\)</span> only depends on <span class="math notranslate nohighlight">\(\varepsilon\)</span>(through <span class="math notranslate nohighlight">\(N\)</span>). Therefore, the series <span class="math notranslate nohighlight">\(\sum s_k\)</span> indeed converges to sum <span class="math notranslate nohighlight">\(a\)</span>.</p>
 </div>
 <div class="admonition-exercise-1 admonition" id="ex-5">
 <p class="admonition-title">Exercise 1</p>
-<p>Complete the above proof by proving the inequality  <a class="reference internal" href="#equation-eq-106">(6)</a> .</p>
+<p>Complete the above proof by proving the inequality <a class="reference internal" href="#equation-eq-106">(7)</a>.</p>
 </div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
-<p>For each  <span class="math notranslate nohighlight">\(j \in \{1, \ldots, N\}\)</span> , we have  <span class="math notranslate nohighlight">\(g(j) = (k, n)\)</span>  where  <span class="math notranslate nohighlight">\(k\)</span>  and  <span class="math notranslate nohighlight">\(n\)</span>  satisfy</p>
+<p>For each <span class="math notranslate nohighlight">\(j \in \{1, \ldots, N\}\)</span>, we have <span class="math notranslate nohighlight">\(g(j) = (k, n)\)</span> where <span class="math notranslate nohighlight">\(k\)</span> and <span class="math notranslate nohighlight">\(n\)</span> satisfy</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f_k(n) = j,
-\quad  k  \leq  K
-\quad \text{and} \quad
-n  \leq  M
+\quad k \leq K
+\quad\text{and}\quad
+n \leq M
 \end{align*}\]</div>
 <p>This implies</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\set{f_k(n)}{1 \leq k \leq p, 1 \leq n \leq q} \supset \{ 1,  \ldots , N \}
-\end{align*}\]</div>
-<p>provided that  <span class="math notranslate nohighlight">\(p \geq K\)</span>  and  <span class="math notranslate nohighlight">\(q \geq M\)</span> . Inequality  <a class="reference internal" href="#equation-eq-106">(6)</a>  then immediately follows from  <a class="reference internal" href="#equation-eq-107">(5)</a>  since</p>
+\[\begin{align*}\set{f_k(n)}{1 \leq k \leq p, 1 \leq n \leq q}\supset\{1, \ldots, N\}\end{align*}\]</div>
+<p>provided that <span class="math notranslate nohighlight">\(p \geq K\)</span> and <span class="math notranslate nohighlight">\(q \geq M\)</span>. Inequality <a class="reference internal" href="#equation-eq-106">(7)</a> then immediately follows from <a class="reference internal" href="#equation-eq-107">(6)</a> since</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-\sum _ {k=1} ^p  \sum _ {n=1} ^q b_k(n)
-=  \sum _ {k=1} ^p  \sum _ {n=1} ^q a_ {f_k(n)}
-\end{align*}\]</div>
-<p>is a sum of terms including the first  <span class="math notranslate nohighlight">\(N\)</span>  terms of  <span class="math notranslate nohighlight">\(\sum a_n\)</span> .</p>
+\[\begin{align*}\sum_{k=1}^p \sum_{n=1}^q b_k(n)
+= \sum_{k=1}^p \sum_{n=1}^q a_{f_k(n)}\end{align*}\]</div>
+<p>is a sum of terms including the first <span class="math notranslate nohighlight">\(N\)</span> terms of <span class="math notranslate nohighlight">\(\sum a_n\)</span>.</p>
 </div>
 </div>
 
@@ -855,11 +832,11 @@ n  \leq  M
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Infinite%20Series.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="The%20Ratio%20Test%20and%20the%20Root%20Test.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Infinite Series</p>
+            <p class="prev-next-title">The Ratio Test and the Root Test</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Double%20Series.html" title="next page">

@@ -9,7 +9,9 @@ However, as the next theorem will state, $f$ is always integrable w.r.t. the tot
 
 ````{prf:theorem}
 :label: thm:37
-If  $f \in \mathfrak{R}(\alpha)$  on  $[a, b]$ , then  $f \in \mathfrak{R}(V_a^x(\alpha))$  on  $[a, b]$  where  $V_a^x(\alpha)$  is the total variation of  $\alpha$ , which is regarded as a function of  $x$  as in  {prf:ref}`def:3` .
+
+If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $f \in \mathfrak{R}(V_a^x(\alpha))$ on $[a, b]$ where $V_a^x(\alpha)$ is the total variation of $\alpha$, which is regarded as a function of $x$ as in {prf:ref}`def:3`.
+
 ````
 
 Before presenting the proof, we first introduce some notations we shall use as well as the general strategy of this proof.
@@ -18,10 +20,10 @@ For a sub-interval $[x_{k-1}, x_k]$ in the partition $P = \{ x_0, \ldots, x_n \}
 
 ```{math}
 \begin{align*}
-M_k =  \sup _ {x \in[x_{k-1}, x_k]}  f(x),
+M_k = \sup_{x \in[x_{k-1}, x_k]} f(x),
 \quad
-m_k =  \inf _ {x \in[x_{k-1}, x_k]}  f(x)
-\quad \text{and} \quad \Delta  V_k = V_ {x_{k-1}} ^ {x_k} ( \alpha )
+m_k = \inf_{x \in[x_{k-1}, x_k]} f(x)
+\quad\text{and}\quad\Delta V_k = V_{x_{k-1}}^{x_k}(\alpha)
 \end{align*}
 ```
 
@@ -32,8 +34,7 @@ Observe that $V(x)$ is monotonically increasing, hence we shall prove $f$ is int
 ```{math}
 \begin{align*}
 U(P,f,V) - L(P,f,V)
-&=  \sum _k (M_k - m_k)  \Delta  V_k  \\ &=  \sum _k (M_k - m_k)  \left( \Delta  V_k -  \abs{\Delta\alpha_k} \right) +  \sum _k (M_k - m_k)  \abs{\Delta\alpha_k}
-\end{align*}
+&= \sum_k (M_k - m_k) \Delta V_k \\&= \sum_k (M_k - m_k) \left(\Delta V_k - \abs{\Delta\alpha_k}\right)+ \sum_k (M_k - m_k) \abs{\Delta\alpha_k}\end{align*}
 ```
 
 Therefore, we shall focus on bounding each of the two terms on the right-hand side of the above equation.
@@ -42,116 +43,101 @@ We now present the proof as follows.
 
 
 ````{prf:proof}
-If  $f$  is a constant function, then this theorem holds trivially. We assume that  $f$  is non-constant in the rest of the proof. Let  $A$  be given by
+
+If $f$ is a constant function, then this theorem holds trivially. We assume that $f$ is non-constant in the rest of the proof. Let $A$ be given by
 
 ```{math}
 \begin{align*}
-A =  \sup _ {x \in[a, b]}  f(x) -  \inf _ {x \in[a, b]}  f(x)
+A = \sup_{x \in[a, b]} f(x) - \inf_{x \in[a, b]} f(x)
 \end{align*}
 ```
 
-Since  $f$  is non-constant, it is clear that  $A > 0$ .
+Since $f$ is non-constant, it is clear that $A > 0$.
 
-Let  $\varepsilon > 0$  be chosen arbitrarily. Since  $\alpha$  is of bounded variation on  $[a, b]$ , by the definition of total variations, there exists a partition  $P^\prime_\varepsilon$  on  $[a, b]$  such that
+Let $\varepsilon > 0$ be chosen arbitrarily. Since $\alpha$ is of bounded variation on $[a, b]$, by the definition of total variations, there exists a partition $P^\prime_\varepsilon$ on $[a, b]$ such that
 
 ```{math}
 :label: eq:85
 \begin{align}
-V_a^b( \alpha )
-< V(P,  \alpha )
-+  \frac{\varepsilon}{3A} \quad \forall  P  \supset  P^ \prime _ \varepsilon
-\end{align}
+V_a^b(\alpha)
+< V(P, \alpha)
++ \frac{\varepsilon}{3A}\quad\forall P \supset P^\prime_\varepsilon\end{align}
 ```
 
 We shall use this inequality later.
 
-
-
-Now, we prepare another inequality that will be in use. Because  $f \in \mathfrak{R}(\alpha)$ , there exists a partition  $P^{\prime\prime}_\varepsilon$  such that
+Now, we prepare another inequality that will be in use. Because $f \in \mathfrak{R}(\alpha)$, there exists a partition $P^{\prime\prime}_\varepsilon$ such that
 
 ```{math}
 :label: eq:86
-\begin{align}
-\abs{
+\begin{align}\abs{
 \sum \left(f(s_k) - f(t_k)\right)\Delta \alpha_k
-}  <  \frac{\varepsilon}{3} \quad \forall  P  \supset  P^ {\prime\prime} _ \varepsilon
-\end{align}
+} < \frac{\varepsilon}{3}\quad\forall P \supset P^{\prime\prime}_\varepsilon\end{align}
 ```
 
-where  $s_k$  and  $t_k$  are any two points in the  $k$ -th subinterval of  $P$ .
+where $s_k$ and $t_k$ are any two points in the $k$-th subinterval of $P$.
 
-
-
-Let  $P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon$ , and let  $P = \left\{x_0, \ldots, x_n\right \} \supset P_\varepsilon$  be a refinement. We have
+Let $P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon$, and let $P = \left\{x_0, \ldots, x_n\right \} \supset P_\varepsilon$ be a refinement. We have
 
 ```{math}
 \begin{align*}
 U(P,f,V) - L(P,f,V)
-&=  \sum _ {k=1} ^n (M_k - m_k)  \Delta  V_k  \\ &=  \sum _ {k=1} ^n (M_k - m_k)  \left( \Delta  V_k -  \abs{\Delta\alpha_k} \right) +  \sum _ {k=1} ^n (M_k - m_k)  \abs{\Delta\alpha_k}
-\end{align*}
+&= \sum_{k=1}^n (M_k - m_k) \Delta V_k \\&= \sum_{k=1}^n (M_k - m_k) \left(\Delta V_k - \abs{\Delta\alpha_k}\right)+ \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}\end{align*}
 ```
 
-Recall  $A = \sup f - \inf f$ . Hence, the right-hand side of the equality above can be further enlarged to
+Recall $A = \sup f - \inf f$. Hence, the right-hand side of the equality above can be further enlarged to
 
 ```{math}
 :label: eq:87
 \begin{align}
 U(P,f,V) - L(P,f,V)
-\leq  A  \sum _ {k=1} ^n  \left( \Delta  V_k -  \abs{\Delta\alpha_k} \right) +  \sum _ {k=1} ^n (M_k - m_k)  \abs{\Delta\alpha_k}
-\end{align}
+\leq A \sum_{k=1}^n \left(\Delta V_k - \abs{\Delta\alpha_k}\right)+ \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}\end{align}
 ```
 
-Note that  $P \supset P_\varepsilon \supset P^\prime_\varepsilon$ . It then follows from  {eq}`eq:85`  that
+Note that $P \supset P_\varepsilon \supset P^\prime_\varepsilon$. It then follows from {eq}`eq:85` that
 
 ```{math}
-\begin{align*}
-\sum _ {k=1} ^n  \Delta  V_k
-= V_a^b( \alpha )
-< V(P,  \alpha )
-+  \frac{\varepsilon}{3A}
-=  \sum _ {k=1} ^n  \abs{\Delta\alpha_k}
-+  \frac{\varepsilon}{3A}
-\end{align*}
+\begin{align*}\sum_{k=1}^n \Delta V_k
+= V_a^b(\alpha)
+< V(P, \alpha)
++ \frac{\varepsilon}{3A}
+= \sum_{k=1}^n \abs{\Delta\alpha_k}
++ \frac{\varepsilon}{3A}\end{align*}
 ```
 
 Rearranging the terms, we obtain
 
 ```{math}
 :label: eq:88
-\begin{align}
-\sum _ {k=1} ^n  \left( \Delta  V_k -  \abs{\Delta\alpha_k} \right) <  \frac{\varepsilon}{3A}
-\end{align}
+\begin{align}\sum_{k=1}^n \left(\Delta V_k - \abs{\Delta\alpha_k}\right)< \frac{\varepsilon}{3A}\end{align}
 ```
 
-By combining  {eq}`eq:87`  and  {eq}`eq:88` , we have
+By combining {eq}`eq:87` and {eq}`eq:88`, we have
 
 ```{math}
 :label: eq:89
 \begin{align}
 U(P,f,V) - L(P,f,V)
-<  \frac{\varepsilon}{3}
-+  \sum _ {k=1} ^n (M_k - m_k)  \abs{\Delta\alpha_k}
-\end{align}
+< \frac{\varepsilon}{3}
++ \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}\end{align}
 ```
 
-It requires much more work to bound the term  $\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}$  in  {eq}`eq:89` . Let  $h$  be a positive number given by
+It requires much more work to bound the term $\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}$ in {eq}`eq:89`. Let $h$ be a positive number given by
 
 ```{math}
 \begin{align*}
-h =  \frac{\varepsilon}{3(V_a^b (\alpha) + 1)}
-\end{align*}
+h = \frac{\varepsilon}{3(V_a^b (\alpha) + 1)}\end{align*}
 ```
 
-Let  $I(P), J(P) \subset \left\{0, 1, \ldots, n\right \}$  be defined as
+Let $I(P), J(P) \subset \left\{0, 1, \ldots, n\right \}$ be defined as
 
 ```{math}
 \begin{align*}
-I(P) &=  \set{k}{\Delta\alpha_k \geq 0} &
-J(P) &=  \set{k}{\Delta\alpha_k < 0}
-\end{align*}
+I(P) &= \set{k}{\Delta\alpha_k \geq 0}&
+J(P) &= \set{k}{\Delta\alpha_k < 0}\end{align*}
 ```
 
-For  $k \in I(P)$ , we can choose a pair of points,  $s_k$  and  $t_k$ , in the  $k$ -th subinterval of  $P$  such that
+For $k \in I(P)$, we can choose a pair of points, $s_k$ and $t_k$, in the $k$-th subinterval of $P$ such that
 
 ```{math}
 \begin{align*}
@@ -163,14 +149,13 @@ In this case,
 
 ```{math}
 :label: eq:90
-\begin{align}
-(M_k - m_k) \abs{\Delta\alpha_k}
-<  \left(f (s_k) - f(t_k) + h \right)\ abs {\Delta\alpha_k}
-=   \left(f (s_k) - f(t_k) + h \right) \Delta \alpha _k
+\begin{align}(M_k - m_k)\abs{\Delta\alpha_k}
+< \left(f(s_k) - f(t_k) + h\right)\abs{\Delta\alpha_k}
+=  \left(f(s_k) - f(t_k) + h\right)\Delta\alpha_k
 \end{align}
 ```
 
-On the other hand, for  $k \in J(P)$ , we can choose a pair of points,  $s_k$  and  $t_k$ , in the  $k$ -th subinterval of  $P$  such that
+On the other hand, for $k \in J(P)$, we can choose a pair of points, $s_k$ and $t_k$, in the $k$-th subinterval of $P$ such that
 
 ```{math}
 \begin{align*}
@@ -182,62 +167,51 @@ It then follows that
 
 ```{math}
 :label: eq:91
-\begin{align}
-(M_k - m_k) \abs{\Delta\alpha_k}
-<  \left(- f(s_k) + f(t_k) + h \right)\ abs {\Delta\alpha_k}
-=   \left(f (s_k) - f(t_k) - h \right) \Delta \alpha _k
+\begin{align}(M_k - m_k)\abs{\Delta\alpha_k}
+< \left(-f(s_k) + f(t_k) + h\right)\abs{\Delta\alpha_k}
+=  \left(f(s_k) - f(t_k) - h\right)\Delta\alpha_k
 \end{align}
 ```
 
-Compare  {eq}`eq:90`  and  {eq}`eq:91` , we conclude
+Compare {eq}`eq:90` and {eq}`eq:91`, we conclude
 
 ```{math}
-\begin{align*}
-(M_k - m_k) \abs{\Delta\alpha_k}
-<  \left(f (s_k) - f(t_k) \right) \Delta \alpha _k
-+ h  \abs{\Delta\alpha_k} \quad \forall  k  \in \left\{0 , 1,  \ldots , n \right \}
-\end{align*}
+\begin{align*}(M_k - m_k)\abs{\Delta\alpha_k}
+< \left(f(s_k) - f(t_k)\right)\Delta\alpha_k
++ h \abs{\Delta\alpha_k}\quad\forall k \in\left\{0, 1, \ldots, n\right\}\end{align*}
 ```
 
 Therefore,
 
 ```{math}
-\begin{align*}
-\sum _ {k=1} ^n (M_k - m_k)  \abs{\Delta\alpha_k} &<  \sum _ {k=1} ^n  \left(f (s_k) - f(t_k) \right) \Delta \alpha _k + h  \sum _ {k=1} ^n  \abs{\Delta\alpha_k} \\ & \leq \sum _ {k=1} ^n  \left(f (s_k) - f(t_k) \right) \Delta \alpha _k + h V_a^b ( \alpha )  \\ &<  \frac{\varepsilon}{3}  +  \sum _ {k=1} ^n  \left(f (s_k) - f(t_k) \right)\ Delta \alpha _k  \\ & \leq \frac{\varepsilon}{3}  +  \abs{\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k}
-\end{align*}
+\begin{align*}\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}&< \sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k + h \sum_{k=1}^n \abs{\Delta\alpha_k}\\&\leq\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k + h V_a^b (\alpha) \\&< \frac{\varepsilon}{3} + \sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k \\&\leq\frac{\varepsilon}{3} + \abs{\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k}\end{align*}
 ```
 
 In summary,
 
 ```{math}
 :label: eq:92
-\begin{align}
-\sum _ {k=1} ^n (M_k - m_k)  \abs{\Delta\alpha_k}
-<  \frac{\varepsilon}{3}  +  \abs{\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k}
-\end{align}
+\begin{align}\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+< \frac{\varepsilon}{3} + \abs{\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k}\end{align}
 ```
 
-Since  $P \supset P_\varepsilon \supset P^{\prime\prime}_\varepsilon$ , we may apply  {eq}`eq:86`  to  {eq}`eq:92`  and obtain that
+Since $P \supset P_\varepsilon \supset P^{\prime\prime}_\varepsilon$, we may apply {eq}`eq:86` to {eq}`eq:92` and obtain that
 
 ```{math}
 :label: eq:93
-\begin{align}
-\sum _ {k=1} ^n (M_k - m_k)  \abs{\Delta\alpha_k}
-<  \frac{\varepsilon}{3}  +  \frac{\varepsilon}{3}
-=  \frac{2\varepsilon}{3}
-\end{align}
+\begin{align}\sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
+< \frac{\varepsilon}{3} + \frac{\varepsilon}{3}
+= \frac{2\varepsilon}{3}\end{align}
 ```
-
-
-Finally, by combining  {eq}`eq:89`  and  {eq}`eq:93` , we have
+Finally, by combining {eq}`eq:89` and {eq}`eq:93`, we have
 
 ```{math}
 \begin{align*}
 U(P,f,V) - L(P,f,V)
-<  \frac{\varepsilon}{3}  +  \frac{2\varepsilon}{3}
-=  \varepsilon
-\end{align*}
+< \frac{\varepsilon}{3} + \frac{2\varepsilon}{3}
+= \varepsilon\end{align*}
 ```
 
-Therefore,  $f \in \mathfrak{R}(V(x))$  by  {prf:ref}`thm:28`  since  $V(x)$  is increasing.
+Therefore, $f \in \mathfrak{R}(V(x))$ by {prf:ref}`thm:28` since $V(x)$ is increasing.
+
 ````
