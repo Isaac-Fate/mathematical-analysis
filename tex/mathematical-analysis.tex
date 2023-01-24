@@ -2,7 +2,7 @@
 
 % index page
 \usepackage{imakeidx}
-\makeindex[columns = 2, intoc, options= -s index_style.ist]
+\makeindex[columns=2, intoc, options=-s index_style.ist]
 
 % Title and author
 \title{Mathematical Analysis}
@@ -15,14 +15,24 @@
 % Print title and cover page
 \maketitle
 
+%--------
+% preface
+%--------
+
+% \chapter*{Preface}
+
+% \section*{Question to Pounder}
+
+%------------------------------
+
 % Print table of contents
 \frontmatter
 \tableofcontents
 \mainmatter
 
-%------------------------------
-% Main document starts from here
-%------------------------------
+%-------------------------------
+% main document starts from here
+%-------------------------------
 
 %==============================
 
@@ -143,17 +153,33 @@ Recall the convergence of a series $\sum a_n$ is defined by the convergence of t
     \begin{enumerate}
         \item the set of its partial sums is bounded, that is, 
         \begin{align*}
-            \abs{\sum_{k=1}^n a_k} \leq A
+            \abs{\sum_{k=1}^n a_k} \leq M
             \quad \forall n \in \N^\ast
         \end{align*}
-        for some positive constant $A$, and
-        \item even more generally, all finite sums of consecutive terms are bounded by a common constant, that is, there exists $A > 0$ such that 
+        for some positive constant $M$, and
+        \item even more generally, all finite sums of consecutive terms are bounded by a common constant, that is, there exists $M > 0$ such that 
         \begin{align*}
-            \abs{\sum_{k=m}^n a_k} \leq A
+            \abs{\sum_{k=m}^n a_k} \leq M
             \quad \forall m \in \N^\ast \; 
             \forall n \geq m
         \end{align*}
     \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    % TODO
+\end{proof}
+
+%------------------------------
+
+\begin{theorem}[Weierstrass M-Test] \label{thm:56}
+    Let $\{M_n\}$ be a sequence of non=negative terms such that 
+    \begin{align*}
+        \abs{f_n(x)} \leq M_n
+        \quad \forall n \in \N^\ast \; 
+        \forall x \in S
+    \end{align*}
+    Then $\sum f_n(x)$ converges uniformly on $S$ if $\sum M_n$ converges.
 \end{theorem}
 
 \begin{proof}
@@ -189,7 +215,7 @@ Recall the convergence of a series $\sum a_n$ is defined by the convergence of t
 
 %------------------------------
 
-\begin{theorem}[Ratio Test]
+\begin{theorem}[Ratio Test] \label{thm:54}
     Given a series $\sum a_n$ with nonzero complex terms, let 
     \begin{align*}
         r = \liminf_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}}
@@ -246,6 +272,115 @@ Recall the convergence of a series $\sum a_n$ is defined by the convergence of t
     (Proof of 3) See Example~\ref{eg:7} and Example~\ref{eg:8}.
 \end{proof}
 
+%------------------------------
+
+Whenever the ratio test is inclusive, one can always try the \textbf{root test}\index{root test} as we shall soon introduce. It also has a close connection with the power series and the concept of the radius of convergence, which we shall cover in Section~\ref{sec:2}.
+
+\begin{theorem}[Root Test] \label{thm:55}
+    Let $\sum a_n$ be a series of complex numbers. Let 
+    \begin{align*}
+        \rho = \limsup_{n \to \infty} \sqrt[n]{\abs{a_n}}
+    \end{align*}
+    Then
+    \begin{enumerate}
+        \item $\sum a_n$ converges absolutely if $\rho < 1$,
+        \item $\sum a_n$ diverges if $\rho > 1$, and 
+        \item the test is inclusive if $\rho = 1$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    (Proof of 1) Choose $\varepsilon > 0$ such that $\rho + \varepsilon < 1$. By the property of limit superior, there exists $N \in \N^\ast$ such that 
+    \begin{align*}
+        \sqrt[n]{\abs{a_n}} < \rho + \varepsilon
+        \quad \forall n \geq N
+    \end{align*}
+    Hence, 
+    \begin{align*}
+        \abs{a_n} < (\rho+\varepsilon)^n
+        \quad \forall n \geq N
+    \end{align*}
+    Note that the geometric series $\sum (\rho+\varepsilon)^n$ converges. Hence, $\sum \abs{a_n}$ converges by the comparison test. In other words, $\sum a_n$ converges absolutely.
+
+    (Proof of 2) Choose $\varepsilon > 0$ such that $\rho-\varepsilon > 1$. Again by the property of limit superior, for any integer $N \in \N^\ast$, we can always find an integer $n \geq N$ such that 
+    \begin{align*}
+        \sqrt[n]{\abs{a_n}} > \rho - \varepsilon
+    \end{align*}
+    That is, 
+    \begin{align*}
+        \abs{a_n} > (\rho - \varepsilon)^n 
+        \geq (\rho - \varepsilon)
+    \end{align*}
+    This implies that the sequence $\{\abs{a_n}\}$ cannot converge to zero. Therefore, $\sum a_n$ diverges by Corollary~\ref{cor:2}.
+
+    (Proof of 3) See Example~\ref{eg:7} and Example~\ref{eg:8}.
+\end{proof}
+
+%------------------------------
+
+\begin{example}
+    Let
+    \begin{align*}
+        a_n = \begin{cases}
+            \brk{\frac{i}{2}}^{n-1},
+            &\text{if $n$ is odd} \\ 
+            \brk{\frac{i}{2}}^{n},
+            &\text{if $n$ is even} \\ 
+        \end{cases},
+        \quad n \in \N^\ast
+    \end{align*}
+    Let us investigate whether $\sum a_n$ converges or not. 
+
+    We first apply the ratio test. Note that 
+    \begin{align*}
+        \abs{\frac{a_{n+1}}{a_n}} = 
+        \begin{cases}
+            \frac{1}{4},
+            &\text{if $n$ is odd} \\ 
+            1,
+            &\text{if $n$ is even} \\ 
+        \end{cases}
+    \end{align*}
+    Hence, 
+    \begin{align*}
+        r = \liminf_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}} 
+        = \frac{1}{4}
+        \quad \text{and} \quad 
+        R = \limsup_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}} 
+        = 1
+    \end{align*}
+    The ratio test is inconclusive.
+
+    Now, let us try the root test. We have 
+    \begin{align*}
+        \sqrt[n]{\abs{a_n}} = 
+        \begin{cases}
+            \brk{\frac{1}{2}}^{1 - 1 / n},
+            &\text{if $n$ is odd} \\ 
+            \frac{1}{2},
+            &\text{if $n$ is even} \\ 
+        \end{cases}
+    \end{align*}
+    Taking the limit superior, we obtain
+    \begin{align*}
+        \limsup_{n \to \infty} \sqrt[n]{\abs{a_n}}
+        = \frac{1}{2} < 1
+    \end{align*}
+    Therefore, $\sum a_n$ converges absolutely.
+\end{example}
+
+%------------------------------
+
+From the above example, the reader may conjecture that the root test is somehow more powerful than the ratio test. This is indeed true as we will see in the next theorem.
+
+\begin{theorem}
+    % TODO
+\end{theorem}
+
+%------------------------------
+
+We will see in the following two examples that neither the ratio test nor the root test will be helpful.
+
 \begin{example}
     Let
     \begin{align*}
@@ -253,13 +388,23 @@ Recall the convergence of a series $\sum a_n$ is defined by the convergence of t
     \end{align*}
     We know that this series diverges. 
     
-    Since $\abs{ a_{n+1} / a_n } = n / (n+1)$, we have 
+    We first try the ratio test. Since $\abs{ a_{n+1} / a_n } = n / (n+1)$, we have 
     \begin{align*}
         \liminf_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}} 
         = \limsup_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}}
         = \lim_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}}
         = 1
     \end{align*}
+    Because the limit inferior and limit superior of the ratio are both $1$, the ratio test is inclusive.
+
+    As for the root test, we find 
+    \begin{align*}
+        \limsup_{n \to \infty} \sqrt[n]{\abs{a_n}}
+        = \lim_{n \to \infty} \sqrt[n]{\abs{a_n}}
+        = \lim_{n \to \infty} \frac{1}{\sqrt[n]{n}}
+        = 1
+    \end{align*}
+    Hence, the root test also fails.
     \label{eg:7}
 \end{example}
 
@@ -270,13 +415,24 @@ Recall the convergence of a series $\sum a_n$ is defined by the convergence of t
     \end{align*}
     This series converges.
     
-    In this case, $\abs{ a_{n+1} / a_n } = n^2 / (n+1)^2$. We have 
+    For the ratio test, since $\abs{ a_{n+1} / a_n } = n^2 / (n+1)^2$, we have 
     \begin{align*}
         \liminf_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}} 
         = \limsup_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}}
         = \lim_{n \to \infty} \abs{\frac{a_{n+1}}{a_n}}
         = 1
     \end{align*}
+    The ratio test fails.
+
+    Applying the root test, we find
+    \begin{align*}
+        \limsup_{n \to \infty} \sqrt[n]{\abs{a_n}}
+        = \lim_{n \to \infty} \sqrt[n]{\abs{a_n}}
+        = \lim_{n \to \infty} \frac{1}{\sqrt[n]{n^2}}
+        = \lim_{n \to \infty} \brk{\frac{1}{\sqrt[n]{n}} \times \frac{1}{\sqrt[n]{n}}}
+        = 1
+    \end{align*}
+    Hence, the root test also fails.
     \label{eg:8}
 \end{example}
 
@@ -797,10 +953,17 @@ The absolute convergence of a double series will also imply convergence of itsel
 \end{theorem}
 
 \begin{proof}
-    Let $\varepsilon > 0$ be chosen arbitrarily. Suppose $\sum \abs{a_n}$ converges to $S$. By Cauchy's criterion for series, there exist $N_1, N_2 \in \N^\ast$ such that 
+    Let $\varepsilon > 0$ be chosen arbitrarily. Firstly, because $\sum b_n$ converges, by Theorem~\ref{thm:51}, there exists $M > 0$ such that
+    \begin{align}
+        \abs{\sum_{k=m}^n b_k} \leq M
+        \quad \forall m \in \N^\ast \; 
+        \forall n \geq M
+        \label{eq:112}
+    \end{align}
+    Suppose $\sum \abs{a_n}$ converges to $S$. Moreover, by Cauchy's criterion for series, there exist $N_1, N_2 \in \N^\ast$ such that 
     \begin{align}
         \sum_{k=m}^{m+j} \abs{a_k}
-        < \frac{\varepsilon / 2}{\abs{B} + \varepsilon}
+        < \frac{\varepsilon / 2}{\abs{M}}
         \quad
         \forall m \geq N_1 \; 
         \forall j \in \N
@@ -815,15 +978,7 @@ The absolute convergence of a double series will also imply convergence of itsel
         \forall j \in \N
         \label{eq:111}
     \end{align}
-    Moreover, there also exists $N_3 \in \N^\ast$ such that
-    \begin{align}
-        \abs{\sum_{k=1}^m b_k - B}
-        < \varepsilon
-        \quad
-        \forall m \geq N_3
-        \label{eq:112}
-    \end{align}
-    Let $N = \max \{N_1, N_2, N_3\}$.
+    Let $N = \max \{N_1, N_2\}$.
 
     Let $A_n$, $B_n$ and $C_n$ denote
     \begin{align*}
@@ -868,17 +1023,17 @@ The absolute convergence of a double series will also imply convergence of itsel
         \abs{a_{n-N+1}} \abs{b_{N} + \cdots + b_n}
         + \cdots
         + \abs{a_n} \abs{b_{1} + \cdots + b_n} \\
-        < \abs{a_{n-N+1}} (\abs{B} + \varepsilon)
+        < \abs{a_{n-N+1}} M
         + \cdots
-        + \abs{a_n} (\abs{B} + \varepsilon)
-        = (\abs{a_{n-N+1}} + \cdots + \abs{a_n}) (\abs{B} + \varepsilon)
+        + \abs{a_n} M
+        = (\abs{a_{n-N+1}} + \cdots + \abs{a_n}) M
         \label{eq:115}
     \end{multline}
     By using \eqref{eq:110}, the right-hand side of \eqref{eq:115} can be further enlarged to 
     \begin{align*}
-        (\abs{a_{n-N+1}} + \cdots + \abs{a_n}) (\abs{B} + \varepsilon)
-        < \frac{\varepsilon / 2}{\abs{B} + \varepsilon}
-        \times (\abs{B} + \varepsilon)
+        (\abs{a_{n-N+1}} + \cdots + \abs{a_n}) M
+        < \frac{\varepsilon / 2}{M}
+        \cdot M
         = \varepsilon / 2
     \end{align*}
     Hence, 
@@ -901,8 +1056,6 @@ The absolute convergence of a double series will also imply convergence of itsel
         \lim_{n \to \infty} A_n B_n - C_n = 0
     \end{align*}
     But since $\lim_{n \to \infty} A_n = A$ and $\lim_{n \to \infty} B_n = B$, by the algebraic properties of limits, we conclude that the limit of $\{C_n\}$ also exists, and it equals $AB$. In other words, $\sum c_n$ converges to $AB$.
-
-
 \end{proof}
 
 %==============================
@@ -4947,6 +5100,99 @@ The following theorem is another version of Theorem~\ref{thm:44} in terms of a s
 \begin{note}
     Equation \eqref{eq:103} is also known as \textbf{term-by-term differentiation}\index{term-by-term differentiation}.
 \end{note}
+
+%------------------------------
+
+\section{Power Series} \label{sec:2}
+
+A \textbf{power series}\index{power series} (in variable $z \in \C$) has the form 
+\begin{align*}
+    \sum_{n=0}^\infty a_n (z - z_0)^n
+\end{align*}
+where $a_n \in \C$ is called the coefficient of the $n$-th term, and $z_0 \in \C$ is often referred to as the center of the series. 
+
+With every power series, there is associated a \textbf{disk of convergence}\index{disk of convergence} such that the series converges if $\abs{z - z_0} < r$ whereas diverges if $\abs{z - z_0} > r$. The number $r$ is called \textbf{radius of convergence}\index{radius of convergence}. If $r$ is a \textit{finite positive} number, then the disk of convergence is exactly the open ball in the complex plane with radius $r$, $B_r(z_0)$. However, we allow $r$ to take the value of $0$ or $\infty$ in extreme cases. When the power series is nowhere convergent except for $z = z_0$, then we say the radius of convergence is zero, i.e., $r = 0$. And if the power series converges everywhere in the complex plane, then we write $r = \infty$.
+
+%------------------------------
+
+\begin{theorem}
+    Given a power series $\sum_{n=0}^\infty a_n (z - z_0)^n$, let 
+    \begin{align*}
+        \lambda = \limsup_{n \to \infty} \sqrt[n]{\abs{a_n}}
+        \quad \text{and} \quad
+        r = \frac{1}{\lambda}
+    \end{align*}
+    (where $r = 0$ if $\lambda = \infty$ and $r = \infty$ if $\lambda = 0$.) Then 
+    \begin{enumerate}
+        \item the power series converges absolutely if $\abs{z - z_0} < r$, and
+        \item diverges if $\abs{z - z_0} > r$.
+    \end{enumerate}
+    Furthermore, the power series, regarded as a series of functions in variable $z$, converges uniformly on any compact subset $K$ interior to the disk of convergence.
+\end{theorem}
+
+\begin{proof}
+    (Proof of 1 and 2) Applying the root test (Theorem~\ref{thm:55}), we find 
+    \begin{align*}
+        \limsup_{n \to \infty} \sqrt[n]{\abs{a_n(z - z_0)^n}}
+        = \abs{z - z_0} \limsup_{n \to \infty} \sqrt[n]{\abs{a_n}}
+        = \abs{z - z_0} \lambda
+    \end{align*}
+    We investigate the value of $\abs{z - z_0} \lambda$ case by case.
+
+    (Case Where $\lambda = \infty$ and $r = 0$) If $\lambda = \infty$, then for any $z$ such that $\abs{z - z_0} > r = 0$, we have $\abs{z - z_0} \lambda = \infty > 1$. Hence, the power series diverges.
+    \begin{note}
+        Note that, in this case, statement 1 is \textbf{vacuously true} since the hypothesis $\abs{z - z_0} < r = 0$ is false. In fact, this theorem does not conclude that $\sum a_n (z-z_0)^n$ converges (absolutely) if $z = z_0$ when $\lambda = \infty$. But we know this is true.
+    \end{note}
+
+    (Case Where $\lambda = 0$ and $r = \infty$) In this case, $\abs{z - z_0} \lambda = 0$. Hence, the power series converges absolutely for any $z \in \C$. And we note that statement 2 is vacuously true in this case.
+
+    (Case Where $0 < r < \infty$) If $\abs{z-z_0} < r$, then
+    \begin{align*}
+        \abs{z - z_0} \lambda
+        < r \lambda
+        = \frac{1}{\lambda} \cdot \lambda
+        = 1
+    \end{align*}
+    Hence, the power series converges absolutely. And if $\abs{z-z_0} < r$, we then have
+    \begin{align*}
+        \abs{z - z_0} \lambda
+        > r \lambda
+        = \frac{1}{\lambda} \cdot \lambda
+        = 1
+    \end{align*}
+    Therefore, it diverges when $\abs{z - z_0} > r$.
+
+    (Proof of Uniform Convergence) We intend to prove that the power series converges uniformly using the Weierstrass M-test (Theorem~\ref{thm:56}). Define
+    \begin{align*}
+        g(z) = \abs{z - z_0},
+        \quad z \in K
+    \end{align*}
+    Note that $g$ is a continuous real-valued function defined on a compact set. Hence, $g$ attains its maximum on $K$ by Theorem~\ref{thm:6}, that is, there exist $p \in K$ such that 
+    \begin{align*}
+        g(p) = \sup_{z \in K} g(z)
+        = \sup_{z \in K} \abs{z - z_0}
+    \end{align*}
+    It then follows that 
+    \begin{align*}
+        \abs{a_n (z - z_0)^n}
+        = \abs{a_n} \abs{z - z_0}^n
+        \leq \abs{a_n} [g(p)]^n
+        = \abs{a_n} \abs{p - z_0}^n
+    \end{align*}
+    Let 
+    \begin{align*}
+        M_n = \abs{a_n} \abs{p - z_0}^n
+    \end{align*}
+    Then the power series converges uniformly on $K$ if we can show that $\sum M_n$ converges. Indeed, by applying the root test, we have 
+    \begin{align*}
+        \limsup_{n \to \infty} \sqrt[n]{\abs{M_n}}
+        = \abs{p - z_0} \limsup_{n \to \infty} \sqrt[n]{\abs{a_n}}
+        = \abs{p - z_0} \lambda
+        < r \lambda
+        = 1
+    \end{align*}
+    This completes the proof.
+\end{proof}
 
 %==============================
 
