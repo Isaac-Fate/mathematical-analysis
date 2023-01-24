@@ -89,7 +89,7 @@ g(z) = \abs{z - z_0},
 \end{align*}
 ```
 
-Note that $g$ is a real-valued function defined on a compact set. Hence, $g$ attains its maximum on $K$ by {prf:ref}`thm:6`, that is, there exist $p \in K$ such that
+Note that $g$ is a continuous real-valued function defined on a compact set. Hence, $g$ attains its maximum on $K$ by {prf:ref}`thm:6`, that is, there exist $p \in K$ such that
 
 ```{math}
 \begin{align*}
@@ -126,6 +126,6 @@ Then the power series converges uniformly on $K$ if we can show that $\sum M_n$ 
 \end{align*}
 ```
 
-this completes the proof.
+This completes the proof.
 
 ````

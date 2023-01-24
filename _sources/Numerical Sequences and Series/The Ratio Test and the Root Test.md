@@ -138,6 +138,81 @@ This implies that the sequence $\{\abs{a_n}\}$ cannot converge to zero. Therefor
 
 ````
 
+````{prf:example}
+
+Let
+
+```{math}
+\begin{align*}
+a_n = \begin{cases}
+\brk{\frac{i}{2}}^{n-1},
+&\text{if $n$ is odd} \\
+\brk{\frac{i}{2}}^{n},
+&\text{if $n$ is even} \\
+\end{cases},
+\quad n \in\N^\ast\end{align*}
+```
+
+Let us investigate whether $\sum a_n$ converges or not.
+
+We first apply the ratio test. Note that
+
+```{math}
+\begin{align*}\abs{\frac{a_{n+1}}{a_n}} =
+\begin{cases}
+\frac{1}{4},
+&\text{if $n$ is odd} \\
+1,
+&\text{if $n$ is even} \\
+\end{cases}\end{align*}
+```
+
+Hence,
+
+```{math}
+\begin{align*}
+r = \liminf_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
+= \frac{1}{4}\quad\text{and}\quad
+R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
+= 1
+\end{align*}
+```
+
+The ratio test is inconclusive.
+
+Now, let us try the root test. We have
+
+```{math}
+\begin{align*}\sqrt[n]{\abs{a_n}} =
+\begin{cases}
+\brk{\frac{1}{2}}^{1 - 1 / n},
+&\text{if $n$ is odd} \\
+\frac{1}{2},
+&\text{if $n$ is even} \\
+\end{cases}\end{align*}
+```
+
+Taking the limit superior, we obtain
+
+```{math}
+\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
+= \frac{1}{2} < 1
+\end{align*}
+```
+
+Therefore, $\sum a_n$ converges absolutely.
+
+````
+
+From the above example, the reader may conjecture that the root test is somehow more powerful than the ratio test. This is indeed true as we will see in the next theorem.
+
+
+````{prf:theorem}
+
+TODO
+
+````
+
 We will see in the following two examples that neither the ratio test nor the root test will be helpful.
 
 

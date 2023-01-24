@@ -637,7 +637,7 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{n \to \infty}\abs{a_n} = \infty\end{align*}\]</div>
 <p>Therefore, <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges by <a class="reference internal" href="Infinite%20Series.html#cor:2">Corollary 1</a>.</p>
-<p>(Proof of 3) See <a class="reference internal" href="#eg:7">Example 1</a> and <a class="reference internal" href="#eg:8">Example 2</a>.</p>
+<p>(Proof of 3) See <a class="reference internal" href="#eg:7">Example 2</a> and <a class="reference internal" href="#eg:8">Example 3</a>.</p>
 </div>
 <p id="index-0">Whenever the ratio test is inclusive, one can always try the <strong>root test</strong> as we shall soon introduce. It also has a close connection with the power series and the concept of the radius of convergence, which we shall cover in <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Power%20Series.html"><span class="doc">Power Series</span></a>.</p>
 <div class="proof theorem admonition" id="thm:55">
@@ -673,11 +673,65 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 \geq(\rho - \varepsilon)
 \end{align*}\]</div>
 <p>This implies that the sequence <span class="math notranslate nohighlight">\(\{\abs{a_n}\}\)</span> cannot converge to zero. Therefore, <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges by <a class="reference internal" href="Infinite%20Series.html#cor:2">Corollary 1</a>.</p>
-<p>(Proof of 3) See <a class="reference internal" href="#eg:7">Example 1</a> and <a class="reference internal" href="#eg:8">Example 2</a>.</p>
+<p>(Proof of 3) See <a class="reference internal" href="#eg:7">Example 2</a> and <a class="reference internal" href="#eg:8">Example 3</a>.</p>
 </div>
-<p>We will see in the following two examples that neither the ratio test nor the root test will be helpful.</p>
-<div class="proof example admonition" id="eg:7">
+<div class="proof example admonition" id="example-2">
 <p class="admonition-title"><span class="caption-number">Example 1 </span></p>
+<div class="example-content section" id="proof-content">
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+a_n = \begin{cases}
+\brk{\frac{i}{2}}^{n-1},
+&amp;\text{if $n$ is odd} \\
+\brk{\frac{i}{2}}^{n},
+&amp;\text{if $n$ is even} \\
+\end{cases},
+\quad n \in\N^\ast\end{align*}\end{split}\]</div>
+<p>Let us investigate whether <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges or not.</p>
+<p>We first apply the ratio test. Note that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}\abs{\frac{a_{n+1}}{a_n}} =
+\begin{cases}
+\frac{1}{4},
+&amp;\text{if $n$ is odd} \\
+1,
+&amp;\text{if $n$ is even} \\
+\end{cases}\end{align*}\end{split}\]</div>
+<p>Hence,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+r = \liminf_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
+= \frac{1}{4}\quad\text{and}\quad
+R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
+= 1
+\end{align*}\]</div>
+<p>The ratio test is inconclusive.</p>
+<p>Now, let us try the root test. We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}\sqrt[n]{\abs{a_n}} =
+\begin{cases}
+\brk{\frac{1}{2}}^{1 - 1 / n},
+&amp;\text{if $n$ is odd} \\
+\frac{1}{2},
+&amp;\text{if $n$ is even} \\
+\end{cases}\end{align*}\end{split}\]</div>
+<p>Taking the limit superior, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
+= \frac{1}{2} &lt; 1
+\end{align*}\]</div>
+<p>Therefore, <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely.</p>
+</div>
+</div><p>From the above example, the reader may conjecture that the root test is somehow more powerful than the ratio test. This is indeed true as we will see in the next theorem.</p>
+<div class="proof theorem admonition" id="theorem-3">
+<p class="admonition-title"><span class="caption-number">Theorem 9 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>TODO</p>
+</div>
+</div><p>We will see in the following two examples that neither the ratio test nor the root test will be helpful.</p>
+<div class="proof example admonition" id="eg:7">
+<p class="admonition-title"><span class="caption-number">Example 2 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
@@ -701,7 +755,7 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 <p>Hence, the root test also fails.</p>
 </div>
 </div><div class="proof example admonition" id="eg:8">
-<p class="admonition-title"><span class="caption-number">Example 2 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 3 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">

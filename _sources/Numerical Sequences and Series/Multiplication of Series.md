@@ -30,12 +30,21 @@ Let $\sum a_n$ and $\sum b_n$ be two series that converge to sums $A$ and $B$, r
 
 ````{prf:proof}
 
-Let $\varepsilon > 0$ be chosen arbitrarily. Suppose $\sum \abs{a_n}$ converges to $S$. By Cauchy's criterion for series, there exist $N_1, N_2 \in \N^\ast$ such that
+Let $\varepsilon > 0$ be chosen arbitrarily. Firstly, because $\sum b_n$ converges, by {prf:ref}`thm:51`, there exists $M > 0$ such that
+
+```{math}
+:label: eq:112
+\begin{align}\abs{\sum_{k=m}^n b_k}\leq M
+\quad\forall m \in\N^\ast\;\forall n \geq M
+\end{align}
+```
+
+Suppose $\sum \abs{a_n}$ converges to $S$. Moreover, by Cauchy's criterion for series, there exist $N_1, N_2 \in \N^\ast$ such that
 
 ```{math}
 :label: eq:110
 \begin{align}\sum_{k=m}^{m+j}\abs{a_k}
-< \frac{\varepsilon / 2}{\abs{B} + \varepsilon}\quad\forall m \geq N_1 \;\forall j \in\N\end{align}
+< \frac{\varepsilon / 2}{\abs{M}}\quad\forall m \geq N_1 \;\forall j \in\N\end{align}
 ```
 
 and
@@ -46,16 +55,7 @@ and
 < \frac{\varepsilon / 2}{S + 1}\quad\forall m \geq N_2 \;\forall j \in\N\end{align}
 ```
 
-Moreover, there also exists $N_3 \in \N^\ast$ such that
-
-```{math}
-:label: eq:112
-\begin{align}\abs{\sum_{k=1}^m b_k - B}
-< \varepsilon\quad\forall m \geq N_3
-\end{align}
-```
-
-Let $N = \max \{N_1, N_2, N_3\}$.
+Let $N = \max \{N_1, N_2\}$.
 
 Let $A_n$, $B_n$ and $C_n$ denote
 
@@ -102,18 +102,18 @@ Meanwhile, applying {eq}`eq:112` to the last $N$ terms on the right-hand side of
 \begin{multline}\abs{a_{n-N+1}}\abs{b_{N} + \cdots + b_n}
 + \cdots
 + \abs{a_n}\abs{b_{1} + \cdots + b_n}\\
-< \abs{a_{n-N+1}}(\abs{B} + \varepsilon)
+< \abs{a_{n-N+1}} M
 + \cdots
-+ \abs{a_n}(\abs{B} + \varepsilon)
-= (\abs{a_{n-N+1}} + \cdots + \abs{a_n}) (\abs{B} + \varepsilon)
++ \abs{a_n} M
+= (\abs{a_{n-N+1}} + \cdots + \abs{a_n}) M
 \end{multline}
 ```
 
 By using {eq}`eq:110`, the right-hand side of {eq}`eq:115` can be further enlarged to
 
 ```{math}
-\begin{align*}(\abs{a_{n-N+1}} + \cdots + \abs{a_n}) (\abs{B} + \varepsilon)
-< \frac{\varepsilon / 2}{\abs{B} + \varepsilon}\times(\abs{B} + \varepsilon)
+\begin{align*}(\abs{a_{n-N+1}} + \cdots + \abs{a_n}) M
+< \frac{\varepsilon / 2}{M}\cdot M
 = \varepsilon / 2
 \end{align*}
 ```
@@ -144,7 +144,5 @@ Therefore, the limit of $\{ A_n B_n - C_n \}$ exists, and it equals zero, that i
 ```
 
 But since $\lim_{n \to \infty} A_n = A$ and $\lim_{n \to \infty} B_n = B$, by the algebraic properties of limits, we conclude that the limit of $\{C_n\}$ also exists, and it equals $AB$. In other words, $\sum c_n$ converges to $AB$.
-
-
 
 ````

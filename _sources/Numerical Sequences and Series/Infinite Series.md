@@ -61,15 +61,15 @@ If series $\sum a_n$ converges, then
 - ➀ the set of its partial sums is bounded, that is,
 
 ```{math}
-\begin{align*}\abs{\sum_{k=1}^n a_k}\leq A
+\begin{align*}\abs{\sum_{k=1}^n a_k}\leq M
 \quad\forall n \in\N^\ast\end{align*}
 ```
 
-for some positive constant $A$, and
-- ➁ even more generally, all finite sums of consecutive terms are bounded by a common constant, that is, there exists $A > 0$ such that
+for some positive constant $M$, and
+- ➁ even more generally, all finite sums of consecutive terms are bounded by a common constant, that is, there exists $M > 0$ such that
 
 ```{math}
-\begin{align*}\abs{\sum_{k=m}^n a_k}\leq A
+\begin{align*}\abs{\sum_{k=m}^n a_k}\leq M
 \quad\forall m \in\N^\ast\;\forall n \geq m
 \end{align*}
 ```
