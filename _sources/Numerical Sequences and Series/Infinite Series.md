@@ -81,3 +81,24 @@ for some positive constant $A$, and
 TODO
 
 ````
+
+````{prf:theorem} Weierstrass M-Test
+:label: thm:56
+
+Let $\{M_n\}$ be a sequence of non=negative terms such that
+
+```{math}
+\begin{align*}\abs{f_n(x)}\leq M_n
+\quad\forall n \in\N^\ast\;\forall x \in S
+\end{align*}
+```
+
+Then $\sum f_n(x)$ converges uniformly on $S$ if $\sum M_n$ converges.
+
+````
+
+````{prf:proof}
+
+TODO
+
+````

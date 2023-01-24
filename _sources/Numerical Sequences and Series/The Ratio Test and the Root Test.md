@@ -1,6 +1,7 @@
 # The Ratio Test and the Root Test
 
 ````{prf:theorem} Ratio Test
+:label: thm:54
 
 Given a series $\sum a_n$ with nonzero complex terms, let
 
@@ -84,6 +85,7 @@ Whenever the ratio test is inclusive, one can always try the **root test** as we
 
 
 ````{prf:theorem} Root Test
+:label: thm:55
 
 Let $\sum a_n$ be a series of complex numbers. Let
 

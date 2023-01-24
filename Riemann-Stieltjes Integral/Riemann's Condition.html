@@ -602,7 +602,7 @@ U(P,f,\alpha) - L(P,f,\alpha) &lt; \varepsilon\end{align*}\]</div>
 </div><p>Essentially, Riemann’s condition requires that the upper and lower sums should be arbitrarily close.</p>
 <p>The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann’s condition are equivalent.</p>
 <div class="proof theorem admonition" id="thm:28">
-<p class="admonition-title"><span class="caption-number">Theorem 53 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 54 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is bounded and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then the following statements are equivalent.</p>
 <ul class="simple">
@@ -686,7 +686,7 @@ U(P,f,\alpha) - L(P,f,\alpha) &lt; \varepsilon\end{align*}\]</div>
 \[\begin{align*}
 U(P_1,f,\alpha) &lt; \upint_a^b f \;\mathrm{d}\alpha + \varepsilon\quad\text{and}\quad
 L(P_2,f,\alpha) &gt; \lowint_a^b f \;\mathrm{d}\alpha - \varepsilon\end{align*}\]</div>
-<p>Let <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span> and <span class="math notranslate nohighlight">\(P\)</span> be any of its refinements. By <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 49</a> and <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#equation-eq-46">(70)</a>, it is clear</p>
+<p>Let <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span> and <span class="math notranslate nohighlight">\(P\)</span> be any of its refinements. By <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 50</a> and <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#equation-eq-46">(70)</a>, it is clear</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lowint_a^b f \;\mathrm{d}\alpha - \varepsilon
 &lt; L(P,f,\alpha)
@@ -721,7 +721,7 @@ L(P_2,f,\alpha) &gt; \upint_{a}^{b} f \;\mathrm{d}\alpha - \varepsilon\end{align
 \leq S(P,f,\alpha)
 \leq U(P,f,\alpha)
 &lt; \upint_{a}^{b} f \;\mathrm{d}\alpha + \varepsilon\end{align*}\]</div>
-<p>The upper and lower integrals are equal, say to <span class="math notranslate nohighlight">\(A\)</span>, by <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 27</a>. It follows that</p>
+<p>The upper and lower integrals are equal, say to <span class="math notranslate nohighlight">\(A\)</span>, by <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 28</a>. It follows that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{S(P,f,\alpha) - A} &lt; \varepsilon\end{align*}\]</div>
 <p>By <a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1">Definition 10</a>, <span class="math notranslate nohighlight">\(A = \int_{a}^{b} f \; \mathrm{d}\alpha\)</span>.</p>
@@ -765,7 +765,7 @@ L(P,f,\alpha) = m_n [\alpha(0) - \alpha(x_{n-1})] = -2
 \[\begin{align*}\upint_{-3\pi}^0 = 2
 \quad\text{and}\quad\lowint_{-3\pi}^0 = -2
 \end{align*}\]</div>
-<p>Therefore, by <a class="reference internal" href="#thm:28">Theorem 53</a>, <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>, and hence on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>.</p>
+<p>Therefore, by <a class="reference internal" href="#thm:28">Theorem 54</a>, <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>, and hence on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>.</p>
 <p>This proof is way cleaner than the one given in <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 15</a> thanks to Darboux’s formulation of integrals.</p>
 </div>
 </div>

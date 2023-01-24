@@ -602,7 +602,7 @@ s_1 = a_1 + a_3 + \cdots + a_{2k-1} + \cdots\end{align*}\]</div>
 \[\begin{align*}
 s_2 = a_2 + a_4 + \cdots + a_{2k} + \cdots\end{align*}\]</div>
 <p id="index-0">Finally, the total sum is <span class="math notranslate nohighlight">\(s_1 + s_2\)</span>. As a matter of fact, there are more ways of summing these numbers than one can imagine at first thought, some of which may be difficult to describe. The need for a precise description of summing countably many numbers in the way we want gives rise to the concept of <strong>subseries</strong>.</p>
-<p>Suppose <span class="math notranslate nohighlight">\(s\)</span> is the sum we will obtain by summing up the numbers in the way we like. A natural question to ask is whether <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges to <span class="math notranslate nohighlight">\(s\)</span>. The answer is yes by <a class="reference internal" href="#thm:50">Theorem 9</a>, which we will soon show provided that <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely.</p>
+<p>Suppose <span class="math notranslate nohighlight">\(s\)</span> is the sum we will obtain by summing up the numbers in the way we like. A natural question to ask is whether <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges to <span class="math notranslate nohighlight">\(s\)</span>. The answer is yes by <a class="reference internal" href="#thm:50">Theorem 10</a>, which we will soon show provided that <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely.</p>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
 <div class="definition-content section" id="proof-content">
@@ -664,7 +664,7 @@ f(4) = 5,
 \[\begin{align*}\sum a_{f(n)} = (-i) + i + (-i) + i + \cdots\end{align*}\]</div>
 </div>
 </div><div class="proof theorem admonition" id="thm:49">
-<p class="admonition-title"><span class="caption-number">Theorem 8 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 9 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely, then every subseries <span class="math notranslate nohighlight">\(\sum b_n\)</span> also converges absolutely. And we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-105">
@@ -689,7 +689,7 @@ a_1, a_2, \ldots, a_n, \ldots\end{align*}\]</div>
 \sum_{n=1}^\infty a_{f_k(n)}, \ldots\end{align*}\]</div>
 <p>After that, we sum up all the subseries. Suppose the final sum is <span class="math notranslate nohighlight">\(s\)</span>, the next theorem says if <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely, then it must also converge to <span class="math notranslate nohighlight">\(s\)</span>. In other words, we can sum up an absolutely convergent series in whatever way we want without changing its sum!</p>
 <div class="proof theorem admonition" id="thm:50">
-<p class="admonition-title"><span class="caption-number">Theorem 9 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 10 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{f_1, f_2, \ldots\}\)</span> be a countable collection of functions defined on <span class="math notranslate nohighlight">\(\N^\ast\)</span>, each having the following properties:</p>
 <ul class="simple">
@@ -715,7 +715,7 @@ k \in\N^\ast\end{align*}\]</div>
 <p>Pay attention to how the properties of <span class="math notranslate nohighlight">\(f_k\)</span> being injective and <span class="math notranslate nohighlight">\(\biguplus_{k=1}^\infty f_k(\N^\ast)= \N^\ast\)</span> are used in the proof below.</p>
 </div>
 <div class="proof admonition" id="proof">
-<p>Proof. The first statement that <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span> is an absolutely convergent subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span> immediately follows from <a class="reference internal" href="#thm:49">Theorem 8</a>. We now prove 2.</p>
+<p>Proof. The first statement that <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span> is an absolutely convergent subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span> immediately follows from <a class="reference internal" href="#thm:49">Theorem 9</a>. We now prove 2.</p>
 <p>We first show that <span class="math notranslate nohighlight">\(\sum s_k\)</span> converges absolutely. The <span class="math notranslate nohighlight">\(p\)</span>-th partial sum of <span class="math notranslate nohighlight">\(\sum \abs{s_k}\)</span> satisfies</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}\sum_{k=1}^p \abs{s_k}&amp;= \abs{s_1} + \cdots + \abs{s_p}\\&amp;= \abs{ \sum_{n=1}^\infty b_1(n) } + \cdots

@@ -52,6 +52,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -586,7 +588,88 @@ title="Print to PDF"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="power-series">
-<h1>Power Series<a class="headerlink" href="#power-series" title="Permalink to this headline">#</a></h1>
+<span id="index-0"></span><h1>Power Series<a class="headerlink" href="#power-series" title="Permalink to this headline">#</a></h1>
+<p>A <strong>power series</strong>(in variable <span class="math notranslate nohighlight">\(z \in \C\)</span>) has the form</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\sum_{n=0}^\infty a_n (z - z_0)^n
+\end{align*}\]</div>
+<span class="target" id="index-1"></span><p id="index-2">where <span class="math notranslate nohighlight">\(a_n \in \C\)</span> is called the coefficient of the <span class="math notranslate nohighlight">\(n\)</span>-th term, and <span class="math notranslate nohighlight">\(z_0 \in \C\)</span> is often referred to as the center of the series.</p>
+<p>With every power series, there is associated a <strong>disk of convergence</strong> such that the series converges if <span class="math notranslate nohighlight">\(\abs{z - z_0} &lt; r\)</span> whereas diverges if <span class="math notranslate nohighlight">\(\abs{z - z_0} &gt; r\)</span>. The number <span class="math notranslate nohighlight">\(r\)</span> is called <strong>radius of convergence</strong>. If <span class="math notranslate nohighlight">\(r\)</span> is a <em>finite positive</em> number, then the disk of convergence is exactly the open ball in the complex plane with radius <span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(B_r(z_0)\)</span>. However, we allow <span class="math notranslate nohighlight">\(r\)</span> to take the value of <span class="math notranslate nohighlight">\(0\)</span> or <span class="math notranslate nohighlight">\(\infty\)</span> in extreme cases. When the power series is nowhere convergent except for <span class="math notranslate nohighlight">\(z = z_0\)</span>, then we say the radius of convergence is zero, i.e., <span class="math notranslate nohighlight">\(r = 0\)</span>. And if the power series converges everywhere in the complex plane, then we write <span class="math notranslate nohighlight">\(r = \infty\)</span>.</p>
+<div class="proof theorem admonition" id="theorem-0">
+<p class="admonition-title"><span class="caption-number">Theorem 69 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Given a power series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n (z - z_0)^n\)</span>, let</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\lambda = \limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}\quad\text{and}\quad
+r = \frac{1}{\lambda}\end{align*}\]</div>
+<p>(where <span class="math notranslate nohighlight">\(r = 0\)</span> if <span class="math notranslate nohighlight">\(\lambda = \infty\)</span> and <span class="math notranslate nohighlight">\(r = \infty\)</span> if <span class="math notranslate nohighlight">\(\lambda = 0\)</span>.) Then</p>
+<ul class="simple">
+<li><p>➀ the power series converges absolutely if <span class="math notranslate nohighlight">\(\abs{z - z_0} &lt; r\)</span>, and</p></li>
+<li><p>➁ diverges if <span class="math notranslate nohighlight">\(\abs{z - z_0} &gt; r\)</span>.</p></li>
+</ul>
+<p>Furthermore, the power series, regarded as a series of functions in variable <span class="math notranslate nohighlight">\(z\)</span>, converges uniformly on any compact subset <span class="math notranslate nohighlight">\(K\)</span> interior to the disk of convergence.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (Proof of 1 and 2) Applying the root test (<a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html#thm:55">Theorem 8</a>), we find</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n(z - z_0)^n}}
+= \abs{z - z_0}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
+= \abs{z - z_0}\lambda\end{align*}\]</div>
+<p>We investigate the value of <span class="math notranslate nohighlight">\(\abs{z - z_0} \lambda\)</span> case by case.</p>
+<p>(Case Where <span class="math notranslate nohighlight">\(\lambda = \infty\)</span> and <span class="math notranslate nohighlight">\(r = 0\)</span>) If <span class="math notranslate nohighlight">\(\lambda = \infty\)</span>, then for any <span class="math notranslate nohighlight">\(z\)</span> such that <span class="math notranslate nohighlight">\(\abs{z - z_0} &gt; r = 0\)</span>, we have <span class="math notranslate nohighlight">\(\abs{z - z_0} \lambda = \infty &gt; 1\)</span>. Hence, the power series diverges.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that, in this case, statement 1 is <strong>vacuously true</strong> since the hypothesis <span class="math notranslate nohighlight">\(\abs{z - z_0} &lt; r = 0\)</span> is false. In fact, this theorem does not conclude that <span class="math notranslate nohighlight">\(\sum a_n (z-z_0)^n\)</span> converges (absolutely) if <span class="math notranslate nohighlight">\(z = z_0\)</span> when <span class="math notranslate nohighlight">\(\lambda = \infty\)</span>. But we know this is true.</p>
+</div>
+<p>(Case Where <span class="math notranslate nohighlight">\(\lambda = 0\)</span> and <span class="math notranslate nohighlight">\(r = \infty\)</span>) In this case, <span class="math notranslate nohighlight">\(\abs{z - z_0} \lambda = 0\)</span>. Hence, the power series converges absolutely for any <span class="math notranslate nohighlight">\(z \in \C\)</span>. And we note that statement 2 is vacuously true in this case.</p>
+<p>(Case Where <span class="math notranslate nohighlight">\(0 &lt; r &lt; \infty\)</span>) If <span class="math notranslate nohighlight">\(\abs{z-z_0} &lt; r\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{z - z_0}\lambda
+&lt; r \lambda
+= \frac{1}{\lambda}\cdot\lambda
+= 1
+\end{align*}\]</div>
+<p>Hence, the power series converges absolutely. And if <span class="math notranslate nohighlight">\(\abs{z-z_0} &lt; r\)</span>, we then have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{z - z_0}\lambda
+&gt; r \lambda
+= \frac{1}{\lambda}\cdot\lambda
+= 1
+\end{align*}\]</div>
+<p>Therefore, it diverges when <span class="math notranslate nohighlight">\(\abs{z - z_0} &gt; r\)</span>.</p>
+<p>(Proof of Uniform Convergence) We intend to prove that the power series converges uniformly using the Weierstrass M-test (<a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html#thm:56">Theorem 5</a>). Define</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+g(z) = \abs{z - z_0},
+\quad z \in K
+\end{align*}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(g\)</span> is a real-valued function defined on a compact set. Hence, <span class="math notranslate nohighlight">\(g\)</span> attains its maximum on <span class="math notranslate nohighlight">\(K\)</span> by <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:6">Theorem 17</a>, that is, there exist <span class="math notranslate nohighlight">\(p \in K\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+g(p) = \sup_{z \in K} g(z)
+= \sup_{z \in K}\abs{z - z_0}\end{align*}\]</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{a_n (z - z_0)^n}
+= \abs{a_n}\abs{z - z_0}^n
+\leq\abs{a_n}[g(p)]^n
+= \abs{a_n}\abs{p - z_0}^n
+\end{align*}\]</div>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+M_n = \abs{a_n}\abs{p - z_0}^n
+\end{align*}\]</div>
+<p>Then the power series converges uniformly on <span class="math notranslate nohighlight">\(K\)</span> if we can show that <span class="math notranslate nohighlight">\(\sum M_n\)</span> converges. Indeed, by applying the root test, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{M_n}}
+= \abs{p - z_0}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
+= \abs{p - z_0}\lambda
+&lt; r \lambda
+= 1
+\end{align*}\]</div>
+<p>this completes the proof.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
