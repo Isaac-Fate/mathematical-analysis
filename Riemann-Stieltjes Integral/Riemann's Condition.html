@@ -147,6 +147,16 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Monotonic%20Sequences%20of%20Real%20Numbers.html">
+     Monotonic Sequences of Real Numbers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html">
+     Limit Superior and Limit Inferior
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html">
      Infinite Series
     </a>
@@ -589,9 +599,9 @@ title="Print to PDF"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="riemann-s-condition">
 <span id="index-0"></span><h1>Riemann’s Condition<a class="headerlink" href="#riemann-s-condition" title="Permalink to this headline">#</a></h1>
-<p>In Darboux’s formulation, the integral exists if and only if the upper and lower integrals are equal to each other. We now show that this is equivalent to the criterion of the existence of integrals from our definition (<a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1">Definition 10</a>). Furthermore, we will introduce another equivalent condition, <strong>Riemann’s condition</strong>, which is convenient to use in proofs.</p>
+<p>In Darboux’s formulation, the integral exists if and only if the upper and lower integrals are equal to each other. We now show that this is equivalent to the criterion of the existence of integrals from our definition (<a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1">Definition 11</a>). Furthermore, we will introduce another equivalent condition, <strong>Riemann’s condition</strong>, which is convenient to use in proofs.</p>
 <div class="proof definition admonition" id="definition-0">
-<p class="admonition-title"><span class="caption-number">Definition 13 </span> (Riemann’s Condition)</p>
+<p class="admonition-title"><span class="caption-number">Definition 14 </span> (Riemann’s Condition)</p>
 <div class="definition-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is bounded and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Function <span class="math notranslate nohighlight">\(f\)</span> is said to satisfy <strong>Riemann’s condition</strong> w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> if for any <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -602,7 +612,7 @@ U(P,f,\alpha) - L(P,f,\alpha) &lt; \varepsilon\end{align*}\]</div>
 </div><p>Essentially, Riemann’s condition requires that the upper and lower sums should be arbitrarily close.</p>
 <p>The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann’s condition are equivalent.</p>
 <div class="proof theorem admonition" id="thm:28">
-<p class="admonition-title"><span class="caption-number">Theorem 55 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 56 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is bounded and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then the following statements are equivalent.</p>
 <ul class="simple">
@@ -618,7 +628,7 @@ U(P,f,\alpha) - L(P,f,\alpha) &lt; \varepsilon\end{align*}\]</div>
 <span class="eqno">(85)<a class="headerlink" href="#equation-eq-60" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha} &lt; \varepsilon / 6
 \end{align}\]</div>
 <p>for any refinement <span class="math notranslate nohighlight">\(P \supset P_\varepsilon\)</span> and for any choice of representative <span class="math notranslate nohighlight">\(t_k\)</span> in each sub-interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>. Let this partition <span class="math notranslate nohighlight">\(P\)</span> be fixed for now.</p>
-<p>Let <span class="math notranslate nohighlight">\(M_k\)</span> and <span class="math notranslate nohighlight">\(m_k\)</span> be as in <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#def:2">Definition 11</a>. We can choose each <span class="math notranslate nohighlight">\(t_k^\prime \in[x_{k-1}, x_k]\)</span> such that</p>
+<p>Let <span class="math notranslate nohighlight">\(M_k\)</span> and <span class="math notranslate nohighlight">\(m_k\)</span> be as in <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#def:2">Definition 12</a>. We can choose each <span class="math notranslate nohighlight">\(t_k^\prime \in[x_{k-1}, x_k]\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 M_k - \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
@@ -686,7 +696,7 @@ U(P,f,\alpha) - L(P,f,\alpha) &lt; \varepsilon\end{align*}\]</div>
 \[\begin{align*}
 U(P_1,f,\alpha) &lt; \upint_a^b f \;\mathrm{d}\alpha + \varepsilon\quad\text{and}\quad
 L(P_2,f,\alpha) &gt; \lowint_a^b f \;\mathrm{d}\alpha - \varepsilon\end{align*}\]</div>
-<p>Let <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span> and <span class="math notranslate nohighlight">\(P\)</span> be any of its refinements. By <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 51</a> and <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#equation-eq-46">(70)</a>, it is clear</p>
+<p>Let <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span> and <span class="math notranslate nohighlight">\(P\)</span> be any of its refinements. By <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 52</a> and <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#equation-eq-46">(70)</a>, it is clear</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lowint_a^b f \;\mathrm{d}\alpha - \varepsilon
 &lt; L(P,f,\alpha)
@@ -721,12 +731,12 @@ L(P_2,f,\alpha) &gt; \upint_{a}^{b} f \;\mathrm{d}\alpha - \varepsilon\end{align
 \leq S(P,f,\alpha)
 \leq U(P,f,\alpha)
 &lt; \upint_{a}^{b} f \;\mathrm{d}\alpha + \varepsilon\end{align*}\]</div>
-<p>The upper and lower integrals are equal, say to <span class="math notranslate nohighlight">\(A\)</span>, by <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 29</a>. It follows that</p>
+<p>The upper and lower integrals are equal, say to <span class="math notranslate nohighlight">\(A\)</span>, by <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 30</a>. It follows that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{S(P,f,\alpha) - A} &lt; \varepsilon\end{align*}\]</div>
-<p>By <a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1">Definition 10</a>, <span class="math notranslate nohighlight">\(A = \int_{a}^{b} f \; \mathrm{d}\alpha\)</span>.</p>
+<p>By <a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1">Definition 11</a>, <span class="math notranslate nohighlight">\(A = \int_{a}^{b} f \; \mathrm{d}\alpha\)</span>.</p>
 </div>
-<p>As an exercise, we reconsider <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 16</a> and prove that <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<p>As an exercise, we reconsider <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 17</a> and prove that <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
 <div class="admonition-exercise-12 admonition">
 <p class="admonition-title">Exercise 12</p>
 <p>Let functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> be given by</p>
@@ -765,8 +775,8 @@ L(P,f,\alpha) = m_n [\alpha(0) - \alpha(x_{n-1})] = -2
 \[\begin{align*}\upint_{-3\pi}^0 = 2
 \quad\text{and}\quad\lowint_{-3\pi}^0 = -2
 \end{align*}\]</div>
-<p>Therefore, by <a class="reference internal" href="#thm:28">Theorem 55</a>, <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>, and hence on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>.</p>
-<p>This proof is way cleaner than the one given in <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 16</a> thanks to Darboux’s formulation of integrals.</p>
+<p>Therefore, by <a class="reference internal" href="#thm:28">Theorem 56</a>, <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>, and hence on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>.</p>
+<p>This proof is way cleaner than the one given in <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 17</a> thanks to Darboux’s formulation of integrals.</p>
 </div>
 </div>
 

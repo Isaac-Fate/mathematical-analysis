@@ -147,6 +147,16 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Monotonic%20Sequences%20of%20Real%20Numbers.html">
+     Monotonic Sequences of Real Numbers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html">
+     Limit Superior and Limit Inferior
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html">
      Infinite Series
     </a>
@@ -590,14 +600,14 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="step-functions-as-integrators">
 <h1>Step Functions as Integrators<a class="headerlink" href="#step-functions-as-integrators" title="Permalink to this headline">#</a></h1>
 <p>If the integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is a constant function on <span class="math notranslate nohighlight">\([a, b]\)</span>, then the <span class="math notranslate nohighlight">\(f\)</span> is always integrable with <span class="math notranslate nohighlight">\(\int_{a}^{b} f\; \mathrm{d}\alpha = 0\)</span> since the Stieltjes sum <span class="math notranslate nohighlight">\(S(P,f,\alpha) = 0\)</span> for any partition.</p>
-<p>What if <span class="math notranslate nohighlight">\(\alpha\)</span> is constant except for one jump or removable discontinuity at <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>? For example, <span class="math notranslate nohighlight">\(\alpha\)</span> may look like functions shown in <a class="reference internal" href="#fig-9"><span class="std std-numref">Fig. 10</span></a>.</p>
+<p>What if <span class="math notranslate nohighlight">\(\alpha\)</span> is constant except for one jump or removable discontinuity at <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>? For example, <span class="math notranslate nohighlight">\(\alpha\)</span> may look like functions shown in <a class="reference internal" href="#fig-9"><span class="std std-numref">Fig. 11</span></a>.</p>
 <div class="figure align-default" id="fig-9">
 <img alt="../_images/step-func-integrator.png" src="../_images/step-func-integrator.png" />
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Left: <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x=0\)</span>. Middle: <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x=0\)</span>. Right: <span class="math notranslate nohighlight">\(\alpha(x)\)</span> has a removable discontinuity at <span class="math notranslate nohighlight">\(x=0\)</span>.</span><a class="headerlink" href="#fig-9" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Left: <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x=0\)</span>. Middle: <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x=0\)</span>. Right: <span class="math notranslate nohighlight">\(\alpha(x)\)</span> has a removable discontinuity at <span class="math notranslate nohighlight">\(x=0\)</span>.</span><a class="headerlink" href="#fig-9" title="Permalink to this image">#</a></p>
 </div>
 <p>In this case, <span class="math notranslate nohighlight">\(f\)</span> may not be even integrable, and if it is, <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha\)</span> may not be zero.</p>
 <div class="proof theorem admonition" id="thm:24">
-<p class="admonition-title"><span class="caption-number">Theorem 50 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 51 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. Define a function <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> as follows. The values of <span class="math notranslate nohighlight">\(\alpha(a)\)</span>, <span class="math notranslate nohighlight">\(\alpha(b)\)</span> and <span class="math notranslate nohighlight">\(\alpha(c)\)</span> are chosen arbitrarily, and elsewhere</p>
 <div class="math notranslate nohighlight">
@@ -687,7 +697,7 @@ S(P,f,\alpha)
 </div>
 <p>It should be emphasized that there are cases where <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> while the conditions in the above theorem are not satisfied.</p>
 <div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 14 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 15 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
@@ -698,7 +708,7 @@ f(x) = \alpha(x) = \begin{cases}
 1 &amp;x &gt; 0
 \end{cases},
 \quad x \in[-1, 1]\end{align*}\end{split}\]</div>
-<p>Note that neither <span class="math notranslate nohighlight">\(f\)</span> nor <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(0\)</span>. (And also neither <span class="math notranslate nohighlight">\(f\)</span> nor <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(0\)</span>.) Hence, the conditions in <a class="reference internal" href="#thm:24">Theorem 50</a> are not satisfied.</p>
+<p>Note that neither <span class="math notranslate nohighlight">\(f\)</span> nor <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(0\)</span>. (And also neither <span class="math notranslate nohighlight">\(f\)</span> nor <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(0\)</span>.) Hence, the conditions in <a class="reference internal" href="#thm:24">Theorem 51</a> are not satisfied.</p>
 <p>However, we now show that <span class="math notranslate nohighlight">\(f\)</span> is integrable. Let <span class="math notranslate nohighlight">\(P\)</span> be any partition on <span class="math notranslate nohighlight">\([-1, 1]\)</span>. If <span class="math notranslate nohighlight">\(0 \notin P\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -714,7 +724,7 @@ S(P,f,\alpha) = f(-\delta_1)[\alpha(0) - \alpha(-1)] + f(\delta_2)[\alpha(1) - \
 <p>where <span class="math notranslate nohighlight">\(\delta_1, \delta_2 \geq 0\)</span>. Hence, <span class="math notranslate nohighlight">\(S(P,f,\alpha) = 0\)</span> no matter what partition and representative points we choose. It follows that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-1, 1]\)</span> with <span class="math notranslate nohighlight">\(\int_{-1}^{1} f \; \mathrm{d}\alpha = 0\)</span>.</p>
 </div>
 </div><div class="proof example admonition" id="eg:3">
-<p class="admonition-title"><span class="caption-number">Example 15 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 16 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
@@ -731,12 +741,12 @@ f(x) = \begin{cases}
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{x \to 0}\frac{\sin (x)}{x} = 1
 \end{align*}\]</div>
-<p>Then we note that the left and right limits of <span class="math notranslate nohighlight">\(f\)</span> both exist but are not equal. <a class="reference internal" href="#fig-10"><span class="std std-numref">Fig. 11</span></a> exhibits the graphs of these two functions.</p>
+<p>Then we note that the left and right limits of <span class="math notranslate nohighlight">\(f\)</span> both exist but are not equal. <a class="reference internal" href="#fig-10"><span class="std std-numref">Fig. 12</span></a> exhibits the graphs of these two functions.</p>
 <div class="figure align-default" id="fig-10">
 <img alt="../_images/graph-009.png" src="../_images/graph-009.png" />
-<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Left: integrand <span class="math notranslate nohighlight">\(f\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(0\)</span>. Right: integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(0\)</span>.</span><a class="headerlink" href="#fig-10" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Left: integrand <span class="math notranslate nohighlight">\(f\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(0\)</span>. Right: integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(0\)</span>.</span><a class="headerlink" href="#fig-10" title="Permalink to this image">#</a></p>
 </div>
-<p>The integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is constant except for a jump discontinuity at <span class="math notranslate nohighlight">\(0\)</span>. We note that <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the <em>right</em> at <span class="math notranslate nohighlight">\(0\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> is continuous from the <em>left</em> at <span class="math notranslate nohighlight">\(0\)</span>. Hence, the conditions in <a class="reference internal" href="#thm:24">Theorem 50</a> are satisfied, and we conclude <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> with</p>
+<p>The integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is constant except for a jump discontinuity at <span class="math notranslate nohighlight">\(0\)</span>. We note that <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the <em>right</em> at <span class="math notranslate nohighlight">\(0\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> is continuous from the <em>left</em> at <span class="math notranslate nohighlight">\(0\)</span>. Hence, the conditions in <a class="reference internal" href="#thm:24">Theorem 51</a> are satisfied, and we conclude <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> with</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_{-3\pi}^{3\pi}f \;\mathrm{d}\alpha
 = f(0)[\alpha(3\pi) - \alpha(-3\pi)]
@@ -744,9 +754,9 @@ f(x) = \begin{cases}
 \end{align*}\]</div>
 </div>
 </div><div class="proof example admonition" id="eg:4">
-<p class="admonition-title"><span class="caption-number">Example 16 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 17 </span></p>
 <div class="example-content section" id="proof-content">
-<p>If we alter the function <span class="math notranslate nohighlight">\(f\)</span> in the example above (<a class="reference internal" href="#eg:3">Example 15</a>) by re-defining <span class="math notranslate nohighlight">\(f(0) = 1\)</span> while keeping the integrator <span class="math notranslate nohighlight">\(\alpha\)</span> unchanged, then <span class="math notranslate nohighlight">\(f\)</span> is no longer integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span>. Now,</p>
+<p>If we alter the function <span class="math notranslate nohighlight">\(f\)</span> in the example above (<a class="reference internal" href="#eg:3">Example 16</a>) by re-defining <span class="math notranslate nohighlight">\(f(0) = 1\)</span> while keeping the integrator <span class="math notranslate nohighlight">\(\alpha\)</span> unchanged, then <span class="math notranslate nohighlight">\(f\)</span> is no longer integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span>. Now,</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
 f(x) = \begin{cases}
@@ -757,7 +767,7 @@ f(x) = \begin{cases}
 1 &amp;x \geq 0
 \end{cases},
 \quad x \in[-3\pi, 3\pi]\end{align*}\end{split}\]</div>
-<p>Note that we cannot apply <a class="reference internal" href="#thm:24">Theorem 50</a> here since neither the integrand nor the integrator is continuous from the left of <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p>Note that we cannot apply <a class="reference internal" href="#thm:24">Theorem 51</a> here since neither the integrand nor the integrator is continuous from the left of <span class="math notranslate nohighlight">\(0\)</span>.</p>
 <p>To show that <span class="math notranslate nohighlight">\(f\)</span> is indeed not integrable, we consider <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> and <span class="math notranslate nohighlight">\([0, 3\pi]\)</span> separately. It is evident that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([0, 3\pi]\)</span> with <span class="math notranslate nohighlight">\(\int_{0}^{3\pi}f \; \mathrm{d}\alpha = 0\)</span>. We now consider the other half interval <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>. Given any partition <span class="math notranslate nohighlight">\(P = \{x_0, x_1, \ldots, x_n\}\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -793,13 +803,13 @@ S^\prime(P,f,\alpha) = 2
 \[\begin{align*}\abs{S(P,f,\alpha) - A} + \abs{S^\prime(P,f,\alpha) - A}\geq\abs{S(P,f,\alpha) - S^\prime(P,f,\alpha)}
 &gt; 3 &gt; 2\varepsilon\end{align*}\]</div>
 <p>This implies that at least one of <span class="math notranslate nohighlight">\(\abs{S(P,f,\alpha) - A} \)</span> and <span class="math notranslate nohighlight">\( \abs{S^\prime(P,f,\alpha) - A} \)</span> is greater than <span class="math notranslate nohighlight">\(\varepsilon\)</span>, which leads to a contradiction. Hence, <span class="math notranslate nohighlight">\(f\)</span> is not integrable on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>.</p>
-<p>Finally, by <a class="reference internal" href="Linear%20Properties.html#thm:25">Theorem 46</a>, <span class="math notranslate nohighlight">\(f\)</span> cannot be integrable with respect to <span class="math notranslate nohighlight">\(\alpha\)</span> on the whole interval <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>.</p>
+<p>Finally, by <a class="reference internal" href="Linear%20Properties.html#thm:25">Theorem 47</a>, <span class="math notranslate nohighlight">\(f\)</span> cannot be integrable with respect to <span class="math notranslate nohighlight">\(\alpha\)</span> on the whole interval <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>.</p>
 <p>As a matter of fact, <span class="math notranslate nohighlight">\(f \notin \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> if we re-define <span class="math notranslate nohighlight">\(f(0)\)</span> other than <span class="math notranslate nohighlight">\(1\)</span> while keep <span class="math notranslate nohighlight">\(\alpha\)</span> unchanged.</p>
 </div>
 </div><div class="admonition-exercise-11 admonition">
 <p class="admonition-title">Exercise 11</p>
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be a constant function on <span class="math notranslate nohighlight">\([a, b]\)</span> except for <em>finitely</em> many points. Show that <span class="math notranslate nohighlight">\(f\)</span> is Riemann integrable on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
-<p>[Hint: You may find the theorem of integration by parts (<a class="reference internal" href="Integration%20by%20Parts.html#thm:20">Theorem 48</a>) helpful.]</p>
+<p>[Hint: You may find the theorem of integration by parts (<a class="reference internal" href="Integration%20by%20Parts.html#thm:20">Theorem 49</a>) helpful.]</p>
 </div>
 </div>
 

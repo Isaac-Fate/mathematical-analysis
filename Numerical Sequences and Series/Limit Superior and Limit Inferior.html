@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Ratio Test and the Root Test &#8212; Mathematical Analysis</title>
+    <title>Limit Superior and Limit Inferior &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -57,8 +57,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Subseries" href="Subseries.html" />
-    <link rel="prev" title="The Comparison Test" href="The%20Comparison%20Test.html" />
+    <link rel="next" title="Infinite Series" href="Infinite%20Series.html" />
+    <link rel="prev" title="Monotonic Sequences of Real Numbers" href="Monotonic%20Sequences%20of%20Real%20Numbers.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -151,8 +151,8 @@ const thebe_selector_output = ".output, .cell_output"
      Monotonic Sequences of Real Numbers
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Limit%20Superior%20and%20Limit%20Inferior.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Limit Superior and Limit Inferior
     </a>
    </li>
@@ -166,8 +166,8 @@ const thebe_selector_output = ".output, .cell_output"
      The Comparison Test
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="The%20Ratio%20Test%20and%20the%20Root%20Test.html">
      The Ratio Test and the Root Test
     </a>
    </li>
@@ -508,7 +508,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FNumerical Sequences and Series/The Ratio Test and the Root Test.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FNumerical Sequences and Series/Limit Superior and Limit Inferior.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -536,7 +536,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Numerical Sequences and Series/The Ratio Test and the Root Test.md"
+        <a href="../_sources/Numerical Sequences and Series/Limit Superior and Limit Inferior.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -585,7 +585,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>The Ratio Test and the Root Test</h1>
+                <h1>Limit Superior and Limit Inferior</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -597,197 +597,130 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="the-ratio-test-and-the-root-test">
-<h1>The Ratio Test and the Root Test<a class="headerlink" href="#the-ratio-test-and-the-root-test" title="Permalink to this headline">#</a></h1>
-<div class="proof theorem admonition" id="thm:54">
-<p class="admonition-title"><span class="caption-number">Theorem 8 </span> (Ratio Test)</p>
-<div class="theorem-content section" id="proof-content">
-<p>Given a series <span class="math notranslate nohighlight">\(\sum a_n\)</span> with nonzero complex terms, let</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="limit-superior-and-limit-inferior">
+<span id="index-0"></span><h1>Limit Superior and Limit Inferior<a class="headerlink" href="#limit-superior-and-limit-inferior" title="Permalink to this headline">#</a></h1>
+<p>Given a real-valued sequence <span class="math notranslate nohighlight">\(\{a_n\}\)</span>, sometimes the information about the upper and lower bounds of the <em>entire</em> sequence, if they exist, may not be useful for we are often interested in the <strong>tail</strong> of the sequence, which is simply the portion of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> after a few indices. To be  specific, the <span class="math notranslate nohighlight">\(n\)</span>-th tail of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is defined by <span class="math notranslate nohighlight">\(\{a_{m+n-1}\}_{m \in \N^\ast}\)</span>, and is written as <span class="math notranslate nohighlight">\(\{a_m\}_{m \geq n}\)</span> in shorthand.</p>
+<p>If <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded, we can define two sequences of upper and lower bounds, <span class="math notranslate nohighlight">\(\{u_n\}\)</span> and <span class="math notranslate nohighlight">\(\{l_n\}\)</span>, of the tail <span class="math notranslate nohighlight">\(\{a_m\}_{m \geq n}\)</span> by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-r = \liminf_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\quad\text{and}\quad
-R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
-<p>Then</p>
+u_n = \sup_{m \geq n} a_m
+\quad\text{and}\quad
+l_n = \inf_{m \geq n} a_m,
+\quad n \in\N^\ast\end{align*}\]</div>
+<p>To study the limiting behavior of <span class="math notranslate nohighlight">\(\{a_n\}\)</span>, it is helpful to know how the <span class="math notranslate nohighlight">\(n\)</span>-th tail <span class="math notranslate nohighlight">\(\{a_m\}_{m \geq n}\)</span> is bounded when <span class="math notranslate nohighlight">\(n\)</span> is relatively large.</p>
+<p>At a first glance, we observe that <span class="math notranslate nohighlight">\(\{u_n\}\)</span> is decreasing and <span class="math notranslate nohighlight">\(\{l_n\}\)</span> is increasing, which we shall prove in the next lemma.</p>
+<div class="proof lemma admonition" id="lem:5">
+<p class="admonition-title"><span class="caption-number">Lemma 1 </span></p>
+<div class="lemma-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of real numbers.</p>
 <ul class="simple">
-<li><p>➀ <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely if <span class="math notranslate nohighlight">\(R &lt; 1\)</span>,</p></li>
-<li><p>➁ <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges if <span class="math notranslate nohighlight">\(r &gt; 1\)</span>, and</p></li>
-<li><p>➂ the test is inclusive if <span class="math notranslate nohighlight">\(r \leq 1 \leq R\)</span>.</p></li>
+<li><p>➀ If <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded above, for each integer <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span> we can define</p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+u_n = \sup_{m \geq n} a_m,
+\quad n \in\N^\ast\end{align*}\]</div>
+<p>The sequence <span class="math notranslate nohighlight">\(\{u_n\}\)</span> is decreasing.</p>
+<ul class="simple">
+<li><p>➁ If <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded below, for each integer <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span> we can define</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+l_n = \inf_{m \geq n} a_m,
+\quad n \in\N^\ast\end{align*}\]</div>
+<p>The sequence <span class="math notranslate nohighlight">\(\{l_n\}\)</span> is increasing.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (Proof of 1) Choose a positive number <span class="math notranslate nohighlight">\(\varepsilon\)</span> such that <span class="math notranslate nohighlight">\(R + \varepsilon &lt; 1\)</span>. By the definition of limit superior, there exists an integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
+<p>Proof. We only prove 1. For every <span class="math notranslate nohighlight">\(m \in \N^\ast\)</span> with <span class="math notranslate nohighlight">\(m \geq n+1\)</span>, it is clear</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\abs{\frac{a_{n+1}}{a_n}} &lt; R + \varepsilon\quad\forall n \geq N
-\end{align*}\]</div>
-<p>Multiplying by <span class="math notranslate nohighlight">\(\abs{a_n}\)</span> on both sides yields</p>
+\[\begin{align*}
+a_{m}\in\set{a_m}{m \geq n, n \in \N^\ast}\end{align*}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(u_n\)</span> is an upper bound of the set on the right-hand side. Hence,</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\abs{a_{n+1}} &lt; (R + \varepsilon) \abs{a_n}\quad\forall n \geq N
+\[\begin{align*}
+a_m \leq u_n
+\quad\forall m \geq n+1
 \end{align*}\]</div>
-<p>By applying the above inequality repeatedly, we obtain</p>
+<p>This implies <span class="math notranslate nohighlight">\(u_n\)</span> is also an upper bound of</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\abs{a_n} &lt; (R+\varepsilon)^{n-N}\abs{a_N}
-= [(R+\varepsilon)^{-N}\abs{a_N}](R+\varepsilon)^n
-\quad\forall n \geq N+1
-\end{align*}\]</div>
-<p>Note that <span class="math notranslate nohighlight">\(\sum (R+\varepsilon)^n\)</span> converges since it is a geometric series the absolute values of whose terms are less than <span class="math notranslate nohighlight">\(1\)</span>. Therefore, <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> converges by the comparison test (<a class="reference internal" href="The%20Comparison%20Test.html#thm:52">Theorem 7</a>).</p>
-<p>(Proof of 2) The proof of statement 2 is similar. This time, we can choose a positive number <span class="math notranslate nohighlight">\(\varepsilon\)</span> such that <span class="math notranslate nohighlight">\(r-\varepsilon &gt; 1\)</span>. Then</p>
+\[\begin{align*}\set{a_m}{m \geq n+1, n \in \N^\ast}\end{align*}\]</div>
+<p>It then follows that <span class="math notranslate nohighlight">\(u_{n+1} \leq u_n\)</span> since <span class="math notranslate nohighlight">\(u_{n+1}\)</span> is the least upper bound of the set above. Therefore, we have shown</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\abs{\frac{a_{n+1}}{a_n}} &gt; r - \varepsilon\quad\forall n \geq N
-\end{align*}\]</div>
-<p>for some fixed integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span>. By applying a similar argument, we have</p>
-<div class="math notranslate nohighlight" id="equation-eq-117">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq-117" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{a_n} &gt; [(r-\varepsilon)^{-N}\abs{a_N}](r-\varepsilon)^n
-\quad\forall n \geq N+1
-\end{align}\]</div>
-<div class="admonition note">
+\[\begin{align*}
+u_{n}\geq u_{n+1}\quad\forall n \in\N^\ast\end{align*}\]</div>
+<p>Hence, <span class="math notranslate nohighlight">\(\{u_n\}\)</span> is decreasing.</p>
+</div>
+<p>By <a class="reference internal" href="Monotonic%20Sequences%20of%20Real%20Numbers.html#thm:57">Theorem 2</a>, we know that the limits of <span class="math notranslate nohighlight">\(\{u_n\}\)</span> and <span class="math notranslate nohighlight">\(\{l_n\}\)</span> always exist (as finite or infinite numbers). This gives rise to the definitions of limit superior as well as limit inferior. We also take into consideration the cases where <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is not bounded.</p>
+<div class="proof definition admonition" id="definition-1">
+<p class="admonition-title"><span class="caption-number">Definition 1 </span></p>
+<div class="definition-content section" id="proof-content">
+<p id="index-1">Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of real numbers. The <strong>limit superior</strong> of <span class="math notranslate nohighlight">\(\{a_n\}\)</span>, denoted by <span class="math notranslate nohighlight">\(\limsup_{n \to \infty} a_n\)</span>, is defined as follows:</p>
+<ul class="simple">
+<li><p>➀ <span class="math notranslate nohighlight">\(\limsup_{n \to \infty} a_n := \infty\)</span> if <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is not bounded above, and</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(\limsup_{n \to \infty} a_n := \lim_{n \to \infty} u_n\)</span> if <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded above where <span class="math notranslate nohighlight">\(u_n = \sup_{m \geq n} a_m\)</span>.</p></li>
+</ul>
+<p id="index-2">The <strong>limit inferior</strong> of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is denoted by <span class="math notranslate nohighlight">\(\liminf_{n \to \infty} a_n\)</span> and is defined similarly.</p>
+</div>
+</div><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If we apply the comparison test here, then we can only conclude that the series <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> diverges since the geometric series <span class="math notranslate nohighlight">\(\sum (r-\varepsilon)^n\)</span> diverges. But this result is not sufficient enough to conclude that <span class="math notranslate nohighlight">\(\sum a_n\)</span> also diverges.</p>
-</div>
-<p>By observing the right-hand side of <a class="reference internal" href="#equation-eq-117">(4)</a>, we note that the sequence <span class="math notranslate nohighlight">\(\{\abs{a_n}\}\)</span> does not converge to zero. In fact,</p>
+<p>The notation <span class="math notranslate nohighlight">\(\limsup\)</span> consists of two parts, the limit symbol and the supremum symbol. Indeed, as we can see from the definition, this notation arises naturally for we can write</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\lim_{n \to \infty}\abs{a_n} = \infty\end{align*}\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges by <a class="reference internal" href="Infinite%20Series.html#cor:2">Corollary 1</a>.</p>
-<p>(Proof of 3) See <a class="reference internal" href="#eg:7">Example 3</a> and <a class="reference internal" href="#eg:8">Example 4</a>.</p>
-</div>
-<p id="index-0">Whenever the ratio test is inclusive, one can always try the <strong>root test</strong> as we shall soon introduce. It also has a close connection with the power series and the concept of the radius of convergence, which we shall cover in <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Power%20Series.html"><span class="doc">Power Series</span></a>.</p>
-<div class="proof theorem admonition" id="thm:55">
-<p class="admonition-title"><span class="caption-number">Theorem 9 </span> (Root Test)</p>
-<div class="theorem-content section" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(\sum a_n\)</span> be a series of complex numbers. Let</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\rho = \limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}\end{align*}\]</div>
-<p>Then</p>
-<ul class="simple">
-<li><p>➀ <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely if <span class="math notranslate nohighlight">\(\rho &lt; 1\)</span>,</p></li>
-<li><p>➁ <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges if <span class="math notranslate nohighlight">\(\rho &gt; 1\)</span>, and</p></li>
-<li><p>➂ the test is inclusive if <span class="math notranslate nohighlight">\(\rho = 1\)</span>.</p></li>
-</ul>
-</div>
-</div><div class="proof admonition" id="proof">
-<p>Proof. (Proof of 1) Choose <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\rho + \varepsilon &lt; 1\)</span>. By the property of limit superior, there exists <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\sqrt[n]{\abs{a_n}} &lt; \rho + \varepsilon\quad\forall n \geq N
+\[\begin{align*}\limsup_{n \to \infty} a_n
+= \lim_{n \to \infty}\sup_{m \geq n} a_m
 \end{align*}\]</div>
-<p>Hence,</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{a_n} &lt; (\rho+\varepsilon)^n
-\quad\forall n \geq N
-\end{align*}\]</div>
-<p>Note that the geometric series <span class="math notranslate nohighlight">\(\sum (\rho+\varepsilon)^n\)</span> converges. Hence, <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> converges by the comparison test. In other words, <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely.</p>
-<p>(Proof of 2) Choose <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\rho-\varepsilon &gt; 1\)</span>. Again by the property of limit superior, for any integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span>, we can always find an integer <span class="math notranslate nohighlight">\(n \geq N\)</span> such that</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\sqrt[n]{\abs{a_n}} &gt; \rho - \varepsilon\end{align*}\]</div>
-<p>That is,</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{a_n} &gt; (\rho - \varepsilon)^n
-\geq(\rho - \varepsilon)
-\end{align*}\]</div>
-<p>This implies that the sequence <span class="math notranslate nohighlight">\(\{\abs{a_n}\}\)</span> cannot converge to zero. Therefore, <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges by <a class="reference internal" href="Infinite%20Series.html#cor:2">Corollary 1</a>.</p>
-<p>(Proof of 3) See <a class="reference internal" href="#eg:7">Example 3</a> and <a class="reference internal" href="#eg:8">Example 4</a>.</p>
+<p>if <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded above.</p>
 </div>
 <div class="proof example admonition" id="example-2">
-<p class="admonition-title"><span class="caption-number">Example 2 </span></p>
+<p class="admonition-title"><span class="caption-number">Example 1 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Let</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-a_n = \begin{cases}
-\brk{\frac{i}{2}}^{n-1},
-&amp;\text{if $n$ is odd} \\
-\brk{\frac{i}{2}}^{n},
-&amp;\text{if $n$ is even} \\
-\end{cases},
-\quad n \in\N^\ast\end{align*}\end{split}\]</div>
-<p>Let us investigate whether <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges or not.</p>
-<p>We first apply the ratio test. Note that</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\abs{\frac{a_{n+1}}{a_n}} =
-\begin{cases}
-\frac{1}{4},
-&amp;\text{if $n$ is odd} \\
-1,
-&amp;\text{if $n$ is even} \\
-\end{cases}\end{align*}\end{split}\]</div>
-<p>Hence,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-r = \liminf_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
-= \frac{1}{4}\quad\text{and}\quad
-R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
-= 1
-\end{align*}\]</div>
-<p>The ratio test is inconclusive.</p>
-<p>Now, let us try the root test. We have</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\sqrt[n]{\abs{a_n}} =
-\begin{cases}
-\brk{\frac{1}{2}}^{1 - 1 / n},
-&amp;\text{if $n$ is odd} \\
-\frac{1}{2},
-&amp;\text{if $n$ is even} \\
-\end{cases}\end{align*}\end{split}\]</div>
-<p>Taking the limit superior, we obtain</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
-= \frac{1}{2} &lt; 1
-\end{align*}\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely.</p>
+a_n = \brk{1 + \frac{10}{n}}\sin\frac{n \pi}{32}\end{align*}\]</div>
+<p>We claim that the limit superior and limit inferior of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> are <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(-1\)</span>, respectively. See <a class="reference internal" href="#fig-12"><span class="std std-numref">Fig. 1</span></a>.</p>
+<div class="figure align-default" id="fig-12">
+<img alt="../_images/limsup-liminf.png" src="../_images/limsup-liminf.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Limit superior and limit inferior of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> where <span class="math notranslate nohighlight">\(a_n = \brk{1 + \frac{10}{n}} \sin \frac{n \pi}{32}\)</span>.</span><a class="headerlink" href="#fig-12" title="Permalink to this image">#</a></p>
 </div>
-</div><p>From the above example, the reader may conjecture that the root test is somehow more powerful than the ratio test. This is indeed true as we will see in the next theorem.</p>
-<div class="proof theorem admonition" id="theorem-3">
-<p class="admonition-title"><span class="caption-number">Theorem 10 </span></p>
-<div class="theorem-content section" id="proof-content">
-<p>TODO</p>
-</div>
-</div><p>We will see in the following two examples that neither the ratio test nor the root test will be helpful.</p>
-<div class="proof example admonition" id="eg:7">
-<p class="admonition-title"><span class="caption-number">Example 3 </span></p>
-<div class="example-content section" id="proof-content">
-<p>Let</p>
+<p>Now, we show that the values of limit superior and limit inferior are indeed as claimed. Note that for any given integer <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span>, we can choose an integer <span class="math notranslate nohighlight">\(k\)</span> such that <span class="math notranslate nohighlight">\(16 + 64k \geq n\)</span>. Let <span class="math notranslate nohighlight">\(m = 16 + 64k\)</span>. We have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\sum a_n = \sum_{n=1}^\infty\frac{1}{n}\end{align*}\]</div>
-<p>We know that this series diverges.</p>
-<p>We first try the ratio test. Since <span class="math notranslate nohighlight">\(\abs{ a_{n+1} / a_n } = n / (n+1)\)</span>, we have</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\liminf_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
-= \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
-= \lim_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
-= 1
+\[\begin{align*}
+a_m = \brk{1 + \frac{10}{m}}\sin\frac{(16 + 64k) \pi}{32}
+= \brk{1 + \frac{10}{m}}\sin\brk{
+\frac{\pi}{2} + 2k\pi
+}
+= 1 + \frac{10}{m}
+&gt; 1
 \end{align*}\]</div>
-<p>Because the limit inferior and limit superior of the ratio are both <span class="math notranslate nohighlight">\(1\)</span>, the ratio test is inclusive.</p>
-<p>As for the root test, we find</p>
+<p>This implies that</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
-= \lim_{n \to \infty}\sqrt[n]{\abs{a_n}}
-= \lim_{n \to \infty}\frac{1}{\sqrt[n]{n}}
-= 1
+\[\begin{align}
+u_n = \sup_{m \geq n} a_m &gt; 1
+\quad\forall n \in\N^\ast\end{align}\]</div>
+<p>which means the sequence <span class="math notranslate nohighlight">\(\{u_n\}\)</span> is bounded below by <span class="math notranslate nohighlight">\(1\)</span>. We know by <a class="reference internal" href="#lem:5">Lemma 1</a> that <span class="math notranslate nohighlight">\(\{u_n\}\)</span> is decreasing. Thus, by <a class="reference internal" href="Monotonic%20Sequences%20of%20Real%20Numbers.html#thm:57">Theorem 2</a>, <span class="math notranslate nohighlight">\(\{u_n\}\)</span> converges to the infimum of its range, <span class="math notranslate nohighlight">\(\inf_{n \in \N^\ast} u_n\)</span>. We need to show that <span class="math notranslate nohighlight">\(\inf_{n \in \N^\ast} u_n = 1\)</span>. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span> such that <span class="math notranslate nohighlight">\(10 / n &lt; \varepsilon/2\)</span>. Then, for every <span class="math notranslate nohighlight">\(m \geq n\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+1 + \frac{10}{m} &lt; 1 + \varepsilon/2
 \end{align*}\]</div>
-<p>Hence, the root test also fails.</p>
-</div>
-</div><div class="proof example admonition" id="eg:8">
-<p class="admonition-title"><span class="caption-number">Example 4 </span></p>
-<div class="example-content section" id="proof-content">
-<p>Let</p>
+<p>Because the absolute value of the sine function is bounded by <span class="math notranslate nohighlight">\(1\)</span>, it follows that</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\sum a_n = \sum_{n=1}^\infty\frac{1}{n^2}\end{align*}\]</div>
-<p>This series converges.</p>
-<p>For the ratio test, since <span class="math notranslate nohighlight">\(\abs{ a_{n+1} / a_n } = n^2 / (n+1)^2\)</span>, we have</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\liminf_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
-= \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
-= \lim_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
-= 1
+\[\begin{align*}
+a_m = \brk{1 + \frac{10}{m}}\sin\frac{m \pi}{32} &lt; 1 + \varepsilon/2
+\quad\forall m \geq n
 \end{align*}\]</div>
-<p>The ratio test fails.</p>
-<p>Applying the root test, we find</p>
+<p>Taking the supremum, we obtain</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
-= \lim_{n \to \infty}\sqrt[n]{\abs{a_n}}
-= \lim_{n \to \infty}\frac{1}{\sqrt[n]{n^2}}
-= \lim_{n \to \infty}\brk{\frac{1}{\sqrt[n]{n}} \times \frac{1}{\sqrt[n]{n}}}
-= 1
+\[\begin{align*}
+u_n = \sup_{m \geq n} a_m
+\leq 1 + \varepsilon/2
+&lt; 1 + \varepsilon\end{align*}\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\limsup_{n \to \infty} a_n
+= \lim_{n \to \infty} u_n
+= \inf_{n \in \N^\ast} u_n = 1
 \end{align*}\]</div>
-<p>Hence, the root test also fails.</p>
+<p>The proof of <span class="math notranslate nohighlight">\(\liminf_{n \to \infty} a_n = -1\)</span> is similar and is left as an exercise.</p>
 </div>
 </div></div>
 
@@ -818,17 +751,17 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="The%20Comparison%20Test.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Monotonic%20Sequences%20of%20Real%20Numbers.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">The Comparison Test</p>
+            <p class="prev-next-title">Monotonic Sequences of Real Numbers</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Subseries.html" title="next page">
+    <a class='right-next' id="next-link" href="Infinite%20Series.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Subseries</p>
+        <p class="prev-next-title">Infinite Series</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

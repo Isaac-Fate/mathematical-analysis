@@ -147,6 +147,16 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Monotonic%20Sequences%20of%20Real%20Numbers.html">
+     Monotonic Sequences of Real Numbers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html">
+     Limit Superior and Limit Inferior
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html">
      Infinite Series
     </a>
@@ -644,7 +654,7 @@ title="Print to PDF"
 <div class="section" id="algebra-of-derivatives">
 <h2>Algebra of Derivatives<a class="headerlink" href="#algebra-of-derivatives" title="Permalink to this headline">#</a></h2>
 <div class="proof theorem admonition" id="theorem-0">
-<p class="admonition-title"><span class="caption-number">Theorem 24 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 25 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are defined on <span class="math notranslate nohighlight">\((a, b)\)</span> and are both differentiable at <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. Then the functions <span class="math notranslate nohighlight">\(f + g\)</span>, <span class="math notranslate nohighlight">\(f - g\)</span>, <span class="math notranslate nohighlight">\(fg\)</span> are also differentiable at <span class="math notranslate nohighlight">\(c\)</span>. If <span class="math notranslate nohighlight">\(g(c) \neq 0\)</span>, then the quotient <span class="math notranslate nohighlight">\(f / g\)</span> is also differentiable at <span class="math notranslate nohighlight">\(c\)</span>. And the formulas of their derivatives are given by</p>
 <ul class="simple">
@@ -656,11 +666,11 @@ title="Print to PDF"
 </div><div class="proof remark admonition" id="remark-1">
 <p class="admonition-title"><span class="caption-number">Remark 2 </span></p>
 <div class="remark-content section" id="proof-content">
-<p>One might be worried about the possibility that the quotient <span class="math notranslate nohighlight">\(f / g\)</span> may only be defined at point <span class="math notranslate nohighlight">\(c\)</span> if we only require <span class="math notranslate nohighlight">\(g(c) \neq 0\)</span>. Then how can we say <span class="math notranslate nohighlight">\(f / g\)</span> is differentiable at some point? However, the condition that <span class="math notranslate nohighlight">\(g\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> implicitly implies that <span class="math notranslate nohighlight">\(g(x) \neq 0\)</span> for <span class="math notranslate nohighlight">\(x\)</span> in some interval about <span class="math notranslate nohighlight">\(c\)</span> if we assume <span class="math notranslate nohighlight">\(g(c) \neq 0\)</span>. Take a few seconds and think about why this is true. Note that <span class="math notranslate nohighlight">\(g\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span> by <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:2">Theorem 23</a>. Then, if <span class="math notranslate nohighlight">\(g(c) \neq 0\)</span>, by the continuity, <span class="math notranslate nohighlight">\(g\)</span> is also nonzero in some neighborhood of <span class="math notranslate nohighlight">\(c\)</span>. Hence, in this case, <span class="math notranslate nohighlight">\(f / g\)</span> is actually well-defined in an interval instead of at just one point.</p>
+<p>One might be worried about the possibility that the quotient <span class="math notranslate nohighlight">\(f / g\)</span> may only be defined at point <span class="math notranslate nohighlight">\(c\)</span> if we only require <span class="math notranslate nohighlight">\(g(c) \neq 0\)</span>. Then how can we say <span class="math notranslate nohighlight">\(f / g\)</span> is differentiable at some point? However, the condition that <span class="math notranslate nohighlight">\(g\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> implicitly implies that <span class="math notranslate nohighlight">\(g(x) \neq 0\)</span> for <span class="math notranslate nohighlight">\(x\)</span> in some interval about <span class="math notranslate nohighlight">\(c\)</span> if we assume <span class="math notranslate nohighlight">\(g(c) \neq 0\)</span>. Take a few seconds and think about why this is true. Note that <span class="math notranslate nohighlight">\(g\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span> by <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:2">Theorem 24</a>. Then, if <span class="math notranslate nohighlight">\(g(c) \neq 0\)</span>, by the continuity, <span class="math notranslate nohighlight">\(g\)</span> is also nonzero in some neighborhood of <span class="math notranslate nohighlight">\(c\)</span>. Hence, in this case, <span class="math notranslate nohighlight">\(f / g\)</span> is actually well-defined in an interval instead of at just one point.</p>
 </div>
-</div><p>The proof we present here is done by exploiting <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 22</a>, and it may differ from a traditional proof that is solely based on the definition.</p>
+</div><p>The proof we present here is done by exploiting <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 23</a>, and it may differ from a traditional proof that is solely based on the definition.</p>
 <div class="proof admonition" id="proof">
-<p>Proof. Since <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are differentiable at <span class="math notranslate nohighlight">\(c\)</span>. It follows from <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 22</a> that there exists functions <span class="math notranslate nohighlight">\(\phi_1\)</span> and <span class="math notranslate nohighlight">\(\phi_2\)</span> on <span class="math notranslate nohighlight">\((a, b)\)</span> that are continuous at <span class="math notranslate nohighlight">\(c\)</span>, and satisfy</p>
+<p>Proof. Since <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are differentiable at <span class="math notranslate nohighlight">\(c\)</span>. It follows from <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 23</a> that there exists functions <span class="math notranslate nohighlight">\(\phi_1\)</span> and <span class="math notranslate nohighlight">\(\phi_2\)</span> on <span class="math notranslate nohighlight">\((a, b)\)</span> that are continuous at <span class="math notranslate nohighlight">\(c\)</span>, and satisfy</p>
 <div class="math notranslate nohighlight" id="equation-eq-4">
 <span class="eqno">(23)<a class="headerlink" href="#equation-eq-4" title="Permalink to this equation">#</a></span>\[\begin{align}
 f(x) - f(c) = (x - c) \phi_1^\prime(x) \end{align}\]</div>
@@ -679,7 +689,7 @@ g(x) - g(c) = (x - c) \phi_2^\prime(x) \end{align}\]</div>
 \phi_1(x) \pm\phi_2(x)
 )
 \end{align*}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(\phi_1(x) \pm \phi_2(x)\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span>, <span class="math notranslate nohighlight">\((f \pm g)\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> by <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 22</a>. Then by applying <a class="reference internal" href="#equation-eq-6">(25)</a>, we obtain</p>
+<p>Since <span class="math notranslate nohighlight">\(\phi_1(x) \pm \phi_2(x)\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span>, <span class="math notranslate nohighlight">\((f \pm g)\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> by <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 23</a>. Then by applying <a class="reference internal" href="#equation-eq-6">(25)</a>, we obtain</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}(f \pm g)^\prime(c)
 = \phi_1(c) \pm\phi_2(c)
@@ -692,7 +702,7 @@ g(x) - g(c) = (x - c) \phi_2^\prime(x) \end{align}\]</div>
 + f(c) \phi_2(x)
 + (x - c) \phi_1(x) \phi_2(x)
 ]\end{align*}\]</div>
-<p>after a few steps of algebraic calculation. It then follows from <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 22</a> that <span class="math notranslate nohighlight">\(f g\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> since the function</p>
+<p>after a few steps of algebraic calculation. It then follows from <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 23</a> that <span class="math notranslate nohighlight">\(f g\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> since the function</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\phi_1(x) g(c)
 + f(c) \phi_2(x)
@@ -710,7 +720,7 @@ g(x) - g(c) = (x - c) \phi_2^\prime(x) \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\frac{1}{g(x)} - \frac{1}{g(c)}
 = (x - c) \frac{-\phi_2(x)}{g(x)g(c)}\end{align*}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(-\phi_2(x) / [g(x)g(c)]\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span>, we conclude from <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 22</a> that <span class="math notranslate nohighlight">\(1/g\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span>, and</p>
+<p>Since <span class="math notranslate nohighlight">\(-\phi_2(x) / [g(x)g(c)]\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span>, we conclude from <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 23</a> that <span class="math notranslate nohighlight">\(1/g\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span>, and</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\left(\frac{1}{g}\right)^\prime(c)
 = \frac{-\phi_2(c)}{g(c)g(c)}
@@ -724,7 +734,7 @@ g(x) - g(c) = (x - c) \phi_2^\prime(x) \end{align}\]</div>
 <span id="index-0"></span><h2>The Chain Rule<a class="headerlink" href="#the-chain-rule" title="Permalink to this headline">#</a></h2>
 <p>Taking compositions is a more fundamental and natural way of combining two functions apart from summations, products, etc. The next result, the <strong>chain rule</strong>, provides a method of computing the derivative of a composite function.</p>
 <div class="proof theorem admonition" id="thm:4">
-<p class="admonition-title"><span class="caption-number">Theorem 25 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 26 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be a function defined on an open interval <span class="math notranslate nohighlight">\(I\)</span>, and <span class="math notranslate nohighlight">\(g\)</span> a function defined on <span class="math notranslate nohighlight">\(f(I)\)</span>. We consider the composite function <span class="math notranslate nohighlight">\(g \circ f\)</span>. If <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c \in I\)</span>, <span class="math notranslate nohighlight">\(f(c)\)</span> is an interior of <span class="math notranslate nohighlight">\(f(I)\)</span>, and <span class="math notranslate nohighlight">\(g\)</span> is differentiable at <span class="math notranslate nohighlight">\(f(c)\)</span>, then <span class="math notranslate nohighlight">\(g \circ f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> with</p>
 <div class="math notranslate nohighlight" id="equation-eq-9">
@@ -732,9 +742,9 @@ g(x) - g(c) = (x - c) \phi_2^\prime(x) \end{align}\]</div>
 = g^\prime(f(c)) f^\prime(c)
 \end{align}\]</div>
 </div>
-</div><p>With the help of <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 22</a>, we can reduce the proof of this theorem to that of <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:3">Theorem 17</a>.</p>
+</div><p>With the help of <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 23</a>, we can reduce the proof of this theorem to that of <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:3">Theorem 18</a>.</p>
 <div class="proof admonition" id="proof">
-<p>Proof. Since <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span>, using <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 22</a>, we have</p>
+<p>Proof. Since <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span>, using <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 23</a>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-10">
 <span class="eqno">(27)<a class="headerlink" href="#equation-eq-10" title="Permalink to this equation">#</a></span>\[\begin{align}
 f(x) - f(c) = (x-c) \phi_1(x)
@@ -758,7 +768,7 @@ g(f(x)) - g(f(c)) = (f(x)-f(c)) \phi_2(f(x))
 g(f(x)) - g(f(c)) = (x-c) \phi_1(x) \phi_2(f(x))
 \quad\forall x \in I
 \end{align*}\]</div>
-<p>Note that <span class="math notranslate nohighlight">\(\phi_2(f(x))\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span> by <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:3">Theorem 17</a>. And the product <span class="math notranslate nohighlight">\(\phi_1(x) \phi_2(f(x))\)</span> is also continuous. This implies <span class="math notranslate nohighlight">\(f \circ f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> by <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 22</a>. And its derivative at <span class="math notranslate nohighlight">\(x = c\)</span> equals</p>
+<p>Note that <span class="math notranslate nohighlight">\(\phi_2(f(x))\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span> by <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:3">Theorem 18</a>. And the product <span class="math notranslate nohighlight">\(\phi_1(x) \phi_2(f(x))\)</span> is also continuous. This implies <span class="math notranslate nohighlight">\(f \circ f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> by <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 23</a>. And its derivative at <span class="math notranslate nohighlight">\(x = c\)</span> equals</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}(g \circ f)^\prime(c)
 = \phi_1(c) \phi_2(f(c))
@@ -781,7 +791,7 @@ g(x) = x \sin\frac{1}{x}\ind\{x \neq 0\}\end{align*}\]</div>
 \[\begin{align*}
 f(x) = x^2 \sin\frac{1}{x^2}\ind\{x \neq 0\}\end{align*}\]</div>
 <p>for all <span class="math notranslate nohighlight">\(x \in \R\)</span>. Recall we have already calculated its derivative at <span class="math notranslate nohighlight">\(x = 0\)</span> in <a class="reference internal" href="Definition%20of%20Derivative.html#ex-1"><span class="std std-ref">Exercise 4</span></a>, which is <span class="math notranslate nohighlight">\(f^\prime(0) = 0\)</span>.</p>
-<p>[Hint: Make use of the result in <a class="reference internal" href="#ex-2"><span class="std std-ref">Exercise 5</span></a> and the chain rule (<a class="reference internal" href="#thm:4">Theorem 25</a>).]</p>
+<p>[Hint: Make use of the result in <a class="reference internal" href="#ex-2"><span class="std std-ref">Exercise 5</span></a> and the chain rule (<a class="reference internal" href="#thm:4">Theorem 26</a>).]</p>
 </div>
 </div>
 </div>

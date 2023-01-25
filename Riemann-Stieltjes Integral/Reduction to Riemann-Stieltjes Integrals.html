@@ -147,6 +147,16 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Monotonic%20Sequences%20of%20Real%20Numbers.html">
+     Monotonic Sequences of Real Numbers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html">
+     Limit Superior and Limit Inferior
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html">
      Infinite Series
     </a>
@@ -591,7 +601,7 @@ title="Print to PDF"
 <h1>Reduction to Riemann-Stieltjes Integrals<a class="headerlink" href="#reduction-to-riemann-stieltjes-integrals" title="Permalink to this headline">#</a></h1>
 <p>In the definition of Riemann-Stieltjes integral, <span class="math notranslate nohighlight">\(\mathrm{d} \alpha\)</span> is merely a symbol which emphasizes that the integrator is <span class="math notranslate nohighlight">\(\alpha\)</span>. However, it is tempting to associate this symbol with the concept of differentials, and then replace it with <span class="math notranslate nohighlight">\(\alpha^\prime(x) \; \mathrm{d} x\)</span>. As stated in the following theorem, we can indeed do this under some conditions.</p>
 <div class="proof theorem admonition" id="thm:23">
-<p class="admonition-title"><span class="caption-number">Theorem 47 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 48 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(\alpha\)</span> has a continuous derivative <span class="math notranslate nohighlight">\(\alpha^\prime\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then the Riemann integral <span class="math notranslate nohighlight">\(f \alpha^\prime\)</span> exits, i.e., <span class="math notranslate nohighlight">\(f \alpha^\prime \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-38">
@@ -624,7 +634,7 @@ title="Print to PDF"
 \sum_{k} f(t_k) \alpha^\prime(t_k) (x_k - x_{k-1})
 - \sum_{k} f(t_k) [\alpha(x_{k}) - \alpha(x_{k-1})]
 }\end{align*}\]</div>
-<p>Applying the mean value theorem (<a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 29</a>) to <span class="math notranslate nohighlight">\(\alpha\)</span> on each sub-interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> leads to</p>
+<p>Applying the mean value theorem (<a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 30</a>) to <span class="math notranslate nohighlight">\(\alpha\)</span> on each sub-interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> leads to</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{k} f(t_k) \alpha^\prime(t_k) (x_k - x_{k-1})
 - \sum_{k} f(t_k) [\alpha(x_{k}) - \alpha(x_{k-1})]
