@@ -4,10 +4,14 @@
 \usepackage{imakeidx}
 \makeindex[columns=2, intoc, options=-s index_style.ist]
 
-% Title and author
+% title and author
 \title{Mathematical Analysis}
 \author{Isaac FEI}
 
+% reference file
+\addbibresource{Mathematical Analysis.bib} 
+
+% image of the book cover
 \cover{cover}
 
 \begin{document}
@@ -242,8 +246,126 @@ By Theorem~\ref{thm:57}, we know that the limits of $\{u_n\}$ and $\{l_n\}$ alwa
         = \lim_{n \to \infty} u_n
         = \inf_{n \in \N^\ast} u_n = 1
     \end{align*}
-    The proof of $\liminf_{n \to \infty} a_n = -1$ is similar and is left as an exercise.
+    The proof of $\liminf a_n = -1$ is similar and is left as an exercise.
 \end{example}
+
+%------------------------------
+
+When the limit superior/inferior of $\{a_n\}$ is finite, then we have the following equivalent conditions, which may be helpful in proofs.
+
+\begin{theorem}
+    Let $\{a_n\}$ be a sequence of real numbers. Suppose there exists a (finite) number $u$ satisfying the following two conditions:
+    \begin{enumerate}
+        \item For every $\varepsilon > 0$, there exists an integer $N$ such that 
+        \begin{align*}
+            a_n < u + \varepsilon
+            \quad \forall n \geq N
+        \end{align*}
+        \item Given $\varepsilon > 0$ and given an integer $m$, there exists an integer $N \geq m$ such that 
+        \begin{align*}
+            a_N > u - \varepsilon
+        \end{align*}
+    \end{enumerate}
+    Then $u$ is the limit superior of $\{a_n\}$, i.e., $u = \limsup a_n$. Conversely, if $u = \limsup a_n$ is a finite number, then it satisfies the above conditions. An analogous result exists concerning the limit inferior of $\{a_n\}$.
+\end{theorem}
+
+\begin{note}
+    These two conditions are used to define the limit superior in Apostol's book\cite{apostolMathematicalAnalysisModern1974}. The problem is that we cannot assert the existence of such number $u$ if we adopt this definition, although the existence can be proved later. But this would increase the difficulty in understanding the concept of limit superior/inferior. 
+\end{note}
+
+\begin{proof}
+    (Sufficiency) We first assume $u$ satisfies the above two conditions and show that it is indeed the limit superior of $\{a_n\}$. Note that the first condition implies that $\{a_n\}$ is bounded above. Hence, it is feasible to define 
+    \begin{align*}
+        u_n = \sup_{m \geq n} a_m,
+        \quad n \in \N^\ast
+    \end{align*}
+    By Lemma~\ref{lem:5}, we know $\{u_n\}$ is decreasing. Let $m \in \N^\ast$ be fixed for now, by exploiting the second condition, for any $\varepsilon > 0$, there exists an integer $N \geq m$ such that 
+    \begin{align*}
+        a_N > u - \varepsilon
+    \end{align*}
+    It then follows that 
+    \begin{align*}
+        u_m = \sup_{n \geq m} a_n
+        \geq a_N
+        > u - \varepsilon
+    \end{align*}
+    Since 
+    \begin{align*}
+        u_m > u - \varepsilon
+    \end{align*}
+    holds for any $\varepsilon > 0$. We have 
+    \begin{align}
+        u_m \geq u
+        \label{eq:118}
+    \end{align}
+    But $m \in \N^\ast$ is also chosen arbitrarily. Therefore, the above inequality implies that the sequence $\{u_n\}$ is bounded below by $u$.
+
+    Next, we show that $u$ is the infimum of the range of $\{u_n\}$. Given $\varepsilon > 0$, by condition 1, there exists $N \in \N^\ast$ such that 
+    \begin{align*}
+        a_n < u + \varepsilon/2
+        \quad \forall n \geq N
+    \end{align*}
+    Taking the supremum over $n$, we obtain 
+    \begin{align*}
+        u_N = \sup_{n \geq N} a_n 
+        \leq u + \varepsilon/2
+        < u + \varepsilon
+    \end{align*}
+    That is, 
+    \begin{align}
+        u_N < u + \varepsilon
+        \label{eq:119}
+    \end{align}
+
+    It then follows from \eqref{eq:118} and \eqref{eq:119} that
+    \begin{align*}
+        u = \inf_{n \in \N^\ast} u_n
+    \end{align*} 
+    Recall $\{u_n\}$ is decreasing. Then by Theorem~\ref{thm:57}, $\lim u_n$ is precisely the infimum of its range since it is bounded below. Finally, since the limit superior of $\{a_n\}$ is defined by $\lim u_n$, we conclude that $u = \limsup a_n$.
+
+    (Necessity) Assume that the limit superior of $\{a_n\}$, $u$, is a finite number. By definition, $\{a_n\}$ is bounded above. Hence, we can again define 
+    \begin{align*}
+        u_n = \sup_{m \geq n} a_m,
+        \quad n \in \N^\ast
+    \end{align*}
+    And by definition along with the fact that $\{u_n\}$ is decreasing, we have 
+    \begin{align*}
+        u = \lim_{n \to \infty} u_n
+        = \inf_{n \in \N^\ast} u_n
+    \end{align*}
+    We need to show $u$ indeed satisfies the two conditions stated in this theorem.
+
+    Given $\varepsilon > 0$, since $u = \inf u_n$, there exists $N \in \N^\ast$ such that 
+    \begin{align*}
+        u_N < u + \varepsilon
+    \end{align*}
+    But $u_N = \sup_{n \geq N} a_n$. Therefore, 
+    \begin{align*}
+        \sup_{n \geq N} a_n < u + \varepsilon
+    \end{align*}
+    And because $a_n \leq \sup_{n \geq N} a_n \; \forall \geq N$, we have 
+    \begin{align*}
+        a_n < u + \varepsilon
+        \quad \forall n \geq N
+    \end{align*}
+    This shows that $u$ satisfies condition 1.
+
+    Given $\varepsilon > 0$ and $m \in \N^\ast$. Because $u$ is a lower bound of $\{u_n\}$, we have 
+    \begin{align}
+        \sup_{n \geq m} a_n = u_m \geq u
+        \label{eq:120}
+    \end{align}
+    By the property of supremum, there exists an integer $N \geq m$ such that 
+    \begin{align}
+        a_N > \sup_{n \geq m} a_n - \varepsilon
+        \label{eq:121}
+    \end{align}
+    Combining \eqref{eq:120} with \eqref{eq:121}, we find
+    \begin{align*}
+        a_N > u - \varepsilon
+    \end{align*}
+    which implies that $u$ also satisfies condition 2. This completes the proof.
+\end{proof}
 
 %------------------------------
 
@@ -5339,6 +5461,10 @@ With every power series, there is associated a \textbf{disk of convergence}\inde
 
 %==============================
 
+% references
+\printbibliography[heading=bibintoc, title=References]
+
+%==============================
 
 % print index page
 \printindex
