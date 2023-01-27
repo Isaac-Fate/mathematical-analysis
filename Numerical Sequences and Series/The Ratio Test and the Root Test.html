@@ -600,7 +600,7 @@ title="Print to PDF"
   <div class="tex2jax_ignore mathjax_ignore section" id="the-ratio-test-and-the-root-test">
 <h1>The Ratio Test and the Root Test<a class="headerlink" href="#the-ratio-test-and-the-root-test" title="Permalink to this headline">#</a></h1>
 <div class="proof theorem admonition" id="thm:54">
-<p class="admonition-title"><span class="caption-number">Theorem 8 </span> (Ratio Test)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 9 </span> (Ratio Test)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Given a series <span class="math notranslate nohighlight">\(\sum a_n\)</span> with nonzero complex terms, let</p>
 <div class="math notranslate nohighlight">
@@ -629,21 +629,21 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 = [(R+\varepsilon)^{-N}\abs{a_N}](R+\varepsilon)^n
 \quad\forall n \geq N+1
 \end{align*}\]</div>
-<p>Note that <span class="math notranslate nohighlight">\(\sum (R+\varepsilon)^n\)</span> converges since it is a geometric series the absolute values of whose terms are less than <span class="math notranslate nohighlight">\(1\)</span>. Therefore, <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> converges by the comparison test (<a class="reference internal" href="The%20Comparison%20Test.html#thm:52">Theorem 7</a>).</p>
+<p>Note that <span class="math notranslate nohighlight">\(\sum (R+\varepsilon)^n\)</span> converges since it is a geometric series the absolute values of whose terms are less than <span class="math notranslate nohighlight">\(1\)</span>. Therefore, <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> converges by the comparison test (<a class="reference internal" href="The%20Comparison%20Test.html#thm:52">Theorem 8</a>).</p>
 <p>(Proof of 2) The proof of statement 2 is similar. This time, we can choose a positive number <span class="math notranslate nohighlight">\(\varepsilon\)</span> such that <span class="math notranslate nohighlight">\(r-\varepsilon &gt; 1\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{\frac{a_{n+1}}{a_n}} &gt; r - \varepsilon\quad\forall n \geq N
 \end{align*}\]</div>
 <p>for some fixed integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span>. By applying a similar argument, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-117">
-<span class="eqno">(4)<a class="headerlink" href="#equation-eq-117" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{a_n} &gt; [(r-\varepsilon)^{-N}\abs{a_N}](r-\varepsilon)^n
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-117" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{a_n} &gt; [(r-\varepsilon)^{-N}\abs{a_N}](r-\varepsilon)^n
 \quad\forall n \geq N+1
 \end{align}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If we apply the comparison test here, then we can only conclude that the series <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> diverges since the geometric series <span class="math notranslate nohighlight">\(\sum (r-\varepsilon)^n\)</span> diverges. But this result is not sufficient enough to conclude that <span class="math notranslate nohighlight">\(\sum a_n\)</span> also diverges.</p>
 </div>
-<p>By observing the right-hand side of <a class="reference internal" href="#equation-eq-117">(4)</a>, we note that the sequence <span class="math notranslate nohighlight">\(\{\abs{a_n}\}\)</span> does not converge to zero. In fact,</p>
+<p>By observing the right-hand side of <a class="reference internal" href="#equation-eq-117">(9)</a>, we note that the sequence <span class="math notranslate nohighlight">\(\{\abs{a_n}\}\)</span> does not converge to zero. In fact,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{n \to \infty}\abs{a_n} = \infty\end{align*}\]</div>
 <p>Therefore, <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges by <a class="reference internal" href="Infinite%20Series.html#cor:2">Corollary 1</a>.</p>
@@ -651,7 +651,7 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 </div>
 <p id="index-0">Whenever the ratio test is inclusive, one can always try the <strong>root test</strong> as we shall soon introduce. It also has a close connection with the power series and the concept of the radius of convergence, which we shall cover in <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Power%20Series.html"><span class="doc">Power Series</span></a>.</p>
 <div class="proof theorem admonition" id="thm:55">
-<p class="admonition-title"><span class="caption-number">Theorem 9 </span> (Root Test)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 10 </span> (Root Test)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\sum a_n\)</span> be a series of complex numbers. Let</p>
 <div class="math notranslate nohighlight">
@@ -735,7 +735,7 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
 </div>
 </div><p>From the above example, the reader may conjecture that the root test is somehow more powerful than the ratio test. This is indeed true as we will see in the next theorem.</p>
 <div class="proof theorem admonition" id="theorem-3">
-<p class="admonition-title"><span class="caption-number">Theorem 10 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 11 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>TODO</p>
 </div>

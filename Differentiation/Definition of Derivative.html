@@ -653,11 +653,11 @@ title="Print to PDF"
 </div><p>If <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> exists <span class="math notranslate nohighlight">\(\forall c \in I\)</span> for some interval <span class="math notranslate nohighlight">\(I\)</span>, then we can define a function <span class="math notranslate nohighlight">\(f^\prime\)</span> on <span class="math notranslate nohighlight">\(I\)</span>, which is called the derivative of <span class="math notranslate nohighlight">\(f\)</span>. Here the word <em>derivative</em> means a function instead of just a number.</p>
 <p>The definition of derivatives we present here involves the limit obtained by letting one point approach the other one, <span class="math notranslate nohighlight">\(x \to c\)</span>. For computational convenience, we can treat the derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(c\)</span> as the limit of the fraction <span class="math notranslate nohighlight">\([ f(c+h) - f(c) ] / h\)</span> as <span class="math notranslate nohighlight">\(h \to 0\)</span>. That is, the limit is reached when the distance between points <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(c\)</span>, <span class="math notranslate nohighlight">\(h = \abs{x-c}\)</span>, is small. The following proposition states this idea formally.</p>
 <div class="proof proposition admonition" id="pro:1">
-<p class="admonition-title"><span class="caption-number">Proposition 2 </span></p>
+<p class="admonition-title"><span class="caption-number">Proposition 5 </span></p>
 <div class="proposition-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined on <span class="math notranslate nohighlight">\((a, b)\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> if and only if</p>
 <div class="math notranslate nohighlight" id="equation-eq-3">
-<span class="eqno">(20)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\begin{align}\lim_{h \to 0}\frac{f(c+h) - f(c)}{h}\end{align}\]</div>
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\begin{align}\lim_{h \to 0}\frac{f(c+h) - f(c)}{h}\end{align}\]</div>
 <p>exists. In that case, <span class="math notranslate nohighlight">\(f^\prime(c) = \lim_{h \to 0} [ f(c+h) - f(c) ] / h\)</span>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
@@ -668,8 +668,8 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{\frac{f(c+h) - f(h)}{h} - f^\prime(c)}
 = \abs{\frac{f(c+h) - f(h)}{(c+h) - c} - f^\prime(c)} &lt; \varepsilon\end{align*}\]</div>
-<p>This implies the limit <a class="reference internal" href="#equation-eq-3">(20)</a> exists, and it equals <span class="math notranslate nohighlight">\(f^\prime(c)\)</span>.</p>
-<p>Conversely, suppose the limit <a class="reference internal" href="#equation-eq-3">(20)</a> exists, say it equals <span class="math notranslate nohighlight">\(L\)</span>. Then for <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
+<p>This implies the limit <a class="reference internal" href="#equation-eq-3">(25)</a> exists, and it equals <span class="math notranslate nohighlight">\(f^\prime(c)\)</span>.</p>
+<p>Conversely, suppose the limit <a class="reference internal" href="#equation-eq-3">(25)</a> exists, say it equals <span class="math notranslate nohighlight">\(L\)</span>. Then for <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{h} &lt; \delta\implies\abs{\frac{f(c+h) - f(c)}{h} - L} &lt; \varepsilon\end{align*}\]</div>
 <p>Choose <span class="math notranslate nohighlight">\(x\)</span> such that <span class="math notranslate nohighlight">\(\abs{x - c} &lt; \delta\)</span>, we have</p>
@@ -705,7 +705,7 @@ x^2 \sin \frac{1}{x^2} &amp;x \neq 0 \\
 <div class="math notranslate nohighlight">
 \[\begin{align*}\frac{f(0+h) - f(0)}{h}
 = h \sin\frac{1}{h^2}\end{align*}\]</div>
-<p>Note the limit of the above expression is zero as <span class="math notranslate nohighlight">\(h \to 0\)</span> by <a class="reference internal" href="../Limits%20and%20Continuity/Limit%20of%20a%20Function.html#pro:2">Proposition 1</a> since <span class="math notranslate nohighlight">\(\lim_{h\to 0} h = 0\)</span> and <span class="math notranslate nohighlight">\(\sin (1/h^2)\)</span> is bounded by <span class="math notranslate nohighlight">\(1\)</span>. Hence, <span class="math notranslate nohighlight">\(f^\prime(0) = 0\)</span> by <a class="reference internal" href="#pro:1">Proposition 2</a>.</p>
+<p>Note the limit of the above expression is zero as <span class="math notranslate nohighlight">\(h \to 0\)</span> by <a class="reference internal" href="../Limits%20and%20Continuity/Limit%20of%20a%20Function.html#pro:2">Proposition 4</a> since <span class="math notranslate nohighlight">\(\lim_{h\to 0} h = 0\)</span> and <span class="math notranslate nohighlight">\(\sin (1/h^2)\)</span> is bounded by <span class="math notranslate nohighlight">\(1\)</span>. Hence, <span class="math notranslate nohighlight">\(f^\prime(0) = 0\)</span> by <a class="reference internal" href="#pro:1">Proposition 5</a>.</p>
 <p>The graph of <span class="math notranslate nohighlight">\(f(x)\)</span> is shown in <a class="reference internal" href="#fig-2"><span class="std std-numref">Fig. 3</span></a>. As we can see, <span class="math notranslate nohighlight">\(f(x)\)</span> is clamped between curves <span class="math notranslate nohighlight">\(y=x^2\)</span> and <span class="math notranslate nohighlight">\(y=-x^2\)</span> with the same tangents <span class="math notranslate nohighlight">\(y=0\)</span> at <span class="math notranslate nohighlight">\(x=0\)</span>. And we have shown <span class="math notranslate nohighlight">\(f^\prime(0)=0\)</span>, which means that the tangent of <span class="math notranslate nohighlight">\(f(x)\)</span> is also <span class="math notranslate nohighlight">\(y=0\)</span> at <span class="math notranslate nohighlight">\(x=0\)</span>. What conjecture can you make?</p>
 <div class="figure align-default" id="fig-2">
 <img alt="../_images/graph-001.png" src="../_images/graph-001.png" />
