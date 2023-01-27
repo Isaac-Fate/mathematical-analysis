@@ -177,6 +177,8 @@ At a first glance, we observe that $\{u_n\}$ is decreasing and $\{l_n\}$ is incr
 
 %------------------------------
 
+\subsection{Definition}
+
 By Theorem~\ref{thm:57}, we know that the limits of $\{u_n\}$ and $\{l_n\}$ always exist (as finite or infinite numbers). This gives rise to the definitions of limit superior as well as limit inferior. We also take into consideration the cases where $\{a_n\}$ is not bounded.
 
 \begin{definition}
@@ -253,7 +255,7 @@ By Theorem~\ref{thm:57}, we know that the limits of $\{u_n\}$ and $\{l_n\}$ alwa
 
 When the limit superior/inferior of $\{a_n\}$ is finite, then we have the following equivalent conditions, which may be helpful in proofs.
 
-\begin{theorem}
+\begin{theorem} \label{thm:58}
     Let $\{a_n\}$ be a sequence of real numbers. Suppose there exists a (finite) number $u$ satisfying the following two conditions:
     \begin{enumerate}
         \item For every $\varepsilon > 0$, there exists an integer $N$ such that 
@@ -268,6 +270,8 @@ When the limit superior/inferior of $\{a_n\}$ is finite, then we have the follow
     \end{enumerate}
     Then $u$ is the limit superior of $\{a_n\}$, i.e., $u = \limsup a_n$. Conversely, if $u = \limsup a_n$ is a finite number, then it satisfies the above conditions. An analogous result exists concerning the limit inferior of $\{a_n\}$.
 \end{theorem}
+
+Given $\varepsilon > 0$, the first condition says $u+\varepsilon$ is an upper bound for some $N$-th tail of $\{a_n\}$. In other words, all the terms of $\{a_n\}$ will eventually fall below the number $u + \varepsilon$. While the second condition says there are \textit{infinitely} many terms of $\{a_n\}$ that exceed $u - \varepsilon$.
 
 \begin{note}
     These two conditions are used to define the limit superior in Apostol's book\cite{apostolMathematicalAnalysisModern1974}. The problem is that we cannot assert the existence of such number $u$ if we adopt this definition, although the existence can be proved later. But this would increase the difficulty in understanding the concept of limit superior/inferior. 
@@ -365,6 +369,110 @@ When the limit superior/inferior of $\{a_n\}$ is finite, then we have the follow
         a_N > u - \varepsilon
     \end{align*}
     which implies that $u$ also satisfies condition 2. This completes the proof.
+\end{proof}
+
+%------------------------------
+
+\subsection{Properties}
+
+\begin{proposition}
+    Let $\{a_n\}$ be a sequence of real numbers. Then 
+    \begin{enumerate}
+        \item $\limsup a_n = -\infty \implies \liminf a_n = -\infty$, and
+        \item $\{a_n\}$ diverges to $-\infty$ if and only if $\limsup a_n = \liminf a_n = -\infty$.
+    \end{enumerate}
+\end{proposition}
+
+\begin{proof}
+    (Proof of 1) Note that the fact that the limit superior is not positive infinity implicitly implies that $\{a_n\}$ is bounded above. Define 
+    \begin{align}
+        u_n = \sup_{m \geq n} a_m,
+        \quad n \in \N^\ast
+        \label{eq:122}
+    \end{align}
+    We have $\lim u_n = -\infty$. Hence, for every $M > 0$, there exists $N \in \N^\ast$ such that 
+    \begin{align*}
+        u_n \leq -M
+        \quad \forall n \geq N
+    \end{align*}
+    But $a_n \leq \sup_{m \geq n} a_m = u_n$. It follows that 
+    \begin{align*}
+        a_n \leq -M
+        \quad \forall n \geq N
+    \end{align*}
+    This implies $\{a_n\}$ diverges to $-\infty$, that is, $\lim a_n = -\infty$. As a consequence, $\{a_n\}$ is not bounded below. Therefore, $\liminf a_n = -\infty$ by definition.
+
+    (Proof of 2) Note that in proving the first statement, we have already shown that $\limsup a_n = \liminf a_n = -\infty$ implies $\lim a_n = -\infty$. We only need to prove the other direction. Suppose $\lim a_n = -\infty$. For every $M > 0$, there exists $N \in \N^\ast$ such that 
+    \begin{align*}
+        a_n \leq -M
+        \quad \forall n \geq N
+    \end{align*}
+    \begin{note}
+        Note that the above inequality implies that $\{a_n\}$ is bounded above. Hence, we can again define $\{u_n\}$ as in \eqref{eq:122}.
+    \end{note}
+    \noindent Taking the supremum over $n$, we obtain
+    \begin{align*}
+        u_N = \sup_{n \geq N} a_n \leq -M
+    \end{align*}
+    Note that $\{u_n\}$ is decreasing by Lemma~\ref{lem:5}. Hence,
+    \begin{align*}
+        u_n \leq u_N \leq -M
+        \quad \forall n \geq N
+    \end{align*}
+    This implies that $\lim u_n = -\infty$. Therefore, by the definition of limit superior, $\limsup a_n = -\infty$. Then by statement 1, which we have proved earlier, $\liminf a_n = -\infty$.
+\end{proof}
+
+As an analogous result, we also have the following proposition, the proof of which is similar and is left as an exercise.
+
+\begin{proposition}
+    Let $\{a_n\}$ be a sequence of real numbers. Then 
+    \begin{enumerate}
+        \item $\liminf a_n = \infty \implies \limsup a_n = \infty$, and
+        \item $\{a_n\}$ diverges to $\infty$ if and only if $\limsup a_n = \liminf a_n = \infty$.
+    \end{enumerate}
+\end{proposition}
+
+%------------------------------
+
+\begin{proposition}
+    Let $\{a_n\}$ be a sequence of real numbers. Then $\{a_n\}$ converges if and only if both its limit superior and limit inferior are equal to a finite number. That is, 
+    \begin{align*}
+        \lim a_n = a
+        \iff
+        \limsup a_n = \liminf a_n = a
+    \end{align*}
+    where $a$ is finite.
+\end{proposition}
+
+\begin{proof}
+    (Sufficiency) Suppose that the limit superior and limit inferior are equal to a finite number, i.e.,  $\limsup a_n = \liminf a_n = a$. Let $\varepsilon > 0$ be chosen arbitrarily. Because $a$ is the limit superior, by the first condition in Theorem~\ref{thm:58}, there exists $N_1 \in \N^\ast$ such that 
+    \begin{align*}
+        a_n < a + \varepsilon
+        \quad \forall n \geq N_1
+    \end{align*}
+    Similarly, if we treat $a$ as the limit superior, then there exists $N_2 \in \N^\ast$ such that 
+    \begin{align}
+        a_n > a - \varepsilon
+        \quad \forall n \geq N_2
+    \end{align}
+    Let $N = \max\{N_1, N_2\}$. We have 
+    \begin{align*}
+        \abs{a_n - a} < \varepsilon
+        \quad \forall n \geq N
+    \end{align*}
+    Therefore, $\{a_n\}$ converges to $a$.
+
+    (Necessity) Suppose $\{a_n\}$ converges to $a$. Given $\varepsilon > 0$, there exists $N \in \N^\ast$ such that 
+    \begin{align*}
+        \abs{a_n - a} < \varepsilon
+        \quad \forall n \geq N
+    \end{align*}
+    We have 
+    \begin{enumerate}
+        \item $a_n < a + \varepsilon$ for all $n \geq N$, and 
+        \item for any given $m \in \N^\ast$, there exists $M \geq \max\{m, N\}$ such that $a_M > a - \varepsilon$.
+    \end{enumerate}
+    By Theorem~\ref{thm:58}, $a = \limsup a_n$. Similarly, we can also show $a = \liminf a_n$.
 \end{proof}
 
 %------------------------------
