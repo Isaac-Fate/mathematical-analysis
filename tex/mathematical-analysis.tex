@@ -23,14 +23,14 @@
 % preface
 %--------
 
-% \chapter*{Preface}
+\frontmatter
+\section*{Preface}
 
-% \section*{Question to Pounder}
+This book mainly follows the structure of Apostol's \textit{Mathematical analysis: a modern approach to advanced calculus}\cite{apostolMathematicalAnalysisModern1974}.
 
 %------------------------------
 
 % Print table of contents
-\frontmatter
 \tableofcontents
 \mainmatter
 
@@ -274,7 +274,7 @@ When the limit superior/inferior of $\{a_n\}$ is finite, then we have the follow
 Given $\varepsilon > 0$, the first condition says $u+\varepsilon$ is an upper bound for some $N$-th tail of $\{a_n\}$. In other words, all the terms of $\{a_n\}$ will eventually fall below the number $u + \varepsilon$. While the second condition says there are \textit{infinitely} many terms of $\{a_n\}$ that exceed $u - \varepsilon$.
 
 \begin{note}
-    These two conditions are used to define the limit superior in Apostol's book\cite{apostolMathematicalAnalysisModern1974}. The problem is that we cannot assert the existence of such number $u$ if we adopt this definition, although the existence can be proved later. But this would increase the difficulty in understanding the concept of limit superior/inferior. 
+    These two conditions are used to define the limit superior in Apostol's book\cite{apostolMathematicalAnalysisModern1974}. The problem is that we cannot assume the existence of such a number $u$ if we adopt this definition, although the existence can be proved later. But this would increase the difficulty in understanding the concept of limit superior/inferior. 
 \end{note}
 
 \begin{proof}
@@ -424,7 +424,7 @@ Given $\varepsilon > 0$, the first condition says $u+\varepsilon$ is an upper bo
 
 As an analogous result, we also have the following proposition, the proof of which is similar and is left as an exercise.
 
-\begin{proposition}
+\begin{proposition} \label{pro:4}
     Let $\{a_n\}$ be a sequence of real numbers. Then 
     \begin{enumerate}
         \item $\liminf a_n = \infty \implies \limsup a_n = \infty$, and
@@ -434,8 +434,8 @@ As an analogous result, we also have the following proposition, the proof of whi
 
 %------------------------------
 
-\begin{proposition}
-    Let $\{a_n\}$ be a sequence of real numbers. Then $\{a_n\}$ converges if and only if both its limit superior and limit inferior are equal to a finite number. That is, 
+\begin{proposition} \label{pro:5}
+    Let $\{a_n\}$ be a sequence of real numbers. Then $\{a_n\}$ converges if and only if both limit superior and limit inferior are equal to a finite number. That is, 
     \begin{align*}
         \lim a_n = a
         \iff
@@ -473,6 +473,73 @@ As an analogous result, we also have the following proposition, the proof of whi
         \item for any given $m \in \N^\ast$, there exists $M \geq \max\{m, N\}$ such that $a_M > a - \varepsilon$.
     \end{enumerate}
     By Theorem~\ref{thm:58}, $a = \limsup a_n$. Similarly, we can also show $a = \liminf a_n$.
+\end{proof}
+
+%------------------------------
+
+The next theorem can be treated as the reciprocal rule of limit superior, which establishes the relation between $\limsup 1 / a_n$ and $\liminf a_n$.
+
+\begin{theorem}
+    Let $\{a_n\}$ be a sequence of positive numbers, then 
+    \begin{enumerate}
+        \item $\limsup \frac{1}{a_n} = 1 / \liminf a_n$, and 
+        \item $\liminf \frac{1}{a_n} = 1 / \limsup a_n$.
+    \end{enumerate}
+    Note that, in the first equation, if $\liminf a_n = 0$ then $\limsup 1 / a_n = \infty$, and $\limsup 1 / a_n = 0$ if $\liminf a_n = \infty$. A similar treatment also applies to the second equation.
+\end{theorem}
+
+\begin{proof}
+    We only prove 1 since the second equation can be obtained by replacing $a_n$ with $1 / a_n$ in the first one. 
+
+    (Case 1: $\liminf a_n = 0$.) For every positive number $M > 0$. By Theorem~\ref{thm:58} (the second condition for limit inferior), there exists $N \in \N^\ast$ such that 
+    \begin{align*}
+        a_N < 0 + \frac{1}{M} = \frac{1}{M}
+    \end{align*}
+    Taking the reciprocal, we find
+    \begin{align*}
+        \frac{1}{a_N} > M
+    \end{align*}
+    This implies that the sequence $\{1 / a_n\}$ is not bounded above. Hence, $\limsup 1 / a_n = \infty$ by definition.
+
+    (Case 2: $\liminf a_n = \infty$.) We know $\lim a_n = \infty$ by Proposition~\ref{pro:4}. This implies $\{1 / a_n\}$ will converge to zero, i.e., $\lim 1 / a_n = 0$. By Proposition~\ref{pro:5}, $\limsup a_n = 0$.
+
+    (Case 3: $\liminf a_n$ is a finite positive number.) Write $l = \liminf a_n$. Let $\varepsilon > 0$ be chosen arbitrarily. Put 
+    \begin{align*}
+        \varepsilon_1 = \frac{\varepsilon l^2}{1 + \varepsilon l}
+    \end{align*}
+    By Theorem~\ref{thm:58}, there exists $N \in \N^\ast$ such that 
+    \begin{align*}
+        a_n > l - \varepsilon_1
+        \quad \forall n \geq N
+    \end{align*}
+    We note that $l - \varepsilon_1 > 0$. Taking the reciprocal of both sides and then plugging in the value of $\varepsilon_1$, we find 
+    \begin{align}
+        \frac{1}{a_n} < \frac{1}{l - \varepsilon_1}
+        = \frac{1}{l} + \varepsilon
+        \quad
+        \forall n \geq N
+        \label{eq:123}
+    \end{align}
+
+    Now, choose another $\varepsilon > 0$ so small that $1 - \varepsilon l  > 0$. Let
+    \begin{align*}
+        \varepsilon_2 = \frac{\varepsilon l^2}{1 - \varepsilon l}
+    \end{align*}
+    \begin{note}
+        The reason why we choose $\varepsilon$ such that $1 - \varepsilon l  > 0$ is that we want $\varepsilon_2 > 0$. Notice also that the choice of sufficient small $\varepsilon$ in this way will not affect the generality of the proof.
+    \end{note}
+    \noindent Given any integer $m \in \N^\ast$, by Theorem~\ref{thm:58}, there exists an integer $N \geq m$ such that 
+    \begin{align*}
+        a_N < l + \varepsilon_2
+    \end{align*}
+    Taking the reciprocal and then plugging in the value of $\varepsilon_2$, we obtain
+    \begin{align}
+        \frac{1}{a_N} > \frac{1}{l + \varepsilon_2}
+        = \frac{1}{l} - \varepsilon
+        \label{eq:124}
+    \end{align}
+
+    Therefore, by Theorem~\ref{thm:58}, we may conclude $\limsup a_n = 1 / l = 1 / \liminf a_n$ from \eqref{eq:123} and \eqref{eq:124}.
 \end{proof}
 
 %------------------------------
@@ -1057,7 +1124,7 @@ After that, we sum up all the subseries. Suppose the final sum is $s$, the next 
     This implies
     \begin{align*}
         \set{f_k(n)}{1 \leq k \leq p, 1 \leq n \leq q}
-        \supset \{1, \ldots, N\}
+        \supseteq \{1, \ldots, N\}
     \end{align*}
     provided that $p \geq K$ and $q \geq M$. Inequality \eqref{eq:106} then immediately follows from \eqref{eq:107} since
     \begin{align*}
@@ -1239,7 +1306,7 @@ The absolute convergence of a double series will also imply convergence of itsel
     Write $r_m = \sum_{n=1}^\infty a_{m,n}$. Define $f_m$ for each $m \in \N^\ast$ as in \eqref{eq:109}. It can be shown that 
     \begin{enumerate}
         \item $f_m$ is injective,
-        \item $f_m(\N^\ast) \subset \N^\ast$, and 
+        \item $f_m(\N^\ast) \subseteq \N^\ast$, and 
         \item $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.
     \end{enumerate}
     (See Exercise~\ref{ex:6}.) Hence, all the requirements of Theorem~\ref{thm:50} are met. Therefore, $\sum r_m$ converges absolutely, and 
@@ -1255,7 +1322,7 @@ The absolute convergence of a double series will also imply convergence of itsel
     Complete the above proof by showing 
     \begin{enumerate}
         \item $f_m$ is injective,
-        \item $f_m(\N^\ast) \subset \N^\ast$, and 
+        \item $f_m(\N^\ast) \subseteq \N^\ast$, and 
         \item $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.
     \end{enumerate}
     Each function $f_m$ is defined by \eqref{eq:109}.
@@ -1277,7 +1344,7 @@ The absolute convergence of a double series will also imply convergence of itsel
         = g^{-1}(m,n)
         = k
     \end{align*}
-    Hence, $n \in f_m(\N^\ast)$. This, along with the fact $f_m(\N^\ast) \subset \N^\ast$, implies the union of all function ranges is the set of natural numbers, i.e., 
+    Hence, $n \in f_m(\N^\ast)$. This, along with the fact $f_m(\N^\ast) \subseteq \N^\ast$, implies the union of all function ranges is the set of natural numbers, i.e., 
     \begin{align*}
         \bigcup_{m=1}^\infty f_m(\N^\ast) = \N^\ast
     \end{align*}
@@ -1507,7 +1574,7 @@ The next theorem states that the composite function of continuous functions is a
 %------------------------------
 
 \begin{theorem} \label{thm:6}
-    Let $f: X \to \R$ be a real-valued continuous function from a metric space $X$ to $\R$. Let $K \subset X$ be a compact subset. Then there exist points $p, q \in K$ such that 
+    Let $f: X \to \R$ be a real-valued continuous function from a metric space $X$ to $\R$. Let $K \subseteq X$ be a compact subset. Then there exist points $p, q \in K$ such that 
     \begin{align*}
         f(p) = \sup f(K)
         \quad \text{and} \quad
@@ -2024,12 +2091,12 @@ With the help of Theorem~\ref{thm:1}, we can reduce the proof of this theorem to
 \par One may be familiar with the fact that if the derivative of function $f$ is positive at some point, i.e., $f^\prime(c) > 0$, then $f$ is increasing near $c$, and if $f^\prime(c) < 0$, it is decreasing. However, we can extend this result a little further for we have defined one-sided and infinite derivatives.
 
 \begin{theorem} \label{thm:14}
-    Let $f$ be defined on a subset $A \subset \R$ and $c \in A$. If $f^\prime_+(c) > 0$, possibly $f^\prime_+(c) = \infty$, then there exists a half-open ball $(c, c+\delta) \subset A$ in which
+    Let $f$ be defined on a subset $A \subseteq \R$ and $c \in A$. If $f^\prime_+(c) > 0$, possibly $f^\prime_+(c) = \infty$, then there exists a half-open ball $(c, c+\delta) \subseteq A$ in which
     \begin{align}
         x > c \implies f(x) > f(c)
         \label{eq:12}
     \end{align}
-    Similarly, if $f^\prime_{-}(c) > 0$, then $\exists (c-\delta, c) \subset A$ in which
+    Similarly, if $f^\prime_{-}(c) > 0$, then $\exists (c-\delta, c) \subseteq A$ in which
     \begin{align*}
         x < c \implies f(x) < f(c)
     \end{align*}
@@ -2063,7 +2130,7 @@ With the help of Theorem~\ref{thm:1}, we can reduce the proof of this theorem to
 \par The following corollary is the version that is more familiar to the reader and is more common in practice.
 
 \begin{corollary} \label{cor:1}
-    Let $f$ be defined on $(a, b)$, and $c \in (a, b)$ an interior point. If $f^\prime(c) > 0$, possibly $f^\prime(c) = \infty$, then there exists an open ball $B_\delta(c) \subset (a, b)$ in which
+    Let $f$ be defined on $(a, b)$, and $c \in (a, b)$ an interior point. If $f^\prime(c) > 0$, possibly $f^\prime(c) = \infty$, then there exists an open ball $B_\delta(c) \subseteq (a, b)$ in which
     \begin{align}
         x > c \implies f(x) > f(c)
         \quad \text{and} \quad 
@@ -2084,7 +2151,7 @@ With the help of Theorem~\ref{thm:1}, we can reduce the proof of this theorem to
         \quad \forall x \in (a, b)
         \label{eq:13}
     \end{align}
-    where $\phi(x)$ is continuous at $c$ with $\phi(c) = f^\prime(c) > 0$. Since $\phi(c) > 0$ and it is continuous there, there exists some neighborhood $B_\delta(c) \subset (a, b)$ such that $\phi(x) > 0 \; \forall x \in B_\delta(c)$. And then \eqref{eq:14} follows from \eqref{eq:13}.
+    where $\phi(x)$ is continuous at $c$ with $\phi(c) = f^\prime(c) > 0$. Since $\phi(c) > 0$ and it is continuous there, there exists some neighborhood $B_\delta(c) \subseteq (a, b)$ such that $\phi(x) > 0 \; \forall x \in B_\delta(c)$. And then \eqref{eq:14} follows from \eqref{eq:13}.
 \end{solution}
 
 %------------------------------
@@ -3080,14 +3147,14 @@ In fact, all functions of bounded variation can be written as a difference betwe
     such that 
     \begin{align*}
         \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}
-        \quad \forall P \supset P_\varepsilon^{\prime}
+        \quad \forall P \supseteq P_\varepsilon^{\prime}
     \end{align*}
     Similarly, since $g \in \mathfrak{R}(\alpha)$, there exists a partition $P_\varepsilon^{\prime\prime}$ such that 
     \begin{align*}
         \abs{S(P, g, \alpha) - \int_a^b g \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_2}}
-        \quad \forall P \supset P_\varepsilon^{\prime\prime}
+        \quad \forall P \supseteq P_\varepsilon^{\prime\prime}
     \end{align*}
-    Let $P_\varepsilon$ be the refinement of $P_\varepsilon^{\prime}$ and $P_\varepsilon^{\prime\prime}$, i.e., $P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}$. Then for any $P \supset P_\varepsilon$, we have 
+    Let $P_\varepsilon$ be the refinement of $P_\varepsilon^{\prime}$ and $P_\varepsilon^{\prime\prime}$, i.e., $P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}$. Then for any $P \supseteq P_\varepsilon$, we have 
     \begin{align*}
         &\abs{
             S(P, c_1 f + c_2 g, \alpha) 
@@ -3129,14 +3196,14 @@ In fact, all functions of bounded variation can be written as a difference betwe
     such that 
     \begin{align*}
         \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}
-        \quad \forall P \supset P_\varepsilon^{\prime}
+        \quad \forall P \supseteq P_\varepsilon^{\prime}
     \end{align*}
     Similarly, since $f \in \mathfrak{R}(\beta)$, there exists a partition $P_\varepsilon^{\prime\prime}$ such that 
     \begin{align*}
         \abs{S(P, f, \beta) - \int_a^b f \; \mathrm{d}\beta} < \frac{\varepsilon / 2}{1 + \abs{c_2}}
-        \quad \forall P \supset P_\varepsilon^{\prime\prime}
+        \quad \forall P \supseteq P_\varepsilon^{\prime\prime}
     \end{align*}
-    Let $P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}$. Then for any $P \supset P_\varepsilon$, we have 
+    Let $P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}$. Then for any $P \supseteq P_\varepsilon$, we have 
     \begin{align*}
         &\abs{
             S(P, f, c_1 \alpha + c_2 \beta) 
@@ -3179,12 +3246,12 @@ In fact, all functions of bounded variation can be written as a difference betwe
     \par (Proof of existence of $\int_a^b f \; \mathrm{d}\alpha$) Assume $\int_a^c f \; \mathrm{d}\alpha$ and $\int_c^b f \; \mathrm{d}\alpha$ exist. Then 
     \begin{align*}
         \abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
-        \quad \forall P^\prime \supset P_\varepsilon^\prime
+        \quad \forall P^\prime \supseteq P_\varepsilon^\prime
     \end{align*}
     for some $P_\varepsilon^\prime$ on $[a, c]$. And 
     \begin{align*}
         \abs{S(P^{\prime\prime}, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
-        \quad \forall P^{\prime\prime} \supset P_\varepsilon^{\prime\prime}
+        \quad \forall P^{\prime\prime} \supseteq P_\varepsilon^{\prime\prime}
     \end{align*}
     for some $P_\varepsilon^{\prime\prime}$ on $[c, b]$. Let
     \begin{align*}
@@ -3192,14 +3259,14 @@ In fact, all functions of bounded variation can be written as a difference betwe
     \end{align*}
     (Note that $c \in P_\varepsilon$.) Let
     \begin{align*}
-        P &\supset P_\varepsilon &
+        P &\supseteq P_\varepsilon &
         P^\prime &= P \cap [a, c] &
         P^{\prime\prime} &= P \cap [c, b]
     \end{align*}
     Observe that
     \begin{align*}
-        P^\prime &\supset P_\varepsilon^\prime & 
-        P^{\prime\prime} &\supset P_\varepsilon^{\prime\prime}
+        P^\prime &\supseteq P_\varepsilon^\prime & 
+        P^{\prime\prime} &\supseteq P_\varepsilon^{\prime\prime}
     \end{align*}
     It then follows from \eqref{eq:26} that
     \begin{align*}
@@ -3223,12 +3290,12 @@ In fact, all functions of bounded variation can be written as a difference betwe
     \par (Proof of existence of $\int_c^b f \; \mathrm{d}\alpha$) Assume $\int_a^b f \; \mathrm{d}\alpha$ and $\int_a^c f \; \mathrm{d}\alpha$ exist. Then 
     \begin{align*}
         \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon / 2
-        \quad \forall P \supset P_\varepsilon
+        \quad \forall P \supseteq P_\varepsilon
     \end{align*}
     for some $P_\varepsilon$ on $[a, b]$. And
     \begin{align*}
         \abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
-        \quad \forall P^\prime \supset P_\varepsilon^\prime
+        \quad \forall P^\prime \supseteq P_\varepsilon^\prime
     \end{align*}
     for some $P_\varepsilon^\prime$ on $[a, c]$.
     Let
@@ -3237,15 +3304,15 @@ In fact, all functions of bounded variation can be written as a difference betwe
     \end{align*}
     Let
     \begin{align*}
-        P^{\prime\prime} &\supset P_\varepsilon^{\prime\prime} &
-        P^\prime &\supset (P_\varepsilon \cup P_\varepsilon^\prime) \cap [a, c] &
+        P^{\prime\prime} &\supseteq P_\varepsilon^{\prime\prime} &
+        P^\prime &\supseteq (P_\varepsilon \cup P_\varepsilon^\prime) \cap [a, c] &
         P &= P^\prime \cup P^{\prime\prime}
     \end{align*} 
     Observe that 
     \begin{align*}
-        P^\prime &\supset P_\varepsilon^\prime &
+        P^\prime &\supseteq P_\varepsilon^\prime &
         P &= P^\prime \cup P^{\prime\prime}
-        \supset (P_\varepsilon \cap [a, c]) \cup (P_\varepsilon \cap [c, b])
+        \supseteq (P_\varepsilon \cap [a, c]) \cup (P_\varepsilon \cap [c, b])
         = P_\varepsilon
     \end{align*}
     It then follows from \eqref{eq:26} that
@@ -3272,12 +3339,12 @@ In fact, all functions of bounded variation can be written as a difference betwe
     \par (Proof of existence of $\int_a^c f \; \mathrm{d}\alpha$) Assume $\int_a^b f \; \mathrm{d}\alpha$ and $\int_c^b f \; \mathrm{d}\alpha$ exist. Then 
     \begin{align*}
         \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon / 2
-        \quad \forall P \supset P_\varepsilon
+        \quad \forall P \supseteq P_\varepsilon
     \end{align*}
     for some $P_\varepsilon$ on $[a, b]$. And
     \begin{align*}
         \abs{S(P^{\prime\prime}, f, \alpha) - \int_c^b f \; \mathrm{d}\alpha} < \varepsilon / 2
-        \quad \forall P^{\prime\prime} \supset P_\varepsilon^{\prime\prime}
+        \quad \forall P^{\prime\prime} \supseteq P_\varepsilon^{\prime\prime}
     \end{align*}
     for some $P_\varepsilon^{\prime\prime}$ on $[c, b]$.
     Let
@@ -3286,15 +3353,15 @@ In fact, all functions of bounded variation can be written as a difference betwe
     \end{align*}
     Let
     \begin{align*}
-        P^\prime &\supset P_\varepsilon^\prime &
-        P^{\prime\prime} &\supset (P_\varepsilon \cup P_\varepsilon^{\prime\prime}) \cap [c, b] &
+        P^\prime &\supseteq P_\varepsilon^\prime &
+        P^{\prime\prime} &\supseteq (P_\varepsilon \cup P_\varepsilon^{\prime\prime}) \cap [c, b] &
         P &= P^\prime \cup P^{\prime\prime}
     \end{align*} 
     Observe that 
     \begin{align*}
-        P^{\prime\prime} &\supset P_\varepsilon^{\prime\prime} &
+        P^{\prime\prime} &\supseteq P_\varepsilon^{\prime\prime} &
         P &= P^\prime \cup P^{\prime\prime}
-        \supset (P_\varepsilon \cap [a, c]) \cup (P_\varepsilon \cap [c, b])
+        \supseteq (P_\varepsilon \cap [a, c]) \cup (P_\varepsilon \cap [c, b])
         = P_\varepsilon
     \end{align*}
     It then follows from \eqref{eq:26} that
@@ -3357,7 +3424,7 @@ In fact, all functions of bounded variation can be written as a difference betwe
     \par Because $f \in \mathfrak{\alpha}$, there exists a partition, say $P_\varepsilon^{\prime\prime}$, such that 
     \begin{align}
         \abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha} < \varepsilon / 2
-        \quad \forall P \supset P_\varepsilon^{\prime\prime}
+        \quad \forall P \supseteq P_\varepsilon^{\prime\prime}
         \label{eq:35}
     \end{align}
     holds for any refinement $P$.
@@ -3438,10 +3505,10 @@ In fact, all functions of bounded variation can be written as a difference betwe
     Given $\varepsilon > 0$, since $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, there exists a partition $P_\varepsilon$ such that 
     \begin{align}
         \abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon
-        \quad \forall P \supset P_\varepsilon
+        \quad \forall P \supseteq P_\varepsilon
         \label{eq:28}
     \end{align}
-    Let $P = \left\{x_0, x_1, \ldots, x_n\right\} \supset P_\varepsilon$ be any refinement of $P_\varepsilon$. The Riemann-Stieltjes sum of $\alpha$ with respect to $f$ is 
+    Let $P = \left\{x_0, x_1, \ldots, x_n\right\} \supseteq P_\varepsilon$ be any refinement of $P_\varepsilon$. The Riemann-Stieltjes sum of $\alpha$ with respect to $f$ is 
     \begin{align}
         S(P, \alpha, f)
         = \sum_{k=1}^n \alpha(t_k) (f(x_k) - f(x_{k-1}))
@@ -3474,7 +3541,7 @@ In fact, all functions of bounded variation can be written as a difference betwe
     \begin{align*}
         A - S(P, \alpha, f) = S(P^\ast, f, \alpha)
     \end{align*}
-    Since $P^\ast \supset P \supset P_\varepsilon$, it follows from \eqref{eq:28} that 
+    Since $P^\ast \supseteq P \supseteq P_\varepsilon$, it follows from \eqref{eq:28} that 
     \begin{align*}
         \abs{A - S(P, \alpha, f) - \int_a^b f \; \mathrm{d}\alpha} 
         = \abs{S(P^\ast, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha}
@@ -3483,7 +3550,7 @@ In fact, all functions of bounded variation can be written as a difference betwe
     Recall $A = f(b)\alpha(b) - f(a)\alpha(a)$, we have 
     \begin{align*}
         \abs{S(P, \alpha, f) + \int_a^b f \; \mathrm{d}\alpha - f(b)\alpha(b) + f(a)\alpha(a)} < \varepsilon
-        \quad \forall P \supset P_\varepsilon
+        \quad \forall P \supseteq P_\varepsilon
     \end{align*}
     This implies that $\alpha \in \mathfrak{R}(f)$ on $[a, b]$, and 
     \begin{align*}
@@ -3548,10 +3615,10 @@ In fact, all functions of bounded variation can be written as a difference betwe
     \par (Existence of the Integral) Given $\varepsilon > 0$, since $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, there exists a partition $P^\prime_\varepsilon$ on $[a, b]$ such that 
     \begin{align}
         \abs{S(P^\prime, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon
-        \quad \forall P^\prime \supset P^\prime_\varepsilon
+        \quad \forall P^\prime \supseteq P^\prime_\varepsilon
         \label{eq:32}
     \end{align}
-    Let partition $P_\varepsilon$ on $[c, d]$ be given by $P_\varepsilon = \phi^{-1}(P^\prime_\varepsilon)$. For any refinement $P \supset P_\varepsilon$, we have 
+    Let partition $P_\varepsilon$ on $[c, d]$ be given by $P_\varepsilon = \phi^{-1}(P^\prime_\varepsilon)$. For any refinement $P \supseteq P_\varepsilon$, we have 
     \begin{align*}
         S(P, h, \beta)
         = \sum h(s_i) \Delta\beta_i
@@ -3569,10 +3636,10 @@ In fact, all functions of bounded variation can be written as a difference betwe
         S(P, h, \beta) = S(P^\prime, \phi, \alpha)
         \label{eq:33}
     \end{align}
-    What is left to show is that $P^\prime \supset P^\prime_\varepsilon$. For any point $x \in P^\prime_\varepsilon$, we have $\phi^{-1}(x) \in P_\varepsilon$ since $P_\varepsilon = \phi^{-1}(P_\varepsilon)$. Recall that $P \supset P_\varepsilon$. Thus, $\phi^{-1}(x) \in P$. And because $P^\prime = \phi(P)$, we have $x = \phi(\phi^{-1}(x)) \in P^\prime$. Therefore, indeed $P^\prime \supset P^\prime_\varepsilon$. It then follows from \eqref{eq:32} and \eqref{eq:33} that 
+    What is left to show is that $P^\prime \supseteq P^\prime_\varepsilon$. For any point $x \in P^\prime_\varepsilon$, we have $\phi^{-1}(x) \in P_\varepsilon$ since $P_\varepsilon = \phi^{-1}(P_\varepsilon)$. Recall that $P \supseteq P_\varepsilon$. Thus, $\phi^{-1}(x) \in P$. And because $P^\prime = \phi(P)$, we have $x = \phi(\phi^{-1}(x)) \in P^\prime$. Therefore, indeed $P^\prime \supseteq P^\prime_\varepsilon$. It then follows from \eqref{eq:32} and \eqref{eq:33} that 
     \begin{align*}
         \abs{S(P, h, \beta) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon
-        \quad \forall P \supset P_\varepsilon
+        \quad \forall P \supseteq P_\varepsilon
     \end{align*}
     This completes the proof.
 \end{proof}
@@ -3671,7 +3738,7 @@ In fact, all functions of bounded variation can be written as a difference betwe
         \implies \abs{f(x) - f(c)} < \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + 1}
         \label{eq:42}
     \end{align}
-    Choose a partition $P_\varepsilon$ on $[a, b]$ with $\norm{P_\varepsilon} < \delta$. Let $P \supset P_\varepsilon$ be an arbitrary refinement. Applying \eqref{eq:41} to $P$, we have $\delta_1 < \norm{P} \leq \norm{P_\varepsilon}<\delta$. We may then apply \eqref{eq:42}, and obtain
+    Choose a partition $P_\varepsilon$ on $[a, b]$ with $\norm{P_\varepsilon} < \delta$. Let $P \supseteq P_\varepsilon$ be an arbitrary refinement. Applying \eqref{eq:41} to $P$, we have $\delta_1 < \norm{P} \leq \norm{P_\varepsilon}<\delta$. We may then apply \eqref{eq:42}, and obtain
     \begin{multline*}
         \abs{
             S(P,f,\alpha)
@@ -3691,7 +3758,7 @@ In fact, all functions of bounded variation can be written as a difference betwe
         \implies \abs{f(x) - f(c)} < \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + \abs{\alpha(b) - \alpha(c)} + 1}
         \label{eq:43}
     \end{align}
-    Choose a partition $P_\varepsilon$ with $\norm{P_\varepsilon} < \delta$. Let $P \supset P_\varepsilon$. Applying \eqref{eq:39} to $P$, we have $0 \leq \delta_1, \delta_2 \leq \norm{P} \leq \norm{P_\varepsilon} < \delta$. Then \eqref{eq:39} and \eqref{eq:43} yield 
+    Choose a partition $P_\varepsilon$ with $\norm{P_\varepsilon} < \delta$. Let $P \supseteq P_\varepsilon$. Applying \eqref{eq:39} to $P$, we have $0 \leq \delta_1, \delta_2 \leq \norm{P} \leq \norm{P_\varepsilon} < \delta$. Then \eqref{eq:39} and \eqref{eq:43} yield 
     \begin{multline*}
         \abs{
             S(P,f,\alpha)
@@ -3883,7 +3950,7 @@ The following theorem states that not only $L(P,f,\alpha) \leq U(P,f,\alpha)$ fo
 \begin{theorem} \label{thm:26}
     Suppose $\alpha$ is increasing on $[a, b]$. We have the following statements.
     \begin{enumerate}
-        \item If $P^\prime \supset P$, then 
+        \item If $P^\prime \supseteq P$, then 
         \begin{align*}
             U(P^\prime,f,\alpha) \leq U(P,f,\alpha)
             \quad\text{and}\quad
@@ -3901,7 +3968,7 @@ The following theorem states that not only $L(P,f,\alpha) \leq U(P,f,\alpha)$ fo
     \begin{note}
         If $P^\prime$ has $m$ points more than $P$, then we can construct a chain of partitions:
         \begin{align*}
-            P^\prime = P_1 \supset P_2 \cdots \supset P_m = P
+            P^\prime = P_1 \supseteq P_2 \cdots \supseteq P_m = P
         \end{align*}
         in such a way that $P_i$ has one point more than $P_{i+1}$. Then by applying the inequality $U(P_i,f,\alpha) \leq U(P_{i+1},f,\alpha)$, which is assumed proved, we obtain
         \begin{align*}
@@ -4229,7 +4296,7 @@ In Darboux's formulation, the integral exists if and only if the upper and lower
     \begin{align*}
         U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon
     \end{align*}
-    for any refinement $P \supset P_\varepsilon$.
+    for any refinement $P \supseteq P_\varepsilon$.
 \end{definition}
 
 Essentially, Riemann's condition requires that the upper and lower sums should be arbitrarily close.
@@ -4255,7 +4322,7 @@ The following states that the existence of Riemann-Stieltjes integrals, the exis
         \abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha} < \varepsilon / 6
         \label{eq:60}
     \end{align}
-    for any refinement $P \supset P_\varepsilon$ and for any choice of representative $t_k$ in each sub-interval $[x_{k-1}, x_k]$. Let this partition $P$ be fixed for now. 
+    for any refinement $P \supseteq P_\varepsilon$ and for any choice of representative $t_k$ in each sub-interval $[x_{k-1}, x_k]$. Let this partition $P$ be fixed for now. 
 
     Let $M_k$ and $m_k$ be as in Definition~\ref{def:2}. We can choose each $t_k^\prime \in [x_{k-1}, x_k]$ such that 
     \begin{align*}
@@ -4321,7 +4388,7 @@ The following states that the existence of Riemann-Stieltjes integrals, the exis
     \begin{align*}
         U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon
     \end{align*}
-    for any refinement $P \supset P_\varepsilon$. Because $\upint_a^b f \; \mathrm{d}\alpha \leq U(P,f,\alpha)$ and $\lowint_a^b f \; \mathrm{d}\alpha \geq L(P,f,\alpha)$, it follows that 
+    for any refinement $P \supseteq P_\varepsilon$. Because $\upint_a^b f \; \mathrm{d}\alpha \leq U(P,f,\alpha)$ and $\lowint_a^b f \; \mathrm{d}\alpha \geq L(P,f,\alpha)$, it follows that 
     \begin{align*}
         0 \leq \upint_a^b f \; \mathrm{d}\alpha - \lowint_a^b f \; \mathrm{d}\alpha
         < \varepsilon
@@ -4367,7 +4434,7 @@ As one should expect, the integral $\int_{a}^{b} f \; \mathrm{d}\alpha$ has to b
         \quad\text{and}\quad
         L(P_2,f,\alpha) > \upint_{a}^{b} f \; \mathrm{d}\alpha - \varepsilon
     \end{align*}
-    Let $P_\varepsilon = P_1 \cup P_2$. For any refinement $P \supset P_\varepsilon$, we have 
+    Let $P_\varepsilon = P_1 \cup P_2$. For any refinement $P \supseteq P_\varepsilon$, we have 
     \begin{align*}
         \upint_{a}^{b} f \; \mathrm{d}\alpha - \varepsilon
         < L(P,f,\alpha)
@@ -4451,7 +4518,7 @@ Let $c \in (a, b)$ be a point that splits the interval into two parts. If $f$ is
     We only prove $f \in \mathfrak{R}(\alpha)$ on $[a, c]$. Given $\varepsilon > 0$. By Theorem~\ref{thm:28}, there exists a partition $P_\varepsilon$ on $[a, b]$ such that 
     \begin{align*}
         U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon
-        \quad \forall P \supset P_\varepsilon
+        \quad \forall P \supseteq P_\varepsilon
     \end{align*}
     Let $P_\varepsilon^\prime = (P_\varepsilon \cup \{ c \}) \cap [a, c]$. Note that $P_\varepsilon^\prime$ is a partition on $[a, c]$. Now, let $P^\prime$ be a refinement of $ P_\varepsilon^\prime$ on $[a, c]$, and $P$ a refinement of $P_\varepsilon$ on $[a, b]$. It is evident that 
     \begin{align*}
@@ -4482,7 +4549,7 @@ In fact, $f$ is integrable on all sub-intervals of $[a, b]$.
 
 
 \begin{theorem} \label{thm:40}
-    Suppose $\alpha$ is increasing on $[a, b]$. Let $[c, d] \subset [a, b]$ be a sub-interval. If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $f \in \mathfrak{R}(\alpha)$ on $[c, d]$.
+    Suppose $\alpha$ is increasing on $[a, b]$. Let $[c, d] \subseteq [a, b]$ be a sub-interval. If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $f \in \mathfrak{R}(\alpha)$ on $[c, d]$.
 \end{theorem}
 
 \begin{proof}
@@ -4574,7 +4641,7 @@ Suppose we know $f \in \mathfrak{R}(\alpha)$ on $[a, b]$. The following theorem 
         U(P,f,\alpha) - L(P,f,\alpha) < \frac{\varepsilon \delta}{4A}
         \label{eq:71}
     \end{align}
-    for any refinement $P \supset P_\varepsilon$.
+    for any refinement $P \supseteq P_\varepsilon$.
 
     Write $P = \{x_0,x_1, \ldots, x_n\}$. We now separate the indices of sub-intervals into two sets in the following way.
     \begin{align*}
@@ -4776,7 +4843,7 @@ We know by Theorem~\ref{thm:38} that the product $fg$ is integrable w.r.t. $\alp
         \abs{U(P,f,\alpha) - L(P,f,\alpha)} < \varepsilon / A
         \label{eq:96}
     \end{align}
-    holds for any refinement $P$ of $P_\varepsilon$. Let $P = \{x_0, x_1, \ldots, x_n\} \supset P_\varepsilon$ and $t_k \in [x_{k-1}, x_k]$. We have
+    holds for any refinement $P$ of $P_\varepsilon$. Let $P = \{x_0, x_1, \ldots, x_n\} \supseteq P_\varepsilon$ and $t_k \in [x_{k-1}, x_k]$. We have
     \begin{align}
         S(P,f, G) 
         &= \sum_k f(t_k) \Delta G \nonumber \\
@@ -4908,7 +4975,7 @@ We now present the proof as follows.
         V_a^b(\alpha) 
         < V(P, \alpha)
         + \frac{\varepsilon}{3A}
-        \quad \forall P \supset P^\prime_\varepsilon
+        \quad \forall P \supseteq P^\prime_\varepsilon
         \label{eq:85}
     \end{align}
     We shall use this inequality later.
@@ -4919,12 +4986,12 @@ We now present the proof as follows.
             \sum \left(f(s_k) - f(t_k)\right) 
             \Delta \alpha_k
         } < \frac{\varepsilon}{3}
-        \quad \forall P \supset P^{\prime\prime}_\varepsilon
+        \quad \forall P \supseteq P^{\prime\prime}_\varepsilon
         \label{eq:86}
     \end{align}
     where $s_k$ and $t_k$ are any two points in the $k$-th subinterval of $P$.
 
-    \par Let $P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon$, and let $P = \left\{x_0, \ldots, x_n\right\} \supset P_\varepsilon$ be a refinement. We have 
+    \par Let $P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon$, and let $P = \left\{x_0, \ldots, x_n\right\} \supseteq P_\varepsilon$ be a refinement. We have 
     \begin{align*}
         U(P,f,V) - L(P,f,V)
         &= \sum_{k=1}^n (M_k - m_k) \Delta V_k \\ 
@@ -4938,7 +5005,7 @@ We now present the proof as follows.
         + \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
         \label{eq:87}
     \end{align}
-    Note that $P \supset P_\varepsilon \supset P^\prime_\varepsilon$. It then follows from \eqref{eq:85} that 
+    Note that $P \supseteq P_\varepsilon \supseteq P^\prime_\varepsilon$. It then follows from \eqref{eq:85} that 
     \begin{align*}
         \sum_{k=1}^n \Delta V_k
         = V_a^b(\alpha) 
@@ -4965,7 +5032,7 @@ We now present the proof as follows.
     \begin{align*}
         h = \frac{\varepsilon}{3(V_a^b (\alpha) + 1)}
     \end{align*}
-    Let $I(P), J(P) \subset \left\{0, 1, \ldots, n\right\}$ be defined as 
+    Let $I(P), J(P) \subseteq \left\{0, 1, \ldots, n\right\}$ be defined as 
     \begin{align*}
         I(P) &= \set{k}{\Delta\alpha_k \geq 0} & 
         J(P) &= \set{k}{\Delta\alpha_k < 0}
@@ -5016,7 +5083,7 @@ We now present the proof as follows.
         < \frac{\varepsilon}{3} + \abs{\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k}
         \label{eq:92}
     \end{align}
-    Since $P \supset P_\varepsilon \supset P^{\prime\prime}_\varepsilon$, we may apply \eqref{eq:86} to \eqref{eq:92} and obtain that 
+    Since $P \supseteq P_\varepsilon \supseteq P^{\prime\prime}_\varepsilon$, we may apply \eqref{eq:86} to \eqref{eq:92} and obtain that 
     \begin{align}
         \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}
         < \frac{\varepsilon}{3} + \frac{\varepsilon}{3}

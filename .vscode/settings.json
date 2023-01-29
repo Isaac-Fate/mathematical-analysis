@@ -28,5 +28,12 @@
                 "xelatex"
             ]
         }
+    ],
+    "grammarly.selectors": [
+        {
+            "language": "latex",
+            "scheme": "file",
+            "pattern": "tex/mathematical-analysis.tex"
+        }
     ]
 }
