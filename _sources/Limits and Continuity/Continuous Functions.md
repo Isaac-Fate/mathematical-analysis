@@ -42,7 +42,7 @@ This is precisely $d_Z(h(x), h(p)) < \varepsilon$. Hence, $h$ is continuous at $
 ````{prf:theorem}
 :label: thm:6
 
-Let $f: X \to \R$ be a real-valued continuous function from a metric space $X$ to $\R$. Let $K \subset X$ be a compact subset. Then there exist points $p, q \in K$ such that
+Let $f: X \to \R$ be a real-valued continuous function from a metric space $X$ to $\R$. Let $K \subseteq X$ be a compact subset. Then there exist points $p, q \in K$ such that
 
 ```{math}
 \begin{align*}

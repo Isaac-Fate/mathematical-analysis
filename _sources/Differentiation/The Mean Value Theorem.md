@@ -6,7 +6,7 @@ One may be familiar with the fact that if the derivative of function $f$ is posi
 ````{prf:theorem}
 :label: thm:14
 
-Let $f$ be defined on a subset $A \subset \R$ and $c \in A$. If $f^\prime_+(c) > 0$, possibly $f^\prime_+(c) = \infty$, then there exists a half-open ball $(c, c+\delta) \subset A$ in which
+Let $f$ be defined on a subset $A \subseteq \R$ and $c \in A$. If $f^\prime_+(c) > 0$, possibly $f^\prime_+(c) = \infty$, then there exists a half-open ball $(c, c+\delta) \subseteq A$ in which
 
 ```{math}
 :label: eq:12
@@ -15,7 +15,7 @@ x > c \implies f(x) > f(c)
 \end{align}
 ```
 
-Similarly, if $f^\prime_{-}(c) > 0$, then $\exists (c-\delta, c) \subset A$ in which
+Similarly, if $f^\prime_{-}(c) > 0$, then $\exists (c-\delta, c) \subseteq A$ in which
 
 ```{math}
 \begin{align*}
@@ -66,7 +66,7 @@ The following corollary is the version that is more familiar to the reader and i
 ````{prf:corollary}
 :label: cor:1
 
-Let $f$ be defined on $(a, b)$, and $c \in (a, b)$ an interior point. If $f^\prime(c) > 0$, possibly $f^\prime(c) = \infty$, then there exists an open ball $B_\delta(c) \subset (a, b)$ in which
+Let $f$ be defined on $(a, b)$, and $c \in (a, b)$ an interior point. If $f^\prime(c) > 0$, possibly $f^\prime(c) = \infty$, then there exists an open ball $B_\delta(c) \subseteq (a, b)$ in which
 
 ```{math}
 :label: eq:14
@@ -100,7 +100,7 @@ f(x) - f(c) = (x - c) \phi(x)
 \end{align}
 ```
 
-where $\phi(x)$ is continuous at $c$ with $\phi(c) = f^\prime(c) > 0$. Since $\phi(c) > 0$ and it is continuous there, there exists some neighborhood $B_\delta(c) \subset (a, b)$ such that $\phi(x) > 0 \; \forall x \in B_\delta(c)$. And then {eq}`eq:14` follows from {eq}`eq:13`.
+where $\phi(x)$ is continuous at $c$ with $\phi(c) = f^\prime(c) > 0$. Since $\phi(c) > 0$ and it is continuous there, there exists some neighborhood $B_\delta(c) \subseteq (a, b)$ such that $\phi(x) > 0 \; \forall x \in B_\delta(c)$. And then {eq}`eq:14` follows from {eq}`eq:13`.
 
 ````
 

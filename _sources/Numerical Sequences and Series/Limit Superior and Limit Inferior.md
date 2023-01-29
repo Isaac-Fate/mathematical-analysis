@@ -224,7 +224,7 @@ Given $\varepsilon > 0$, the first condition says $u+\varepsilon$ is an upper bo
 
 :::{note}
 
-These two conditions are used to define the limit superior in Apostol's book{cite}`apostolMathematicalAnalysisModern1974`. The problem is that we cannot assert the existence of such number $u$ if we adopt this definition, although the existence can be proved later. But this would increase the difficulty in understanding the concept of limit superior/inferior.
+These two conditions are used to define the limit superior in Apostol's book{cite}`apostolMathematicalAnalysisModern1974`. The problem is that we cannot assume the existence of such a number $u$ if we adopt this definition, although the existence can be proved later. But this would increase the difficulty in understanding the concept of limit superior/inferior.
 
 :::
 
@@ -455,6 +455,7 @@ As an analogous result, we also have the following proposition, the proof of whi
 
 
 ````{prf:proposition}
+:label: pro:4
 
 Let $\{a_n\}$ be a sequence of real numbers. Then
 - ➀ $\liminf a_n = \infty \implies \limsup a_n = \infty$, and
@@ -463,8 +464,9 @@ Let $\{a_n\}$ be a sequence of real numbers. Then
 ````
 
 ````{prf:proposition}
+:label: pro:5
 
-Let $\{a_n\}$ be a sequence of real numbers. Then $\{a_n\}$ converges if and only if both its limit superior and limit inferior are equal to a finite number. That is,
+Let $\{a_n\}$ be a sequence of real numbers. Then $\{a_n\}$ converges if and only if both limit superior and limit inferior are equal to a finite number. That is,
 
 ```{math}
 \begin{align*}\lim a_n = a
@@ -514,5 +516,96 @@ We have
 - ➁ for any given $m \in \N^\ast$, there exists $M \geq \max\{m, N\}$ such that $a_M > a - \varepsilon$.
 
 By {prf:ref}`thm:58`, $a = \limsup a_n$. Similarly, we can also show $a = \liminf a_n$.
+
+````
+
+The next theorem can be treated as the reciprocal rule of limit superior, which establishes the relation between $\limsup 1 / a_n$ and $\liminf a_n$.
+
+
+````{prf:theorem}
+
+Let $\{a_n\}$ be a sequence of positive numbers, then
+- ➀ $\limsup \frac{1}{a_n} = 1 / \liminf a_n$, and
+- ➁ $\liminf \frac{1}{a_n} = 1 / \limsup a_n$.
+
+Note that, in the first equation, if $\liminf a_n = 0$ then $\limsup 1 / a_n = \infty$, and $\limsup 1 / a_n = 0$ if $\liminf a_n = \infty$. A similar treatment also applies to the second equation.
+
+````
+
+````{prf:proof}
+
+We only prove 1 since the second equation can be obtained by replacing $a_n$ with $1 / a_n$ in the first one.
+
+(Case 1: $\liminf a_n = 0$.) For every positive number $M > 0$. By {prf:ref}`thm:58`(the second condition for limit inferior), there exists $N \in \N^\ast$ such that
+
+```{math}
+\begin{align*}
+a_N < 0 + \frac{1}{M} = \frac{1}{M}\end{align*}
+```
+
+Taking the reciprocal, we find
+
+```{math}
+\begin{align*}\frac{1}{a_N} > M
+\end{align*}
+```
+
+This implies that the sequence $\{1 / a_n\}$ is not bounded above. Hence, $\limsup 1 / a_n = \infty$ by definition.
+
+(Case 2: $\liminf a_n = \infty$.) We know $\lim a_n = \infty$ by {prf:ref}`pro:4`. This implies $\{1 / a_n\}$ will converge to zero, i.e., $\lim 1 / a_n = 0$. By {prf:ref}`pro:5`, $\limsup a_n = 0$.
+
+(Case 3: $\liminf a_n$ is a finite positive number.) Write $l = \liminf a_n$. Let $\varepsilon > 0$ be chosen arbitrarily. Put
+
+```{math}
+\begin{align*}\varepsilon_1 = \frac{\varepsilon l^2}{1 + \varepsilon l}\end{align*}
+```
+
+By {prf:ref}`thm:58`, there exists $N \in \N^\ast$ such that
+
+```{math}
+\begin{align*}
+a_n > l - \varepsilon_1
+\quad\forall n \geq N
+\end{align*}
+```
+
+We note that $l - \varepsilon_1 > 0$. Taking the reciprocal of both sides and then plugging in the value of $\varepsilon_1$, we find
+
+```{math}
+:label: eq:123
+\begin{align}\frac{1}{a_n} < \frac{1}{l - \varepsilon_1}
+= \frac{1}{l} + \varepsilon\quad\forall n \geq N
+\end{align}
+```
+
+Now, choose another $\varepsilon > 0$ so small that $1 - \varepsilon l  > 0$. Let
+
+```{math}
+\begin{align*}\varepsilon_2 = \frac{\varepsilon l^2}{1 - \varepsilon l}\end{align*}
+```
+
+:::{note}
+
+The reason why we choose $\varepsilon$ such that $1 - \varepsilon l  > 0$ is that we want $\varepsilon_2 > 0$. Notice also that the choice of sufficient small $\varepsilon$ in this way will not affect the generality of the proof.
+
+:::
+
+Given any integer $m \in \N^\ast$, by {prf:ref}`thm:58`, there exists an integer $N \geq m$ such that
+
+```{math}
+\begin{align*}
+a_N < l + \varepsilon_2
+\end{align*}
+```
+
+Taking the reciprocal and then plugging in the value of $\varepsilon_2$, we obtain
+
+```{math}
+:label: eq:124
+\begin{align}\frac{1}{a_N} > \frac{1}{l + \varepsilon_2}
+= \frac{1}{l} - \varepsilon\end{align}
+```
+
+Therefore, by {prf:ref}`thm:58`, we may conclude $\limsup a_n = 1 / l = 1 / \liminf a_n$ from {eq}`eq:123` and {eq}`eq:124`.
 
 ````

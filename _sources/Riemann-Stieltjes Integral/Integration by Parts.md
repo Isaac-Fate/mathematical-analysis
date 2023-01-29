@@ -26,10 +26,10 @@ Given $\varepsilon > 0$, since $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, there e
 
 ```{math}
 :label: eq:28
-\begin{align}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon\quad\forall P \supset P_\varepsilon\end{align}
+\begin{align}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon\quad\forall P \supseteq P_\varepsilon\end{align}
 ```
 
-Let $P = \left\{x_0, x_1, \ldots, x_n\right \} \supset P_\varepsilon$ be any refinement of $P_\varepsilon$. The Riemann-Stieltjes sum of $\alpha$ with respect to $f$ is
+Let $P = \left\{x_0, x_1, \ldots, x_n\right \} \supseteq P_\varepsilon$ be any refinement of $P_\varepsilon$. The Riemann-Stieltjes sum of $\alpha$ with respect to $f$ is
 
 ```{math}
 :label: eq:29
@@ -85,7 +85,7 @@ A - S(P, \alpha, f) = S(P^\ast, f, \alpha)
 \end{align*}
 ```
 
-Since $P^\ast \supset P \supset P_\varepsilon$, it follows from {eq}`eq:28` that
+Since $P^\ast \supseteq P \supseteq P_\varepsilon$, it follows from {eq}`eq:28` that
 
 ```{math}
 \begin{align*}\abs{A - S(P, \alpha, f) - \int_a^b f \; \mathrm{d}\alpha}
@@ -96,7 +96,7 @@ Since $P^\ast \supset P \supset P_\varepsilon$, it follows from {eq}`eq:28` that
 Recall $A = f(b)\alpha(b) - f(a)\alpha(a)$, we have
 
 ```{math}
-\begin{align*}\abs{S(P, \alpha, f) + \int_a^b f \; \mathrm{d}\alpha - f(b)\alpha(b) + f(a)\alpha(a)} < \varepsilon\quad\forall P \supset P_\varepsilon\end{align*}
+\begin{align*}\abs{S(P, \alpha, f) + \int_a^b f \; \mathrm{d}\alpha - f(b)\alpha(b) + f(a)\alpha(a)} < \varepsilon\quad\forall P \supseteq P_\varepsilon\end{align*}
 ```
 
 This implies that $\alpha \in \mathfrak{R}(f)$ on $[a, b]$, and

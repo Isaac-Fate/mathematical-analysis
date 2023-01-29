@@ -82,7 +82,7 @@ The following theorem states that not only $L(P,f,\alpha) \leq U(P,f,\alpha)$ fo
 :label: thm:26
 
 Suppose $\alpha$ is increasing on $[a, b]$. We have the following statements.
-- ➀ If $P^\prime \supset P$, then
+- ➀ If $P^\prime \supseteq P$, then
 
 ```{math}
 \begin{align*}
@@ -110,7 +110,7 @@ If $P^\prime$ has $m$ points more than $P$, then we can construct a chain of par
 
 ```{math}
 \begin{align*}
-P^\prime = P_1 \supset P_2 \cdots\supset P_m = P
+P^\prime = P_1 \supseteq P_2 \cdots\supseteq P_m = P
 \end{align*}
 ```
 

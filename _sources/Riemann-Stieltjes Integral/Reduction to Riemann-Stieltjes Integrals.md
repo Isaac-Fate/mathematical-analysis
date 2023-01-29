@@ -34,7 +34,7 @@ Because $f \in \mathfrak{\alpha}$, there exists a partition, say $P_\varepsilon^
 ```{math}
 :label: eq:35
 \begin{align}\abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha} < \varepsilon / 2
-\quad\forall P \supset P_\varepsilon^{\prime\prime}\end{align}
+\quad\forall P \supseteq P_\varepsilon^{\prime\prime}\end{align}
 ```
 
 holds for any refinement $P$.

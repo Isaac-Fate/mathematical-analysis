@@ -22,7 +22,7 @@ We only prove $f \in \mathfrak{R}(\alpha)$ on $[a, c]$. Given $\varepsilon > 0$.
 
 ```{math}
 \begin{align*}
-U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon\quad\forall P \supset P_\varepsilon\end{align*}
+U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon\quad\forall P \supseteq P_\varepsilon\end{align*}
 ```
 
 Let $P_\varepsilon^\prime = (P_\varepsilon \cup \{ c \}) \cap[a, c]$. Note that $P_\varepsilon^\prime$ is a partition on $[a, c]$. Now, let $P^\prime$ be a refinement of $ P_\varepsilon^\prime$ on $[a, c]$, and $P$ a refinement of $P_\varepsilon$ on $[a, b]$. It is evident that
@@ -73,7 +73,7 @@ In fact, $f$ is integrable on all sub-intervals of $[a, b]$.
 ````{prf:theorem}
 :label: thm:40
 
-Suppose $\alpha$ is increasing on $[a, b]$. Let $[c, d] \subset[a, b]$ be a sub-interval. If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $f \in \mathfrak{R}(\alpha)$ on $[c, d]$.
+Suppose $\alpha$ is increasing on $[a, b]$. Let $[c, d] \subseteq[a, b]$ be a sub-interval. If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $f \in \mathfrak{R}(\alpha)$ on $[c, d]$.
 
 ````
 
@@ -198,7 +198,7 @@ Because $f \in \mathfrak{R}(\alpha)$, there exists a partition $P_\varepsilon$ o
 U(P,f,\alpha) - L(P,f,\alpha) < \frac{\varepsilon \delta}{4A}\end{align}
 ```
 
-for any refinement $P \supset P_\varepsilon$.
+for any refinement $P \supseteq P_\varepsilon$.
 
 Write $P = \{x_0,x_1, \ldots, x_n\}$. We now separate the indices of sub-intervals into two sets in the following way.
 
@@ -475,7 +475,7 @@ We only prove $f \in \mathfrak{R}(G)$ and $\int_{a}^{b} f g \; \mathrm{d}\alpha 
 \end{align}
 ```
 
-holds for any refinement $P$ of $P_\varepsilon$. Let $P = \{x_0, x_1, \ldots, x_n\} \supset P_\varepsilon$ and $t_k \in[x_{k-1}, x_k]$. We have
+holds for any refinement $P$ of $P_\varepsilon$. Let $P = \{x_0, x_1, \ldots, x_n\} \supseteq P_\varepsilon$ and $t_k \in[x_{k-1}, x_k]$. We have
 
 ```{math}
 :label: eq:94

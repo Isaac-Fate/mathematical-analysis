@@ -31,16 +31,16 @@ Given $\varepsilon > 0$. Since $f \in \mathfrak{R}(\alpha)$ on $[a,b]$ then ther
 such that
 
 ```{math}
-\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supset P_\varepsilon^{\prime}\end{align*}
+\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supseteq P_\varepsilon^{\prime}\end{align*}
 ```
 
 Similarly, since $g \in \mathfrak{R}(\alpha)$, there exists a partition $P_\varepsilon^{\prime\prime}$ such that
 
 ```{math}
-\begin{align*}\abs{S(P, g, \alpha) - \int_a^b g \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supset P_\varepsilon^{\prime\prime}\end{align*}
+\begin{align*}\abs{S(P, g, \alpha) - \int_a^b g \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supseteq P_\varepsilon^{\prime\prime}\end{align*}
 ```
 
-Let $P_\varepsilon$ be the refinement of $P_\varepsilon^{\prime}$ and $P_\varepsilon^{\prime\prime}$, i.e., $P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}$. Then for any $P \supset P_\varepsilon$, we have
+Let $P_\varepsilon$ be the refinement of $P_\varepsilon^{\prime}$ and $P_\varepsilon^{\prime\prime}$, i.e., $P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}$. Then for any $P \supseteq P_\varepsilon$, we have
 
 ```{math}
 \begin{align*}&\abs{
@@ -87,16 +87,16 @@ Given $\varepsilon > 0$. Since $f \in \mathfrak{R}(\alpha)$ on $[a,b]$ then ther
 such that
 
 ```{math}
-\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supset P_\varepsilon^{\prime}\end{align*}
+\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supseteq P_\varepsilon^{\prime}\end{align*}
 ```
 
 Similarly, since $f \in \mathfrak{R}(\beta)$, there exists a partition $P_\varepsilon^{\prime\prime}$ such that
 
 ```{math}
-\begin{align*}\abs{S(P, f, \beta) - \int_a^b f \; \mathrm{d}\beta} < \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supset P_\varepsilon^{\prime\prime}\end{align*}
+\begin{align*}\abs{S(P, f, \beta) - \int_a^b f \; \mathrm{d}\beta} < \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supseteq P_\varepsilon^{\prime\prime}\end{align*}
 ```
 
-Let $P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}$. Then for any $P \supset P_\varepsilon$, we have
+Let $P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}$. Then for any $P \supseteq P_\varepsilon$, we have
 
 ```{math}
 \begin{align*}&\abs{
@@ -144,14 +144,14 @@ where $P$, $P^\prime$ and $P^{\prime\prime}$ are partitions on $[a, b]$, $[a, c]
 
 ```{math}
 \begin{align*}\abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
-\quad\forall P^\prime\supset P_\varepsilon^\prime\end{align*}
+\quad\forall P^\prime\supseteq P_\varepsilon^\prime\end{align*}
 ```
 
 for some $P_\varepsilon^\prime$ on $[a, c]$. And
 
 ```{math}
 \begin{align*}\abs{S(P^{\prime\prime}, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
-\quad\forall P^{\prime\prime}\supset P_\varepsilon^{\prime\prime}\end{align*}
+\quad\forall P^{\prime\prime}\supseteq P_\varepsilon^{\prime\prime}\end{align*}
 ```
 
 for some $P_\varepsilon^{\prime\prime}$ on $[c, b]$. Let
@@ -164,7 +164,7 @@ P_\varepsilon = P_\varepsilon^\prime\cup P_\varepsilon^{\prime\prime}\end{align*
 
 ```{math}
 \begin{align*}
-P &\supset P_\varepsilon&
+P &\supseteq P_\varepsilon&
 P^\prime&= P \cap[a, c]&
 P^{\prime\prime}&= P \cap[c, b]\end{align*}
 ```
@@ -173,8 +173,8 @@ Observe that
 
 ```{math}
 \begin{align*}
-P^\prime&\supset P_\varepsilon^\prime&
-P^{\prime\prime}&\supset P_\varepsilon^{\prime\prime}\end{align*}
+P^\prime&\supseteq P_\varepsilon^\prime&
+P^{\prime\prime}&\supseteq P_\varepsilon^{\prime\prime}\end{align*}
 ```
 
 It then follows from {eq}`eq:26` that
@@ -199,14 +199,14 @@ Therefore, $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ and {eq}`eq:27` holds.
 
 ```{math}
 \begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon / 2
-\quad\forall P \supset P_\varepsilon\end{align*}
+\quad\forall P \supseteq P_\varepsilon\end{align*}
 ```
 
 for some $P_\varepsilon$ on $[a, b]$. And
 
 ```{math}
 \begin{align*}\abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} < \varepsilon / 2
-\quad\forall P^\prime\supset P_\varepsilon^\prime\end{align*}
+\quad\forall P^\prime\supseteq P_\varepsilon^\prime\end{align*}
 ```
 
 for some $P_\varepsilon^\prime$ on $[a, c]$.
@@ -221,8 +221,8 @@ Let
 
 ```{math}
 \begin{align*}
-P^{\prime\prime}&\supset P_\varepsilon^{\prime\prime}&
-P^\prime&\supset(P_\varepsilon\cup P_\varepsilon^\prime) \cap[a, c]&
+P^{\prime\prime}&\supseteq P_\varepsilon^{\prime\prime}&
+P^\prime&\supseteq(P_\varepsilon\cup P_\varepsilon^\prime) \cap[a, c]&
 P &= P^\prime\cup P^{\prime\prime}\end{align*}
 ```
 
@@ -230,8 +230,8 @@ Observe that
 
 ```{math}
 \begin{align*}
-P^\prime&\supset P_\varepsilon^\prime&
-P &= P^\prime\cup P^{\prime\prime}\supset(P_\varepsilon\cap[a, c]) \cup(P_\varepsilon\cap[c, b])
+P^\prime&\supseteq P_\varepsilon^\prime&
+P &= P^\prime\cup P^{\prime\prime}\supseteq(P_\varepsilon\cap[a, c]) \cup(P_\varepsilon\cap[c, b])
 = P_\varepsilon\end{align*}
 ```
 
@@ -259,14 +259,14 @@ Therefore, $f \in \mathfrak{R}(\alpha)$ on $[c, b]$ and {eq}`eq:27` holds.
 
 ```{math}
 \begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon / 2
-\quad\forall P \supset P_\varepsilon\end{align*}
+\quad\forall P \supseteq P_\varepsilon\end{align*}
 ```
 
 for some $P_\varepsilon$ on $[a, b]$. And
 
 ```{math}
 \begin{align*}\abs{S(P^{\prime\prime}, f, \alpha) - \int_c^b f \; \mathrm{d}\alpha} < \varepsilon / 2
-\quad\forall P^{\prime\prime}\supset P_\varepsilon^{\prime\prime}\end{align*}
+\quad\forall P^{\prime\prime}\supseteq P_\varepsilon^{\prime\prime}\end{align*}
 ```
 
 for some $P_\varepsilon^{\prime\prime}$ on $[c, b]$.
@@ -281,8 +281,8 @@ Let
 
 ```{math}
 \begin{align*}
-P^\prime&\supset P_\varepsilon^\prime&
-P^{\prime\prime}&\supset(P_\varepsilon\cup P_\varepsilon^{\prime\prime}) \cap[c, b]&
+P^\prime&\supseteq P_\varepsilon^\prime&
+P^{\prime\prime}&\supseteq(P_\varepsilon\cup P_\varepsilon^{\prime\prime}) \cap[c, b]&
 P &= P^\prime\cup P^{\prime\prime}\end{align*}
 ```
 
@@ -290,8 +290,8 @@ Observe that
 
 ```{math}
 \begin{align*}
-P^{\prime\prime}&\supset P_\varepsilon^{\prime\prime}&
-P &= P^\prime\cup P^{\prime\prime}\supset(P_\varepsilon\cap[a, c]) \cup(P_\varepsilon\cap[c, b])
+P^{\prime\prime}&\supseteq P_\varepsilon^{\prime\prime}&
+P &= P^\prime\cup P^{\prime\prime}\supseteq(P_\varepsilon\cap[a, c]) \cup(P_\varepsilon\cap[c, b])
 = P_\varepsilon\end{align*}
 ```
 

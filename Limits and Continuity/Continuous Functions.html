@@ -606,29 +606,29 @@ title="Print to PDF"
 <h1>Continuous Functions<a class="headerlink" href="#continuous-functions" title="Permalink to this headline">#</a></h1>
 <p>The next theorem states that the composite function of continuous functions is also continuous.</p>
 <div class="proof theorem admonition" id="thm:3">
-<p class="admonition-title"><span class="caption-number">Theorem 19 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 20 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\((X, d_X)\)</span>, <span class="math notranslate nohighlight">\((Y, d_Y)\)</span> and <span class="math notranslate nohighlight">\((Z, d_Z)\)</span> be metric spaces. Let <span class="math notranslate nohighlight">\(f: X \to Y\)</span> and <span class="math notranslate nohighlight">\(g: Y \to Z\)</span> be functions, and let <span class="math notranslate nohighlight">\(h = g \circ f\)</span> be the composite function defined on <span class="math notranslate nohighlight">\(X\)</span>. If <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(p \in X\)</span>, and <span class="math notranslate nohighlight">\(g\)</span> is continuous at <span class="math notranslate nohighlight">\(f(p)\)</span>, then <span class="math notranslate nohighlight">\(h\)</span> is continuous at <span class="math notranslate nohighlight">\(p\)</span>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(g\)</span> is continuous at <span class="math notranslate nohighlight">\(f(p)\)</span>, there exists some <span class="math notranslate nohighlight">\(\delta^\prime &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-7">
-<span class="eqno">(22)<a class="headerlink" href="#equation-eq-7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(24)<a class="headerlink" href="#equation-eq-7" title="Permalink to this equation">#</a></span>\[\begin{align}
 d_Y(y, f(p)) &lt; \delta^\prime\implies d_Z(g(y), g(f(p))) &lt; \varepsilon\end{align}\]</div>
 <p>And since <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(p\)</span>, there exists some <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-8">
-<span class="eqno">(23)<a class="headerlink" href="#equation-eq-8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(25)<a class="headerlink" href="#equation-eq-8" title="Permalink to this equation">#</a></span>\[\begin{align}
 d_X(x, p) &lt; \delta\implies d_Y(f(x), f(p)) &lt; \delta^\prime\end{align}\]</div>
-<p>Now, choosing <span class="math notranslate nohighlight">\(x \in X\)</span> satisfying <span class="math notranslate nohighlight">\(d_X(x, p) &lt; \delta\)</span>, and then applying <a class="reference internal" href="#equation-eq-8">(23)</a> followed by <a class="reference internal" href="#equation-eq-7">(22)</a>, we have</p>
+<p>Now, choosing <span class="math notranslate nohighlight">\(x \in X\)</span> satisfying <span class="math notranslate nohighlight">\(d_X(x, p) &lt; \delta\)</span>, and then applying <a class="reference internal" href="#equation-eq-8">(25)</a> followed by <a class="reference internal" href="#equation-eq-7">(24)</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 d_Z(g(f(x)), g(f(p))) &lt; \varepsilon\end{align*}\]</div>
 <p>This is precisely <span class="math notranslate nohighlight">\(d_Z(h(x), h(p)) &lt; \varepsilon\)</span>. Hence, <span class="math notranslate nohighlight">\(h\)</span> is continuous at <span class="math notranslate nohighlight">\(p\)</span>.</p>
 </div>
 <div class="proof theorem admonition" id="thm:6">
-<p class="admonition-title"><span class="caption-number">Theorem 20 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 21 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f: X \to \R\)</span> be a real-valued continuous function from a metric space <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\(\R\)</span>. Let <span class="math notranslate nohighlight">\(K \subset X\)</span> be a compact subset. Then there exist points <span class="math notranslate nohighlight">\(p, q \in K\)</span> such that</p>
+<p>Let <span class="math notranslate nohighlight">\(f: X \to \R\)</span> be a real-valued continuous function from a metric space <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\(\R\)</span>. Let <span class="math notranslate nohighlight">\(K \subseteq X\)</span> be a compact subset. Then there exist points <span class="math notranslate nohighlight">\(p, q \in K\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f(p) = \sup f(K)

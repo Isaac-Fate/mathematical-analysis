@@ -799,7 +799,7 @@ a_N &gt; u - \varepsilon\end{align*}\]</div>
 </div><p>Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, the first condition says <span class="math notranslate nohighlight">\(u+\varepsilon\)</span> is an upper bound for some <span class="math notranslate nohighlight">\(N\)</span>-th tail of <span class="math notranslate nohighlight">\(\{a_n\}\)</span>. In other words, all the terms of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> will eventually fall below the number <span class="math notranslate nohighlight">\(u + \varepsilon\)</span>. While the second condition says there are <em>infinitely</em> many terms of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> that exceed <span class="math notranslate nohighlight">\(u - \varepsilon\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>These two conditions are used to define the limit superior in Apostol’s book<span id="id1">[<a class="reference internal" href="../References.html#id4" title="Tom M. Apostol. Mathematical Analysis: A Modern Approach to Advanced Calculus. Addison-Wesley Series in Mathematics. Addison-Wesley, Reading, Mass., 2. ed edition, 1974. ISBN 978-0-201-00288-1.">Apostol, 1974</a>]</span>. The problem is that we cannot assert the existence of such number <span class="math notranslate nohighlight">\(u\)</span> if we adopt this definition, although the existence can be proved later. But this would increase the difficulty in understanding the concept of limit superior/inferior.</p>
+<p>These two conditions are used to define the limit superior in Apostol’s book<span id="id1">[<a class="reference internal" href="../References.html#id4" title="Tom M. Apostol. Mathematical Analysis: A Modern Approach to Advanced Calculus. Addison-Wesley Series in Mathematics. Addison-Wesley, Reading, Mass., 2. ed edition, 1974. ISBN 978-0-201-00288-1.">Apostol, 1974</a>]</span>. The problem is that we cannot assume the existence of such a number <span class="math notranslate nohighlight">\(u\)</span> if we adopt this definition, although the existence can be proved later. But this would increase the difficulty in understanding the concept of limit superior/inferior.</p>
 </div>
 <div class="proof admonition" id="proof">
 <p>Proof. (Sufficiency) We first assume <span class="math notranslate nohighlight">\(u\)</span> satisfies the above two conditions and show that it is indeed the limit superior of <span class="math notranslate nohighlight">\(\{a_n\}\)</span>. Note that the first condition implies that <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded above. Hence, it is feasible to define</p>
@@ -943,7 +943,7 @@ u_n \leq u_N \leq -M
 <p>This implies that <span class="math notranslate nohighlight">\(\lim u_n = -\infty\)</span>. Therefore, by the definition of limit superior, <span class="math notranslate nohighlight">\(\limsup a_n = -\infty\)</span>. Then by statement 1, which we have proved earlier, <span class="math notranslate nohighlight">\(\liminf a_n = -\infty\)</span>.</p>
 </div>
 <p>As an analogous result, we also have the following proposition, the proof of which is similar and is left as an exercise.</p>
-<div class="proof proposition admonition" id="proposition-5">
+<div class="proof proposition admonition" id="pro:4">
 <p class="admonition-title"><span class="caption-number">Proposition 2 </span></p>
 <div class="proposition-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of real numbers. Then</p>
@@ -952,10 +952,10 @@ u_n \leq u_N \leq -M
 <li><p>➁ <span class="math notranslate nohighlight">\(\{a_n\}\)</span> diverges to <span class="math notranslate nohighlight">\(\infty\)</span> if and only if <span class="math notranslate nohighlight">\(\limsup a_n = \liminf a_n = \infty\)</span>.</p></li>
 </ul>
 </div>
-</div><div class="proof proposition admonition" id="proposition-6">
+</div><div class="proof proposition admonition" id="pro:5">
 <p class="admonition-title"><span class="caption-number">Proposition 3 </span></p>
 <div class="proposition-content section" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of real numbers. Then <span class="math notranslate nohighlight">\(\{a_n\}\)</span> converges if and only if both its limit superior and limit inferior are equal to a finite number. That is,</p>
+<p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of real numbers. Then <span class="math notranslate nohighlight">\(\{a_n\}\)</span> converges if and only if both limit superior and limit inferior are equal to a finite number. That is,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim a_n = a
 \iff\limsup a_n = \liminf a_n = a
@@ -988,6 +988,61 @@ a_n &gt; a - \varepsilon\quad\forall n \geq N_2
 <li><p>➁ for any given <span class="math notranslate nohighlight">\(m \in \N^\ast\)</span>, there exists <span class="math notranslate nohighlight">\(M \geq \max\{m, N\}\)</span> such that <span class="math notranslate nohighlight">\(a_M &gt; a - \varepsilon\)</span>.</p></li>
 </ul>
 <p>By <a class="reference internal" href="#thm:58">Theorem 3</a>, <span class="math notranslate nohighlight">\(a = \limsup a_n\)</span>. Similarly, we can also show <span class="math notranslate nohighlight">\(a = \liminf a_n\)</span>.</p>
+</div>
+<p>The next theorem can be treated as the reciprocal rule of limit superior, which establishes the relation between <span class="math notranslate nohighlight">\(\limsup 1 / a_n\)</span> and <span class="math notranslate nohighlight">\(\liminf a_n\)</span>.</p>
+<div class="proof theorem admonition" id="theorem-7">
+<p class="admonition-title"><span class="caption-number">Theorem 4 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of positive numbers, then</p>
+<ul class="simple">
+<li><p>➀ <span class="math notranslate nohighlight">\(\limsup \frac{1}{a_n} = 1 / \liminf a_n\)</span>, and</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(\liminf \frac{1}{a_n} = 1 / \limsup a_n\)</span>.</p></li>
+</ul>
+<p>Note that, in the first equation, if <span class="math notranslate nohighlight">\(\liminf a_n = 0\)</span> then <span class="math notranslate nohighlight">\(\limsup 1 / a_n = \infty\)</span>, and <span class="math notranslate nohighlight">\(\limsup 1 / a_n = 0\)</span> if <span class="math notranslate nohighlight">\(\liminf a_n = \infty\)</span>. A similar treatment also applies to the second equation.</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We only prove 1 since the second equation can be obtained by replacing <span class="math notranslate nohighlight">\(a_n\)</span> with <span class="math notranslate nohighlight">\(1 / a_n\)</span> in the first one.</p>
+<p>(Case 1: <span class="math notranslate nohighlight">\(\liminf a_n = 0\)</span>.) For every positive number <span class="math notranslate nohighlight">\(M &gt; 0\)</span>. By <a class="reference internal" href="#thm:58">Theorem 3</a>(the second condition for limit inferior), there exists <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+a_N &lt; 0 + \frac{1}{M} = \frac{1}{M}\end{align*}\]</div>
+<p>Taking the reciprocal, we find</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\frac{1}{a_N} &gt; M
+\end{align*}\]</div>
+<p>This implies that the sequence <span class="math notranslate nohighlight">\(\{1 / a_n\}\)</span> is not bounded above. Hence, <span class="math notranslate nohighlight">\(\limsup 1 / a_n = \infty\)</span> by definition.</p>
+<p>(Case 2: <span class="math notranslate nohighlight">\(\liminf a_n = \infty\)</span>.) We know <span class="math notranslate nohighlight">\(\lim a_n = \infty\)</span> by <a class="reference internal" href="#pro:4">Proposition 2</a>. This implies <span class="math notranslate nohighlight">\(\{1 / a_n\}\)</span> will converge to zero, i.e., <span class="math notranslate nohighlight">\(\lim 1 / a_n = 0\)</span>. By <a class="reference internal" href="#pro:5">Proposition 3</a>, <span class="math notranslate nohighlight">\(\limsup a_n = 0\)</span>.</p>
+<p>(Case 3: <span class="math notranslate nohighlight">\(\liminf a_n\)</span> is a finite positive number.) Write <span class="math notranslate nohighlight">\(l = \liminf a_n\)</span>. Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be chosen arbitrarily. Put</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\varepsilon_1 = \frac{\varepsilon l^2}{1 + \varepsilon l}\end{align*}\]</div>
+<p>By <a class="reference internal" href="#thm:58">Theorem 3</a>, there exists <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+a_n &gt; l - \varepsilon_1
+\quad\forall n \geq N
+\end{align*}\]</div>
+<p>We note that <span class="math notranslate nohighlight">\(l - \varepsilon_1 &gt; 0\)</span>. Taking the reciprocal of both sides and then plugging in the value of <span class="math notranslate nohighlight">\(\varepsilon_1\)</span>, we find</p>
+<div class="math notranslate nohighlight" id="equation-eq-123">
+<span class="eqno">(9)<a class="headerlink" href="#equation-eq-123" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{1}{a_n} &lt; \frac{1}{l - \varepsilon_1}
+= \frac{1}{l} + \varepsilon\quad\forall n \geq N
+\end{align}\]</div>
+<p>Now, choose another <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> so small that <span class="math notranslate nohighlight">\(1 - \varepsilon l  &gt; 0\)</span>. Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\varepsilon_2 = \frac{\varepsilon l^2}{1 - \varepsilon l}\end{align*}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The reason why we choose <span class="math notranslate nohighlight">\(\varepsilon\)</span> such that <span class="math notranslate nohighlight">\(1 - \varepsilon l  &gt; 0\)</span> is that we want <span class="math notranslate nohighlight">\(\varepsilon_2 &gt; 0\)</span>. Notice also that the choice of sufficient small <span class="math notranslate nohighlight">\(\varepsilon\)</span> in this way will not affect the generality of the proof.</p>
+</div>
+<p>Given any integer <span class="math notranslate nohighlight">\(m \in \N^\ast\)</span>, by <a class="reference internal" href="#thm:58">Theorem 3</a>, there exists an integer <span class="math notranslate nohighlight">\(N \geq m\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+a_N &lt; l + \varepsilon_2
+\end{align*}\]</div>
+<p>Taking the reciprocal and then plugging in the value of <span class="math notranslate nohighlight">\(\varepsilon_2\)</span>, we obtain</p>
+<div class="math notranslate nohighlight" id="equation-eq-124">
+<span class="eqno">(10)<a class="headerlink" href="#equation-eq-124" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{1}{a_N} &gt; \frac{1}{l + \varepsilon_2}
+= \frac{1}{l} - \varepsilon\end{align}\]</div>
+<p>Therefore, by <a class="reference internal" href="#thm:58">Theorem 3</a>, we may conclude <span class="math notranslate nohighlight">\(\limsup a_n = 1 / l = 1 / \liminf a_n\)</span> from <a class="reference internal" href="#equation-eq-123">(9)</a> and <a class="reference internal" href="#equation-eq-124">(10)</a>.</p>
 </div>
 </div>
 </div>

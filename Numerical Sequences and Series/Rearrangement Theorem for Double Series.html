@@ -620,7 +620,7 @@ b_k = a_{g(k)} = a_{m, n},
 <p>Let <span class="math notranslate nohighlight">\(\sum a_{m,n}\)</span> be a double series, and <span class="math notranslate nohighlight">\(g\)</span> an arrangement of double sequence <span class="math notranslate nohighlight">\(\{a_{m,n}\}\)</span> into <span class="math notranslate nohighlight">\(\{b_k\}\)</span>. Then the series <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely if and only if <span class="math notranslate nohighlight">\(\sum a_{m,n}\)</span> converges absolutely.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We first suppose that <span class="math notranslate nohighlight">\(\sum a_{m,n}\)</span> converges absolutely. By <a class="reference internal" href="Double%20Series.html#thm:47">Theorem 14</a>, the set of its partial sums of the series <span class="math notranslate nohighlight">\(\sum \abs{a_{m,n}}\)</span> must be bounded above by some positive number, say <span class="math notranslate nohighlight">\(A\)</span>, that is,</p>
+<p>Proof. We first suppose that <span class="math notranslate nohighlight">\(\sum a_{m,n}\)</span> converges absolutely. By <a class="reference internal" href="Double%20Series.html#thm:47">Theorem 15</a>, the set of its partial sums of the series <span class="math notranslate nohighlight">\(\sum \abs{a_{m,n}}\)</span> must be bounded above by some positive number, say <span class="math notranslate nohighlight">\(A\)</span>, that is,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{m=1}^p \sum_{n=1}^q \abs{a_{m,n}}\leq A
 \quad\forall p,q \in\N^\ast\end{align*}\]</div>
@@ -632,7 +632,7 @@ b_k = a_{g(k)} = a_{m, n},
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{k=1}^K \abs{b_k}\leq A
 \quad\forall K \in\N^\ast\end{align*}\]</div>
-<p>Then <span class="math notranslate nohighlight">\(\sum \abs{b_k}\)</span> indeed converges by <a class="reference internal" href="Double%20Series.html#thm:47">Theorem 14</a>, i.e., <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely.</p>
+<p>Then <span class="math notranslate nohighlight">\(\sum \abs{b_k}\)</span> indeed converges by <a class="reference internal" href="Double%20Series.html#thm:47">Theorem 15</a>, i.e., <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely.</p>
 <p>Conversely, suppose now the series <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely. Hence, the set of partial sums of <span class="math notranslate nohighlight">\(\sum \abs{b_k}\)</span> is bounded above by some number <span class="math notranslate nohighlight">\(B &gt; 0\)</span>. It follows that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{m=1}^p \sum_{n=1}^q \abs{a_{m,n}}\leq\sum_{k=1}^K \abs{b_k}\end{align*}\]</div>
@@ -644,10 +644,10 @@ K = \max\set{ g^{-1}(m,n) }{1 \leq m \leq p, 1 \leq n \leq q}\end{align*}\]</div
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{m=1}^p \sum_{n=1}^q \abs{a_{m,n}}\leq B
 \quad\forall p,q \in\N^\ast\end{align*}\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(\sum \abs{a_{m,n}}\)</span> converges absolutely by <a class="reference internal" href="Double%20Series.html#thm:47">Theorem 14</a>.</p>
+<p>Therefore, <span class="math notranslate nohighlight">\(\sum \abs{a_{m,n}}\)</span> converges absolutely by <a class="reference internal" href="Double%20Series.html#thm:47">Theorem 15</a>.</p>
 </div>
 <div class="proof theorem admonition" id="theorem-2">
-<p class="admonition-title"><span class="caption-number">Theorem 16 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 17 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\sum a_{m,n}\)</span> is an absolutely convergent double series with sum <span class="math notranslate nohighlight">\(s\)</span>. Let <span class="math notranslate nohighlight">\(g\)</span> be an arrangement of double sequence <span class="math notranslate nohighlight">\(\{a_{m,n}\}\)</span> into <span class="math notranslate nohighlight">\(\{b_k\}\)</span>. Then</p>
 <ul class="simple">
@@ -684,7 +684,7 @@ S_{p+l, p+l} - S_{p,p} &lt; \varepsilon / 2
 \quad\forall p \geq N_2 \;\forall l \in\N^\ast\end{align*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(S_{p,q} = \sum_{m=1}^{p} \sum_{n=1}^{q} \abs{a_{m,n}}\)</span>. Let <span class="math notranslate nohighlight">\(N = \max\{N_1, N_2\}\)</span>. In particular, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-108">
-<span class="eqno">(13)<a class="headerlink" href="#equation-eq-108" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{s_{N,N} - s} &lt; \varepsilon / 2
+<span class="eqno">(15)<a class="headerlink" href="#equation-eq-108" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{s_{N,N} - s} &lt; \varepsilon / 2
 \quad\text{and}\quad
 S_{N+l,N+l} - S_{N,N} &lt; \varepsilon / 2
 \quad\forall l \in\N^\ast\end{align}\]</div>
@@ -692,7 +692,7 @@ S_{N+l,N+l} - S_{N,N} &lt; \varepsilon / 2
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 K = \max\set{g^{-1}(m,n)}{1 \leq m \leq N, 1 \leq n \leq N}\end{align*}\]</div>
-<p>Combined with <a class="reference internal" href="#equation-eq-108">(13)</a>, we find</p>
+<p>Combined with <a class="reference internal" href="#equation-eq-108">(15)</a>, we find</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{\sum_{k=1}^K b_k - s}\leq\abs{\sum_{k=1}^K b_k - s_{N,N}}
 + \abs{s_{N,N} - s}
@@ -709,7 +709,7 @@ h_m(n) = (m, n)
 \end{align*}\]</div>
 <p>And let function <span class="math notranslate nohighlight">\(f_m: \N^\ast \to \N^\ast\)</span> be defined as a composition of <span class="math notranslate nohighlight">\(h_m\)</span> and <span class="math notranslate nohighlight">\(g^{-1}\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight" id="equation-eq-109">
-<span class="eqno">(14)<a class="headerlink" href="#equation-eq-109" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(16)<a class="headerlink" href="#equation-eq-109" title="Permalink to this equation">#</a></span>\[\begin{align}
 f_m = g^{-1}\circ h_m
 \end{align}\]</div>
 <p>Note that <span class="math notranslate nohighlight">\(f_m\)</span> is injective since both <span class="math notranslate nohighlight">\(h_m\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are injective. For a term <span class="math notranslate nohighlight">\(a_{m,n}\)</span>, through arrangement <span class="math notranslate nohighlight">\(g\)</span>, we have</p>
@@ -724,13 +724,13 @@ f_m(n) = g^{-1}( h_m(n) )
 = g^{-1}(m, n)
 = k
 \end{align*}\]</div>
-<p>This implies <span class="math notranslate nohighlight">\(\sum_n a_{m,n}\)</span> is a subseries of <span class="math notranslate nohighlight">\(\sum b_k\)</span>. Because <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely, by <a class="reference internal" href="Subseries.html#thm:50">Theorem 13</a>, <span class="math notranslate nohighlight">\(\sum_n a_{m,n}\)</span> also converges absolutely. Similarly, each <span class="math notranslate nohighlight">\(\sum_m a_{m,n}\)</span> also converges absolutely.</p>
-<p>Write <span class="math notranslate nohighlight">\(r_m = \sum_{n=1}^\infty a_{m,n}\)</span>. Define <span class="math notranslate nohighlight">\(f_m\)</span> for each <span class="math notranslate nohighlight">\(m \in \N^\ast\)</span> as in <a class="reference internal" href="#equation-eq-109">(14)</a>. It can be shown that</p>
+<p>This implies <span class="math notranslate nohighlight">\(\sum_n a_{m,n}\)</span> is a subseries of <span class="math notranslate nohighlight">\(\sum b_k\)</span>. Because <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely, by <a class="reference internal" href="Subseries.html#thm:50">Theorem 14</a>, <span class="math notranslate nohighlight">\(\sum_n a_{m,n}\)</span> also converges absolutely. Similarly, each <span class="math notranslate nohighlight">\(\sum_m a_{m,n}\)</span> also converges absolutely.</p>
+<p>Write <span class="math notranslate nohighlight">\(r_m = \sum_{n=1}^\infty a_{m,n}\)</span>. Define <span class="math notranslate nohighlight">\(f_m\)</span> for each <span class="math notranslate nohighlight">\(m \in \N^\ast\)</span> as in <a class="reference internal" href="#equation-eq-109">(16)</a>. It can be shown that</p>
 <ul class="simple">
 <li><p>➀ <span class="math notranslate nohighlight">\(f_m\)</span> is injective,</p></li>
-<li><p>➁ <span class="math notranslate nohighlight">\(f_m(\N^\ast) \subset \N^\ast\)</span>, and</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(f_m(\N^\ast) \subseteq \N^\ast\)</span>, and</p></li>
 <li><p>➂ <span class="math notranslate nohighlight">\(\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast\)</span>.
-(See <a class="reference internal" href="#ex-6"><span class="std std-ref">Exercise 2</span></a>.) Hence, all the requirements of <a class="reference internal" href="Subseries.html#thm:50">Theorem 13</a> are met. Therefore, <span class="math notranslate nohighlight">\(\sum r_m\)</span> converges absolutely, and</p></li>
+(See <a class="reference internal" href="#ex-6"><span class="std std-ref">Exercise 2</span></a>.) Hence, all the requirements of <a class="reference internal" href="Subseries.html#thm:50">Theorem 14</a> are met. Therefore, <span class="math notranslate nohighlight">\(\sum r_m\)</span> converges absolutely, and</p></li>
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{m=1}^\infty r_m
@@ -744,14 +744,14 @@ f_m(n) = g^{-1}( h_m(n) )
 <p>Complete the above proof by showing</p>
 <ul class="simple">
 <li><p>➀ <span class="math notranslate nohighlight">\(f_m\)</span> is injective,</p></li>
-<li><p>➁ <span class="math notranslate nohighlight">\(f_m(\N^\ast) \subset \N^\ast\)</span>, and</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(f_m(\N^\ast) \subseteq \N^\ast\)</span>, and</p></li>
 <li><p>➂ <span class="math notranslate nohighlight">\(\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast\)</span>.</p></li>
 </ul>
-<p>Each function <span class="math notranslate nohighlight">\(f_m\)</span> is defined by <a class="reference internal" href="#equation-eq-109">(14)</a>.</p>
+<p>Each function <span class="math notranslate nohighlight">\(f_m\)</span> is defined by <a class="reference internal" href="#equation-eq-109">(16)</a>.</p>
 </div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
-<p>The first two statements are evident by <a class="reference internal" href="#equation-eq-109">(14)</a>. We now show</p>
+<p>The first two statements are evident by <a class="reference internal" href="#equation-eq-109">(16)</a>. We now show</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast\end{align*}\]</div>
 <p>Given <span class="math notranslate nohighlight">\(k \in \N^\ast\)</span>, we have</p>
@@ -759,14 +759,14 @@ f_m(n) = g^{-1}( h_m(n) )
 \[\begin{align*}
 g(k) = (m, n)
 \end{align*}\]</div>
-<p>It then follows from <a class="reference internal" href="#equation-eq-109">(14)</a> that</p>
+<p>It then follows from <a class="reference internal" href="#equation-eq-109">(16)</a> that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f_m(n) = g^{-1}(h_m(n))
 = g^{-1}(m,n)
 = k
 \end{align*}\]</div>
-<p>Hence, <span class="math notranslate nohighlight">\(n \in f_m(\N^\ast)\)</span>. This, along with the fact <span class="math notranslate nohighlight">\(f_m(\N^\ast) \subset \N^\ast\)</span>, implies the union of all function ranges is the set of natural numbers, i.e.,</p>
+<p>Hence, <span class="math notranslate nohighlight">\(n \in f_m(\N^\ast)\)</span>. This, along with the fact <span class="math notranslate nohighlight">\(f_m(\N^\ast) \subseteq \N^\ast\)</span>, implies the union of all function ranges is the set of natural numbers, i.e.,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\bigcup_{m=1}^\infty f_m(\N^\ast) = \N^\ast\end{align*}\]</div>
 <p>We also need to show that every two function ranges are mutually disjoint. Assume that, on the contrary, there exist <span class="math notranslate nohighlight">\(m_1, m_2 \in \N^\ast\)</span> such that <span class="math notranslate nohighlight">\(m_1 \neq m_2\)</span> and</p>

@@ -338,7 +338,7 @@ n \leq M
 This implies
 
 ```{math}
-\begin{align*}\set{f_k(n)}{1 \leq k \leq p, 1 \leq n \leq q}\supset\{1, \ldots, N\}\end{align*}
+\begin{align*}\set{f_k(n)}{1 \leq k \leq p, 1 \leq n \leq q}\supseteq\{1, \ldots, N\}\end{align*}
 ```
 
 provided that $p \geq K$ and $q \geq M$. Inequality {eq}`eq:106` then immediately follows from {eq}`eq:107` since

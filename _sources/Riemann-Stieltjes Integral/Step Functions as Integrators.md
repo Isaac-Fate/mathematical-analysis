@@ -110,7 +110,7 @@ Given $\varepsilon > 0$, since $f(x)$ is continuous from the left at $x=c$, ther
 \implies\abs{f(x) - f(c)} < \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + 1}\end{align}
 ```
 
-Choose a partition $P_\varepsilon$ on $[a, b]$ with $\norm{P_\varepsilon} < \delta$. Let $P \supset P_\varepsilon$ be an arbitrary refinement. Applying {eq}`eq:41` to $P$, we have $\delta_1 < \norm{P} \leq \norm{P_\varepsilon}<\delta$. We may then apply {eq}`eq:42`, and obtain
+Choose a partition $P_\varepsilon$ on $[a, b]$ with $\norm{P_\varepsilon} < \delta$. Let $P \supseteq P_\varepsilon$ be an arbitrary refinement. Applying {eq}`eq:41` to $P$, we have $\delta_1 < \norm{P} \leq \norm{P_\varepsilon}<\delta$. We may then apply {eq}`eq:42`, and obtain
 
 ```{math}
 \begin{multline*}\abs{
@@ -132,7 +132,7 @@ This implies $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and {eq}`eq:40` holds.
 \begin{align}\abs{x - c} < \delta\implies\abs{f(x) - f(c)} < \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + \abs{\alpha(b) - \alpha(c)} + 1}\end{align}
 ```
 
-Choose a partition $P_\varepsilon$ with $\norm{P_\varepsilon} < \delta$. Let $P \supset P_\varepsilon$. Applying {eq}`eq:39` to $P$, we have $0 \leq \delta_1, \delta_2 \leq \norm{P} \leq \norm{P_\varepsilon} < \delta$. Then {eq}`eq:39` and {eq}`eq:43` yield
+Choose a partition $P_\varepsilon$ with $\norm{P_\varepsilon} < \delta$. Let $P \supseteq P_\varepsilon$. Applying {eq}`eq:39` to $P$, we have $0 \leq \delta_1, \delta_2 \leq \norm{P} \leq \norm{P_\varepsilon} < \delta$. Then {eq}`eq:39` and {eq}`eq:43` yield
 
 ```{math}
 \begin{multline*}\abs{

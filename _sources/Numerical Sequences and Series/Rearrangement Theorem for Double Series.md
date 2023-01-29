@@ -194,7 +194,7 @@ This implies $\sum_n a_{m,n}$ is a subseries of $\sum b_k$. Because $\sum b_k$ c
 
 Write $r_m = \sum_{n=1}^\infty a_{m,n}$. Define $f_m$ for each $m \in \N^\ast$ as in {eq}`eq:109`. It can be shown that
 - ➀ $f_m$ is injective,
-- ➁ $f_m(\N^\ast) \subset \N^\ast$, and
+- ➁ $f_m(\N^\ast) \subseteq \N^\ast$, and
 - ➂ $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.
 (See {ref}`Exercise 2<ex:6>`.) Hence, all the requirements of {prf:ref}`thm:50` are met. Therefore, $\sum r_m$ converges absolutely, and
 
@@ -214,7 +214,7 @@ Similarly, we can also show that $\sum c_n$ converges absolutely to $s$.
 
 Complete the above proof by showing
 - ➀ $f_m$ is injective,
-- ➁ $f_m(\N^\ast) \subset \N^\ast$, and
+- ➁ $f_m(\N^\ast) \subseteq \N^\ast$, and
 - ➂ $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.
 
 Each function $f_m$ is defined by {eq}`eq:109`.
@@ -248,7 +248,7 @@ f_m(n) = g^{-1}(h_m(n))
 \end{align*}
 ```
 
-Hence, $n \in f_m(\N^\ast)$. This, along with the fact $f_m(\N^\ast) \subset \N^\ast$, implies the union of all function ranges is the set of natural numbers, i.e.,
+Hence, $n \in f_m(\N^\ast)$. This, along with the fact $f_m(\N^\ast) \subseteq \N^\ast$, implies the union of all function ranges is the set of natural numbers, i.e.,
 
 ```{math}
 \begin{align*}\bigcup_{m=1}^\infty f_m(\N^\ast) = \N^\ast\end{align*}

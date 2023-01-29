@@ -61,7 +61,7 @@ Let $\varepsilon > 0$ be chosen arbitrarily. Since $\alpha$ is of bounded variat
 \begin{align}
 V_a^b(\alpha)
 < V(P, \alpha)
-+ \frac{\varepsilon}{3A}\quad\forall P \supset P^\prime_\varepsilon\end{align}
++ \frac{\varepsilon}{3A}\quad\forall P \supseteq P^\prime_\varepsilon\end{align}
 ```
 
 We shall use this inequality later.
@@ -72,12 +72,12 @@ Now, we prepare another inequality that will be in use. Because $f \in \mathfrak
 :label: eq:86
 \begin{align}\abs{
 \sum \left(f(s_k) - f(t_k)\right)\Delta \alpha_k
-} < \frac{\varepsilon}{3}\quad\forall P \supset P^{\prime\prime}_\varepsilon\end{align}
+} < \frac{\varepsilon}{3}\quad\forall P \supseteq P^{\prime\prime}_\varepsilon\end{align}
 ```
 
 where $s_k$ and $t_k$ are any two points in the $k$-th subinterval of $P$.
 
-Let $P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon$, and let $P = \left\{x_0, \ldots, x_n\right \} \supset P_\varepsilon$ be a refinement. We have
+Let $P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon$, and let $P = \left\{x_0, \ldots, x_n\right \} \supseteq P_\varepsilon$ be a refinement. We have
 
 ```{math}
 \begin{align*}
@@ -94,7 +94,7 @@ U(P,f,V) - L(P,f,V)
 \leq A \sum_{k=1}^n \left(\Delta V_k - \abs{\Delta\alpha_k}\right)+ \sum_{k=1}^n (M_k - m_k) \abs{\Delta\alpha_k}\end{align}
 ```
 
-Note that $P \supset P_\varepsilon \supset P^\prime_\varepsilon$. It then follows from {eq}`eq:85` that
+Note that $P \supseteq P_\varepsilon \supseteq P^\prime_\varepsilon$. It then follows from {eq}`eq:85` that
 
 ```{math}
 \begin{align*}\sum_{k=1}^n \Delta V_k
@@ -129,7 +129,7 @@ It requires much more work to bound the term $\sum_{k=1}^n (M_k - m_k) \abs{\Del
 h = \frac{\varepsilon}{3(V_a^b (\alpha) + 1)}\end{align*}
 ```
 
-Let $I(P), J(P) \subset \left\{0, 1, \ldots, n\right \}$ be defined as
+Let $I(P), J(P) \subseteq \left\{0, 1, \ldots, n\right \}$ be defined as
 
 ```{math}
 \begin{align*}
@@ -195,7 +195,7 @@ In summary,
 < \frac{\varepsilon}{3} + \abs{\sum_{k=1}^n \left(f(s_k) - f(t_k)\right)\Delta\alpha_k}\end{align}
 ```
 
-Since $P \supset P_\varepsilon \supset P^{\prime\prime}_\varepsilon$, we may apply {eq}`eq:86` to {eq}`eq:92` and obtain that
+Since $P \supseteq P_\varepsilon \supseteq P^{\prime\prime}_\varepsilon$, we may apply {eq}`eq:86` to {eq}`eq:92` and obtain that
 
 ```{math}
 :label: eq:93

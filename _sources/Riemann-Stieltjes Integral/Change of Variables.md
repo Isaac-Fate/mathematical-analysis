@@ -62,10 +62,10 @@ P^\prime := \phi(P) := \left\{\phi(y_0), \ldots, \phi(y_n)\right\}\end{align*}
 
 ```{math}
 :label: eq:32
-\begin{align}\abs{S(P^\prime, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon\quad\forall P^\prime\supset P^\prime_\varepsilon\end{align}
+\begin{align}\abs{S(P^\prime, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon\quad\forall P^\prime\supseteq P^\prime_\varepsilon\end{align}
 ```
 
-Let partition $P_\varepsilon$ on $[c, d]$ be given by $P_\varepsilon = \phi^{-1}(P^\prime_\varepsilon)$. For any refinement $P \supset P_\varepsilon$, we have
+Let partition $P_\varepsilon$ on $[c, d]$ be given by $P_\varepsilon = \phi^{-1}(P^\prime_\varepsilon)$. For any refinement $P \supseteq P_\varepsilon$, we have
 
 ```{math}
 \begin{align*}
@@ -93,10 +93,10 @@ S(P, h, \beta) = S(P^\prime, \phi, \alpha)
 \end{align}
 ```
 
-What is left to show is that $P^\prime \supset P^\prime_\varepsilon$. For any point $x \in P^\prime_\varepsilon$, we have $\phi^{-1}(x) \in P_\varepsilon$ since $P_\varepsilon = \phi^{-1}(P_\varepsilon)$. Recall that $P \supset P_\varepsilon$. Thus, $\phi^{-1}(x) \in P$. And because $P^\prime = \phi(P)$, we have $x = \phi(\phi^{-1}(x)) \in P^\prime$. Therefore, indeed $P^\prime \supset P^\prime_\varepsilon$. It then follows from {eq}`eq:32` and {eq}`eq:33` that
+What is left to show is that $P^\prime \supseteq P^\prime_\varepsilon$. For any point $x \in P^\prime_\varepsilon$, we have $\phi^{-1}(x) \in P_\varepsilon$ since $P_\varepsilon = \phi^{-1}(P_\varepsilon)$. Recall that $P \supseteq P_\varepsilon$. Thus, $\phi^{-1}(x) \in P$. And because $P^\prime = \phi(P)$, we have $x = \phi(\phi^{-1}(x)) \in P^\prime$. Therefore, indeed $P^\prime \supseteq P^\prime_\varepsilon$. It then follows from {eq}`eq:32` and {eq}`eq:33` that
 
 ```{math}
-\begin{align*}\abs{S(P, h, \beta) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon\quad\forall P \supset P_\varepsilon\end{align*}
+\begin{align*}\abs{S(P, h, \beta) - \int_a^b f \; \mathrm{d}\alpha} < \varepsilon\quad\forall P \supseteq P_\varepsilon\end{align*}
 ```
 
 This completes the proof.

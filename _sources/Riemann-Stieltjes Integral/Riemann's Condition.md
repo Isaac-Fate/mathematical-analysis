@@ -15,7 +15,7 @@ Suppose $f$ is bounded and $\alpha$ is increasing on $[a, b]$. Function $f$ is s
 U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon\end{align*}
 ```
 
-for any refinement $P \supset P_\varepsilon$.
+for any refinement $P \supseteq P_\varepsilon$.
 
 ````
 
@@ -47,7 +47,7 @@ If $\alpha$ is constant, then this theorem holds trivially. We assume $\alpha$ i
 \end{align}
 ```
 
-for any refinement $P \supset P_\varepsilon$ and for any choice of representative $t_k$ in each sub-interval $[x_{k-1}, x_k]$. Let this partition $P$ be fixed for now.
+for any refinement $P \supseteq P_\varepsilon$ and for any choice of representative $t_k$ in each sub-interval $[x_{k-1}, x_k]$. Let this partition $P$ be fixed for now.
 
 Let $M_k$ and $m_k$ be as in {prf:ref}`def:2`. We can choose each $t_k^\prime \in[x_{k-1}, x_k]$ such that
 
@@ -138,7 +138,7 @@ where the last inequality follows from {eq}`eq:63`, {eq}`eq:64` and {eq}`eq:65`.
 U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon\end{align*}
 ```
 
-for any refinement $P \supset P_\varepsilon$. Because $\upint_a^b f \; \mathrm{d}\alpha \leq U(P,f,\alpha)$ and $\lowint_a^b f \; \mathrm{d}\alpha \geq L(P,f,\alpha)$, it follows that
+for any refinement $P \supseteq P_\varepsilon$. Because $\upint_a^b f \; \mathrm{d}\alpha \leq U(P,f,\alpha)$ and $\lowint_a^b f \; \mathrm{d}\alpha \geq L(P,f,\alpha)$, it follows that
 
 ```{math}
 \begin{align*}
@@ -201,7 +201,7 @@ U(P_1,f,\alpha) < \upint_{a}^{b} f \;\mathrm{d}\alpha + \varepsilon\quad\text{an
 L(P_2,f,\alpha) > \upint_{a}^{b} f \;\mathrm{d}\alpha - \varepsilon\end{align*}
 ```
 
-Let $P_\varepsilon = P_1 \cup P_2$. For any refinement $P \supset P_\varepsilon$, we have
+Let $P_\varepsilon = P_1 \cup P_2$. For any refinement $P \supseteq P_\varepsilon$, we have
 
 ```{math}
 \begin{align*}\upint_{a}^{b} f \;\mathrm{d}\alpha - \varepsilon
