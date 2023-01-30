@@ -375,7 +375,7 @@ Given $\varepsilon > 0$, the first condition says $u+\varepsilon$ is an upper bo
 
 \subsection{Properties}
 
-\begin{proposition}
+\begin{proposition} \label{pro:6}
     Let $\{a_n\}$ be a sequence of real numbers. Then 
     \begin{enumerate}
         \item $\limsup a_n = -\infty \implies \liminf a_n = -\infty$, and
@@ -477,9 +477,41 @@ As an analogous result, we also have the following proposition, the proof of whi
 
 %------------------------------
 
+Like the limit and supremum/infimum, limit superior/inferior also preserves the order.
+
+\begin{theorem} \label{thm:59}
+    If $a_n \leq b_n \; \forall n \in \N^\ast$, then 
+    \begin{align*}
+        \limsup a_n \leq \limsup b_n 
+        \quad \text{and} \quad 
+        \liminf a_n \leq \liminf b_n 
+    \end{align*}
+\end{theorem}
+
+\begin{proof}
+    We only prove $\limsup a_n \leq \limsup b_n$. 
+
+    (Extreme Cases) If $\limsup a_n = -\infty$ or $\limsup b_n = \infty$, then there is nothing to prove. If $\limsup a_n = \infty$, then $\{a_n\}$ is not bounded above and nor is $\{b_n\}$, and hence $\limsup b_n = \infty$. Suppose $\limsup b_n = -\infty$, then $\lim b_n = -\infty$ by Proposition~\ref{pro:6}. It follows that $\lim a_n = -\infty$, and hence $\limsup a_n = -\infty$.
+
+    (Finite Limit Superiors) Now, suppose that $\limsup a_n$ and $\limsup b_n$ are both finite. We have 
+    \begin{align*}
+        \sup_{m \geq n} a_m \leq \sup_{m \geq n} b_m
+        \quad \forall n \in \N^\ast
+    \end{align*}
+    Taking the limit on both sides yields
+    \begin{align*}
+        \limsup a_n
+        = \lim_{n \to \infty} \sup_{m \geq n} a_m 
+        \leq \lim_{n \to \infty} \sup_{m \geq n} b_m
+        = \limsup b_n
+    \end{align*}
+\end{proof}
+
+%------------------------------
+
 The next theorem can be treated as the reciprocal rule of limit superior, which establishes the relation between $\limsup 1 / a_n$ and $\liminf a_n$.
 
-\begin{theorem}
+\begin{theorem} \label{thm:60}
     Let $\{a_n\}$ be a sequence of positive numbers, then 
     \begin{enumerate}
         \item $\limsup \frac{1}{a_n} = 1 / \liminf a_n$, and 
@@ -814,8 +846,59 @@ Whenever the ratio test is inclusive, one can always try the \textbf{root test}\
 From the above example, the reader may conjecture that the root test is somehow more powerful than the ratio test. This is indeed true as we will see in the next theorem.
 
 \begin{theorem}
-    % TODO
+    Let $\{a_n\}$ be a sequence of position numbers. We have 
+    \begin{align*}
+        \liminf \frac{a_{n+1}}{a_n}
+        \leq \liminf \sqrt[n]{a_n}
+        \leq \limsup \sqrt[n]{a_n}
+        \leq \limsup \frac{a_{n+1}}{a_n}
+    \end{align*}
 \end{theorem}
+
+\begin{proof}
+    Note that the second inequality follows directly from Theorem~\ref{thm:59}. What remains to show are the first and the last inequalities. We only prove
+    \begin{align*}
+        \limsup \sqrt[n]{a_n}
+        \leq \limsup \frac{a_{n+1}}{a_n}
+    \end{align*}
+    If $\limsup a_{n+1} / {a_n}$, then the above inequality holds trivially. Assume $r = \limsup a_{n+1} / {a_n}$ is finite. Given $\varepsilon > 0$, by Theorem~\ref{thm:58}, there exists $N \in \N^\ast$ such that 
+    \begin{align*}
+        \frac{a_{n+1}}{a_n} < r + \varepsilon
+        \quad \forall n \geq N
+    \end{align*}
+    It then follows that 
+    \begin{align*}
+        \frac{a_{N+m}}{a_N}
+        = \frac{a_{N+1}}{a_{N}} 
+            \frac{a_{N+2}}{a_{N+1}}
+            \cdots \frac{a_{N+m}}{a_{N+m-1}}
+        < (r + \varepsilon)^m
+        \quad \forall m \in \N^\ast
+    \end{align*}
+    Multiplying by $a_N$ on both sides and then taking the $(N+m)$-th root, we obtain
+    \begin{align*}
+        \sqrt[N+m]{a_{N+m}}
+        < \sqrt[N+m]{a_{N}} (r+\varepsilon)^{1 - \frac{N}{N + m}}
+        \quad \forall m \in \N^\ast
+    \end{align*}
+    By Theorem~\ref{thm:59}, we can take the limit superior on both sides while preserving the (partial) order. We have 
+    \begin{align*}
+        \limsup_{m \to \infty} \sqrt[N+m]{a_{N+m}}
+        \leq \limsup_{m \to \infty} \sqrt[N+m]{a_{N}} (r+\varepsilon)^{1 - \frac{N}{N + m}}
+        = r + \varepsilon
+    \end{align*}
+    Hence, 
+    \begin{align*}
+        \limsup_{n \to \infty} \sqrt[n]{a_{n}}
+        \leq r + \varepsilon
+    \end{align*}
+    Since the above inequality holds for any $\varepsilon > 0$, we finally have
+    \begin{align*}
+        \limsup_{n \to \infty} \sqrt[n]{a_{n}}
+        \leq r
+        = \limsup_{n \to \infty} \frac{a_{n+1}}{a_n}
+    \end{align*}
+\end{proof}
 
 %------------------------------
 
