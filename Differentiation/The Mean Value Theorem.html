@@ -655,7 +655,7 @@ title="Print to PDF"
 <h2>Local Extrema<a class="headerlink" href="#local-extrema" title="Permalink to this headline">#</a></h2>
 <p>One may be familiar with the fact that if the derivative of function <span class="math notranslate nohighlight">\(f\)</span> is positive at some point, i.e., <span class="math notranslate nohighlight">\(f^\prime(c) &gt; 0\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is increasing near <span class="math notranslate nohighlight">\(c\)</span>, and if <span class="math notranslate nohighlight">\(f^\prime(c) &lt; 0\)</span>, it is decreasing. However, we can extend this result a little further for we have defined one-sided and infinite derivatives.</p>
 <div class="proof theorem admonition" id="thm:14">
-<p class="admonition-title"><span class="caption-number">Theorem 29 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 30 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined on a subset <span class="math notranslate nohighlight">\(A \subseteq \R\)</span> and <span class="math notranslate nohighlight">\(c \in A\)</span>. If <span class="math notranslate nohighlight">\(f^\prime_+(c) &gt; 0\)</span>, possibly <span class="math notranslate nohighlight">\(f^\prime_+(c) = \infty\)</span>, then there exists a half-open ball <span class="math notranslate nohighlight">\((c, c+\delta) \subseteq A\)</span> in which</p>
 <div class="math notranslate nohighlight" id="equation-eq-12">
@@ -705,11 +705,11 @@ x &lt; c \implies f(x) &lt; f(c)
 </div>
 </div><div class="admonition-exercise-7 admonition">
 <p class="admonition-title">Exercise 7</p>
-<p>Prove <a class="reference internal" href="#cor:1">Corollary 2</a> assuming <span class="math notranslate nohighlight">\(f^\prime(c) &lt; \infty\)</span> using <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 25</a>.</p>
+<p>Prove <a class="reference internal" href="#cor:1">Corollary 2</a> assuming <span class="math notranslate nohighlight">\(f^\prime(c) &lt; \infty\)</span> using <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 26</a>.</p>
 </div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
-<p>It follows from <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 25</a> that</p>
+<p>It follows from <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 26</a> that</p>
 <div class="math notranslate nohighlight" id="equation-eq-13">
 <span class="eqno">(38)<a class="headerlink" href="#equation-eq-13" title="Permalink to this equation">#</a></span>\[\begin{align}
 f(x) - f(c) = (x - c) \phi(x)
@@ -731,7 +731,7 @@ f(x) \leq f(p)
 </div>
 </div><p>The reader should be very familiar with the exercise of finding a local extremum by solving the equation in which the derivative vanishes. The following Theorem is the theory behind that.</p>
 <div class="proof theorem admonition" id="thm:5">
-<p class="admonition-title"><span class="caption-number">Theorem 30 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 31 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined on <span class="math notranslate nohighlight">\((a, b)\)</span>, and suppose <span class="math notranslate nohighlight">\(f\)</span> has a local extremum at an interior point <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. If <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> exists as a finite or infinite number, then <span class="math notranslate nohighlight">\(f^\prime(c) = 0\)</span>.</p>
 </div>
@@ -755,9 +755,9 @@ f(x) \leq f(p)
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f(x) = x^2 \sin\frac{1}{x^2}\ind\{x \neq 0\}\end{align*}\]</div>
-<p>defined in <a class="reference internal" href="Definition%20of%20Derivative.html#ex-1"><span class="std std-ref">Exercise 4</span></a>. Show that <span class="math notranslate nohighlight">\(f(0)\)</span> is not a local extremum. Recall we have shown that <span class="math notranslate nohighlight">\(f^\prime(0) = 0\)</span>. This is another example that the converse of <a class="reference internal" href="#thm:5">Theorem 30</a> does not hold.</p>
+<p>defined in <a class="reference internal" href="Definition%20of%20Derivative.html#ex-1"><span class="std std-ref">Exercise 4</span></a>. Show that <span class="math notranslate nohighlight">\(f(0)\)</span> is not a local extremum. Recall we have shown that <span class="math notranslate nohighlight">\(f^\prime(0) = 0\)</span>. This is another example that the converse of <a class="reference internal" href="#thm:5">Theorem 31</a> does not hold.</p>
 </div>
-<p>Moreover, it should be emphasized that we conclude in <a class="reference internal" href="#thm:5">Theorem 30</a> that <span class="math notranslate nohighlight">\(f^\prime(c) = 0\)</span> under the condition that <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> exists. <span class="math notranslate nohighlight">\(f(c)\)</span> may be a local extremum without having a derivative there.</p>
+<p>Moreover, it should be emphasized that we conclude in <a class="reference internal" href="#thm:5">Theorem 31</a> that <span class="math notranslate nohighlight">\(f^\prime(c) = 0\)</span> under the condition that <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> exists. <span class="math notranslate nohighlight">\(f(c)\)</span> may be a local extremum without having a derivative there.</p>
 <div class="proof example admonition" id="example-6">
 <p class="admonition-title"><span class="caption-number">Example 9 </span></p>
 <div class="example-content section" id="proof-content">
@@ -768,7 +768,7 @@ f(x) = x^2 \sin\frac{1}{x^2}\ind\{x \neq 0\}\end{align*}\]</div>
 <h2>Rolle’s Theorem and Mean Value Theorem<a class="headerlink" href="#rolle-s-theorem-and-mean-value-theorem" title="Permalink to this headline">#</a></h2>
 <p>If a function starts from point <span class="math notranslate nohighlight">\(a\)</span> and ends at point <span class="math notranslate nohighlight">\(b\)</span> with the same level of height as its initial position, then there must be a turning point somewhere in between.</p>
 <div class="proof theorem admonition" id="thm:9">
-<p class="admonition-title"><span class="caption-number">Theorem 31 </span> (Rolle)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 32 </span> (Rolle)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined on <span class="math notranslate nohighlight">\([a, b]\)</span>. Suppose <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> exists (as finite or infinite number) for each <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> is continuous at the endpoints <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. If <span class="math notranslate nohighlight">\(f(a) = f(b)\)</span>, then there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -778,16 +778,16 @@ f^\prime(c) = 0
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. If <span class="math notranslate nohighlight">\(f\)</span> is a constant function, i.e., <span class="math notranslate nohighlight">\(f(x) = f(a) = f(b) \; \forall x \in[a, b]\)</span>, then the conclusion is trivial since <span class="math notranslate nohighlight">\(f^\prime(x) = 0 \; \forall x \in (a, b)\)</span>.</p>
-<p>We now suppose <span class="math notranslate nohighlight">\(f\)</span> is non-constant. We know that <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> since <span class="math notranslate nohighlight">\(f^\prime\)</span> exists throughout <span class="math notranslate nohighlight">\((a, b)\)</span> and <span class="math notranslate nohighlight">\(f\)</span> is continuous at endpoints. It then follows from <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:6">Theorem 21</a> that <span class="math notranslate nohighlight">\(f\)</span> attains its maximum and minimum on <span class="math notranslate nohighlight">\([a, b]\)</span>. Because we assume <span class="math notranslate nohighlight">\(f\)</span> is non-constant and <span class="math notranslate nohighlight">\(f(a) = f(b)\)</span>, at least one of the maximum and the minimum of <span class="math notranslate nohighlight">\(f\)</span> is reached at an interior point <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. Note that <span class="math notranslate nohighlight">\(f(c)\)</span> is a global extremum, and of course also a local extremum. Then by applying <a class="reference internal" href="#thm:5">Theorem 30</a>, we conclude <span class="math notranslate nohighlight">\(f^\prime(c) = 0\)</span>.</p>
+<p>We now suppose <span class="math notranslate nohighlight">\(f\)</span> is non-constant. We know that <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> since <span class="math notranslate nohighlight">\(f^\prime\)</span> exists throughout <span class="math notranslate nohighlight">\((a, b)\)</span> and <span class="math notranslate nohighlight">\(f\)</span> is continuous at endpoints. It then follows from <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:6">Theorem 22</a> that <span class="math notranslate nohighlight">\(f\)</span> attains its maximum and minimum on <span class="math notranslate nohighlight">\([a, b]\)</span>. Because we assume <span class="math notranslate nohighlight">\(f\)</span> is non-constant and <span class="math notranslate nohighlight">\(f(a) = f(b)\)</span>, at least one of the maximum and the minimum of <span class="math notranslate nohighlight">\(f\)</span> is reached at an interior point <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. Note that <span class="math notranslate nohighlight">\(f(c)\)</span> is a global extremum, and of course also a local extremum. Then by applying <a class="reference internal" href="#thm:5">Theorem 31</a>, we conclude <span class="math notranslate nohighlight">\(f^\prime(c) = 0\)</span>.</p>
 </div>
 <div class="proof example admonition" id="example-8">
 <p class="admonition-title"><span class="caption-number">Example 10 </span></p>
 <div class="example-content section" id="proof-content">
 <p>Review <a class="reference internal" href="Definition%20of%20Derivative.html#eg:1">Example 6</a>. Note that <span class="math notranslate nohighlight">\(f(0) = f(4) = 0\)</span>. And the derivative vanishes at <span class="math notranslate nohighlight">\(x = 1\)</span> and <span class="math notranslate nohighlight">\(x = 3\)</span>.</p>
 </div>
-</div><span class="target" id="index-3"></span><p id="index-4">The <strong>mean value theorem</strong> is a generalization of Rolle’s theorem. Roughly speaking it says <span class="math notranslate nohighlight">\(f\)</span> has a derivative value that equals the slope of the secant line joining two endpoints of the graph of <span class="math notranslate nohighlight">\(f\)</span>. The mean value theorem itself can be treated as a special case of an even more generalized version, the <strong>generalized mean value theorem</strong>(<a class="reference internal" href="#thm:7">Theorem 33</a>).</p>
+</div><span class="target" id="index-3"></span><p id="index-4">The <strong>mean value theorem</strong> is a generalization of Rolle’s theorem. Roughly speaking it says <span class="math notranslate nohighlight">\(f\)</span> has a derivative value that equals the slope of the secant line joining two endpoints of the graph of <span class="math notranslate nohighlight">\(f\)</span>. The mean value theorem itself can be treated as a special case of an even more generalized version, the <strong>generalized mean value theorem</strong>(<a class="reference internal" href="#thm:7">Theorem 34</a>).</p>
 <div class="proof theorem admonition" id="thm:8">
-<p class="admonition-title"><span class="caption-number">Theorem 32 </span> (Mean Value Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 33 </span> (Mean Value Theorem)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f\)</span> has a derivative (finite or infinite) at each point of <span class="math notranslate nohighlight">\((a, b)\)</span>, and suppose <span class="math notranslate nohighlight">\(f\)</span> is continuous at endpoints <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>. Then there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -796,7 +796,7 @@ f(b) - f(a) = f^\prime(c) (b - a)
 \end{align*}\]</div>
 </div>
 </div><div class="proof theorem admonition" id="thm:7">
-<p class="admonition-title"><span class="caption-number">Theorem 33 </span> (Generalized Mean Value Theorem)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 34 </span> (Generalized Mean Value Theorem)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be two functions, each having a derivative (finite or infinite) at each point in <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are both continuous at endpoints <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>, and <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> and <span class="math notranslate nohighlight">\(g^\prime(x)\)</span> do not assume infinite values simultaneously. Then there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-15">
@@ -807,7 +807,7 @@ f^\prime(c) [g(b) - g(a)]
 </div><div class="proof remark admonition" id="remark-11">
 <p class="admonition-title"><span class="caption-number">Remark 4 </span></p>
 <div class="remark-content section" id="proof-content">
-<p>By taking <span class="math notranslate nohighlight">\(g(x) = x\)</span>, this theorem reduces to the standard mean value theorem, <a class="reference internal" href="#thm:8">Theorem 32</a>.</p>
+<p>By taking <span class="math notranslate nohighlight">\(g(x) = x\)</span>, this theorem reduces to the standard mean value theorem, <a class="reference internal" href="#thm:8">Theorem 33</a>.</p>
 </div>
 </div><p>Though it is a generalized version of the mean value theorem, and hence Rolle’s theorem, it can be proved easily using Rolle’s theorem by constructing a function out of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span>.</p>
 <div class="proof admonition" id="proof">
@@ -824,11 +824,11 @@ f^\prime(c) [g(b) - g(a)]
 \[\begin{align*}\psi(a) = f(a)g(b) - f(b)g(a)
 = \psi(b)
 \end{align*}\]</div>
-<p>Applying Rolle’s theorem (<a class="reference internal" href="#thm:9">Theorem 31</a>) to <span class="math notranslate nohighlight">\(\psi\)</span> leads to <span class="math notranslate nohighlight">\(\psi^\prime(c) = 0\)</span> for some <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>, which is exactly <a class="reference internal" href="#equation-eq-15">(39)</a>.</p>
+<p>Applying Rolle’s theorem (<a class="reference internal" href="#thm:9">Theorem 32</a>) to <span class="math notranslate nohighlight">\(\psi\)</span> leads to <span class="math notranslate nohighlight">\(\psi^\prime(c) = 0\)</span> for some <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>, which is exactly <a class="reference internal" href="#equation-eq-15">(39)</a>.</p>
 </div>
-<p>Sometimes, functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> in <a class="reference internal" href="#thm:7">Theorem 33</a> may not be defined at endpoints. But all the one-sided limits exist as finite values. In this case, we still wish to apply the theorem. The following is a slight extension of <a class="reference internal" href="#thm:7">Theorem 33</a>.</p>
+<p>Sometimes, functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> in <a class="reference internal" href="#thm:7">Theorem 34</a> may not be defined at endpoints. But all the one-sided limits exist as finite values. In this case, we still wish to apply the theorem. The following is a slight extension of <a class="reference internal" href="#thm:7">Theorem 34</a>.</p>
 <div class="proof theorem admonition" id="theorem-12">
-<p class="admonition-title"><span class="caption-number">Theorem 34 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 35 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be two functions, each having a derivative (finite or infinite) at each point in <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose that <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> and <span class="math notranslate nohighlight">\(g^\prime(x)\)</span> do not assume infinite values simultaneously, and one-sided limits <span class="math notranslate nohighlight">\(f(a+)\)</span>, <span class="math notranslate nohighlight">\(f(b-)\)</span>, <span class="math notranslate nohighlight">\(g(a+)\)</span> and <span class="math notranslate nohighlight">\(g(b-)\)</span> all exist as finite values. Then there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-16">
@@ -846,11 +846,11 @@ f^\prime(c) [g(b-) - g(a+)]
 \quad\tilde{g}(a) = g(a+),
 \quad\text{and}\quad\tilde{g}(b) = g(b-)
 \end{align*}\end{split}\]</div>
-<p>It is evident that <span class="math notranslate nohighlight">\(\tilde{f}\)</span> and <span class="math notranslate nohighlight">\(\tilde{g}\)</span> are both continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Furthermore, the derivatives <span class="math notranslate nohighlight">\(\tilde{f}^\prime(x) = f^\prime(x)\)</span> and <span class="math notranslate nohighlight">\(\tilde{g}^\prime(x) = g^\prime(x)\)</span> for each <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>. Applying <a class="reference internal" href="#thm:7">Theorem 33</a> to functions <span class="math notranslate nohighlight">\(\tilde{f}\)</span> and <span class="math notranslate nohighlight">\(\tilde{g}\)</span> leads to <a class="reference internal" href="#equation-eq-16">(40)</a>.</p>
+<p>It is evident that <span class="math notranslate nohighlight">\(\tilde{f}\)</span> and <span class="math notranslate nohighlight">\(\tilde{g}\)</span> are both continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Furthermore, the derivatives <span class="math notranslate nohighlight">\(\tilde{f}^\prime(x) = f^\prime(x)\)</span> and <span class="math notranslate nohighlight">\(\tilde{g}^\prime(x) = g^\prime(x)\)</span> for each <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>. Applying <a class="reference internal" href="#thm:7">Theorem 34</a> to functions <span class="math notranslate nohighlight">\(\tilde{f}\)</span> and <span class="math notranslate nohighlight">\(\tilde{g}\)</span> leads to <a class="reference internal" href="#equation-eq-16">(40)</a>.</p>
 </div>
 <p>The following theorem is an immediate result of the mean value theorem, which provides a sufficient condition for determining strictly increasing and decreasing functions. It also says a function is constant if its derivative vanishes everywhere.</p>
 <div class="proof theorem admonition" id="thm:10">
-<p class="admonition-title"><span class="caption-number">Theorem 35 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 36 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f\)</span> has a derivative (finite or infinite) at each point in <span class="math notranslate nohighlight">\((a, b)\)</span>, and itself is continuous at the endpoints <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.</p>
 <ul class="simple">
@@ -860,7 +860,7 @@ f^\prime(c) [g(b-) - g(a+)]
 </ul>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (Proof of 1) Let <span class="math notranslate nohighlight">\(x_1, x_2 \in[a, b]\)</span> with <span class="math notranslate nohighlight">\(x_1 &lt; x_2\)</span>. Applying <a class="reference internal" href="#thm:8">Theorem 32</a> to <span class="math notranslate nohighlight">\(f\)</span> on the interval <span class="math notranslate nohighlight">\([x_1, x_2]\)</span> leads to</p>
+<p>Proof. (Proof of 1) Let <span class="math notranslate nohighlight">\(x_1, x_2 \in[a, b]\)</span> with <span class="math notranslate nohighlight">\(x_1 &lt; x_2\)</span>. Applying <a class="reference internal" href="#thm:8">Theorem 33</a> to <span class="math notranslate nohighlight">\(f\)</span> on the interval <span class="math notranslate nohighlight">\([x_1, x_2]\)</span> leads to</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f(x_2) - f(x_1) = f^\prime(c) (x_2 - x_1)
@@ -871,7 +871,7 @@ f(x_2) - f(x_1) = f^\prime(c) (x_2 - x_1)
 \[\begin{align*}
 f(x_2) - f(x_1) = f^\prime(c) (x_2 - x_1) &lt; 0
 \end{align*}\]</div>
-<p>(Proof of 3) For any <span class="math notranslate nohighlight">\(x_1, x_2 \in[a, b]\)</span> with <span class="math notranslate nohighlight">\(x_1 &lt; x_2\)</span>, by applying <a class="reference internal" href="#thm:8">Theorem 32</a>, we have</p>
+<p>(Proof of 3) For any <span class="math notranslate nohighlight">\(x_1, x_2 \in[a, b]\)</span> with <span class="math notranslate nohighlight">\(x_1 &lt; x_2\)</span>, by applying <a class="reference internal" href="#thm:8">Theorem 33</a>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f(x_2) - f(x_1) = f^\prime(c) (x_2 - x_1) = 0
@@ -885,7 +885,7 @@ f(x_2) - f(x_1) = f^\prime(c) (x_2 - x_1) = 0
 <p>If <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(f^\prime(x) = g^\prime(x) \; \forall x \in (a, b)\)</span>, then <span class="math notranslate nohighlight">\(f - g\)</span> is constant on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Note that the difference <span class="math notranslate nohighlight">\(f-g\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and <span class="math notranslate nohighlight">\((f-g)^\prime(x) = 0 \; \forall x \in (a, b)\)</span>. It then follows from <a class="reference internal" href="#thm:10">Theorem 35</a> that <span class="math notranslate nohighlight">\(f-g\)</span> is a constant.</p>
+<p>Proof. Note that the difference <span class="math notranslate nohighlight">\(f-g\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and <span class="math notranslate nohighlight">\((f-g)^\prime(x) = 0 \; \forall x \in (a, b)\)</span>. It then follows from <a class="reference internal" href="#thm:10">Theorem 36</a> that <span class="math notranslate nohighlight">\(f-g\)</span> is a constant.</p>
 </div>
 </div>
 </div>

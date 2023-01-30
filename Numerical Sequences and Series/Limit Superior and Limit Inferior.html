@@ -891,7 +891,7 @@ a_N &gt; u - \varepsilon\end{align*}\]</div>
 </div>
 <div class="section" id="properties">
 <h2>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">#</a></h2>
-<div class="proof proposition admonition" id="proposition-4">
+<div class="proof proposition admonition" id="pro:6">
 <p class="admonition-title"><span class="caption-number">Proposition 1 </span></p>
 <div class="proposition-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of real numbers. Then</p>
@@ -989,9 +989,34 @@ a_n &gt; a - \varepsilon\quad\forall n \geq N_2
 </ul>
 <p>By <a class="reference internal" href="#thm:58">Theorem 3</a>, <span class="math notranslate nohighlight">\(a = \limsup a_n\)</span>. Similarly, we can also show <span class="math notranslate nohighlight">\(a = \liminf a_n\)</span>.</p>
 </div>
-<p>The next theorem can be treated as the reciprocal rule of limit superior, which establishes the relation between <span class="math notranslate nohighlight">\(\limsup 1 / a_n\)</span> and <span class="math notranslate nohighlight">\(\liminf a_n\)</span>.</p>
-<div class="proof theorem admonition" id="theorem-7">
+<p>Like the limit and supremum/infimum, limit superior/inferior also preserves the order.</p>
+<div class="proof theorem admonition" id="thm:59">
 <p class="admonition-title"><span class="caption-number">Theorem 4 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(a_n \leq b_n \; \forall n \in \N^\ast\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\limsup a_n \leq\limsup b_n
+\quad\text{and}\quad\liminf a_n \leq\liminf b_n
+\end{align*}\]</div>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We only prove <span class="math notranslate nohighlight">\(\limsup a_n \leq \limsup b_n\)</span>.</p>
+<p>(Extreme Cases) If <span class="math notranslate nohighlight">\(\limsup a_n = -\infty\)</span> or <span class="math notranslate nohighlight">\(\limsup b_n = \infty\)</span>, then there is nothing to prove. If <span class="math notranslate nohighlight">\(\limsup a_n = \infty\)</span>, then <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is not bounded above and nor is <span class="math notranslate nohighlight">\(\{b_n\}\)</span>, and hence <span class="math notranslate nohighlight">\(\limsup b_n = \infty\)</span>. Suppose <span class="math notranslate nohighlight">\(\limsup b_n = -\infty\)</span>, then <span class="math notranslate nohighlight">\(\lim b_n = -\infty\)</span> by <a class="reference internal" href="#pro:6">Proposition 1</a>. It follows that <span class="math notranslate nohighlight">\(\lim a_n = -\infty\)</span>, and hence <span class="math notranslate nohighlight">\(\limsup a_n = -\infty\)</span>.</p>
+<p>(Finite Limit Superiors) Now, suppose that <span class="math notranslate nohighlight">\(\limsup a_n\)</span> and <span class="math notranslate nohighlight">\(\limsup b_n\)</span> are both finite. We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\sup_{m \geq n} a_m \leq\sup_{m \geq n} b_m
+\quad\forall n \in\N^\ast\end{align*}\]</div>
+<p>Taking the limit on both sides yields</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\limsup a_n
+= \lim_{n \to \infty}\sup_{m \geq n} a_m
+\leq\lim_{n \to \infty}\sup_{m \geq n} b_m
+= \limsup b_n
+\end{align*}\]</div>
+</div>
+<p>The next theorem can be treated as the reciprocal rule of limit superior, which establishes the relation between <span class="math notranslate nohighlight">\(\limsup 1 / a_n\)</span> and <span class="math notranslate nohighlight">\(\liminf a_n\)</span>.</p>
+<div class="proof theorem admonition" id="thm:60">
+<p class="admonition-title"><span class="caption-number">Theorem 5 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of positive numbers, then</p>
 <ul class="simple">

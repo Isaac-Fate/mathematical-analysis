@@ -641,7 +641,7 @@ p^{(k)}_n(0) = f^{(k)}(0)
 = f(c) + f^\prime(c)(x-c) + \cdots + \frac{f^{(n)}(c)}{n!}(x-c)^{n}\end{align*}\]</div>
 <p id="index-0">at point <span class="math notranslate nohighlight">\(c\)</span> provided that <span class="math notranslate nohighlight">\(f\)</span> has up to <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative. The reason why we approximate <span class="math notranslate nohighlight">\(f\)</span> with a polynomial of <span class="math notranslate nohighlight">\(n\)</span> degree is that we have a remainder term, which makes use of the <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative. The remainder tells us how accurate the approximation is. The formal statement is described in the following theorem, the <strong>Taylor’s theorem</strong>.</p>
 <div class="proof theorem admonition" id="thm:16">
-<p class="admonition-title"><span class="caption-number">Theorem 40 </span> (Taylor)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 41 </span> (Taylor)</p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be a function having <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span>, and suppose <span class="math notranslate nohighlight">\(f^{(n)}\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> be an interior point. Then for every <span class="math notranslate nohighlight">\(x \in[a, b]\)</span> other than <span class="math notranslate nohighlight">\(c\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-20">
@@ -651,7 +651,7 @@ f(x) = \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!
 </div>
 </div><p>This theorem can be obtained as an immediate corollary of the following extension of the mean value theorem.</p>
 <div class="proof theorem admonition" id="thm:17">
-<p class="admonition-title"><span class="caption-number">Theorem 41 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 42 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be two functions each having <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose that <span class="math notranslate nohighlight">\(f^{(n)}\)</span> and <span class="math notranslate nohighlight">\(g^{(n)}\)</span> are both continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> be an interior point. Then for every <span class="math notranslate nohighlight">\(x \in[a, b]\)</span> other than <span class="math notranslate nohighlight">\(c\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-21">
@@ -670,7 +670,7 @@ f(x) = \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!
 g^{(n+1)}(\xi) = (n+1)!
 \quad\text{and}\quad\sum_{k=0}^{n}\frac{g^{(k)}(c)}{k!}(x-c)^k = 0
 \end{align*}\]</div>
-<p>Then <a class="reference internal" href="#equation-eq-21">(44)</a> reduces to <a class="reference internal" href="#equation-eq-20">(43)</a>, and hence this theorem reduces to <a class="reference internal" href="#thm:16">Theorem 40</a>.</p>
+<p>Then <a class="reference internal" href="#equation-eq-21">(44)</a> reduces to <a class="reference internal" href="#equation-eq-20">(43)</a>, and hence this theorem reduces to <a class="reference internal" href="#thm:16">Theorem 41</a>.</p>
 </div>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Define functions <span class="math notranslate nohighlight">\(F(t)\)</span> and <span class="math notranslate nohighlight">\(G(t)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> by</p>
@@ -680,7 +680,7 @@ F(t) = \sum_{k=0}^{n}\frac{f^{(k)}(t)}{k!}(x-t)^k
 \quad\text{and}\quad
 G(t) = \sum_{k=0}^{n}\frac{g^{(k)}(t)}{k!}(x-t)^k
 \quad\forall t \in[a, b]\end{align*}\]</div>
-<p>Note that <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> are continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, and they have derivatives everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span>. Applying the generalized mean value theorem (<a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:7">Theorem 33</a>) to <span class="math notranslate nohighlight">\(F(t)\)</span> and <span class="math notranslate nohighlight">\(G(t)\)</span> on the closed interval joining points <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(c\)</span>, we have</p>
+<p>Note that <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> are continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, and they have derivatives everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span>. Applying the generalized mean value theorem (<a class="reference internal" href="The%20Mean%20Value%20Theorem.html#thm:7">Theorem 34</a>) to <span class="math notranslate nohighlight">\(F(t)\)</span> and <span class="math notranslate nohighlight">\(G(t)\)</span> on the closed interval joining points <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(c\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-22">
 <span class="eqno">(45)<a class="headerlink" href="#equation-eq-22" title="Permalink to this equation">#</a></span>\[\begin{align}[F(x) - F(c)] G^\prime(\xi)
 = F^\prime(\xi) [G(x) - G(c)]\end{align}\]</div>
@@ -721,7 +721,7 @@ r_n(x) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-c)^{n+1}\end{align*}\]</div>
 <p>is the remainder. The smaller the absolute value of <span class="math notranslate nohighlight">\(r_n(x)\)</span> is, the more accurate the approximation will be.</p>
 <div class="admonition-exercise-9 admonition">
 <p class="admonition-title">Exercise 9</p>
-<p>Use Taylor’s theorem (<a class="reference internal" href="#thm:16">Theorem 40</a>) to approximate the value of <span class="math notranslate nohighlight">\(\ln(0.6)\)</span> so that the absolute error is less than <span class="math notranslate nohighlight">\(0.1\)</span>.</p>
+<p>Use Taylor’s theorem (<a class="reference internal" href="#thm:16">Theorem 41</a>) to approximate the value of <span class="math notranslate nohighlight">\(\ln(0.6)\)</span> so that the absolute error is less than <span class="math notranslate nohighlight">\(0.1\)</span>.</p>
 </div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>

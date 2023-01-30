@@ -209,7 +209,64 @@ From the above example, the reader may conjecture that the root test is somehow 
 
 ````{prf:theorem}
 
-TODO
+Let $\{a_n\}$ be a sequence of position numbers. We have
+
+```{math}
+\begin{align*}\liminf\frac{a_{n+1}}{a_n}\leq\liminf\sqrt[n]{a_n}\leq\limsup\sqrt[n]{a_n}\leq\limsup\frac{a_{n+1}}{a_n}\end{align*}
+```
+
+````
+
+````{prf:proof}
+
+Note that the second inequality follows directly from {prf:ref}`thm:59`. What remains to show are the first and the last inequalities. We only prove
+
+```{math}
+\begin{align*}\limsup\sqrt[n]{a_n}\leq\limsup\frac{a_{n+1}}{a_n}\end{align*}
+```
+
+If $\limsup a_{n+1} / {a_n}$, then the above inequality holds trivially. Assume $r = \limsup a_{n+1} / {a_n}$ is finite. Given $\varepsilon > 0$, by {prf:ref}`thm:58`, there exists $N \in \N^\ast$ such that
+
+```{math}
+\begin{align*}\frac{a_{n+1}}{a_n} < r + \varepsilon\quad\forall n \geq N
+\end{align*}
+```
+
+It then follows that
+
+```{math}
+\begin{align*}\frac{a_{N+m}}{a_N}
+= \frac{a_{N+1}}{a_{N}}\frac{a_{N+2}}{a_{N+1}}\cdots\frac{a_{N+m}}{a_{N+m-1}}
+< (r + \varepsilon)^m
+\quad\forall m \in\N^\ast\end{align*}
+```
+
+Multiplying by $a_N$ on both sides and then taking the $(N+m)$-th root, we obtain
+
+```{math}
+\begin{align*}\sqrt[N+m]{a_{N+m}}
+< \sqrt[N+m]{a_{N}}(r+\varepsilon)^{1 - \frac{N}{N + m}}\quad\forall m \in\N^\ast\end{align*}
+```
+
+By {prf:ref}`thm:59`, we can take the limit superior on both sides while preserving the (partial) order. We have
+
+```{math}
+\begin{align*}\limsup_{m \to \infty}\sqrt[N+m]{a_{N+m}}\leq\limsup_{m \to \infty}\sqrt[N+m]{a_{N}}(r+\varepsilon)^{1 - \frac{N}{N + m}}
+= r + \varepsilon\end{align*}
+```
+
+Hence,
+
+```{math}
+\begin{align*}\limsup_{n \to \infty}\sqrt[n]{a_{n}}\leq r + \varepsilon\end{align*}
+```
+
+Since the above inequality holds for any $\varepsilon > 0$, we finally have
+
+```{math}
+\begin{align*}\limsup_{n \to \infty}\sqrt[n]{a_{n}}\leq r
+= \limsup_{n \to \infty}\frac{a_{n+1}}{a_n}\end{align*}
+```
 
 ````
 

@@ -643,7 +643,7 @@ L(P,f,\alpha) \leq S(P,f,\alpha) \leq U(P,f,\alpha)
 \end{align*}\]</div>
 <p>The following theorem states that not only <span class="math notranslate nohighlight">\(L(P,f,\alpha) \leq U(P,f,\alpha)\)</span> for the same partition <span class="math notranslate nohighlight">\(P\)</span>, but also <span class="math notranslate nohighlight">\(L(P_1,f,\alpha) \leq U(P_2,f,\alpha)\)</span> for any two partitions <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(P_2\)</span>. The theorem also says the upper sums will decrease as the partition gets finer and finer while the lower sums will increase.</p>
 <div class="proof theorem admonition" id="thm:26">
-<p class="admonition-title"><span class="caption-number">Theorem 54 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 55 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. We have the following statements.</p>
 <ul class="simple">
@@ -711,7 +711,7 @@ L(P_1,f,\alpha) \leq L(P,f,\alpha)
 \leq U(P,f,\alpha) \leq U(P_2,f,\alpha)
 \end{align*}\]</div>
 </div>
-<p>In particular, since every partition is a refinement of the trivial partition <span class="math notranslate nohighlight">\(P_0 = \{a, b\}\)</span>, <a class="reference internal" href="#thm:26">Theorem 54</a> leads to</p>
+<p>In particular, since every partition is a refinement of the trivial partition <span class="math notranslate nohighlight">\(P_0 = \{a, b\}\)</span>, <a class="reference internal" href="#thm:26">Theorem 55</a> leads to</p>
 <div class="math notranslate nohighlight" id="equation-eq-47">
 <span class="eqno">(79)<a class="headerlink" href="#equation-eq-47" title="Permalink to this equation">#</a></span>\[\begin{align}\inf_{x\in[a,b]} f(x) [\alpha(b) - \alpha(a)]\leq L(P_1, f, \alpha) \leq U(P_2, f, \alpha)
 \leq\sup_{x\in[a,b]} f(x) [\alpha(b) - \alpha(a)]\end{align}\]</div>
@@ -728,7 +728,7 @@ L(P_1,f,\alpha) \leq L(P,f,\alpha)
 </div><p>Sometimes, we will just say upper and lower integrals for short.</p>
 <p>As indicated by the names, one should expect that the lower integral should be less than or equal to the upper integral. This is indeed the case.</p>
 <div class="proof theorem admonition" id="theorem-3">
-<p class="admonition-title"><span class="caption-number">Theorem 55 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 56 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. We have</p>
 <div class="math notranslate nohighlight" id="equation-eq-48">
@@ -739,7 +739,7 @@ L(P_1,f,\alpha) \leq L(P,f,\alpha)
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 U(P_\varepsilon,f,\alpha) &lt; \upint_a^b f \;\mathrm{d}\alpha + \varepsilon\end{align*}\]</div>
-<p>By <a class="reference internal" href="#thm:26">Theorem 54</a>, for any partition <span class="math notranslate nohighlight">\(P\)</span>, we have</p>
+<p>By <a class="reference internal" href="#thm:26">Theorem 55</a>, for any partition <span class="math notranslate nohighlight">\(P\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 L(P,f,\alpha) \leq U(P_\varepsilon,f,\alpha)
@@ -769,7 +769,7 @@ L(P,f,\alpha) &lt; \upint_a^b f \;\mathrm{d}\alpha + \varepsilon\quad\forall P \
 </div>
 </div><p>In the following theorems, we introduce some properties of upper and lower integrals.</p>
 <div class="proof theorem admonition" id="theorem-5">
-<p class="admonition-title"><span class="caption-number">Theorem 56 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 57 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(f\)</span> is bounded and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. We have</p>
 <ul class="simple">
@@ -806,7 +806,7 @@ U(P,f,\alpha) \geq\upint_a^b f \;\mathrm{d}\alpha\end{align}\]</div>
 <div class="math notranslate nohighlight" id="equation-eq-53">
 <span class="eqno">(85)<a class="headerlink" href="#equation-eq-53" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P,f,\alpha) &lt; \upint_a^b f \;\mathrm{d}\alpha + \varepsilon\end{align}\]</div>
-<p>We want to split <span class="math notranslate nohighlight">\(P\)</span> into two partitions, one on <span class="math notranslate nohighlight">\([a,c]\)</span> and the other on <span class="math notranslate nohighlight">\([c, b]\)</span>. But we need to ensure that <span class="math notranslate nohighlight">\(c\)</span> is in <span class="math notranslate nohighlight">\(P\)</span>. To do so, we consider a refinement <span class="math notranslate nohighlight">\(P^\prime = P \cup \{c\}\)</span>. By <a class="reference internal" href="#thm:26">Theorem 54</a>, we know that the upper Riemann-Stieltjes sum concerning <span class="math notranslate nohighlight">\(P^\prime\)</span> is reduced, i.e.,</p>
+<p>We want to split <span class="math notranslate nohighlight">\(P\)</span> into two partitions, one on <span class="math notranslate nohighlight">\([a,c]\)</span> and the other on <span class="math notranslate nohighlight">\([c, b]\)</span>. But we need to ensure that <span class="math notranslate nohighlight">\(c\)</span> is in <span class="math notranslate nohighlight">\(P\)</span>. To do so, we consider a refinement <span class="math notranslate nohighlight">\(P^\prime = P \cup \{c\}\)</span>. By <a class="reference internal" href="#thm:26">Theorem 55</a>, we know that the upper Riemann-Stieltjes sum concerning <span class="math notranslate nohighlight">\(P^\prime\)</span> is reduced, i.e.,</p>
 <div class="math notranslate nohighlight" id="equation-eq-54">
 <span class="eqno">(86)<a class="headerlink" href="#equation-eq-54" title="Permalink to this equation">#</a></span>\[\begin{align}
 U(P^\prime,f,\alpha) \leq U(P,f,\alpha) &lt; \upint_a^b f \;\mathrm{d}\alpha + \varepsilon\end{align}\]</div>
@@ -839,14 +839,14 @@ U(P_2,f,\alpha) \geq\upint_c^b f \;\mathrm{d}\alpha\end{align}\]</div>
 \[\begin{align*}\upint_a^b f \;\mathrm{d}\alpha = \upint_a^c f \;\mathrm{d}\alpha + \upint_c^b f \;\mathrm{d}\alpha\end{align*}\]</div>
 <p>follows from <a class="reference internal" href="#equation-eq-52">(84)</a> and <a class="reference internal" href="#equation-eq-57">(89)</a>.</p>
 </div>
-<p>However, some equations of integrals will not be valid for upper and lower integrals. For example, the following equation is a special case of <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 47</a>.</p>
+<p>However, some equations of integrals will not be valid for upper and lower integrals. For example, the following equation is a special case of <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 48</a>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_{a}^{b}(f+g) \;\mathrm{d}\alpha
 = \int_{a}^{b} f \;\mathrm{d}\alpha
 + \int_{a}^{b} g \;\mathrm{d}\alpha\end{align*}\]</div>
 <p>It will not hold if we replace the integrals with upper and lower integrals. To fix this, we also need to replace equality with inequality, as stated in the next theorem.</p>
 <div class="proof theorem admonition" id="theorem-6">
-<p class="admonition-title"><span class="caption-number">Theorem 57 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 58 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are bounded and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. We have</p>
 <ul class="simple">
@@ -862,7 +862,7 @@ U(P_1,f,\alpha) &lt; \upint_a^b f \;\mathrm{d}\alpha + \varepsilon/2
 \quad\text{and}\quad
 U(P_2,g,\alpha) &lt; \upint_a^b g \;\mathrm{d}\alpha + \varepsilon/2
 \end{align*}\]</div>
-<p>Let <span class="math notranslate nohighlight">\(P = P_1 \cup P_2\)</span>. It follows from <a class="reference internal" href="#thm:26">Theorem 54</a> that</p>
+<p>Let <span class="math notranslate nohighlight">\(P = P_1 \cup P_2\)</span>. It follows from <a class="reference internal" href="#thm:26">Theorem 55</a> that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 U(P,f,\alpha) \leq U(P_1,f,\alpha) &lt; \upint_a^b f \;\mathrm{d}\alpha + \varepsilon/2

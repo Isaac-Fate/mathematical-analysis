@@ -611,7 +611,7 @@ title="Print to PDF"
 <span class="target" id="index-1"></span><p id="index-2">where <span class="math notranslate nohighlight">\(a_n \in \C\)</span> is called the coefficient of the <span class="math notranslate nohighlight">\(n\)</span>-th term, and <span class="math notranslate nohighlight">\(z_0 \in \C\)</span> is often referred to as the center of the series.</p>
 <p>With every power series, there is associated a <strong>disk of convergence</strong> such that the series converges if <span class="math notranslate nohighlight">\(\abs{z - z_0} &lt; r\)</span> whereas diverges if <span class="math notranslate nohighlight">\(\abs{z - z_0} &gt; r\)</span>. The number <span class="math notranslate nohighlight">\(r\)</span> is called <strong>radius of convergence</strong>. If <span class="math notranslate nohighlight">\(r\)</span> is a <em>finite positive</em> number, then the disk of convergence is exactly the open ball in the complex plane with radius <span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(B_r(z_0)\)</span>. However, we allow <span class="math notranslate nohighlight">\(r\)</span> to take the value of <span class="math notranslate nohighlight">\(0\)</span> or <span class="math notranslate nohighlight">\(\infty\)</span> in extreme cases. When the power series is nowhere convergent except for <span class="math notranslate nohighlight">\(z = z_0\)</span>, then we say the radius of convergence is zero, i.e., <span class="math notranslate nohighlight">\(r = 0\)</span>. And if the power series converges everywhere in the complex plane, then we write <span class="math notranslate nohighlight">\(r = \infty\)</span>.</p>
 <div class="proof theorem admonition" id="theorem-0">
-<p class="admonition-title"><span class="caption-number">Theorem 73 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 74 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Given a power series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n (z - z_0)^n\)</span>, let</p>
 <div class="math notranslate nohighlight">
@@ -625,7 +625,7 @@ r = \frac{1}{\lambda}\end{align*}\]</div>
 <p>Furthermore, the power series, regarded as a series of functions in variable <span class="math notranslate nohighlight">\(z\)</span>, converges uniformly on any compact subset <span class="math notranslate nohighlight">\(K\)</span> interior to the disk of convergence.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (Proof of 1 and 2) Applying the root test (<a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html#thm:55">Theorem 11</a>), we find</p>
+<p>Proof. (Proof of 1 and 2) Applying the root test (<a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html#thm:55">Theorem 12</a>), we find</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n(z - z_0)^n}}
 = \abs{z - z_0}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
@@ -652,13 +652,13 @@ r = \frac{1}{\lambda}\end{align*}\]</div>
 = 1
 \end{align*}\]</div>
 <p>Therefore, it diverges when <span class="math notranslate nohighlight">\(\abs{z - z_0} &gt; r\)</span>.</p>
-<p>(Proof of Uniform Convergence) We intend to prove that the power series converges uniformly using the Weierstrass M-test (<a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html#thm:56">Theorem 8</a>). Define</p>
+<p>(Proof of Uniform Convergence) We intend to prove that the power series converges uniformly using the Weierstrass M-test (<a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Infinite%20Series.html#thm:56">Theorem 9</a>). Define</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 g(z) = \abs{z - z_0},
 \quad z \in K
 \end{align*}\]</div>
-<p>Note that <span class="math notranslate nohighlight">\(g\)</span> is a continuous real-valued function defined on a compact set. Hence, <span class="math notranslate nohighlight">\(g\)</span> attains its maximum on <span class="math notranslate nohighlight">\(K\)</span> by <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:6">Theorem 21</a>, that is, there exist <span class="math notranslate nohighlight">\(p \in K\)</span> such that</p>
+<p>Note that <span class="math notranslate nohighlight">\(g\)</span> is a continuous real-valued function defined on a compact set. Hence, <span class="math notranslate nohighlight">\(g\)</span> attains its maximum on <span class="math notranslate nohighlight">\(K\)</span> by <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:6">Theorem 22</a>, that is, there exist <span class="math notranslate nohighlight">\(p \in K\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 g(p) = \sup_{z \in K} g(z)

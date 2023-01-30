@@ -378,6 +378,7 @@ which implies that $u$ also satisfies condition 2. This completes the proof.
 ## Properties
 
 ````{prf:proposition}
+:label: pro:6
 
 Let $\{a_n\}$ be a sequence of real numbers. Then
 - ➀ $\limsup a_n = -\infty \implies \liminf a_n = -\infty$, and
@@ -519,10 +520,52 @@ By {prf:ref}`thm:58`, $a = \limsup a_n$. Similarly, we can also show $a = \limin
 
 ````
 
+Like the limit and supremum/infimum, limit superior/inferior also preserves the order.
+
+
+````{prf:theorem}
+:label: thm:59
+
+If $a_n \leq b_n \; \forall n \in \N^\ast$, then
+
+```{math}
+\begin{align*}\limsup a_n \leq\limsup b_n
+\quad\text{and}\quad\liminf a_n \leq\liminf b_n
+\end{align*}
+```
+
+````
+
+````{prf:proof}
+
+We only prove $\limsup a_n \leq \limsup b_n$.
+
+(Extreme Cases) If $\limsup a_n = -\infty$ or $\limsup b_n = \infty$, then there is nothing to prove. If $\limsup a_n = \infty$, then $\{a_n\}$ is not bounded above and nor is $\{b_n\}$, and hence $\limsup b_n = \infty$. Suppose $\limsup b_n = -\infty$, then $\lim b_n = -\infty$ by {prf:ref}`pro:6`. It follows that $\lim a_n = -\infty$, and hence $\limsup a_n = -\infty$.
+
+(Finite Limit Superiors) Now, suppose that $\limsup a_n$ and $\limsup b_n$ are both finite. We have
+
+```{math}
+\begin{align*}\sup_{m \geq n} a_m \leq\sup_{m \geq n} b_m
+\quad\forall n \in\N^\ast\end{align*}
+```
+
+Taking the limit on both sides yields
+
+```{math}
+\begin{align*}\limsup a_n
+= \lim_{n \to \infty}\sup_{m \geq n} a_m
+\leq\lim_{n \to \infty}\sup_{m \geq n} b_m
+= \limsup b_n
+\end{align*}
+```
+
+````
+
 The next theorem can be treated as the reciprocal rule of limit superior, which establishes the relation between $\limsup 1 / a_n$ and $\liminf a_n$.
 
 
 ````{prf:theorem}
+:label: thm:60
 
 Let $\{a_n\}$ be a sequence of positive numbers, then
 - ➀ $\limsup \frac{1}{a_n} = 1 / \liminf a_n$, and
