@@ -295,7 +295,7 @@ We claim that
 \end{align}
 ```
 
-The proof of {eq}`eq:106` is left as an exercise. See {ref}`Exercise 1<ex:5>`. Letting $q \to \infty$ in {eq}`eq:106` yields
+The proof of {eq}`eq:106` is left as an exercise. See {ref}`Exercise 2.1<ex:5>`. Letting $q \to \infty$ in {eq}`eq:106` yields
 
 ```{math}
 \begin{align*}\abs{\sum_{k=1}^p \sum_{n=1}^\infty b_k(n) - s}\leq\varepsilon / 2 < \varepsilon\quad\forall p \geq K
@@ -314,7 +314,7 @@ Note that the choice of $K$ only depends on $\varepsilon$(through $N$). Therefor
 
 ````
 
-````{admonition} Exercise 1
+````{admonition} Exercise 2.1
 :name: ex:5
 
 Complete the above proof by proving the inequality {eq}`eq:106`.

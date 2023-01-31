@@ -196,7 +196,7 @@ Write $r_m = \sum_{n=1}^\infty a_{m,n}$. Define $f_m$ for each $m \in \N^\ast$ a
 - ➀ $f_m$ is injective,
 - ➁ $f_m(\N^\ast) \subseteq \N^\ast$, and
 - ➂ $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.
-(See {ref}`Exercise 2<ex:6>`.) Hence, all the requirements of {prf:ref}`thm:50` are met. Therefore, $\sum r_m$ converges absolutely, and
+(See {ref}`Exercise 2.2<ex:6>`.) Hence, all the requirements of {prf:ref}`thm:50` are met. Therefore, $\sum r_m$ converges absolutely, and
 
 ```{math}
 \begin{align*}\sum_{m=1}^\infty r_m
@@ -209,7 +209,7 @@ Similarly, we can also show that $\sum c_n$ converges absolutely to $s$.
 
 ````
 
-````{admonition} Exercise 2
+````{admonition} Exercise 2.2
 :name: ex:6
 
 Complete the above proof by showing

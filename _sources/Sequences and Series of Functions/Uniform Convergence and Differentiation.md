@@ -163,7 +163,7 @@ Note that $\lim_{n \to \infty}\phi_n(x)$ exists, and
 \end{align*}
 ```
 
-We claim that $\phi_n \to \phi$ uniformly on $(a, b)$. The proof of this assertion is left as an exercise. (See {ref}`Exercise 15<ex:4>`.) Since both the limits $\lim_{x \to c} \phi_n(x)$ and $\lim_{n \to \infty} \phi_n(x)$ exist, and $\phi_n(x)$ converges uniformly on $(a, b)$, by {prf:ref}`thm:43`, the limits $\lim_{n \to \infty} f^\prime_n(c)$ and $\lim_{x \to c} [f(x) - f(c)] / (x - c)$ both exist and are equal to each other, that is,
+We claim that $\phi_n \to \phi$ uniformly on $(a, b)$. The proof of this assertion is left as an exercise. (See {ref}`Exercise 7.1<ex:4>`.) Since both the limits $\lim_{x \to c} \phi_n(x)$ and $\lim_{n \to \infty} \phi_n(x)$ exist, and $\phi_n(x)$ converges uniformly on $(a, b)$, by {prf:ref}`thm:43`, the limits $\lim_{n \to \infty} f^\prime_n(c)$ and $\lim_{x \to c} [f(x) - f(c)] / (x - c)$ both exist and are equal to each other, that is,
 
 ```{math}
 \begin{align*}\lim_{x \to c}\frac{f(x) - f(c)}{x - c}
@@ -183,7 +183,7 @@ This completes the proof.
 
 ````
 
-````{admonition} Exercise 15
+````{admonition} Exercise 7.1
 :name: ex:4
 
 Complete the above proof by showing $\phi_n \to \phi$ uniformly on $(a, b)$.
