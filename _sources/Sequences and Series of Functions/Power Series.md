@@ -130,3 +130,160 @@ Then the power series converges uniformly on $K$ if we can show that $\sum M_n$ 
 This completes the proof.
 
 ````
+
+````{prf:theorem}
+
+Suppose the series
+
+```{math}
+\begin{align*}
+f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n
+\end{align*}
+```
+
+converges (absolutely) for $z \in B_R(z_0)$. Let $S$ be an open subset in $B_R(z_0)$ and $z_1 \in S$. Then there exists an open disk $B_r(z_1) \subset S$ in which $f$ has a power series expansion about $z_1$ of the form
+
+```{math}
+\begin{align*}
+f(z) = \sum_{k=0}^\infty b_k (z - z_1)^k
+\end{align*}
+```
+
+where
+
+```{math}
+\begin{align*}
+b_k = \sum_{n=k}^\infty\binom{n}{k} a_n (z_1 - z_0)^{n-k}\end{align*}
+```
+
+````
+
+```{figure} /figures/domain-001.png
+---
+name: fig:13
+---
+Domains of power series expansions about different points.
+
+```
+
+````{prf:proof}
+
+Since $S$ is open, we can find a neighborhood $B_r(z_1)$ contained in $S$. Let $z \in B_r(z_1)$. Expanding the expression $(z-z_0)^n = [(z_1 - z_0) + (z  - z_1)]^n$ in $f(z)$ using the binomial theorem, we have
+
+```{math}
+:label: eq:126
+\begin{align}
+f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n
+= \sum_{n=0}^\infty a_n \sum_{k=0}^n \binom{n}{k}(z_1 - z_0)^{n-k}(z - z_1)^k
+\end{align}
+```
+
+Define
+
+```{math}
+\begin{align*}
+c_{n,k} = \begin{cases}
+a_n \binom{n}{k} (z_1 - z_0)^{n-k} (z - z_1)^k,
+&0 \leq k \leq n \\
+0,
+& \text{otherwise}
+\end{cases}\end{align*}
+```
+
+In this way, we can rewrite the right-hand side of {eq}`eq:126` as an iterated series:
+
+```{math}
+:label: eq:127
+\begin{align}
+f(z) = \sum_{n=0}^\infty\sum_{k=0}^\infty c_{n,k}\end{align}
+```
+
+We desire to interchange the order of summations in {eq}`eq:127` using {prf:ref}`thm:61`. To do so, we need to show
+- ➀ $\sum_{k=0}^\infty \abs{c_{n,k}}$ converges, and
+- ➁ $\sum_{n=0}^\infty \sum_{k=0}^\infty \abs{c_{n,k}}$
+
+
+For the first one, we note that $\sum_{k=0}^\infty \abs{c_{n,k}} = \sum_{k=0}^n c_{n,k}$ is just a finite sum. Hence, it of course converges. As for the second one, we have
+
+```{math}
+\begin{multline*}\sum_{n=0}^\infty\sum_{k=0}^\infty\abs{c_{n,k}}
+= \sum_{n=0}^\infty\abs{a_n}\sum_{k=0}^n \binom{n}{k}\abs{z_1 - z_0}^{n-k}\abs{z - z_1}^k \\
+= \sum_{n=0}^\infty\abs{a_n}\brk{\abs{z_1 - z_0} + \abs{z - z_1}}^n
+= \sum_{n=0}^\infty\abs{a_n}\brk{z_2 - z_0}^n
+\end{multline*}
+```
+
+where
+
+```{math}
+:label: eq:128
+\begin{align}
+z_2 = \abs{z_1 - z_0} + \abs{z - z_1} + z_0
+\end{align}
+```
+
+Since the series $\sum_{n=0}^\infty a_n (z - z_0)^n$ converges absolutely for all $z \in B_{R}(z_0)$, $\sum_{n=0}^\infty \abs{a_n} \abs{z_2 - z_0}^n$ converges since $z_2 \in B_R(z_0)$({ref}`Exercise 7.2<ex:7>`). Note that $\brk{z_2 - z_0}^n = \abs{z_2 - z_0}^n$ since $z_2 - z_0$ is in fact a non-negative number. Hence, indeed $\sum_{n=0}^\infty \sum_{k=0}^\infty \abs{c_{n,k}}$ converges and {prf:ref}`thm:62` is applicable. We conclude that $\sum_{n=0}^\infty c_{n,k}$ converges absolutely, and $\sum_{k=0}^\infty \sum_{n=0}^\infty c_{n,k}$ also converges absolutely. By interchanging the summations in {eq}`eq:127`, we obtain
+
+```{math}
+\begin{align*}
+f(z) = \sum_{k=0}^\infty\sum_{n=0}^\infty c_{n,k}
+= \sum_{k=0}^\infty\sum_{n=k}^\infty c_{n,k}
+= \sum_{k=0}^\infty\sum_{n=k}^\infty a_n \binom{n}{k}(z_1 - z_0)^{n-k}(z - z_1)^k
+= \sum_{k=0}^\infty b_k (z - z_1)^k
+\end{align*}
+```
+
+This completes the proof.
+
+````
+
+````{admonition} Exercise 7.2
+:name: ex:7
+
+Complete the above proof by showing $z_2 \in B_R(z_0)$. By {eq}`eq:128`, it is equivalent to show $\abs{z_1 - z_0} + \abs{z - z_1} < R$.
+
+````
+
+Though it is intuitive to see $\abs{z_1 - z_0} + \abs{z - z_1} < R$, the proof is not trivial.
+
+
+````{admonition} Solution
+:class: tip, dropdown
+
+Without loss of generality, we may assume $z_1 \neq z_0$. Define
+
+```{math}
+\begin{align*}
+w = z_1 + \frac{\abs{z - z_1}}{\abs{z_1 - z_0}}(z_1 - z_0)
+\end{align*}
+```
+
+Refer to {numref}`fig:13` to see the geometric meaning of $w$. We have
+
+```{math}
+\begin{align*}\abs{w - z_1} = \abs{z - z_1} < r
+\end{align*}
+```
+
+since $z \in B_r(z_1)$. This implies that $w \in B_r(z_1)$. But
+
+```{math}
+\begin{align*}
+w \in B_r(z_1) \subset S \subset B_R(z_0)
+\end{align*}
+```
+
+We have $\abs{w - z_0} < R$. Plugging the expression of $w$, we find
+
+```{math}
+\begin{align*}\abs{w - z_0}&= \abs{(z_1 - z_0) + \frac{\abs{z - z_1}}{\abs{z_1 - z_0}} (z_1 - z_0)}\\&= \abs{z_1 - z_0}\abs{1 + \frac{\abs{z - z_1}}{\abs{z_1 - z_0}}}\\&= \abs{z_1 - z_0}\brk{1 + \frac{\abs{z - z_1}}{\abs{z_1 - z_0}}}\\&= \abs{z_1 - z_0} + \abs{z - z_1}\end{align*}
+```
+
+Therefore, indeed
+
+```{math}
+\begin{align*}\abs{z_1 - z_0} + \abs{z - z_1} < R
+\end{align*}
+```
+
+````

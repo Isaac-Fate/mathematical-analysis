@@ -702,6 +702,104 @@ M_n = \abs{a_n}\abs{p - z_0}^n
 \end{align*}\]</div>
 <p>This completes the proof.</p>
 </div>
+<div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span class="caption-number">Theorem 7.8 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Suppose the series</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n
+\end{align*}\]</div>
+<p>converges (absolutely) for <span class="math notranslate nohighlight">\(z \in B_R(z_0)\)</span>. Let <span class="math notranslate nohighlight">\(S\)</span> be an open subset in <span class="math notranslate nohighlight">\(B_R(z_0)\)</span> and <span class="math notranslate nohighlight">\(z_1 \in S\)</span>. Then there exists an open disk <span class="math notranslate nohighlight">\(B_r(z_1) \subset S\)</span> in which <span class="math notranslate nohighlight">\(f\)</span> has a power series expansion about <span class="math notranslate nohighlight">\(z_1\)</span> of the form</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(z) = \sum_{k=0}^\infty b_k (z - z_1)^k
+\end{align*}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+b_k = \sum_{n=k}^\infty\binom{n}{k} a_n (z_1 - z_0)^{n-k}\end{align*}\]</div>
+</div>
+</div><div class="figure align-default" id="fig-13">
+<img alt="../_images/domain-001.png" src="../_images/domain-001.png" />
+<p class="caption"><span class="caption-number">Fig. 7.2 </span><span class="caption-text">Domains of power series expansions about different points.</span><a class="headerlink" href="#fig-13" title="Permalink to this image">#</a></p>
+</div>
+<div class="proof admonition" id="proof">
+<p>Proof. Since <span class="math notranslate nohighlight">\(S\)</span> is open, we can find a neighborhood <span class="math notranslate nohighlight">\(B_r(z_1)\)</span> contained in <span class="math notranslate nohighlight">\(S\)</span>. Let <span class="math notranslate nohighlight">\(z \in B_r(z_1)\)</span>. Expanding the expression <span class="math notranslate nohighlight">\((z-z_0)^n = [(z_1 - z_0) + (z  - z_1)]^n\)</span> in <span class="math notranslate nohighlight">\(f(z)\)</span> using the binomial theorem, we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-126">
+<span class="eqno">(7.10)<a class="headerlink" href="#equation-eq-126" title="Permalink to this equation">#</a></span>\[\begin{align}
+f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n
+= \sum_{n=0}^\infty a_n \sum_{k=0}^n \binom{n}{k}(z_1 - z_0)^{n-k}(z - z_1)^k
+\end{align}\]</div>
+<p>Define</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+c_{n,k} = \begin{cases}
+a_n \binom{n}{k} (z_1 - z_0)^{n-k} (z - z_1)^k,
+&amp;0 \leq k \leq n \\
+0,
+&amp; \text{otherwise}
+\end{cases}\end{align*}\end{split}\]</div>
+<p>In this way, we can rewrite the right-hand side of <a class="reference internal" href="#equation-eq-126">(7.10)</a> as an iterated series:</p>
+<div class="math notranslate nohighlight" id="equation-eq-127">
+<span class="eqno">(7.11)<a class="headerlink" href="#equation-eq-127" title="Permalink to this equation">#</a></span>\[\begin{align}
+f(z) = \sum_{n=0}^\infty\sum_{k=0}^\infty c_{n,k}\end{align}\]</div>
+<p>We desire to interchange the order of summations in <a class="reference internal" href="#equation-eq-127">(7.11)</a> using <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Iterated%20Series.html#thm:61">Theorem 2.18</a>. To do so, we need to show</p>
+<ul class="simple">
+<li><p>➀ <span class="math notranslate nohighlight">\(\sum_{k=0}^\infty \abs{c_{n,k}}\)</span> converges, and</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty \sum_{k=0}^\infty \abs{c_{n,k}}\)</span></p></li>
+</ul>
+<p>For the first one, we note that <span class="math notranslate nohighlight">\(\sum_{k=0}^\infty \abs{c_{n,k}} = \sum_{k=0}^n c_{n,k}\)</span> is just a finite sum. Hence, it of course converges. As for the second one, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{multline*}\sum_{n=0}^\infty\sum_{k=0}^\infty\abs{c_{n,k}}
+= \sum_{n=0}^\infty\abs{a_n}\sum_{k=0}^n \binom{n}{k}\abs{z_1 - z_0}^{n-k}\abs{z - z_1}^k \\
+= \sum_{n=0}^\infty\abs{a_n}\brk{\abs{z_1 - z_0} + \abs{z - z_1}}^n
+= \sum_{n=0}^\infty\abs{a_n}\brk{z_2 - z_0}^n
+\end{multline*}\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight" id="equation-eq-128">
+<span class="eqno">(7.12)<a class="headerlink" href="#equation-eq-128" title="Permalink to this equation">#</a></span>\[\begin{align}
+z_2 = \abs{z_1 - z_0} + \abs{z - z_1} + z_0
+\end{align}\]</div>
+<p>Since the series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n (z - z_0)^n\)</span> converges absolutely for all <span class="math notranslate nohighlight">\(z \in B_{R}(z_0)\)</span>, <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty \abs{a_n} \abs{z_2 - z_0}^n\)</span> converges since <span class="math notranslate nohighlight">\(z_2 \in B_R(z_0)\)</span>(<a class="reference internal" href="#ex-7"><span class="std std-ref">Exercise 7.2</span></a>). Note that <span class="math notranslate nohighlight">\(\brk{z_2 - z_0}^n = \abs{z_2 - z_0}^n\)</span> since <span class="math notranslate nohighlight">\(z_2 - z_0\)</span> is in fact a non-negative number. Hence, indeed <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty \sum_{k=0}^\infty \abs{c_{n,k}}\)</span> converges and <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html#thm:62">Theorem 2.17</a> is applicable. We conclude that <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty c_{n,k}\)</span> converges absolutely, and <span class="math notranslate nohighlight">\(\sum_{k=0}^\infty \sum_{n=0}^\infty c_{n,k}\)</span> also converges absolutely. By interchanging the summations in <a class="reference internal" href="#equation-eq-127">(7.11)</a>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(z) = \sum_{k=0}^\infty\sum_{n=0}^\infty c_{n,k}
+= \sum_{k=0}^\infty\sum_{n=k}^\infty c_{n,k}
+= \sum_{k=0}^\infty\sum_{n=k}^\infty a_n \binom{n}{k}(z_1 - z_0)^{n-k}(z - z_1)^k
+= \sum_{k=0}^\infty b_k (z - z_1)^k
+\end{align*}\]</div>
+<p>This completes the proof.</p>
+</div>
+<div class="admonition-exercise-7-2 admonition" id="ex-7">
+<p class="admonition-title">Exercise 7.2</p>
+<p>Complete the above proof by showing <span class="math notranslate nohighlight">\(z_2 \in B_R(z_0)\)</span>. By <a class="reference internal" href="#equation-eq-128">(7.12)</a>, it is equivalent to show <span class="math notranslate nohighlight">\(\abs{z_1 - z_0} + \abs{z - z_1} &lt; R\)</span>.</p>
+</div>
+<p>Though it is intuitive to see <span class="math notranslate nohighlight">\(\abs{z_1 - z_0} + \abs{z - z_1} &lt; R\)</span>, the proof is not trivial.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>Without loss of generality, we may assume <span class="math notranslate nohighlight">\(z_1 \neq z_0\)</span>. Define</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+w = z_1 + \frac{\abs{z - z_1}}{\abs{z_1 - z_0}}(z_1 - z_0)
+\end{align*}\]</div>
+<p>Refer to <a class="reference internal" href="#fig-13"><span class="std std-numref">Fig. 7.2</span></a> to see the geometric meaning of <span class="math notranslate nohighlight">\(w\)</span>. We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{w - z_1} = \abs{z - z_1} &lt; r
+\end{align*}\]</div>
+<p>since <span class="math notranslate nohighlight">\(z \in B_r(z_1)\)</span>. This implies that <span class="math notranslate nohighlight">\(w \in B_r(z_1)\)</span>. But</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+w \in B_r(z_1) \subset S \subset B_R(z_0)
+\end{align*}\]</div>
+<p>We have <span class="math notranslate nohighlight">\(\abs{w - z_0} &lt; R\)</span>. Plugging the expression of <span class="math notranslate nohighlight">\(w\)</span>, we find</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}\abs{w - z_0}&amp;= \abs{(z_1 - z_0) + \frac{\abs{z - z_1}}{\abs{z_1 - z_0}} (z_1 - z_0)}\\&amp;= \abs{z_1 - z_0}\abs{1 + \frac{\abs{z - z_1}}{\abs{z_1 - z_0}}}\\&amp;= \abs{z_1 - z_0}\brk{1 + \frac{\abs{z - z_1}}{\abs{z_1 - z_0}}}\\&amp;= \abs{z_1 - z_0} + \abs{z - z_1}\end{align*}\end{split}\]</div>
+<p>Therefore, indeed</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{z_1 - z_0} + \abs{z - z_1} &lt; R
+\end{align*}\]</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
