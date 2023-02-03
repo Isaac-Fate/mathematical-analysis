@@ -208,7 +208,7 @@ By Theorem~\ref{thm:57}, we know that the limits of $\{u_n\}$ and $\{l_n\}$ alwa
 
     \begin{figure}[ht]
         \centering
-        \includegraphics[scale=0.2]{figures/limsup-liminf.png}
+        \includegraphics[scale=0.4]{figures/limsup-liminf.png}
         \caption{Limit superior and limit inferior of $\{a_n\}$ where $a_n = \brk{1 + \frac{10}{n}} \sin \frac{n \pi}{32}$.}
         \label{fig:12}
     \end{figure}
@@ -1301,7 +1301,7 @@ The absolute convergence of a double series will also imply convergence of itsel
     Therefore, $\sum \abs{a_{m,n}}$ converges absolutely by Theorem~\ref{thm:47}.
 \end{proof}
 
-\begin{theorem}
+\begin{theorem} \label{thm:62}
     Suppose $\sum a_{m,n}$ is an absolutely convergent double series with sum $s$. Let $g$ be an arrangement of double sequence $\{a_{m,n}\}$ into $\{b_k\}$. Then 
     \begin{enumerate}
         \item $\sum b_k$ converges absolutely to $s$.
@@ -1451,6 +1451,49 @@ The absolute convergence of a double series will also imply convergence of itsel
     \end{align*}
     Since $g$ is bijective, we must have $m_1 = m_2$, which leads to a contradiction. Therefore, every two function ranges are mutually disjoint. This completes the proof.
 \end{solution}
+
+%------------------------------
+
+\section{Iterated Series}
+
+In practice, it is very common to encounter situations where interchanging the order of summations of a double series will make the computation much easier. That is, sometimes we favor the right-hand side over the left-hand side in \eqref{eq:125}.
+\begin{align}
+    \sum_{m=1}^\infty \sum_{n=1}^\infty a_{m,n}
+    = \sum_{n=1}^\infty \sum_{m=1}^\infty a_{m,n}
+    \label{eq:125}
+\end{align}
+We state a sufficient condition in the following theorem so that \eqref{eq:125} is valid.
+
+\begin{theorem} \label{thm:61}
+    Let $\{a_{m,n}\}$ be a double sequence with complex terms. If 
+    \begin{enumerate}[label=\textcolor{structurecolor}{\alph*.}]
+        \item $\sum_{n=1}^\infty a_{m,n}$ converges absolutely for each $m$, and 
+        \item $\sum_{m=1}^\infty \sum_{n=1}^\infty \abs{a_{m,n}}$ converges,
+    \end{enumerate}
+    then 
+    \begin{enumerate}
+        \item the double series $\sum_{m,n} a_{m,n}$ converges absolutely,
+        \item $\sum_{m=1}^\infty a_{m,n}$ converges absolutely for each $n$, and 
+        \item $\sum_{n=1}^\infty \sum_{m=1}^\infty a_{m,n}$ (regarded as a series with terms $\sum_{m=1}^\infty a_{m,n}$) also converges absolutely with the same sum as $\sum_{m=1}^\infty \sum_{n=1}^\infty a_{m,n}$ and $\sum_{m,n} a_{m,n}$, that is,
+        \begin{align*}
+            \sum_{m=1}^\infty \sum_{n=1}^\infty a_{m,n}
+            = \sum_{n=1}^\infty \sum_{m=1}^\infty a_{m,n}
+            = \sum_{m, n} a_{m,n}
+        \end{align*}
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    (Proof of 1) Let $g$ be an arrangement of $\{ a_{m,n} \}$ into $\{b_k\}$. For any given $K \in \N^\ast$, we have 
+    \begin{align*}
+        \sum_{k=1}^K \abs{b_k}
+        \leq \sum_{m=1}^M \sum_{n=1}^N \abs{a_{m,n}}
+        \leq \sum_{m=1}^\infty \sum_{n=1}^\infty \abs{a_{m,n}}
+    \end{align*}
+    where $M = \max \{m_1, \ldots, m_K\}$ and $N = \max \{n_1, \ldots, n_K\}$ where $g(k) = (m_k, n_k) \; \forall k = 1, \ldots, K$. This implies that the sequence of partial sums of $\sum \abs{b_k}$ is bounded above, which further implies $\sum b_k$ converges absolutely. And then by Lemma~\ref{lem:4}, the double series $\sum_{m,n} a_{m,n}$ also converges absolutely.
+
+    (Proof of 2 and 3) The last two statements follow directly from Theorem~\ref{thm:62}. 
+\end{proof}
 
 %------------------------------
 
@@ -5716,6 +5759,112 @@ With every power series, there is associated a \textbf{disk of convergence}\inde
     \end{align*}
     This completes the proof.
 \end{proof}
+
+%------------------------------
+
+\begin{theorem}
+    Suppose the series
+    \begin{align*}
+        f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n
+    \end{align*}
+    converges (absolutely) for $z \in B_R(z_0)$. Let $S$ be an open subset in $B_R(z_0)$ and $z_1 \in S$. Then there exists an open disk $B_r(z_1) \subset S$ in which $f$ has a power series expansion about $z_1$ of the form
+    \begin{align*}
+        f(z) = \sum_{k=0}^\infty b_k (z - z_1)^k
+    \end{align*}
+    where 
+    \begin{align*}
+        b_k = \sum_{n=k}^\infty \binom{n}{k} a_n (z_1 - z_0)^{n-k}
+    \end{align*}
+\end{theorem}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.4]{figures/domain-001.png}
+    \caption{Domains of power series expansions about different points.}
+    \label{fig:13}
+\end{figure}
+
+\begin{proof}
+    Since $S$ is open, we can find a neighborhood $B_r(z_1)$ contained in $S$. Let $z \in B_r(z_1)$. Expanding the expression $(z-z_0)^n = [(z_1 - z_0) + (z  - z_1)]^n$ in $f(z)$ using the binomial theorem, we have 
+    \begin{align}
+        f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n
+        = \sum_{n=0}^\infty a_n \sum_{k=0}^n \binom{n}{k} (z_1 - z_0)^{n-k} (z - z_1)^k
+        \label{eq:126}
+    \end{align}
+    Define
+    \begin{align*}
+        c_{n,k} = \begin{cases}
+            a_n \binom{n}{k} (z_1 - z_0)^{n-k} (z - z_1)^k,
+            &0 \leq k \leq n \\ 
+            0,
+            & \text{otherwise}
+        \end{cases}
+    \end{align*}
+    In this way, we can rewrite the right-hand side of \eqref{eq:126} as an iterated series:
+    \begin{align}
+        f(z) = \sum_{n=0}^\infty \sum_{k=0}^\infty c_{n,k}
+        \label{eq:127}
+    \end{align}
+    
+    We desire to interchange the order of summations in \eqref{eq:127} using Theorem~\ref{thm:61}. To do so, we need to show 
+    \begin{enumerate}
+        \item $\sum_{k=0}^\infty \abs{c_{n,k}}$ converges, and 
+        \item $\sum_{n=0}^\infty \sum_{k=0}^\infty \abs{c_{n,k}}$ 
+    \end{enumerate}
+    For the first one, we note that $\sum_{k=0}^\infty \abs{c_{n,k}} = \sum_{k=0}^n c_{n,k}$ is just a finite sum. Hence, it of course converges. As for the second one, we have 
+    \begin{multline*}
+        \sum_{n=0}^\infty \sum_{k=0}^\infty \abs{c_{n,k}}
+        = \sum_{n=0}^\infty \abs{a_n} \sum_{k=0}^n \binom{n}{k} \abs{z_1 - z_0}^{n-k} \abs{z - z_1}^k \\
+        = \sum_{n=0}^\infty \abs{a_n} \brk{\abs{z_1 - z_0} + \abs{z - z_1}}^n
+        = \sum_{n=0}^\infty \abs{a_n} \brk{z_2 - z_0}^n
+    \end{multline*}
+    where 
+    \begin{align}
+        z_2 = \abs{z_1 - z_0} + \abs{z - z_1} + z_0
+        \label{eq:128}
+    \end{align}
+    Since the series $\sum_{n=0}^\infty a_n (z - z_0)^n$ converges absolutely for all $z \in B_{R}(z_0)$, $\sum_{n=0}^\infty \abs{a_n} \abs{z_2 - z_0}^n$ converges since $z_2 \in B_R(z_0)$ (Exercise~\ref{ex:7}). Note that $\brk{z_2 - z_0}^n = \abs{z_2 - z_0}^n$ since $z_2 - z_0$ is in fact a non-negative number. Hence, indeed $\sum_{n=0}^\infty \sum_{k=0}^\infty \abs{c_{n,k}}$ converges and Theorem~\ref{thm:62} is applicable. We conclude that $\sum_{n=0}^\infty c_{n,k}$ converges absolutely, and $\sum_{k=0}^\infty \sum_{n=0}^\infty c_{n,k}$ also converges absolutely. By interchanging the summations in \eqref{eq:127}, we obtain
+    \begin{align*}
+        f(z) = \sum_{k=0}^\infty \sum_{n=0}^\infty c_{n,k}
+        = \sum_{k=0}^\infty \sum_{n=k}^\infty c_{n,k}
+        = \sum_{k=0}^\infty \sum_{n=k}^\infty a_n \binom{n}{k} (z_1 - z_0)^{n-k} (z - z_1)^k
+        = \sum_{k=0}^\infty b_k (z - z_1)^k
+    \end{align*}
+    This completes the proof.
+\end{proof}
+
+\begin{exercise}
+    Complete the above proof by showing $z_2 \in B_R(z_0)$. By \eqref{eq:128}, it is equivalent to show $\abs{z_1 - z_0} + \abs{z - z_1} < R$.
+    \label{ex:7}
+\end{exercise}
+
+Though it is intuitive to see $\abs{z_1 - z_0} + \abs{z - z_1} < R$, the proof is not trivial.
+
+\begin{solution}
+    Without loss of generality, we may assume $z_1 \neq z_0$. Define
+    \begin{align*}
+        w = z_1 + \frac{\abs{z - z_1}}{\abs{z_1 - z_0}} (z_1 - z_0)
+    \end{align*}
+    Refer to Figure~\ref{fig:13} to see the geometric meaning of $w$. We have 
+    \begin{align*}
+        \abs{w - z_1} = \abs{z - z_1} < r
+    \end{align*}
+    since $z \in B_r(z_1)$. This implies that $w \in B_r(z_1)$. But 
+    \begin{align*}
+        w \in B_r(z_1) \subset S \subset B_R(z_0)
+    \end{align*}
+    We have $\abs{w - z_0} < R$. Plugging the expression of $w$, we find
+    \begin{align*}
+        \abs{w - z_0} &= \abs{(z_1 - z_0) + \frac{\abs{z - z_1}}{\abs{z_1 - z_0}} (z_1 - z_0)} \\
+        &= \abs{z_1 - z_0} \abs{1 + \frac{\abs{z - z_1}}{\abs{z_1 - z_0}}} \\
+        &= \abs{z_1 - z_0} \brk{1 + \frac{\abs{z - z_1}}{\abs{z_1 - z_0}}} \\
+        &= \abs{z_1 - z_0} + \abs{z - z_1}
+    \end{align*}
+    Therefore, indeed
+    \begin{align*}
+        \abs{z_1 - z_0} + \abs{z - z_1} < R
+    \end{align*}
+\end{solution}
 
 %==============================
 

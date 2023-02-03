@@ -58,6 +58,8 @@ begin
         lc=palette(:default)[3]
     )
 
+    ylims!(-1.3, 2)
+
 
     display("image/png", plt)
 end
