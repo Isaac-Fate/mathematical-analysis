@@ -175,6 +175,7 @@ Let $\{f_1, f_2, \ldots\}$ be a countable collection of functions defined on $\N
 - ➁ the range $f_k(\N^\ast)$ is a subset of $\N^\ast$, and
 - ➂ the collection of all function ranges form a partition of $\N^\ast$, that is, $\biguplus_{k=1}^\infty f_k(\N^\ast) = \N^\ast$.
 
+
 Suppose that $\sum a_n$ is an absolutely convergent series. Let $b_k(n)$ be defined by
 
 ```{math}
@@ -188,6 +189,7 @@ k \in\N^\ast\end{align*}
 Then
 - ➀ each $\sum_n b_k(n)$ is an absolutely convergent subseries of $\sum a_n$, and
 - ➁ if we let $s_k = \sum_{n=1}^\infty b_k(n)$, then $\sum s_k$ converges absolutely to the same sum as $\sum a_n$, that is, $\sum_{k=1}^\infty s_k = \sum_{n=1}^\infty a_n$.
+
 
 ````
 

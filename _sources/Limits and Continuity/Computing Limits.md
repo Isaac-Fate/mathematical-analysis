@@ -18,4 +18,5 @@ We have
 - ➁ $\lim_{x \to p}f(x) g(x) = a b$,
 - ➂ $\lim_{x \to p} f(x) / g(x) = a / b$ provided that $b \neq 0$.
 
+
 ````

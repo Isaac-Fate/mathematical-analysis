@@ -34,6 +34,7 @@ r = \frac{1}{\lambda}\end{align*}
 - ➀ the power series converges absolutely if $\abs{z - z_0} < r$, and
 - ➁ diverges if $\abs{z - z_0} > r$.
 
+
 Furthermore, the power series, regarded as a series of functions in variable $z$, converges uniformly on any compact subset $K$ interior to the disk of convergence.
 
 ````

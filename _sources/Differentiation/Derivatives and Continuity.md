@@ -20,6 +20,7 @@ f(x) - f(c) = (x - c) \phi(x)
 And $f^\prime(c) = \phi(c)$.
 - ➁ Conversely, if there exists a function $\phi$ on $(a, b)$ which is continuous at $c$, and satisfies {eq}`eq:1`, then $f$ is differentiable at $c$ with $f^\prime(c) = \phi(c)$.
 
+
 ````
 
 The function $\phi$ is precisely the slope of function $f$'s secant line.

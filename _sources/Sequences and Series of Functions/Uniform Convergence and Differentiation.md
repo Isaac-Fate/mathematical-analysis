@@ -60,6 +60,7 @@ Let $\{f_n\}$ be a sequence of real-valued functions each of which has a finite 
 - ➀ there exists a function $f$ such that $f_n \to f$ uniformly on $(a, b)$, and
 - ➁ $f^\prime(x)$ exists everywhere in $(a, b)$ with $f^\prime(x) = g(x)$.
 
+
 In this case, we can write
 
 ```{math}
@@ -226,6 +227,7 @@ The following theorem is another version of {prf:ref}`thm:44` in terms of a seri
 Let $\sum f_n$ be a series of real-valued functions each of which has a finite derivative at every point in $(a, b)$. Suppose there exists a point $x_0 \in (a, b)$ such that the numerical series $\sum f_n(x_0)$ converges. Suppose further that there exists a function $g$ such that $\sum f^\prime_n \to g$ uniformly on $(a, b)$. Then
 - ➀ there exists a function $f$ such that $\sum f_n \to f$ uniformly on $(a, b)$, and
 - ➁ $f^\prime(x)$ exists everywhere in $(a, b)$ with $f^\prime(x) = g(x)$.
+
 
 In this case, we can write
 

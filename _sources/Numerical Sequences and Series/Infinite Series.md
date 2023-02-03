@@ -74,6 +74,7 @@ for some positive constant $M$, and
 \end{align*}
 ```
 
+
 ````
 
 ````{prf:proof}

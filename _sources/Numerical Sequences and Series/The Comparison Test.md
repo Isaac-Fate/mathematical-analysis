@@ -16,6 +16,7 @@ then
 - ➀ $\sum a_n$ converges if $\sum b_n$ converges, and
 - ➁ $\sum b_n$ diverges if $\sum a_n$ diverges.
 
+
 ````
 
 ````{prf:proof}

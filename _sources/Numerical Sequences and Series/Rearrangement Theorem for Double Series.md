@@ -74,6 +74,7 @@ Therefore, $\sum \abs{a_{m,n}}$ converges absolutely by {prf:ref}`thm:47`.
 ````
 
 ````{prf:theorem}
+:label: thm:62
 
 Suppose $\sum a_{m,n}$ is an absolutely convergent double series with sum $s$. Let $g$ be an arrangement of double sequence $\{a_{m,n}\}$ into $\{b_k\}$. Then
 - ➀ $\sum b_k$ converges absolutely to $s$.
@@ -95,6 +96,7 @@ If we expand $r_m$ and $c_n$, then we obtain the same equation as above in terms
 = s
 \end{align*}
 ```
+
 
 ````
 
@@ -196,6 +198,7 @@ Write $r_m = \sum_{n=1}^\infty a_{m,n}$. Define $f_m$ for each $m \in \N^\ast$ a
 - ➀ $f_m$ is injective,
 - ➁ $f_m(\N^\ast) \subseteq \N^\ast$, and
 - ➂ $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.
+
 (See {ref}`Exercise 2.2<ex:6>`.) Hence, all the requirements of {prf:ref}`thm:50` are met. Therefore, $\sum r_m$ converges absolutely, and
 
 ```{math}
@@ -216,6 +219,7 @@ Complete the above proof by showing
 - ➀ $f_m$ is injective,
 - ➁ $f_m(\N^\ast) \subseteq \N^\ast$, and
 - ➂ $\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast$.
+
 
 Each function $f_m$ is defined by {eq}`eq:109`.
 

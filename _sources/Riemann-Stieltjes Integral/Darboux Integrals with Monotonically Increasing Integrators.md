@@ -99,6 +99,7 @@ L(P_1, f, \alpha) \leq U(P_2, f, \alpha)
 \end{align*}
 ```
 
+
 ````
 
 ````{prf:proof}
@@ -285,6 +286,7 @@ Suppose that $f$ is bounded and $\alpha$ is increasing on $[a, b]$. Let $c \in (
 - ➀ $\upint_a^b f \; \mathrm{d}\alpha = \upint_a^c f \; \mathrm{d}\alpha + \upint_c^b f \; \mathrm{d}\alpha$
 - ➁ $\lowint_a^b f \; \mathrm{d}\alpha = \lowint_a^c f \; \mathrm{d}\alpha + \lowint_c^b f \; \mathrm{d}\alpha$
 
+
 ````
 
 ````{prf:proof}
@@ -417,6 +419,7 @@ It will not hold if we replace the integrals with upper and lower integrals. To 
 Suppose that $f$ and $g$ are bounded and $\alpha$ is increasing on $[a, b]$. We have
 - ➀ $\upint_a^b (f+g) \; \mathrm{d}\alpha \leq \upint_a^b f \; \mathrm{d}\alpha + \upint_a^b g \; \mathrm{d}\alpha$
 - ➁ $\lowint_a^b (f+g) \; \mathrm{d}\alpha \geq \lowint_a^b f \; \mathrm{d}\alpha + \lowint_a^b g \; \mathrm{d}\alpha$
+
 
 ````
 

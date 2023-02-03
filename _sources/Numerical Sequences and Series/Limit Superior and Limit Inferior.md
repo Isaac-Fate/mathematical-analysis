@@ -43,6 +43,7 @@ l_n = \inf_{m \geq n} a_m,
 
 The sequence $\{l_n\}$ is increasing.
 
+
 ````
 
 ````{prf:proof}
@@ -92,6 +93,7 @@ By {prf:ref}`thm:57`, we know that the limits of $\{u_n\}$ and $\{l_n\}$ always 
 Let $\{a_n\}$ be a sequence of real numbers. The **limit superior** of $\{a_n\}$, denoted by $\limsup_{n \to \infty} a_n$, is defined as follows:
 - ➀ $\limsup_{n \to \infty} a_n := \infty$ if $\{a_n\}$ is not bounded above, and
 - ➁ $\limsup_{n \to \infty} a_n := \lim_{n \to \infty} u_n$ if $\{a_n\}$ is bounded above where $u_n = \sup_{m \geq n} a_m$.
+
 
 ```{index} limit inferior
 ```
@@ -214,6 +216,7 @@ a_n < u + \varepsilon\quad\forall n \geq N
 \begin{align*}
 a_N > u - \varepsilon\end{align*}
 ```
+
 
 Then $u$ is the limit superior of $\{a_n\}$, i.e., $u = \limsup a_n$. Conversely, if $u = \limsup a_n$ is a finite number, then it satisfies the above conditions. An analogous result exists concerning the limit inferior of $\{a_n\}$.
 
@@ -384,6 +387,7 @@ Let $\{a_n\}$ be a sequence of real numbers. Then
 - ➀ $\limsup a_n = -\infty \implies \liminf a_n = -\infty$, and
 - ➁ $\{a_n\}$ diverges to $-\infty$ if and only if $\limsup a_n = \liminf a_n = -\infty$.
 
+
 ````
 
 ````{prf:proof}
@@ -462,6 +466,7 @@ Let $\{a_n\}$ be a sequence of real numbers. Then
 - ➀ $\liminf a_n = \infty \implies \limsup a_n = \infty$, and
 - ➁ $\{a_n\}$ diverges to $\infty$ if and only if $\limsup a_n = \liminf a_n = \infty$.
 
+
 ````
 
 ````{prf:proposition}
@@ -515,6 +520,7 @@ Therefore, $\{a_n\}$ converges to $a$.
 We have
 - ➀ $a_n < a + \varepsilon$ for all $n \geq N$, and
 - ➁ for any given $m \in \N^\ast$, there exists $M \geq \max\{m, N\}$ such that $a_M > a - \varepsilon$.
+
 
 By {prf:ref}`thm:58`, $a = \limsup a_n$. Similarly, we can also show $a = \liminf a_n$.
 
@@ -570,6 +576,7 @@ The next theorem can be treated as the reciprocal rule of limit superior, which 
 Let $\{a_n\}$ be a sequence of positive numbers, then
 - ➀ $\limsup \frac{1}{a_n} = 1 / \liminf a_n$, and
 - ➁ $\liminf \frac{1}{a_n} = 1 / \limsup a_n$.
+
 
 Note that, in the first equation, if $\liminf a_n = 0$ then $\limsup 1 / a_n = \infty$, and $\limsup 1 / a_n = 0$ if $\liminf a_n = \infty$. A similar treatment also applies to the second equation.
 

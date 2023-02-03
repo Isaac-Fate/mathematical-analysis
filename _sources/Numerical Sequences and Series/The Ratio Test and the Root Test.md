@@ -16,6 +16,7 @@ Then
 - ➁ $\sum a_n$ diverges if $r > 1$, and
 - ➂ the test is inclusive if $r \leq 1 \leq R$.
 
+
 ````
 
 ````{prf:proof}
@@ -97,6 +98,7 @@ Then
 - ➀ $\sum a_n$ converges absolutely if $\rho < 1$,
 - ➁ $\sum a_n$ diverges if $\rho > 1$, and
 - ➂ the test is inclusive if $\rho = 1$.
+
 
 ````
 
