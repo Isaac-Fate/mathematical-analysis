@@ -102,3 +102,19 @@ We have
 where the last inequality follows from {eq}`eq:98`, {eq}`eq:99` and {eq}`eq:100`. This completes the proof.
 
 ````
+
+The version of {prf:ref}`thm:43` concerning the series of functions is as follows.
+
+
+````{prf:theorem}
+:label: thm:65
+
+Suppose $\sum f_n \to f$ uniformly on $S$. If $f_n$ is continuous on $S$ for every $n \in \N^\ast$, then $f$ is also continuous on $S$. In particular, if $p$ is an accumulation point $S$, then
+
+```{math}
+\begin{align*}\lim_{x \to p}\sum_{n=1}^\infty f_n(x)
+= \sum_{n=1}^\infty\lim_{x \to p} f_n(x)
+\end{align*}
+```
+
+````

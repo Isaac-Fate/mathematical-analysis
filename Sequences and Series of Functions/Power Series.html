@@ -627,8 +627,8 @@ title="Print to PDF"
 \end{align*}\]</div>
 <span class="target" id="index-1"></span><p id="index-2">where <span class="math notranslate nohighlight">\(a_n \in \C\)</span> is called the coefficient of the <span class="math notranslate nohighlight">\(n\)</span>-th term, and <span class="math notranslate nohighlight">\(z_0 \in \C\)</span> is often referred to as the center of the series.</p>
 <p>With every power series, there is associated a <strong>disk of convergence</strong> such that the series converges if <span class="math notranslate nohighlight">\(\abs{z - z_0} &lt; r\)</span> whereas diverges if <span class="math notranslate nohighlight">\(\abs{z - z_0} &gt; r\)</span>. The number <span class="math notranslate nohighlight">\(r\)</span> is called <strong>radius of convergence</strong>. If <span class="math notranslate nohighlight">\(r\)</span> is a <em>finite positive</em> number, then the disk of convergence is exactly the open ball in the complex plane with radius <span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(B_r(z_0)\)</span>. However, we allow <span class="math notranslate nohighlight">\(r\)</span> to take the value of <span class="math notranslate nohighlight">\(0\)</span> or <span class="math notranslate nohighlight">\(\infty\)</span> in extreme cases. When the power series is nowhere convergent except for <span class="math notranslate nohighlight">\(z = z_0\)</span>, then we say the radius of convergence is zero, i.e., <span class="math notranslate nohighlight">\(r = 0\)</span>. And if the power series converges everywhere in the complex plane, then we write <span class="math notranslate nohighlight">\(r = \infty\)</span>.</p>
-<div class="proof theorem admonition" id="theorem-0">
-<p class="admonition-title"><span class="caption-number">Theorem 7.7 </span></p>
+<div class="proof theorem admonition" id="thm:66">
+<p class="admonition-title"><span class="caption-number">Theorem 7.8 </span></p>
 <div class="theorem-content section" id="proof-content">
 <p>Given a power series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n (z - z_0)^n\)</span>, let</p>
 <div class="math notranslate nohighlight">
@@ -702,15 +702,20 @@ M_n = \abs{a_n}\abs{p - z_0}^n
 \end{align*}\]</div>
 <p>This completes the proof.</p>
 </div>
-<div class="proof theorem admonition" id="theorem-1">
-<p class="admonition-title"><span class="caption-number">Theorem 7.8 </span></p>
+<p>In fact, derivatives of the power series <span class="math notranslate nohighlight">\(f(z) = \sum a_n (z - z_0)^n\)</span> exist throughout its disk of convergence. To show <span class="math notranslate nohighlight">\(f^\prime(z_1)\)</span> exists, we need to consider the fraction</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\frac{f(z) - f(z_1)}{z - z_1}\end{align*}\]</div>
+<p>The difficulty is that <span class="math notranslate nohighlight">\(f\)</span> consists of terms in powers of <span class="math notranslate nohighlight">\(z - z_0\)</span> while the denominator is <span class="math notranslate nohighlight">\(z - z_1\)</span>. What if we can rewrite <span class="math notranslate nohighlight">\(f\)</span> by expanding it about <span class="math notranslate nohighlight">\(z_1\)</span>? Indeed, we are allowed to do so, as stated in the following theorem.</p>
+<div class="proof theorem admonition" id="thm:63">
+<p class="admonition-title"><span class="caption-number">Theorem 7.9 </span></p>
 <div class="theorem-content section" id="proof-content">
-<p>Suppose the series</p>
+<p>Suppose the series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n (z - z_0)^n\)</span> converges (absolutely) for <span class="math notranslate nohighlight">\(z \in B_R(z_0)\)</span>. Define</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n
+f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n,
+\quad z \in B_R(z_0)
 \end{align*}\]</div>
-<p>converges (absolutely) for <span class="math notranslate nohighlight">\(z \in B_R(z_0)\)</span>. Let <span class="math notranslate nohighlight">\(S\)</span> be an open subset in <span class="math notranslate nohighlight">\(B_R(z_0)\)</span> and <span class="math notranslate nohighlight">\(z_1 \in S\)</span>. Then there exists an open disk <span class="math notranslate nohighlight">\(B_r(z_1) \subset S\)</span> in which <span class="math notranslate nohighlight">\(f\)</span> has a power series expansion about <span class="math notranslate nohighlight">\(z_1\)</span> of the form</p>
+<p>Let <span class="math notranslate nohighlight">\(S\)</span> be an open subset in <span class="math notranslate nohighlight">\(B_R(z_0)\)</span> and <span class="math notranslate nohighlight">\(z_1 \in S\)</span>. Then there exists an open disk <span class="math notranslate nohighlight">\(B_r(z_1) \subset S\)</span> in which <span class="math notranslate nohighlight">\(f\)</span> has a power series expansion about <span class="math notranslate nohighlight">\(z_1\)</span> of the form</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f(z) = \sum_{k=0}^\infty b_k (z - z_1)^k
@@ -799,6 +804,57 @@ w \in B_r(z_1) \subset S \subset B_R(z_0)
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{z_1 - z_0} + \abs{z - z_1} &lt; R
 \end{align*}\]</div>
+</div>
+<div class="proof theorem admonition" id="thm:64">
+<p class="admonition-title"><span class="caption-number">Theorem 7.10 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Suppose the series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n (z - z_0)^n\)</span> converges (absolutely) for <span class="math notranslate nohighlight">\(z \in B_r(z_0)\)</span>. Define</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n,
+\quad z \in B_r(z_0)
+\end{align*}\]</div>
+<p>Then <span class="math notranslate nohighlight">\(f\)</span> is differentiable in <span class="math notranslate nohighlight">\(B_r(z_0)\)</span> with the derivative given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f^\prime(z)
+= \sum_{n=1}^\infty n a_n (z - z_0)^{n-1},
+\quad z \in B_r(z_0)
+\end{align*}\]</div>
+</div>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that the power series expansions of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(f^\prime\)</span> have the same radius of convergence since</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\limsup{\sqrt[n]{\abs{a_n}}}
+= \limsup{\sqrt[n]{\abs{n a_n}}}\end{align*}\]</div>
+</div>
+<div class="proof admonition" id="proof">
+<p>Proof. Pick a point <span class="math notranslate nohighlight">\(z_1 \in B_r(z_0)\)</span>. We can expand <span class="math notranslate nohighlight">\(f\)</span> in some neighborhood <span class="math notranslate nohighlight">\(B_{\varepsilon}(z_1) \subseteq B_r(z_0)\)</span> about <span class="math notranslate nohighlight">\(z_1\)</span> by <a class="reference internal" href="#thm:63">Theorem 7.9</a>. We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(z) = \sum_{k=0}^\infty b_k (z - z_1)^k
+\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(b_k = \sum_{n=k}^\infty \binom{n}{k} a_n (z_1 - z_0)^{n-k}\)</span>. Note that <span class="math notranslate nohighlight">\(f(z_1) = b_0\)</span>. Subtracting <span class="math notranslate nohighlight">\(f(z_1)\)</span> from <span class="math notranslate nohighlight">\(f(z)\)</span>, we find</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(z) - f(z_1)
+= \sum_{k=1}^\infty b_k (z - z_1)^k
+= b_1 (z - z_1) + \sum_{k=2}^\infty b_k (z - z_1)^k
+\end{align*}\]</div>
+<p>Dividing both sides by <span class="math notranslate nohighlight">\(z - z_1\)</span>(<span class="math notranslate nohighlight">\(z \in B_\varepsilon(z_1) \setminus \{z_1\}\)</span>) yields</p>
+<div class="math notranslate nohighlight" id="equation-eq-129">
+<span class="eqno">(7.13)<a class="headerlink" href="#equation-eq-129" title="Permalink to this equation">#</a></span>\[\begin{align}\frac{f(z) - f(z_1)}{z - z_1}
+= \sum_{k=1}^\infty b_k (z - z_1)^k
+= b_1 + \sum_{k=2}^\infty b_k (z - z_1)^{k-1}\end{align}\]</div>
+<p>Because, by <a class="reference internal" href="#thm:66">Theorem 7.8</a>, we can find a closed disk <span class="math notranslate nohighlight">\(D \subseteq B_{\varepsilon}(z_1)\)</span> containing <span class="math notranslate nohighlight">\(z_1\)</span> on which the series <span class="math notranslate nohighlight">\(\sum_{k=2}^\infty b_k (z - z_1)^{k-1}\)</span> in <span class="math notranslate nohighlight">\(z\)</span> converges uniformly, the limit exists as <span class="math notranslate nohighlight">\(z \to z_1\)</span>(<a class="reference internal" href="Uniform%20Convergence%20and%20Continuity.html#thm:65">Theorem 7.5</a>). Letting <span class="math notranslate nohighlight">\(z \to z_1\)</span> on both sides of <a class="reference internal" href="#equation-eq-129">(7.13)</a>, we find</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f^\prime(z_1)
+= b_1
+= \sum_{n=1}^\infty\binom{n}{1} a_n (z_1 - z_0)^{n-1}
+= \sum_{n=1}^\infty n a_n (z_1 - z_0)^{n-1}\end{align*}\]</div>
+<p>This completes the proof.</p>
 </div>
 </div>
 

@@ -23,6 +23,7 @@ With every power series, there is associated a **disk of convergence** such that
 
 
 ````{prf:theorem}
+:label: thm:66
 
 Given a power series $\sum_{n=0}^\infty a_n (z - z_0)^n$, let
 
@@ -131,17 +132,28 @@ This completes the proof.
 
 ````
 
-````{prf:theorem}
+In fact, derivatives of the power series $f(z) = \sum a_n (z - z_0)^n$ exist throughout its disk of convergence. To show $f^\prime(z_1)$ exists, we need to consider the fraction
 
-Suppose the series
+```{math}
+\begin{align*}\frac{f(z) - f(z_1)}{z - z_1}\end{align*}
+```
+
+The difficulty is that $f$ consists of terms in powers of $z - z_0$ while the denominator is $z - z_1$. What if we can rewrite $f$ by expanding it about $z_1$? Indeed, we are allowed to do so, as stated in the following theorem.
+
+
+````{prf:theorem}
+:label: thm:63
+
+Suppose the series $\sum_{n=0}^\infty a_n (z - z_0)^n$ converges (absolutely) for $z \in B_R(z_0)$. Define
 
 ```{math}
 \begin{align*}
-f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n
+f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n,
+\quad z \in B_R(z_0)
 \end{align*}
 ```
 
-converges (absolutely) for $z \in B_R(z_0)$. Let $S$ be an open subset in $B_R(z_0)$ and $z_1 \in S$. Then there exists an open disk $B_r(z_1) \subset S$ in which $f$ has a power series expansion about $z_1$ of the form
+Let $S$ be an open subset in $B_R(z_0)$ and $z_1 \in S$. Then there exists an open disk $B_r(z_1) \subset S$ in which $f$ has a power series expansion about $z_1$ of the form
 
 ```{math}
 \begin{align*}
@@ -285,5 +297,83 @@ Therefore, indeed
 \begin{align*}\abs{z_1 - z_0} + \abs{z - z_1} < R
 \end{align*}
 ```
+
+````
+
+````{prf:theorem}
+:label: thm:64
+
+Suppose the series $\sum_{n=0}^\infty a_n (z - z_0)^n$ converges (absolutely) for $z \in B_r(z_0)$. Define
+
+```{math}
+\begin{align*}
+f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n,
+\quad z \in B_r(z_0)
+\end{align*}
+```
+
+Then $f$ is differentiable in $B_r(z_0)$ with the derivative given by
+
+```{math}
+\begin{align*}
+f^\prime(z)
+= \sum_{n=1}^\infty n a_n (z - z_0)^{n-1},
+\quad z \in B_r(z_0)
+\end{align*}
+```
+
+````
+
+:::{note}
+
+Note that the power series expansions of $f$ and $f^\prime$ have the same radius of convergence since
+
+```{math}
+\begin{align*}\limsup{\sqrt[n]{\abs{a_n}}}
+= \limsup{\sqrt[n]{\abs{n a_n}}}\end{align*}
+```
+
+:::
+
+````{prf:proof}
+
+Pick a point $z_1 \in B_r(z_0)$. We can expand $f$ in some neighborhood $B_{\varepsilon}(z_1) \subseteq B_r(z_0)$ about $z_1$ by {prf:ref}`thm:63`. We have
+
+```{math}
+\begin{align*}
+f(z) = \sum_{k=0}^\infty b_k (z - z_1)^k
+\end{align*}
+```
+
+where $b_k = \sum_{n=k}^\infty \binom{n}{k} a_n (z_1 - z_0)^{n-k}$. Note that $f(z_1) = b_0$. Subtracting $f(z_1)$ from $f(z)$, we find
+
+```{math}
+\begin{align*}
+f(z) - f(z_1)
+= \sum_{k=1}^\infty b_k (z - z_1)^k
+= b_1 (z - z_1) + \sum_{k=2}^\infty b_k (z - z_1)^k
+\end{align*}
+```
+
+Dividing both sides by $z - z_1$($z \in B_\varepsilon(z_1) \setminus \{z_1\}$) yields
+
+```{math}
+:label: eq:129
+\begin{align}\frac{f(z) - f(z_1)}{z - z_1}
+= \sum_{k=1}^\infty b_k (z - z_1)^k
+= b_1 + \sum_{k=2}^\infty b_k (z - z_1)^{k-1}\end{align}
+```
+
+Because, by {prf:ref}`thm:66`, we can find a closed disk $D \subseteq B_{\varepsilon}(z_1)$ containing $z_1$ on which the series $\sum_{k=2}^\infty b_k (z - z_1)^{k-1}$ in $z$ converges uniformly, the limit exists as $z \to z_1$({prf:ref}`thm:65`). Letting $z \to z_1$ on both sides of {eq}`eq:129`, we find
+
+```{math}
+\begin{align*}
+f^\prime(z_1)
+= b_1
+= \sum_{n=1}^\infty\binom{n}{1} a_n (z_1 - z_0)^{n-1}
+= \sum_{n=1}^\infty n a_n (z_1 - z_0)^{n-1}\end{align*}
+```
+
+This completes the proof.
 
 ````
