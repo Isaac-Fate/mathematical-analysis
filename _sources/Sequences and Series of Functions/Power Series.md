@@ -131,6 +131,7 @@ Then the power series converges uniformly on $K$ if we can show that $\sum M_n$ 
 This completes the proof.
 
 ````
+## Derivatives of Power Series
 
 In fact, derivatives of the power series $f(z) = \sum a_n (z - z_0)^n$ exist throughout its disk of convergence. To show $f^\prime(z_1)$ exists, we need to consider the fraction
 
@@ -315,11 +316,12 @@ f(z) = \sum_{n=0}^\infty a_n (z - z_0)^n,
 Then $f$ is differentiable in $B_r(z_0)$ with the derivative given by
 
 ```{math}
-\begin{align*}
+:label: eq:130
+\begin{align}
 f^\prime(z)
 = \sum_{n=1}^\infty n a_n (z - z_0)^{n-1},
 \quad z \in B_r(z_0)
-\end{align*}
+\end{align}
 ```
 
 ````
@@ -332,6 +334,8 @@ Note that the power series expansions of $f$ and $f^\prime$ have the same radius
 \begin{align*}\limsup{\sqrt[n]{\abs{a_n}}}
 = \limsup{\sqrt[n]{\abs{n a_n}}}\end{align*}
 ```
+
+Notice also that {eq}`eq:130` is referred to as the term-by-term differentiation formula for power series.
 
 :::
 
@@ -372,6 +376,87 @@ f^\prime(z_1)
 = b_1
 = \sum_{n=1}^\infty\binom{n}{1} a_n (z_1 - z_0)^{n-1}
 = \sum_{n=1}^\infty n a_n (z_1 - z_0)^{n-1}\end{align*}
+```
+
+This completes the proof.
+
+````
+
+If we treat $f^\prime$ as the original function, then we may differentiate it using {prf:ref}`thm:64` to obtain the second derivative of $f$ in the same disk of convergence. Hence, by applying {prf:ref}`thm:64` repeatedly, we can obtain the derivative of $f$ of any order in the form of
+
+```{math}
+:label: eq:131
+\begin{align}
+f^{(k)}(z)
+= \sum_{n=k}^\infty\frac{n!}{(n-k)!} a_n (z - z_0)^{n-k},
+\quad z \in B_r(z_0)
+\end{align}
+```
+
+In particular, putting $z = z_0$ in {eq}`eq:131`, and we will obtain a very important formula
+
+```{math}
+\begin{align*}
+f^{(k)}(z_0) = n! a_k
+\quad\text{or equivalently}\quad
+a_k = \frac{f^{(k)}(z_0)}{n!},
+\quad\forall k \in\N\end{align*}
+```
+
+This tells us that if a function $f$ has a power series expansion, then each coefficient $a_k$ is determined. In other words, the power series expansion of a function is *unique*.
+
+
+## Multiplication of Power Series
+
+````{prf:theorem}
+
+Suppose functions $f$ and $g$ both have power series expansions about the origin, which are given by
+
+```{math}
+\begin{align*}
+f(z) = \sum_{n=0}^\infty a_n z^n,
+\quad z \in B_r(0)
+\end{align*}
+```
+
+and
+
+```{math}
+\begin{align*}
+g(z) = \sum_{n=0}^\infty b_n z^n,
+\quad z \in B_R(0)
+\end{align*}
+```
+
+Then their product $f(z)g(z)$ also has a power series expansion with
+
+```{math}
+\begin{align*}
+f(z)g(z)
+= \sum_{n=0}^\infty c_n z^n,
+\quad z \in B_r(0) \cap B_R(0)
+\end{align*}
+```
+
+where
+
+```{math}
+\begin{align*}
+c_n = \sum_{k=0}^n a_{n-k} b_{k}\end{align*}
+```
+
+````
+
+````{prf:proof}
+
+Both series $\sum_{n=0}^\infty a_n z^n$ and $\sum_{n=0}^\infty b_n z^n$ converge absolutely for $z \in B_r(0) \cap B_R(0)$ by {prf:ref}`thm:66`. (In fact, we only need one of them to converge absolutely for {prf:ref}`thm:67` to hold.) Hence, their Cauchy product converges by {prf:ref}`thm:67`, and it is given by
+
+```{math}
+\begin{align*}
+f(z) g(z)
+= \sum_{n=0}^\infty\sum_{k=0}^n a_{n-k} z^{n-k} b_{k} z^k
+= \sum_{n=0}^\infty\sum_{k=0}^n a_{n-k} b_{k} z^n
+\end{align*}
 ```
 
 This completes the proof.

@@ -15,6 +15,7 @@ Then the series $\sum_{n=0}^\infty c_n$ is called the **Cauchy product** of $\su
 ````
 
 ````{prf:theorem} Mertens
+:label: thm:67
 
 Let $\sum a_n$ and $\sum b_n$ be two series that converge to sums $A$ and $B$, respectively. Suppose further that $\sum a_n$ converges absolutely. Then their Cauchy product $\sum c_n$ also converges with sum $AB$. In this case, we can write
 
