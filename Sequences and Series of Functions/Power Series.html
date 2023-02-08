@@ -167,38 +167,43 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Inserting%20and%20Removing%20Parentheses.html">
+     2.4. Inserting and Removing Parentheses
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html">
-     2.4. The Comparison Test
+     2.5. The Comparison Test
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html">
-     2.5. The Ratio Test and the Root Test
+     2.6. The Ratio Test and the Root Test
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Subseries.html">
-     2.6. Subseries
+     2.7. Subseries
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Double%20Series.html">
-     2.7. Double Series
+     2.8. Double Series
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
-     2.8. Rearrangement Theorem for Double Series
+     2.9. Rearrangement Theorem for Double Series
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Iterated%20Series.html">
-     2.9. Iterated Series
+     2.10. Iterated Series
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html">
-     2.10. Multiplication of Series
+     2.11. Multiplication of Series
     </a>
    </li>
   </ul>
@@ -689,7 +694,7 @@ r = \frac{1}{\lambda}\end{align*}\]</div>
 <p>Furthermore, the power series, regarded as a series of functions in variable <span class="math notranslate nohighlight">\(z\)</span>, converges uniformly on any compact subset <span class="math notranslate nohighlight">\(K\)</span> interior to the disk of convergence.</p>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (Proof of 1 and 2) Applying the root test (<a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html#thm:55">Theorem 2.11</a>), we find</p>
+<p>Proof. (Proof of 1 and 2) Applying the root test (<a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html#thm:55">Theorem 2.12</a>), we find</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n(z - z_0)^n}}
 = \abs{z - z_0}\limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}
@@ -798,7 +803,7 @@ a_n \binom{n}{k} (z_1 - z_0)^{n-k} (z - z_1)^k,
 <div class="math notranslate nohighlight" id="equation-eq-127">
 <span class="eqno">(7.11)<a class="headerlink" href="#equation-eq-127" title="Permalink to this equation">#</a></span>\[\begin{align}
 f(z) = \sum_{n=0}^\infty\sum_{k=0}^\infty c_{n,k}\end{align}\]</div>
-<p>We desire to interchange the order of summations in <a class="reference internal" href="#equation-eq-127">(7.11)</a> using <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Iterated%20Series.html#thm:61">Theorem 2.18</a>. To do so, we need to show</p>
+<p>We desire to interchange the order of summations in <a class="reference internal" href="#equation-eq-127">(7.11)</a> using <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Iterated%20Series.html#thm:61">Theorem 2.19</a>. To do so, we need to show</p>
 <ul class="simple">
 <li><p>➀ <span class="math notranslate nohighlight">\(\sum_{k=0}^\infty \abs{c_{n,k}}\)</span> converges, and</p></li>
 <li><p>➁ <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty \sum_{k=0}^\infty \abs{c_{n,k}}\)</span></p></li>
@@ -815,7 +820,7 @@ f(z) = \sum_{n=0}^\infty\sum_{k=0}^\infty c_{n,k}\end{align}\]</div>
 <span class="eqno">(7.12)<a class="headerlink" href="#equation-eq-128" title="Permalink to this equation">#</a></span>\[\begin{align}
 z_2 = \abs{z_1 - z_0} + \abs{z - z_1} + z_0
 \end{align}\]</div>
-<p>Since the series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n (z - z_0)^n\)</span> converges absolutely for all <span class="math notranslate nohighlight">\(z \in B_{R}(z_0)\)</span>, <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty \abs{a_n} \abs{z_2 - z_0}^n\)</span> converges since <span class="math notranslate nohighlight">\(z_2 \in B_R(z_0)\)</span>(<a class="reference internal" href="#ex-7"><span class="std std-ref">Exercise 7.2</span></a>). Note that <span class="math notranslate nohighlight">\(\brk{z_2 - z_0}^n = \abs{z_2 - z_0}^n\)</span> since <span class="math notranslate nohighlight">\(z_2 - z_0\)</span> is in fact a non-negative number. Hence, indeed <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty \sum_{k=0}^\infty \abs{c_{n,k}}\)</span> converges and <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html#thm:62">Theorem 2.17</a> is applicable. We conclude that <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty c_{n,k}\)</span> converges absolutely, and <span class="math notranslate nohighlight">\(\sum_{k=0}^\infty \sum_{n=0}^\infty c_{n,k}\)</span> also converges absolutely. By interchanging the summations in <a class="reference internal" href="#equation-eq-127">(7.11)</a>, we obtain</p>
+<p>Since the series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n (z - z_0)^n\)</span> converges absolutely for all <span class="math notranslate nohighlight">\(z \in B_{R}(z_0)\)</span>, <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty \abs{a_n} \abs{z_2 - z_0}^n\)</span> converges since <span class="math notranslate nohighlight">\(z_2 \in B_R(z_0)\)</span>(<a class="reference internal" href="#ex-7"><span class="std std-ref">Exercise 7.2</span></a>). Note that <span class="math notranslate nohighlight">\(\brk{z_2 - z_0}^n = \abs{z_2 - z_0}^n\)</span> since <span class="math notranslate nohighlight">\(z_2 - z_0\)</span> is in fact a non-negative number. Hence, indeed <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty \sum_{k=0}^\infty \abs{c_{n,k}}\)</span> converges and <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html#thm:62">Theorem 2.18</a> is applicable. We conclude that <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty c_{n,k}\)</span> converges absolutely, and <span class="math notranslate nohighlight">\(\sum_{k=0}^\infty \sum_{n=0}^\infty c_{n,k}\)</span> also converges absolutely. By interchanging the summations in <a class="reference internal" href="#equation-eq-127">(7.11)</a>, we obtain</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f(z) = \sum_{k=0}^\infty\sum_{n=0}^\infty c_{n,k}
@@ -952,7 +957,7 @@ f(z)g(z)
 c_n = \sum_{k=0}^n a_{n-k} b_{k}\end{align*}\]</div>
 </div>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Both series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n z^n\)</span> and <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty b_n z^n\)</span> converge absolutely for <span class="math notranslate nohighlight">\(z \in B_r(0) \cap B_R(0)\)</span> by <a class="reference internal" href="#thm:66">Theorem 7.8</a>. (In fact, we only need one of them to converge absolutely for <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html#thm:67">Theorem 2.19</a> to hold.) Hence, their Cauchy product converges by <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html#thm:67">Theorem 2.19</a>, and it is given by</p>
+<p>Proof. Both series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n z^n\)</span> and <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty b_n z^n\)</span> converge absolutely for <span class="math notranslate nohighlight">\(z \in B_r(0) \cap B_R(0)\)</span> by <a class="reference internal" href="#thm:66">Theorem 7.8</a>. (In fact, we only need one of them to converge absolutely for <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html#thm:67">Theorem 2.20</a> to hold.) Hence, their Cauchy product converges by <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html#thm:67">Theorem 2.20</a>, and it is given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f(z) g(z)
