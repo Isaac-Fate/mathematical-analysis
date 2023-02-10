@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.7. Subseries &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,7 +642,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="subseries">
+  <section class="tex2jax_ignore mathjax_ignore" id="subseries">
 <h1><span class="section-number">2.7. </span>Subseries<a class="headerlink" href="#subseries" title="Permalink to this headline">#</a></h1>
 <p>Think about summing up countably many (real or complex) numbers:</p>
 <div class="math notranslate nohighlight">
@@ -642,14 +660,14 @@ s_2 = a_2 + a_4 + \cdots + a_{2k} + \cdots\end{align*}\]</div>
 <p>Suppose <span class="math notranslate nohighlight">\(s\)</span> is the sum we will obtain by summing up the numbers in the way we like. A natural question to ask is whether <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges to <span class="math notranslate nohighlight">\(s\)</span>. The answer is yes by <a class="reference internal" href="#thm:50">Theorem 2.15</a>, which we will soon show provided that <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely.</p>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 2.3 </span></p>
-<div class="definition-content section" id="proof-content">
+<section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: \N^\ast \N^\ast\)</span> be an <strong>injective</strong>/<strong>one-to-one</strong> function whose domain is <span class="math notranslate nohighlight">\(\N^\ast\)</span> and whose range <span class="math notranslate nohighlight">\(f(\N^\ast)\)</span> is a subset of <span class="math notranslate nohighlight">\(\N^\ast\)</span>. Let <span class="math notranslate nohighlight">\(\sum a_n\)</span> and <span class="math notranslate nohighlight">\(\sum b_n\)</span> be two series such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 b_n = a_{f(n)},
 \quad n \in\N^\ast\end{align*}\]</div>
 <p>Then we say <span class="math notranslate nohighlight">\(\sum b_n\)</span> is a <strong>subseries</strong> of <span class="math notranslate nohighlight">\(\sum a_n\)</span>.</p>
-</div>
+</section>
 </div><p>To understand the definition, we note that a subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span> can be constructed in the following way. Given a sequence</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -665,7 +683,7 @@ a_{g(k_1)}, a_{g(k_2)}, \ldots a_{g(k_n)}, \ldots\end{align*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(g\)</span> is a bijection from <span class="math notranslate nohighlight">\(\set{k_n}{n \in \N^\ast}\)</span> to itself. If we define <span class="math notranslate nohighlight">\(f(n) = g(k_n)\)</span>, then <span class="math notranslate nohighlight">\(\sum_{a_{f(n)}}\)</span> is precisely a subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span>.</p>
 <div class="proof example admonition" id="example-1">
 <p class="admonition-title"><span class="caption-number">Example 2.5 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>Consider the series <span class="math notranslate nohighlight">\(\sum a_n = \sum_{n=1}^\infty i^n\)</span>. We write down its first several terms:</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{n=1}^\infty i^n
@@ -699,14 +717,14 @@ f(4) = 5,
 <p>Hence, the subseries <span class="math notranslate nohighlight">\(\sum a_{f(n)}\)</span> is</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum a_{f(n)} = (-i) + i + (-i) + i + \cdots\end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof theorem admonition" id="thm:49">
 <p class="admonition-title"><span class="caption-number">Theorem 2.14 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely, then every subseries <span class="math notranslate nohighlight">\(\sum b_n\)</span> also converges absolutely. And we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-105">
 <span class="eqno">(2.9)<a class="headerlink" href="#equation-eq-105" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\sum_{n=1}^\infty b_n}\leq\sum_{n=1}^\infty\abs{b_n}\leq\sum_{n=1}^\infty\abs{a_n}\end{align}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Suppose <span class="math notranslate nohighlight">\(b_k = a_{f(k)} \; k \in \N^\ast\)</span>. Let integer <span class="math notranslate nohighlight">\(n\)</span> be fixed, and let <span class="math notranslate nohighlight">\(N = \max \{ f(1), \ldots, f(n) \}\)</span>. Then we have</p>
 <div class="math notranslate nohighlight">
@@ -727,7 +745,7 @@ a_1, a_2, \ldots, a_n, \ldots\end{align*}\]</div>
 <p>After that, we sum up all the subseries. Suppose the final sum is <span class="math notranslate nohighlight">\(s\)</span>, the next theorem says if <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely, then it must also converge to <span class="math notranslate nohighlight">\(s\)</span>. In other words, we can sum up an absolutely convergent series in whatever way we want without changing its sum!</p>
 <div class="proof theorem admonition" id="thm:50">
 <p class="admonition-title"><span class="caption-number">Theorem 2.15 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{f_1, f_2, \ldots\}\)</span> be a countable collection of functions defined on <span class="math notranslate nohighlight">\(\N^\ast\)</span>, each having the following properties:</p>
 <ul class="simple">
 <li><p>➀ <span class="math notranslate nohighlight">\(f_k\)</span> is injective,</p></li>
@@ -746,7 +764,7 @@ k \in\N^\ast\end{align*}\]</div>
 <li><p>➀ each <span class="math notranslate nohighlight">\(\sum_n b_k(n)\)</span> is an absolutely convergent subseries of <span class="math notranslate nohighlight">\(\sum a_n\)</span>, and</p></li>
 <li><p>➁ if we let <span class="math notranslate nohighlight">\(s_k = \sum_{n=1}^\infty b_k(n)\)</span>, then <span class="math notranslate nohighlight">\(\sum s_k\)</span> converges absolutely to the same sum as <span class="math notranslate nohighlight">\(\sum a_n\)</span>, that is, <span class="math notranslate nohighlight">\(\sum_{k=1}^\infty s_k = \sum_{n=1}^\infty a_n\)</span>.</p></li>
 </ul>
-</div>
+</section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Pay attention to how the properties of <span class="math notranslate nohighlight">\(f_k\)</span> being injective and <span class="math notranslate nohighlight">\(\biguplus_{k=1}^\infty f_k(\N^\ast)= \N^\ast\)</span> are used in the proof below.</p>
@@ -845,7 +863,7 @@ n \leq M
 = \sum_{k=1}^p \sum_{n=1}^q a_{f_k(n)}\end{align*}\]</div>
 <p>is a sum of terms including the first <span class="math notranslate nohighlight">\(N\)</span> terms of <span class="math notranslate nohighlight">\(\sum a_n\)</span>.</p>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -859,7 +877,7 @@ n \leq M
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Numerical Sequences and Series"
         },
         predefinedOutput: true

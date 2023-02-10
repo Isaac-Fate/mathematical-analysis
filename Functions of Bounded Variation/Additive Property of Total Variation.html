@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>5.3. Additive Property of Total Variation &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,17 +642,17 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="additive-property-of-total-variation">
+  <section class="tex2jax_ignore mathjax_ignore" id="additive-property-of-total-variation">
 <h1><span class="section-number">5.3. </span>Additive Property of Total Variation<a class="headerlink" href="#additive-property-of-total-variation" title="Permalink to this headline">#</a></h1>
 <div class="proof theorem admonition" id="thm:34">
 <p class="admonition-title"><span class="caption-number">Theorem 5.4 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>. For a point <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>, we have <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\([c, b]\)</span>, and</p>
 <div class="math notranslate nohighlight" id="equation-eq-79">
 <span class="eqno">(5.3)<a class="headerlink" href="#equation-eq-79" title="Permalink to this equation">#</a></span>\[\begin{align}
 V_a^b(f) = V_a^c(f) + V_c^b(f)
 \end{align}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(P^\prime\)</span> be a partition on <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span> a partition on <span class="math notranslate nohighlight">\([c, b]\)</span>. Note that <span class="math notranslate nohighlight">\(P = P^\prime \cup P^{\prime\prime}\)</span> forms a partition on <span class="math notranslate nohighlight">\([a, b]\)</span>. We have</p>
 <div class="math notranslate nohighlight">
@@ -692,15 +710,15 @@ V_a^b(f)
 <p>The total variation of a function with the same lower and upper limits is defined as zero, i.e., <span class="math notranslate nohighlight">\(V_x^x(f) = 0\)</span> so that <a class="reference internal" href="#equation-eq-79">(5.3)</a> holds for <span class="math notranslate nohighlight">\(c = a\)</span> and <span class="math notranslate nohighlight">\(c = b\)</span>.</p>
 <div class="proof definition admonition" id="def:3">
 <p class="admonition-title"><span class="caption-number">Definition 5.3 </span></p>
-<div class="definition-content section" id="proof-content">
+<section class="definition-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>. The total variation</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 V_a^x(f) \quad a \leq x \leq b
 \end{align*}\]</div>
 <p>can be regarded as a function of <span class="math notranslate nohighlight">\(x\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> with an addition definition <span class="math notranslate nohighlight">\(V_a^a(f) := 0\)</span>.</p>
-</div>
-</div></div>
+</section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {
@@ -714,7 +732,7 @@ V_a^x(f) \quad a \leq x \leq b
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Functions of Bounded Variation"
         },
         predefinedOutput: true

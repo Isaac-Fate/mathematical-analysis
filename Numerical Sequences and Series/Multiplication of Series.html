@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.11. Multiplication of Series &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,21 +642,21 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="multiplication-of-series">
+  <section class="tex2jax_ignore mathjax_ignore" id="multiplication-of-series">
 <h1><span class="section-number">2.11. </span>Multiplication of Series<a class="headerlink" href="#multiplication-of-series" title="Permalink to this headline">#</a></h1>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 2.5 </span></p>
-<div class="definition-content section" id="proof-content">
+<section class="definition-content" id="proof-content">
 <p>Given two complex-valued series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n\)</span> and <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty b_n\)</span>. Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 c_n = \sum_{k=0}^{n} a_{n-k} b_k,
 \quad n \in\N\end{align*}\]</div>
 <p>Then the series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty c_n\)</span> is called the <strong>Cauchy product</strong> of <span class="math notranslate nohighlight">\(\sum a_n\)</span> and <span class="math notranslate nohighlight">\(\sum b_n\)</span>.</p>
-</div>
+</section>
 </div><div class="proof theorem admonition" id="thm:67">
 <p class="admonition-title"><span class="caption-number">Theorem 2.20 </span> (Mertens)</p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\sum a_n\)</span> and <span class="math notranslate nohighlight">\(\sum b_n\)</span> be two series that converge to sums <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, respectively. Suppose further that <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely. Then their Cauchy product <span class="math notranslate nohighlight">\(\sum c_n\)</span> also converges with sum <span class="math notranslate nohighlight">\(AB\)</span>. In this case, we can write</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{n=0}^\infty c_n
@@ -646,7 +664,7 @@ c_n = \sum_{k=0}^{n} a_{n-k} b_k,
 = \sum_{n=0}^\infty a_n
 \sum_{n=0}^\infty b_n
 \end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be chosen arbitrarily. Firstly, because <span class="math notranslate nohighlight">\(\sum b_n\)</span> converges, by <a class="reference internal" href="Infinite%20Series.html#thm:51">Theorem 2.7</a>, there exists <span class="math notranslate nohighlight">\(M &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-112">
@@ -719,7 +737,7 @@ A_n B_n - C_n
 \end{align*}\]</div>
 <p>But since <span class="math notranslate nohighlight">\(\lim_{n \to \infty} A_n = A\)</span> and <span class="math notranslate nohighlight">\(\lim_{n \to \infty} B_n = B\)</span>, by the algebraic properties of limits, we conclude that the limit of <span class="math notranslate nohighlight">\(\{C_n\}\)</span> also exists, and it equals <span class="math notranslate nohighlight">\(AB\)</span>. In other words, <span class="math notranslate nohighlight">\(\sum c_n\)</span> converges to <span class="math notranslate nohighlight">\(AB\)</span>.</p>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -733,7 +751,7 @@ A_n B_n - C_n
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Numerical Sequences and Series"
         },
         predefinedOutput: true

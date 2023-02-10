@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>4.1. Definition of Derivative &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -661,32 +679,34 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="definition-of-derivative">
+  <section class="tex2jax_ignore mathjax_ignore" id="definition-of-derivative">
 <h1><span class="section-number">4.1. </span>Definition of Derivative<a class="headerlink" href="#definition-of-derivative" title="Permalink to this headline">#</a></h1>
 <p>Observe the slopes of secant lines (displayed as dashed lines) of the curve shown in <a class="reference internal" href="#fig-1"><span class="std std-numref">Fig. 4.1</span></a></p>
-<div class="figure align-default" id="fig-1">
+<figure class="align-default" id="fig-1">
 <img alt="../_images/secant-lines-and-a-tangent-line.png" src="../_images/secant-lines-and-a-tangent-line.png" />
-<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Secant lines and a tangent line of curve <span class="math notranslate nohighlight">\(y=e^x\)</span>.</span><a class="headerlink" href="#fig-1" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Secant lines and a tangent line of curve <span class="math notranslate nohighlight">\(y=e^x\)</span>.</span><a class="headerlink" href="#fig-1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>All secant lines have a common point of intersection, <span class="math notranslate nohighlight">\((0, 1)\)</span>. And as the other intersection point gets closer and closer to <span class="math notranslate nohighlight">\((0, 1)\)</span>, the slope of the secant line tends to converge to some number. This number, the limiting slope, is precisely the <strong>derivative</strong> of this curve/function at <span class="math notranslate nohighlight">\(x=0\)</span>, which we shall soon define. We can draw a straight line passing through the point <span class="math notranslate nohighlight">\((0,1)\)</span> with the limiting slope. This line is then called the tangent of the curve at point <span class="math notranslate nohighlight">\((0,1)\)</span>, as illustrated in <a class="reference internal" href="#fig-1"><span class="std std-numref">Fig. 4.1</span></a>.</p>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 4.1 </span></p>
-<div class="definition-content section" id="proof-content">
+<section class="definition-content" id="proof-content">
 <p id="index-0">Let <span class="math notranslate nohighlight">\(f\)</span> be defined on an open interval <span class="math notranslate nohighlight">\((a, b)\)</span>, and let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> an interior point. Then <span class="math notranslate nohighlight">\(f\)</span> is said to be <strong>differentiable</strong> at <span class="math notranslate nohighlight">\(c\)</span> if the limit</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{x \to c}\frac{f(x) - f(c)}{x - c}\end{align*}\]</div>
 <p id="index-1">exists. This limit, denoted by <span class="math notranslate nohighlight">\(f^\prime(c)\)</span>, is called the <strong>derivative</strong> of <span class="math notranslate nohighlight">\(f\)</span> at point <span class="math notranslate nohighlight">\(c\)</span>.</p>
-</div>
+</section>
 </div><p>If <span class="math notranslate nohighlight">\(f^\prime(c)\)</span> exists <span class="math notranslate nohighlight">\(\forall c \in I\)</span> for some interval <span class="math notranslate nohighlight">\(I\)</span>, then we can define a function <span class="math notranslate nohighlight">\(f^\prime\)</span> on <span class="math notranslate nohighlight">\(I\)</span>, which is called the derivative of <span class="math notranslate nohighlight">\(f\)</span>. Here the word <em>derivative</em> means a function instead of just a number.</p>
 <p>The definition of derivatives we present here involves the limit obtained by letting one point approach the other one, <span class="math notranslate nohighlight">\(x \to c\)</span>. For computational convenience, we can treat the derivative of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(c\)</span> as the limit of the fraction <span class="math notranslate nohighlight">\([ f(c+h) - f(c) ] / h\)</span> as <span class="math notranslate nohighlight">\(h \to 0\)</span>. That is, the limit is reached when the distance between points <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(c\)</span>, <span class="math notranslate nohighlight">\(h = \abs{x-c}\)</span>, is small. The following proposition states this idea formally.</p>
 <div class="proof proposition admonition" id="pro:1">
 <p class="admonition-title"><span class="caption-number">Proposition 4.1 </span></p>
-<div class="proposition-content section" id="proof-content">
+<section class="proposition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined on <span class="math notranslate nohighlight">\((a, b)\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> if and only if</p>
 <div class="math notranslate nohighlight" id="equation-eq-3">
 <span class="eqno">(4.1)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[\begin{align}\lim_{h \to 0}\frac{f(c+h) - f(c)}{h}\end{align}\]</div>
 <p>exists. In that case, <span class="math notranslate nohighlight">\(f^\prime(c) = \lim_{h \to 0} [ f(c+h) - f(c) ] / h\)</span>.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Suppose <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span>. For an arbitrary <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -734,33 +754,35 @@ x^2 \sin \frac{1}{x^2} &amp;x \neq 0 \\
 = h \sin\frac{1}{h^2}\end{align*}\]</div>
 <p>Note the limit of the above expression is zero as <span class="math notranslate nohighlight">\(h \to 0\)</span> by <a class="reference internal" href="../Limits%20and%20Continuity/Limit%20of%20a%20Function.html#pro:2">Proposition 3.1</a> since <span class="math notranslate nohighlight">\(\lim_{h\to 0} h = 0\)</span> and <span class="math notranslate nohighlight">\(\sin (1/h^2)\)</span> is bounded by <span class="math notranslate nohighlight">\(1\)</span>. Hence, <span class="math notranslate nohighlight">\(f^\prime(0) = 0\)</span> by <a class="reference internal" href="#pro:1">Proposition 4.1</a>.</p>
 <p>The graph of <span class="math notranslate nohighlight">\(f(x)\)</span> is shown in <a class="reference internal" href="#fig-2"><span class="std std-numref">Fig. 4.2</span></a>. As we can see, <span class="math notranslate nohighlight">\(f(x)\)</span> is clamped between curves <span class="math notranslate nohighlight">\(y=x^2\)</span> and <span class="math notranslate nohighlight">\(y=-x^2\)</span> with the same tangents <span class="math notranslate nohighlight">\(y=0\)</span> at <span class="math notranslate nohighlight">\(x=0\)</span>. And we have shown <span class="math notranslate nohighlight">\(f^\prime(0)=0\)</span>, which means that the tangent of <span class="math notranslate nohighlight">\(f(x)\)</span> is also <span class="math notranslate nohighlight">\(y=0\)</span> at <span class="math notranslate nohighlight">\(x=0\)</span>. What conjecture can you make?</p>
-<div class="figure align-default" id="fig-2">
+<figure class="align-default" id="fig-2">
 <img alt="../_images/graph-001.png" src="../_images/graph-001.png" />
-<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = x^2 \sin \frac{1}{x^2} \ind\{x \neq 0\}\)</span>.</span><a class="headerlink" href="#fig-2" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.2 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = x^2 \sin \frac{1}{x^2} \ind\{x \neq 0\}\)</span>.</span><a class="headerlink" href="#fig-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Moreover, we observe that <span class="math notranslate nohighlight">\(f(x)\)</span> crosses its tangent line at <span class="math notranslate nohighlight">\(x=0\)</span> infinitely many times. This example shows that the tangent line does not have to touch the curve only at one point.</p>
 </div>
-<span class="target" id="index-2"></span><div class="section" id="one-sided-derivatives-and-infinite-derivatives">
+<span class="target" id="index-2"></span><section id="one-sided-derivatives-and-infinite-derivatives">
 <span id="index-3"></span><h2><span class="section-number">4.1.1. </span>One-Sided Derivatives and Infinite Derivatives<a class="headerlink" href="#one-sided-derivatives-and-infinite-derivatives" title="Permalink to this headline">#</a></h2>
 <p>So far, the point at which the derivative is defined has to be an <em>interior</em> point. Sometimes, we are required to consider the derivatives at the endpoints of the interval. For example, as we shall see in more detail in <a class="reference internal" href="../Riemann-Stieltjes%20Integral/index.html"><span class="doc">Riemann-Stieltjes Integral</span></a>, we need to take the derivative of function <span class="math notranslate nohighlight">\(F(x) = \int_a^x f(t) \mathrm{d}t\)</span> at <span class="math notranslate nohighlight">\(x=a\)</span>. Hence, we are motivated to define the <strong>one-sided derivatives</strong>.</p>
 <p>If we consider the derivative of <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(f^\prime\)</span> as a function, then <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> may tend to infinity as <span class="math notranslate nohighlight">\(x\)</span> approaches an endpoint. In addition, sometimes we need to interpret the meaning of vertical tangent lines. This leads to the definition of <strong>infinite derivatives</strong>.</p>
 <div class="proof definition admonition" id="definition-2">
 <p class="admonition-title"><span class="caption-number">Definition 4.2 </span></p>
-<div class="definition-content section" id="proof-content">
+<section class="definition-content" id="proof-content">
 <p id="index-4">Let <span class="math notranslate nohighlight">\(f\)</span> be defined on a closed interval <span class="math notranslate nohighlight">\(I\)</span>. Suppose <span class="math notranslate nohighlight">\(f\)</span> is continuous at point <span class="math notranslate nohighlight">\(c \in I\)</span>. Then <span class="math notranslate nohighlight">\(f\)</span> is said to have a <strong>right-hand derivative</strong> at <span class="math notranslate nohighlight">\(c\)</span> if the right-hand limit</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{x \to c^{+}}\frac{f(x) - f(c)}{x - c}\end{align*}\]</div>
 <p id="index-5">exists as a finite number, or the limit is <span class="math notranslate nohighlight">\(\infty\)</span> or <span class="math notranslate nohighlight">\(-\infty\)</span>. This right-hand derivative shall be denoted by <span class="math notranslate nohighlight">\(f^\prime_{+}(c)\)</span>. The <strong>left-hand derivative</strong>, denoted by <span class="math notranslate nohighlight">\(f^\prime_{-}(c)\)</span>, is defined similarly. In addition, if <span class="math notranslate nohighlight">\(c\)</span> is an interior point, and <span class="math notranslate nohighlight">\(f^\prime_{+}(c) = f^\prime_{-}(c) = \infty\)</span>, then we write <span class="math notranslate nohighlight">\(f^\prime(c) = \infty\)</span>. <span class="math notranslate nohighlight">\(f^\prime(c) = -\infty\)</span> is similarly defined.</p>
-</div>
+</section>
 </div><div class="proof remark admonition" id="remark-3">
 <p class="admonition-title"><span class="caption-number">Remark 4.1 </span></p>
-<div class="remark-content section" id="proof-content">
+<section class="remark-content" id="proof-content">
 <p>Note that though we write <span class="math notranslate nohighlight">\(f^\prime(c) = \infty\)</span> or <span class="math notranslate nohighlight">\(f^\prime(c) = -\infty\)</span>, we do not say <span class="math notranslate nohighlight">\(f\)</span> is differentiable there.</p>
-</div>
+</section>
 </div><p>It is not very intuitive to imagine, at first thought, a continuous function having infinite derivatives. But there are quite a lot of such examples.</p>
 <div class="proof example admonition" id="eg:1">
 <p class="admonition-title"><span class="caption-number">Example 4.1 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>The first example is constructed by cutting a circle in the middle. If we cut a circle in half and stick the lower half to the right of the upper one, then we have a function with a vertical tangent line in the middle. The explicit expression of this function is</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -768,32 +790,36 @@ f(x) = \begin{cases}
 \sqrt{1 - (x-1)^2} &amp;0 \leq x \leq 2 \\
 - \sqrt{1 - (x-3)^2} &amp;2 &lt; x \leq 4
 \end{cases}\end{align*}\end{split}\]</div>
-<div class="figure align-default" id="id1">
+<figure class="align-default" id="id1">
 <img alt="../_images/graph-002.png" src="../_images/graph-002.png" />
-<p class="caption"><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = \sqrt{1-(x-1)^2}\ind\{0 \leq x \leq 2\} - \sqrt{1-(x-3)^2}\ind\{2 &lt; x \leq 4\}\)</span>.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.3 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = \sqrt{1-(x-1)^2}\ind\{0 \leq x \leq 2\} - \sqrt{1-(x-3)^2}\ind\{2 &lt; x \leq 4\}\)</span>.</span><a class="headerlink" href="#id1" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>The function is continuous and one can show that <span class="math notranslate nohighlight">\(f^\prime(2) = -\infty\)</span>.</p>
-</div>
+</section>
 </div><div class="proof example admonition" id="eg:2">
 <p class="admonition-title"><span class="caption-number">Example 4.2 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>The following next example includes both positive and negative intuitive derivatives, and a point at which the right and left-hand side derivatives are <span class="math notranslate nohighlight">\(\infty\)</span> and <span class="math notranslate nohighlight">\(-\infty\)</span>, respectively. Consider the function</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f(x) = \sqrt[3]{x^2 (x-1) (x-2)}\end{align*}\]</div>
 <p>Its graph is shown in <a class="reference internal" href="#fig-3"><span class="std std-numref">Fig. 4.4</span></a>.</p>
-<div class="figure align-default" id="fig-3">
+<figure class="align-default" id="fig-3">
 <img alt="../_images/graph-003.png" src="../_images/graph-003.png" />
-<p class="caption"><span class="caption-number">Fig. 4.4 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = \sqrt[3]{x^2 (x-1) (x-2)}\)</span>.</span><a class="headerlink" href="#fig-3" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.4 </span><span class="caption-text">Graph of <span class="math notranslate nohighlight">\(f(x) = \sqrt[3]{x^2 (x-1) (x-2)}\)</span>.</span><a class="headerlink" href="#fig-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>It is an exercise to show <span class="math notranslate nohighlight">\(f^\prime(1) = -\infty\)</span> and <span class="math notranslate nohighlight">\(f^\prime(2) = \infty\)</span>. We now consider the one-sided derivatives at <span class="math notranslate nohighlight">\(x = 0\)</span>. We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\frac{f(x) - f(0)}{x - 0}
 = \sqrt[3]{\frac{(x-1)(x-2)}{x}}\end{align*}\]</div>
 <p>Letting <span class="math notranslate nohighlight">\(x \to 0^{+}\)</span> leads to <span class="math notranslate nohighlight">\(f^\prime_{+}(0) = \infty\)</span>, while <span class="math notranslate nohighlight">\(x \to 0^{-}\)</span> yields <span class="math notranslate nohighlight">\(f^\prime_{-}(0) = -\infty\)</span>. Hence, we say the derivative of <span class="math notranslate nohighlight">\(f\)</span> does not exist at <span class="math notranslate nohighlight">\(x = 0\)</span>.</p>
-</div>
-</div></div>
-</div>
+</section>
+</div></section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -807,7 +833,7 @@ f(x) = \sqrt[3]{x^2 (x-1) (x-2)}\end{align*}\]</div>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Differentiation"
         },
         predefinedOutput: true

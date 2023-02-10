@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>4.3. Computing Derivatives &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -671,30 +689,30 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="computing-derivatives">
+  <section class="tex2jax_ignore mathjax_ignore" id="computing-derivatives">
 <h1><span class="section-number">4.3. </span>Computing Derivatives<a class="headerlink" href="#computing-derivatives" title="Permalink to this headline">#</a></h1>
 <p>It is difficult in practice to compute the derivative of any function only using the definition. In this section, we shall introduce some theorems and standard rules that are helpful with computation. If one knows the derivatives of elementary functions (e.g., <span class="math notranslate nohighlight">\(x^a\)</span>, <span class="math notranslate nohighlight">\(e^x\)</span>, <span class="math notranslate nohighlight">\(\ln x\)</span>, <span class="math notranslate nohighlight">\(\sin x\)</span>, <span class="math notranslate nohighlight">\(\cos x\)</span>, etc.), then by applying these theorems, one should be able to compute the derivatives of any functions that are built up out of elementary functions using summations, differences, products, quotients, and compositions.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In fact, these so-called elementary functions are not elementary at all. We shall present their definitions as well as their derivatives rigorously in later chapters.</p>
 </div>
-<div class="section" id="algebra-of-derivatives">
+<section id="algebra-of-derivatives">
 <h2><span class="section-number">4.3.1. </span>Algebra of Derivatives<a class="headerlink" href="#algebra-of-derivatives" title="Permalink to this headline">#</a></h2>
 <div class="proof theorem admonition" id="theorem-0">
 <p class="admonition-title"><span class="caption-number">Theorem 4.3 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are defined on <span class="math notranslate nohighlight">\((a, b)\)</span> and are both differentiable at <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. Then the functions <span class="math notranslate nohighlight">\(f + g\)</span>, <span class="math notranslate nohighlight">\(f - g\)</span>, <span class="math notranslate nohighlight">\(fg\)</span> are also differentiable at <span class="math notranslate nohighlight">\(c\)</span>. If <span class="math notranslate nohighlight">\(g(c) \neq 0\)</span>, then the quotient <span class="math notranslate nohighlight">\(f / g\)</span> is also differentiable at <span class="math notranslate nohighlight">\(c\)</span>. And the formulas of their derivatives are given by</p>
 <ul class="simple">
 <li><p>➀ <span class="math notranslate nohighlight">\((f \pm g)^\prime(c) = f^\prime(c) \pm g^\prime(c)\)</span>,</p></li>
 <li><p>➁ <span class="math notranslate nohighlight">\((f g)^\prime(c) = f^\prime(c) g(c) + f(c) g^\prime(c)\)</span>,</p></li>
 <li><p>➂ <span class="math notranslate nohighlight">\((f / g)^\prime(c) = \frac{f^\prime(c) g(c) - f(c) g^\prime(c)}{ g^2(c) }\)</span>, provided <span class="math notranslate nohighlight">\(g(c) \neq 0\)</span>.</p></li>
 </ul>
-</div>
+</section>
 </div><div class="proof remark admonition" id="remark-1">
 <p class="admonition-title"><span class="caption-number">Remark 4.2 </span></p>
-<div class="remark-content section" id="proof-content">
+<section class="remark-content" id="proof-content">
 <p>One might be worried about the possibility that the quotient <span class="math notranslate nohighlight">\(f / g\)</span> may only be defined at point <span class="math notranslate nohighlight">\(c\)</span> if we only require <span class="math notranslate nohighlight">\(g(c) \neq 0\)</span>. Then how can we say <span class="math notranslate nohighlight">\(f / g\)</span> is differentiable at some point? However, the condition that <span class="math notranslate nohighlight">\(g\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> implicitly implies that <span class="math notranslate nohighlight">\(g(x) \neq 0\)</span> for <span class="math notranslate nohighlight">\(x\)</span> in some interval about <span class="math notranslate nohighlight">\(c\)</span> if we assume <span class="math notranslate nohighlight">\(g(c) \neq 0\)</span>. Take a few seconds and think about why this is true. Note that <span class="math notranslate nohighlight">\(g\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span> by <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:2">Theorem 4.2</a>. Then, if <span class="math notranslate nohighlight">\(g(c) \neq 0\)</span>, by the continuity, <span class="math notranslate nohighlight">\(g\)</span> is also nonzero in some neighborhood of <span class="math notranslate nohighlight">\(c\)</span>. Hence, in this case, <span class="math notranslate nohighlight">\(f / g\)</span> is actually well-defined in an interval instead of at just one point.</p>
-</div>
+</section>
 </div><p>The proof we present here is done by exploiting <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 4.1</a>, and it may differ from a traditional proof that is solely based on the definition.</p>
 <div class="proof admonition" id="proof">
 <p>Proof. Since <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are differentiable at <span class="math notranslate nohighlight">\(c\)</span>. It follows from <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 4.1</a> that there exists functions <span class="math notranslate nohighlight">\(\phi_1\)</span> and <span class="math notranslate nohighlight">\(\phi_2\)</span> on <span class="math notranslate nohighlight">\((a, b)\)</span> that are continuous at <span class="math notranslate nohighlight">\(c\)</span>, and satisfy</p>
@@ -756,19 +774,19 @@ g(x) - g(c) = (x - c) \phi_2^\prime(x) \end{align}\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{align*}(f / g)^\prime(c) = \frac{f^\prime(c) g(c) - f(c) g^\prime(c)}{ g^2(c) }\end{align*}\]</div>
 </div>
-</div>
-<div class="section" id="the-chain-rule">
+</section>
+<section id="the-chain-rule">
 <span id="index-0"></span><h2><span class="section-number">4.3.2. </span>The Chain Rule<a class="headerlink" href="#the-chain-rule" title="Permalink to this headline">#</a></h2>
 <p>Taking compositions is a more fundamental and natural way of combining two functions apart from summations, products, etc. The next result, the <strong>chain rule</strong>, provides a method of computing the derivative of a composite function.</p>
 <div class="proof theorem admonition" id="thm:4">
 <p class="admonition-title"><span class="caption-number">Theorem 4.4 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be a function defined on an open interval <span class="math notranslate nohighlight">\(I\)</span>, and <span class="math notranslate nohighlight">\(g\)</span> a function defined on <span class="math notranslate nohighlight">\(f(I)\)</span>. We consider the composite function <span class="math notranslate nohighlight">\(g \circ f\)</span>. If <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c \in I\)</span>, <span class="math notranslate nohighlight">\(f(c)\)</span> is an interior of <span class="math notranslate nohighlight">\(f(I)\)</span>, and <span class="math notranslate nohighlight">\(g\)</span> is differentiable at <span class="math notranslate nohighlight">\(f(c)\)</span>, then <span class="math notranslate nohighlight">\(g \circ f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> with</p>
 <div class="math notranslate nohighlight" id="equation-eq-9">
 <span class="eqno">(4.7)<a class="headerlink" href="#equation-eq-9" title="Permalink to this equation">#</a></span>\[\begin{align}(g \circ f)^\prime(c)
 = g^\prime(f(c)) f^\prime(c)
 \end{align}\]</div>
-</div>
+</section>
 </div><p>With the help of <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 4.1</a>, we can reduce the proof of this theorem to that of <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:3">Theorem 3.2</a>.</p>
 <div class="proof admonition" id="proof">
 <p>Proof. Since <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span>, using <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 4.1</a>, we have</p>
@@ -820,8 +838,8 @@ f(x) = x^2 \sin\frac{1}{x^2}\ind\{x \neq 0\}\end{align*}\]</div>
 <p>for all <span class="math notranslate nohighlight">\(x \in \R\)</span>. Recall we have already calculated its derivative at <span class="math notranslate nohighlight">\(x = 0\)</span> in <a class="reference internal" href="Definition%20of%20Derivative.html#ex-1"><span class="std std-ref">Exercise 4.2</span></a>, which is <span class="math notranslate nohighlight">\(f^\prime(0) = 0\)</span>.</p>
 <p>[Hint: Make use of the result in <a class="reference internal" href="#ex-2"><span class="std std-ref">Exercise 4.3</span></a> and the chain rule (<a class="reference internal" href="#thm:4">Theorem 4.4</a>).]</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -835,7 +853,7 @@ f(x) = x^2 \sin\frac{1}{x^2}\ind\{x \neq 0\}\end{align*}\]</div>
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Differentiation"
         },
         predefinedOutput: true

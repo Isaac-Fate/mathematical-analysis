@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>7.4. Power Series &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -57,7 +58,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="References" href="../references.html" />
+    <link rel="next" title="8. Transcendental Functions" href="../Transcendental%20Functions/index.html" />
     <link rel="prev" title="7.3. Uniform Convergence and Differentiation" href="Uniform%20Convergence%20and%20Differentiation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -671,7 +689,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="power-series">
+  <section class="tex2jax_ignore mathjax_ignore" id="power-series">
 <span id="index-0"></span><h1><span class="section-number">7.4. </span>Power Series<a class="headerlink" href="#power-series" title="Permalink to this headline">#</a></h1>
 <p>A <strong>power series</strong>(in variable <span class="math notranslate nohighlight">\(z \in \C\)</span>) has the form</p>
 <div class="math notranslate nohighlight">
@@ -681,7 +699,7 @@ title="Print to PDF"
 <p>With every power series, there is associated a <strong>disk of convergence</strong> such that the series converges if <span class="math notranslate nohighlight">\(\abs{z - z_0} &lt; r\)</span> whereas diverges if <span class="math notranslate nohighlight">\(\abs{z - z_0} &gt; r\)</span>. The number <span class="math notranslate nohighlight">\(r\)</span> is called <strong>radius of convergence</strong>. If <span class="math notranslate nohighlight">\(r\)</span> is a <em>finite positive</em> number, then the disk of convergence is exactly the open ball in the complex plane with radius <span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(B_r(z_0)\)</span>. However, we allow <span class="math notranslate nohighlight">\(r\)</span> to take the value of <span class="math notranslate nohighlight">\(0\)</span> or <span class="math notranslate nohighlight">\(\infty\)</span> in extreme cases. When the power series is nowhere convergent except for <span class="math notranslate nohighlight">\(z = z_0\)</span>, then we say the radius of convergence is zero, i.e., <span class="math notranslate nohighlight">\(r = 0\)</span>. And if the power series converges everywhere in the complex plane, then we write <span class="math notranslate nohighlight">\(r = \infty\)</span>.</p>
 <div class="proof theorem admonition" id="thm:66">
 <p class="admonition-title"><span class="caption-number">Theorem 7.8 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Given a power series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n (z - z_0)^n\)</span>, let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lambda = \limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}\quad\text{and}\quad
@@ -692,7 +710,7 @@ r = \frac{1}{\lambda}\end{align*}\]</div>
 <li><p>➁ diverges if <span class="math notranslate nohighlight">\(\abs{z - z_0} &gt; r\)</span>.</p></li>
 </ul>
 <p>Furthermore, the power series, regarded as a series of functions in variable <span class="math notranslate nohighlight">\(z\)</span>, converges uniformly on any compact subset <span class="math notranslate nohighlight">\(K\)</span> interior to the disk of convergence.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. (Proof of 1 and 2) Applying the root test (<a class="reference internal" href="../Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html#thm:55">Theorem 2.12</a>), we find</p>
 <div class="math notranslate nohighlight">
@@ -754,7 +772,7 @@ M_n = \abs{a_n}\abs{p - z_0}^n
 \end{align*}\]</div>
 <p>This completes the proof.</p>
 </div>
-<div class="section" id="derivatives-of-power-series">
+<section id="derivatives-of-power-series">
 <h2><span class="section-number">7.4.1. </span>Derivatives of Power Series<a class="headerlink" href="#derivatives-of-power-series" title="Permalink to this headline">#</a></h2>
 <p>In fact, derivatives of the power series <span class="math notranslate nohighlight">\(f(z) = \sum a_n (z - z_0)^n\)</span> exist throughout its disk of convergence. To show <span class="math notranslate nohighlight">\(f^\prime(z_1)\)</span> exists, we need to consider the fraction</p>
 <div class="math notranslate nohighlight">
@@ -762,7 +780,7 @@ M_n = \abs{a_n}\abs{p - z_0}^n
 <p>The difficulty is that <span class="math notranslate nohighlight">\(f\)</span> consists of terms in powers of <span class="math notranslate nohighlight">\(z - z_0\)</span> while the denominator is <span class="math notranslate nohighlight">\(z - z_1\)</span>. What if we can rewrite <span class="math notranslate nohighlight">\(f\)</span> by expanding it about <span class="math notranslate nohighlight">\(z_1\)</span>? Indeed, we are allowed to do so, as stated in the following theorem.</p>
 <div class="proof theorem admonition" id="thm:63">
 <p class="admonition-title"><span class="caption-number">Theorem 7.9 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose the series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n (z - z_0)^n\)</span> converges (absolutely) for <span class="math notranslate nohighlight">\(z \in B_R(z_0)\)</span>. Define</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -778,11 +796,13 @@ f(z) = \sum_{k=0}^\infty b_k (z - z_1)^k
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 b_k = \sum_{n=k}^\infty\binom{n}{k} a_n (z_1 - z_0)^{n-k}\end{align*}\]</div>
-</div>
-</div><div class="figure align-default" id="fig-13">
+</section>
+</div><figure class="align-default" id="fig-13">
 <img alt="../_images/domain-001.png" src="../_images/domain-001.png" />
-<p class="caption"><span class="caption-number">Fig. 7.2 </span><span class="caption-text">Domains of power series expansions about different points.</span><a class="headerlink" href="#fig-13" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 7.2 </span><span class="caption-text">Domains of power series expansions about different points.</span><a class="headerlink" href="#fig-13" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <div class="proof admonition" id="proof">
 <p>Proof. Since <span class="math notranslate nohighlight">\(S\)</span> is open, we can find a neighborhood <span class="math notranslate nohighlight">\(B_r(z_1)\)</span> contained in <span class="math notranslate nohighlight">\(S\)</span>. Let <span class="math notranslate nohighlight">\(z \in B_r(z_1)\)</span>. Expanding the expression <span class="math notranslate nohighlight">\((z-z_0)^n = [(z_1 - z_0) + (z  - z_1)]^n\)</span> in <span class="math notranslate nohighlight">\(f(z)\)</span> using the binomial theorem, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-126">
@@ -861,7 +881,7 @@ w \in B_r(z_1) \subset S \subset B_R(z_0)
 </div>
 <div class="proof theorem admonition" id="thm:64">
 <p class="admonition-title"><span class="caption-number">Theorem 7.10 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose the series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n (z - z_0)^n\)</span> converges (absolutely) for <span class="math notranslate nohighlight">\(z \in B_r(z_0)\)</span>. Define</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -875,7 +895,7 @@ f^\prime(z)
 = \sum_{n=1}^\infty n a_n (z - z_0)^{n-1},
 \quad z \in B_r(z_0)
 \end{align}\]</div>
-</div>
+</section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Note that the power series expansions of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(f^\prime\)</span> have the same radius of convergence since</p>
@@ -926,12 +946,12 @@ f^{(k)}(z_0) = n! a_k
 a_k = \frac{f^{(k)}(z_0)}{n!},
 \quad\forall k \in\N\end{align*}\]</div>
 <p>This tells us that if a function <span class="math notranslate nohighlight">\(f\)</span> has a power series expansion, then each coefficient <span class="math notranslate nohighlight">\(a_k\)</span> is determined. In other words, the power series expansion of a function is <em>unique</em>.</p>
-</div>
-<div class="section" id="multiplication-of-power-series">
+</section>
+<section id="multiplication-of-power-series">
 <h2><span class="section-number">7.4.2. </span>Multiplication of Power Series<a class="headerlink" href="#multiplication-of-power-series" title="Permalink to this headline">#</a></h2>
 <div class="proof theorem admonition" id="theorem-3">
 <p class="admonition-title"><span class="caption-number">Theorem 7.11 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> both have power series expansions about the origin, which are given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -955,7 +975,7 @@ f(z)g(z)
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 c_n = \sum_{k=0}^n a_{n-k} b_{k}\end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Both series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty a_n z^n\)</span> and <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty b_n z^n\)</span> converge absolutely for <span class="math notranslate nohighlight">\(z \in B_r(0) \cap B_R(0)\)</span> by <a class="reference internal" href="#thm:66">Theorem 7.8</a>. (In fact, we only need one of them to converge absolutely for <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html#thm:67">Theorem 2.20</a> to hold.) Hence, their Cauchy product converges by <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html#thm:67">Theorem 2.20</a>, and it is given by</p>
 <div class="math notranslate nohighlight">
@@ -966,8 +986,8 @@ f(z) g(z)
 \end{align*}\]</div>
 <p>This completes the proof.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -981,7 +1001,7 @@ f(z) g(z)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Sequences and Series of Functions"
         },
         predefinedOutput: true
@@ -1003,10 +1023,10 @@ f(z) g(z)
             <p class="prev-next-title"><span class="section-number">7.3. </span>Uniform Convergence and Differentiation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../references.html" title="next page">
+    <a class='right-next' id="next-link" href="../Transcendental%20Functions/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>Transcendental Functions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

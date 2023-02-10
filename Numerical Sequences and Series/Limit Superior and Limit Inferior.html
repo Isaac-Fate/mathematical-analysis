@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.2. Limit Superior and Limit Inferior &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -671,7 +689,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="limit-superior-and-limit-inferior">
+  <section class="tex2jax_ignore mathjax_ignore" id="limit-superior-and-limit-inferior">
 <span id="index-0"></span><h1><span class="section-number">2.2. </span>Limit Superior and Limit Inferior<a class="headerlink" href="#limit-superior-and-limit-inferior" title="Permalink to this headline">#</a></h1>
 <p>Given a real-valued sequence <span class="math notranslate nohighlight">\(\{a_n\}\)</span>, sometimes the information about the upper and lower bounds of the <em>entire</em> sequence, if they exist, may not be useful for we are often interested in the <strong>tail</strong> of the sequence, which is simply the portion of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> after a few indices. To be  specific, the <span class="math notranslate nohighlight">\(n\)</span>-th tail of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is defined by <span class="math notranslate nohighlight">\(\{a_{m+n-1}\}_{m \in \N^\ast}\)</span>, and is written as <span class="math notranslate nohighlight">\(\{a_m\}_{m \geq n}\)</span> in shorthand.</p>
 <p>If <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded, we can define two sequences of upper and lower bounds, <span class="math notranslate nohighlight">\(\{u_n\}\)</span> and <span class="math notranslate nohighlight">\(\{l_n\}\)</span>, of the tail <span class="math notranslate nohighlight">\(\{a_m\}_{m \geq n}\)</span> by</p>
@@ -685,7 +703,7 @@ l_n = \inf_{m \geq n} a_m,
 <p>At a first glance, we observe that <span class="math notranslate nohighlight">\(\{u_n\}\)</span> is decreasing and <span class="math notranslate nohighlight">\(\{l_n\}\)</span> is increasing, which we shall prove in the next lemma.</p>
 <div class="proof lemma admonition" id="lem:5">
 <p class="admonition-title"><span class="caption-number">Lemma 2.1 </span></p>
-<div class="lemma-content section" id="proof-content">
+<section class="lemma-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of real numbers.</p>
 <ul class="simple">
 <li><p>➀ If <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded above, for each integer <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span> we can define</p></li>
@@ -703,7 +721,7 @@ u_n = \sup_{m \geq n} a_m,
 l_n = \inf_{m \geq n} a_m,
 \quad n \in\N^\ast\end{align*}\]</div>
 <p>The sequence <span class="math notranslate nohighlight">\(\{l_n\}\)</span> is increasing.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. We only prove 1. For every <span class="math notranslate nohighlight">\(m \in \N^\ast\)</span> with <span class="math notranslate nohighlight">\(m \geq n+1\)</span>, it is clear</p>
 <div class="math notranslate nohighlight">
@@ -724,19 +742,19 @@ a_m \leq u_n
 u_{n}\geq u_{n+1}\quad\forall n \in\N^\ast\end{align*}\]</div>
 <p>Hence, <span class="math notranslate nohighlight">\(\{u_n\}\)</span> is decreasing.</p>
 </div>
-<div class="section" id="definition">
+<section id="definition">
 <h2><span class="section-number">2.2.1. </span>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
 <p>By <a class="reference internal" href="Monotonic%20Sequences%20of%20Real%20Numbers.html#thm:57">Theorem 2.1</a>, we know that the limits of <span class="math notranslate nohighlight">\(\{u_n\}\)</span> and <span class="math notranslate nohighlight">\(\{l_n\}\)</span> always exist (as finite or infinite numbers). This gives rise to the definitions of limit superior as well as limit inferior. We also take into consideration the cases where <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is not bounded.</p>
 <div class="proof definition admonition" id="definition-1">
 <p class="admonition-title"><span class="caption-number">Definition 2.1 </span></p>
-<div class="definition-content section" id="proof-content">
+<section class="definition-content" id="proof-content">
 <p id="index-1">Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of real numbers. The <strong>limit superior</strong> of <span class="math notranslate nohighlight">\(\{a_n\}\)</span>, denoted by <span class="math notranslate nohighlight">\(\limsup_{n \to \infty} a_n\)</span>, is defined as follows:</p>
 <ul class="simple">
 <li><p>➀ <span class="math notranslate nohighlight">\(\limsup_{n \to \infty} a_n := \infty\)</span> if <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is not bounded above, and</p></li>
 <li><p>➁ <span class="math notranslate nohighlight">\(\limsup_{n \to \infty} a_n := \lim_{n \to \infty} u_n\)</span> if <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded above where <span class="math notranslate nohighlight">\(u_n = \sup_{m \geq n} a_m\)</span>.</p></li>
 </ul>
 <p id="index-2">The <strong>limit inferior</strong> of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is denoted by <span class="math notranslate nohighlight">\(\liminf_{n \to \infty} a_n\)</span> and is defined similarly.</p>
-</div>
+</section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The notation <span class="math notranslate nohighlight">\(\limsup\)</span> consists of two parts, the limit symbol and the supremum symbol. Indeed, as we can see from the definition, this notation arises naturally for we can write</p>
@@ -748,16 +766,18 @@ u_{n}\geq u_{n+1}\quad\forall n \in\N^\ast\end{align*}\]</div>
 </div>
 <div class="proof example admonition" id="example-2">
 <p class="admonition-title"><span class="caption-number">Example 2.1 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 a_n = \brk{1 + \frac{10}{n}}\sin\frac{n \pi}{32}\end{align*}\]</div>
 <p>We claim that the limit superior and limit inferior of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> are <span class="math notranslate nohighlight">\(1\)</span> and <span class="math notranslate nohighlight">\(-1\)</span>, respectively. See <a class="reference internal" href="#fig-12"><span class="std std-numref">Fig. 2.1</span></a>.</p>
-<div class="figure align-default" id="fig-12">
+<figure class="align-default" id="fig-12">
 <img alt="../_images/limsup-liminf.png" src="../_images/limsup-liminf.png" />
-<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Limit superior and limit inferior of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> where <span class="math notranslate nohighlight">\(a_n = \brk{1 + \frac{10}{n}} \sin \frac{n \pi}{32}\)</span>.</span><a class="headerlink" href="#fig-12" title="Permalink to this image">#</a></p>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Limit superior and limit inferior of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> where <span class="math notranslate nohighlight">\(a_n = \brk{1 + \frac{10}{n}} \sin \frac{n \pi}{32}\)</span>.</span><a class="headerlink" href="#fig-12" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>Now, we show that the values of limit superior and limit inferior are indeed as claimed. Note that for any given integer <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span>, we can choose an integer <span class="math notranslate nohighlight">\(k\)</span> such that <span class="math notranslate nohighlight">\(16 + 64k \geq n\)</span>. Let <span class="math notranslate nohighlight">\(m = 16 + 64k\)</span>. We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -797,11 +817,11 @@ u_n = \sup_{m \geq n} a_m
 = \inf_{n \in \N^\ast} u_n = 1
 \end{align*}\]</div>
 <p>The proof of <span class="math notranslate nohighlight">\(\liminf a_n = -1\)</span> is similar and is left as an exercise.</p>
-</div>
+</section>
 </div><p>When the limit superior/inferior of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is finite, then we have the following equivalent conditions, which may be helpful in proofs.</p>
 <div class="proof theorem admonition" id="thm:58">
 <p class="admonition-title"><span class="caption-number">Theorem 2.2 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of real numbers. Suppose there exists a (finite) number <span class="math notranslate nohighlight">\(u\)</span> satisfying the following two conditions:</p>
 <ul class="simple">
 <li><p>➀ For every <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists an integer <span class="math notranslate nohighlight">\(N\)</span> such that</p></li>
@@ -817,7 +837,7 @@ a_n &lt; u + \varepsilon\quad\forall n \geq N
 \[\begin{align*}
 a_N &gt; u - \varepsilon\end{align*}\]</div>
 <p>Then <span class="math notranslate nohighlight">\(u\)</span> is the limit superior of <span class="math notranslate nohighlight">\(\{a_n\}\)</span>, i.e., <span class="math notranslate nohighlight">\(u = \limsup a_n\)</span>. Conversely, if <span class="math notranslate nohighlight">\(u = \limsup a_n\)</span> is a finite number, then it satisfies the above conditions. An analogous result exists concerning the limit inferior of <span class="math notranslate nohighlight">\(\{a_n\}\)</span>.</p>
-</div>
+</section>
 </div><p>Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, the first condition says <span class="math notranslate nohighlight">\(u+\varepsilon\)</span> is an upper bound for some <span class="math notranslate nohighlight">\(N\)</span>-th tail of <span class="math notranslate nohighlight">\(\{a_n\}\)</span>. In other words, all the terms of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> will eventually fall below the number <span class="math notranslate nohighlight">\(u + \varepsilon\)</span>. While the second condition says there are <em>infinitely</em> many terms of <span class="math notranslate nohighlight">\(\{a_n\}\)</span> that exceed <span class="math notranslate nohighlight">\(u - \varepsilon\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -910,18 +930,18 @@ a_N &gt; \sup_{n \geq m} a_n - \varepsilon\end{align}\]</div>
 a_N &gt; u - \varepsilon\end{align*}\]</div>
 <p>which implies that <span class="math notranslate nohighlight">\(u\)</span> also satisfies condition 2. This completes the proof.</p>
 </div>
-</div>
-<div class="section" id="properties">
+</section>
+<section id="properties">
 <h2><span class="section-number">2.2.2. </span>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">#</a></h2>
 <div class="proof proposition admonition" id="pro:6">
 <p class="admonition-title"><span class="caption-number">Proposition 2.1 </span></p>
-<div class="proposition-content section" id="proof-content">
+<section class="proposition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of real numbers. Then</p>
 <ul class="simple">
 <li><p>➀ <span class="math notranslate nohighlight">\(\limsup a_n = -\infty \implies \liminf a_n = -\infty\)</span>, and</p></li>
 <li><p>➁ <span class="math notranslate nohighlight">\(\{a_n\}\)</span> diverges to <span class="math notranslate nohighlight">\(-\infty\)</span> if and only if <span class="math notranslate nohighlight">\(\limsup a_n = \liminf a_n = -\infty\)</span>.</p></li>
 </ul>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. (Proof of 1) Note that the fact that the limit superior is not positive infinity implicitly implies that <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is bounded above. Define</p>
 <div class="math notranslate nohighlight" id="equation-eq-122">
@@ -967,23 +987,23 @@ u_n \leq u_N \leq -M
 <p>As an analogous result, we also have the following proposition, the proof of which is similar and is left as an exercise.</p>
 <div class="proof proposition admonition" id="pro:4">
 <p class="admonition-title"><span class="caption-number">Proposition 2.2 </span></p>
-<div class="proposition-content section" id="proof-content">
+<section class="proposition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of real numbers. Then</p>
 <ul class="simple">
 <li><p>➀ <span class="math notranslate nohighlight">\(\liminf a_n = \infty \implies \limsup a_n = \infty\)</span>, and</p></li>
 <li><p>➁ <span class="math notranslate nohighlight">\(\{a_n\}\)</span> diverges to <span class="math notranslate nohighlight">\(\infty\)</span> if and only if <span class="math notranslate nohighlight">\(\limsup a_n = \liminf a_n = \infty\)</span>.</p></li>
 </ul>
-</div>
+</section>
 </div><div class="proof proposition admonition" id="pro:5">
 <p class="admonition-title"><span class="caption-number">Proposition 2.3 </span></p>
-<div class="proposition-content section" id="proof-content">
+<section class="proposition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of real numbers. Then <span class="math notranslate nohighlight">\(\{a_n\}\)</span> converges if and only if both limit superior and limit inferior are equal to a finite number. That is,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim a_n = a
 \iff\limsup a_n = \liminf a_n = a
 \end{align*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(a\)</span> is finite.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. (Sufficiency) Suppose that the limit superior and limit inferior are equal to a finite number, i.e.,  <span class="math notranslate nohighlight">\(\limsup a_n = \liminf a_n = a\)</span>. Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be chosen arbitrarily. Because <span class="math notranslate nohighlight">\(a\)</span> is the limit superior, by the first condition in <a class="reference internal" href="#thm:58">Theorem 2.2</a>, there exists <span class="math notranslate nohighlight">\(N_1 \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -1014,13 +1034,13 @@ a_n &gt; a - \varepsilon\quad\forall n \geq N_2
 <p>Like the limit and supremum/infimum, limit superior/inferior also preserves the order.</p>
 <div class="proof theorem admonition" id="thm:59">
 <p class="admonition-title"><span class="caption-number">Theorem 2.3 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(a_n \leq b_n \; \forall n \in \N^\ast\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\limsup a_n \leq\limsup b_n
 \quad\text{and}\quad\liminf a_n \leq\liminf b_n
 \end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. We only prove <span class="math notranslate nohighlight">\(\limsup a_n \leq \limsup b_n\)</span>.</p>
 <p>(Extreme Cases) If <span class="math notranslate nohighlight">\(\limsup a_n = -\infty\)</span> or <span class="math notranslate nohighlight">\(\limsup b_n = \infty\)</span>, then there is nothing to prove. If <span class="math notranslate nohighlight">\(\limsup a_n = \infty\)</span>, then <span class="math notranslate nohighlight">\(\{a_n\}\)</span> is not bounded above and nor is <span class="math notranslate nohighlight">\(\{b_n\}\)</span>, and hence <span class="math notranslate nohighlight">\(\limsup b_n = \infty\)</span>. Suppose <span class="math notranslate nohighlight">\(\limsup b_n = -\infty\)</span>, then <span class="math notranslate nohighlight">\(\lim b_n = -\infty\)</span> by <a class="reference internal" href="#pro:6">Proposition 2.1</a>. It follows that <span class="math notranslate nohighlight">\(\lim a_n = -\infty\)</span>, and hence <span class="math notranslate nohighlight">\(\limsup a_n = -\infty\)</span>.</p>
@@ -1039,14 +1059,14 @@ a_n &gt; a - \varepsilon\quad\forall n \geq N_2
 <p>The next theorem can be treated as the reciprocal rule of limit superior, which establishes the relation between <span class="math notranslate nohighlight">\(\limsup 1 / a_n\)</span> and <span class="math notranslate nohighlight">\(\liminf a_n\)</span>.</p>
 <div class="proof theorem admonition" id="thm:60">
 <p class="admonition-title"><span class="caption-number">Theorem 2.4 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of positive numbers, then</p>
 <ul class="simple">
 <li><p>➀ <span class="math notranslate nohighlight">\(\limsup \frac{1}{a_n} = 1 / \liminf a_n\)</span>, and</p></li>
 <li><p>➁ <span class="math notranslate nohighlight">\(\liminf \frac{1}{a_n} = 1 / \limsup a_n\)</span>.</p></li>
 </ul>
 <p>Note that, in the first equation, if <span class="math notranslate nohighlight">\(\liminf a_n = 0\)</span> then <span class="math notranslate nohighlight">\(\limsup 1 / a_n = \infty\)</span>, and <span class="math notranslate nohighlight">\(\limsup 1 / a_n = 0\)</span> if <span class="math notranslate nohighlight">\(\liminf a_n = \infty\)</span>. A similar treatment also applies to the second equation.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. We only prove 1 since the second equation can be obtained by replacing <span class="math notranslate nohighlight">\(a_n\)</span> with <span class="math notranslate nohighlight">\(1 / a_n\)</span> in the first one.</p>
 <p>(Case 1: <span class="math notranslate nohighlight">\(\liminf a_n = 0\)</span>.) For every positive number <span class="math notranslate nohighlight">\(M &gt; 0\)</span>. By <a class="reference internal" href="#thm:58">Theorem 2.2</a>(the second condition for limit inferior), there exists <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
@@ -1091,8 +1111,8 @@ a_N &lt; l + \varepsilon_2
 = \frac{1}{l} - \varepsilon\end{align}\]</div>
 <p>Therefore, by <a class="reference internal" href="#thm:58">Theorem 2.2</a>, we may conclude <span class="math notranslate nohighlight">\(\limsup a_n = 1 / l = 1 / \liminf a_n\)</span> from <a class="reference internal" href="#equation-eq-123">(2.6)</a> and <a class="reference internal" href="#equation-eq-124">(2.7)</a>.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1106,7 +1126,7 @@ a_N &lt; l + \varepsilon_2
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Numerical Sequences and Series"
         },
         predefinedOutput: true

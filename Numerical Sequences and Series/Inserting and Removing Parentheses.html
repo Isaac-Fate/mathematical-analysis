@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.4. Inserting and Removing Parentheses &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,11 +642,11 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="inserting-and-removing-parentheses">
+  <section class="tex2jax_ignore mathjax_ignore" id="inserting-and-removing-parentheses">
 <h1><span class="section-number">2.4. </span>Inserting and Removing Parentheses<a class="headerlink" href="#inserting-and-removing-parentheses" title="Permalink to this headline">#</a></h1>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 2.2 </span></p>
-<div class="definition-content section" id="proof-content">
+<section class="definition-content" id="proof-content">
 <p>Given a series <span class="math notranslate nohighlight">\(\sum a_n\)</span>, we say the series  <span class="math notranslate nohighlight">\(\sum A_n\)</span> is obtained
 by inserting parentheses into  <span class="math notranslate nohighlight">\(\sum a_n\)</span>
 if there is a function <span class="math notranslate nohighlight">\(p: \N^\ast \to \N^\ast\)</span> satisfying</p>
@@ -642,15 +660,15 @@ n &gt; m \implies p(n) &gt; p(m)
 <li><p>➁ <span class="math notranslate nohighlight">\(A_n = a_{p(n-1)+1} + \cdots + a_{p(n)}\)</span> if <span class="math notranslate nohighlight">\(n \geq 2\)</span>.</p></li>
 </ul>
 <p>The function <span class="math notranslate nohighlight">\(p\)</span> is also referred to as the locations of parentheses.</p>
-</div>
+</section>
 </div><div class="proof theorem admonition" id="theorem-1">
 <p class="admonition-title"><span class="caption-number">Theorem 2.9 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\sum A_n\)</span> be a series obtained from <span class="math notranslate nohighlight">\(\sum a_n\)</span>
 by inserting parentheses.
 If <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges to sum <span class="math notranslate nohighlight">\(s\)</span>,
 then <span class="math notranslate nohighlight">\(\sum A_n\)</span> also converges to sum <span class="math notranslate nohighlight">\(s\)</span>.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges to <span class="math notranslate nohighlight">\(s\)</span>,
 there exists an integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
@@ -684,7 +702,7 @@ p(n) \geq n
 We have  <span class="math notranslate nohighlight">\(p(k+1) &gt; p(k) \geq k\)</span> by the definition.
 Therefore, we must have  <span class="math notranslate nohighlight">\(p(k+1) \geq k+1\)</span>.</p>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -698,7 +716,7 @@ Therefore, we must have  <span class="math notranslate nohighlight">\(p(k+1) \ge
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Numerical Sequences and Series"
         },
         predefinedOutput: true

@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.10. Iterated Series &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,7 +642,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="iterated-series">
+  <section class="tex2jax_ignore mathjax_ignore" id="iterated-series">
 <h1><span class="section-number">2.10. </span>Iterated Series<a class="headerlink" href="#iterated-series" title="Permalink to this headline">#</a></h1>
 <p>In practice, it is very common to encounter situations where interchanging the order of summations of a double series will make the computation much easier. That is, sometimes we favor the right-hand side over the left-hand side in <a class="reference internal" href="#equation-eq-125">(2.14)</a>.</p>
 <div class="math notranslate nohighlight" id="equation-eq-125">
@@ -633,7 +651,7 @@ title="Print to PDF"
 <p>We state a sufficient condition in the following theorem so that <a class="reference internal" href="#equation-eq-125">(2.14)</a> is valid.</p>
 <div class="proof theorem admonition" id="thm:61">
 <p class="admonition-title"><span class="caption-number">Theorem 2.19 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{a_{m,n}\}\)</span> be a double sequence with complex terms. If</p>
 <ul class="simple">
 <li><p>⒜ <span class="math notranslate nohighlight">\(\sum_{n=1}^\infty a_{m,n}\)</span> converges absolutely for each <span class="math notranslate nohighlight">\(m\)</span>, and</p></li>
@@ -649,7 +667,7 @@ title="Print to PDF"
 \[\begin{align*}\sum_{m=1}^\infty\sum_{n=1}^\infty a_{m,n}
 = \sum_{n=1}^\infty\sum_{m=1}^\infty a_{m,n}
 = \sum_{m, n} a_{m,n}\end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. (Proof of 1) Let <span class="math notranslate nohighlight">\(g\)</span> be an arrangement of <span class="math notranslate nohighlight">\(\{ a_{m,n} \}\)</span> into <span class="math notranslate nohighlight">\(\{b_k\}\)</span>. For any given <span class="math notranslate nohighlight">\(K \in \N^\ast\)</span>, we have</p>
 <div class="math notranslate nohighlight">
@@ -657,7 +675,7 @@ title="Print to PDF"
 <p>where <span class="math notranslate nohighlight">\(M = \max \{m_1, \ldots, m_K\}\)</span> and <span class="math notranslate nohighlight">\(N = \max \{n_1, \ldots, n_K\}\)</span> where <span class="math notranslate nohighlight">\(g(k) = (m_k, n_k) \; \forall k = 1, \ldots, K\)</span>. This implies that the sequence of partial sums of <span class="math notranslate nohighlight">\(\sum \abs{b_k}\)</span> is bounded above, which further implies <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely. And then by <a class="reference internal" href="Rearrangement%20Theorem%20for%20Double%20Series.html#lem:4">Lemma 2.2</a>, the double series <span class="math notranslate nohighlight">\(\sum_{m,n} a_{m,n}\)</span> also converges absolutely.</p>
 <p>(Proof of 2 and 3) The last two statements follow directly from <a class="reference internal" href="Rearrangement%20Theorem%20for%20Double%20Series.html#thm:62">Theorem 2.18</a>.</p>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -671,7 +689,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Numerical Sequences and Series"
         },
         predefinedOutput: true

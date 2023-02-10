@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>7.3. Uniform Convergence and Differentiation &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,7 +642,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="uniform-convergence-and-differentiation">
+  <section class="tex2jax_ignore mathjax_ignore" id="uniform-convergence-and-differentiation">
 <h1><span class="section-number">7.3. </span>Uniform Convergence and Differentiation<a class="headerlink" href="#uniform-convergence-and-differentiation" title="Permalink to this headline">#</a></h1>
 <p>In this section, we study the conditions that allow us to swap the limit and derivative symbols:</p>
 <div class="math notranslate nohighlight" id="equation-eq-104">
@@ -633,7 +651,7 @@ title="Print to PDF"
 <p>However, assuming <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span> is not sufficient to guarantee that <a class="reference internal" href="#equation-eq-104">(7.6)</a> holds. The following is an example.</p>
 <div class="proof example admonition" id="example-0">
 <p class="admonition-title"><span class="caption-number">Example 7.3 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -652,14 +670,16 @@ M_n = \sup_{x \in \R}\abs{f_n(x) - f(x)}
 f^\prime_n(x) = \sqrt{n}\cos nx
 \end{align*}\]</div>
 <p>We note that the limit of <span class="math notranslate nohighlight">\(f^\prime_n(x)\)</span> will not exist as a finite number for most of <span class="math notranslate nohighlight">\(x\)</span>s as <span class="math notranslate nohighlight">\(n \to \infty\)</span>. In particular, <span class="math notranslate nohighlight">\(f^\prime_n(0) = \sqrt{n}\)</span> and hence <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f^\prime_n(0) = \infty\)</span>. A plot of <span class="math notranslate nohighlight">\(f_n\)</span> and <span class="math notranslate nohighlight">\(f^\prime_n\)</span> is shown in <a class="reference internal" href="#fig-11"><span class="std std-numref">Fig. 7.1</span></a>.</p>
-<div class="figure align-default" id="fig-11">
+<figure class="align-default" id="fig-11">
 <img alt="../_images/graph-010.png" src="../_images/graph-010.png" />
-<p class="caption"><span class="caption-number">Fig. 7.1 </span><span class="caption-text">Left: <span class="math notranslate nohighlight">\(f_n(x) = (\sin nx) / \sqrt{n}\)</span>. Right: <span class="math notranslate nohighlight">\(f^\prime_n(x)\)</span>.</span><a class="headerlink" href="#fig-11" title="Permalink to this image">#</a></p>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 7.1 </span><span class="caption-text">Left: <span class="math notranslate nohighlight">\(f_n(x) = (\sin nx) / \sqrt{n}\)</span>. Right: <span class="math notranslate nohighlight">\(f^\prime_n(x)\)</span>.</span><a class="headerlink" href="#fig-11" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </div><div class="proof theorem admonition" id="thm:44">
 <p class="admonition-title"><span class="caption-number">Theorem 7.6 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{f_n\}\)</span> be a sequence of real-valued functions each of which has a finite derivative at every point in <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose there exists a point <span class="math notranslate nohighlight">\(x_0 \in (a, b)\)</span> such that the numerical sequence <span class="math notranslate nohighlight">\(\{f_n(x_0)\}\)</span> converges. Suppose further that there exists a function <span class="math notranslate nohighlight">\(g\)</span> such that <span class="math notranslate nohighlight">\(f^\prime_n \to g\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. Then</p>
 <ul class="simple">
 <li><p>➀ there exists a function <span class="math notranslate nohighlight">\(f\)</span> such that <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, and</p></li>
@@ -669,7 +689,7 @@ f^\prime_n(x) = \sqrt{n}\cos nx
 <div class="math notranslate nohighlight">
 \[\begin{align*}\odvs{\lim_{n \to \infty} f_n(x)}{x}
 = \lim_{n \to \infty}\odvs{f_n(x)}{x}\end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. We first show that <span class="math notranslate nohighlight">\(\{f_n\}\)</span> converges uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(\{f_n(x_0)\}\)</span> converges, by Cauchy’s criterion for sequences,</p>
 <div class="math notranslate nohighlight" id="equation-eq-101">
@@ -759,7 +779,7 @@ f^\prime(c) = \lim_{n \to \infty} f^\prime_n(c) = g(c)
 <p>The following theorem is another version of <a class="reference internal" href="#thm:44">Theorem 7.6</a> in terms of a series of functions <span class="math notranslate nohighlight">\(\sum f_n\)</span>.</p>
 <div class="proof theorem admonition" id="thm:45">
 <p class="admonition-title"><span class="caption-number">Theorem 7.7 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\sum f_n\)</span> be a series of real-valued functions each of which has a finite derivative at every point in <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose there exists a point <span class="math notranslate nohighlight">\(x_0 \in (a, b)\)</span> such that the numerical series <span class="math notranslate nohighlight">\(\sum f_n(x_0)\)</span> converges. Suppose further that there exists a function <span class="math notranslate nohighlight">\(g\)</span> such that <span class="math notranslate nohighlight">\(\sum f^\prime_n \to g\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>. Then</p>
 <ul class="simple">
 <li><p>➀ there exists a function <span class="math notranslate nohighlight">\(f\)</span> such that <span class="math notranslate nohighlight">\(\sum f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\((a, b)\)</span>, and</p></li>
@@ -769,12 +789,12 @@ f^\prime(c) = \lim_{n \to \infty} f^\prime_n(c) = g(c)
 <div class="math notranslate nohighlight" id="equation-eq-103">
 <span class="eqno">(7.9)<a class="headerlink" href="#equation-eq-103" title="Permalink to this equation">#</a></span>\[\begin{align}\odvs{\sum f_n(x)}{x}
 = \sum\odvs{f_n(x)}{x}\end{align}\]</div>
-</div>
+</section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p id="index-0">Equation <a class="reference internal" href="#equation-eq-103">(7.9)</a> is also known as <strong>term-by-term differentiation</strong>.</p>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -788,7 +808,7 @@ f^\prime(c) = \lim_{n \to \infty} f^\prime_n(c) = g(c)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Sequences and Series of Functions"
         },
         predefinedOutput: true

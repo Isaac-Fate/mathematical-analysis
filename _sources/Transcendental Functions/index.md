@@ -1,0 +1,4 @@
+# Transcendental Functions
+
+````{tableofcontents}
+````

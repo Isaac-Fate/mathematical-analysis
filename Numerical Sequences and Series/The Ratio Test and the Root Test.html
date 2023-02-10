@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.6. The Ratio Test and the Root Test &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,11 +642,11 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="the-ratio-test-and-the-root-test">
+  <section class="tex2jax_ignore mathjax_ignore" id="the-ratio-test-and-the-root-test">
 <h1><span class="section-number">2.6. </span>The Ratio Test and the Root Test<a class="headerlink" href="#the-ratio-test-and-the-root-test" title="Permalink to this headline">#</a></h1>
 <div class="proof theorem admonition" id="thm:54">
 <p class="admonition-title"><span class="caption-number">Theorem 2.11 </span> (Ratio Test)</p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Given a series <span class="math notranslate nohighlight">\(\sum a_n\)</span> with nonzero complex terms, let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -640,7 +658,7 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 <li><p>➁ <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges if <span class="math notranslate nohighlight">\(r &gt; 1\)</span>, and</p></li>
 <li><p>➂ the test is inclusive if <span class="math notranslate nohighlight">\(r \leq 1 \leq R\)</span>.</p></li>
 </ul>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. (Proof of 1) Choose a positive number <span class="math notranslate nohighlight">\(\varepsilon\)</span> such that <span class="math notranslate nohighlight">\(R + \varepsilon &lt; 1\)</span>. By the definition of limit superior, there exists an integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -679,7 +697,7 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 <p id="index-0">Whenever the ratio test is inclusive, one can always try the <strong>root test</strong> as we shall soon introduce. It also has a close connection with the power series and the concept of the radius of convergence, which we shall cover in <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Power%20Series.html"><span class="doc">Power Series</span></a>.</p>
 <div class="proof theorem admonition" id="thm:55">
 <p class="admonition-title"><span class="caption-number">Theorem 2.12 </span> (Root Test)</p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\sum a_n\)</span> be a series of complex numbers. Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\rho = \limsup_{n \to \infty}\sqrt[n]{\abs{a_n}}\end{align*}\]</div>
@@ -689,7 +707,7 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 <li><p>➁ <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges if <span class="math notranslate nohighlight">\(\rho &gt; 1\)</span>, and</p></li>
 <li><p>➂ the test is inclusive if <span class="math notranslate nohighlight">\(\rho = 1\)</span>.</p></li>
 </ul>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. (Proof of 1) Choose <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\rho + \varepsilon &lt; 1\)</span>. By the property of limit superior, there exists <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -714,7 +732,7 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 </div>
 <div class="proof example admonition" id="example-2">
 <p class="admonition-title"><span class="caption-number">Example 2.2 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
@@ -759,15 +777,15 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
 = \frac{1}{2} &lt; 1
 \end{align*}\]</div>
 <p>Therefore, <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely.</p>
-</div>
+</section>
 </div><p>From the above example, the reader may conjecture that the root test is somehow more powerful than the ratio test. This is indeed true as we will see in the next theorem.</p>
 <div class="proof theorem admonition" id="theorem-3">
 <p class="admonition-title"><span class="caption-number">Theorem 2.13 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of position numbers. We have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\liminf\frac{a_{n+1}}{a_n}\leq\liminf\sqrt[n]{a_n}\leq\limsup\sqrt[n]{a_n}\leq\limsup\frac{a_{n+1}}{a_n}\end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Note that the second inequality follows directly from <a class="reference internal" href="Limit%20Superior%20and%20Limit%20Inferior.html#thm:59">Theorem 2.3</a>. What remains to show are the first and the last inequalities. We only prove</p>
 <div class="math notranslate nohighlight">
@@ -801,7 +819,7 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
 <p>We will see in the following two examples that neither the ratio test nor the root test will be helpful.</p>
 <div class="proof example admonition" id="eg:7">
 <p class="admonition-title"><span class="caption-number">Example 2.3 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum a_n = \sum_{n=1}^\infty\frac{1}{n}\end{align*}\]</div>
@@ -822,10 +840,10 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
 = 1
 \end{align*}\]</div>
 <p>Hence, the root test also fails.</p>
-</div>
+</section>
 </div><div class="proof example admonition" id="eg:8">
 <p class="admonition-title"><span class="caption-number">Example 2.4 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum a_n = \sum_{n=1}^\infty\frac{1}{n^2}\end{align*}\]</div>
@@ -847,8 +865,8 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
 = 1
 \end{align*}\]</div>
 <p>Hence, the root test also fails.</p>
-</div>
-</div></div>
+</section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {
@@ -862,7 +880,7 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Numerical Sequences and Series"
         },
         predefinedOutput: true

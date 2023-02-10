@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>4.6. Taylor’s Theorem &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,7 +642,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="taylor-s-theorem">
+  <section class="tex2jax_ignore mathjax_ignore" id="taylor-s-theorem">
 <h1><span class="section-number">4.6. </span>Taylor’s Theorem<a class="headerlink" href="#taylor-s-theorem" title="Permalink to this headline">#</a></h1>
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(x = c\)</span>, then it can be approximated by</p>
 <div class="math notranslate nohighlight" id="equation-eq-19">
@@ -634,7 +652,7 @@ f(x) \approx f(c) + f^\prime(c)(x-c)
 <p>when <span class="math notranslate nohighlight">\(\abs{x-c}\)</span> is small. Geometrically, <span class="math notranslate nohighlight">\(f\)</span> is close to its tangent line at <span class="math notranslate nohighlight">\(x=c\)</span> near the point of tangency. Another way to look at <a class="reference internal" href="#equation-eq-19">(4.16)</a> is that <span class="math notranslate nohighlight">\(f\)</span> is approximated by a polynomial of degree one whose first-order derivative at <span class="math notranslate nohighlight">\(x=c\)</span> is exactly <span class="math notranslate nohighlight">\(f^\prime(c)\)</span>. And the value of this polynomial at <span class="math notranslate nohighlight">\(x=c\)</span> is <span class="math notranslate nohighlight">\(f(c)\)</span>, that is, its zeroth-order derivative is <span class="math notranslate nohighlight">\(f(c)\)</span>. We can extend this idea by approximating <span class="math notranslate nohighlight">\(f\)</span> with higher degree polynomials whose derivatives of all orders match with that of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x = c\)</span>.</p>
 <div class="proof example admonition" id="example-0">
 <p class="admonition-title"><span class="caption-number">Example 4.8 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>Suppose we know any order derivative of the function <span class="math notranslate nohighlight">\(f(x) = e^x\)</span> is itself. That is,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -652,11 +670,13 @@ p^{(k)}_n(0) = f^{(k)}(0)
 \quad\forall k = 0, 1, \ldots, n
 \end{align*}\]</div>
 <p>Hence, it is reasonable to approximate <span class="math notranslate nohighlight">\(f(x)\)</span> with <span class="math notranslate nohighlight">\(p_n(x)\)</span> near point <span class="math notranslate nohighlight">\(x = 0\)</span>. <a class="reference internal" href="#fig-7"><span class="std std-numref">Fig. 4.8</span></a> compares <span class="math notranslate nohighlight">\(f\)</span> with <span class="math notranslate nohighlight">\(p_n\)</span> with several choices of <span class="math notranslate nohighlight">\(n\)</span>.</p>
-<div class="figure align-default" id="fig-7">
+<figure class="align-default" id="fig-7">
 <img alt="../_images/graph-008.png" src="../_images/graph-008.png" />
-<p class="caption"><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Approximations of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x=0\)</span>.</span><a class="headerlink" href="#fig-7" title="Permalink to this image">#</a></p>
-</div>
-</div>
+<figcaption>
+<p><span class="caption-number">Fig. 4.8 </span><span class="caption-text">Approximations of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x=0\)</span>.</span><a class="headerlink" href="#fig-7" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
 </div><p>In general, a function <span class="math notranslate nohighlight">\(f\)</span> can be approximated by the polynomial</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{k=0}^{n-1}\frac{f^{(k)}(c)}{k}(x-c)^k
@@ -664,17 +684,17 @@ p^{(k)}_n(0) = f^{(k)}(0)
 <p id="index-0">at point <span class="math notranslate nohighlight">\(c\)</span> provided that <span class="math notranslate nohighlight">\(f\)</span> has up to <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative. The reason why we approximate <span class="math notranslate nohighlight">\(f\)</span> with a polynomial of <span class="math notranslate nohighlight">\(n\)</span> degree is that we have a remainder term, which makes use of the <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative. The remainder tells us how accurate the approximation is. The formal statement is described in the following theorem, the <strong>Taylor’s theorem</strong>.</p>
 <div class="proof theorem admonition" id="thm:16">
 <p class="admonition-title"><span class="caption-number">Theorem 4.16 </span> (Taylor)</p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be a function having <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span>, and suppose <span class="math notranslate nohighlight">\(f^{(n)}\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> be an interior point. Then for every <span class="math notranslate nohighlight">\(x \in[a, b]\)</span> other than <span class="math notranslate nohighlight">\(c\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-20">
 <span class="eqno">(4.17)<a class="headerlink" href="#equation-eq-20" title="Permalink to this equation">#</a></span>\[\begin{align}
 f(x) = \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-c)^{n+1}\end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\xi\)</span> is some number in between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(c\)</span>.</p>
-</div>
+</section>
 </div><p>This theorem can be obtained as an immediate corollary of the following extension of the mean value theorem.</p>
 <div class="proof theorem admonition" id="thm:17">
 <p class="admonition-title"><span class="caption-number">Theorem 4.17 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be two functions each having <span class="math notranslate nohighlight">\((n+1)\)</span>-th order derivative everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose that <span class="math notranslate nohighlight">\(f^{(n)}\)</span> and <span class="math notranslate nohighlight">\(g^{(n)}\)</span> are both continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> be an interior point. Then for every <span class="math notranslate nohighlight">\(x \in[a, b]\)</span> other than <span class="math notranslate nohighlight">\(c\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-21">
 <span class="eqno">(4.18)<a class="headerlink" href="#equation-eq-21" title="Permalink to this equation">#</a></span>\[\begin{align}\left[f(x) - \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k
@@ -682,10 +702,10 @@ f(x) = \sum_{k=0}^{n}\frac{f^{(k)}(c)}{k!}(x-c)^k + \frac{f^{(n+1)}(\xi)}{(n+1)!
 = f^{(n+1)}(\xi) \left[g(x) - \sum_{k=0}^{n}\frac{g^{(k)}(c)}{k!}(x-c)^k
 \right]\end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\xi\)</span> is some number in between <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(c\)</span>.</p>
-</div>
+</section>
 </div><div class="proof remark admonition" id="remark-3">
 <p class="admonition-title"><span class="caption-number">Remark 4.5 </span></p>
-<div class="remark-content section" id="proof-content">
+<section class="remark-content" id="proof-content">
 <p>Taking <span class="math notranslate nohighlight">\(g(x) = (x-c)^{n+1}\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -693,7 +713,7 @@ g^{(n+1)}(\xi) = (n+1)!
 \quad\text{and}\quad\sum_{k=0}^{n}\frac{g^{(k)}(c)}{k!}(x-c)^k = 0
 \end{align*}\]</div>
 <p>Then <a class="reference internal" href="#equation-eq-21">(4.18)</a> reduces to <a class="reference internal" href="#equation-eq-20">(4.17)</a>, and hence this theorem reduces to <a class="reference internal" href="#thm:16">Theorem 4.16</a>.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Define functions <span class="math notranslate nohighlight">\(F(t)\)</span> and <span class="math notranslate nohighlight">\(G(t)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> by</p>
 <div class="math notranslate nohighlight">
@@ -776,12 +796,14 @@ r_2(0.6) = \frac{8}{81} &lt; 0.1
 \[\begin{align*}\ln(0.6) \approx p_2(0.6) = (0.6-1) - \frac{1}{2}\times(0.6-1)^2 = -0.48
 \end{align*}\]</div>
 <p>We can also visualize the result in <a class="reference internal" href="#fig-8"><span class="std std-numref">Fig. 4.9</span></a>. As we can see, the approximated value is quite close to the true value. And the absolute error is actually much less than the required bound, <span class="math notranslate nohighlight">\(0.1\)</span>.</p>
-<div class="figure align-default" id="fig-8">
+<figure class="align-default" id="fig-8">
 <img alt="../_images/taylor-approx.png" src="../_images/taylor-approx.png" />
-<p class="caption"><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Approximation of <span class="math notranslate nohighlight">\(\ln(0.6)\)</span>.</span><a class="headerlink" href="#fig-8" title="Permalink to this image">#</a></p>
+<figcaption>
+<p><span class="caption-number">Fig. 4.9 </span><span class="caption-text">Approximation of <span class="math notranslate nohighlight">\(\ln(0.6)\)</span>.</span><a class="headerlink" href="#fig-8" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </div>
-</div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -795,7 +817,7 @@ r_2(0.6) = \frac{8}{81} &lt; 0.1
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Differentiation"
         },
         predefinedOutput: true

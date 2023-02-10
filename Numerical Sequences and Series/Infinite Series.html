@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>2.3. Infinite Series &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,43 +642,43 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="infinite-series">
+  <section class="tex2jax_ignore mathjax_ignore" id="infinite-series">
 <h1><span class="section-number">2.3. </span>Infinite Series<a class="headerlink" href="#infinite-series" title="Permalink to this headline">#</a></h1>
 <p>The next theorem tells us that we can add two convergent series term by term. And we can also multiply a convergent series by a constant.</p>
 <div class="proof theorem admonition" id="thm:48">
 <p class="admonition-title"><span class="caption-number">Theorem 2.5 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(\sum a_n\)</span> and <span class="math notranslate nohighlight">\(\sum b_n\)</span> are two convergent series, then the series <span class="math notranslate nohighlight">\(\sum (\alpha a_n + \beta b_n)\)</span> also converges where <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are constants. Furthermore, we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{n=1}^\infty(\alpha a_n + \beta b_n)
 = \alpha\sum_{n=1}^\infty a_n
 + \beta\sum_{n=1}^\infty b_n
 \end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
 <p id="index-0">Recall the convergence of a series <span class="math notranslate nohighlight">\(\sum a_n\)</span> is defined by the convergence of the sequence of its partial sums <span class="math notranslate nohighlight">\(\{s_n\}\)</span>. Hence, by interpreting Cauchy’s criterion for the sequence <span class="math notranslate nohighlight">\(\{s_n\}\)</span> in terms of sums of terms <span class="math notranslate nohighlight">\(a_n\)</span>s, we will obtain a version of <strong>Cauchy’s criterion</strong> for series.</p>
 <div class="proof theorem admonition" id="thm:53">
 <p class="admonition-title"><span class="caption-number">Theorem 2.6 </span> (Cauchy’s Criterion for Series)</p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>The series <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges if and only if for every <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists an integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{\sum_{k=1}^p a_{n+k}}
 = \abs{a_{n+1} + \cdots + a_{n+p}}
 &lt; \varepsilon\quad\forall n \geq N \;\forall p \in\N^\ast\end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof corollary admonition" id="cor:2">
 <p class="admonition-title"><span class="caption-number">Corollary 2.1 </span></p>
-<div class="corollary-content section" id="proof-content">
+<section class="corollary-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges, then the absolute value of its term tends to zero. That is,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{n \to \infty}\abs{a_n} = 0
 \end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof theorem admonition" id="thm:51">
 <p class="admonition-title"><span class="caption-number">Theorem 2.7 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>If series <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges, then</p>
 <ul class="simple">
 <li><p>➀ the set of its partial sums is bounded, that is,</p></li>
@@ -676,24 +694,24 @@ title="Print to PDF"
 \[\begin{align*}\abs{\sum_{k=m}^n a_k}\leq M
 \quad\forall m \in\N^\ast\;\forall n \geq m
 \end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
 <div class="proof theorem admonition" id="thm:56">
 <p class="admonition-title"><span class="caption-number">Theorem 2.8 </span> (Weierstrass M-Test)</p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{M_n\}\)</span> be a sequence of non=negative terms such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{f_n(x)}\leq M_n
 \quad\forall n \in\N^\ast\;\forall x \in S
 \end{align*}\]</div>
 <p>Then <span class="math notranslate nohighlight">\(\sum f_n(x)\)</span> converges uniformly on <span class="math notranslate nohighlight">\(S\)</span> if <span class="math notranslate nohighlight">\(\sum M_n\)</span> converges.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. TODO</p>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -707,7 +725,7 @@ title="Print to PDF"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Numerical Sequences and Series"
         },
         predefinedOutput: true

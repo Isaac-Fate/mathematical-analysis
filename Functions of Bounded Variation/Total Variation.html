@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>5.2. Total Variation &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,11 +642,11 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="total-variation">
+  <section class="tex2jax_ignore mathjax_ignore" id="total-variation">
 <h1><span class="section-number">5.2. </span>Total Variation<a class="headerlink" href="#total-variation" title="Permalink to this headline">#</a></h1>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 5.2 </span></p>
-<div class="definition-content section" id="proof-content">
+<section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>. The total variation of <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> is defined by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -636,14 +654,14 @@ V_a^b (f)
 := \sup_{P \in \mathcal{P}[a, b]} V(P, f)
 \end{align*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\mathcal{P}[a, b]\)</span> is the collection of all partitions on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
-</div>
+</section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We will sometimes write <span class="math notranslate nohighlight">\(V(f)\)</span> instead of <span class="math notranslate nohighlight">\(V_a^b (f)\)</span> to ease the notation if it does not confuse.</p>
 </div>
 <div class="proof theorem admonition" id="thm:33">
 <p class="admonition-title"><span class="caption-number">Theorem 5.3 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are each of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f \pm g\)</span> and <span class="math notranslate nohighlight">\(f g\)</span> are also of bounded variation. Moreover,</p>
 <div class="math notranslate nohighlight" id="equation-eq-77">
 <span class="eqno">(5.1)<a class="headerlink" href="#equation-eq-77" title="Permalink to this equation">#</a></span>\[\begin{align}
@@ -654,7 +672,7 @@ V(f \pm g) \leq V(f) + V(g)
 <span class="eqno">(5.2)<a class="headerlink" href="#equation-eq-78" title="Permalink to this equation">#</a></span>\[\begin{align}
 V(f g) &amp;\leq\sup_{x\in[a, b]}\abs{g(x)} V(f) + \sup_{x \in[a, b]}\abs{f(x)} V(g)
 \end{align}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. (Proof of <span class="math notranslate nohighlight">\(f \pm g\)</span> being of bounded variation) We have</p>
 <div class="math notranslate nohighlight">
@@ -684,7 +702,7 @@ g(x_k) \Delta f_k
 \end{align*}\end{split}\]</div>
 <p>Similarly, because <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are of bounded variation, <span class="math notranslate nohighlight">\(V(f)\)</span> and <span class="math notranslate nohighlight">\(V(g)\)</span> are finite. Moreover, by <a class="reference internal" href="Definition%20of%20Functions%20of%20Bounded%20Variation.html#thm:35">Theorem 5.1</a>, <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are bounded on <span class="math notranslate nohighlight">\([a, b]\)</span>, which implies <span class="math notranslate nohighlight">\(\sup\abs{f}, \sup\abs{g} &lt; \infty\)</span>. Hence, <span class="math notranslate nohighlight">\(V(P, f g)\)</span> is bounded above by a finite number for any partition, which implies <span class="math notranslate nohighlight">\(fg\)</span> is also of bounded variation, and <a class="reference internal" href="#equation-eq-78">(5.2)</a> holds.</p>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -698,7 +716,7 @@ g(x_k) \Delta f_k
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Functions of Bounded Variation"
         },
         predefinedOutput: true

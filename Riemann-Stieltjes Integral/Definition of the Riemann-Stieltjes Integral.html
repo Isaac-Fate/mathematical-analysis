@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>6.1. Definition of the Riemann-Stieltjes Integral &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,11 +642,11 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="definition-of-the-riemann-stieltjes-integral">
+  <section class="tex2jax_ignore mathjax_ignore" id="definition-of-the-riemann-stieltjes-integral">
 <h1><span class="section-number">6.1. </span>Definition of the Riemann-Stieltjes Integral<a class="headerlink" href="#definition-of-the-riemann-stieltjes-integral" title="Permalink to this headline">#</a></h1>
 <div class="proof definition admonition" id="def:1">
 <p class="admonition-title"><span class="caption-number">Definition 6.1 </span></p>
-<div class="definition-content section" id="proof-content">
+<section class="definition-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> are <strong>real-valued bounded</strong> functions on <span class="math notranslate nohighlight">\([a,b]\)</span>. Let <span class="math notranslate nohighlight">\(P = \left\{x_0, x_1, \ldots, x_n\right \}\)</span> be a partition on <span class="math notranslate nohighlight">\([a, b]\)</span> and <span class="math notranslate nohighlight">\(t_k\)</span> a point in the sub-interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>. A sum of the form</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -641,7 +659,7 @@ S(P,f,\alpha)
 <p>for any refinement <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> and for any choice of points <span class="math notranslate nohighlight">\(t_k\)</span>. (Note that <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span> depends on <span class="math notranslate nohighlight">\(t_k\)</span>.) Moreover, the number <span class="math notranslate nohighlight">\(A\)</span> is <strong>uniquely</strong> determined if it exists (this is proved in <a class="reference internal" href="#pro:3">Proposition 6.1</a>) and is denoted by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_a^b f \;\mathrm{d}\alpha\end{align*}\]</div>
-</div>
+</section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To ease the nation, we will sometimes write</p>
@@ -653,9 +671,9 @@ S(P,f,\alpha)
 <p>Recall <a class="reference internal" href="#def:1">Definition 6.1</a> only requires the existence of <span class="math notranslate nohighlight">\(A\)</span>. We now show that such number <span class="math notranslate nohighlight">\(A\)</span> is also unique.</p>
 <div class="proof proposition admonition" id="pro:3">
 <p class="admonition-title"><span class="caption-number">Proposition 6.1 </span></p>
-<div class="proposition-content section" id="proof-content">
+<section class="proposition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span> be as in <a class="reference internal" href="#def:1">Definition 6.1</a>. If <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(A^\prime\)</span> both satisfy the property stated in <a class="reference internal" href="#def:1">Definition 6.1</a>, then <span class="math notranslate nohighlight">\(A = A^\prime\)</span>.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, by the property in <a class="reference internal" href="#def:1">Definition 6.1</a>, there exist partitions <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(P_2\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -675,7 +693,7 @@ S(P,f,\alpha)
 = \varepsilon\end{align*}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> is arbitrary, we must have <span class="math notranslate nohighlight">\(A = A^\prime\)</span>.</p>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -689,7 +707,7 @@ S(P,f,\alpha)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Riemann-Stieltjes Integral"
         },
         predefinedOutput: true

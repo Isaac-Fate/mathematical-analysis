@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>7.1. Uniform Convergence &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,22 +642,22 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="uniform-convergence">
+  <section class="tex2jax_ignore mathjax_ignore" id="uniform-convergence">
 <span id="index-0"></span><h1><span class="section-number">7.1. </span>Uniform Convergence<a class="headerlink" href="#uniform-convergence" title="Permalink to this headline">#</a></h1>
 <p>As mentioned, only assuming <span class="math notranslate nohighlight">\(f_n(x) \to f(x)\)</span> for each <span class="math notranslate nohighlight">\(x \in S\)</span> is not enough to preserve certain properties of <span class="math notranslate nohighlight">\(f_n\)</span>. Hence, we need a stronger version of convergence than pointwise convergence. The condition <span class="math notranslate nohighlight">\(\lim_{n \to \infty} f_n(x) = f(x)\)</span> says at a given point <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(f_n(x)\)</span> will get closer and closer to <span class="math notranslate nohighlight">\(f(x)\)</span>. Chances are that <span class="math notranslate nohighlight">\(f_n(x_1)\)</span> and <span class="math notranslate nohighlight">\(f_n(x_2)\)</span> may not converge to <span class="math notranslate nohighlight">\(f(x_1)\)</span> and <span class="math notranslate nohighlight">\(f(x_2)\)</span> at the same speed. Now, we want <span class="math notranslate nohighlight">\(f_n(x)\)</span> to get close to <span class="math notranslate nohighlight">\(f(x)\)</span><em>uniformly</em> at the same pace for all <span class="math notranslate nohighlight">\(x \in S\)</span>. This gives rise to the definition of <strong>uniform convergence</strong>.</p>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 7.1 </span></p>
-<div class="definition-content section" id="proof-content">
+<section class="definition-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(S\)</span> be a subset of a metric space. A sequence of functions <span class="math notranslate nohighlight">\(\{f_n\}\)</span> is said to converge to <span class="math notranslate nohighlight">\(f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span> if for every <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists an integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{f_n(x) - f(x)} &lt; \varepsilon\quad\forall n \geq N \;\forall x \in S
 \end{align*}\]</div>
 <p>Symbolically, we write <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span>.</p>
-</div>
+</section>
 </div><p>The next theorem is useful to check whether <span class="math notranslate nohighlight">\(\{f_n\}\)</span> converges uniformly.</p>
 <div class="proof theorem admonition" id="thm:46">
 <p class="admonition-title"><span class="caption-number">Theorem 7.1 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f_n \to f\)</span> on <span class="math notranslate nohighlight">\(S\)</span>. Then <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span> if and only if</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -649,7 +667,7 @@ M_n = \sup_{x \in S}\abs{f_n(x) - f(x)} &lt; \infty\quad\forall n \geq N_0
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{n \to \infty} M_n = 0
 \end{align*}\]</div>
-</div>
+</section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To be clear, <span class="math notranslate nohighlight">\(M_n\)</span> is only defined when <span class="math notranslate nohighlight">\(n \geq N_0\)</span> for it has to be a real number.</p>
@@ -674,7 +692,7 @@ M_n
 </div>
 <div class="proof example admonition" id="example-2">
 <p class="admonition-title"><span class="caption-number">Example 7.1 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -687,10 +705,10 @@ f_n(x) = \frac{1}{nx},
 = \sup_{x \in (0, 1)}\frac{1}{nx}
 = \infty\end{align*}\]</div>
 <p>for every <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span>. Therefore, by <a class="reference internal" href="#thm:46">Theorem 7.1</a>, the convergence is not uniform.</p>
-</div>
+</section>
 </div><div class="proof example admonition" id="example-3">
 <p class="admonition-title"><span class="caption-number">Example 7.2 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -703,7 +721,7 @@ f_n(x) = \frac{1}{x} + \frac{1}{n},
 M_n = \sup_{x \in (0, 1)}\abs{f_n(x) - f(x)}
 = \frac{1}{n}\end{align*}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(\lim_{n \to \infty} M_n = 0\)</span>, <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\((0, 1)\)</span>.</p>
-</div>
+</section>
 </div><p id="index-1">A sequence of functions <span class="math notranslate nohighlight">\(\{f_n\}\)</span> is said to be <strong>uniformly bounded</strong> on <span class="math notranslate nohighlight">\(S\)</span> if there exists a positive constant <span class="math notranslate nohighlight">\(M &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{f_n(x)}\leq M
@@ -711,23 +729,23 @@ M_n = \sup_{x \in (0, 1)}\abs{f_n(x) - f(x)}
 \end{align*}\]</div>
 <div class="proof theorem admonition" id="theorem-4">
 <p class="admonition-title"><span class="caption-number">Theorem 7.2 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\{f_n\}\)</span> is uniformly bounded on <span class="math notranslate nohighlight">\(S\)</span>. Then <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span> if and only if</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{n \to \infty}\norm{f_n - f} = 0
 \end{align*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\norm{\cdot}\)</span> is the uniform norm on the set of bounded functions on <span class="math notranslate nohighlight">\(S\)</span>, <span class="math notranslate nohighlight">\(\mathcal{B}(S)\)</span>.</p>
-</div>
+</section>
 </div><p>Similar to the situation we encountered when dealing with numerical sequences and series, sometimes we want to prove that <span class="math notranslate nohighlight">\(\{f_n\}\)</span> converges uniformly without knowing its limit.</p>
 <div class="proof theorem admonition" id="thm:42">
 <p class="admonition-title"><span class="caption-number">Theorem 7.3 </span> (Cauchy’s Criterion)</p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>A sequence of functions <span class="math notranslate nohighlight">\(\{f_n\}\)</span> converges uniformly on <span class="math notranslate nohighlight">\(S\)</span> if and only if for any <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists <span class="math notranslate nohighlight">\(N \in N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight" id="index-2">
 \[\begin{align*}\abs{f_m(x) - f_n(x)} &lt; \varepsilon\quad\forall m, n \geq N \;\forall x \in S
 \end{align*}\]</div>
 <p>We say <span class="math notranslate nohighlight">\(\{f_n\}\)</span> satisfies <strong>Cauchy’s criterion</strong> if the above condition is met.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. (Sufficiency) Suppose <span class="math notranslate nohighlight">\(\{f_n\}\)</span> satisfies Cauchy’s criterion. Fix <span class="math notranslate nohighlight">\(x \in S\)</span>, we know that the numerical sequence <span class="math notranslate nohighlight">\(\{f_n(x)\}\)</span> is a Cauchy sequence. Hence, it has a limit, and we denote this limit by <span class="math notranslate nohighlight">\(f(x)\)</span>. In this way, we can define a function <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\(S\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -765,7 +783,7 @@ f(x) = \lim_{n \to \infty} f_n(x)
 \end{align*}\]</div>
 <p>Hence, Cauchy’s criterion is satisfied.</p>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -779,7 +797,7 @@ f(x) = \lim_{n \to \infty} f_n(x)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Sequences and Series of Functions"
         },
         predefinedOutput: true

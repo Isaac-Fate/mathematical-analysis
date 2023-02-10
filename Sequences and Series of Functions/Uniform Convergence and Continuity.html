@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>7.2. Uniform Convergence and Continuity &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,7 +642,7 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="uniform-convergence-and-continuity">
+  <section class="tex2jax_ignore mathjax_ignore" id="uniform-convergence-and-continuity">
 <h1><span class="section-number">7.2. </span>Uniform Convergence and Continuity<a class="headerlink" href="#uniform-convergence-and-continuity" title="Permalink to this headline">#</a></h1>
 <p>If we assume <span class="math notranslate nohighlight">\(f_n\)</span> converges to <span class="math notranslate nohighlight">\(f\)</span> uniformly, then we can interchange the two limit processes, that is,</p>
 <div class="math notranslate nohighlight">
@@ -633,7 +651,7 @@ title="Print to PDF"
 \end{align*}\]</div>
 <div class="proof theorem admonition" id="thm:43">
 <p class="admonition-title"><span class="caption-number">Theorem 7.4 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span>, and let <span class="math notranslate nohighlight">\(p\)</span> be an accumulation point <span class="math notranslate nohighlight">\(S\)</span>. If the limit</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -648,7 +666,7 @@ A_n = \lim_{x \to p} f(x)
 <span class="eqno">(7.2)<a class="headerlink" href="#equation-eq-97" title="Permalink to this equation">#</a></span>\[\begin{align}\lim_{x \to p}\lim_{n \to \infty} f_n(x)
 = \lim_{n \to \infty}\lim_{x \to p} f_n(x)
 \end{align}\]</div>
-</div>
+</section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>One way to remember this theorem is that if the inner limits on both sides of <a class="reference internal" href="#equation-eq-97">(7.2)</a> exist, then the outer limits also exist and are equal to each other.</p>
@@ -691,14 +709,14 @@ A_n = \lim_{x \to p} f(x)
 <p>The version of <a class="reference internal" href="#thm:43">Theorem 7.4</a> concerning the series of functions is as follows.</p>
 <div class="proof theorem admonition" id="thm:65">
 <p class="admonition-title"><span class="caption-number">Theorem 7.5 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\sum f_n \to f\)</span> uniformly on <span class="math notranslate nohighlight">\(S\)</span>. If <span class="math notranslate nohighlight">\(f_n\)</span> is continuous on <span class="math notranslate nohighlight">\(S\)</span> for every <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is also continuous on <span class="math notranslate nohighlight">\(S\)</span>. In particular, if <span class="math notranslate nohighlight">\(p\)</span> is an accumulation point <span class="math notranslate nohighlight">\(S\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{x \to p}\sum_{n=1}^\infty f_n(x)
 = \sum_{n=1}^\infty\lim_{x \to p} f_n(x)
 \end{align*}\]</div>
-</div>
-</div></div>
+</section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {
@@ -712,7 +730,7 @@ A_n = \lim_{x \to p} f(x)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Sequences and Series of Functions"
         },
         predefinedOutput: true

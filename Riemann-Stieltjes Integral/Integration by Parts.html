@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>6.4. Integration by Parts &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,23 +642,23 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="integration-by-parts">
+  <section class="tex2jax_ignore mathjax_ignore" id="integration-by-parts">
 <h1><span class="section-number">6.4. </span>Integration by Parts<a class="headerlink" href="#integration-by-parts" title="Permalink to this headline">#</a></h1>
 <div class="proof theorem admonition" id="thm:20">
 <p class="admonition-title"><span class="caption-number">Theorem 6.5 </span> (Integration by Parts)</p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(\alpha \in \mathfrak{R}(f)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_a^b f \;\mathrm{d}\alpha
 + \int_a^b \alpha\;\mathrm{d}f
 = f(b)\alpha(b) - f(a)\alpha(a)
 \end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof remark admonition" id="remark-1">
 <p class="admonition-title"><span class="caption-number">Remark 6.1 </span></p>
-<div class="remark-content section" id="proof-content">
+<section class="remark-content" id="proof-content">
 <p>This can be treated as the <em>reciprocity law</em> for integrals.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-28">
@@ -702,7 +720,7 @@ A - S(P, \alpha, f) = S(P^\ast, f, \alpha)
 \[\begin{align*}\int_{a}^{b} x \cos(x) \;\mathrm{d}x
 \end{align*}\]</div>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -716,7 +734,7 @@ A - S(P, \alpha, f) = S(P^\ast, f, \alpha)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Riemann-Stieltjes Integral"
         },
         predefinedOutput: true

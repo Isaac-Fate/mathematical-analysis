@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>6.9. Riemann’s Condition &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,30 +642,30 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="riemann-s-condition">
+  <section class="tex2jax_ignore mathjax_ignore" id="riemann-s-condition">
 <span id="index-0"></span><h1><span class="section-number">6.9. </span>Riemann’s Condition<a class="headerlink" href="#riemann-s-condition" title="Permalink to this headline">#</a></h1>
 <p>In Darboux’s formulation, the integral exists if and only if the upper and lower integrals are equal to each other. We now show that this is equivalent to the criterion of the existence of integrals from our definition (<a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1">Definition 6.1</a>). Furthermore, we will introduce another equivalent condition, <strong>Riemann’s condition</strong>, which is convenient to use in proofs.</p>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 6.4 </span> (Riemann’s Condition)</p>
-<div class="definition-content section" id="proof-content">
+<section class="definition-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is bounded and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Function <span class="math notranslate nohighlight">\(f\)</span> is said to satisfy <strong>Riemann’s condition</strong> w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> if for any <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 U(P,f,\alpha) - L(P,f,\alpha) &lt; \varepsilon\end{align*}\]</div>
 <p>for any refinement <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>.</p>
-</div>
+</section>
 </div><p>Essentially, Riemann’s condition requires that the upper and lower sums should be arbitrarily close.</p>
 <p>The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann’s condition are equivalent.</p>
 <div class="proof theorem admonition" id="thm:28">
 <p class="admonition-title"><span class="caption-number">Theorem 6.12 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is bounded and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then the following statements are equivalent.</p>
 <ul class="simple">
 <li><p>➀ <span class="math notranslate nohighlight">\(f\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, i.e., <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p></li>
 <li><p>➁ <span class="math notranslate nohighlight">\(f\)</span> satisfies Riemann’s condition w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p></li>
 <li><p>➂ The upper and lower integrals are equal to each other, i.e., <span class="math notranslate nohighlight">\(\upint_a^b f \; \mathrm{d}\alpha = \lowint_a^b f \; \mathrm{d}\alpha\)</span>.</p></li>
 </ul>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. If <span class="math notranslate nohighlight">\(\alpha\)</span> is constant, then this theorem holds trivially. We assume <span class="math notranslate nohighlight">\(\alpha\)</span> is non-constant in the rest of the proof.</p>
 <p>(Proof of 1 <span class="math notranslate nohighlight">\(\implies\)</span> 2) Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
@@ -738,13 +756,13 @@ L(P_2,f,\alpha) &gt; \lowint_a^b f \;\mathrm{d}\alpha - \varepsilon\end{align*}\
 <p>As one should expect, the integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha\)</span> has to be equal to the upper and lower integrals whenever <span class="math notranslate nohighlight">\(f\)</span> is integrable.</p>
 <div class="proof corollary admonition" id="corollary-2">
 <p class="admonition-title"><span class="caption-number">Corollary 6.1 </span></p>
-<div class="corollary-content section" id="proof-content">
+<section class="corollary-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> be increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_{a}^{b} f \;\mathrm{d}\alpha
 = \upint_{a}^{b} f \;\mathrm{d}\alpha
 = \lowint_{a}^{b} f \;\mathrm{d}\alpha\end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exist partitions <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(P_2\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -805,7 +823,7 @@ L(P,f,\alpha) = m_n [\alpha(0) - \alpha(x_{n-1})] = -2
 <p>Therefore, by <a class="reference internal" href="#thm:28">Theorem 6.12</a>, <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>, and hence on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>.</p>
 <p>This proof is way cleaner than the one given in <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 6.3</a> thanks to Darboux’s formulation of integrals.</p>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -819,7 +837,7 @@ L(P,f,\alpha) = m_n [\alpha(0) - \alpha(x_{n-1})] = -2
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Riemann-Stieltjes Integral"
         },
         predefinedOutput: true

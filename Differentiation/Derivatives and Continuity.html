@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>4.2. Derivatives and Continuity &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,12 +642,12 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="derivatives-and-continuity">
+  <section class="tex2jax_ignore mathjax_ignore" id="derivatives-and-continuity">
 <h1><span class="section-number">4.2. </span>Derivatives and Continuity<a class="headerlink" href="#derivatives-and-continuity" title="Permalink to this headline">#</a></h1>
 <p>The next theorem helps to reduce some theorems on derivatives to theorems on continuity.</p>
 <div class="proof theorem admonition" id="thm:1">
 <p class="admonition-title"><span class="caption-number">Theorem 4.1 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be a function defined on <span class="math notranslate nohighlight">\((a, b)\)</span>, and <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> a fixed point in that interval. We have the following statements:</p>
 <ul class="simple">
 <li><p>➀ If <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span>, then there exists a function <span class="math notranslate nohighlight">\(\phi\)</span> on <span class="math notranslate nohighlight">\((a, b)\)</span> which is continuous at <span class="math notranslate nohighlight">\(c\)</span>, and satisfies</p></li>
@@ -643,7 +661,7 @@ f(x) - f(c) = (x - c) \phi(x)
 <ul class="simple">
 <li><p>➁ Conversely, if there exists a function <span class="math notranslate nohighlight">\(\phi\)</span> on <span class="math notranslate nohighlight">\((a, b)\)</span> which is continuous at <span class="math notranslate nohighlight">\(c\)</span>, and satisfies <a class="reference internal" href="#equation-eq-1">(4.2)</a>, then <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> with <span class="math notranslate nohighlight">\(f^\prime(c) = \phi(c)\)</span>.</p></li>
 </ul>
-</div>
+</section>
 </div><p>The function <span class="math notranslate nohighlight">\(\phi\)</span> is precisely the slope of function <span class="math notranslate nohighlight">\(f\)</span>’s secant line.</p>
 <div class="proof admonition" id="proof">
 <p>Proof. (Proof of 1) Suppose <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span>. Define</p>
@@ -665,9 +683,9 @@ f(x) - f(c) = (x - c) \phi(x)
 <p>With the help of <a class="reference internal" href="#thm:1">Theorem 4.1</a>, we can easily show that <span class="math notranslate nohighlight">\(f\)</span> must be continuous at <span class="math notranslate nohighlight">\(c\)</span> if it is differentiable there.</p>
 <div class="proof theorem admonition" id="thm:2">
 <p class="admonition-title"><span class="caption-number">Theorem 4.2 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined on <span class="math notranslate nohighlight">\((a, b)\)</span>. If <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>, then it is continuous at <span class="math notranslate nohighlight">\(c\)</span>.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. By <a class="reference internal" href="#thm:1">Theorem 4.1</a>, there exists a function <span class="math notranslate nohighlight">\(\phi\)</span> on <span class="math notranslate nohighlight">\((a, b)\)</span> such that <span class="math notranslate nohighlight">\(\phi\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span>, and</p>
 <div class="math notranslate nohighlight" id="equation-eq-2">
@@ -687,7 +705,7 @@ f(x) - f(c) = (x - c) \phi(x)
 \end{align*}\]</div>
 <p>Hence, <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span>.</p>
 </div>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -701,7 +719,7 @@ f(x) - f(c) = (x - c) \phi(x)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Differentiation"
         },
         predefinedOutput: true

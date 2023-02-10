@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>6.10. Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -691,18 +709,18 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="properties-of-riemann-stieltjes-integrals-with-respect-to-increasing-integrators">
+  <section class="tex2jax_ignore mathjax_ignore" id="properties-of-riemann-stieltjes-integrals-with-respect-to-increasing-integrators">
 <h1><span class="section-number">6.10. </span>Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators<a class="headerlink" href="#properties-of-riemann-stieltjes-integrals-with-respect-to-increasing-integrators" title="Permalink to this headline">#</a></h1>
 <p>It is much easier to study and prove some properties of the Riemann-Stieltjes integrals if we require that <span class="math notranslate nohighlight">\(\alpha\)</span> is monotonically increasing.</p>
 <p>Thanks to <a class="reference internal" href="Integrators%20of%20Bounded%20Variation.html#thm:37">Theorem 6.20</a>, which we will prove in <a class="reference internal" href="Integrators%20of%20Bounded%20Variation.html"><span class="doc">Integrators of Bounded Variation</span></a>, almost all the properties introduced in this section can be extended with ease to integrators of bounded variation.</p>
-<div class="section" id="integrability-on-sub-intervals">
+<section id="integrability-on-sub-intervals">
 <h2><span class="section-number">6.10.1. </span>Integrability on Sub-Intervals<a class="headerlink" href="#integrability-on-sub-intervals" title="Permalink to this headline">#</a></h2>
 <p>Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> be a point that splits the interval into two parts. If <span class="math notranslate nohighlight">\(f\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on the entire interval <span class="math notranslate nohighlight">\([a, b]\)</span>, then it is also integrable on both of the sub-intervals.</p>
 <div class="proof lemma admonition" id="lem:3">
 <p class="admonition-title"><span class="caption-number">Lemma 6.2 </span></p>
-<div class="lemma-content section" id="proof-content">
+<section class="lemma-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> be an interior point. If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([c, b]\)</span></p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. We only prove <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span>. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. By <a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 6.12</a>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight">
@@ -737,14 +755,14 @@ U(P^{\prime},f,\alpha) - L(P^{\prime},f,\alpha) &lt; \varepsilon\end{align*}\]</
 <p>In fact, <span class="math notranslate nohighlight">\(f\)</span> is integrable on all sub-intervals of <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 <div class="proof theorem admonition" id="thm:40">
 <p class="admonition-title"><span class="caption-number">Theorem 6.13 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\([c, d] \subseteq[a, b]\)</span> be a sub-interval. If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([c, d]\)</span>.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Without loss of generality, assume <span class="math notranslate nohighlight">\(a &lt; c &lt; d &lt; b\)</span>. <a class="reference internal" href="#lem:3">Lemma 6.2</a> implies that <span class="math notranslate nohighlight">\(f\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\([a, d]\)</span>. We then conclude the proof using <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 6.1</a>.</p>
 </div>
-</div>
-<div class="section" id="comparison-theorem">
+</section>
+<section id="comparison-theorem">
 <h2><span class="section-number">6.10.2. </span>Comparison Theorem<a class="headerlink" href="#comparison-theorem" title="Permalink to this headline">#</a></h2>
 <p>It is very common in practice to compare the values of two integrals. Intuitively,</p>
 <div class="math notranslate nohighlight" id="equation-eq-69">
@@ -752,12 +770,12 @@ U(P^{\prime},f,\alpha) - L(P^{\prime},f,\alpha) &lt; \varepsilon\end{align*}\]</
 <p>provided that <span class="math notranslate nohighlight">\(f \leq g\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing. The proof of this inequality follows from the following lemma, which says the integral of <span class="math notranslate nohighlight">\(f\)</span> w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> is non-negative whenever <span class="math notranslate nohighlight">\(f\)</span> stays non-negative and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Note that this is a special case of inequality <a class="reference internal" href="#equation-eq-69">(6.42)</a>.</p>
 <div class="proof lemma admonition" id="lem:1">
 <p class="admonition-title"><span class="caption-number">Lemma 6.3 </span></p>
-<div class="lemma-content section" id="proof-content">
+<section class="lemma-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(f(x) \geq 0 \; \forall x \in[a, b]\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_{a}^{b} f \;\mathrm{d}\alpha\geq 0
 \end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Consider the trivial partition <span class="math notranslate nohighlight">\(P = \{a, b\}\)</span>. We have</p>
 <div class="math notranslate nohighlight">
@@ -774,11 +792,11 @@ L(P,f,\alpha) = \inf_{x \in[a, b]} f(x) [\alpha(b) - \alpha(a)]\geq 0
 <p>Inequality <a class="reference internal" href="#equation-eq-69">(6.42)</a> can be proved easily by applying the above lemma and <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 6.1</a>.</p>
 <div class="proof theorem admonition" id="thm:30">
 <p class="admonition-title"><span class="caption-number">Theorem 6.14 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing and <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(f(x) \leq g(x) \; \forall x \in[a, b]\)</span>, then we have the inequality</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_{a}^{b} f \;\mathrm{d}\alpha\leq\int_{a}^{b} g \;\mathrm{d}\alpha\end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Note that the difference <span class="math notranslate nohighlight">\((g-f)(x) \geq 0 \; \forall x \in[a, b]\)</span>. Furthermore, <span class="math notranslate nohighlight">\((g-f) \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 6.1</a>. Then <a class="reference internal" href="#lem:1">Lemma 6.3</a> gives</p>
 <div class="math notranslate nohighlight">
@@ -790,15 +808,15 @@ L(P,f,\alpha) = \inf_{x \in[a, b]} f(x) [\alpha(b) - \alpha(a)]\geq 0
 - \int_{a}^{b} f \;\mathrm{d}\alpha\geq 0
 \end{align*}\]</div>
 </div>
-</div>
-<div class="section" id="applying-continuous-functions-to-integrable-functions">
+</section>
+<section id="applying-continuous-functions-to-integrable-functions">
 <h2><span class="section-number">6.10.3. </span>Applying Continuous Functions to Integrable Functions<a class="headerlink" href="#applying-continuous-functions-to-integrable-functions" title="Permalink to this headline">#</a></h2>
 <p>Suppose we know <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. The following theorem tells us that we can produce more integrable functions by applying continuous functions to <span class="math notranslate nohighlight">\(f\)</span>.</p>
 <div class="proof theorem admonition" id="thm:29">
 <p class="admonition-title"><span class="caption-number">Theorem 6.15 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\(M\)</span> and <span class="math notranslate nohighlight">\(m\)</span> denote the supremum and infimum of <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. If function <span class="math notranslate nohighlight">\(\phi: [m, M] \to \R\)</span> is continuous, then the composite function <span class="math notranslate nohighlight">\(\phi \circ f\)</span> is also integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, i.e., <span class="math notranslate nohighlight">\(\phi \circ f \in \mathfrak{R}(\alpha)\)</span>.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. In the following proof, we assume that <span class="math notranslate nohighlight">\(\alpha\)</span> is non-constant.</p>
 <p>Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. Since <span class="math notranslate nohighlight">\(\phi\)</span> is uniformly continuous on <span class="math notranslate nohighlight">\([m, M]\)</span>, there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
@@ -874,11 +892,11 @@ U(P,\phi\circ f, \alpha) - L(P,\phi\circ f, \alpha) &lt; \varepsilon\end{align*}
 <p>Note that the absolute value function <span class="math notranslate nohighlight">\(\phi(x) = \abs{x}\)</span> is continuous. Applying it to an integrable function <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>, we immediately conclude that <span class="math notranslate nohighlight">\(\abs{f}\)</span> is also integrable.</p>
 <div class="proof theorem admonition" id="thm:31">
 <p class="admonition-title"><span class="caption-number">Theorem 6.16 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing. If<span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(\abs{f} \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-76">
 <span class="eqno">(6.49)<a class="headerlink" href="#equation-eq-76" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\int_{a}^{b} f \; \mathrm{d}\alpha}\leq\int_{a}^{b}\abs{f}\;\mathrm{d}\alpha\end{align}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. First, we note that <span class="math notranslate nohighlight">\(\abs{f} \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="#thm:29">Theorem 6.15</a> since <span class="math notranslate nohighlight">\(\phi(x) = \abs{x}\)</span> is continuous.</p>
 <p>It then follows from the inequality</p>
@@ -895,7 +913,7 @@ U(P,\phi\circ f, \alpha) - L(P,\phi\circ f, \alpha) &lt; \varepsilon\end{align*}
 <p>The converse of this theorem is not true. That is, <span class="math notranslate nohighlight">\(f\)</span> is not necessarily integrable if <span class="math notranslate nohighlight">\(\abs{f}\)</span> is integrable.</p>
 <div class="proof example admonition" id="example-6">
 <p class="admonition-title"><span class="caption-number">Example 6.6 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -912,7 +930,7 @@ f(x) = \ind_{\Q}(x) - \ind_{\R \setminus \Q}(x),
 \quad\text{and}\quad\lowint_a^b f \;\mathrm{d}\alpha = \alpha(a) - \alpha(b) &lt; 0
 \end{align*}\]</div>
 <p>The upper and lower integrals are not equal to each other for we have assumed <span class="math notranslate nohighlight">\(\alpha\)</span> is non-constant.</p>
-</div>
+</section>
 </div><div class="admonition-exercise-6-4 admonition">
 <p class="admonition-title">Exercise 6.4</p>
 <p>Prove the existence of <span class="math notranslate nohighlight">\(\int_a^b \abs{f} \; \mathrm{d}\alpha\)</span> in <a class="reference internal" href="#thm:31">Theorem 6.16</a> without using <a class="reference internal" href="#thm:29">Theorem 6.15</a>.</p>
@@ -924,9 +942,9 @@ f(x) = \ind_{\Q}(x) - \ind_{\R \setminus \Q}(x),
 <p>Put <span class="math notranslate nohighlight">\(\phi(x) = x^2\)</span> in <a class="reference internal" href="#thm:29">Theorem 6.15</a>, and we will have another remarkable conclusion which says the square of <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\(f^2\)</span>, is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> whenever <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>.</p>
 <div class="proof theorem admonition" id="thm:32">
 <p class="admonition-title"><span class="caption-number">Theorem 6.17 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing. If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then its square <span class="math notranslate nohighlight">\(f^2\)</span> is also integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span>, i.e., <span class="math notranslate nohighlight">\(f^2 \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Because <span class="math notranslate nohighlight">\(\phi(x) = x^2\)</span> is continuous on <span class="math notranslate nohighlight">\(\R\)</span>, it is, of course, continuous on the closed interval joining the infimum and supremum of <span class="math notranslate nohighlight">\(f\)</span>, <span class="math notranslate nohighlight">\([m, M]\)</span>. Then by <a class="reference internal" href="#thm:29">Theorem 6.15</a>, <span class="math notranslate nohighlight">\(f^2 \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </div>
@@ -942,9 +960,9 @@ f(x) = \ind_{\Q}(x) - \ind_{\R \setminus \Q}(x),
 <p>An immediate consequence of the above theorem is as follows, which states the product of two integrable functions is also integrable.</p>
 <div class="proof theorem admonition" id="thm:38">
 <p class="admonition-title"><span class="caption-number">Theorem 6.18 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing. If <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(fg \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Note that the product <span class="math notranslate nohighlight">\(fg\)</span> can be written as</p>
 <div class="math notranslate nohighlight">
@@ -953,13 +971,13 @@ f g = \frac{1}{4}[(f + g)^2 - (f - g)^2
 ]\end{align*}\]</div>
 <p>Then this theorem follows directly from <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 6.1</a> and <a class="reference internal" href="#thm:32">Theorem 6.17</a>.</p>
 </div>
-</div>
-<div class="section" id="riemann-stieltjes-integral-with-a-variable-upper-limit">
+</section>
+<section id="riemann-stieltjes-integral-with-a-variable-upper-limit">
 <h2><span class="section-number">6.10.4. </span>Riemann-Stieltjes Integral with a Variable Upper Limit<a class="headerlink" href="#riemann-stieltjes-integral-with-a-variable-upper-limit" title="Permalink to this headline">#</a></h2>
 <p>We know by <a class="reference internal" href="#thm:38">Theorem 6.18</a> that the product <span class="math notranslate nohighlight">\(fg\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> whenever <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are integrable. The next theorem provides an alternative view of the integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f g \; \mathrm{d}\alpha\)</span>. As we will see, we can define a function <span class="math notranslate nohighlight">\(G\)</span> in such a way that the symbol <span class="math notranslate nohighlight">\(g \; \mathrm{d}\alpha\)</span> in the original integral can be replaced with <span class="math notranslate nohighlight">\(\mathrm{d}G\)</span>. Or we can replace <span class="math notranslate nohighlight">\(f \; \mathrm{d}\alpha\)</span> with <span class="math notranslate nohighlight">\(\mathrm{d}F\)</span> by defining a function <span class="math notranslate nohighlight">\(F\)</span>.</p>
 <div class="proof theorem admonition" id="thm:39">
 <p class="admonition-title"><span class="caption-number">Theorem 6.19 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing, and <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. Define</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -972,7 +990,7 @@ G(x) = \int_{a}^{x} g \;\mathrm{d}\alpha,
 = \int_{a}^{b} f \;\mathrm{d}G
 = \int_{a}^{b} g \;\mathrm{d}F
 \end{align*}\]</div>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. We only prove <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(G)\)</span> and <span class="math notranslate nohighlight">\(\int_{a}^{b} f g \; \mathrm{d}\alpha = \int_{a}^{b} f \; \mathrm{d}G\)</span>. Suppose <span class="math notranslate nohighlight">\(g\)</span> is bounded by some positive number, say <span class="math notranslate nohighlight">\(A\)</span>, i.e., <span class="math notranslate nohighlight">\(\abs{g(x)} &lt; A \; \forall x \in[a, b]\)</span>. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(f g \in \mathfrak{R}(\alpha)\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-96">
@@ -1012,7 +1030,7 @@ S(P,f, G) - \int_{a}^{b} f g  \;\mathrm{d}\alpha
 </div>
 <div class="proof example admonition" id="example-10">
 <p class="admonition-title"><span class="caption-number">Example 6.7 </span></p>
-<div class="example-content section" id="proof-content">
+<section class="example-content" id="proof-content">
 <p>Let</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}\alpha(x)
@@ -1045,9 +1063,9 @@ g(0) &amp;x \geq 0 \\
 = f(0)g(0)
 \end{align*}\]</div>
 <p>The results agree with <a class="reference internal" href="#thm:39">Theorem 6.19</a> as expected.</p>
-</div>
-</div></div>
-</div>
+</section>
+</div></section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1061,7 +1079,7 @@ g(0) &amp;x \geq 0 \\
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Riemann-Stieltjes Integral"
         },
         predefinedOutput: true

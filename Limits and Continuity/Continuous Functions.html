@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>3.3. Continuous Functions &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
@@ -428,6 +429,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Transcendental%20Functions/index.html">
+   8. Transcendental Functions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Transcendental%20Functions/Exponential%20Function.html">
+     8.1. Exponential Function
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -624,14 +642,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="continuous-functions">
+  <section class="tex2jax_ignore mathjax_ignore" id="continuous-functions">
 <h1><span class="section-number">3.3. </span>Continuous Functions<a class="headerlink" href="#continuous-functions" title="Permalink to this headline">#</a></h1>
 <p>The next theorem states that the composite function of continuous functions is also continuous.</p>
 <div class="proof theorem admonition" id="thm:3">
 <p class="admonition-title"><span class="caption-number">Theorem 3.2 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\((X, d_X)\)</span>, <span class="math notranslate nohighlight">\((Y, d_Y)\)</span> and <span class="math notranslate nohighlight">\((Z, d_Z)\)</span> be metric spaces. Let <span class="math notranslate nohighlight">\(f: X \to Y\)</span> and <span class="math notranslate nohighlight">\(g: Y \to Z\)</span> be functions, and let <span class="math notranslate nohighlight">\(h = g \circ f\)</span> be the composite function defined on <span class="math notranslate nohighlight">\(X\)</span>. If <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(p \in X\)</span>, and <span class="math notranslate nohighlight">\(g\)</span> is continuous at <span class="math notranslate nohighlight">\(f(p)\)</span>, then <span class="math notranslate nohighlight">\(h\)</span> is continuous at <span class="math notranslate nohighlight">\(p\)</span>.</p>
-</div>
+</section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(g\)</span> is continuous at <span class="math notranslate nohighlight">\(f(p)\)</span>, there exists some <span class="math notranslate nohighlight">\(\delta^\prime &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-7">
@@ -649,7 +667,7 @@ d_Z(g(f(x)), g(f(p))) &lt; \varepsilon\end{align*}\]</div>
 </div>
 <div class="proof theorem admonition" id="thm:6">
 <p class="admonition-title"><span class="caption-number">Theorem 3.3 </span></p>
-<div class="theorem-content section" id="proof-content">
+<section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f: X \to \R\)</span> be a real-valued continuous function from a metric space <span class="math notranslate nohighlight">\(X\)</span> to <span class="math notranslate nohighlight">\(\R\)</span>. Let <span class="math notranslate nohighlight">\(K \subseteq X\)</span> be a compact subset. Then there exist points <span class="math notranslate nohighlight">\(p, q \in K\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -657,8 +675,8 @@ f(p) = \sup f(K)
 \quad\text{and}\quad
 f(q) = \inf f(K)
 \end{align*}\]</div>
-</div>
-</div></div>
+</section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {
@@ -672,7 +690,7 @@ f(q) = \inf f(K)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Limits and Continuity"
         },
         predefinedOutput: true
