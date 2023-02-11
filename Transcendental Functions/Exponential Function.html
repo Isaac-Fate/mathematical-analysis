@@ -644,10 +644,12 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="exponential-function">
 <h1><span class="section-number">8.1. </span>Exponential Function<a class="headerlink" href="#exponential-function" title="Permalink to this headline">#</a></h1>
-<p>Consider the power series <span class="math notranslate nohighlight">\(\sum a_n z^n\)</span> given by</p>
+<p>Consider the power series <span class="math notranslate nohighlight">\(\sum a_n (z - z_0)^n\)</span> given by</p>
 <div class="math notranslate nohighlight" id="equation-eq-132">
 <span class="eqno">(8.1)<a class="headerlink" href="#equation-eq-132" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{n=0}^\infty\frac{z^n}{n!}\end{align}\]</div>
-<p>Recall we can find its radius of convergence
+<p>It can be regarded as a expansion of a function in <span class="math notranslate nohighlight">\(z\)</span>
+about the origin.
+Recall we can find its radius of convergence
 using methods based on
 either the root test or the ratio test.
 By applying the root test, we find</p>
@@ -684,7 +686,31 @@ is defined by</p>
 \[\begin{align*}\exp(z) := \sum_{n=0}^\infty\frac{z^n}{n!},
 \quad z \in\C\end{align*}\]</div>
 </section>
-</div></section>
+</div><p>The following addition formula
+captures the central behavior of
+the exponential function.</p>
+<div class="proof theorem admonition" id="thm:68">
+<p class="admonition-title"><span class="caption-number">Theorem 8.1 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Given any two complex numbers <span class="math notranslate nohighlight">\(z, w \in \C\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\exp(z + w) = \exp(z) \exp(w)
+\end{align*}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Since the power series expansion of the exponential function
+converges absolutely for every <span class="math notranslate nohighlight">\(z \in \C\)</span>,
+we may multiply these two power series together
+by applying Mertens Theorem (<a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Power%20Series.html#thm:69">Theorem 7.11</a>).
+We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}\exp(z) \exp(w)
+&amp;= \sum_{n=0}^\infty\sum_{k=0}^n
+\frac{1}{(n-k)!}\frac{1}{k!} z^{n-k} w^k \\&amp;= \sum_{n=0}^\infty\sum_{k=0}^n
+\frac{1}{n!}\binom{n}{k} z^{n-k} w^k \\&amp;= \sum_{n=0}^\infty\frac{1}{n!}(z+w)^n \\&amp;= \exp(z+w)
+\end{align*}\end{split}\]</div>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

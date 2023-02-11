@@ -409,8 +409,11 @@ This tells us that if a function $f$ has a power series expansion, then each coe
 ## Multiplication of Power Series
 
 ````{prf:theorem}
+:label: thm:69
 
-Suppose functions $f$ and $g$ both have power series expansions about the origin, which are given by
+Suppose functions $f$ and $g$
+both have power series expansions about the origin,
+which are given by
 
 ```{math}
 \begin{align*}
