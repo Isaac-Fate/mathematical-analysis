@@ -6,7 +6,10 @@ The next theorem tells us that we can add two convergent series term by term. An
 ````{prf:theorem}
 :label: thm:48
 
-If $\sum a_n$ and $\sum b_n$ are two convergent series, then the series $\sum (\alpha a_n + \beta b_n)$ also converges where $\alpha$ and $\beta$ are constants. Furthermore, we have
+If $\sum a_n$ and $\sum b_n$ are two convergent series,
+then the series $\sum (\alpha a_n + \beta b_n)$ also converges
+where $\alpha$ and $\beta$ are constants.
+Furthermore, we have
 
 ```{math}
 \begin{align*}\sum_{n=1}^\infty(\alpha a_n + \beta b_n)
@@ -20,6 +23,34 @@ If $\sum a_n$ and $\sum b_n$ are two convergent series, then the series $\sum (\
 ````{prf:proof}
 
 TODO
+
+````
+
+It is also common that
+only one of the two series
+is convergent while the other one diverges to
+positive or negative infinity.
+In this case, we have the following results.
+
+
+````{prf:theorem}
+:label: thm:72
+
+If $\sum a_n$ diverges to infinity
+and $\sum b_n$ converges,
+then
+
+```{math}
+\begin{align*}\sum_{n=1}^\infty(\alpha a_n + \beta b_n)
+= \begin{cases}
+\infty,
+&\text{if $\alpha > 0$} \\
+-\infty,
+&\text{if $\alpha < 0$}
+\end{cases}\end{align*}
+```
+
+An analogous result exists when $\sum a_n = -\infty$.
 
 ````
 

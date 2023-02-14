@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.7. The Ratio Test and the Root Test &#8212; Mathematical Analysis</title>
+    <title>2.8. The Ratio Test and the Root Test &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -58,8 +58,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.8. Subseries" href="Subseries.html" />
-    <link rel="prev" title="2.6. The Comparison Test" href="The%20Comparison%20Test.html" />
+    <link rel="next" title="2.9. Subseries" href="Subseries.html" />
+    <link rel="prev" title="2.7. The Comparison Test" href="The%20Comparison%20Test.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -178,38 +178,43 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Absolute%20and%20Conditional%20Convergence.html">
+     2.6. Absolute and Conditional Convergence
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="The%20Comparison%20Test.html">
-     2.6. The Comparison Test
+     2.7. The Comparison Test
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.7. The Ratio Test and the Root Test
+     2.8. The Ratio Test and the Root Test
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Subseries.html">
-     2.8. Subseries
+     2.9. Subseries
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Double%20Series.html">
-     2.9. Double Series
+     2.10. Double Series
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Rearrangement%20Theorem%20for%20Double%20Series.html">
-     2.10. Rearrangement Theorem for Double Series
+     2.11. Rearrangement Theorem for Double Series
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Iterated%20Series.html">
-     2.11. Iterated Series
+     2.12. Iterated Series
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Multiplication%20of%20Series.html">
-     2.12. Multiplication of Series
+     2.13. Multiplication of Series
     </a>
    </li>
   </ul>
@@ -648,9 +653,9 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="the-ratio-test-and-the-root-test">
-<h1><span class="section-number">2.7. </span>The Ratio Test and the Root Test<a class="headerlink" href="#the-ratio-test-and-the-root-test" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.8. </span>The Ratio Test and the Root Test<a class="headerlink" href="#the-ratio-test-and-the-root-test" title="Permalink to this headline">#</a></h1>
 <div class="proof theorem admonition" id="thm:54">
-<p class="admonition-title"><span class="caption-number">Theorem 2.12 </span> (Ratio Test)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 2.14 </span> (Ratio Test)</p>
 <section class="theorem-content" id="proof-content">
 <p>Given a series <span class="math notranslate nohighlight">\(\sum a_n\)</span> with nonzero complex terms, let</p>
 <div class="math notranslate nohighlight">
@@ -679,21 +684,21 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 = [(R+\varepsilon)^{-N}\abs{a_N}](R+\varepsilon)^n
 \quad\forall n \geq N+1
 \end{align*}\]</div>
-<p>Note that <span class="math notranslate nohighlight">\(\sum (R+\varepsilon)^n\)</span> converges since it is a geometric series the absolute values of whose terms are less than <span class="math notranslate nohighlight">\(1\)</span>. Therefore, <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> converges by the comparison test (<a class="reference internal" href="The%20Comparison%20Test.html#thm:52">Theorem 2.11</a>).</p>
+<p>Note that <span class="math notranslate nohighlight">\(\sum (R+\varepsilon)^n\)</span> converges since it is a geometric series the absolute values of whose terms are less than <span class="math notranslate nohighlight">\(1\)</span>. Therefore, <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> converges by the comparison test (<a class="reference internal" href="The%20Comparison%20Test.html#thm:52">Theorem 2.13</a>).</p>
 <p>(Proof of 2) The proof of statement 2 is similar. This time, we can choose a positive number <span class="math notranslate nohighlight">\(\varepsilon\)</span> such that <span class="math notranslate nohighlight">\(r-\varepsilon &gt; 1\)</span>. Then</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{\frac{a_{n+1}}{a_n}} &gt; r - \varepsilon\quad\forall n \geq N
 \end{align*}\]</div>
 <p>for some fixed integer <span class="math notranslate nohighlight">\(N \in \N^\ast\)</span>. By applying a similar argument, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-117">
-<span class="eqno">(2.12)<a class="headerlink" href="#equation-eq-117" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{a_n} &gt; [(r-\varepsilon)^{-N}\abs{a_N}](r-\varepsilon)^n
+<span class="eqno">(2.14)<a class="headerlink" href="#equation-eq-117" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{a_n} &gt; [(r-\varepsilon)^{-N}\abs{a_N}](r-\varepsilon)^n
 \quad\forall n \geq N+1
 \end{align}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If we apply the comparison test here, then we can only conclude that the series <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> diverges since the geometric series <span class="math notranslate nohighlight">\(\sum (r-\varepsilon)^n\)</span> diverges. But this result is not sufficient enough to conclude that <span class="math notranslate nohighlight">\(\sum a_n\)</span> also diverges.</p>
 </div>
-<p>By observing the right-hand side of <a class="reference internal" href="#equation-eq-117">(2.12)</a>, we note that the sequence <span class="math notranslate nohighlight">\(\{\abs{a_n}\}\)</span> does not converge to zero. In fact,</p>
+<p>By observing the right-hand side of <a class="reference internal" href="#equation-eq-117">(2.14)</a>, we note that the sequence <span class="math notranslate nohighlight">\(\{\abs{a_n}\}\)</span> does not converge to zero. In fact,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\lim_{n \to \infty}\abs{a_n} = \infty\end{align*}\]</div>
 <p>Therefore, <span class="math notranslate nohighlight">\(\sum a_n\)</span> diverges by <a class="reference internal" href="Infinite%20Series.html#cor:2">Corollary 2.1</a>.</p>
@@ -701,7 +706,7 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}\end{align*}\]</div>
 </div>
 <p id="index-0">Whenever the ratio test is inclusive, one can always try the <strong>root test</strong> as we shall soon introduce. It also has a close connection with the power series and the concept of the radius of convergence, which we shall cover in <a class="reference internal" href="../Sequences%20and%20Series%20of%20Functions/Power%20Series.html"><span class="doc">Power Series</span></a>.</p>
 <div class="proof theorem admonition" id="thm:55">
-<p class="admonition-title"><span class="caption-number">Theorem 2.13 </span> (Root Test)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 2.15 </span> (Root Test)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\sum a_n\)</span> be a series of complex numbers. Let</p>
 <div class="math notranslate nohighlight">
@@ -785,7 +790,7 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
 </section>
 </div><p>From the above example, the reader may conjecture that the root test is somehow more powerful than the ratio test. This is indeed true as we will see in the next theorem.</p>
 <div class="proof theorem admonition" id="theorem-3">
-<p class="admonition-title"><span class="caption-number">Theorem 2.14 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 2.16 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\{a_n\}\)</span> be a sequence of position numbers. We have</p>
 <div class="math notranslate nohighlight">
@@ -904,13 +909,13 @@ R = \limsup_{n \to \infty}\abs{\frac{a_{n+1}}{a_n}}
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2.6. </span>The Comparison Test</p>
+            <p class="prev-next-title"><span class="section-number">2.7. </span>The Comparison Test</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Subseries.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.8. </span>Subseries</p>
+        <p class="prev-next-title"><span class="section-number">2.9. </span>Subseries</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
