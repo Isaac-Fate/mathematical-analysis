@@ -583,7 +583,10 @@ The next theorem can be treated as the reciprocal rule of limit superior, which 
 The next theorem tells us that we can add two convergent series term by term. And we can also multiply a convergent series by a constant.
 
 \begin{theorem} \label{thm:48}
-    If $\sum a_n$ and $\sum b_n$ are two convergent series, then the series $\sum (\alpha a_n + \beta b_n)$ also converges where $\alpha$ and $\beta$ are constants. Furthermore, we have 
+    If $\sum a_n$ and $\sum b_n$ are two convergent series, 
+	then the series $\sum (\alpha a_n + \beta b_n)$ also converges 
+	where $\alpha$ and $\beta$ are constants. 
+	Furthermore, we have 
     \begin{align*}
         \sum_{n=1}^\infty (\alpha a_n + \beta b_n)
         = \alpha \sum_{n=1}^\infty a_n 
@@ -594,6 +597,28 @@ The next theorem tells us that we can add two convergent series term by term. An
 \begin{proof}
     % TODO
 \end{proof}
+
+It is also common that 
+only one of the two series
+is convergent while the other one diverges to 
+positive or negative infinity.
+In this case, we have the following results.
+
+\begin{theorem} \label{thm:72}
+	If $\sum a_n$ diverges to infinity
+	and $\sum b_n$ converges,
+	then 
+	\begin{align*}
+		\sum_{n=1}^\infty (\alpha a_n + \beta b_n)
+		= \begin{cases}
+			\infty,
+			&\text{if $\alpha > 0$} \\ 
+			-\infty,
+			&\text{if $\alpha < 0$}
+		\end{cases}
+	\end{align*}
+	An analogous result exists when $\sum a_n = -\infty$.
+\end{theorem}
 
 %------------------------------
 
@@ -858,6 +883,87 @@ The next theorem is known as the
 	the series $\sum (-1)^{n+1} a_n$ indeed converges.
 	Say it converges to sum $s$.
 	Letting $p \to \infty$ in \eqref{eq:135} yields \eqref{eq:133}.
+\end{proof}
+
+%------------------------------
+
+\section{Absolute and Conditional Convergence}
+
+%------------------------------
+
+The next theorem reveals an underlying property
+about a conditionally convergent series.
+
+\begin{theorem} \label{thm:71}
+	Let $\sum a_n$ be a series of real terms.
+	Define 
+	\begin{align*}
+		p_n = \frac{\abs{a_n} + a_n}{2}
+		\quad \text{and} \quad 
+		q_n = \frac{\abs{a_n} - a_n}{2},
+		\quad n \in \N^\ast
+	\end{align*}
+	Then we have the following:
+	\begin{enumerate}
+		\item If $\sum a_n$ converges conditionally, 
+			then both $\sum p_n$ and $\sum q_n$ diverges to infinity,
+			i.e., 
+			\begin{align}
+				\sum_{n=1}^\infty p_n
+				= \sum_{n=1}^\infty q_n
+				= \infty
+				\label{eq:136}
+			\end{align}
+		\item If $\sum a_n$ converges absolutely,
+			then both $\sum p_n$ and $\sum q_n$ converge,
+			and we have 
+			\begin{align}
+				\sum_{n=1}^\infty a_n 
+				= \sum_{n=1}^\infty p_n 
+				- \sum_{n=1}^\infty q_n
+				\label{eq:137}
+			\end{align}	
+	\end{enumerate}
+\end{theorem}
+
+\begin{note}
+	Note that 
+	\begin{align*}
+		p_n = \begin{cases}
+			a_n, 
+			&\text{if $a_n \geq 0$} \\ 
+			0,
+			&\text{if $a_n < 0$}
+		\end{cases}
+		\quad \text{while} \quad
+		q_n = \begin{cases}
+			0, 
+			&\text{if $a_n \geq 0$} \\ 
+			-a_n,
+			&\text{if $a_n < 0$}
+		\end{cases}
+	\end{align*}
+	In other words, $\sum p_n$ is the sum of 
+	all non-negative terms of $\sum a_n$,
+	while $\sum q_n$ is the
+	absolute value of the 
+	sum of all negative terms.
+	What this theorem mainly tells us 
+	is that for a conditionally convergent series,
+	the sum of all its non-negative terms is infinity,
+	and the sum of all its negative terms is negative infinity.
+\end{note}
+
+\begin{proof}
+	(Proof of 1) 
+	We have $\sum \abs{a_n} = \infty$ 
+	since $\sum a_n$ only converges conditionally.
+	Then \eqref{eq:136} follows immediately 
+	from Theorem~\ref{thm:72}.
+
+	(Proof of 2) 
+	Since $\sum \abs{a_n}$ also converges,
+	\eqref{eq:137} then follows from Theorem~\ref{thm:48}.
 \end{proof}
 
 %------------------------------
