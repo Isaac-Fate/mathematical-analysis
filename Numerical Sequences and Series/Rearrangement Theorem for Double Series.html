@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.11. Rearrangement Theorem for Double Series &#8212; Mathematical Analysis</title>
+    <title>2.12. Rearrangement Theorem for Double Series &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -58,8 +58,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.12. Iterated Series" href="Iterated%20Series.html" />
-    <link rel="prev" title="2.10. Double Series" href="Double%20Series.html" />
+    <link rel="next" title="2.13. Iterated Series" href="Iterated%20Series.html" />
+    <link rel="prev" title="2.11. Double Series" href="Double%20Series.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -193,28 +193,33 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Dirichlet%27s%20Test%20and%20Abel%27s%20Test.html">
+     2.9. Dirichlet’s Test and Abel’s Test
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="Subseries.html">
-     2.9. Subseries
+     2.10. Subseries
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Double%20Series.html">
-     2.10. Double Series
+     2.11. Double Series
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.11. Rearrangement Theorem for Double Series
+     2.12. Rearrangement Theorem for Double Series
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Iterated%20Series.html">
-     2.12. Iterated Series
+     2.13. Iterated Series
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Multiplication%20of%20Series.html">
-     2.13. Multiplication of Series
+     2.14. Multiplication of Series
     </a>
    </li>
   </ul>
@@ -653,7 +658,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="rearrangement-theorem-for-double-series">
-<h1><span class="section-number">2.11. </span>Rearrangement Theorem for Double Series<a class="headerlink" href="#rearrangement-theorem-for-double-series" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.12. </span>Rearrangement Theorem for Double Series<a class="headerlink" href="#rearrangement-theorem-for-double-series" title="Permalink to this headline">#</a></h1>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 2.5 </span></p>
 <section class="definition-content" id="proof-content">
@@ -670,7 +675,7 @@ b_k = a_{g(k)} = a_{m, n},
 <p>Let <span class="math notranslate nohighlight">\(\sum a_{m,n}\)</span> be a double series, and <span class="math notranslate nohighlight">\(g\)</span> an arrangement of double sequence <span class="math notranslate nohighlight">\(\{a_{m,n}\}\)</span> into <span class="math notranslate nohighlight">\(\{b_k\}\)</span>. Then the series <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely if and only if <span class="math notranslate nohighlight">\(\sum a_{m,n}\)</span> converges absolutely.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We first suppose that <span class="math notranslate nohighlight">\(\sum a_{m,n}\)</span> converges absolutely. By <a class="reference internal" href="Double%20Series.html#thm:47">Theorem 2.19</a>, the set of its partial sums of the series <span class="math notranslate nohighlight">\(\sum \abs{a_{m,n}}\)</span> must be bounded above by some positive number, say <span class="math notranslate nohighlight">\(A\)</span>, that is,</p>
+<p>Proof. We first suppose that <span class="math notranslate nohighlight">\(\sum a_{m,n}\)</span> converges absolutely. By <a class="reference internal" href="Double%20Series.html#thm:47">Theorem 2.21</a>, the set of its partial sums of the series <span class="math notranslate nohighlight">\(\sum \abs{a_{m,n}}\)</span> must be bounded above by some positive number, say <span class="math notranslate nohighlight">\(A\)</span>, that is,</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{m=1}^p \sum_{n=1}^q \abs{a_{m,n}}\leq A
 \quad\forall p,q \in\N^\ast\end{align*}\]</div>
@@ -682,7 +687,7 @@ b_k = a_{g(k)} = a_{m, n},
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{k=1}^K \abs{b_k}\leq A
 \quad\forall K \in\N^\ast\end{align*}\]</div>
-<p>Then <span class="math notranslate nohighlight">\(\sum \abs{b_k}\)</span> indeed converges by <a class="reference internal" href="Double%20Series.html#thm:47">Theorem 2.19</a>, i.e., <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely.</p>
+<p>Then <span class="math notranslate nohighlight">\(\sum \abs{b_k}\)</span> indeed converges by <a class="reference internal" href="Double%20Series.html#thm:47">Theorem 2.21</a>, i.e., <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely.</p>
 <p>Conversely, suppose now the series <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely. Hence, the set of partial sums of <span class="math notranslate nohighlight">\(\sum \abs{b_k}\)</span> is bounded above by some number <span class="math notranslate nohighlight">\(B &gt; 0\)</span>. It follows that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{m=1}^p \sum_{n=1}^q \abs{a_{m,n}}\leq\sum_{k=1}^K \abs{b_k}\end{align*}\]</div>
@@ -694,10 +699,10 @@ K = \max\set{ g^{-1}(m,n) }{1 \leq m \leq p, 1 \leq n \leq q}\end{align*}\]</div
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{m=1}^p \sum_{n=1}^q \abs{a_{m,n}}\leq B
 \quad\forall p,q \in\N^\ast\end{align*}\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(\sum \abs{a_{m,n}}\)</span> converges absolutely by <a class="reference internal" href="Double%20Series.html#thm:47">Theorem 2.19</a>.</p>
+<p>Therefore, <span class="math notranslate nohighlight">\(\sum \abs{a_{m,n}}\)</span> converges absolutely by <a class="reference internal" href="Double%20Series.html#thm:47">Theorem 2.21</a>.</p>
 </div>
 <div class="proof theorem admonition" id="thm:62">
-<p class="admonition-title"><span class="caption-number">Theorem 2.21 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 2.23 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(\sum a_{m,n}\)</span> is an absolutely convergent double series with sum <span class="math notranslate nohighlight">\(s\)</span>. Let <span class="math notranslate nohighlight">\(g\)</span> be an arrangement of double sequence <span class="math notranslate nohighlight">\(\{a_{m,n}\}\)</span> into <span class="math notranslate nohighlight">\(\{b_k\}\)</span>. Then</p>
 <ul class="simple">
@@ -734,7 +739,7 @@ S_{p+l, p+l} - S_{p,p} &lt; \varepsilon / 2
 \quad\forall p \geq N_2 \;\forall l \in\N^\ast\end{align*}\]</div>
 <p>where <span class="math notranslate nohighlight">\(S_{p,q} = \sum_{m=1}^{p} \sum_{n=1}^{q} \abs{a_{m,n}}\)</span>. Let <span class="math notranslate nohighlight">\(N = \max\{N_1, N_2\}\)</span>. In particular, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-108">
-<span class="eqno">(2.18)<a class="headerlink" href="#equation-eq-108" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{s_{N,N} - s} &lt; \varepsilon / 2
+<span class="eqno">(2.19)<a class="headerlink" href="#equation-eq-108" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{s_{N,N} - s} &lt; \varepsilon / 2
 \quad\text{and}\quad
 S_{N+l,N+l} - S_{N,N} &lt; \varepsilon / 2
 \quad\forall l \in\N^\ast\end{align}\]</div>
@@ -742,7 +747,7 @@ S_{N+l,N+l} - S_{N,N} &lt; \varepsilon / 2
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 K = \max\set{g^{-1}(m,n)}{1 \leq m \leq N, 1 \leq n \leq N}\end{align*}\]</div>
-<p>Combined with <a class="reference internal" href="#equation-eq-108">(2.18)</a>, we find</p>
+<p>Combined with <a class="reference internal" href="#equation-eq-108">(2.19)</a>, we find</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{\sum_{k=1}^K b_k - s}\leq\abs{\sum_{k=1}^K b_k - s_{N,N}}
 + \abs{s_{N,N} - s}
@@ -759,7 +764,7 @@ h_m(n) = (m, n)
 \end{align*}\]</div>
 <p>And let function <span class="math notranslate nohighlight">\(f_m: \N^\ast \to \N^\ast\)</span> be defined as a composition of <span class="math notranslate nohighlight">\(h_m\)</span> and <span class="math notranslate nohighlight">\(g^{-1}\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight" id="equation-eq-109">
-<span class="eqno">(2.19)<a class="headerlink" href="#equation-eq-109" title="Permalink to this equation">#</a></span>\[\begin{align}
+<span class="eqno">(2.20)<a class="headerlink" href="#equation-eq-109" title="Permalink to this equation">#</a></span>\[\begin{align}
 f_m = g^{-1}\circ h_m
 \end{align}\]</div>
 <p>Note that <span class="math notranslate nohighlight">\(f_m\)</span> is injective since both <span class="math notranslate nohighlight">\(h_m\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are injective. For a term <span class="math notranslate nohighlight">\(a_{m,n}\)</span>, through arrangement <span class="math notranslate nohighlight">\(g\)</span>, we have</p>
@@ -774,14 +779,14 @@ f_m(n) = g^{-1}( h_m(n) )
 = g^{-1}(m, n)
 = k
 \end{align*}\]</div>
-<p>This implies <span class="math notranslate nohighlight">\(\sum_n a_{m,n}\)</span> is a subseries of <span class="math notranslate nohighlight">\(\sum b_k\)</span>. Because <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely, by <a class="reference internal" href="Subseries.html#thm:50">Theorem 2.18</a>, <span class="math notranslate nohighlight">\(\sum_n a_{m,n}\)</span> also converges absolutely. Similarly, each <span class="math notranslate nohighlight">\(\sum_m a_{m,n}\)</span> also converges absolutely.</p>
-<p>Write <span class="math notranslate nohighlight">\(r_m = \sum_{n=1}^\infty a_{m,n}\)</span>. Define <span class="math notranslate nohighlight">\(f_m\)</span> for each <span class="math notranslate nohighlight">\(m \in \N^\ast\)</span> as in <a class="reference internal" href="#equation-eq-109">(2.19)</a>. It can be shown that</p>
+<p>This implies <span class="math notranslate nohighlight">\(\sum_n a_{m,n}\)</span> is a subseries of <span class="math notranslate nohighlight">\(\sum b_k\)</span>. Because <span class="math notranslate nohighlight">\(\sum b_k\)</span> converges absolutely, by <a class="reference internal" href="Subseries.html#thm:50">Theorem 2.20</a>, <span class="math notranslate nohighlight">\(\sum_n a_{m,n}\)</span> also converges absolutely. Similarly, each <span class="math notranslate nohighlight">\(\sum_m a_{m,n}\)</span> also converges absolutely.</p>
+<p>Write <span class="math notranslate nohighlight">\(r_m = \sum_{n=1}^\infty a_{m,n}\)</span>. Define <span class="math notranslate nohighlight">\(f_m\)</span> for each <span class="math notranslate nohighlight">\(m \in \N^\ast\)</span> as in <a class="reference internal" href="#equation-eq-109">(2.20)</a>. It can be shown that</p>
 <ul class="simple">
 <li><p>➀ <span class="math notranslate nohighlight">\(f_m\)</span> is injective,</p></li>
 <li><p>➁ <span class="math notranslate nohighlight">\(f_m(\N^\ast) \subseteq \N^\ast\)</span>, and</p></li>
 <li><p>➂ <span class="math notranslate nohighlight">\(\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast\)</span>.</p></li>
 </ul>
-<p>(See <a class="reference internal" href="#ex-6"><span class="std std-ref">Exercise 2.3</span></a>.) Hence, all the requirements of <a class="reference internal" href="Subseries.html#thm:50">Theorem 2.18</a> are met. Therefore, <span class="math notranslate nohighlight">\(\sum r_m\)</span> converges absolutely, and</p>
+<p>(See <a class="reference internal" href="#ex-6"><span class="std std-ref">Exercise 2.3</span></a>.) Hence, all the requirements of <a class="reference internal" href="Subseries.html#thm:50">Theorem 2.20</a> are met. Therefore, <span class="math notranslate nohighlight">\(\sum r_m\)</span> converges absolutely, and</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\sum_{m=1}^\infty r_m
 = \sum_{k=1}^\infty b_k
@@ -797,11 +802,11 @@ f_m(n) = g^{-1}( h_m(n) )
 <li><p>➁ <span class="math notranslate nohighlight">\(f_m(\N^\ast) \subseteq \N^\ast\)</span>, and</p></li>
 <li><p>➂ <span class="math notranslate nohighlight">\(\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast\)</span>.</p></li>
 </ul>
-<p>Each function <span class="math notranslate nohighlight">\(f_m\)</span> is defined by <a class="reference internal" href="#equation-eq-109">(2.19)</a>.</p>
+<p>Each function <span class="math notranslate nohighlight">\(f_m\)</span> is defined by <a class="reference internal" href="#equation-eq-109">(2.20)</a>.</p>
 </div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Solution</p>
-<p>The first two statements are evident by <a class="reference internal" href="#equation-eq-109">(2.19)</a>. We now show</p>
+<p>The first two statements are evident by <a class="reference internal" href="#equation-eq-109">(2.20)</a>. We now show</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\biguplus_{m=1}^\infty f_m(\N^\ast) = \N^\ast\end{align*}\]</div>
 <p>Given <span class="math notranslate nohighlight">\(k \in \N^\ast\)</span>, we have</p>
@@ -809,7 +814,7 @@ f_m(n) = g^{-1}( h_m(n) )
 \[\begin{align*}
 g(k) = (m, n)
 \end{align*}\]</div>
-<p>It then follows from <a class="reference internal" href="#equation-eq-109">(2.19)</a> that</p>
+<p>It then follows from <a class="reference internal" href="#equation-eq-109">(2.20)</a> that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 f_m(n) = g^{-1}(h_m(n))
@@ -875,13 +880,13 @@ f_{m_1}(n_1)
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2.10. </span>Double Series</p>
+            <p class="prev-next-title"><span class="section-number">2.11. </span>Double Series</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Iterated%20Series.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.12. </span>Iterated Series</p>
+        <p class="prev-next-title"><span class="section-number">2.13. </span>Iterated Series</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

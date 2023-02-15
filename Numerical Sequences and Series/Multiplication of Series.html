@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.13. Multiplication of Series &#8212; Mathematical Analysis</title>
+    <title>2.14. Multiplication of Series &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -59,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Limits and Continuity" href="../Limits%20and%20Continuity/index.html" />
-    <link rel="prev" title="2.12. Iterated Series" href="Iterated%20Series.html" />
+    <link rel="prev" title="2.13. Iterated Series" href="Iterated%20Series.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -193,28 +193,33 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Dirichlet%27s%20Test%20and%20Abel%27s%20Test.html">
+     2.9. Dirichlet’s Test and Abel’s Test
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="Subseries.html">
-     2.9. Subseries
+     2.10. Subseries
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Double%20Series.html">
-     2.10. Double Series
+     2.11. Double Series
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Rearrangement%20Theorem%20for%20Double%20Series.html">
-     2.11. Rearrangement Theorem for Double Series
+     2.12. Rearrangement Theorem for Double Series
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Iterated%20Series.html">
-     2.12. Iterated Series
+     2.13. Iterated Series
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     2.13. Multiplication of Series
+     2.14. Multiplication of Series
     </a>
    </li>
   </ul>
@@ -653,7 +658,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="multiplication-of-series">
-<h1><span class="section-number">2.13. </span>Multiplication of Series<a class="headerlink" href="#multiplication-of-series" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.14. </span>Multiplication of Series<a class="headerlink" href="#multiplication-of-series" title="Permalink to this headline">#</a></h1>
 <div class="proof definition admonition" id="definition-0">
 <p class="admonition-title"><span class="caption-number">Definition 2.6 </span></p>
 <section class="definition-content" id="proof-content">
@@ -665,7 +670,7 @@ c_n = \sum_{k=0}^{n} a_{n-k} b_k,
 <p>Then the series <span class="math notranslate nohighlight">\(\sum_{n=0}^\infty c_n\)</span> is called the <strong>Cauchy product</strong> of <span class="math notranslate nohighlight">\(\sum a_n\)</span> and <span class="math notranslate nohighlight">\(\sum b_n\)</span>.</p>
 </section>
 </div><div class="proof theorem admonition" id="thm:67">
-<p class="admonition-title"><span class="caption-number">Theorem 2.23 </span> (Mertens)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 2.25 </span> (Mertens)</p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\sum a_n\)</span> and <span class="math notranslate nohighlight">\(\sum b_n\)</span> be two series that converge to sums <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, respectively. Suppose further that <span class="math notranslate nohighlight">\(\sum a_n\)</span> converges absolutely. Then their Cauchy product <span class="math notranslate nohighlight">\(\sum c_n\)</span> also converges with sum <span class="math notranslate nohighlight">\(AB\)</span>. In this case, we can write</p>
 <div class="math notranslate nohighlight">
@@ -678,16 +683,16 @@ c_n = \sum_{k=0}^{n} a_{n-k} b_k,
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be chosen arbitrarily. Firstly, because <span class="math notranslate nohighlight">\(\sum b_n\)</span> converges, by <a class="reference internal" href="Infinite%20Series.html#thm:51">Theorem 2.8</a>, there exists <span class="math notranslate nohighlight">\(M &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-112">
-<span class="eqno">(2.21)<a class="headerlink" href="#equation-eq-112" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\sum_{k=m}^n b_k}\leq M
+<span class="eqno">(2.22)<a class="headerlink" href="#equation-eq-112" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\sum_{k=m}^n b_k}\leq M
 \quad\forall m \in\N^\ast\;\forall n \geq M
 \end{align}\]</div>
 <p>Suppose <span class="math notranslate nohighlight">\(\sum \abs{a_n}\)</span> converges to <span class="math notranslate nohighlight">\(S\)</span>. Moreover, by Cauchy’s criterion for series, there exist <span class="math notranslate nohighlight">\(N_1, N_2 \in \N^\ast\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-110">
-<span class="eqno">(2.22)<a class="headerlink" href="#equation-eq-110" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{k=m}^{m+j}\abs{a_k}
+<span class="eqno">(2.23)<a class="headerlink" href="#equation-eq-110" title="Permalink to this equation">#</a></span>\[\begin{align}\sum_{k=m}^{m+j}\abs{a_k}
 &lt; \frac{\varepsilon / 2}{\abs{M}}\quad\forall m \geq N_1 \;\forall j \in\N\end{align}\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq-111">
-<span class="eqno">(2.23)<a class="headerlink" href="#equation-eq-111" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\sum_{k=m}^{m+j} b_k}
+<span class="eqno">(2.24)<a class="headerlink" href="#equation-eq-111" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{\sum_{k=m}^{m+j} b_k}
 &lt; \frac{\varepsilon / 2}{S + 1}\quad\forall m \geq N_2 \;\forall j \in\N\end{align}\]</div>
 <p>Let <span class="math notranslate nohighlight">\(N = \max \{N_1, N_2\}\)</span>.</p>
 <p>Let <span class="math notranslate nohighlight">\(A_n\)</span>, <span class="math notranslate nohighlight">\(B_n\)</span> and <span class="math notranslate nohighlight">\(C_n\)</span> denote</p>
@@ -707,16 +712,16 @@ A_n B_n - C_n
 \end{alignat*}\end{split}\]</div>
 <p>It then follows that</p>
 <div class="math notranslate nohighlight" id="equation-eq-113">
-<span class="eqno">(2.24)<a class="headerlink" href="#equation-eq-113" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{alignat}2\abs{A_n B_n - C_n}&amp;\leq&amp; \;&amp; \abs{a_1}\abs{b_n}\nonumber\\&amp;&amp;&amp;+ \cdots\nonumber\\&amp;&amp;&amp;+ \abs{a_{n-N}}\abs{b_{N+1} + \cdots + b_n}\nonumber\\&amp;&amp;&amp;+ \abs{a_{n-N+1}}\abs{b_{N} + \cdots + b_n}\nonumber\\&amp;&amp;&amp;+ \cdots\nonumber\\&amp;&amp;&amp;+ \abs{a_n}\abs{b_{1} + \cdots + b_n}\end{alignat}\end{split}\]</div>
-<p>Applying <a class="reference internal" href="#equation-eq-111">(2.23)</a> to the first <span class="math notranslate nohighlight">\(n-N\)</span> terms on right-hand side of <a class="reference internal" href="#equation-eq-113">(2.24)</a>, we find</p>
+<span class="eqno">(2.25)<a class="headerlink" href="#equation-eq-113" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{alignat}2\abs{A_n B_n - C_n}&amp;\leq&amp; \;&amp; \abs{a_1}\abs{b_n}\nonumber\\&amp;&amp;&amp;+ \cdots\nonumber\\&amp;&amp;&amp;+ \abs{a_{n-N}}\abs{b_{N+1} + \cdots + b_n}\nonumber\\&amp;&amp;&amp;+ \abs{a_{n-N+1}}\abs{b_{N} + \cdots + b_n}\nonumber\\&amp;&amp;&amp;+ \cdots\nonumber\\&amp;&amp;&amp;+ \abs{a_n}\abs{b_{1} + \cdots + b_n}\end{alignat}\end{split}\]</div>
+<p>Applying <a class="reference internal" href="#equation-eq-111">(2.24)</a> to the first <span class="math notranslate nohighlight">\(n-N\)</span> terms on right-hand side of <a class="reference internal" href="#equation-eq-113">(2.25)</a>, we find</p>
 <div class="math notranslate nohighlight" id="equation-eq-114">
-<span class="eqno">(2.25)<a class="headerlink" href="#equation-eq-114" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}\abs{a_1}\abs{b_n}
+<span class="eqno">(2.26)<a class="headerlink" href="#equation-eq-114" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align}\abs{a_1}\abs{b_n}
 + \cdots
 + \abs{a_{n-N}}\abs{b_{N+1} + \cdots + b_n}&amp;&lt; (\abs{a_1} + \cdots + \abs{a_{n-N}}) \frac{\varepsilon / 2}{S + 1}\nonumber\\&amp;\leq S \times\frac{\varepsilon / 2}{S + 1}\nonumber\\&amp;&lt; \varepsilon / 2
 \end{align}\end{split}\]</div>
-<p>Meanwhile, applying <a class="reference internal" href="#equation-eq-112">(2.21)</a> to the last <span class="math notranslate nohighlight">\(N\)</span> terms on the right-hand side of <a class="reference internal" href="#equation-eq-113">(2.24)</a> yields</p>
+<p>Meanwhile, applying <a class="reference internal" href="#equation-eq-112">(2.22)</a> to the last <span class="math notranslate nohighlight">\(N\)</span> terms on the right-hand side of <a class="reference internal" href="#equation-eq-113">(2.25)</a> yields</p>
 <div class="math notranslate nohighlight" id="equation-eq-115">
-<span class="eqno">(2.26)<a class="headerlink" href="#equation-eq-115" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{multline}\abs{a_{n-N+1}}\abs{b_{N} + \cdots + b_n}
+<span class="eqno">(2.27)<a class="headerlink" href="#equation-eq-115" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{multline}\abs{a_{n-N+1}}\abs{b_{N} + \cdots + b_n}
 + \cdots
 + \abs{a_n}\abs{b_{1} + \cdots + b_n}\\
 &lt; \abs{a_{n-N+1}} M
@@ -724,7 +729,7 @@ A_n B_n - C_n
 + \abs{a_n} M
 = (\abs{a_{n-N+1}} + \cdots + \abs{a_n}) M
 \end{multline}\end{split}\]</div>
-<p>By using <a class="reference internal" href="#equation-eq-110">(2.22)</a>, the right-hand side of <a class="reference internal" href="#equation-eq-115">(2.26)</a> can be further enlarged to</p>
+<p>By using <a class="reference internal" href="#equation-eq-110">(2.23)</a>, the right-hand side of <a class="reference internal" href="#equation-eq-115">(2.27)</a> can be further enlarged to</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}(\abs{a_{n-N+1}} + \cdots + \abs{a_n}) M
 &lt; \frac{\varepsilon / 2}{M}\cdot M
@@ -732,12 +737,12 @@ A_n B_n - C_n
 \end{align*}\]</div>
 <p>Hence,</p>
 <div class="math notranslate nohighlight" id="equation-eq-116">
-<span class="eqno">(2.27)<a class="headerlink" href="#equation-eq-116" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{a_{n-N+1}}\abs{b_{N} + \cdots + b_n}
+<span class="eqno">(2.28)<a class="headerlink" href="#equation-eq-116" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{a_{n-N+1}}\abs{b_{N} + \cdots + b_n}
 + \cdots
 + \abs{a_n}\abs{b_{1} + \cdots + b_n}
 &lt; \varepsilon / 2
 \end{align}\]</div>
-<p>Combined with <a class="reference internal" href="#equation-eq-113">(2.24)</a>, <a class="reference internal" href="#equation-eq-114">(2.25)</a> and <a class="reference internal" href="#equation-eq-116">(2.27)</a>, we find</p>
+<p>Combined with <a class="reference internal" href="#equation-eq-113">(2.25)</a>, <a class="reference internal" href="#equation-eq-114">(2.26)</a> and <a class="reference internal" href="#equation-eq-116">(2.28)</a>, we find</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\abs{A_n B_n - C_n} &lt; \varepsilon\quad\forall n \geq 2N
 \end{align*}\]</div>
@@ -780,7 +785,7 @@ A_n B_n - C_n
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2.12. </span>Iterated Series</p>
+            <p class="prev-next-title"><span class="section-number">2.13. </span>Iterated Series</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../Limits%20and%20Continuity/index.html" title="next page">
