@@ -53,6 +53,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -706,6 +708,89 @@ title="Print to PDF"
 <h1><span class="section-number">6.12. </span>Existence of Riemann-Stieltjes Integrals<a class="headerlink" href="#existence-of-riemann-stieltjes-integrals" title="Permalink to this headline">#</a></h1>
 <section id="sufficient-conditions">
 <h2><span class="section-number">6.12.1. </span>Sufficient Conditions<a class="headerlink" href="#sufficient-conditions" title="Permalink to this headline">#</a></h2>
+<p>In a Calculus course,
+the first theorem about integrability one might be taught is
+that <span class="math notranslate nohighlight">\( f \)</span> is Riemann integrable if it is continuous.
+When considering the Riemann-Stieltjes integrals,
+we impose one more condition that the integrator
+<span class="math notranslate nohighlight">\( \alpha \)</span> is of bounded variation.</p>
+<div class="proof theorem admonition" id="thm:75">
+<p class="admonition-title"><span class="caption-number">Theorem 6.21 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is continuous,
+and <span class="math notranslate nohighlight">\(\alpha\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. If <span class="math notranslate nohighlight">\(\alpha\)</span> is constant, then the conclusion is trivial.
+Assume now <span class="math notranslate nohighlight">\( \alpha \)</span> is non-constant.
+By <a class="reference internal" href="../Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html#thm:22">Theorem 5.5</a> and <a class="reference internal" href="Linear%20Properties.html#thm:18">Theorem 6.1</a>,
+it suffices to prove this theorem when <span class="math notranslate nohighlight">\( \alpha \)</span> is increasing.</p>
+<p>Given <span class="math notranslate nohighlight">\( \varepsilon &gt; 0 \)</span>,
+since <span class="math notranslate nohighlight">\( f \)</span> is continuous on <span class="math notranslate nohighlight">\( [a, b] \)</span>,
+there exits <span class="math notranslate nohighlight">\( \delta &gt; 0 \)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{s - t} &lt; \delta\implies\abs{f(s) - f(t)} &lt; \frac{ \varepsilon / 2 }{
+\alpha(b) - \alpha(a)
+}\end{align*}\]</div>
+<p>Let <span class="math notranslate nohighlight">\( P_{ \varepsilon } \)</span> be a partition on <span class="math notranslate nohighlight">\( [a, b] \)</span> with
+<span class="math notranslate nohighlight">\( \norm{P_\varepsilon} &lt; \delta \)</span>.
+Let <span class="math notranslate nohighlight">\( P \)</span> be any refinement of <span class="math notranslate nohighlight">\( P_\varepsilon \)</span>.
+On each subinterval <span class="math notranslate nohighlight">\( [x_{k-1}, x_k] \)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{f(s) - f(t)} &lt; \frac{ \varepsilon / 2 }{
+\alpha(b) - \alpha(a)
+}\quad\forall s, t \in[x_{k-1}, x_k]\end{align*}\]</div>
+<p>Taking the supremum on both sides yields</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\sup_{s,t \in[x_{k-1}, x_k]}\abs{f(s) - f(t)}\leq\frac{ \varepsilon / 2 }{
+\alpha(b) - \alpha(a)
+} &lt; \frac{ \varepsilon }{
+\alpha(b) - \alpha(a)
+}\end{align*}\]</div>
+<p>Applying <a class="reference internal" href="../Set%20Theory/Properties%20of%20Suprema%20and%20Infima.html#thm:27">Theorem 1.1</a> to the left-hand side, we find</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+M_k - m_k &lt; \frac{ \varepsilon }{
+\alpha(b) - \alpha(a)
+}\end{align*}\]</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P,f, \alpha) - L(P,f, \alpha)
+= \sum_{k}(M_k - m_k) \Delta\alpha_k
+&lt; \frac{ \varepsilon }{ \alpha(b) - \alpha(a) }\sum_{k}\Delta\alpha_k
+= \varepsilon\end{align*}\]</div>
+<p>Therefore, <span class="math notranslate nohighlight">\( f \in \mathfrak{R}(\alpha) \)</span> on <span class="math notranslate nohighlight">\( [a, b] \)</span>
+since it satisfies Riemann’s condition (<a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 6.12</a>).</p>
+</div>
+<p>Thanks to integration by parts,
+we can get for free
+an additional theorem of existence
+of Riemann integrals from <a class="reference internal" href="#thm:75">Theorem 6.21</a>.
+That is, <span class="math notranslate nohighlight">\( \int f \; \mathrm{d} x \)</span> exits
+if <span class="math notranslate nohighlight">\( f \)</span> is of bounded variation.</p>
+<div class="proof theorem admonition" id="thm:76">
+<p class="admonition-title"><span class="caption-number">Theorem 6.22 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>The Riemann integral <span class="math notranslate nohighlight">\( \int_a^b f \; \mathrm{d} x \)</span>
+exits if one of the following conditions is satisfied.</p>
+<ul class="simple">
+<li><p>➀ <span class="math notranslate nohighlight">\( f \)</span> is continuous on <span class="math notranslate nohighlight">\( [a, b] \)</span>.</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\( f \)</span> is of bounded variation on <span class="math notranslate nohighlight">\( [a, b] \)</span>.</p></li>
+</ul>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. If <span class="math notranslate nohighlight">\( f \)</span> is continuous on <span class="math notranslate nohighlight">\( [a, b] \)</span>, then
+<span class="math notranslate nohighlight">\( f \in \mathfrak{R} \)</span> on <span class="math notranslate nohighlight">\( [a, b] \)</span> by <a class="reference internal" href="#thm:75">Theorem 6.21</a>
+since the identity function is of bounded variation.</p>
+<p>If <span class="math notranslate nohighlight">\( f \)</span> is of bounded variation on <span class="math notranslate nohighlight">\( [a, b] \)</span>,
+then by <a class="reference internal" href="#thm:75">Theorem 6.21</a>,
+<span class="math notranslate nohighlight">\( x \in \mathfrak{R}(f) \)</span> on <span class="math notranslate nohighlight">\( [a, b] \)</span>
+since the identity function is continuous.
+Then by applying <a class="reference internal" href="Integration%20by%20Parts.html#thm:20">Theorem 6.5</a>,
+we also have <span class="math notranslate nohighlight">\( f \in \mathfrak{R} \)</span> on <span class="math notranslate nohighlight">\( [a, b] \)</span>.</p>
+</div>
 </section>
 <section id="necessary-conditions">
 <h2><span class="section-number">6.12.2. </span>Necessary Conditions<a class="headerlink" href="#necessary-conditions" title="Permalink to this headline">#</a></h2>
