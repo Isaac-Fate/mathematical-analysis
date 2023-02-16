@@ -1269,6 +1269,119 @@ We will see in the following two examples that neither the ratio test nor the ro
 
 %------------------------------
 
+\section{Dirichlet's Test and Abel's Test}
+
+The tests in this section are helpful 
+to determine the convergence of series 
+that may not converge absolutely.
+And the series we will study 
+throughout this section are of the from 
+\begin{align*}
+	\sum_{n=1}^\infty a_n b_n
+\end{align*}
+
+%------------------------------
+
+The frequently used tests are Dirichlet's test
+as well as the Abel's test.
+Both of them are based on 
+\eqref{eq:138} given in the following theorem,
+which is known as the formula of 
+\textbf{summation by parts}\index{summation by parts}.
+
+\begin{theorem}[Summation by Parts] \label{thm:73}
+	Let $\{a_n\}$ and $\{b_n\}$ be two complex sequences.
+	Define
+	\begin{align*}
+		A_n = a_1 + \cdots + a_n,
+		\quad n \in \N^\ast
+	\end{align*}
+	Then we have the identity:
+	\begin{align}
+		\sum_{k=1}^n a_k b_k 
+		= A_n b_{n+1}
+			- \sum_{k=1}^n A_k (b_{k+1} - b_k)
+		\label{eq:138}
+	\end{align}
+\end{theorem}
+
+\begin{note}
+	We can use \eqref{eq:138} to test convergence of 
+	series in the form of $\sum a_n b_n$.
+	That is, $\sum a_n b_n$ converges 
+	if both the sequence $\{A_n b_{n+1}\}$ 
+	and the series $\sum A_n(b_{n+1} - b_n)$ converge.
+\end{note}
+
+\begin{proof}
+	Define $A_0 = 0$ so that we can write 
+	\begin{align*}
+		a_k = A_{k} - A_{k-1}
+		\quad \forall k \in \N^\ast 
+	\end{align*}
+	It then follows that 
+	\begin{align*}
+		\sum_{k=1}^n a_k b_k 
+		&= \sum_{k=1}^n (A_{k} - A_{k-1}) b_k \\ 
+		&= \sum_{k=1}^n A_k b_k
+		- \sum_{k=0}^{n-1} A_k b_{k+1} \\ 
+		&= \sum_{k=1}^n A_k b_k
+			- A_0 b_1 - \sum_{k=1}^n A_k b_{k+1}
+			+ A_n b_{n+1} \\
+		&=	A_n b_{n+1} 
+			- \sum_{k=1}^n A_k (b_{k+1} - b_k)
+	\end{align*}
+	The last equality is exactly \eqref{eq:138}.
+\end{proof}
+
+%------------------------------
+
+The \textbf{Dirichlet's test}\index{Dirichlet's test}
+is applicable when all partial sums of $\sum a_n$ is bounded,
+and the sequence $\{b_n\}$ decreases to zero.
+
+\begin{theorem}[Dirichlet's Test] \label{thm:74}
+	Let $\sum a_n$ be a series of complex terms 
+	and $\{b_n\}$ a real-valued sequence.
+	If 
+	\begin{enumerate}
+		\item the sequence of partial sums of $\sum a_n$, 
+			$\{A_n\}$ is bounded,
+		\item $\{b_n\}$ is decreasing, and 
+		\item $\{b_n\}$ converges to zero,
+	\end{enumerate}
+	then $\sum a_n b_n$ converges.
+\end{theorem}
+
+\begin{proof}
+	Since $\{A_n\}$ is bounded and $\{b_n\}$ converges to zero,
+	the sequence $\{A_n b_{n+1}\}$ converges to zero.
+	
+	Next, we are going to show the convergence of 
+	$\sum A_n(b_{n+1} - b_n)$ using the comparison test.
+	There exists $M > 0$ such that 
+	$\abs{A_n} \leq M \; \forall n \in \N^\ast$.
+	We have 
+	\begin{align*}
+		\abs{A_n (b_{n+1} - b_n)}
+		\leq M \abs{b_{n+1} - b_{n}}
+		= M (b_n - b_{n+1})
+	\end{align*}
+	Because 
+	\begin{align*}
+		\sum_{k=1}^n (b_k - b_{k+1})
+		= b_1 - b_{n+1}
+	\end{align*}
+	and $\lim_{n \to \infty} b_n = 0$,
+	the series $\sum (b_n - b_{n+1})$ converges to $b_1$.
+	Then by the comparison test (Theorem~\ref{thm:52}), 
+	$\sum A_n (b_{n+1} - b_{n})$ converges absolutely.
+
+	Therefore, $\sum a_n b_n$ converges by Theorem~\ref{thm:73}.
+\end{proof}
+
+%------------------------------
+
 \section{Subseries}
 
 Think about summing up countably many (real or complex) numbers:
@@ -5542,7 +5655,101 @@ We now present the proof as follows.
 
 \subsection{Sufficient Conditions}
 
+In a Calculus course, 
+the first theorem about integrability one might be taught is 
+that $ f $ is Riemann integrable if it is continuous.
+When considering the Riemann-Stieltjes integrals,
+we impose one more condition that the integrator
+$ \alpha $ is of bounded variation.
 
+\begin{theorem} \label{thm:75}
+	If $f$ is continuous, 
+	and $\alpha$ is of bounded variation on $[a, b]$,
+	then $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+\end{theorem}
+
+\begin{proof}
+	If $\alpha$ is constant, then the conclusion is trivial.
+	Assume now $ \alpha $ is non-constant.
+	By Theorem~\ref{thm:22} and Theorem~\ref{thm:18}, 
+	it suffices to prove this theorem when $ \alpha $ is increasing.
+	
+	Given $ \varepsilon > 0 $,
+	since $ f $ is continuous on $ [a, b] $,
+	there exits $ \delta > 0 $ such that 
+	\begin{align*}
+		\abs{s - t} < \delta
+		\implies \abs{f(s) - f(t)} < \frac{ \varepsilon / 2 }{
+			\alpha(b) - \alpha(a)
+		}
+	\end{align*}
+	Let $ P_{ \varepsilon } $ be a partition on $ [a, b] $ with 
+	$ \norm{P_\varepsilon} < \delta $.
+	Let $ P $ be any refinement of $ P_\varepsilon $.
+	On each subinterval $ [x_{k-1}, x_k] $, we have 
+	\begin{align*}
+		\abs{f(s) - f(t)} < \frac{ \varepsilon / 2 }{ 
+			\alpha(b) - \alpha(a) 
+		}
+		\quad \forall s, t \in [x_{k-1}, x_k]
+	\end{align*}
+	Taking the supremum on both sides yields
+	\begin{align*}
+		\sup_{s,t \in [x_{k-1}, x_k]} \abs{f(s) - f(t)}
+		\leq \frac{ \varepsilon / 2 }{ 
+			\alpha(b) - \alpha(a) 
+		} < \frac{ \varepsilon }{ 
+			\alpha(b) - \alpha(a) 
+		}
+	\end{align*}
+	Applying Theorem~\ref{thm:27} to the left-hand side, we find 
+	\begin{align*}
+		M_k - m_k < \frac{ \varepsilon }{ 
+			\alpha(b) - \alpha(a) 
+		}
+	\end{align*}
+	It then follows that 
+	\begin{align*}
+		U(P,f, \alpha) - L(P,f, \alpha)
+		= \sum_{k} (M_k - m_k) \Delta \alpha_k
+		< \frac{ \varepsilon }{ \alpha(b) - \alpha(a) }
+			\sum_{k} \Delta \alpha_k
+		= \varepsilon
+	\end{align*}
+	Therefore, $ f \in \mathfrak{R}(\alpha) $ on $ [a, b] $
+	since it satisfies Riemann's condition (Theorem~\ref{thm:28}).
+\end{proof}
+
+%------------------------------
+
+Thanks to integration by parts,
+we can get for free 
+an additional theorem of existence
+of Riemann integrals from Theorem~\ref{thm:75}.
+That is, $ \int f \; \mathrm{d} x $ exits
+if $ f $ is of bounded variation.
+
+\begin{theorem} \label{thm:76}
+	The Riemann integral $ \int_a^b f \; \mathrm{d} x $
+	exits if one of the following conditions is satisfied.
+	\begin{enumerate}
+		\item $ f $ is continuous on $ [a, b] $.
+		\item $ f $ is of bounded variation on $ [a, b] $.
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+	If $ f $ is continuous on $ [a, b] $, then 
+	$ f \in \mathfrak{R} $ on $ [a, b] $ by Theorem~\ref{thm:75}
+	since the identity function is of bounded variation.
+
+	If $ f $ is of bounded variation on $ [a, b] $,
+	then by Theorem~\ref{thm:75},
+	$ x \in \mathfrak{R}(f) $ on $ [a, b] $
+	since the identity function is continuous.
+	Then by applying Theorem~\ref{thm:20}, 
+	we also have $ f \in \mathfrak{R} $ on $ [a, b] $.
+\end{proof}
 
 %------------------------------
 
