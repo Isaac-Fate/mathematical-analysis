@@ -185,9 +185,132 @@ then we always have
 = f(c) [\alpha(b) - \alpha(a)]\end{align*}
 ```
 
+```{index} second mean value theorem for Riemann-Stieltjes integrals
+```
+
 That is, $f(c)$ is exactly the average of $f$ w.r.t. $\alpha$ on $[a, b]$.
 
 
+By applying the first mean value theorem
+as well as integration by parts,
+we immediately obtains the following theorem,
+which is known as
+the \text{second mean value theorem for Riemann-Stieltjes integrals}
+````{prf:theorem} Second Mean Value Theorem
+:label: thm:78
+
+Suppose $f$ is monotonic and $\alpha$ is continuous on $[a, b]$.
+If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$,
+then there exists $c \in[a, b]$ such that
+
+```{math}
+:label: eq:142
+\begin{align}\int_a^b f \;\mathrm{d}\alpha
+= f(a) \int_a^c \mathrm{d}\alpha
++ f(b) \int_c^b \mathrm{d}\alpha\end{align}
+```
+
+````
+
+Recall the geometric interpretation of the
+Riemann-Stieltjes integral.
+Then this theorem mainly says that
+we can find two rectangles
+with maximum and minimum heights of the $(x,\alpha,f)$-fence,
+respectively,
+such that the sum of their areas
+equals the area of the shadow of the fence, i.e.,
+$int_a^n f \; \mathrm{d} \alpha$.
+See {numref}`fig:14`.
 
 
+````{prf:proof}
 
+It suffices to prove this theorem when $f$ is increasing.
+By {prf:ref}`thm:20`, we know $\alpha \in \mathfrak{R}(f)$
+on $[a, b]$, and
+
+```{math}
+:label: eq:140
+\begin{align}\int_a^b f \;\mathrm{d}\alpha
+= -\int_a^b \alpha\;\mathrm{d} f
++ f(b) \alpha(b) - f(a) \alpha(a)
+\end{align}
+```
+
+Since $\alpha$ is continuous and $f$ is increasing,
+it then follows from {prf:ref}`thm:77` that
+
+```{math}
+:label: eq:141
+\begin{align}\int_a^b \alpha\;\mathrm{d} f
+= \alpha(c) [f(b) - f(a)]\end{align}
+```
+
+Equation {eq}`eq:142` then follows immediately from {eq}`eq:140`
+and {eq}`eq:141`.
+
+````
+
+````{prf:example}
+:label: eg:11
+
+Let
+
+```{math}
+\begin{align*}
+f(x) = \frac{1}{1 + e^x}\quad\text{and}\quad\alpha(x) = e^x,
+\quad
+x \in[-1, 1]\end{align*}
+```
+
+It is known that
+
+```{math}
+\begin{align*}\int_{-1}^1 f \;\mathrm{d}\alpha = 1
+\end{align*}
+```
+
+Since $f$ is decreasing and $\alpha$ is continuous,
+the second mean value theorem ({prf:ref}`thm:78`)
+is then applicable.
+And in this example, we can find the value of $c$
+in {eq}`eq:142` explicitly.
+
+Note that the values of $f$ and $\alpha$ at the endpoints are
+
+```{math}
+\begin{align*}
+f(-1) = \frac{e}{e + 1},
+\quad
+f(1) = \frac{1}{e + 1},
+\quad\alpha(-1) = \frac{1}{e},
+\quad\text{and}\quad\alpha(1) = e
+\end{align*}
+```
+
+By solving {eq}`eq:142`, we find
+
+```{math}
+\begin{align*}
+c = \ln\frac{2}{e-1}\end{align*}
+```
+{numref}`fig:14` depicts the $(x,\alpha,f)$-fence of this example.
+
+
+```{figure} /figures/ma-014.png
+---
+name: fig:14
+---
+
+Geometric interpretation of
+the second mean value theorem
+for Riemann-Stieltjes integral.
+The area under the blue curve
+equals the sum of the areas
+of the orange and green rectangles.
+
+
+```
+
+````

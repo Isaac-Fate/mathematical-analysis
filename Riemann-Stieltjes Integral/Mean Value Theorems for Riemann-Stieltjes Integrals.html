@@ -792,8 +792,95 @@ then we always have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_a^b f \;\mathrm{d}\alpha
 = f(c) [\alpha(b) - \alpha(a)]\end{align*}\]</div>
-<p>That is, <span class="math notranslate nohighlight">\(f(c)\)</span> is exactly the average of <span class="math notranslate nohighlight">\(f\)</span> w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p id="index-1">That is, <span class="math notranslate nohighlight">\(f(c)\)</span> is exactly the average of <span class="math notranslate nohighlight">\(f\)</span> w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>By applying the first mean value theorem
+as well as integration by parts,
+we immediately obtains the following theorem,
+which is known as
+the \text{second mean value theorem for Riemann-Stieltjes integrals}</p>
+<div class="proof theorem admonition" id="thm:78">
+<p class="admonition-title"><span class="caption-number">Theorem 6.24 </span> (Second Mean Value Theorem)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is monotonic and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+then there exists <span class="math notranslate nohighlight">\(c \in[a, b]\)</span> such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-142">
+<span class="eqno">(6.63)<a class="headerlink" href="#equation-eq-142" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
+= f(a) \int_a^c \mathrm{d}\alpha
++ f(b) \int_c^b \mathrm{d}\alpha\end{align}\]</div>
 </section>
+</div><p>Recall the geometric interpretation of the
+Riemann-Stieltjes integral.
+Then this theorem mainly says that
+we can find two rectangles
+with maximum and minimum heights of the <span class="math notranslate nohighlight">\((x,\alpha,f)\)</span>-fence,
+respectively,
+such that the sum of their areas
+equals the area of the shadow of the fence, i.e.,
+<span class="math notranslate nohighlight">\(int_a^n f \; \mathrm{d} \alpha\)</span>.
+See <a class="reference internal" href="#fig-14"><span class="std std-numref">Fig. 6.3</span></a>.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. It suffices to prove this theorem when <span class="math notranslate nohighlight">\(f\)</span> is increasing.
+By <a class="reference internal" href="Integration%20by%20Parts.html#thm:20">Theorem 6.5</a>, we know <span class="math notranslate nohighlight">\(\alpha \in \mathfrak{R}(f)\)</span>
+on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
+<div class="math notranslate nohighlight" id="equation-eq-140">
+<span class="eqno">(6.64)<a class="headerlink" href="#equation-eq-140" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
+= -\int_a^b \alpha\;\mathrm{d} f
++ f(b) \alpha(b) - f(a) \alpha(a)
+\end{align}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous and <span class="math notranslate nohighlight">\(f\)</span> is increasing,
+it then follows from <a class="reference internal" href="#thm:77">Theorem 6.23</a> that</p>
+<div class="math notranslate nohighlight" id="equation-eq-141">
+<span class="eqno">(6.65)<a class="headerlink" href="#equation-eq-141" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b \alpha\;\mathrm{d} f
+= \alpha(c) [f(b) - f(a)]\end{align}\]</div>
+<p>Equation <a class="reference internal" href="#equation-eq-142">(6.63)</a> then follows immediately from <a class="reference internal" href="#equation-eq-140">(6.64)</a>
+and <a class="reference internal" href="#equation-eq-141">(6.65)</a>.</p>
+</div>
+<div class="proof example admonition" id="eg:11">
+<p class="admonition-title"><span class="caption-number">Example 6.10 </span></p>
+<section class="example-content" id="proof-content">
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(x) = \frac{1}{1 + e^x}\quad\text{and}\quad\alpha(x) = e^x,
+\quad
+x \in[-1, 1]\end{align*}\]</div>
+<p>It is known that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\int_{-1}^1 f \;\mathrm{d}\alpha = 1
+\end{align*}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(f\)</span> is decreasing and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous,
+the second mean value theorem (<a class="reference internal" href="#thm:78">Theorem 6.24</a>)
+is then applicable.
+And in this example, we can find the value of <span class="math notranslate nohighlight">\(c\)</span>
+in <a class="reference internal" href="#equation-eq-142">(6.63)</a> explicitly.</p>
+<p>Note that the values of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> at the endpoints are</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(-1) = \frac{e}{e + 1},
+\quad
+f(1) = \frac{1}{e + 1},
+\quad\alpha(-1) = \frac{1}{e},
+\quad\text{and}\quad\alpha(1) = e
+\end{align*}\]</div>
+<p>By solving <a class="reference internal" href="#equation-eq-142">(6.63)</a>, we find</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+c = \ln\frac{2}{e-1}\end{align*}\]</div>
+<p><a class="reference internal" href="#fig-14"><span class="std std-numref">Fig. 6.3</span></a> depicts the <span class="math notranslate nohighlight">\((x,\alpha,f)\)</span>-fence of this example.</p>
+<figure class="align-default" id="fig-14">
+<img alt="../_images/ma-014.png" src="../_images/ma-014.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Geometric interpretation of
+the second mean value theorem
+for Riemann-Stieltjes integral.
+The area under the blue curve
+equals the sum of the areas
+of the orange and green rectangles.</span><a class="headerlink" href="#fig-14" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {
