@@ -220,7 +220,7 @@ with maximum and minimum heights of the $(x,\alpha,f)$-fence,
 respectively,
 such that the sum of their areas
 equals the area of the shadow of the fence, i.e.,
-$int_a^n f \; \mathrm{d} \alpha$.
+$\int_a^b f \; \mathrm{d} \alpha$.
 See {numref}`fig:14`.
 
 
