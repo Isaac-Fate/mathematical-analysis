@@ -9,6 +9,6 @@ def config_plt():
     font = {
         "family": "serif",
         "weight": "bold",
-        "size": 16
+        "size": 12
     }
     plt.rc("font", **font)
