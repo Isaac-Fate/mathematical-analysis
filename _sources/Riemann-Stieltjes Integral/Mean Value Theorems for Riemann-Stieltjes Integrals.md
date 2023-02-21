@@ -306,7 +306,7 @@ name: fig:14
 Geometric interpretation of
 the second mean value theorem
 for Riemann-Stieltjes integral.
-The area under the blue curve
+The blue area
 equals the sum of the areas
 of the orange and green rectangles.
 
