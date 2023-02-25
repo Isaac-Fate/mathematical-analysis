@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6. Riemann-Stieltjes Integral &#8212; Mathematical Analysis</title>
+    <title>6.14. Integral as a Function of Its Upper Limit &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,11 +53,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.1. Definition of the Riemann-Stieltjes Integral" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html" />
-    <link rel="prev" title="5.4. Characterization of Functions of Bounded Variation" href="../Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html" />
+    <link rel="next" title="7. Sequences and Series of Functions" href="../Sequences%20and%20Series%20of%20Functions/index.html" />
+    <link rel="prev" title="6.13. Mean Value Theorems for Riemann-Stieltjes Integrals" href="Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -339,7 +341,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+  <a class="reference internal" href="index.html">
    6. Riemann-Stieltjes Integral
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
@@ -347,7 +349,7 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">
      6.1. Definition of the Riemann-Stieltjes Integral
@@ -413,8 +415,8 @@ const thebe_selector_output = ".output, .cell_output"
      6.13. Mean Value Theorems for Riemann-Stieltjes Integrals
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Integral%20as%20a%20Function%20of%20Its%20Upper%20Limit.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      6.14. Integral as a Function of Its Upper Limit
     </a>
    </li>
@@ -576,7 +578,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/index.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Integral as a Function of Its Upper Limit.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -604,7 +606,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Riemann-Stieltjes Integral/index.md"
+        <a href="../_sources/Riemann-Stieltjes Integral/Integral as a Function of Its Upper Limit.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -653,7 +655,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Riemann-Stieltjes Integral</h1>
+                <h1>Integral as a Function of Its Upper Limit</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -665,25 +667,79 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="riemann-stieltjes-integral">
-<h1><span class="section-number">6. </span>Riemann-Stieltjes Integral<a class="headerlink" href="#riemann-stieltjes-integral" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">6.1. Definition of the Riemann-Stieltjes Integral</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Linear%20Properties.html">6.2. Linear Properties</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Reduction%20to%20Riemann-Stieltjes%20Integrals.html">6.3. Reduction to Riemann-Stieltjes Integrals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Integration%20by%20Parts.html">6.4. Integration by Parts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Change%20of%20Variables.html">6.5. Change of Variables</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Step%20Functions%20as%20Integrators.html">6.6. Step Functions as Integrators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">6.7. Reduction of Riemann-Stieltjes Integrals to Finite Sums</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html">6.8. Darboux Integrals with Monotonically Increasing Integrators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Riemann%27s%20Condition.html">6.9. Riemann’s Condition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html">6.10. Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Integrators%20of%20Bounded%20Variation.html">6.11. Integrators of Bounded Variation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Existence%20of%20Riemann-Stieltjes%20Integrals.html">6.12. Existence of Riemann-Stieltjes Integrals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html">6.13. Mean Value Theorems for Riemann-Stieltjes Integrals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Integral%20as%20a%20Function%20of%20Its%20Upper%20Limit.html">6.14. Integral as a Function of Its Upper Limit</a></li>
+  <section class="tex2jax_ignore mathjax_ignore" id="integral-as-a-function-of-its-upper-limit">
+<h1><span class="section-number">6.14. </span>Integral as a Function of Its Upper Limit<a class="headerlink" href="#integral-as-a-function-of-its-upper-limit" title="Permalink to this headline">#</a></h1>
+<div class="proof theorem admonition" id="thm:79">
+<p class="admonition-title"><span class="caption-number">Theorem 6.25 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\alpha\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Suppose that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Define</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F(x) = \int_a^x f \;\mathrm{d}\alpha,
+\quad x \in[a, b]\end{align*}\]</div>
+<p>We have the following:</p>
+<ul class="simple">
+<li><p>➀ <span class="math notranslate nohighlight">\(F\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(F\)</span> is continuous at the point where <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous.</p></li>
+<li><p>➂ If <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing,
+then <span class="math notranslate nohighlight">\(F^\prime(x)\)</span> exists at each <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>
+where <span class="math notranslate nohighlight">\(\alpha^\prime(x)\)</span> exists
+and <span class="math notranslate nohighlight">\(f\)</span> is continuous. For such <span class="math notranslate nohighlight">\(x\)</span>, we have</p></li>
 </ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F^\prime(x) = f(x) \alpha^\prime(x)
+\end{align*}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. It suffices to prove this theorem when <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing.</p>
+<p>(Proof of 1) Let <span class="math notranslate nohighlight">\(P\)</span> be any partition on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+V(P,F) = \sum_{k}\abs{
+\int_{x_{k-1}}^{x_k} f \; \mathrm{d} \alpha
+}\leq\sum_{k}\int_{x_{k-1}}^{x_k}\abs{f}\;\mathrm{d}\alpha
+= \int_{a}^{b}\abs{f}\;\mathrm{d}\alpha\end{align*}\]</div>
+<p>Hence, <span class="math notranslate nohighlight">\(F\)</span> is of bounded of variation on <span class="math notranslate nohighlight">\([a, b]\)</span>
+since the right-hand side does not depend on <span class="math notranslate nohighlight">\(P\)</span>.</p>
+<p>(Proof of 2) There exits <span class="math notranslate nohighlight">\(M &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\abs{f} \leq M\)</span>.
+Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span>.
+We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{F(x) - F(c)}
+= \abs{
+\int_c^x f \; \mathrm{d} \alpha
+}\leq\int_c^x \abs{f}\;\mathrm{d}\alpha\leq M [\alpha(x) - \alpha(c)
+]\end{align*}\]</div>
+<p>By taking <span class="math notranslate nohighlight">\(x \to c\)</span> on both sides, we see that
+the limit <span class="math notranslate nohighlight">\(\lim_{x \to c} F(x)\)</span> exists, and it equals <span class="math notranslate nohighlight">\(F(c)\)</span>.
+Hence, <span class="math notranslate nohighlight">\(F\)</span> is also continuous at <span class="math notranslate nohighlight">\(c\)</span>.</p>
+<p>(Proof of 3) Suppose <span class="math notranslate nohighlight">\(\alpha^\prime(c)\)</span> exits and <span class="math notranslate nohighlight">\(f\)</span> is
+continuous at <span class="math notranslate nohighlight">\(c\)</span>.
+Applying the first mean value theorem (<a class="reference internal" href="Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html#thm:77">Theorem 6.23</a>),
+there exists a number <span class="math notranslate nohighlight">\(\xi\)</span> in the closed interval
+joining <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(c\)</span>(<span class="math notranslate nohighlight">\(x \neq c\)</span>) such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F(x) - F(c)
+= \int_c^x f \;\mathrm{d}\alpha
+= f(\xi) [\alpha(x) - \alpha(c) ]\end{align*}\]</div>
+<p>Dividing by <span class="math notranslate nohighlight">\((x - c)\)</span> on both sides yields</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\frac{F(x) - F(c)}{x - c}
+= f(\xi) \frac{\alpha(x) - \alpha(c)}{x - c}\end{align*}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span> and <span class="math notranslate nohighlight">\(\alpha^\prime(c)\)</span> exists.
+The limit of the left-hand side exists as <span class="math notranslate nohighlight">\(x \to c\)</span>.
+Hence, <span class="math notranslate nohighlight">\(F^\prime(c)\)</span> exists.
+Letting <span class="math notranslate nohighlight">\(x \to c\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F^\prime(c) = \lim_{x \to c}\frac{F(x) - F(c)}{x - c}
+= f(c) \alpha^\prime(c)
+\end{align*}\]</div>
 </div>
 </section>
 
@@ -714,17 +770,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5.4. </span>Characterization of Functions of Bounded Variation</p>
+            <p class="prev-next-title"><span class="section-number">6.13. </span>Mean Value Theorems for Riemann-Stieltjes Integrals</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html" title="next page">
+    <a class='right-next' id="next-link" href="../Sequences%20and%20Series%20of%20Functions/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.1. </span>Definition of the Riemann-Stieltjes Integral</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Sequences and Series of Functions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
