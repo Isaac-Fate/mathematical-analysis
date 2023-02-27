@@ -5481,7 +5481,9 @@ If $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$ on $[a, b]$
 
 Now, let us think about the converse of this statement. Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ where $\alpha$ if of bounded variation. Can we assert that $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$ on $[a, b]$ where $\alpha_1$ and $\alpha_2$ are any increasing functions satisfying $\alpha = \alpha_1 - \alpha_2$? Unfortunately, this is not true in general. For example, the Dirichlet function $\ind_\Q$ is integrable w.r.t. $\alpha(x) = 0$ on $[0, 1]$. We can write $\alpha(x) = 0 = x - x$. But clearly $\ind_\Q \notin \mathfrak{R}$ on $[0, 1]$.
 
-However, as the next theorem will state, $f$ is always integrable w.r.t. the total variation $V_a^x(\alpha)$ of $\alpha$ provided that $f \in \mathfrak{R}(\alpha)$.
+However, as the next theorem will state, $f$ is always integrable 
+w.r.t. the total variation $V_a^x(\alpha)$ of $\alpha$ 
+provided that $f \in \mathfrak{R}(\alpha)$.
 
 \begin{theorem} \label{thm:37}
     If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, then $f \in \mathfrak{R}(V_a^x(\alpha))$ on $[a, b]$ where $V_a^x(\alpha)$ is the total variation of $\alpha$, which is regarded as a function of $x$ as in Definition~\ref{def:3}.
@@ -5646,6 +5648,38 @@ We now present the proof as follows.
     \end{align*}
     Therefore, $f \in \mathfrak{R}(V(x))$ by Theorem~\ref{thm:28} since $V(x)$ is increasing.
 \end{proof}
+
+%------------------------------
+
+Recall that all the theorems proved in previous section
+are under the common assumption that the integrator $\alpha$
+is increasing.
+Now, thanks to Theorem~\ref{thm:37}, 
+we can easily show that some of them are also valid 
+if we only assume $\alpha$ is of bounded variation.
+For example, we can generalize Theorem~\ref{thm:40} as follows.
+
+\begin{theorem} \label{thm:80}
+	Suppose $\alpha$ is of bounded variation on $[a, b]$.
+	Let $[c, d] \subseteq [a, b]$ be a subinterval.
+	If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, 
+	then we also have $f \in \mathfrak{R}(\alpha)$ on $[c, d]$.
+\end{theorem}
+
+\begin{proof}
+	Let $V(x)$ denote $V_a^x (\alpha)$. By Theorem~\ref{thm:37}, 
+	we know $f \in \mathfrak{R}(V)$ 
+	and $f \in \mathfrak{R}(V - \alpha)$ on $[a, b]$.
+	Since both $V$ and $V - \alpha$ are increasing functions,
+	by applying Theorem~\ref{thm:40} twice, 
+	we have $f \in \mathfrak{R}(V)$ 
+	and $f \in \mathfrak{R}(V - \alpha)$ on $[c, d]$.
+	Finally, by Theorem~\ref{thm:19}, 
+	it follows that $f \in \mathfrak{R}(\alpha)$ on $[c, d]$.
+\end{proof}
+
+Theorem~\ref{thm:29}, \ref{thm:32}, \ref{thm:38} and \ref{thm:39}
+can also be generalized similarly.
 
 %------------------------------
 
@@ -5932,7 +5966,7 @@ with maximum and minimum heights of the $(x,\alpha,f)$-fence,
 respectively,
 such that the sum of their areas
 equals the area of the shadow of the fence, i.e., 
-$int_a^n f \; \mathrm{d} \alpha$.
+$\int_a^b f \; \mathrm{d} \alpha$.
 See Figure~\ref{fig:14}.
 
 \begin{proof}
@@ -5999,13 +6033,130 @@ See Figure~\ref{fig:14}.
 			Geometric interpretation of 
 			the second mean value theorem
 			for Riemann-Stieltjes integral.
-			The area under the blue curve
+			The blue area
 			equals the sum of the areas
 			of the orange and green rectangles.
 		}
 		\label{fig:14}
 	\end{figure}
 \end{example}
+
+%------------------------------
+
+\section{Integral as a Function of Its Upper Limit}
+
+%------------------------------
+
+The \textbf{first fundamental theorem of calculus}\index{first fundamental theorem of calculus}
+establishes the relation between the antiderivative of function $f$
+and its definite integral.
+The following theorem is a sightly generalized version
+where the integrator is any function of bounded variation.
+
+\begin{theorem} \label{thm:79}
+	Let $\alpha$ be of bounded variation on $[a, b]$.
+	Suppose that $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+	Define
+	\begin{align*}
+		F(x) = \int_a^x f \; \mathrm{d} \alpha,
+		\quad x \in [a, b]
+	\end{align*}
+	(Note that $F$ is well-defined by Theorem~\ref{thm:80}.)
+	We have the following:
+	\begin{enumerate}
+		\item $F$ is of bounded variation on $[a, b]$.
+		\item $F$ is continuous at the point where $\alpha$ is continuous.
+		\item If $\alpha$ is increasing, 
+			then $F^\prime(x)$ exists at each $x \in (a, b)$
+			where $\alpha^\prime(x)$ exists 
+			and $f$ is continuous. For such $x$, we have 
+			\begin{align*}
+				F^\prime(x) = f(x) \alpha^\prime(x)
+			\end{align*}
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+	It suffices to prove this theorem when $\alpha$ is increasing.
+
+	(Proof of 1) Let $P$ be any partition on $[a, b]$.
+	We have 
+	\begin{align*}
+		V(P,F) = \sum_{k} \abs{
+			\int_{x_{k-1}}^{x_k} f \; \mathrm{d} \alpha
+		}
+		\leq \sum_{k}
+		\int_{x_{k-1}}^{x_k} \abs{f} \; \mathrm{d} \alpha
+		= \int_{a}^{b} \abs{f} \; \mathrm{d} \alpha
+	\end{align*}
+	Hence, $F$ is of bounded of variation on $[a, b]$
+	since the right-hand side does not depend on $P$.
+
+	(Proof of 2) There exits $M > 0$ such that $\abs{f} \leq M$.
+	Suppose $\alpha$ is continuous at $c$.
+	We have 
+	\begin{align*}
+		\abs{F(x) - F(c)}
+		= \abs{
+			\int_c^x f \; \mathrm{d} \alpha
+		} \leq \int_c^x \abs{f} \; \mathrm{d} \alpha
+		\leq M [
+			\alpha(x) - \alpha(c)
+		]
+	\end{align*}
+	By taking $x \to c$ on both sides, we see that 
+	the limit $\lim_{x \to c} F(x)$ exists, and it equals $F(c)$.
+	Hence, $F$ is also continuous at $c$.
+
+	(Proof of 3) Suppose $\alpha^\prime(c)$ exits and $f$ is 
+	continuous at $c$. 
+	Applying the first mean value theorem (Theorem~\ref{thm:77}),
+	there exists a number $\xi$ in the closed interval 
+	joining $x$ and $c$ ($x \neq c$) such that
+	\begin{align*}
+		F(x) - F(c)
+		= \int_c^x f \; \mathrm{d} \alpha
+		= f(\xi) [ \alpha(x) - \alpha(c) ]
+	\end{align*}
+	Dividing by $(x - c)$ on both sides yields
+	\begin{align*}
+		\frac{F(x) - F(c)}{x - c}
+		= f(\xi) \frac{\alpha(x) - \alpha(c)}{x - c}
+	\end{align*}
+	Since $f$ is continuous at $c$ and $\alpha^\prime(c)$ exists.
+	The limit of the left-hand side exists as $x \to c$.
+	Hence, $F^\prime(c)$ exists.
+	Letting $x \to c$, we have 
+	\begin{align*}
+		F^\prime(c) = \lim_{x \to c} \frac{F(x) - F(c)}{x - c}
+		= f(c) \alpha^\prime(c)
+	\end{align*}
+\end{proof}
+
+%------------------------------
+
+In particular, let $\alpha(x) = x$, and Theorem~\ref{thm:79}
+will reduce to the traditional form the first fundamental
+theorem of calculus.
+
+\begin{theorem}[First Fundamental Theorem of Calculus] \label{thm:81}
+	Suppose $f \in \mathfrak{R}$ on $[a, b]$.
+	Define
+	\begin{align*}
+		F(x) = \int_a^x f \; \mathrm{d} x
+	\end{align*}
+	Then we have the following:
+	\begin{enumerate}
+		\item $F$ is of bounded variation on $[a, b]$.
+		\item $F$ is continuous on $[a, b]$.
+		\item If $f$ is continuous at $x \in (a, b)$, 
+			then $F^\prime(x)$ exists and
+			\begin{align*}
+				F^\prime(x) = f(x)
+			\end{align*}
+	\end{enumerate}
+\end{theorem}
+
 
 %==============================
 

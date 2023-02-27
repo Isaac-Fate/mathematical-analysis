@@ -11,7 +11,14 @@ from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 
 
 
-def fill_between_3d(ax,x1,y1,z1,x2,y2,z2,mode=1,c='steelblue',alpha=0.6):
+def fill_between_3d(
+        ax,
+        x1, y1, z1,
+        x2, y2, z2, 
+        mode=1, 
+        color='steelblue',
+        alpha=0.6
+    ):
     
     """
     
@@ -51,14 +58,26 @@ def fill_between_3d(ax,x1,y1,z1,x2,y2,z2,mode=1,c='steelblue',alpha=0.6):
             verts = [(x1[i],y1[i],z1[i]), (x1[i+1],y1[i+1],z1[i+1])] + \
                     [(x2[i+1],y2[i+1],z2[i+1]), (x2[i],y2[i],z2[i])]
             
-            ax.add_collection3d(Poly3DCollection([verts],
-                                                 alpha=alpha,
-                                                 linewidths=0,
-                                                 color=c))
+            ax.add_collection3d(
+                Poly3DCollection(
+                    [verts],
+                    alpha=alpha,
+                    linewidths=0,
+                    color=color,
+                    zsort="min"
+                )
+            )
 
     if mode == 2:
         
         verts = [(x1[i],y1[i],z1[i]) for i in range(len(x1))] + \
                 [(x2[i],y2[i],z2[i]) for i in range(len(x2))]
                 
-        ax.add_collection3d(Poly3DCollection([verts],alpha=alpha,color=c))
+        ax.add_collection3d(
+            Poly3DCollection(
+                [verts],
+                alpha=alpha,
+                color=color,
+                zsort="min"
+            )
+        )
