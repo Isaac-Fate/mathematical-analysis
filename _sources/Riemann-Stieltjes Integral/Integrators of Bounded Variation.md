@@ -4,7 +4,9 @@ If $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$ on $[a, b]$
 
 Now, let us think about the converse of this statement. Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$ where $\alpha$ if of bounded variation. Can we assert that $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$ on $[a, b]$ where $\alpha_1$ and $\alpha_2$ are any increasing functions satisfying $\alpha = \alpha_1 - \alpha_2$? Unfortunately, this is not true in general. For example, the Dirichlet function $\ind_\Q$ is integrable w.r.t. $\alpha(x) = 0$ on $[0, 1]$. We can write $\alpha(x) = 0 = x - x$. But clearly $\ind_\Q \notin \mathfrak{R}$ on $[0, 1]$.
 
-However, as the next theorem will state, $f$ is always integrable w.r.t. the total variation $V_a^x(\alpha)$ of $\alpha$ provided that $f \in \mathfrak{R}(\alpha)$.
+However, as the next theorem will state, $f$ is always integrable
+w.r.t. the total variation $V_a^x(\alpha)$ of $\alpha$
+provided that $f \in \mathfrak{R}(\alpha)$.
 
 
 ````{prf:theorem}
@@ -215,3 +217,40 @@ U(P,f,V) - L(P,f,V)
 Therefore, $f \in \mathfrak{R}(V(x))$ by {prf:ref}`thm:28` since $V(x)$ is increasing.
 
 ````
+
+Recall that all the theorems proved in previous section
+are under the common assumption that the integrator $\alpha$
+is increasing.
+Now, thanks to {prf:ref}`thm:37`,
+we can easily show that some of them are also valid
+if we only assume $\alpha$ is of bounded variation.
+For example, we can generalize {prf:ref}`thm:40` as follows.
+
+
+````{prf:theorem}
+:label: thm:80
+
+Suppose $\alpha$ is of bounded variation on $[a, b]$.
+Let $[c, d] \subseteq[a, b]$ be a subinterval.
+If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$,
+then we also have $f \in \mathfrak{R}(\alpha)$ on $[c, d]$.
+
+````
+
+````{prf:proof}
+
+Let $V(x)$ denote $V_a^x (\alpha)$. By {prf:ref}`thm:37`,
+we know $f \in \mathfrak{R}(V)$
+and $f \in \mathfrak{R}(V - \alpha)$ on $[a, b]$.
+Since both $V$ and $V - \alpha$ are increasing functions,
+by applying {prf:ref}`thm:40` twice,
+we have $f \in \mathfrak{R}(V)$
+and $f \in \mathfrak{R}(V - \alpha)$ on $[c, d]$.
+Finally, by {prf:ref}`thm:19`,
+it follows that $f \in \mathfrak{R}(\alpha)$ on $[c, d]$.
+
+````
+{prf:ref}`thm:29`, {prf:ref}`thm:32`, {prf:ref}`thm:38` and {prf:ref}`thm:39`
+can also be generalized similarly.
+
+

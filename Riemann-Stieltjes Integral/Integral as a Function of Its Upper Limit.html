@@ -668,9 +668,14 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="integral-as-a-function-of-its-upper-limit">
-<h1><span class="section-number">6.14. </span>Integral as a Function of Its Upper Limit<a class="headerlink" href="#integral-as-a-function-of-its-upper-limit" title="Permalink to this headline">#</a></h1>
+<span id="index-0"></span><h1><span class="section-number">6.14. </span>Integral as a Function of Its Upper Limit<a class="headerlink" href="#integral-as-a-function-of-its-upper-limit" title="Permalink to this headline">#</a></h1>
+<p>The <strong>first fundamental theorem of calculus</strong>
+establishes the relation between the antiderivative of function <span class="math notranslate nohighlight">\(f\)</span>
+and its definite integral.
+The following theorem is a sightly generalized version
+where the integrator is any function of bounded variation.</p>
 <div class="proof theorem admonition" id="thm:79">
-<p class="admonition-title"><span class="caption-number">Theorem 6.25 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 6.26 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(\alpha\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
 Suppose that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
@@ -679,7 +684,8 @@ Define</p>
 \[\begin{align*}
 F(x) = \int_a^x f \;\mathrm{d}\alpha,
 \quad x \in[a, b]\end{align*}\]</div>
-<p>We have the following:</p>
+<p>(Note that <span class="math notranslate nohighlight">\(F\)</span> is well-defined by <a class="reference internal" href="Integrators%20of%20Bounded%20Variation.html#thm:80">Theorem 6.21</a>.)
+We have the following:</p>
 <ul class="simple">
 <li><p>➀ <span class="math notranslate nohighlight">\(F\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p></li>
 <li><p>➁ <span class="math notranslate nohighlight">\(F\)</span> is continuous at the point where <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous.</p></li>
@@ -719,7 +725,7 @@ the limit <span class="math notranslate nohighlight">\(\lim_{x \to c} F(x)\)</sp
 Hence, <span class="math notranslate nohighlight">\(F\)</span> is also continuous at <span class="math notranslate nohighlight">\(c\)</span>.</p>
 <p>(Proof of 3) Suppose <span class="math notranslate nohighlight">\(\alpha^\prime(c)\)</span> exits and <span class="math notranslate nohighlight">\(f\)</span> is
 continuous at <span class="math notranslate nohighlight">\(c\)</span>.
-Applying the first mean value theorem (<a class="reference internal" href="Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html#thm:77">Theorem 6.23</a>),
+Applying the first mean value theorem (<a class="reference internal" href="Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html#thm:77">Theorem 6.24</a>),
 there exists a number <span class="math notranslate nohighlight">\(\xi\)</span> in the closed interval
 joining <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(c\)</span>(<span class="math notranslate nohighlight">\(x \neq c\)</span>) such that</p>
 <div class="math notranslate nohighlight">
@@ -741,7 +747,31 @@ F^\prime(c) = \lim_{x \to c}\frac{F(x) - F(c)}{x - c}
 = f(c) \alpha^\prime(c)
 \end{align*}\]</div>
 </div>
+<p>In particular, let <span class="math notranslate nohighlight">\(\alpha(x) = x\)</span>, and <a class="reference internal" href="#thm:79">Theorem 6.26</a>
+will reduce to the traditional form the first fundamental
+theorem of calculus.</p>
+<div class="proof theorem admonition" id="thm:81">
+<p class="admonition-title"><span class="caption-number">Theorem 6.27 </span> (First Fundamental Theorem of Calculus)</p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(f \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Define</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F(x) = \int_a^x f \;\mathrm{d} x
+\end{align*}\]</div>
+<p>Then we have the following:</p>
+<ul class="simple">
+<li><p>➀ <span class="math notranslate nohighlight">\(F\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(F\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p></li>
+<li><p>➂ If <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>,
+then <span class="math notranslate nohighlight">\(F^\prime(x)\)</span> exists and</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F^\prime(x) = f(x)
+\end{align*}\]</div>
 </section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {

@@ -1,4 +1,14 @@
+
+```{index} first fundamental theorem of calculus
+```
 # Integral as a Function of Its Upper Limit
+
+The **first fundamental theorem of calculus**
+establishes the relation between the antiderivative of function $f$
+and its definite integral.
+The following theorem is a sightly generalized version
+where the integrator is any function of bounded variation.
+
 
 ````{prf:theorem}
 :label: thm:79
@@ -12,7 +22,7 @@ Define
 F(x) = \int_a^x f \;\mathrm{d}\alpha,
 \quad x \in[a, b]\end{align*}
 ```
-
+(Note that $F$ is well-defined by {prf:ref}`thm:80`.)
 We have the following:
 - ➀ $F$ is of bounded variation on $[a, b]$.
 - ➁ $F$ is continuous at the point where $\alpha$ is continuous.
@@ -95,5 +105,37 @@ F^\prime(c) = \lim_{x \to c}\frac{F(x) - F(c)}{x - c}
 = f(c) \alpha^\prime(c)
 \end{align*}
 ```
+
+````
+
+In particular, let $\alpha(x) = x$, and {prf:ref}`thm:79`
+will reduce to the traditional form the first fundamental
+theorem of calculus.
+
+
+````{prf:theorem} First Fundamental Theorem of Calculus
+:label: thm:81
+
+Suppose $f \in \mathfrak{R}$ on $[a, b]$.
+Define
+
+```{math}
+\begin{align*}
+F(x) = \int_a^x f \;\mathrm{d} x
+\end{align*}
+```
+
+Then we have the following:
+- ➀ $F$ is of bounded variation on $[a, b]$.
+- ➁ $F$ is continuous on $[a, b]$.
+- ➂ If $f$ is continuous at $x \in (a, b)$,
+then $F^\prime(x)$ exists and
+
+```{math}
+\begin{align*}
+F^\prime(x) = f(x)
+\end{align*}
+```
+
 
 ````
