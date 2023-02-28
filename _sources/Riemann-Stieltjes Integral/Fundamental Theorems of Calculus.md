@@ -217,7 +217,7 @@ Left: $f(x)$. Right: $F(x) = \int_{-1}^x f(t) \; \mathrm{d} t$.
 
 ````
 
-````{prf:theorem} Second Fundamental Theore of Calculus
+````{prf:theorem} Second Fundamental Theorem of Calculus
 :label: thm:82
 
 TODO

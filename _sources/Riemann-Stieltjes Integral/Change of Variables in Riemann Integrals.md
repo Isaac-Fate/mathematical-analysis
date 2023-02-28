@@ -32,7 +32,7 @@ In particular, putting $x = d$ yields
 Note that the integrand on right-hand side of {eq}`eq:143`
 looks like the expression that the chain rule will produce.
 Indeed, the proof of this theorem
-differs from other theorems in this chapter in a way that
+differs from other theorems in this chapter in that
 it mainly relies on the chain rule,
 which is a technique from differentiation.
 And as one will expect,
@@ -59,7 +59,7 @@ We have
 
 Furthermore, note that $g(x)$ is continuous on $[c, d]$
 since both $f[\phi(x)]$ and $\phi^\prime(x)$ are.
-Hence, $g \in \mathfrak(R)$ on $[c, d]$,
+Hence, $g \in \mathfrak{R}$ on $[c, d]$,
 which further implies that $g$ is integrable
 on each subinterval $[c, x]$.
 Then by the second fundamental theorem of calculus
