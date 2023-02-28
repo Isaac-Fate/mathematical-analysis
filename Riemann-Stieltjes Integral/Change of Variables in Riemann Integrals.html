@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6.2. Linear Properties &#8212; Mathematical Analysis</title>
+    <title>6.15. Change of Variables in Riemann Integrals &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -58,8 +58,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.3. Reduction to Riemann-Stieltjes Integrals" href="Reduction%20to%20Riemann-Stieltjes%20Integrals.html" />
-    <link rel="prev" title="6.1. Definition of the Riemann-Stieltjes Integral" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html" />
+    <link rel="next" title="7. Sequences and Series of Functions" href="../Sequences%20and%20Series%20of%20Functions/index.html" />
+    <link rel="prev" title="6.14. Fundamental Theorems of Calculus" href="Fundamental%20Theorems%20of%20Calculus.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -355,8 +355,8 @@ const thebe_selector_output = ".output, .cell_output"
      6.1. Definition of the Riemann-Stieltjes Integral
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Linear%20Properties.html">
      6.2. Linear Properties
     </a>
    </li>
@@ -420,8 +420,8 @@ const thebe_selector_output = ".output, .cell_output"
      6.14. Fundamental Theorems of Calculus
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Change%20of%20Variables%20in%20Riemann%20Integrals.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      6.15. Change of Variables in Riemann Integrals
     </a>
    </li>
@@ -583,7 +583,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Linear Properties.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Change of Variables in Riemann Integrals.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -611,7 +611,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Riemann-Stieltjes Integral/Linear Properties.md"
+        <a href="../_sources/Riemann-Stieltjes Integral/Change of Variables in Riemann Integrals.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -660,7 +660,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Linear Properties</h1>
+                <h1>Change of Variables in Riemann Integrals</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -672,223 +672,66 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="linear-properties">
-<h1><span class="section-number">6.2. </span>Linear Properties<a class="headerlink" href="#linear-properties" title="Permalink to this headline">#</a></h1>
-<p>The integral is linear in the integrand. In other words, the integral of a linear combination of functions is equal to the linear combination of integrals of each function.</p>
-<div class="proof theorem admonition" id="thm:18">
-<p class="admonition-title"><span class="caption-number">Theorem 6.1 </span></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="change-of-variables-in-riemann-integrals">
+<h1><span class="section-number">6.15. </span>Change of Variables in Riemann Integrals<a class="headerlink" href="#change-of-variables-in-riemann-integrals" title="Permalink to this headline">#</a></h1>
+<div class="proof theorem admonition" id="thm:83">
+<p class="admonition-title"><span class="caption-number">Theorem 6.29 </span> (Change of Variables)</p>
 <section class="theorem-content" id="proof-content">
-<p>Suppose that <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span>. Then <span class="math notranslate nohighlight">\(c_1 f + c_2 g \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> where <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span> are constants. In that case,</p>
+<p>Suppose that function <span class="math notranslate nohighlight">\(\phi\)</span>
+with a continuous derivative on <span class="math notranslate nohighlight">\([c, d]\)</span>,
+and that <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\(\phi([c, d])\)</span>.
+Define</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\int_a^b c_1 f + c_2 g \;\mathrm{d}\alpha
-= c_1 \int_a^b f \;\mathrm{d}\alpha
-+ c_2 \int_a^b g \;\mathrm{d}\alpha\end{align*}\]</div>
+\[\begin{align*}
+F(x) = \int_{\phi(c)}^x f(t) \;\mathrm{d} t,
+\quad x \in\phi([c, d])
+\end{align*}\]</div>
+<p>Then for each <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\([c, d]\)</span>, the integral
+<span class="math notranslate nohighlight">\(\int_{c}^x f[\phi(t)] \phi^\prime(t) \; \mathrm{d} t\)</span>
+exists and has the value <span class="math notranslate nohighlight">\(F[ \phi(x) ]\)</span>.
+In particular, putting <span class="math notranslate nohighlight">\(x = d\)</span> yields</p>
+<div class="math notranslate nohighlight" id="equation-eq-143">
+<span class="eqno">(6.66)<a class="headerlink" href="#equation-eq-143" title="Permalink to this equation">#</a></span>\[\begin{align}\int_{\phi(c)}^{\phi(d)} f(t) \;\mathrm{d} t
+= \int_{c}^x f[\phi(t)]\phi^\prime(t) \;\mathrm{d} t
+\end{align}\]</div>
 </section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. Let <span class="math notranslate nohighlight">\(P\)</span> be a partition on <span class="math notranslate nohighlight">\([a,b]\)</span>. The Riemann-Stieltjes sum of <span class="math notranslate nohighlight">\(c_1 f + c_2 g\)</span> can be written as</p>
+</div><p>Note that the integrand on right-hand side of <a class="reference internal" href="#equation-eq-143">(6.66)</a>
+looks like the expression that the chain rule will produce.
+Indeed, the proof of this theorem
+differs from other theorems in this chapter in a way that
+it mainly relies on the chain rule,
+which is a technique from differentiation.
+And as one will expect,
+we shall use fundamental theorems of calculus
+to establish this connection.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. Consider the composite function <span class="math notranslate nohighlight">\(F[\phi(x)]\)</span>.
+Note that <span class="math notranslate nohighlight">\(\phi^\prime(x)\)</span> for each <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\([c,d]\)</span>
+and that <span class="math notranslate nohighlight">\(F\)</span> has a derivative at <span class="math notranslate nohighlight">\(\phi^\prime(x)\)</span>
+by the first fundamental theorem of calculus (<a class="reference internal" href="Fundamental%20Theorems%20of%20Calculus.html#thm:81">Theorem 6.27</a>)
+since <span class="math notranslate nohighlight">\(f\)</span> is continuous there.
+Then the chain rule (<a class="reference internal" href="../Differentiation/Computing%20Derivatives.html#thm:4">Theorem 4.4</a>) is applicable.
+We have</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-S(P, c_1 f + c_2 g, \alpha)
-&amp;= \sum_{k} c_1 f(t_k) + c_2 g(t_k) \Delta\alpha_k \\&amp;= c_1 \sum_{k} f(t_k) \Delta\alpha_k
-+ c_2 \sum_{k} g(t_k) \Delta\alpha_k \\&amp;= c_1 S(P, f, \alpha) + c_2 S(P, g, \alpha)
-\end{align*}\end{split}\]</div>
-<p>Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. Since <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> then there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime}\)</span>
-such that</p>
+\[\begin{align*}\frac{ \mathrm{d} }{ \mathrm{d} x } F[\phi(x)]
+= f[\phi(x) ]\phi^\prime(x)
+=: g(x)
+\end{align*}\]</div>
+<p>Furthermore, note that <span class="math notranslate nohighlight">\(g(x)\)</span> is continuous on <span class="math notranslate nohighlight">\([c, d]\)</span>
+since both <span class="math notranslate nohighlight">\(f[\phi(x)]\)</span> and <span class="math notranslate nohighlight">\(\phi^\prime(x)\)</span> are.
+Hence, <span class="math notranslate nohighlight">\(g \in \mathfrak(R)\)</span> on <span class="math notranslate nohighlight">\([c, d]\)</span>,
+which further implies that <span class="math notranslate nohighlight">\(g\)</span> is integrable
+on each subinterval <span class="math notranslate nohighlight">\([c, x]\)</span>.
+Then by the second fundamental theorem of calculus
+(<a class="reference internal" href="Fundamental%20Theorems%20of%20Calculus.html#thm:82">Theorem 6.28</a>),
+we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} &lt; \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supseteq P_\varepsilon^{\prime}\end{align*}\]</div>
-<p>Similarly, since <span class="math notranslate nohighlight">\(g \in \mathfrak{R}(\alpha)\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span> such that</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{S(P, g, \alpha) - \int_a^b g \; \mathrm{d}\alpha} &lt; \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supseteq P_\varepsilon^{\prime\prime}\end{align*}\]</div>
-<p>Let <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> be the refinement of <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime}\)</span> and <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span>, i.e., <span class="math notranslate nohighlight">\(P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}\)</span>. Then for any <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>, we have</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}&amp;\abs{
-S(P, c_1 f + c_2 g, \alpha)
-- c_1 \int_a^b f \; \mathrm{d}\alpha
-- c_2 \int_a^b g \; \mathrm{d}\alpha
-}\\&amp;\leq\abs{c_1}\abs{S(P,f,\alpha) - \int_a^b f \; \mathrm{d}\alpha}
-+ \abs{c_2}\abs{S(P,g,\alpha) - \int_a^b g \; \mathrm{d}\alpha}\\&amp;&lt; \abs{c_1}\frac{\varepsilon / 2}{1 + \abs{c_1}}
-+ \abs{c_2}\frac{\varepsilon / 2}{1 + \abs{c_2}}\\&amp;&lt; \varepsilon\end{align*}\end{split}\]</div>
-<p>This completes the proof.</p>
+\[\begin{align*}\int_c^x g(t) \;\mathrm{d} t
+= F[\phi(x)] - F[\phi(c)]
+= F[\phi(x)]\end{align*}\]</div>
+<p>Expanding expression of <span class="math notranslate nohighlight">\(g(t)\)</span> proves the theorem.</p>
 </div>
-<p>The integral is also linear in the integrator.</p>
-<div class="proof theorem admonition" id="thm:19">
-<p class="admonition-title"><span class="caption-number">Theorem 6.2 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\beta)\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span>, then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(c_1 \alpha + c_2 \beta)\)</span> where <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span> are constants. In that case,</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\int_a^b f \;\mathrm{d}(c_1 \alpha + c_2 \beta)
-= c_1 \int_a^b f \;\mathrm{d}\alpha
-+ c_2 \int_a^b f \;\mathrm{d}\beta\end{align*}\]</div>
 </section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. Let <span class="math notranslate nohighlight">\(P\)</span> be a partition on <span class="math notranslate nohighlight">\([a,b]\)</span>. We have</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-S(P, f, c_1 \alpha + c_2 \beta)
-&amp;= \sum_{k=0} f(t_k) + \Delta(c_1 \alpha + c_2 \beta)_k \\&amp;= c_1 \sum_{k=0} f(t_k) \Delta\alpha_k
-+ c_2 \sum_{k=0} f(t_k) \Delta\beta_k \\&amp;= c_1 S(P, f, \alpha) + c_2 S(P, f, \beta)
-\end{align*}\end{split}\]</div>
-<p>Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. Since <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> then there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime}\)</span>
-such that</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} &lt; \frac{\varepsilon / 2}{1 + \abs{c_1}}\quad\forall P \supseteq P_\varepsilon^{\prime}\end{align*}\]</div>
-<p>Similarly, since <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\beta)\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span> such that</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{S(P, f, \beta) - \int_a^b f \; \mathrm{d}\beta} &lt; \frac{\varepsilon / 2}{1 + \abs{c_2}}\quad\forall P \supseteq P_\varepsilon^{\prime\prime}\end{align*}\]</div>
-<p>Let <span class="math notranslate nohighlight">\(P = P_\varepsilon^{\prime} \cup P_\varepsilon^{\prime\prime}\)</span>. Then for any <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>, we have</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}&amp;\abs{
-S(P, f, c_1 \alpha + c_2 \beta)
-- c_1 \int_a^b f \; \mathrm{d}\alpha
-- c_2 \int_a^b f \; \mathrm{d}\beta
-}\\&amp;\leq\abs{c_1}\abs{S(P,f,\alpha) - \int_a^b f \; \mathrm{d}\alpha}
-+ \abs{c_2}\abs{S(P,f,\beta) - \int_a^b f \; \mathrm{d}\beta}\\&amp;&lt; \abs{c_1}\frac{\varepsilon / 2}{1 + \abs{c_1}}
-+ \abs{c_2}\frac{\varepsilon / 2}{1 + \abs{c_2}}\\&amp;&lt; \varepsilon\end{align*}\end{split}\]</div>
-</div>
-<p>If we divide the interval <span class="math notranslate nohighlight">\([a, b]\)</span> into two parts with some point <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> in the middle, then the integral over the entire interval is the sum of the integrals on these two sub-intervals. This is also a kind of linearity of integrals considering the interval of integration.</p>
-<div class="proof lemma admonition" id="lemma-2">
-<p class="admonition-title"><span class="caption-number">Lemma 6.1 </span></p>
-<section class="lemma-content" id="proof-content">
-<p>Suppose <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. We have</p>
-<div class="math notranslate nohighlight" id="equation-eq-27">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-eq-27" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
-= \int_a^c f \;\mathrm{d}\alpha
-+ \int_c^b f \;\mathrm{d}\alpha\end{align}\]</div>
-<p>The existence of two integrals in <a class="reference internal" href="#equation-eq-27">(6.1)</a> will imply the existence of the third one.</p>
-</section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. We have</p>
-<div class="math notranslate nohighlight" id="equation-eq-26">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-eq-26" title="Permalink to this equation">#</a></span>\[\begin{align}
-S(P,f,\alpha) = S(P^\prime, f, \alpha) + S(P^{\prime\prime}, f, \alpha)
-\quad\forall P = P^\prime\cup P^{\prime\prime}\end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(P\)</span>, <span class="math notranslate nohighlight">\(P^\prime\)</span> and <span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span> are partitions on <span class="math notranslate nohighlight">\([a, b]\)</span>, <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\([c, b]\)</span>, respectively. Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be chosen arbitrarily.</p>
-<p>(Proof of existence of <span class="math notranslate nohighlight">\(\int_a^b f \; \mathrm{d}\alpha\)</span>) Assume <span class="math notranslate nohighlight">\(\int_a^c f \; \mathrm{d}\alpha\)</span> and <span class="math notranslate nohighlight">\(\int_c^b f \; \mathrm{d}\alpha\)</span> exist. Then</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
-\quad\forall P^\prime\supseteq P_\varepsilon^\prime\end{align*}\]</div>
-<p>for some <span class="math notranslate nohighlight">\(P_\varepsilon^\prime\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span>. And</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{S(P^{\prime\prime}, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
-\quad\forall P^{\prime\prime}\supseteq P_\varepsilon^{\prime\prime}\end{align*}\]</div>
-<p>for some <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span> on <span class="math notranslate nohighlight">\([c, b]\)</span>. Let</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-P_\varepsilon = P_\varepsilon^\prime\cup P_\varepsilon^{\prime\prime}\end{align*}\]</div>
-<p>(Note that <span class="math notranslate nohighlight">\(c \in P_\varepsilon\)</span>.) Let</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-P &amp;\supseteq P_\varepsilon&amp;
-P^\prime&amp;= P \cap[a, c]&amp;
-P^{\prime\prime}&amp;= P \cap[c, b]\end{align*}\]</div>
-<p>Observe that</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-P^\prime&amp;\supseteq P_\varepsilon^\prime&amp;
-P^{\prime\prime}&amp;\supseteq P_\varepsilon^{\prime\prime}\end{align*}\]</div>
-<p>It then follows from <a class="reference internal" href="#equation-eq-26">(6.2)</a> that</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}&amp;\abs{
-S(P, f, \alpha)
-- \int_a^c f \; \mathrm{d}\alpha
-- \int_c^b f \; \mathrm{d}\alpha
-}\\&amp;\leq\abs{
-S(P^\prime, f, \alpha)
-- \int_a^c f \; \mathrm{d}\alpha
-} + \abs{
-S(P^{\prime\prime}, f, \alpha)
-- \int_c^b f \; \mathrm{d}\alpha
-}\\&amp;&lt; \varepsilon / 2 + \varepsilon / 2 \\&amp;= \varepsilon\end{align*}\end{split}\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> and <a class="reference internal" href="#equation-eq-27">(6.1)</a> holds.</p>
-<p>(Proof of existence of <span class="math notranslate nohighlight">\(\int_c^b f \; \mathrm{d}\alpha\)</span>) Assume <span class="math notranslate nohighlight">\(\int_a^b f \; \mathrm{d}\alpha\)</span> and <span class="math notranslate nohighlight">\(\int_a^c f \; \mathrm{d}\alpha\)</span> exist. Then</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
-\quad\forall P \supseteq P_\varepsilon\end{align*}\]</div>
-<p>for some <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. And</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{S(P^\prime, f, \alpha) - \int_a^c f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
-\quad\forall P^\prime\supseteq P_\varepsilon^\prime\end{align*}\]</div>
-<p>for some <span class="math notranslate nohighlight">\(P_\varepsilon^\prime\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span>.
-Let</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-P_\varepsilon^{\prime\prime} = (P_\varepsilon\cup P_\varepsilon^\prime) \cap[c, b]\end{align*}\]</div>
-<p>Let</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-P^{\prime\prime}&amp;\supseteq P_\varepsilon^{\prime\prime}&amp;
-P^\prime&amp;\supseteq(P_\varepsilon\cup P_\varepsilon^\prime) \cap[a, c]&amp;
-P &amp;= P^\prime\cup P^{\prime\prime}\end{align*}\]</div>
-<p>Observe that</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-P^\prime&amp;\supseteq P_\varepsilon^\prime&amp;
-P &amp;= P^\prime\cup P^{\prime\prime}\supseteq(P_\varepsilon\cap[a, c]) \cup(P_\varepsilon\cap[c, b])
-= P_\varepsilon\end{align*}\]</div>
-<p>It then follows from <a class="reference internal" href="#equation-eq-26">(6.2)</a> that</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}&amp;\abs{
-S(P^{\prime\prime}, f, \alpha)
-- \int_a^b f \; \mathrm{d}\alpha
-+ \int_a^c f \; \mathrm{d}\alpha
-}\\&amp;\leq\abs{
-S(P, f, \alpha)
-- \int_a^b f \; \mathrm{d}\alpha
-} + \abs{
-S(P^\prime, f, \alpha)
-- \int_a^c f \; \mathrm{d}\alpha
-}\\&amp;&lt; \varepsilon / 2 + \varepsilon / 2 \\&amp;= \varepsilon\end{align*}\end{split}\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([c, b]\)</span> and <a class="reference internal" href="#equation-eq-27">(6.1)</a> holds.</p>
-<p>(Proof of existence of <span class="math notranslate nohighlight">\(\int_a^c f \; \mathrm{d}\alpha\)</span>) Assume <span class="math notranslate nohighlight">\(\int_a^b f \; \mathrm{d}\alpha\)</span> and <span class="math notranslate nohighlight">\(\int_c^b f \; \mathrm{d}\alpha\)</span> exist. Then</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{S(P, f, \alpha) - \int_a^b f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
-\quad\forall P \supseteq P_\varepsilon\end{align*}\]</div>
-<p>for some <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. And</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{S(P^{\prime\prime}, f, \alpha) - \int_c^b f \; \mathrm{d}\alpha} &lt; \varepsilon / 2
-\quad\forall P^{\prime\prime}\supseteq P_\varepsilon^{\prime\prime}\end{align*}\]</div>
-<p>for some <span class="math notranslate nohighlight">\(P_\varepsilon^{\prime\prime}\)</span> on <span class="math notranslate nohighlight">\([c, b]\)</span>.
-Let</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-P_\varepsilon^\prime = (P_\varepsilon\cup P_\varepsilon^{\prime\prime}) \cap[a, c]\end{align*}\]</div>
-<p>Let</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-P^\prime&amp;\supseteq P_\varepsilon^\prime&amp;
-P^{\prime\prime}&amp;\supseteq(P_\varepsilon\cup P_\varepsilon^{\prime\prime}) \cap[c, b]&amp;
-P &amp;= P^\prime\cup P^{\prime\prime}\end{align*}\]</div>
-<p>Observe that</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-P^{\prime\prime}&amp;\supseteq P_\varepsilon^{\prime\prime}&amp;
-P &amp;= P^\prime\cup P^{\prime\prime}\supseteq(P_\varepsilon\cap[a, c]) \cup(P_\varepsilon\cap[c, b])
-= P_\varepsilon\end{align*}\]</div>
-<p>It then follows from <a class="reference internal" href="#equation-eq-26">(6.2)</a> that</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}&amp;\abs{
-S(P^\prime, f, \alpha)
-- \int_a^b f \; \mathrm{d}\alpha
-+ \int_c^b f \; \mathrm{d}\alpha
-}\\&amp;\leq\abs{
-S(P, f, \alpha)
-- \int_a^b f \; \mathrm{d}\alpha
-} + \abs{
-S(P^{\prime\prime}, f, \alpha)
-- \int_c^b f \; \mathrm{d}\alpha
-}\\&amp;&lt; \varepsilon / 2 + \varepsilon / 2 \\&amp;= \varepsilon\end{align*}\end{split}\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span> and <a class="reference internal" href="#equation-eq-27">(6.1)</a> holds.</p>
-</div>
-<div class="proof theorem admonition" id="thm:25">
-<p class="admonition-title"><span class="caption-number">Theorem 6.3 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>The existence of two integrals in <a class="reference internal" href="#equation-eq-44">(6.3)</a> will imply the existence of the third one.</p>
-<div class="math notranslate nohighlight" id="equation-eq-44">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-eq-44" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
-= \int_a^c f \;\mathrm{d}\alpha
-+ \int_c^b f \;\mathrm{d}\alpha\end{align}\]</div>
-</section>
-</div></section>
 
     <script type="text/x-thebe-config">
     {
@@ -917,17 +760,17 @@ S(P^{\prime\prime}, f, \alpha)
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Fundamental%20Theorems%20of%20Calculus.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6.1. </span>Definition of the Riemann-Stieltjes Integral</p>
+            <p class="prev-next-title"><span class="section-number">6.14. </span>Fundamental Theorems of Calculus</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Reduction%20to%20Riemann-Stieltjes%20Integrals.html" title="next page">
+    <a class='right-next' id="next-link" href="../Sequences%20and%20Series%20of%20Functions/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.3. </span>Reduction to Riemann-Stieltjes Integrals</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Sequences and Series of Functions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
