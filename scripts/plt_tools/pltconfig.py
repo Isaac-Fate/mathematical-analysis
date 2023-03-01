@@ -12,3 +12,6 @@ def config_plt():
         "size": 12
     }
     plt.rc("font", **font)
+    
+    # grid
+    plt.rc("grid", alpha=0.3)
