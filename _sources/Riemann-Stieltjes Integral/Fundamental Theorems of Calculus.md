@@ -220,6 +220,94 @@ Left: $f(x)$. Right: $F(x) = \int_{-1}^x f(t) \; \mathrm{d} t$.
 ````{prf:theorem} Second Fundamental Theorem of Calculus
 :label: thm:82
 
-TODO
+Suppose that $f \in \mathfrak{R}$ on $[a, b]$.
+Let $F$ be a function defined on $[a, b]$
+that is differentiable in $(a, b)$
+with
+
+```{math}
+\begin{align*}
+F^\prime(x) = f(x)
+\quad\forall x \in(a, b)
+\end{align*}
+```
+
+Suppose also at the endpoints, the one-sided limits
+$F(a+)$ and $F(b-)$ both exist and satisfy
+Then we have
+
+```{math}
+:label: eq:144
+\begin{align}\int_a^b f(x) \;\mathrm{d} x
+= F(b-) - F(a+)
+\end{align}
+```
+
+````
+
+````{prf:proof}
+
+Given $\varepsilon > 0$, since $f$ is integrable,
+there exists a partition $P_\varepsilon$ on $[a, b]$
+such that for any refinement $P$ of $P_\varepsilon$,
+we have
+
+```{math}
+\begin{align*}
+U(P,f) - L(P,f) < \varepsilon\end{align*}
+```
+
+Let $P=\{x_1, \ldots, x_n\}$ be a refinement of $P_\varepsilon$.
+On each subinterval $[x_{k-1}, x_k]$,
+applying the mean value theorem for derivatives
+({prf:ref}`thm:85`),
+we have
+
+```{math}
+\begin{align*}
+F(x_k -) - F(x_{k-1} +)
+= F^\prime(\xi_k) \Delta x_k
+= f(\xi_k) \Delta x_k
+\end{align*}
+```
+
+Note that $F(x_k +) = F(x_k - ) = F(x_k)$ expect possibly
+for two endpoints (when $x_k$ equals $a$ or $b$)
+since $F$ is continuous in $(a, b)$
+for it is differentiable there.
+Summing up over $k$ yields
+
+```{math}
+\begin{align*}
+F(b-) - F(a+)
+= \sum_{k=1}^n F(x_{k} - ) - F(x_{k-1} + )
+= \sum_{k=1}^n f(\xi_k) \Delta x_k
+\end{align*}
+```
+
+It then follows that
+
+```{math}
+\begin{multline*}
+U(P,f) - [F(b-) - F(a+)]
+= \sum_{k=1}^n [M_k - f(\xi_k)]\Delta x_k \\\leq\sum_{k=1}^n (M_k - m_k) \Delta x_k
+= U(P,f) - L(P,f)
+< \varepsilon\end{multline*}
+```
+
+where $M_k = \sup_{x \in[x_{k-1}, x_k]} f(x)$.
+Note that the above inequality
+holds for any refinement $P$ of $P_\varepsilon$.
+Taking the infimum over partition $P$, we obtain
+
+```{math}
+\begin{align*}\upint_a^b f(x) \;\mathrm{d} x
+- [F(b-) - F(a+)]\leq\varepsilon\end{align*}
+```
+
+This proves {eq}`eq:144` since $\varepsilon > 0$
+is arbitrary
+and that the upper integral
+equals $\int_a^b f(x) \; \mathrm{d} x$.
 
 ````

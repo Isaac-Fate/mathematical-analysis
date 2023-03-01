@@ -897,7 +897,7 @@ f^\prime(c) [g(b) - g(a)]
 <p>Applying Rolle’s theorem (<a class="reference internal" href="#thm:9">Theorem 4.7</a>) to <span class="math notranslate nohighlight">\(\psi\)</span> leads to <span class="math notranslate nohighlight">\(\psi^\prime(c) = 0\)</span> for some <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>, which is exactly <a class="reference internal" href="#equation-eq-15">(4.13)</a>.</p>
 </div>
 <p>Sometimes, functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> in <a class="reference internal" href="#thm:7">Theorem 4.9</a> may not be defined at endpoints. But all the one-sided limits exist as finite values. In this case, we still wish to apply the theorem. The following is a slight extension of <a class="reference internal" href="#thm:7">Theorem 4.9</a>.</p>
-<div class="proof theorem admonition" id="theorem-12">
+<div class="proof theorem admonition" id="thm:84">
 <p class="admonition-title"><span class="caption-number">Theorem 4.10 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be two functions, each having a derivative (finite or infinite) at each point in <span class="math notranslate nohighlight">\((a, b)\)</span>. Suppose that <span class="math notranslate nohighlight">\(f^\prime(x)\)</span> and <span class="math notranslate nohighlight">\(g^\prime(x)\)</span> do not assume infinite values simultaneously, and one-sided limits <span class="math notranslate nohighlight">\(f(a+)\)</span>, <span class="math notranslate nohighlight">\(f(b-)\)</span>, <span class="math notranslate nohighlight">\(g(a+)\)</span> and <span class="math notranslate nohighlight">\(g(b-)\)</span> all exist as finite values. Then there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that</p>
@@ -918,9 +918,27 @@ f^\prime(c) [g(b-) - g(a+)]
 \end{align*}\end{split}\]</div>
 <p>It is evident that <span class="math notranslate nohighlight">\(\tilde{f}\)</span> and <span class="math notranslate nohighlight">\(\tilde{g}\)</span> are both continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>. Furthermore, the derivatives <span class="math notranslate nohighlight">\(\tilde{f}^\prime(x) = f^\prime(x)\)</span> and <span class="math notranslate nohighlight">\(\tilde{g}^\prime(x) = g^\prime(x)\)</span> for each <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>. Applying <a class="reference internal" href="#thm:7">Theorem 4.9</a> to functions <span class="math notranslate nohighlight">\(\tilde{f}\)</span> and <span class="math notranslate nohighlight">\(\tilde{g}\)</span> leads to <a class="reference internal" href="#equation-eq-16">(4.14)</a>.</p>
 </div>
-<p>The following theorem is an immediate result of the mean value theorem, which provides a sufficient condition for determining strictly increasing and decreasing functions. It also says a function is constant if its derivative vanishes everywhere.</p>
-<div class="proof theorem admonition" id="thm:10">
+<p>Of course, by letting <span class="math notranslate nohighlight">\(g(x) = x\)</span>
+we will also obtain a version concerning
+only one function.</p>
+<div class="proof theorem admonition" id="thm:85">
 <p class="admonition-title"><span class="caption-number">Theorem 4.11 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be a function having
+a derivative (finite or infinite)
+at each point in <span class="math notranslate nohighlight">\((a, b)\)</span>.
+Suppose that one-sided limits <span class="math notranslate nohighlight">\(f(a+)\)</span> and <span class="math notranslate nohighlight">\(f(b-)\)</span> at the endpoints
+both exist as finite values.
+Then there exists <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(b-) - f(a+)
+= f^\prime(c) (b - a)
+\end{align*}\]</div>
+</section>
+</div><p>The following theorem is an immediate result of the mean value theorem, which provides a sufficient condition for determining strictly increasing and decreasing functions. It also says a function is constant if its derivative vanishes everywhere.</p>
+<div class="proof theorem admonition" id="thm:10">
+<p class="admonition-title"><span class="caption-number">Theorem 4.12 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f\)</span> has a derivative (finite or infinite) at each point in <span class="math notranslate nohighlight">\((a, b)\)</span>, and itself is continuous at the endpoints <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span>.</p>
 <ul class="simple">
@@ -949,13 +967,13 @@ f(x_2) - f(x_1) = f^\prime(c) (x_2 - x_1) = 0
 <p>This implies <span class="math notranslate nohighlight">\(f\)</span> is a constant function.</p>
 </div>
 <p>If <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> have the same derivatives everywhere in <span class="math notranslate nohighlight">\((a, b)\)</span>, then they only differ by a constant.</p>
-<div class="proof corollary admonition" id="corollary-14">
+<div class="proof corollary admonition" id="corollary-15">
 <p class="admonition-title"><span class="caption-number">Corollary 4.2 </span></p>
 <section class="corollary-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(f^\prime(x) = g^\prime(x) \; \forall x \in (a, b)\)</span>, then <span class="math notranslate nohighlight">\(f - g\)</span> is constant on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Note that the difference <span class="math notranslate nohighlight">\(f-g\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and <span class="math notranslate nohighlight">\((f-g)^\prime(x) = 0 \; \forall x \in (a, b)\)</span>. It then follows from <a class="reference internal" href="#thm:10">Theorem 4.11</a> that <span class="math notranslate nohighlight">\(f-g\)</span> is a constant.</p>
+<p>Proof. Note that the difference <span class="math notranslate nohighlight">\(f-g\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and <span class="math notranslate nohighlight">\((f-g)^\prime(x) = 0 \; \forall x \in (a, b)\)</span>. It then follows from <a class="reference internal" href="#thm:10">Theorem 4.12</a> that <span class="math notranslate nohighlight">\(f-g\)</span> is a constant.</p>
 </div>
 </section>
 </section>

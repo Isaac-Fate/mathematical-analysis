@@ -283,7 +283,9 @@ Applying Rolle's theorem ({prf:ref}`thm:9`) to $\psi$ leads to $\psi^\prime(c) =
 Sometimes, functions $f$ and $g$ in {prf:ref}`thm:7` may not be defined at endpoints. But all the one-sided limits exist as finite values. In this case, we still wish to apply the theorem. The following is a slight extension of {prf:ref}`thm:7`.
 
 
+
 ````{prf:theorem}
+:label: thm:84
 
 Let $f$ and $g$ be two functions, each having a derivative (finite or infinite) at each point in $(a, b)$. Suppose that $f^\prime(x)$ and $g^\prime(x)$ do not assume infinite values simultaneously, and one-sided limits $f(a+)$, $f(b-)$, $g(a+)$ and $g(b-)$ all exist as finite values. Then there exists $c \in (a, b)$ such that
 
@@ -312,6 +314,30 @@ Define
 ```
 
 It is evident that $\tilde{f}$ and $\tilde{g}$ are both continuous on $[a, b]$. Furthermore, the derivatives $\tilde{f}^\prime(x) = f^\prime(x)$ and $\tilde{g}^\prime(x) = g^\prime(x)$ for each $x \in (a, b)$. Applying {prf:ref}`thm:7` to functions $\tilde{f}$ and $\tilde{g}$ leads to {eq}`eq:16`.
+
+````
+
+Of course, by letting $g(x) = x$
+we will also obtain a version concerning
+only one function.
+
+
+````{prf:theorem}
+:label: thm:85
+
+Let $f$ be a function having
+a derivative (finite or infinite)
+at each point in $(a, b)$.
+Suppose that one-sided limits $f(a+)$ and $f(b-)$ at the endpoints
+both exist as finite values.
+Then there exists $c \in (a, b)$ such that
+
+```{math}
+\begin{align*}
+f(b-) - f(a+)
+= f^\prime(c) (b - a)
+\end{align*}
+```
 
 ````
 The following theorem is an immediate result of the mean value theorem, which provides a sufficient condition for determining strictly increasing and decreasing functions. It also says a function is constant if its derivative vanishes everywhere.

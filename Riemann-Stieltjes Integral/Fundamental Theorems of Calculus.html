@@ -839,9 +839,73 @@ See <a class="reference internal" href="#fig-15"><span class="std std-numref">Fi
 </div><div class="proof theorem admonition" id="thm:82">
 <p class="admonition-title"><span class="caption-number">Theorem 6.28 </span> (Second Fundamental Theorem of Calculus)</p>
 <section class="theorem-content" id="proof-content">
-<p>TODO</p>
+<p>Suppose that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Let <span class="math notranslate nohighlight">\(F\)</span> be a function defined on <span class="math notranslate nohighlight">\([a, b]\)</span>
+that is differentiable in <span class="math notranslate nohighlight">\((a, b)\)</span>
+with</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F^\prime(x) = f(x)
+\quad\forall x \in(a, b)
+\end{align*}\]</div>
+<p>Suppose also at the endpoints, the one-sided limits
+<span class="math notranslate nohighlight">\(F(a+)\)</span> and <span class="math notranslate nohighlight">\(F(b-)\)</span> both exist and satisfy
+Then we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-144">
+<span class="eqno">(6.66)<a class="headerlink" href="#equation-eq-144" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f(x) \;\mathrm{d} x
+= F(b-) - F(a+)
+\end{align}\]</div>
 </section>
-</div></section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(f\)</span> is integrable,
+there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>
+such that for any refinement <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>,
+we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P,f) - L(P,f) &lt; \varepsilon\end{align*}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(P=\{x_1, \ldots, x_n\}\)</span> be a refinement of <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>.
+On each subinterval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>,
+applying the mean value theorem for derivatives
+(<a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:85">Theorem 4.11</a>),
+we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F(x_k -) - F(x_{k-1} +)
+= F^\prime(\xi_k) \Delta x_k
+= f(\xi_k) \Delta x_k
+\end{align*}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(F(x_k +) = F(x_k - ) = F(x_k)\)</span> expect possibly
+for two endpoints (when <span class="math notranslate nohighlight">\(x_k\)</span> equals <span class="math notranslate nohighlight">\(a\)</span> or <span class="math notranslate nohighlight">\(b\)</span>)
+since <span class="math notranslate nohighlight">\(F\)</span> is continuous in <span class="math notranslate nohighlight">\((a, b)\)</span>
+for it is differentiable there.
+Summing up over <span class="math notranslate nohighlight">\(k\)</span> yields</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F(b-) - F(a+)
+= \sum_{k=1}^n F(x_{k} - ) - F(x_{k-1} + )
+= \sum_{k=1}^n f(\xi_k) \Delta x_k
+\end{align*}\]</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{multline*}
+U(P,f) - [F(b-) - F(a+)]
+= \sum_{k=1}^n [M_k - f(\xi_k)]\Delta x_k \\\leq\sum_{k=1}^n (M_k - m_k) \Delta x_k
+= U(P,f) - L(P,f)
+&lt; \varepsilon\end{multline*}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(M_k = \sup_{x \in[x_{k-1}, x_k]} f(x)\)</span>.
+Note that the above inequality
+holds for any refinement <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>.
+Taking the infimum over partition <span class="math notranslate nohighlight">\(P\)</span>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\upint_a^b f(x) \;\mathrm{d} x
+- [F(b-) - F(a+)]\leq\varepsilon\end{align*}\]</div>
+<p>This proves <a class="reference internal" href="#equation-eq-144">(6.66)</a> since <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>
+is arbitrary
+and that the upper integral
+equals <span class="math notranslate nohighlight">\(\int_a^b f(x) \; \mathrm{d} x\)</span>.</p>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
