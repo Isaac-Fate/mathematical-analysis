@@ -13,5 +13,14 @@ def config_plt():
     }
     plt.rc("font", **font)
     
+    # axes
+    plt.rc(
+        "axes", 
+        grid=True,
+    )
+    
     # grid
-    plt.rc("grid", alpha=0.3)
+    plt.rc(
+        "grid", 
+        alpha=0.3, 
+    )

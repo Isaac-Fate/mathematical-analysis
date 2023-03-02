@@ -2385,6 +2385,63 @@ It is not very intuitive to imagine, at first thought, a continuous function hav
 
 %------------------------------
 
+Sometimes, when in some proofs,
+we need to consider the \textit{corner cases}
+where function $f$ (defined on $[a, b]$) 
+is required to be \textit{differentiable}
+at the endpoints.
+Well, we cannot really say $f$ is differentiable
+at $a$ or $b$ since
+the point where a function is differentiable must
+be an interior point from our definition.
+However, we can make $a$ and $b$ be interior points
+by extending the definition of $f$ to a larger
+interval, say $[a-\delta, b+\delta]$ ($\delta > 0$).
+
+
+\begin{lemma} \label{lem:6}
+	Let function $f$ be defined on $[a, b]$.
+	If the one-sided derivatives $f^\prime_{+}(a)$
+	and $f^\prime_{-}(b)$ both exist as finite numbers
+	at endpoints.
+	Then we can extend $f$, to $\bar{f}$ on a larger 
+	closed interval $[a-\delta, b+\delta]$ ($\delta > 0$)
+	such that $\bar{f}$ is differentiable at $a$ and $b$
+	with
+	\begin{align*}
+		\bar{f}^\prime(a) = f^\prime_{+}(a)
+		\quad \text{and} \quad
+		\bar{f}^\prime(b) = f^\prime_{-}(b)
+	\end{align*}
+	To be specific, $\bar{f}$ can be defined by 
+	\begin{align*}
+		\bar{f}(x) = 
+		\begin{cases}
+			x,
+			& a \leq x \leq b \\
+			f^\prime_{+}(a) (x - a) + f(a),
+			& a - \delta \leq x < a \\
+			f^\prime_{-}(b) (x - b) + f(b),
+			& b < x \leq b + \delta
+		\end{cases}
+	\end{align*}
+\end{lemma}
+
+The geometric interpretation of extension $\bar{f}$ is 
+simply that we draw two straight lines at the two ends
+of $f$ such that their slopes are exactly
+the one-sided derivatives of $f$ at $a$ and $b$, respectively.
+See Figure~\ref{fig:16}.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.5]{figures/ma-016.png}
+	\caption{$f(x) = x^2 \sin \frac{1}{x^2}$ defined on $[0, 0.5]$ whose one-sided derivatives both exist and are finite.}
+	\label{fig:16}
+\end{figure}
+
+%------------------------------
+
 \section{Derivatives and Continuity}
 
 The next theorem helps to reduce some theorems on derivatives to theorems on continuity.
@@ -6345,8 +6402,22 @@ to establish this connection.
 
 \begin{proof}
 	Consider the composite function $F[\phi(x)]$.
-	Note that $\phi^\prime(x)$ for each $x$ in $[c,d]$
-	and that $F$ has a derivative at $\phi^\prime(x)$
+	By Lemma~\ref{lem:6}, we can extend $\phi$ 
+	to $[a-\delta, b+\delta]$ ($\delta > 0$)
+	such that $\phi$ is differentiable at each $x \in [c, d]$.
+	Functions $f$ and $F$ can also be extended correspondingly
+	without violating the hypotheses.
+	(By abusing the notation, 
+	the extended functions are also denoted by their
+	original symbols
+	in the rest of the proof.)
+	That is, $f$ remains continuous on $\phi([c-\delta, d+\delta])$, 
+	and $F$ is also well-defined for $x \in \phi([c-\delta, d+\delta])$.
+
+	Note that $\phi^\prime(x)$ exists for each $x$ in $[c,d]$ 
+	($x$ is an interior point of $[c-\delta, d+\delta]$)
+	and that $F$ is differentiable at $\phi(x)$
+	($\phi(x)$ is an interior point in $\phi([c-\delta, d+\delta])$)
 	by the first fundamental theorem of calculus (Theorem~\ref{thm:81})
 	since $f$ is continuous there.
 	Then the chain rule (Theorem~\ref{thm:4}) is applicable.
