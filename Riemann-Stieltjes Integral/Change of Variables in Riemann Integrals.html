@@ -706,8 +706,19 @@ we shall use fundamental theorems of calculus
 to establish this connection.</p>
 <div class="proof admonition" id="proof">
 <p>Proof. Consider the composite function <span class="math notranslate nohighlight">\(F[\phi(x)]\)</span>.
-Note that <span class="math notranslate nohighlight">\(\phi^\prime(x)\)</span> for each <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\([c,d]\)</span>
-and that <span class="math notranslate nohighlight">\(F\)</span> has a derivative at <span class="math notranslate nohighlight">\(\phi^\prime(x)\)</span>
+By <a class="reference internal" href="../Differentiation/Definition%20of%20Derivative.html#lem:6">Lemma 4.1</a>, we can extend <span class="math notranslate nohighlight">\(\phi\)</span>
+to <span class="math notranslate nohighlight">\([a-\delta, b+\delta]\)</span>(<span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>)
+such that <span class="math notranslate nohighlight">\(\phi\)</span> is differentiable at each <span class="math notranslate nohighlight">\(x \in[c, d]\)</span>.
+Functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(F\)</span> can also be extended correspondingly
+without violating the hypotheses.
+(By abusing the notation,
+the extended functions are also denoted by their
+original symbols
+in the rest of the proof.)
+That is, <span class="math notranslate nohighlight">\(f\)</span> remains continuous on <span class="math notranslate nohighlight">\(\phi([c-\delta, d+\delta])\)</span>,
+and <span class="math notranslate nohighlight">\(F\)</span> is also well-defined for <span class="math notranslate nohighlight">\(x \in \phi([c-\delta, d+\delta])\)</span>.</p>
+<p>Note that <span class="math notranslate nohighlight">\(\phi^\prime(x)\)</span> exists for each <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\([c,d]\)</span>(<span class="math notranslate nohighlight">\(x\)</span> is an interior point of <span class="math notranslate nohighlight">\([c-\delta, d+\delta]\)</span>)
+and that <span class="math notranslate nohighlight">\(F\)</span> is differentiable at <span class="math notranslate nohighlight">\(\phi(x)\)</span>(<span class="math notranslate nohighlight">\(\phi(x)\)</span> is an interior point in <span class="math notranslate nohighlight">\(\phi([c-\delta, d+\delta])\)</span>)
 by the first fundamental theorem of calculus (<a class="reference internal" href="Fundamental%20Theorems%20of%20Calculus.html#thm:81">Theorem 6.27</a>)
 since <span class="math notranslate nohighlight">\(f\)</span> is continuous there.
 Then the chain rule (<a class="reference internal" href="../Differentiation/Computing%20Derivatives.html#thm:4">Theorem 4.4</a>) is applicable.

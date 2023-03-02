@@ -232,3 +232,67 @@ It is an exercise to show $f^\prime(1) = -\infty$ and $f^\prime(2) = \infty$. We
 Letting $x \to 0^{+}$ leads to $f^\prime_{+}(0) = \infty$, while $x \to 0^{-}$ yields $f^\prime_{-}(0) = -\infty$. Hence, we say the derivative of $f$ does not exist at $x = 0$.
 
 ````
+
+Sometimes, when in some proofs,
+we need to consider the *corner cases*
+where function $f$(defined on $[a, b]$)
+is required to be *differentiable*
+at the endpoints.
+Well, we cannot really say $f$ is differentiable
+at $a$ or $b$ since
+the point where a function is differentiable must
+be an interior point from our definition.
+However, we can make $a$ and $b$ be interior points
+by extending the definition of $f$ to a larger
+interval, say $[a-\delta, b+\delta]$($\delta > 0$).
+
+
+
+````{prf:lemma}
+:label: lem:6
+
+Let function $f$ be defined on $[a, b]$.
+If the one-sided derivatives $f^\prime_{+}(a)$
+and $f^\prime_{-}(b)$ both exist as finite numbers
+at endpoints.
+Then we can extend $f$, to $\bar{f}$ on a larger
+closed interval $[a-\delta, b+\delta]$($\delta > 0$)
+such that $\bar{f}$ is differentiable at $a$ and $b$
+with
+
+```{math}
+\begin{align*}\bar{f}^\prime(a) = f^\prime_{+}(a)
+\quad\text{and}\quad\bar{f}^\prime(b) = f^\prime_{-}(b)
+\end{align*}
+```
+
+To be specific, $\bar{f}$ can be defined by
+
+```{math}
+\begin{align*}\bar{f}(x) =
+\begin{cases}
+x,
+& a \leq x \leq b \\
+f^\prime_{+}(a) (x - a) + f(a),
+& a - \delta \leq x < a \\
+f^\prime_{-}(b) (x - b) + f(b),
+& b < x \leq b + \delta
+\end{cases}\end{align*}
+```
+
+````
+
+The geometric interpretation of extension $\bar{f}$ is
+simply that we draw two straight lines at the two ends
+of $f$ such that their slopes are exactly
+the one-sided derivatives of $f$ at $a$ and $b$, respectively.
+See {numref}`fig:16`.
+
+
+```{figure} /figures/ma-016.png
+---
+name: fig:16
+---
+$f(x) = x^2 \sin \frac{1}{x^2}$ defined on $[0, 0.5]$ whose one-sided derivatives both exist and are finite.
+
+```
