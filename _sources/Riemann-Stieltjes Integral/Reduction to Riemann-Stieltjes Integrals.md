@@ -5,7 +5,7 @@ In the definition of Riemann-Stieltjes integral, $\mathrm{d} \alpha$ is merely a
 ````{prf:theorem}
 :label: thm:23
 
-Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and $\alpha$ has a continuous derivative $\alpha^\prime$ on $[a, b]$. Then the Riemann integral $f \alpha^\prime$ exits, i.e., $f \alpha^\prime \in \mathfrak{R}$ on $[a, b]$, and we have
+Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and $\alpha$ has a continuous derivative $\alpha^\prime$ on $[a, b]$. Then the Riemann integral $f \alpha^\prime$ exists, i.e., $f \alpha^\prime \in \mathfrak{R}$ on $[a, b]$, and we have
 
 ```{math}
 :label: eq:38

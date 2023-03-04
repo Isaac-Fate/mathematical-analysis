@@ -24,7 +24,7 @@ Suppose $ \alpha $ is increasing
 and $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
 Denote the infimum and the supremum of $f$ on $[a, b]$
 by $m$ and $M$, respectively.
-Then there exits a number $A$ satisfying
+Then there exists a number $A$ satisfying
 $m \leq A \leq M$ such that
 
 ```{math}
@@ -36,7 +36,7 @@ $m \leq A \leq M$ such that
 
 In particular, if $f$ is continuous on $[a, b]$,
 then $f$ can attain this average value, that is,
-there exits $c \in[a, b]$ such that $f(c) = A$.
+there exists $c \in[a, b]$ such that $f(c) = A$.
 
 ````
 
@@ -63,7 +63,7 @@ A = \frac{1}{ \alpha(b) - \alpha(a) }\int_a^b f \;\mathrm{d}\alpha\end{align*}
 Clearly, $m \leq A \leq M$ and {eq}`eq:139` holds.
 
 If $f$ is continuous, then by the intermediate value theorem,
-there exits $c \in[a, b]$ such that $f(c) = A$.
+there exists $c \in[a, b]$ such that $f(c) = A$.
 
 ````
 
@@ -85,7 +85,7 @@ First, note that $f \in \mathfrak{R}(\alpha)$ on $[a, b]$
 by {prf:ref}`thm:75` since $f$ is continuous
 and $\alpha$ is of bounded variation.
 Then by applying {prf:ref}`thm:77`,
-there exits $c \in[a, b]$ such that
+there exists $c \in[a, b]$ such that
 $f(c) = 0$.
 
 ````

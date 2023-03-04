@@ -259,7 +259,7 @@ It is because the derivatives cannot have jump discontinuities that monotonic de
 
 ````{prf:theorem}
 
-Suppose $f^\prime$ exits, and is monotonic in $(a, b)$. Then $f^\prime$ is continuous in $(a, b)$.
+Suppose $f^\prime$ exists, and is monotonic in $(a, b)$. Then $f^\prime$ is continuous in $(a, b)$.
 
 ````
 

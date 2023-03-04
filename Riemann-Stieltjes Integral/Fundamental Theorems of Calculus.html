@@ -704,7 +704,38 @@ and <span class="math notranslate nohighlight">\(f\)</span> is continuous. For s
 F^\prime(x) = f(x) \alpha^\prime(x)
 \end{align*}\]</div>
 </section>
-</div><div class="proof admonition" id="proof">
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Let us consider the case in statement 3
+where <span class="math notranslate nohighlight">\(x\)</span> is one of the endpoints,
+i.e., <span class="math notranslate nohighlight">\(x = a\)</span> or <span class="math notranslate nohighlight">\(x = b\)</span>.
+Suppose <span class="math notranslate nohighlight">\(x = a\)</span>.
+If one-sided derivative <span class="math notranslate nohighlight">\(\alpha^\prime_{+}(a)\)</span>
+and the one-sided limit <span class="math notranslate nohighlight">\(f(a+)\)</span> both exist and are finite,
+then <span class="math notranslate nohighlight">\(F^\prime(a+)\)</span> also exists, and</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F^\prime_{+}(a) = f(a+) \alpha^\prime_{+}(a)
+\end{align*}\]</div>
+<p>This can be proved by changing the limit processes
+to the one-sided limits in the following proof
+we are about to present.
+An analogous result also holds for <span class="math notranslate nohighlight">\(x = b\)</span>.</p>
+<p>Notice also that if <span class="math notranslate nohighlight">\(F\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F(x) = \int_c^x f \;\mathrm{d}\alpha,
+\quad x \in[a, b]\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(c\)</span> is any point in <span class="math notranslate nohighlight">\([a, b]\)</span>,
+then all the conclusions also hold,
+as an immediate consequence of this theorem.
+Too see this, we write</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F(x) = \int_a^x f \;\mathrm{d}\alpha
++ \int_c^a f \;\mathrm{d}\alpha\end{align*}\]</div>
+</div>
+<div class="proof admonition" id="proof">
 <p>Proof. It suffices to prove this theorem when <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing.</p>
 <p>(Proof of 1) Let <span class="math notranslate nohighlight">\(P\)</span> be any partition on <span class="math notranslate nohighlight">\([a, b]\)</span>.
 We have</p>
@@ -716,7 +747,7 @@ V(P,F) = \sum_{k}\abs{
 = \int_{a}^{b}\abs{f}\;\mathrm{d}\alpha\end{align*}\]</div>
 <p>Hence, <span class="math notranslate nohighlight">\(F\)</span> is of bounded of variation on <span class="math notranslate nohighlight">\([a, b]\)</span>
 since the right-hand side does not depend on <span class="math notranslate nohighlight">\(P\)</span>.</p>
-<p>(Proof of 2) There exits <span class="math notranslate nohighlight">\(M &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\abs{f} \leq M\)</span>.
+<p>(Proof of 2) There exists <span class="math notranslate nohighlight">\(M &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(\abs{f} \leq M\)</span>.
 Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span>.
 We have</p>
 <div class="math notranslate nohighlight">
@@ -728,7 +759,7 @@ We have</p>
 <p>By taking <span class="math notranslate nohighlight">\(x \to c\)</span> on both sides, we see that
 the limit <span class="math notranslate nohighlight">\(\lim_{x \to c} F(x)\)</span> exists, and it equals <span class="math notranslate nohighlight">\(F(c)\)</span>.
 Hence, <span class="math notranslate nohighlight">\(F\)</span> is also continuous at <span class="math notranslate nohighlight">\(c\)</span>.</p>
-<p>(Proof of 3) Suppose <span class="math notranslate nohighlight">\(\alpha^\prime(c)\)</span> exits and <span class="math notranslate nohighlight">\(f\)</span> is
+<p>(Proof of 3) Suppose <span class="math notranslate nohighlight">\(\alpha^\prime(c)\)</span> exists and <span class="math notranslate nohighlight">\(f\)</span> is
 continuous at <span class="math notranslate nohighlight">\(c\)</span>.
 Applying the first mean value theorem (<a class="reference internal" href="Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html#thm:77">Theorem 6.24</a>),
 there exists a number <span class="math notranslate nohighlight">\(\xi\)</span> in the closed interval
@@ -776,7 +807,16 @@ then <span class="math notranslate nohighlight">\(F^\prime(x)\)</span> exists an
 F^\prime(x) = f(x)
 \end{align*}\]</div>
 </section>
-</div><div class="proof example admonition" id="eg:13">
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We have similar comments for this theorem
+to that of the preceding one.</p>
+<p>In particular, if <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+which is very common in practice,
+then the derivative of <span class="math notranslate nohighlight">\(F\)</span> exists everywhere
+(including the one-sided derivatives at the endpoints).</p>
+</div>
+<div class="proof example admonition" id="eg:13">
 <p class="admonition-title"><span class="caption-number">Example 6.11 </span></p>
 <section class="example-content" id="proof-content">
 <p>Let</p>

@@ -133,7 +133,13 @@ Taking compositions is a more fundamental and natural way of combining two funct
 ````{prf:theorem}
 :label: thm:4
 
-Let $f$ be a function defined on an open interval $I$, and $g$ a function defined on $f(I)$. We consider the composite function $g \circ f$. If $f$ is differentiable at $c \in I$, $f(c)$ is an interior of $f(I)$, and $g$ is differentiable at $f(c)$, then $g \circ f$ is differentiable at $c$ with
+Suppose $f$ is a function defined on an open interval $I$.
+Let $c \in I$ be an interior point,
+and $g$ a function defined on some open interval $J$ containing $f(c)$.
+We consider the composite function $g \circ f$.
+If $f$ is differentiable at $c$,
+and $g$ is differentiable at $f(c)$,
+then $g \circ f$ is differentiable at $c$ with
 
 ```{math}
 :label: eq:9
@@ -144,7 +150,9 @@ Let $f$ be a function defined on an open interval $I$, and $g$ a function define
 
 ````
 
-With the help of {prf:ref}`thm:1`, we can reduce the proof of this theorem to that of {prf:ref}`thm:3`.
+With the help of {prf:ref}`thm:1`,
+we can reduce the proof of this theorem
+to that of {prf:ref}`thm:3`.
 
 
 ````{prf:proof}
@@ -159,17 +167,24 @@ f(x) - f(c) = (x-c) \phi_1(x)
 \end{align}
 ```
 
-where $\phi_1$ is some function that is continuous at $c$ with $\phi_1(c) = f^\prime(c)$. Using the same argument, since $g$ is differentiable at $f(c)$, we have
+where $\phi_1$ is some function
+that is continuous at $c$
+with $\phi_1(c) = f^\prime(c)$.
+Using the same argument,
+since $g$ is differentiable at $f(c)$,
+we have
 
 ```{math}
 :label: eq:11
 \begin{align}
 g(y) - g(f(c)) = (y-f(c)) \phi_2(y)
-\quad\forall y \in f(I)
+\quad\forall y \in J
 \end{align}
 ```
 
-where $\phi_2$ is some function that is continuous at $f(c)$ with $\phi_2(c) = g^\prime(f(c))$. Replace $y$ with $f(x)$ in {eq}`eq:11` yields
+where $\phi_2$ is some function that is continuous at $f(c)$
+with $\phi_2(c) = g^\prime(f(c))$.
+Replacing $y$ with $f(x)$ in {eq}`eq:11` yields
 
 ```{math}
 \begin{align*}
@@ -178,7 +193,9 @@ g(f(x)) - g(f(c)) = (f(x)-f(c)) \phi_2(f(x))
 \end{align*}
 ```
 
-Then by replacing $f(x)-f(c)$ with the right-hand side of {eq}`eq:10`, we have
+Then by replacing $f(x)-f(c)$
+with the right-hand side of {eq}`eq:10`,
+we have
 
 ```{math}
 \begin{align*}
@@ -187,7 +204,11 @@ g(f(x)) - g(f(c)) = (x-c) \phi_1(x) \phi_2(f(x))
 \end{align*}
 ```
 
-Note that $\phi_2(f(x))$ is continuous at $c$ by {prf:ref}`thm:3`. And the product $\phi_1(x) \phi_2(f(x))$ is also continuous. This implies $f \circ f$ is differentiable at $c$ by {prf:ref}`thm:1`. And its derivative at $x = c$ equals
+Note that $\phi_2(f(x))$ is continuous at $c$
+by {prf:ref}`thm:3`.
+And the product $\phi_1(x) \phi_2(f(x))$ is also continuous.
+This implies $f \circ f$ is differentiable at $c$
+by {prf:ref}`thm:1`. And its derivative at $x = c$ equals
 
 ```{math}
 \begin{align*}(g \circ f)^\prime(c)

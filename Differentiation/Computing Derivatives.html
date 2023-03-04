@@ -811,13 +811,21 @@ g(x) - g(c) = (x - c) \phi_2^\prime(x) \end{align}\]</div>
 <div class="proof theorem admonition" id="thm:4">
 <p class="admonition-title"><span class="caption-number">Theorem 4.4 </span></p>
 <section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(f\)</span> be a function defined on an open interval <span class="math notranslate nohighlight">\(I\)</span>, and <span class="math notranslate nohighlight">\(g\)</span> a function defined on <span class="math notranslate nohighlight">\(f(I)\)</span>. We consider the composite function <span class="math notranslate nohighlight">\(g \circ f\)</span>. If <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c \in I\)</span>, <span class="math notranslate nohighlight">\(f(c)\)</span> is an interior of <span class="math notranslate nohighlight">\(f(I)\)</span>, and <span class="math notranslate nohighlight">\(g\)</span> is differentiable at <span class="math notranslate nohighlight">\(f(c)\)</span>, then <span class="math notranslate nohighlight">\(g \circ f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> with</p>
+<p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is a function defined on an open interval <span class="math notranslate nohighlight">\(I\)</span>.
+Let <span class="math notranslate nohighlight">\(c \in I\)</span> be an interior point,
+and <span class="math notranslate nohighlight">\(g\)</span> a function defined on some open interval <span class="math notranslate nohighlight">\(J\)</span> containing <span class="math notranslate nohighlight">\(f(c)\)</span>.
+We consider the composite function <span class="math notranslate nohighlight">\(g \circ f\)</span>.
+If <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span>,
+and <span class="math notranslate nohighlight">\(g\)</span> is differentiable at <span class="math notranslate nohighlight">\(f(c)\)</span>,
+then <span class="math notranslate nohighlight">\(g \circ f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> with</p>
 <div class="math notranslate nohighlight" id="equation-eq-9">
 <span class="eqno">(4.7)<a class="headerlink" href="#equation-eq-9" title="Permalink to this equation">#</a></span>\[\begin{align}(g \circ f)^\prime(c)
 = g^\prime(f(c)) f^\prime(c)
 \end{align}\]</div>
 </section>
-</div><p>With the help of <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 4.1</a>, we can reduce the proof of this theorem to that of <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:3">Theorem 3.2</a>.</p>
+</div><p>With the help of <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 4.1</a>,
+we can reduce the proof of this theorem
+to that of <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:3">Theorem 3.2</a>.</p>
 <div class="proof admonition" id="proof">
 <p>Proof. Since <span class="math notranslate nohighlight">\(f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span>, using <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 4.1</a>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-10">
@@ -825,25 +833,38 @@ g(x) - g(c) = (x - c) \phi_2^\prime(x) \end{align}\]</div>
 f(x) - f(c) = (x-c) \phi_1(x)
 \quad\forall x \in I
 \end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\phi_1\)</span> is some function that is continuous at <span class="math notranslate nohighlight">\(c\)</span> with <span class="math notranslate nohighlight">\(\phi_1(c) = f^\prime(c)\)</span>. Using the same argument, since <span class="math notranslate nohighlight">\(g\)</span> is differentiable at <span class="math notranslate nohighlight">\(f(c)\)</span>, we have</p>
+<p>where <span class="math notranslate nohighlight">\(\phi_1\)</span> is some function
+that is continuous at <span class="math notranslate nohighlight">\(c\)</span>
+with <span class="math notranslate nohighlight">\(\phi_1(c) = f^\prime(c)\)</span>.
+Using the same argument,
+since <span class="math notranslate nohighlight">\(g\)</span> is differentiable at <span class="math notranslate nohighlight">\(f(c)\)</span>,
+we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-11">
 <span class="eqno">(4.9)<a class="headerlink" href="#equation-eq-11" title="Permalink to this equation">#</a></span>\[\begin{align}
 g(y) - g(f(c)) = (y-f(c)) \phi_2(y)
-\quad\forall y \in f(I)
+\quad\forall y \in J
 \end{align}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\phi_2\)</span> is some function that is continuous at <span class="math notranslate nohighlight">\(f(c)\)</span> with <span class="math notranslate nohighlight">\(\phi_2(c) = g^\prime(f(c))\)</span>. Replace <span class="math notranslate nohighlight">\(y\)</span> with <span class="math notranslate nohighlight">\(f(x)\)</span> in <a class="reference internal" href="#equation-eq-11">(4.9)</a> yields</p>
+<p>where <span class="math notranslate nohighlight">\(\phi_2\)</span> is some function that is continuous at <span class="math notranslate nohighlight">\(f(c)\)</span>
+with <span class="math notranslate nohighlight">\(\phi_2(c) = g^\prime(f(c))\)</span>.
+Replacing <span class="math notranslate nohighlight">\(y\)</span> with <span class="math notranslate nohighlight">\(f(x)\)</span> in <a class="reference internal" href="#equation-eq-11">(4.9)</a> yields</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 g(f(x)) - g(f(c)) = (f(x)-f(c)) \phi_2(f(x))
 \quad\forall x \in I
 \end{align*}\]</div>
-<p>Then by replacing <span class="math notranslate nohighlight">\(f(x)-f(c)\)</span> with the right-hand side of <a class="reference internal" href="#equation-eq-10">(4.8)</a>, we have</p>
+<p>Then by replacing <span class="math notranslate nohighlight">\(f(x)-f(c)\)</span>
+with the right-hand side of <a class="reference internal" href="#equation-eq-10">(4.8)</a>,
+we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 g(f(x)) - g(f(c)) = (x-c) \phi_1(x) \phi_2(f(x))
 \quad\forall x \in I
 \end{align*}\]</div>
-<p>Note that <span class="math notranslate nohighlight">\(\phi_2(f(x))\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span> by <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:3">Theorem 3.2</a>. And the product <span class="math notranslate nohighlight">\(\phi_1(x) \phi_2(f(x))\)</span> is also continuous. This implies <span class="math notranslate nohighlight">\(f \circ f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span> by <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 4.1</a>. And its derivative at <span class="math notranslate nohighlight">\(x = c\)</span> equals</p>
+<p>Note that <span class="math notranslate nohighlight">\(\phi_2(f(x))\)</span> is continuous at <span class="math notranslate nohighlight">\(c\)</span>
+by <a class="reference internal" href="../Limits%20and%20Continuity/Continuous%20Functions.html#thm:3">Theorem 3.2</a>.
+And the product <span class="math notranslate nohighlight">\(\phi_1(x) \phi_2(f(x))\)</span> is also continuous.
+This implies <span class="math notranslate nohighlight">\(f \circ f\)</span> is differentiable at <span class="math notranslate nohighlight">\(c\)</span>
+by <a class="reference internal" href="Derivatives%20and%20Continuity.html#thm:1">Theorem 4.1</a>. And its derivative at <span class="math notranslate nohighlight">\(x = c\)</span> equals</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}(g \circ f)^\prime(c)
 = \phi_1(c) \phi_2(f(c))

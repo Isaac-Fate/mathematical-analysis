@@ -43,20 +43,10 @@ to establish this connection.
 ````{prf:proof}
 
 Consider the composite function $F[\phi(x)]$.
-By {prf:ref}`lem:6`, we can extend $\phi$
-to $[a-\delta, b+\delta]$($\delta > 0$)
-such that $\phi$ is differentiable at each $x \in[c, d]$.
-Functions $f$ and $F$ can also be extended correspondingly
-without violating the hypotheses.
-(By abusing the notation,
-the extended functions are also denoted by their
-original symbols
-in the rest of the proof.)
-That is, $f$ remains continuous on $\phi([c-\delta, d+\delta])$,
-and $F$ is also well-defined for $x \in \phi([c-\delta, d+\delta])$.
-
-Note that $\phi^\prime(x)$ exists for each $x$ in $[c,d]$($x$ is an interior point of $[c-\delta, d+\delta]$)
-and that $F$ is differentiable at $\phi(x)$($\phi(x)$ is an interior point in $\phi([c-\delta, d+\delta])$)
+Note that $\phi^\prime(x)$ exists (and is finite)
+for each $x$ in $[c,d]$
+and that the derivative of $F$ exists (and is finite)
+at $\phi(x)$
 by the first fundamental theorem of calculus ({prf:ref}`thm:81`)
 since $f$ is continuous there.
 Then the chain rule ({prf:ref}`thm:4`) is applicable.

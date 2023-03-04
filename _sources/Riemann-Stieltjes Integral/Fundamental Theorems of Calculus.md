@@ -40,6 +40,48 @@ F^\prime(x) = f(x) \alpha^\prime(x)
 
 ````
 
+:::{note}
+
+Let us consider the case in statement 3
+where $x$ is one of the endpoints,
+i.e., $x = a$ or $x = b$.
+Suppose $x = a$.
+If one-sided derivative $\alpha^\prime_{+}(a)$
+and the one-sided limit $f(a+)$ both exist and are finite,
+then $F^\prime(a+)$ also exists, and
+
+```{math}
+\begin{align*}
+F^\prime_{+}(a) = f(a+) \alpha^\prime_{+}(a)
+\end{align*}
+```
+
+This can be proved by changing the limit processes
+to the one-sided limits in the following proof
+we are about to present.
+An analogous result also holds for $x = b$.
+
+Notice also that if $F$ is defined as
+
+```{math}
+\begin{align*}
+F(x) = \int_c^x f \;\mathrm{d}\alpha,
+\quad x \in[a, b]\end{align*}
+```
+
+where $c$ is any point in $[a, b]$,
+then all the conclusions also hold,
+as an immediate consequence of this theorem.
+Too see this, we write
+
+```{math}
+\begin{align*}
+F(x) = \int_a^x f \;\mathrm{d}\alpha
++ \int_c^a f \;\mathrm{d}\alpha\end{align*}
+```
+
+:::
+
 ````{prf:proof}
 
 It suffices to prove this theorem when $\alpha$ is increasing.
@@ -58,7 +100,7 @@ V(P,F) = \sum_{k}\abs{
 Hence, $F$ is of bounded of variation on $[a, b]$
 since the right-hand side does not depend on $P$.
 
-(Proof of 2) There exits $M > 0$ such that $\abs{f} \leq M$.
+(Proof of 2) There exists $M > 0$ such that $\abs{f} \leq M$.
 Suppose $\alpha$ is continuous at $c$.
 We have
 
@@ -74,7 +116,7 @@ By taking $x \to c$ on both sides, we see that
 the limit $\lim_{x \to c} F(x)$ exists, and it equals $F(c)$.
 Hence, $F$ is also continuous at $c$.
 
-(Proof of 3) Suppose $\alpha^\prime(c)$ exits and $f$ is
+(Proof of 3) Suppose $\alpha^\prime(c)$ exists and $f$ is
 continuous at $c$.
 Applying the first mean value theorem ({prf:ref}`thm:77`),
 there exists a number $\xi$ in the closed interval
@@ -139,6 +181,18 @@ F^\prime(x) = f(x)
 
 
 ````
+
+:::{note}
+
+We have similar comments for this theorem
+to that of the preceding one.
+
+In particular, if $f$ is continuous on $[a, b]$,
+which is very common in practice,
+then the derivative of $F$ exists everywhere
+(including the one-sided derivatives at the endpoints).
+
+:::
 
 ````{prf:example}
 :label: eg:13

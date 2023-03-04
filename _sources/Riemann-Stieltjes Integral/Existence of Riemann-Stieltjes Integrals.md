@@ -27,7 +27,7 @@ it suffices to prove this theorem when $ \alpha $ is increasing.
 
 Given $ \varepsilon > 0 $,
 since $ f $ is continuous on $ [a, b] $,
-there exits $ \delta > 0 $ such that
+there exists $ \delta > 0 $ such that
 
 ```{math}
 \begin{align*}\abs{s - t} < \delta\implies\abs{f(s) - f(t)} < \frac{ \varepsilon / 2 }{
@@ -84,7 +84,7 @@ Thanks to integration by parts,
 we can get for free
 an additional theorem of existence
 of Riemann integrals from {prf:ref}`thm:75`.
-That is, $ \int f \; \mathrm{d} x $ exits
+That is, $ \int f \; \mathrm{d} x $ exists
 if $ f $ is of bounded variation.
 
 
@@ -92,7 +92,7 @@ if $ f $ is of bounded variation.
 :label: thm:76
 
 The Riemann integral $ \int_a^b f \; \mathrm{d} x $
-exits if one of the following conditions is satisfied.
+exists if one of the following conditions is satisfied.
 - ➀ $ f $ is continuous on $ [a, b] $.
 - ➁ $ f $ is of bounded variation on $ [a, b] $.
 
