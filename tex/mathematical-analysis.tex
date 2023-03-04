@@ -2622,7 +2622,13 @@ The proof we present here is done by exploiting Theorem~\ref{thm:1}, and it may 
 Taking compositions is a more fundamental and natural way of combining two functions apart from summations, products, etc. The next result, the \textbf{chain rule}\index{chain rule}, provides a method of computing the derivative of a composite function.
 
 \begin{theorem} \label{thm:4}
-    Let $f$ be a function defined on an open interval $I$, and $g$ a function defined on $f(I)$. We consider the composite function $g \circ f$. If $f$ is differentiable at $c \in I$, $f(c)$ is an interior of $f(I)$, and $g$ is differentiable at $f(c)$, then $g \circ f$ is differentiable at $c$ with 
+    Suppose $f$ is a function defined on an open interval $I$.
+	Let $c \in I$ be an interior point,
+	and $g$ a function defined on some open interval $J$ containing $f(c)$. 
+	We consider the composite function $g \circ f$. 
+	If $f$ is differentiable at $c$, 
+	and $g$ is differentiable at $f(c)$, 
+	then $g \circ f$ is differentiable at $c$ with 
     \begin{align}
         (g \circ f)^\prime (c)
         = g^\prime(f(c)) f^\prime(c)
@@ -2630,7 +2636,9 @@ Taking compositions is a more fundamental and natural way of combining two funct
     \end{align}
 \end{theorem}
 
-With the help of Theorem~\ref{thm:1}, we can reduce the proof of this theorem to that of Theorem~\ref{thm:3}.
+With the help of Theorem~\ref{thm:1}, 
+we can reduce the proof of this theorem 
+to that of Theorem~\ref{thm:3}.
 
 \begin{proof}
     Since $f$ is differentiable at $c$, using Theorem~\ref{thm:1}, we have 
@@ -2639,23 +2647,36 @@ With the help of Theorem~\ref{thm:1}, we can reduce the proof of this theorem to
         \quad \forall x \in I
         \label{eq:10}
     \end{align}
-    where $\phi_1$ is some function that is continuous at $c$ with $\phi_1(c) = f^\prime(c)$. Using the same argument, since $g$ is differentiable at $f(c)$, we have 
+    where $\phi_1$ is some function 
+	that is continuous at $c$ 
+	with $\phi_1(c) = f^\prime(c)$. 
+	Using the same argument, 
+	since $g$ is differentiable at $f(c)$, 
+	we have 
     \begin{align}
         g(y) - g(f(c)) = (y-f(c)) \phi_2(y)
-        \quad \forall y \in f(I)
+        \quad \forall y \in J
         \label{eq:11}
     \end{align}
-    where $\phi_2$ is some function that is continuous at $f(c)$ with $\phi_2(c) = g^\prime(f(c))$. Replace $y$ with $f(x)$ in \eqref{eq:11} yields 
+    where $\phi_2$ is some function that is continuous at $f(c)$ 
+	with $\phi_2(c) = g^\prime(f(c))$. 
+	Replacing $y$ with $f(x)$ in \eqref{eq:11} yields 
     \begin{align*}
         g(f(x)) - g(f(c)) = (f(x)-f(c)) \phi_2(f(x))
         \quad \forall x \in I
     \end{align*}
-    Then by replacing $f(x)-f(c)$ with the right-hand side of \eqref{eq:10}, we have 
+    Then by replacing $f(x)-f(c)$ 
+	with the right-hand side of \eqref{eq:10}, 
+	we have 
     \begin{align*}
         g(f(x)) - g(f(c)) = (x-c) \phi_1(x) \phi_2(f(x))
         \quad \forall x \in I
     \end{align*}
-    Note that $\phi_2(f(x))$ is continuous at $c$ by Theorem~\ref{thm:3}. And the product $\phi_1(x) \phi_2(f(x))$ is also continuous. This implies $f \circ f$ is differentiable at $c$ by Theorem~\ref{thm:1}. And its derivative at $x = c$ equals
+    Note that $\phi_2(f(x))$ is continuous at $c$ 
+	by Theorem~\ref{thm:3}. 
+	And the product $\phi_1(x) \phi_2(f(x))$ is also continuous. 
+	This implies $f \circ f$ is differentiable at $c$ 
+	by Theorem~\ref{thm:1}. And its derivative at $x = c$ equals
     \begin{align*}
         (g \circ f)^\prime(c)
         = \phi_1(c) \phi_2(f(c))
@@ -3148,7 +3169,7 @@ We plot the original function $f$ along with its derivative $f^\prime$ side by s
 \par It is because the derivatives cannot have jump discontinuities that monotonic derivatives are necessarily continuous.
 
 \begin{theorem}
-    Suppose $f^\prime$ exits, and is monotonic in $(a, b)$. Then $f^\prime$ is continuous in $(a, b)$.
+    Suppose $f^\prime$ exists, and is monotonic in $(a, b)$. Then $f^\prime$ is continuous in $(a, b)$.
 \end{theorem}
 
 \begin{proof}
@@ -4025,7 +4046,7 @@ In fact, all functions of bounded variation can be written as a difference betwe
 \par In the definition of Riemann-Stieltjes integral, $\mathrm{d} \alpha$ is merely a symbol which emphasizes that the integrator is $\alpha$. However, it is tempting to associate this symbol with the concept of differentials, and then replace it with $\alpha^\prime(x) \; \mathrm{d} x$. As stated in the following theorem, we can indeed do this under some conditions.
 
 \begin{theorem} \label{thm:23}
-    Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and $\alpha$ has a continuous derivative $\alpha^\prime$ on $[a, b]$. Then the Riemann integral $f \alpha^\prime$ exits, i.e., $f \alpha^\prime \in \mathfrak{R}$ on $[a, b]$, and we have 
+    Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and $\alpha$ has a continuous derivative $\alpha^\prime$ on $[a, b]$. Then the Riemann integral $f \alpha^\prime$ exists, i.e., $f \alpha^\prime \in \mathfrak{R}$ on $[a, b]$, and we have 
     \begin{align}
         \int_{a}^{b} f(x) \; \mathrm{d}\alpha(x)
         = \int_{a}^{b} f(x) \alpha^\prime(x) \; \mathrm{d}x
@@ -5786,7 +5807,7 @@ $ \alpha $ is of bounded variation.
 	
 	Given $ \varepsilon > 0 $,
 	since $ f $ is continuous on $ [a, b] $,
-	there exits $ \delta > 0 $ such that 
+	there exists $ \delta > 0 $ such that 
 	\begin{align*}
 		\abs{s - t} < \delta
 		\implies \abs{f(s) - f(t)} < \frac{ \varepsilon / 2 }{
@@ -5836,12 +5857,12 @@ Thanks to integration by parts,
 we can get for free 
 an additional theorem of existence
 of Riemann integrals from Theorem~\ref{thm:75}.
-That is, $ \int f \; \mathrm{d} x $ exits
+That is, $ \int f \; \mathrm{d} x $ exists
 if $ f $ is of bounded variation.
 
 \begin{theorem} \label{thm:76}
 	The Riemann integral $ \int_a^b f \; \mathrm{d} x $
-	exits if one of the following conditions is satisfied.
+	exists if one of the following conditions is satisfied.
 	\begin{enumerate}
 		\item $ f $ is continuous on $ [a, b] $.
 		\item $ f $ is of bounded variation on $ [a, b] $.
@@ -5886,7 +5907,7 @@ We can extend this concept for Riemann-Stieltjes integrals.
 	and $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
 	Denote the infimum and the supremum of $f$ on $[a, b]$
 	by $m$ and $M$, respectively.
-	Then there exits a number $A$ satisfying 
+	Then there exists a number $A$ satisfying 
 	$m \leq A \leq M$ such that 
 	\begin{align}
 		\int_a^b f \; \mathrm{d} \alpha
@@ -5896,7 +5917,7 @@ We can extend this concept for Riemann-Stieltjes integrals.
 	\end{align}
 	In particular, if $f$ is continuous on $[a, b]$, 
 	then $f$ can attain this average value, that is, 
-	there exits $c \in [a, b]$ such that $f(c) = A$.
+	there exists $c \in [a, b]$ such that $f(c) = A$.
 \end{theorem}
 
 \begin{proof}
@@ -5918,7 +5939,7 @@ We can extend this concept for Riemann-Stieltjes integrals.
 	Clearly, $m \leq A \leq M$ and \eqref{eq:139} holds.
 	
 	If $f$ is continuous, then by the intermediate value theorem,
-	there exits $c \in [a, b]$ such that $f(c) = A$.
+	there exists $c \in [a, b]$ such that $f(c) = A$.
 \end{proof}
 
 \begin{exercise} \label{ex:9}
@@ -5934,7 +5955,7 @@ We can extend this concept for Riemann-Stieltjes integrals.
 	by Theorem~\ref{thm:75} since $f$ is continuous
 	and $\alpha$ is of bounded variation.
 	Then by applying Theorem~\ref{thm:77},
-	there exits $c \in [a, b]$ such that 
+	there exists $c \in [a, b]$ such that 
 	$f(c) = 0$.
 \end{solution}
 
@@ -6152,6 +6173,37 @@ where the integrator is any function of bounded variation.
 	\end{enumerate}
 \end{theorem}
 
+\begin{note}
+	Let us consider the case in statement 3 
+	where $x$ is one of the endpoints, 
+	i.e., $x = a$ or $x = b$.
+	Suppose $x = a$.
+	If one-sided derivative $\alpha^\prime_{+}(a)$
+	and the one-sided limit $f(a+)$ both exist and are finite,
+	then $F^\prime(a+)$ also exists, and
+	\begin{align*}
+		F^\prime_{+}(a) = f(a+) \alpha^\prime_{+}(a)
+	\end{align*}
+	This can be proved by changing the limit processes
+	to the one-sided limits in the following proof
+	we are about to present.
+	An analogous result also holds for $x = b$. 
+
+	Notice also that if $F$ is defined as 
+	\begin{align*}
+		F(x) = \int_c^x f \; \mathrm{d} \alpha, 
+		\quad x \in [a, b]
+	\end{align*}
+	where $c$ is any point in $[a, b]$,
+	then all the conclusions also hold, 
+	as an immediate consequence of this theorem.
+	Too see this, we write
+	\begin{align*}
+		F(x) = \int_a^x f \; \mathrm{d} \alpha
+		+ \int_c^a f \; \mathrm{d} \alpha
+	\end{align*}
+\end{note}
+
 \begin{proof}
 	It suffices to prove this theorem when $\alpha$ is increasing.
 
@@ -6168,7 +6220,7 @@ where the integrator is any function of bounded variation.
 	Hence, $F$ is of bounded of variation on $[a, b]$
 	since the right-hand side does not depend on $P$.
 
-	(Proof of 2) There exits $M > 0$ such that $\abs{f} \leq M$.
+	(Proof of 2) There exists $M > 0$ such that $\abs{f} \leq M$.
 	Suppose $\alpha$ is continuous at $c$.
 	We have 
 	\begin{align*}
@@ -6184,7 +6236,7 @@ where the integrator is any function of bounded variation.
 	the limit $\lim_{x \to c} F(x)$ exists, and it equals $F(c)$.
 	Hence, $F$ is also continuous at $c$.
 
-	(Proof of 3) Suppose $\alpha^\prime(c)$ exits and $f$ is 
+	(Proof of 3) Suppose $\alpha^\prime(c)$ exists and $f$ is 
 	continuous at $c$. 
 	Applying the first mean value theorem (Theorem~\ref{thm:77}),
 	there exists a number $\xi$ in the closed interval 
@@ -6232,6 +6284,16 @@ theorem of calculus.
 			\end{align*}
 	\end{enumerate}
 \end{theorem}
+
+\begin{note}
+	We have similar comments for this theorem
+	to that of the preceding one.
+
+	In particular, if $f$ is continuous on $[a, b]$,
+	which is very common in practice,
+	then the derivative of $F$ exists everywhere
+	(including the one-sided derivatives at the endpoints).
+\end{note}
 
 \begin{example} \label{eg:13}
 	Let 
@@ -6402,22 +6464,10 @@ to establish this connection.
 
 \begin{proof}
 	Consider the composite function $F[\phi(x)]$.
-	By Lemma~\ref{lem:6}, we can extend $\phi$ 
-	to $[a-\delta, b+\delta]$ ($\delta > 0$)
-	such that $\phi$ is differentiable at each $x \in [c, d]$.
-	Functions $f$ and $F$ can also be extended correspondingly
-	without violating the hypotheses.
-	(By abusing the notation, 
-	the extended functions are also denoted by their
-	original symbols
-	in the rest of the proof.)
-	That is, $f$ remains continuous on $\phi([c-\delta, d+\delta])$, 
-	and $F$ is also well-defined for $x \in \phi([c-\delta, d+\delta])$.
-
-	Note that $\phi^\prime(x)$ exists for each $x$ in $[c,d]$ 
-	($x$ is an interior point of $[c-\delta, d+\delta]$)
-	and that $F$ is differentiable at $\phi(x)$
-	($\phi(x)$ is an interior point in $\phi([c-\delta, d+\delta])$)
+	Note that $\phi^\prime(x)$ exists (and is finite) 
+	for each $x$ in $[c,d]$ 
+	and that the derivative of $F$ exists (and is finite) 
+	at $\phi(x)$
 	by the first fundamental theorem of calculus (Theorem~\ref{thm:81})
 	since $f$ is continuous there.
 	Then the chain rule (Theorem~\ref{thm:4}) is applicable.
