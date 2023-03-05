@@ -141,7 +141,7 @@ Consider the integral
 \end{align*}
 ```
 
-where $f$ can be any continuous functions on $[0, 1 \\pi]$.
+where $f$ can be any continuous functions on $[0, 1 / \pi]$.
 Let
 
 ```{math}
@@ -159,7 +159,7 @@ Note that
 & x = 0
 \end{cases},
 \quad
-x \in[0, 1 /pi]\end{align*}
+x \in[0, 1 / \pi]\end{align*}
 ```
 
 Then by applying {prf:ref}`thm:83`, the integral
