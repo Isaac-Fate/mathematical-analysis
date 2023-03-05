@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Set Theory &#8212; Mathematical Analysis</title>
+    <title>6.16. Lebesgue Criterion for Existence of Riemann Integrals &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,11 +53,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.1. Properties of Suprema and Infima" href="Properties%20of%20Suprema%20and%20Infima.html" />
-    <link rel="prev" title="Preface" href="../intro.html" />
+    <link rel="next" title="7. Sequences and Series of Functions" href="../Sequences%20and%20Series%20of%20Functions/index.html" />
+    <link rel="prev" title="6.15. Change of Variables in Riemann Integrals" href="Change%20of%20Variables%20in%20Riemann%20Integrals.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,18 +125,18 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Set%20Theory/index.html">
    1. Set Theory
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Properties%20of%20Suprema%20and%20Infima.html">
+    <a class="reference internal" href="../Set%20Theory/Properties%20of%20Suprema%20and%20Infima.html">
      1.1. Properties of Suprema and Infima
     </a>
    </li>
@@ -338,93 +340,93 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Riemann-Stieltjes%20Integral/index.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
    6. Riemann-Stieltjes Integral
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">
+    <a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">
      6.1. Definition of the Riemann-Stieltjes Integral
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Linear%20Properties.html">
+    <a class="reference internal" href="Linear%20Properties.html">
      6.2. Linear Properties
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Reduction%20to%20Riemann-Stieltjes%20Integrals.html">
+    <a class="reference internal" href="Reduction%20to%20Riemann-Stieltjes%20Integrals.html">
      6.3. Reduction to Riemann-Stieltjes Integrals
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Integration%20by%20Parts.html">
+    <a class="reference internal" href="Integration%20by%20Parts.html">
      6.4. Integration by Parts
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Change%20of%20Variables.html">
+    <a class="reference internal" href="Change%20of%20Variables.html">
      6.5. Change of Variables
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Step%20Functions%20as%20Integrators.html">
+    <a class="reference internal" href="Step%20Functions%20as%20Integrators.html">
      6.6. Step Functions as Integrators
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">
+    <a class="reference internal" href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">
      6.7. Reduction of Riemann-Stieltjes Integrals to Finite Sums
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html">
+    <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html">
      6.8. Darboux Integrals with Monotonically Increasing Integrators
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Riemann%27s%20Condition.html">
+    <a class="reference internal" href="Riemann%27s%20Condition.html">
      6.9. Riemann’s Condition
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html">
+    <a class="reference internal" href="Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html">
      6.10. Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Integrators%20of%20Bounded%20Variation.html">
+    <a class="reference internal" href="Integrators%20of%20Bounded%20Variation.html">
      6.11. Integrators of Bounded Variation
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Existence%20of%20Riemann-Stieltjes%20Integrals.html">
+    <a class="reference internal" href="Existence%20of%20Riemann-Stieltjes%20Integrals.html">
      6.12. Existence of Riemann-Stieltjes Integrals
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html">
+    <a class="reference internal" href="Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html">
      6.13. Mean Value Theorems for Riemann-Stieltjes Integrals
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Fundamental%20Theorems%20of%20Calculus.html">
+    <a class="reference internal" href="Fundamental%20Theorems%20of%20Calculus.html">
      6.14. Fundamental Theorems of Calculus
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Change%20of%20Variables%20in%20Riemann%20Integrals.html">
+    <a class="reference internal" href="Change%20of%20Variables%20in%20Riemann%20Integrals.html">
      6.15. Change of Variables in Riemann Integrals
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Lebesgue%20Criterion%20for%20Existence%20of%20Riemann%20Integrals.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      6.16. Lebesgue Criterion for Existence of Riemann Integrals
     </a>
    </li>
@@ -586,7 +588,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FSet Theory/index.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Lebesgue Criterion for Existence of Riemann Integrals.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -614,7 +616,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Set Theory/index.md"
+        <a href="../_sources/Riemann-Stieltjes Integral/Lebesgue Criterion for Existence of Riemann Integrals.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -663,7 +665,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Set Theory</h1>
+                <h1>Lebesgue Criterion for Existence of Riemann Integrals</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -675,12 +677,89 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="set-theory">
-<h1><span class="section-number">1. </span>Set Theory<a class="headerlink" href="#set-theory" title="Permalink to this headline">#</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Properties%20of%20Suprema%20and%20Infima.html">1.1. Properties of Suprema and Infima</a></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="lebesgue-criterion-for-existence-of-riemann-integrals">
+<h1><span class="section-number">6.16. </span>Lebesgue Criterion for Existence of Riemann Integrals<a class="headerlink" href="#lebesgue-criterion-for-existence-of-riemann-integrals" title="Permalink to this headline">#</a></h1>
+<div class="proof definition admonition" id="def:6">
+<p class="admonition-title"><span class="caption-number">Definition 6.5 </span></p>
+<section class="definition-content" id="proof-content">
+<p id="index-0">A set <span class="math notranslate nohighlight">\(S\)</span> in <span class="math notranslate nohighlight">\(\R\)</span> is said to have measure zero,
+or a <strong>zero-measure</strong> set
+if for any given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>,
+there exists a countable covering of <span class="math notranslate nohighlight">\(S\)</span>
+by by open intervals the sum of whose lengths
+is bounded by <span class="math notranslate nohighlight">\(\varepsilon\)</span>.
+Mathematically, that is to say there exists
+a family of intervals <span class="math notranslate nohighlight">\(\{(a_k, b_k)\}_{k \in I}\)</span>
+where the index set <span class="math notranslate nohighlight">\(I\)</span> is countable such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-145">
+<span class="eqno">(6.68)<a class="headerlink" href="#equation-eq-145" title="Permalink to this equation">#</a></span>\[\begin{align}
+S \subseteq\bigcup_{k \in I}(a_k, b_k)
+\quad\text{and}\quad\sum_{k \in I}(b_k - a_k) &lt; \varepsilon\end{align}\]</div>
+</section>
+</div><p>If the index set <span class="math notranslate nohighlight">\(I\)</span> is countably infinite,
+then we often take <span class="math notranslate nohighlight">\(I = \N^\ast\)</span>.
+In this way, <a class="reference internal" href="#equation-eq-145">(6.68)</a> is written as</p>
+<div class="math notranslate nohighlight" id="equation-eq-146">
+<span class="eqno">(6.69)<a class="headerlink" href="#equation-eq-146" title="Permalink to this equation">#</a></span>\[\begin{align}
+S \subseteq\bigcup_{k=1}^\infty(a_k, b_k)
+\quad\text{and}\quad\sum_{k=1}^\infty(b_k - a_k) &lt; \varepsilon\end{align}\]</div>
+<p>On the other hand,
+if <span class="math notranslate nohighlight">\(I\)</span> is finite,
+then in order to write <a class="reference internal" href="#equation-eq-145">(6.68)</a>
+as <a class="reference internal" href="#equation-eq-146">(6.69)</a> for consistency,
+we append countably infinitely many degenerate open intervals,
+i.e., the empty sets <span class="math notranslate nohighlight">\(\emptyset\)</span> to the covering.
+Since taking the union with empty sets will not change the origin set,
+and the sum of lengths of empty sets is zero,
+<a class="reference internal" href="#equation-eq-146">(6.69)</a> remains valid.</p>
+<p>It is evident that the union of two zero-measure sets also has measure zero.
+By Mathematical induction,
+any finite unions of zero-measure sets also has measure zero.
+In fact, this is also the case for countable union of zero-measure sets,
+as stated in the following theorem.</p>
+<div class="proof theorem admonition" id="thm:86">
+<p class="admonition-title"><span class="caption-number">Theorem 6.30 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(\{S_k\}\)</span> be a countable family of zero-measure sets.
+Then their union also has measure zero.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Without loss of generality,
+we consider countably infinite family
+<span class="math notranslate nohighlight">\(\{S_k\}_{k=1}^\infty\)</span>
+of zero-measure sets.
+Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>,
+for each <span class="math notranslate nohighlight">\(S_k\)</span>,
+there exists a family of open intervals
+<span class="math notranslate nohighlight">\(\{I_{k,j} = (a_{k,j}, b_{j,j})\}_{j=1}^\infty\)</span>(including degenerate ones),
+such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+S_k \subseteq\bigcup_{j=1}^\infty I_{k,j}\quad\text{and}\quad\sum_{j=1}^\infty(b_{k,j} - a_{k,j})
+&lt; \frac{\varepsilon}{2^{k+1}}\end{align*}\]</div>
+<p>We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\sum_{k=1}^\infty\sum_{j=1}^\infty(b_{k,j} - a_{k,j})
+\leq\sum_{k=1}^\infty\frac{\varepsilon}{2^{k+1}}
+= \frac{\varepsilon}{2}
+&lt; \varepsilon\end{align*}\]</div>
+<p>By <a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Iterated%20Series.html#thm:61">Theorem 2.24</a>,
+the double series <span class="math notranslate nohighlight">\(\sum_{k,j} (b_{k,j} - a_{k,j})\)</span>
+also converges (absolutely) and its sum is less than <span class="math notranslate nohighlight">\(\varepsilon\)</span>.</p>
+<p>We can rearrange the doubly-indexed sets <span class="math notranslate nohighlight">\(I_{k,j}\)</span> into
+<span class="math notranslate nohighlight">\(I_n\)</span> by defining a bijection between <span class="math notranslate nohighlight">\(\N^\ast \times \N^\ast\)</span>
+and <span class="math notranslate nohighlight">\(\N^\ast\)</span>, <span class="math notranslate nohighlight">\(n = g(k,j)\)</span>.
+It is clear that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\bigcup_{k=1}^\infty S_k
+\subseteq\bigcup_{n} I_{n}\end{align*}\]</div>
+<p>Moreover,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\sum_{n=1}^\infty(b_n - a_n)
+= \sum_{k,j}(b_{k,j} - a_{k,j})
+&lt; \varepsilon\end{align*}\]</div>
+<p>since the double series converges absolutely (<a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Iterated%20Series.html#thm:61">Theorem 2.24</a>).
+Therefore, <span class="math notranslate nohighlight">\(\bigcup_{k=1}^\infty S_k\)</span> indeed has measure zero.</p>
 </div>
 </section>
 
@@ -697,7 +776,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             name: "python3",
-            path: "./Set Theory"
+            path: "./Riemann-Stieltjes Integral"
         },
         predefinedOutput: true
     }
@@ -711,17 +790,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Change%20of%20Variables%20in%20Riemann%20Integrals.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Preface</p>
+            <p class="prev-next-title"><span class="section-number">6.15. </span>Change of Variables in Riemann Integrals</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Properties%20of%20Suprema%20and%20Infima.html" title="next page">
+    <a class='right-next' id="next-link" href="../Sequences%20and%20Series%20of%20Functions/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.1. </span>Properties of Suprema and Infima</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Sequences and Series of Functions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

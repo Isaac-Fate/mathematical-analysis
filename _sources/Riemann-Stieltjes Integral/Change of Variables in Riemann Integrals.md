@@ -77,3 +77,109 @@ we have
 Expanding expression of $g(t)$ proves the theorem.
 
 ````
+
+````{prf:example}
+:label: eg:14
+
+Consider the integral
+
+```{math}
+\begin{align*}\int_0^1 f[x(x-1)(x-2)](3x^2 - 6x + 2) \;\mathrm{d} x
+\end{align*}
+```
+
+where $f$ is any continuous function on $[0, 1]$.
+Regarding the entire expression passed to $f$ as a new variable,
+that is, letting $\phi(x) = x(x-1)(x-2)$,
+we find
+
+```{math}
+\begin{align*}\int_0^1 f[x(x-1)(x-2)](3x^2 - 6x + 2) \;\mathrm{d} x
+= \int_0^1 f[\phi(x)]\phi^\prime(x) \;\mathrm{d} x
+= \int_{\phi(0) = 0}^{\phi(1) = 0}
+f(x) \;\mathrm{d} x
+= 0
+\end{align*}
+```
+{numref}`fig:17` depicts the graph of $f[\phi(x)]$
+where $f(x) = x \sin\frac{1}{x}$.
+
+
+```{figure} /figures/ma-017.png
+---
+name: fig:17
+---
+The integral is zero where $f(x) = x \sin\frac{1}{x} \ind\{x \neq 0\}$ and $\phi(x) = x(x-1)(x-2)$.
+
+```
+
+````
+
+Note that the function $\phi(x) = x(x-1)(x-2)$
+can be decomposed into finitely many piece-wise monotonic
+continuous functions.
+In fact, it is increasing on $[0, (3 + \sqrt{3}) / 2]$
+and is decreasing on $[(3 + \sqrt{3}) / 2, 1].$
+Therefore, we can compute the integral by applying {prf:ref}`thm:21`
+two times on each subintervals without even using {prf:ref}`thm:83`.
+Hence, it seems that we did not
+exploit the full power of {prf:ref}`thm:83`
+In the following, the function $\phi$ cannot be
+decomposed into finitely many monotonic functions.
+In this case, {prf:ref}`thm:21` is no longer applicable.
+
+
+````{prf:example}
+:label: eg:15
+
+Consider the integral
+
+```{math}
+\begin{align*}\int_{0}^{1 / \pi} f(x^3 \sin\frac{1}{x}\ind\{x \neq 0\})
+(3x^2 \sin\frac{1}{x} - x\cos\frac{1}{x})
+\ind\{x \neq 0\}\;\mathrm{d} x
+\end{align*}
+```
+
+where $f$ can be any continuous functions on $[0, 1 \\pi]$.
+Let
+
+```{math}
+\begin{align*}\phi(x) = x^3 \sin\frac{1}{x}\ind\{x \neq 0\}\end{align*}
+```
+
+Note that
+
+```{math}
+\begin{align*}\phi^\prime(x) =
+\begin{cases}
+3x^2 \sin \frac{1}{x} - x\cos\frac{1}{x},
+& x > 0 \\
+0,
+& x = 0
+\end{cases},
+\quad
+x \in[0, 1 /pi]\end{align*}
+```
+
+Then by applying {prf:ref}`thm:83`, the integral
+reduces to
+
+```{math}
+\begin{align*}\int_{\phi(0) = 0}^{\phi(1 / \pi) = 0} f(x) \;\mathrm{d} x
+= 0
+\end{align*}
+```
+
+See {numref}`fig:18`.
+
+
+```{figure} /figures/ma-018.png
+---
+name: fig:18
+---
+The integral is zero where $f(x) = x \sin\frac{1}{x} \ind\{ x \neq 0 \}$ and $\phi(x) = x^3 \sin \frac{1}{x} \ind\{x \neq 0\}$.
+
+```
+
+````
