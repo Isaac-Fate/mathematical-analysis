@@ -117,7 +117,7 @@ Therefore, $\bigcup_{k=1}^\infty S_k$ indeed has measure zero.
 ````
 
 Next, we introduce the concept of oscillation,
-which is actually has been already applied
+which has actually been already applied
 in several proofs from previous sections.
 
 
@@ -162,11 +162,10 @@ if $S \subseteq T$, then
 \end{align*}
 ```
 
-We can also define the
-
 ```{index} oscillation of a function at a point
 ```
-**oscillation of $f$ at a point $x$**.
+
+We can also define the **oscillation of $f$ at a point $x$**.
 Consider a neighborhood $B_r(x) \cap I$ of $x$ in $I$.
 Note that the oscillation of $f$ on $B_r(x) \cap I$,
 $\Omega_f(B_r(x) \cap I)$,
