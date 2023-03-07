@@ -71,7 +71,7 @@ of zero-measure sets.
 Given $\varepsilon > 0$,
 for each $S_k$,
 there exists a family of open intervals
-$\{I_{k,j} = (a_{k,j}, b_{j,j})\}_{j=1}^\infty$(including degenerate ones),
+$\{I_{k,j} = (a_{k,j}, b_{k,j})\}_{j=1}^\infty$(including degenerate ones),
 such that
 
 ```{math}
@@ -113,5 +113,144 @@ Moreover,
 
 since the double series converges absolutely ({prf:ref}`thm:61`).
 Therefore, $\bigcup_{k=1}^\infty S_k$ indeed has measure zero.
+
+````
+
+Next, we introduce the concept of oscillation,
+which is actually has been already applied
+in several proofs from previous sections.
+
+
+````{prf:definition}
+:label: def:7
+
+Let $f$ be defined and bounded on an interval $I$.
+($I$ can be open, closed or half-open.)
+Let $S \subseteq I$ be a subset.
+The number
+
+```{index} oscillation of a function on a set
+```
+
+```{math}
+\begin{align*}\Omega_f (S)
+= \sup_{x,y \in S}[f(x) - f(y)]\end{align*}
+```
+
+is called the **oscillation of $f$ on $S$**.
+
+````
+
+The oscillation of $f$ on $S$ measures the
+greatest difference between two function values.
+Recall {prf:ref}`thm:27`.
+Equivalently, it is the difference between
+the supremum and the infimum.
+We have
+
+```{math}
+\begin{align*}\Omega_f (S)
+= \sup_{x \in S} f(x) - \inf_{x \in S} f(x)
+\end{align*}
+```
+
+Another simple observation is that
+if $S \subseteq T$, then
+
+```{math}
+\begin{align*}\Omega_f(S) \leq\Omega_f(T)
+\end{align*}
+```
+
+We can also define the
+
+```{index} oscillation of a function at a point
+```
+**oscillation of $f$ at a point $x$**.
+Consider a neighborhood $B_r(x) \cap I$ of $x$ in $I$.
+Note that the oscillation of $f$ on $B_r(x) \cap I$,
+$\Omega_f(B_r(x) \cap I)$,
+will get smaller and smaller
+as the radius $r$ decreases.
+Hence, we can regard
+
+```{math}
+\begin{align*}\Omega_f (B_r(x) \cap I) =: g(r)
+\end{align*}
+```
+
+as an increasing function of $r$.
+Then by {prf:ref}`thm:15`,
+we know $g(0+)$ exists.
+
+:::{note}
+
+Well, to apply {prf:ref}`thm:15`,
+function $g$ needs to be defined on a closed interval.
+Since the oscillation is always greater than or equal to zero,
+we may define $g(0) = 0$
+without violating the hypothesis that $g$ is increasing.
+Then, we may apply {prf:ref}`thm:15` to $g$ on $[0, R]$
+where $R$ is any fixed positive number.
+
+:::
+
+The oscillation of $f$ at $x$ is defined as
+precisely this limit.
+
+
+````{prf:definition}
+:label: def:8
+
+Let $f$ be defined and bounded on an interval $I$.
+The oscillation of $f$ at point $x \in I$ is
+defined by
+
+```{math}
+\begin{align*}\Omega_f(x)
+= \lim_{r \to 0^{+}}\Omega_f (B_r(x) \cap I)
+\end{align*}
+```
+
+````
+
+````{prf:example}
+:label: eg:16
+
+We often say
+
+```{math}
+\begin{align*}
+f(x) = \sin(x) \ind\{x \neq 0\}\end{align*}
+```
+*oscillates* at $0$.
+We can now measure the degree of this oscillation.
+For any $r > 0$,
+we can always find a large enough integer $n \in \N^\ast$
+such that
+
+```{math}
+\begin{align*}
+x_n = \frac{1}{\pi / 2 + 2n\pi}\quad\text{and}\quad
+y_n = \frac{1}{-\pi / 2 + 2n\pi}\end{align*}
+```
+
+are both in $B_r(0)$.
+Note that $f(x_n) = 1$ and $f(y_n) = -1$
+are the supremum and infimum of $f$, respectively.
+Therefore,
+
+```{math}
+\begin{align*}\Omega_f(B_r(0)) = 1 - (-1) = 2
+\quad\forall r > 0
+\end{align*}
+```
+
+And the oscillation of $f$ at $0$ is exactly
+
+```{math}
+\begin{align*}\Omega_f(0) = 2
+\end{align*}
+```
 
 ````

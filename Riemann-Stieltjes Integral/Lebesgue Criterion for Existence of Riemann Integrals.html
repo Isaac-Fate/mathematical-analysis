@@ -731,7 +731,7 @@ of zero-measure sets.
 Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>,
 for each <span class="math notranslate nohighlight">\(S_k\)</span>,
 there exists a family of open intervals
-<span class="math notranslate nohighlight">\(\{I_{k,j} = (a_{k,j}, b_{j,j})\}_{j=1}^\infty\)</span>(including degenerate ones),
+<span class="math notranslate nohighlight">\(\{I_{k,j} = (a_{k,j}, b_{k,j})\}_{j=1}^\infty\)</span>(including degenerate ones),
 such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
@@ -761,7 +761,103 @@ It is clear that</p>
 <p>since the double series converges absolutely (<a class="reference internal" href="../Numerical%20Sequences%20and%20Series/Iterated%20Series.html#thm:61">Theorem 2.24</a>).
 Therefore, <span class="math notranslate nohighlight">\(\bigcup_{k=1}^\infty S_k\)</span> indeed has measure zero.</p>
 </div>
+<p>Next, we introduce the concept of oscillation,
+which is actually has been already applied
+in several proofs from previous sections.</p>
+<div class="proof definition admonition" id="def:7">
+<p class="admonition-title"><span class="caption-number">Definition 6.6 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined and bounded on an interval <span class="math notranslate nohighlight">\(I\)</span>.
+(<span class="math notranslate nohighlight">\(I\)</span> can be open, closed or half-open.)
+Let <span class="math notranslate nohighlight">\(S \subseteq I\)</span> be a subset.
+The number</p>
+<div class="math notranslate nohighlight" id="index-1">
+\[\begin{align*}\Omega_f (S)
+= \sup_{x,y \in S}[f(x) - f(y)]\end{align*}\]</div>
+<p>is called the <strong>oscillation of <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\(S\)</span></strong>.</p>
 </section>
+</div><p>The oscillation of <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\(S\)</span> measures the
+greatest difference between two function values.
+Recall <a class="reference internal" href="../Set%20Theory/Properties%20of%20Suprema%20and%20Infima.html#thm:27">Theorem 1.1</a>.
+Equivalently, it is the difference between
+the supremum and the infimum.
+We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Omega_f (S)
+= \sup_{x \in S} f(x) - \inf_{x \in S} f(x)
+\end{align*}\]</div>
+<p>Another simple observation is that
+if <span class="math notranslate nohighlight">\(S \subseteq T\)</span>, then</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Omega_f(S) \leq\Omega_f(T)
+\end{align*}\]</div>
+<p>We can also define the</p>
+<p id="index-2"><strong>oscillation of <span class="math notranslate nohighlight">\(f\)</span> at a point <span class="math notranslate nohighlight">\(x\)</span></strong>.
+Consider a neighborhood <span class="math notranslate nohighlight">\(B_r(x) \cap I\)</span> of <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\(I\)</span>.
+Note that the oscillation of <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\(B_r(x) \cap I\)</span>,
+<span class="math notranslate nohighlight">\(\Omega_f(B_r(x) \cap I)\)</span>,
+will get smaller and smaller
+as the radius <span class="math notranslate nohighlight">\(r\)</span> decreases.
+Hence, we can regard</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Omega_f (B_r(x) \cap I) =: g(r)
+\end{align*}\]</div>
+<p>as an increasing function of <span class="math notranslate nohighlight">\(r\)</span>.
+Then by <a class="reference internal" href="../Limits%20and%20Continuity/Monotonic%20Functions.html#thm:15">Theorem 3.6</a>,
+we know <span class="math notranslate nohighlight">\(g(0+)\)</span> exists.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Well, to apply <a class="reference internal" href="../Limits%20and%20Continuity/Monotonic%20Functions.html#thm:15">Theorem 3.6</a>,
+function <span class="math notranslate nohighlight">\(g\)</span> needs to be defined on a closed interval.
+Since the oscillation is always greater than or equal to zero,
+we may define <span class="math notranslate nohighlight">\(g(0) = 0\)</span>
+without violating the hypothesis that <span class="math notranslate nohighlight">\(g\)</span> is increasing.
+Then, we may apply <a class="reference internal" href="../Limits%20and%20Continuity/Monotonic%20Functions.html#thm:15">Theorem 3.6</a> to <span class="math notranslate nohighlight">\(g\)</span> on <span class="math notranslate nohighlight">\([0, R]\)</span>
+where <span class="math notranslate nohighlight">\(R\)</span> is any fixed positive number.</p>
+</div>
+<p>The oscillation of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(x\)</span> is defined as
+precisely this limit.</p>
+<div class="proof definition admonition" id="def:8">
+<p class="admonition-title"><span class="caption-number">Definition 6.7 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined and bounded on an interval <span class="math notranslate nohighlight">\(I\)</span>.
+The oscillation of <span class="math notranslate nohighlight">\(f\)</span> at point <span class="math notranslate nohighlight">\(x \in I\)</span> is
+defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Omega_f(x)
+= \lim_{r \to 0^{+}}\Omega_f (B_r(x) \cap I)
+\end{align*}\]</div>
+</section>
+</div><div class="proof example admonition" id="eg:16">
+<p class="admonition-title"><span class="caption-number">Example 6.15 </span></p>
+<section class="example-content" id="proof-content">
+<p>We often say</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+f(x) = \sin(x) \ind\{x \neq 0\}\end{align*}\]</div>
+<p><em>oscillates</em> at <span class="math notranslate nohighlight">\(0\)</span>.
+We can now measure the degree of this oscillation.
+For any <span class="math notranslate nohighlight">\(r &gt; 0\)</span>,
+we can always find a large enough integer <span class="math notranslate nohighlight">\(n \in \N^\ast\)</span>
+such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+x_n = \frac{1}{\pi / 2 + 2n\pi}\quad\text{and}\quad
+y_n = \frac{1}{-\pi / 2 + 2n\pi}\end{align*}\]</div>
+<p>are both in <span class="math notranslate nohighlight">\(B_r(0)\)</span>.
+Note that <span class="math notranslate nohighlight">\(f(x_n) = 1\)</span> and <span class="math notranslate nohighlight">\(f(y_n) = -1\)</span>
+are the supremum and infimum of <span class="math notranslate nohighlight">\(f\)</span>, respectively.
+Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Omega_f(B_r(0)) = 1 - (-1) = 2
+\quad\forall r &gt; 0
+\end{align*}\]</div>
+<p>And the oscillation of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(0\)</span> is exactly</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Omega_f(0) = 2
+\end{align*}\]</div>
+</section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {
