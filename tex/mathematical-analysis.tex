@@ -6681,7 +6681,7 @@ as stated in the following theorem.
 %------------------------------
 
 Next, we introduce the concept of oscillation, 
-which is actually has been already applied
+which has actually been already applied
 in several proofs from previous sections.
 
 \begin{definition} \label{def:7}
@@ -6713,8 +6713,7 @@ if $S \subseteq T$, then
 	\Omega_f(S) \leq \Omega_f(T)
 \end{align*}
 
-We can also define the 
-\textbf{oscillation of $f$ at a point $x$}\index{oscillation of a function at a point}.
+We can also define the \textbf{oscillation of $f$ at a point $x$}\index{oscillation of a function at a point}.
 Consider a neighborhood $B_r(x) \cap I$ of $x$ in $I$.
 Note that the oscillation of $f$ on $B_r(x) \cap I$, 
 $\Omega_f(B_r(x) \cap I)$,
@@ -6750,9 +6749,9 @@ precisely this limit.
 \end{definition}
 
 \begin{example} \label{eg:16}
-	We often say
+	It is frequently stated that
 	\begin{align*}
-		f(x) = \sin(x) \ind\{x \neq 0\}
+		f(x) = \sin \frac{1}{x} \ind\{x \neq 0\}
 	\end{align*}
 	\textit{oscillates} at $0$.
 	We can now measure the degree of this oscillation.
@@ -6774,10 +6773,91 @@ precisely this limit.
 	\end{align*}
 	And the oscillation of $f$ at $0$ is exactly
 	\begin{align*}
-		\Omega_f(0) = 2
+		\omega_f(0) = 2
 	\end{align*}
 \end{example}
 
+%------------------------------
+
+\begin{theorem}[Lebesgue's Number Lemma] \label{thm:88}
+	% TODO
+\end{theorem}
+
+%------------------------------
+
+The following theorem states that if the oscillation of $f$
+at each point $x$ in some closed interval (compact) is bounded by 
+a small number $\varepsilon$,
+then there exists $\delta > 0$ such that the oscillation of $f$
+on any subinterval whose length is less than $\delta$ is also 
+bounded by $\varepsilon$.
+
+\begin{theorem} \label{thm:87}
+	Let $f$ be defined and bounded on an closed interval $I$.
+	Given $\varepsilon > 0$.
+	Suppose that $\omega_f(x) < \varepsilon$ for every $x$ 
+	in $I$.
+	Then there exists $\delta > 0$ (only depending on $\varepsilon$)
+	such that 
+	\begin{align*}
+		\Omega_f(J) < \varepsilon
+	\end{align*}
+	where $J$ is any subinterval in $I$ whose length is less than $\delta$.
+\end{theorem}
+
+\begin{proof}
+	% TODO
+\end{proof}
+
+\begin{exercise} \label{ex:10}
+	Provide a simpler proof of Theorem~\ref{thm:87}
+	without using Lebesgue's number.
+\end{exercise}
+
+\begin{solution}
+	For any $x \in I$, 
+	by the definition of oscillation of $f$ at a point,
+	there exists $\delta_x > 0$ (depending on $x$) such that 
+	\begin{align*}
+		\Omega_f( B_r(x) \cap I ) < \varepsilon
+		\quad \forall r < \delta_x
+	\end{align*}
+	Note that the family of sets $\set{B_{\delta_x} (x)}{x \in I}$
+	forms an open cover of $I$.
+	Since $I$ is a closed interval, hence compact,
+	there exists a finite subcover $\set{B_{\delta_i}(x_i)}{i = 1, \ldots, n}$.
+	\begin{note}
+		If we adopt the previous notation, 
+		the subscript of each open ball should be $\delta_{x_i}$.
+		Here, we simply write $\delta_i$ to ease the notation.
+	\end{note}
+
+	Let
+	\begin{align*}
+		\delta = \min \set{\delta_i / 2}{i = 1, \ldots, n}
+	\end{align*}
+	Suppose that $J$ is a subinterval of $I$ 
+	of length less than $\delta$.
+	Denote the left and right endpoints of $J$ by $c$ and $d$,
+	respectively. ($J$ may not include these endpoints.)
+	Since $\set{B_{\delta_i}(x_i)}{i=1, \ldots, n}$
+	is an open cover of $I$, 
+	point $c$ must fall in some member of the open over, 
+	say $B_{\delta_i}$.
+	Because
+	\begin{align*}
+		d - c = \delta \leq \delta_i / 2
+		< \delta_i
+	\end{align*}
+	Point $d$ is also in $B_{\delta_i}(x_i)$.
+	It then follows that $J \subseteq B_{\delta_i}(x_i)$.
+	Therefore, 
+	\begin{align*}
+		\Omega_f(J) \leq \Omega_f(B_{\delta_i}(x_i) \cap I) 
+		< \varepsilon
+	\end{align*}
+	This completes the proof.
+\end{solution}
 
 %==============================
 
