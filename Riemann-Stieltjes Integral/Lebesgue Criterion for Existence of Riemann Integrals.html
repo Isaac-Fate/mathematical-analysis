@@ -894,17 +894,18 @@ without using Lebesgue’s number.</p>
 by the definition of oscillation of <span class="math notranslate nohighlight">\(f\)</span> at a point,
 there exists <span class="math notranslate nohighlight">\(\delta_x &gt; 0\)</span>(depending on <span class="math notranslate nohighlight">\(x\)</span>) such that</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\Omega_f( B_r(x) \cap I ) &lt; \varepsilon\quad\forall r &lt; \delta_x
+\[\begin{align*}\Omega_f( B_r(x) \cap I ) &lt; \varepsilon\quad\forall r \leq\delta_x
 \end{align*}\]</div>
-<p>Note that the family of sets <span class="math notranslate nohighlight">\(\set{B_{\delta_x} (x)}{x \in I}\)</span>
+<p>Note that the family of sets <span class="math notranslate nohighlight">\(\set{B_{\delta_x / 2} (x)}{x \in I}\)</span>
 forms an open cover of <span class="math notranslate nohighlight">\(I\)</span>.
 Since <span class="math notranslate nohighlight">\(I\)</span> is a closed interval, hence compact,
-there exists a finite subcover <span class="math notranslate nohighlight">\(\set{B_{\delta_i}(x_i)}{i = 1, \ldots, n}\)</span>.</p>
+there exists a finite
+subcover <span class="math notranslate nohighlight">\(\set{B_{\delta_i / 2}(x_i)}{i = 1, \ldots, n}\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If we adopt the previous notation,
-the subscript of each open ball should be <span class="math notranslate nohighlight">\(\delta_{x_i}\)</span>.
-Here, we simply write <span class="math notranslate nohighlight">\(\delta_i\)</span> to ease the notation.</p>
+the radius of each open ball should be <span class="math notranslate nohighlight">\(\delta_{x_i} / 2\)</span>.
+Here, we simply write <span class="math notranslate nohighlight">\(\delta_i / 2\)</span> to ease the notation.</p>
 </div>
 <p>Let</p>
 <div class="math notranslate nohighlight">
@@ -913,17 +914,19 @@ Here, we simply write <span class="math notranslate nohighlight">\(\delta_i\)</s
 of length less than <span class="math notranslate nohighlight">\(\delta\)</span>.
 Denote the left and right endpoints of <span class="math notranslate nohighlight">\(J\)</span> by <span class="math notranslate nohighlight">\(c\)</span> and <span class="math notranslate nohighlight">\(d\)</span>,
 respectively. (<span class="math notranslate nohighlight">\(J\)</span> may not include these endpoints.)
-Since <span class="math notranslate nohighlight">\(\set{B_{\delta_i}(x_i)}{i=1, \ldots, n}\)</span>
+Since <span class="math notranslate nohighlight">\(\set{B_{\delta_i / 2}(x_i)}{i=1, \ldots, n}\)</span>
 is an open cover of <span class="math notranslate nohighlight">\(I\)</span>,
 point <span class="math notranslate nohighlight">\(c\)</span> must fall in some member of the open over,
-say <span class="math notranslate nohighlight">\(B_{\delta_i}\)</span>.
+say <span class="math notranslate nohighlight">\(B_{\delta_i / 2}(x_i)\)</span>.
 Because</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-d - c = \delta\leq\delta_i / 2
-&lt; \delta_i
+\[\begin{align*}\abs{d - x_i}\leq\abs{d - c} + \abs{c - x_i}
+&lt; \delta + \delta_i / 2
+\leq\delta_i / 2 + \delta_i / 2
+= \delta_i
 \end{align*}\]</div>
-<p>Point <span class="math notranslate nohighlight">\(d\)</span> is also in <span class="math notranslate nohighlight">\(B_{\delta_i}(x_i)\)</span>.
+<p>point <span class="math notranslate nohighlight">\(d\)</span> is in <span class="math notranslate nohighlight">\(B_{\delta_i}(x_i)\)</span>.
+(Of course, <span class="math notranslate nohighlight">\(c\)</span> is also in <span class="math notranslate nohighlight">\(B_{\delta_i}(x_i)\)</span>.)
 It then follows that <span class="math notranslate nohighlight">\(J \subseteq B_{\delta_i}(x_i)\)</span>.
 Therefore,</p>
 <div class="math notranslate nohighlight">

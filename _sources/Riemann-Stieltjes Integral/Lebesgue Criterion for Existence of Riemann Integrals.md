@@ -309,20 +309,21 @@ by the definition of oscillation of $f$ at a point,
 there exists $\delta_x > 0$(depending on $x$) such that
 
 ```{math}
-\begin{align*}\Omega_f( B_r(x) \cap I ) < \varepsilon\quad\forall r < \delta_x
+\begin{align*}\Omega_f( B_r(x) \cap I ) < \varepsilon\quad\forall r \leq\delta_x
 \end{align*}
 ```
 
-Note that the family of sets $\set{B_{\delta_x} (x)}{x \in I}$
+Note that the family of sets $\set{B_{\delta_x / 2} (x)}{x \in I}$
 forms an open cover of $I$.
 Since $I$ is a closed interval, hence compact,
-there exists a finite subcover $\set{B_{\delta_i}(x_i)}{i = 1, \ldots, n}$.
+there exists a finite
+subcover $\set{B_{\delta_i / 2}(x_i)}{i = 1, \ldots, n}$.
 
 :::{note}
 
 If we adopt the previous notation,
-the subscript of each open ball should be $\delta_{x_i}$.
-Here, we simply write $\delta_i$ to ease the notation.
+the radius of each open ball should be $\delta_{x_i} / 2$.
+Here, we simply write $\delta_i / 2$ to ease the notation.
 
 :::
 
@@ -336,20 +337,22 @@ Suppose that $J$ is a subinterval of $I$
 of length less than $\delta$.
 Denote the left and right endpoints of $J$ by $c$ and $d$,
 respectively. ($J$ may not include these endpoints.)
-Since $\set{B_{\delta_i}(x_i)}{i=1, \ldots, n}$
+Since $\set{B_{\delta_i / 2}(x_i)}{i=1, \ldots, n}$
 is an open cover of $I$,
 point $c$ must fall in some member of the open over,
-say $B_{\delta_i}$.
+say $B_{\delta_i / 2}(x_i)$.
 Because
 
 ```{math}
-\begin{align*}
-d - c = \delta\leq\delta_i / 2
-< \delta_i
+\begin{align*}\abs{d - x_i}\leq\abs{d - c} + \abs{c - x_i}
+< \delta + \delta_i / 2
+\leq\delta_i / 2 + \delta_i / 2
+= \delta_i
 \end{align*}
 ```
 
-Point $d$ is also in $B_{\delta_i}(x_i)$.
+point $d$ is in $B_{\delta_i}(x_i)$.
+(Of course, $c$ is also in $B_{\delta_i}(x_i)$.)
 It then follows that $J \subseteq B_{\delta_i}(x_i)$.
 Therefore,
 
