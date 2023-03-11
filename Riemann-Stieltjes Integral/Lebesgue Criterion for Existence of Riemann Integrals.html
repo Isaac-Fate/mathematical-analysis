@@ -830,10 +830,10 @@ defined by</p>
 </div><div class="proof example admonition" id="eg:16">
 <p class="admonition-title"><span class="caption-number">Example 6.15 </span></p>
 <section class="example-content" id="proof-content">
-<p>We often say</p>
+<p>It is frequently stated that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-f(x) = \sin(x) \ind\{x \neq 0\}\end{align*}\]</div>
+f(x) = \sin\frac{1}{x}\ind\{x \neq 0\}\end{align*}\]</div>
 <p><em>oscillates</em> at <span class="math notranslate nohighlight">\(0\)</span>.
 We can now measure the degree of this oscillation.
 For any <span class="math notranslate nohighlight">\(r &gt; 0\)</span>,
@@ -853,10 +853,85 @@ Therefore,</p>
 \end{align*}\]</div>
 <p>And the oscillation of <span class="math notranslate nohighlight">\(f\)</span> at <span class="math notranslate nohighlight">\(0\)</span> is exactly</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\Omega_f(0) = 2
+\[\begin{align*}\omega_f(0) = 2
 \end{align*}\]</div>
 </section>
-</div></section>
+</div><div class="proof theorem admonition" id="thm:88">
+<p class="admonition-title"><span class="caption-number">Theorem 6.31 </span> (Lebesgue’s Number Lemma)</p>
+<section class="theorem-content" id="proof-content">
+<p>TODO</p>
+</section>
+</div><p>The following theorem states that if the oscillation of <span class="math notranslate nohighlight">\(f\)</span>
+at each point <span class="math notranslate nohighlight">\(x\)</span> in some closed interval (compact) is bounded by
+a small number <span class="math notranslate nohighlight">\(\varepsilon\)</span>,
+then there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that the oscillation of <span class="math notranslate nohighlight">\(f\)</span>
+on any subinterval whose length is less than <span class="math notranslate nohighlight">\(\delta\)</span> is also
+bounded by <span class="math notranslate nohighlight">\(\varepsilon\)</span>.</p>
+<div class="proof theorem admonition" id="thm:87">
+<p class="admonition-title"><span class="caption-number">Theorem 6.32 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined and bounded on an closed interval <span class="math notranslate nohighlight">\(I\)</span>.
+Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>.
+Suppose that <span class="math notranslate nohighlight">\(\omega_f(x) &lt; \varepsilon\)</span> for every <span class="math notranslate nohighlight">\(x\)</span>
+in <span class="math notranslate nohighlight">\(I\)</span>.
+Then there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>(only depending on <span class="math notranslate nohighlight">\(\varepsilon\)</span>)
+such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Omega_f(J) &lt; \varepsilon\end{align*}\]</div>
+<p>where <span class="math notranslate nohighlight">\(J\)</span> is any subinterval in <span class="math notranslate nohighlight">\(I\)</span> whose length is less than <span class="math notranslate nohighlight">\(\delta\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
+<div class="admonition-exercise-6-7 admonition" id="ex-10">
+<p class="admonition-title">Exercise 6.7</p>
+<p>Provide a simpler proof of <a class="reference internal" href="#thm:87">Theorem 6.32</a>
+without using Lebesgue’s number.</p>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>For any <span class="math notranslate nohighlight">\(x \in I\)</span>,
+by the definition of oscillation of <span class="math notranslate nohighlight">\(f\)</span> at a point,
+there exists <span class="math notranslate nohighlight">\(\delta_x &gt; 0\)</span>(depending on <span class="math notranslate nohighlight">\(x\)</span>) such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Omega_f( B_r(x) \cap I ) &lt; \varepsilon\quad\forall r &lt; \delta_x
+\end{align*}\]</div>
+<p>Note that the family of sets <span class="math notranslate nohighlight">\(\set{B_{\delta_x} (x)}{x \in I}\)</span>
+forms an open cover of <span class="math notranslate nohighlight">\(I\)</span>.
+Since <span class="math notranslate nohighlight">\(I\)</span> is a closed interval, hence compact,
+there exists a finite subcover <span class="math notranslate nohighlight">\(\set{B_{\delta_i}(x_i)}{i = 1, \ldots, n}\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If we adopt the previous notation,
+the subscript of each open ball should be <span class="math notranslate nohighlight">\(\delta_{x_i}\)</span>.
+Here, we simply write <span class="math notranslate nohighlight">\(\delta_i\)</span> to ease the notation.</p>
+</div>
+<p>Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\delta = \min\set{\delta_i / 2}{i = 1, \ldots, n}\end{align*}\]</div>
+<p>Suppose that <span class="math notranslate nohighlight">\(J\)</span> is a subinterval of <span class="math notranslate nohighlight">\(I\)</span>
+of length less than <span class="math notranslate nohighlight">\(\delta\)</span>.
+Denote the left and right endpoints of <span class="math notranslate nohighlight">\(J\)</span> by <span class="math notranslate nohighlight">\(c\)</span> and <span class="math notranslate nohighlight">\(d\)</span>,
+respectively. (<span class="math notranslate nohighlight">\(J\)</span> may not include these endpoints.)
+Since <span class="math notranslate nohighlight">\(\set{B_{\delta_i}(x_i)}{i=1, \ldots, n}\)</span>
+is an open cover of <span class="math notranslate nohighlight">\(I\)</span>,
+point <span class="math notranslate nohighlight">\(c\)</span> must fall in some member of the open over,
+say <span class="math notranslate nohighlight">\(B_{\delta_i}\)</span>.
+Because</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+d - c = \delta\leq\delta_i / 2
+&lt; \delta_i
+\end{align*}\]</div>
+<p>Point <span class="math notranslate nohighlight">\(d\)</span> is also in <span class="math notranslate nohighlight">\(B_{\delta_i}(x_i)\)</span>.
+It then follows that <span class="math notranslate nohighlight">\(J \subseteq B_{\delta_i}(x_i)\)</span>.
+Therefore,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Omega_f(J) \leq\Omega_f(B_{\delta_i}(x_i) \cap I)
+&lt; \varepsilon\end{align*}\]</div>
+<p>This completes the proof.</p>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

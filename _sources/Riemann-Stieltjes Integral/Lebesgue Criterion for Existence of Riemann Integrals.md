@@ -216,11 +216,11 @@ defined by
 ````{prf:example}
 :label: eg:16
 
-We often say
+It is frequently stated that
 
 ```{math}
 \begin{align*}
-f(x) = \sin(x) \ind\{x \neq 0\}\end{align*}
+f(x) = \sin\frac{1}{x}\ind\{x \neq 0\}\end{align*}
 ```
 *oscillates* at $0$.
 We can now measure the degree of this oscillation.
@@ -248,8 +248,116 @@ Therefore,
 And the oscillation of $f$ at $0$ is exactly
 
 ```{math}
-\begin{align*}\Omega_f(0) = 2
+\begin{align*}\omega_f(0) = 2
 \end{align*}
 ```
+
+````
+
+````{prf:theorem} Lebesgue's Number Lemma
+:label: thm:88
+
+TODO
+
+````
+
+The following theorem states that if the oscillation of $f$
+at each point $x$ in some closed interval (compact) is bounded by
+a small number $\varepsilon$,
+then there exists $\delta > 0$ such that the oscillation of $f$
+on any subinterval whose length is less than $\delta$ is also
+bounded by $\varepsilon$.
+
+
+````{prf:theorem}
+:label: thm:87
+
+Let $f$ be defined and bounded on an closed interval $I$.
+Given $\varepsilon > 0$.
+Suppose that $\omega_f(x) < \varepsilon$ for every $x$
+in $I$.
+Then there exists $\delta > 0$(only depending on $\varepsilon$)
+such that
+
+```{math}
+\begin{align*}\Omega_f(J) < \varepsilon\end{align*}
+```
+
+where $J$ is any subinterval in $I$ whose length is less than $\delta$.
+
+````
+
+````{prf:proof}
+
+TODO
+
+````
+
+````{admonition} Exercise 6.7
+:name: ex:10
+
+Provide a simpler proof of {prf:ref}`thm:87`
+without using Lebesgue's number.
+
+````
+
+````{admonition} Solution
+:class: tip, dropdown
+
+For any $x \in I$,
+by the definition of oscillation of $f$ at a point,
+there exists $\delta_x > 0$(depending on $x$) such that
+
+```{math}
+\begin{align*}\Omega_f( B_r(x) \cap I ) < \varepsilon\quad\forall r < \delta_x
+\end{align*}
+```
+
+Note that the family of sets $\set{B_{\delta_x} (x)}{x \in I}$
+forms an open cover of $I$.
+Since $I$ is a closed interval, hence compact,
+there exists a finite subcover $\set{B_{\delta_i}(x_i)}{i = 1, \ldots, n}$.
+
+:::{note}
+
+If we adopt the previous notation,
+the subscript of each open ball should be $\delta_{x_i}$.
+Here, we simply write $\delta_i$ to ease the notation.
+
+:::
+
+Let
+
+```{math}
+\begin{align*}\delta = \min\set{\delta_i / 2}{i = 1, \ldots, n}\end{align*}
+```
+
+Suppose that $J$ is a subinterval of $I$
+of length less than $\delta$.
+Denote the left and right endpoints of $J$ by $c$ and $d$,
+respectively. ($J$ may not include these endpoints.)
+Since $\set{B_{\delta_i}(x_i)}{i=1, \ldots, n}$
+is an open cover of $I$,
+point $c$ must fall in some member of the open over,
+say $B_{\delta_i}$.
+Because
+
+```{math}
+\begin{align*}
+d - c = \delta\leq\delta_i / 2
+< \delta_i
+\end{align*}
+```
+
+Point $d$ is also in $B_{\delta_i}(x_i)$.
+It then follows that $J \subseteq B_{\delta_i}(x_i)$.
+Therefore,
+
+```{math}
+\begin{align*}\Omega_f(J) \leq\Omega_f(B_{\delta_i}(x_i) \cap I)
+< \varepsilon\end{align*}
+```
+
+This completes the proof.
 
 ````
