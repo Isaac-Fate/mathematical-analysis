@@ -934,6 +934,47 @@ Therefore,</p>
 &lt; \varepsilon\end{align*}\]</div>
 <p>This completes the proof.</p>
 </div>
+<div class="proof theorem admonition" id="thm:89">
+<p class="admonition-title"><span class="caption-number">Theorem 6.33 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined and bounded on a closed interval <span class="math notranslate nohighlight">\(I\)</span>.
+For each <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, the set</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+J_\varepsilon = \set{x \in I}{\omega_f(x) \geq \varepsilon}\end{align*}\]</div>
+<p>is closed in <span class="math notranslate nohighlight">\(I\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Consider the complement of <span class="math notranslate nohighlight">\(J_\varepsilon\)</span> in <span class="math notranslate nohighlight">\(I\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+J_\varepsilon^\complement
+= \set{x \in I}{\omega_f(x) &lt; \varepsilon}\end{align*}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(x\)</span> be an arbitrary point in <span class="math notranslate nohighlight">\(J_\varepsilon^\complement\)</span>.
+There exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Omega_f(B_\delta(x) \cap I) &lt; \varepsilon\end{align*}\]</div>
+<p>For any <span class="math notranslate nohighlight">\(y \in B_\delta(x) \cap I\)</span>,
+there exists <span class="math notranslate nohighlight">\(r_y &gt; 0\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+B_{r_y}(y) \subset B_{\delta}(x)
+\end{align*}\]</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\omega_f(y) \leq\Omega_f(B_{r_y}(y) \cap I)
+\leq\Omega_f(B_\delta(x) \cap I)
+&lt; \varepsilon\end{align*}\]</div>
+<p>Note that this implies</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+B_\delta(x) \cap I \subseteq J_\varepsilon^\complement\end{align*}\]</div>
+<p>by the definition of <span class="math notranslate nohighlight">\(J_\varepsilon^\complement\)</span>.
+Since <span class="math notranslate nohighlight">\(B_\delta(x) \cap I\)</span> is open (in <span class="math notranslate nohighlight">\(I\)</span>) and contained
+in <span class="math notranslate nohighlight">\(J_\varepsilon^\complement\)</span> for each <span class="math notranslate nohighlight">\(x\)</span>,
+<span class="math notranslate nohighlight">\(J_\varepsilon^\complement\)</span> is open in <span class="math notranslate nohighlight">\(I\)</span>.
+Therefore, equivalently, <span class="math notranslate nohighlight">\(J_\varepsilon\)</span> is closed in <span class="math notranslate nohighlight">\(I\)</span>.</p>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
