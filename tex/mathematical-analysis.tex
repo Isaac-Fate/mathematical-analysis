@@ -6864,6 +6864,51 @@ bounded by $\varepsilon$.
 	This completes the proof.
 \end{solution}
 
+%------------------------------
+
+\begin{theorem} \label{thm:89}
+	Let $f$ be defined and bounded on a closed interval $I$.
+	For each $\varepsilon > 0$, the set
+	\begin{align*}
+		J_\varepsilon = \set{x \in I}{\omega_f(x) \geq \varepsilon}
+	\end{align*}
+	is closed in $I$.
+\end{theorem}
+
+\begin{proof}
+	Consider the complement of $J_\varepsilon$ in $I$,
+	\begin{align*}
+		J_\varepsilon^\complement
+		= \set{x \in I}{\omega_f(x) < \varepsilon}
+	\end{align*}
+	Let $x$ be an arbitrary point in $J_\varepsilon^\complement$.
+	There exists $\delta > 0$ such that 
+	\begin{align*}
+		\Omega_f(B_\delta (x) \cap I) < \varepsilon
+	\end{align*}
+	For any $y \in B_\delta(x) \cap I$, 
+	there exists $r_y > 0$ such that 
+	\begin{align*}
+		B_{r_y}(y) \subset B_{\delta}(x)
+	\end{align*}
+	It then follows that 
+	\begin{align*}
+		\omega_f(y) \leq \Omega_f(B_{r_y}(y) \cap I)
+		\leq \Omega_f(B_\delta(x) \cap I)
+		< \varepsilon
+	\end{align*}
+	Note that this implies
+	\begin{align*}
+		B_\delta(x) \cap I \subseteq J_\varepsilon^\complement
+	\end{align*}
+	by the definition of $J_\varepsilon^\complement$.
+	Since $B_\delta(x) \cap I$ is open (in $I$) and contained
+	in $J_\varepsilon^\complement$ for each $x$,
+	$J_\varepsilon^\complement$ is open in $I$.
+	Therefore, equivalently, $J_\varepsilon$ is closed in $I$.
+\end{proof}
+
+
 %==============================
 
 \chapter{Sequences and Series of Functions}
