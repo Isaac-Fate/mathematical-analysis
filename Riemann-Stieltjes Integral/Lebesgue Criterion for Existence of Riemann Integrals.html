@@ -686,25 +686,25 @@ title="Print to PDF"
 or a <strong>zero-measure</strong> set
 if for any given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>,
 there exists a countable covering of <span class="math notranslate nohighlight">\(S\)</span>
-by by open intervals the sum of whose lengths
+by open intervals the sum of whose lengths
 is bounded by <span class="math notranslate nohighlight">\(\varepsilon\)</span>.
-Mathematically, that is to say there exists
-a family of intervals <span class="math notranslate nohighlight">\(\{(a_k, b_k)\}_{k \in I}\)</span>
-where the index set <span class="math notranslate nohighlight">\(I\)</span> is countable such that</p>
+Mathematically, that is to say, there exists
+a family of intervals <span class="math notranslate nohighlight">\(\{(a_k, b_k)\}_{k \in \Lambda}\)</span>
+where the index set <span class="math notranslate nohighlight">\(\Lambda\)</span> is countable such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-145">
 <span class="eqno">(6.68)<a class="headerlink" href="#equation-eq-145" title="Permalink to this equation">#</a></span>\[\begin{align}
-S \subseteq\bigcup_{k \in I}(a_k, b_k)
-\quad\text{and}\quad\sum_{k \in I}(b_k - a_k) &lt; \varepsilon\end{align}\]</div>
+S \subseteq\bigcup_{k \in \Lambda}(a_k, b_k)
+\quad\text{and}\quad\sum_{k \in \Lambda}(b_k - a_k) &lt; \varepsilon\end{align}\]</div>
 </section>
-</div><p>If the index set <span class="math notranslate nohighlight">\(I\)</span> is countably infinite,
-then we often take <span class="math notranslate nohighlight">\(I = \N^\ast\)</span>.
+</div><p>If the index set <span class="math notranslate nohighlight">\(\Lambda\)</span> is countably infinite,
+then we often take <span class="math notranslate nohighlight">\(\Lambda = \N^\ast\)</span>.
 In this way, <a class="reference internal" href="#equation-eq-145">(6.68)</a> is written as</p>
 <div class="math notranslate nohighlight" id="equation-eq-146">
 <span class="eqno">(6.69)<a class="headerlink" href="#equation-eq-146" title="Permalink to this equation">#</a></span>\[\begin{align}
 S \subseteq\bigcup_{k=1}^\infty(a_k, b_k)
 \quad\text{and}\quad\sum_{k=1}^\infty(b_k - a_k) &lt; \varepsilon\end{align}\]</div>
 <p>On the other hand,
-if <span class="math notranslate nohighlight">\(I\)</span> is finite,
+if <span class="math notranslate nohighlight">\(\Lambda\)</span> is finite,
 then in order to write <a class="reference internal" href="#equation-eq-145">(6.68)</a>
 as <a class="reference internal" href="#equation-eq-146">(6.69)</a> for consistency,
 we append countably infinitely many degenerate open intervals,
@@ -714,8 +714,8 @@ and the sum of lengths of empty sets is zero,
 <a class="reference internal" href="#equation-eq-146">(6.69)</a> remains valid.</p>
 <p>It is evident that the union of two zero-measure sets also has measure zero.
 By Mathematical induction,
-any finite unions of zero-measure sets also has measure zero.
-In fact, this is also the case for countable union of zero-measure sets,
+any finite unions of zero-measure sets also have measure zero.
+In fact, this is also the case for the countable union of zero-measure sets,
 as stated in the following theorem.</p>
 <div class="proof theorem admonition" id="thm:86">
 <p class="admonition-title"><span class="caption-number">Theorem 6.30 </span></p>
@@ -823,11 +823,38 @@ precisely this limit.</p>
 The oscillation of <span class="math notranslate nohighlight">\(f\)</span> at point <span class="math notranslate nohighlight">\(x \in I\)</span> is
 defined by</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}\Omega_f(x)
+\[\begin{align*}\omega_f(x)
 = \lim_{r \to 0^{+}}\Omega_f (B_r(x) \cap I)
 \end{align*}\]</div>
 </section>
-</div><div class="proof example admonition" id="eg:16">
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Beware of the difference between the symbols <span class="math notranslate nohighlight">\(\Omega_f(\{x\})\)</span>
+and <span class="math notranslate nohighlight">\(\omega_f(x)\)</span>.
+The former always equals zero while the latter does not.
+Hence, we do not describe the oscillation of <span class="math notranslate nohighlight">\(f\)</span> at a point <span class="math notranslate nohighlight">\(x\)</span>
+with the oscillation on the singleton <span class="math notranslate nohighlight">\(\{x\}\)</span>.</p>
+</div>
+<p>The following are some simple observations,
+which we shall use in the proofs without quoting:</p>
+<ul class="simple">
+<li><p>➀ <span class="math notranslate nohighlight">\(\Omega_f(B_r(x) \cap I)\)</span> decreases as <span class="math notranslate nohighlight">\(r\)</span> decreases
+(which we have already noted),
+and</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Omega_f(B_r(x) \cap I) &gt; \omega_f(x)
+\quad\forall r &gt; 0
+\end{align*}\]</div>
+<ul class="simple">
+<li><p>➁ The oscillation of <span class="math notranslate nohighlight">\(f\)</span> on a set is clearly no less than
+the oscillation at a point in it.
+Mathematically, if <span class="math notranslate nohighlight">\(S \subseteq I\)</span> and <span class="math notranslate nohighlight">\(x \in S\)</span>, then</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Omega_f(S) \geq\omega_f(x)
+\end{align*}\]</div>
+<div class="proof example admonition" id="eg:16">
 <p class="admonition-title"><span class="caption-number">Example 6.15 </span></p>
 <section class="example-content" id="proof-content">
 <p>It is frequently stated that</p>
@@ -856,8 +883,21 @@ Therefore,</p>
 \[\begin{align*}\omega_f(0) = 2
 \end{align*}\]</div>
 </section>
-</div><div class="proof theorem admonition" id="thm:88">
-<p class="admonition-title"><span class="caption-number">Theorem 6.31 </span> (Lebesgue’s Number Lemma)</p>
+</div><p><span class="math notranslate nohighlight">\(\omega_f(x) = 0\)</span> means <span class="math notranslate nohighlight">\(f\)</span> has no oscillation at <span class="math notranslate nohighlight">\(x\)</span>.
+Intuitively, this implies that <span class="math notranslate nohighlight">\(f\)</span> is continuous there.</p>
+<div class="proof theorem admonition" id="thm:90">
+<p class="admonition-title"><span class="caption-number">Theorem 6.31 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined and bounded on interval <span class="math notranslate nohighlight">\(I\)</span>,
+and <span class="math notranslate nohighlight">\(x \in I\)</span> a point in it.
+Then <span class="math notranslate nohighlight">\(\omega_f(x) = 0\)</span> if and only if <span class="math notranslate nohighlight">\(f\)</span>
+is continuous at <span class="math notranslate nohighlight">\(x\)</span>.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
+<div class="proof theorem admonition" id="thm:88">
+<p class="admonition-title"><span class="caption-number">Theorem 6.32 </span> (Lebesgue’s Number Lemma)</p>
 <section class="theorem-content" id="proof-content">
 <p>TODO</p>
 </section>
@@ -868,7 +908,7 @@ then there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</
 on any subinterval whose length is less than <span class="math notranslate nohighlight">\(\delta\)</span> is also
 bounded by <span class="math notranslate nohighlight">\(\varepsilon\)</span>.</p>
 <div class="proof theorem admonition" id="thm:87">
-<p class="admonition-title"><span class="caption-number">Theorem 6.32 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 6.33 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined and bounded on an closed interval <span class="math notranslate nohighlight">\(I\)</span>.
 Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>.
@@ -885,7 +925,7 @@ such that</p>
 </div>
 <div class="admonition-exercise-6-7 admonition" id="ex-10">
 <p class="admonition-title">Exercise 6.7</p>
-<p>Provide a simpler proof of <a class="reference internal" href="#thm:87">Theorem 6.32</a>
+<p>Provide a simpler proof of <a class="reference internal" href="#thm:87">Theorem 6.33</a>
 without using Lebesgue’s number.</p>
 </div>
 <div class="tip dropdown admonition">
@@ -935,7 +975,7 @@ Therefore,</p>
 <p>This completes the proof.</p>
 </div>
 <div class="proof theorem admonition" id="thm:89">
-<p class="admonition-title"><span class="caption-number">Theorem 6.33 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 6.34 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined and bounded on a closed interval <span class="math notranslate nohighlight">\(I\)</span>.
 For each <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, the set</p>
@@ -974,6 +1014,93 @@ Since <span class="math notranslate nohighlight">\(B_\delta(x) \cap I\)</span> i
 in <span class="math notranslate nohighlight">\(J_\varepsilon^\complement\)</span> for each <span class="math notranslate nohighlight">\(x\)</span>,
 <span class="math notranslate nohighlight">\(J_\varepsilon^\complement\)</span> is open in <span class="math notranslate nohighlight">\(I\)</span>.
 Therefore, equivalently, <span class="math notranslate nohighlight">\(J_\varepsilon\)</span> is closed in <span class="math notranslate nohighlight">\(I\)</span>.</p>
+</div>
+<div class="proof theorem admonition" id="thm:91">
+<p class="admonition-title"><span class="caption-number">Theorem 6.35 </span> (Lebesgue’s Criterion for Reimann-Integrability)</p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined and bounded on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Let <span class="math notranslate nohighlight">\(D\)</span> denote the set of discontinuities of <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>
+if and only if
+set <span class="math notranslate nohighlight">\(D\)</span> has measure zero.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. (Necessity) We shall prove the necessity by proving the contrapositive.
+That is, we assume <span class="math notranslate nohighlight">\(D\)</span> does not have measure zero,
+and then show that <span class="math notranslate nohighlight">\(f\)</span> cannot be integrable.</p>
+<p>Note that <span class="math notranslate nohighlight">\(D\)</span> can be written as</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+D = \bigcup_{r=1}^\infty D_r
+\end{align*}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+D_r = \set{x \in[a, b]}{\omega_f(x) \geq \frac{1}{r}}\end{align*}\]</div>
+<p>This is left as an exercise. (See <a class="reference internal" href="#ex-11"><span class="std std-ref">Exercise 6.8</span></a>.)
+Since <span class="math notranslate nohighlight">\(D\)</span> does not have measure zero,
+by <a class="reference internal" href="#thm:86">Theorem 6.30</a>,
+one member of the above union, say <span class="math notranslate nohighlight">\(D_r\)</span>
+does not have measure zero.
+Then there exists a positive number <span class="math notranslate nohighlight">\(\varepsilon_0 &gt; 0\)</span>
+such that the sum of lengths of any countable open cover of <span class="math notranslate nohighlight">\(D_r\)</span>
+is greater than or equal to <span class="math notranslate nohighlight">\(\varepsilon_0\)</span>.
+That is,</p>
+<div class="math notranslate nohighlight" id="equation-eq-147">
+<span class="eqno">(6.71)<a class="headerlink" href="#equation-eq-147" title="Permalink to this equation">#</a></span>\[\begin{align}
+D_r \subseteq\bigcup_{k=1}^\infty I_k
+\implies\sum_{k=1}^\infty I_k \geq\varepsilon_0
+\end{align}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(\varepsilon = \varepsilon_0 / r\)</span>.
+Let <span class="math notranslate nohighlight">\(P = \{x_0, \ldots, x_n\}\)</span> be any partition on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Define</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\Lambda
+= \set{k=1, \ldots, n}{(x_{k-1}, x_k) \cap D_r \neq \emptyset}\end{align*}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(\{(x_{k-1}, x_k)\}_{k \in \Lambda}\)</span> covers <span class="math notranslate nohighlight">\(D_r\)</span>
+except for possibly finitely many points.
+More specifically, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+D_r \setminus P \subseteq\bigcup_{k \in \Lambda}(x_{k-1}, x_k)
+\end{align*}\]</div>
+<p>Note that <span class="math notranslate nohighlight">\(D_r \setminus P\)</span> still does not have measure zero
+since <span class="math notranslate nohighlight">\(P\)</span> is only a finite set.
+It then follows from <a class="reference internal" href="#equation-eq-147">(6.71)</a> that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\sum_{k \in \Lambda}\Delta x_k
+= \sum_{k \in \Lambda}(x_k - x_{k-1})
+\geq\varepsilon_0
+\end{align*}\]</div>
+<p>Moreover, for <span class="math notranslate nohighlight">\(k \in \Lambda\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+M_k(f) - m_k(f)
+= \Omega_f([x_{k-1}, x_k])
+\geq\frac{1}{r}\end{align*}\]</div>
+<p>since <span class="math notranslate nohighlight">\((x_{k-1}, x_k)\)</span> contains some point in <span class="math notranslate nohighlight">\(D_r\)</span> at which
+the oscillation of <span class="math notranslate nohighlight">\(f\)</span> is greater than or equal to <span class="math notranslate nohighlight">\(1 / r\)</span>.</p>
+<p>Consider the difference <span class="math notranslate nohighlight">\(U(P,f) - L(P,f)\)</span>.
+We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P,f) - L(P,f)
+\geq\sum_{k \in \Lambda}[M_k(f) - m_k(f)]\Delta x_k
+\geq\frac{1}{r}\sum_{k \in \Lambda}\Delta x_k
+\geq\frac{\varepsilon_0}{r}
+= \varepsilon\end{align*}\]</div>
+<p>In summary, we have chosen an <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P,f) - L(P,f) \geq\varepsilon\end{align*}\]</div>
+<p>for any partition <span class="math notranslate nohighlight">\(P\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Therefore, <span class="math notranslate nohighlight">\(f\)</span> fails to satisfy Riemann’s condition,
+and hence not integrable on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+</div>
+<div class="admonition-exercise-6-8 admonition" id="ex-11">
+<p class="admonition-title">Exercise 6.8</p>
+<p>Complete the above proof by
+showing that <span class="math notranslate nohighlight">\(D = \bigcup_{r=1}^\infty D_r\)</span></p>
 </div>
 </section>
 

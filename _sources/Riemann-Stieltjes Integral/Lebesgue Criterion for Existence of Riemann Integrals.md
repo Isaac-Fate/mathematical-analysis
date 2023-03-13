@@ -10,23 +10,23 @@ A set $S$ in $\R$ is said to have measure zero,
 or a **zero-measure** set
 if for any given $\varepsilon > 0$,
 there exists a countable covering of $S$
-by by open intervals the sum of whose lengths
+by open intervals the sum of whose lengths
 is bounded by $\varepsilon$.
-Mathematically, that is to say there exists
-a family of intervals $\{(a_k, b_k)\}_{k \in I}$
-where the index set $I$ is countable such that
+Mathematically, that is to say, there exists
+a family of intervals $\{(a_k, b_k)\}_{k \in \Lambda}$
+where the index set $\Lambda$ is countable such that
 
 ```{math}
 :label: eq:145
 \begin{align}
-S \subseteq\bigcup_{k \in I}(a_k, b_k)
-\quad\text{and}\quad\sum_{k \in I}(b_k - a_k) < \varepsilon\end{align}
+S \subseteq\bigcup_{k \in \Lambda}(a_k, b_k)
+\quad\text{and}\quad\sum_{k \in \Lambda}(b_k - a_k) < \varepsilon\end{align}
 ```
 
 ````
 
-If the index set $I$ is countably infinite,
-then we often take $I = \N^\ast$.
+If the index set $\Lambda$ is countably infinite,
+then we often take $\Lambda = \N^\ast$.
 In this way, {eq}`eq:145` is written as
 
 ```{math}
@@ -37,7 +37,7 @@ S \subseteq\bigcup_{k=1}^\infty(a_k, b_k)
 ```
 
 On the other hand,
-if $I$ is finite,
+if $\Lambda$ is finite,
 then in order to write {eq}`eq:145`
 as {eq}`eq:146` for consistency,
 we append countably infinitely many degenerate open intervals,
@@ -49,8 +49,8 @@ and the sum of lengths of empty sets is zero,
 
 It is evident that the union of two zero-measure sets also has measure zero.
 By Mathematical induction,
-any finite unions of zero-measure sets also has measure zero.
-In fact, this is also the case for countable union of zero-measure sets,
+any finite unions of zero-measure sets also have measure zero.
+In fact, this is also the case for the countable union of zero-measure sets,
 as stated in the following theorem.
 
 
@@ -206,12 +206,43 @@ The oscillation of $f$ at point $x \in I$ is
 defined by
 
 ```{math}
-\begin{align*}\Omega_f(x)
+\begin{align*}\omega_f(x)
 = \lim_{r \to 0^{+}}\Omega_f (B_r(x) \cap I)
 \end{align*}
 ```
 
 ````
+
+:::{note}
+
+Beware of the difference between the symbols $\Omega_f(\{x\})$
+and $\omega_f(x)$.
+The former always equals zero while the latter does not.
+Hence, we do not describe the oscillation of $f$ at a point $x$
+with the oscillation on the singleton $\{x\}$.
+
+:::
+
+The following are some simple observations,
+which we shall use in the proofs without quoting:
+- ➀ $\Omega_f(B_r(x) \cap I)$ decreases as $r$ decreases
+(which we have already noted),
+and
+
+```{math}
+\begin{align*}\Omega_f(B_r(x) \cap I) > \omega_f(x)
+\quad\forall r > 0
+\end{align*}
+```
+- ➁ The oscillation of $f$ on a set is clearly no less than
+the oscillation at a point in it.
+Mathematically, if $S \subseteq I$ and $x \in S$, then
+
+```{math}
+\begin{align*}\Omega_f(S) \geq\omega_f(x)
+\end{align*}
+```
+
 
 ````{prf:example}
 :label: eg:16
@@ -251,6 +282,25 @@ And the oscillation of $f$ at $0$ is exactly
 \begin{align*}\omega_f(0) = 2
 \end{align*}
 ```
+
+````
+$\omega_f(x) = 0$ means $f$ has no oscillation at $x$.
+Intuitively, this implies that $f$ is continuous there.
+
+
+````{prf:theorem}
+:label: thm:90
+
+Let $f$ be defined and bounded on interval $I$,
+and $x \in I$ a point in it.
+Then $\omega_f(x) = 0$ if and only if $f$
+is continuous at $x$.
+
+````
+
+````{prf:proof}
+
+TODO
 
 ````
 
@@ -427,4 +477,127 @@ in $J_\varepsilon^\complement$ for each $x$,
 $J_\varepsilon^\complement$ is open in $I$.
 Therefore, equivalently, $J_\varepsilon$ is closed in $I$.
 
+````
+
+````{prf:theorem} Lebesgue's Criterion for Reimann-Integrability
+:label: thm:91
+
+Let $f$ be defined and bounded on $[a, b]$.
+Let $D$ denote the set of discontinuities of $f$ on $[a, b]$.
+Then $f \in \mathfrak{R}$ on $[a, b]$
+if and only if
+set $D$ has measure zero.
+
+````
+
+````{prf:proof}
+(Necessity) We shall prove the necessity by proving the contrapositive.
+That is, we assume $D$ does not have measure zero,
+and then show that $f$ cannot be integrable.
+
+Note that $D$ can be written as
+
+```{math}
+\begin{align*}
+D = \bigcup_{r=1}^\infty D_r
+\end{align*}
+```
+
+where
+
+```{math}
+\begin{align*}
+D_r = \set{x \in[a, b]}{\omega_f(x) \geq \frac{1}{r}}\end{align*}
+```
+
+This is left as an exercise. (See {ref}`Exercise 6.8<ex:11>`.)
+Since $D$ does not have measure zero,
+by {prf:ref}`thm:86`,
+one member of the above union, say $D_r$
+does not have measure zero.
+Then there exists a positive number $\varepsilon_0 > 0$
+such that the sum of lengths of any countable open cover of $D_r$
+is greater than or equal to $\varepsilon_0$.
+That is,
+
+```{math}
+:label: eq:147
+\begin{align}
+D_r \subseteq\bigcup_{k=1}^\infty I_k
+\implies\sum_{k=1}^\infty I_k \geq\varepsilon_0
+\end{align}
+```
+
+Let $\varepsilon = \varepsilon_0 / r$.
+Let $P = \{x_0, \ldots, x_n\}$ be any partition on $[a, b]$.
+Define
+
+```{math}
+\begin{align*}\Lambda
+= \set{k=1, \ldots, n}{(x_{k-1}, x_k) \cap D_r \neq \emptyset}\end{align*}
+```
+
+Note that $\{(x_{k-1}, x_k)\}_{k \in \Lambda}$ covers $D_r$
+except for possibly finitely many points.
+More specifically, we have
+
+```{math}
+\begin{align*}
+D_r \setminus P \subseteq\bigcup_{k \in \Lambda}(x_{k-1}, x_k)
+\end{align*}
+```
+
+Note that $D_r \setminus P$ still does not have measure zero
+since $P$ is only a finite set.
+It then follows from {eq}`eq:147` that
+
+```{math}
+\begin{align*}\sum_{k \in \Lambda}\Delta x_k
+= \sum_{k \in \Lambda}(x_k - x_{k-1})
+\geq\varepsilon_0
+\end{align*}
+```
+
+Moreover, for $k \in \Lambda$, we have
+
+```{math}
+\begin{align*}
+M_k(f) - m_k(f)
+= \Omega_f([x_{k-1}, x_k])
+\geq\frac{1}{r}\end{align*}
+```
+
+since $(x_{k-1}, x_k)$ contains some point in $D_r$ at which
+the oscillation of $f$ is greater than or equal to $1 / r$.
+
+Consider the difference $U(P,f) - L(P,f)$.
+We have
+
+```{math}
+\begin{align*}
+U(P,f) - L(P,f)
+\geq\sum_{k \in \Lambda}[M_k(f) - m_k(f)]\Delta x_k
+\geq\frac{1}{r}\sum_{k \in \Lambda}\Delta x_k
+\geq\frac{\varepsilon_0}{r}
+= \varepsilon\end{align*}
+```
+
+In summary, we have chosen an $\varepsilon > 0$ such that
+
+```{math}
+\begin{align*}
+U(P,f) - L(P,f) \geq\varepsilon\end{align*}
+```
+
+for any partition $P$ on $[a, b]$.
+Therefore, $f$ fails to satisfy Riemann's condition,
+and hence not integrable on $[a, b]$.
+
+````
+
+````{admonition} Exercise 6.8
+:name: ex:11
+
+Complete the above proof by
+showing that $D = \bigcup_{r=1}^\infty D_r$
 ````
