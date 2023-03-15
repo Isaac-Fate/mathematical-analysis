@@ -293,7 +293,7 @@ Finally, by applying {eq}`eq:72` and {eq}`eq:75`, the difference of upper and lo
 U(P,\phi\circ f, \alpha) - L(P,\phi\circ f, \alpha) < \varepsilon\end{align*}
 ```
 
-Therefore, the composite function $\phi \circ f$ satisfies Riemann's condition, and hence $\phi \circ f \in \mathfrak{R}(\alpha)$ on $[a, b]$ by {prf:ref}`thm:28`.
+Therefore, the composite function $\phi \circ f$ satisfies Riemann's criterion, and hence $\phi \circ f \in \mathfrak{R}(\alpha)$ on $[a, b]$ by {prf:ref}`thm:28`.
 
 ````
 

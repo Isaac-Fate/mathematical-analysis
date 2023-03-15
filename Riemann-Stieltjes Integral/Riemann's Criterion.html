@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6.6. Step Functions as Integrators &#8212; Mathematical Analysis</title>
+    <title>6.9. Riemann’s Criterion &#8212; Mathematical Analysis</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -58,8 +58,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.7. Reduction of Riemann-Stieltjes Integrals to Finite Sums" href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html" />
-    <link rel="prev" title="6.5. Change of Variables" href="Change%20of%20Variables.html" />
+    <link rel="next" title="6.10. Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators" href="Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html" />
+    <link rel="prev" title="6.8. Darboux Integrals with Monotonically Increasing Integrators" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -375,8 +375,8 @@ const thebe_selector_output = ".output, .cell_output"
      6.5. Change of Variables
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Step%20Functions%20as%20Integrators.html">
      6.6. Step Functions as Integrators
     </a>
    </li>
@@ -390,8 +390,8 @@ const thebe_selector_output = ".output, .cell_output"
      6.8. Darboux Integrals with Monotonically Increasing Integrators
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann%27s%20Criterion.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      6.9. Riemann’s Criterion
     </a>
    </li>
@@ -588,7 +588,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Step Functions as Integrators.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2FRiemann-Stieltjes Integral/Riemann's Criterion.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -616,7 +616,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/Riemann-Stieltjes Integral/Step Functions as Integrators.md"
+        <a href="../_sources/Riemann-Stieltjes Integral/Riemann's Criterion.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -665,7 +665,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Step Functions as Integrators</h1>
+                <h1>Riemann’s Criterion</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -677,170 +677,149 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="step-functions-as-integrators">
-<h1><span class="section-number">6.6. </span>Step Functions as Integrators<a class="headerlink" href="#step-functions-as-integrators" title="Permalink to this headline">#</a></h1>
-<p>If the integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is a constant function on <span class="math notranslate nohighlight">\([a, b]\)</span>, then the <span class="math notranslate nohighlight">\(f\)</span> is always integrable with <span class="math notranslate nohighlight">\(\int_{a}^{b} f\; \mathrm{d}\alpha = 0\)</span> since the Stieltjes sum <span class="math notranslate nohighlight">\(S(P,f,\alpha) = 0\)</span> for any partition.</p>
-<p>What if <span class="math notranslate nohighlight">\(\alpha\)</span> is constant except for one jump or removable discontinuity at <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>? For example, <span class="math notranslate nohighlight">\(\alpha\)</span> may look like functions shown in <a class="reference internal" href="#fig-9"><span class="std std-numref">Fig. 6.1</span></a>.</p>
-<figure class="align-default" id="fig-9">
-<img alt="../_images/step-func-integrator.png" src="../_images/step-func-integrator.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Left: <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x=0\)</span>. Middle: <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x=0\)</span>. Right: <span class="math notranslate nohighlight">\(\alpha(x)\)</span> has a removable discontinuity at <span class="math notranslate nohighlight">\(x=0\)</span>.</span><a class="headerlink" href="#fig-9" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>In this case, <span class="math notranslate nohighlight">\(f\)</span> may not be even integrable, and if it is, <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha\)</span> may not be zero.</p>
-<div class="proof theorem admonition" id="thm:24">
-<p class="admonition-title"><span class="caption-number">Theorem 6.7 </span></p>
-<section class="theorem-content" id="proof-content">
-<p>Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>. Define a function <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> as follows. The values of <span class="math notranslate nohighlight">\(\alpha(a)\)</span>, <span class="math notranslate nohighlight">\(\alpha(b)\)</span> and <span class="math notranslate nohighlight">\(\alpha(c)\)</span> are chosen arbitrarily, and elsewhere</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="riemann-s-criterion">
+<span id="index-0"></span><h1><span class="section-number">6.9. </span>Riemann’s Criterion<a class="headerlink" href="#riemann-s-criterion" title="Permalink to this headline">#</a></h1>
+<p>In Darboux’s formulation, the integral exists if and only if the upper and lower integrals are equal to each other. We now show that this is equivalent to the criterion of the existence of integrals from our definition (<a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1">Definition 6.1</a>). Furthermore, we will introduce another equivalent condition, <strong>Riemann’s criterion</strong>, which is convenient to use in proofs.</p>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span class="caption-number">Definition 6.4 </span> (Riemann’s Criterion)</p>
+<section class="definition-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is bounded and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Function <span class="math notranslate nohighlight">\(f\)</span> is said to satisfy <strong>Riemann’s criterion</strong> w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> if for any <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}\alpha(x) = \begin{cases}
-\alpha(a) &amp; a \leq x &lt; c \\
-\alpha(b) &amp; c &lt; x \leq b
-\end{cases}\end{align*}\end{split}\]</div>
-<p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is a bounded function defined on <span class="math notranslate nohighlight">\([a, b]\)</span> in such a way that</p>
+\[\begin{align*}
+U(P,f,\alpha) - L(P,f,\alpha) &lt; \varepsilon\end{align*}\]</div>
+<p>for any refinement <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>.</p>
+</section>
+</div><p>Essentially, Riemann’s criterion requires that the upper and lower sums should be arbitrarily close.</p>
+<p>The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann’s criterion are equivalent.</p>
+<div class="proof theorem admonition" id="thm:28">
+<p class="admonition-title"><span class="caption-number">Theorem 6.12 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is bounded and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then the following statements are equivalent.</p>
 <ul class="simple">
-<li><p>➀ at least one of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(c\)</span>, and</p></li>
-<li><p>➁ at least one of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(c\)</span>.</p></li>
+<li><p>➀ <span class="math notranslate nohighlight">\(f\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, i.e., <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(f\)</span> satisfies Riemann’s criterion w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p></li>
+<li><p>➂ The upper and lower integrals are equal to each other, i.e., <span class="math notranslate nohighlight">\(\upint_a^b f \; \mathrm{d}\alpha = \lowint_a^b f \; \mathrm{d}\alpha\)</span>.</p></li>
 </ul>
-<p>Then, <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> with</p>
-<div class="math notranslate nohighlight" id="equation-eq-40">
-<span class="eqno">(6.15)<a class="headerlink" href="#equation-eq-40" title="Permalink to this equation">#</a></span>\[\begin{align}\int_{a}^{b} f \;\mathrm{d}\alpha
-= f(c) [\alpha(b) - \alpha(a)]\end{align}\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. (Possible expressions of <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>) We first investigate the expression of the Stieltjes sum <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span>. Given any partition <span class="math notranslate nohighlight">\(P\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(c \notin P\)</span>, then we have</p>
+<p>Proof. If <span class="math notranslate nohighlight">\(\alpha\)</span> is constant, then this theorem holds trivially. We assume <span class="math notranslate nohighlight">\(\alpha\)</span> is non-constant in the rest of the proof.</p>
+<p>(Proof of 1 <span class="math notranslate nohighlight">\(\implies\)</span> 2) Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-60">
+<span class="eqno">(6.36)<a class="headerlink" href="#equation-eq-60" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{S(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha} &lt; \varepsilon / 6
+\end{align}\]</div>
+<p>for any refinement <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span> and for any choice of representative <span class="math notranslate nohighlight">\(t_k\)</span> in each sub-interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>. Let this partition <span class="math notranslate nohighlight">\(P\)</span> be fixed for now.</p>
+<p>Let <span class="math notranslate nohighlight">\(M_k\)</span> and <span class="math notranslate nohighlight">\(m_k\)</span> be as in <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#def:2">Definition 6.2</a>. We can choose each <span class="math notranslate nohighlight">\(t_k^\prime \in[x_{k-1}, x_k]\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-S(P,f,\alpha) = f(c) [\alpha(b) - \alpha(a)]\end{align*}\]</div>
-<p>And if <span class="math notranslate nohighlight">\(c \in P\)</span>, we have</p>
+M_k - \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
+&lt; f(t_k^\prime)
+\leq M_k
+\end{align*}\]</div>
+<p>Multiplying by <span class="math notranslate nohighlight">\(\Delta \alpha_k\)</span> and then summing up over <span class="math notranslate nohighlight">\(k\)</span> yields</p>
+<div class="math notranslate nohighlight" id="equation-eq-61">
+<span class="eqno">(6.37)<a class="headerlink" href="#equation-eq-61" title="Permalink to this equation">#</a></span>\[\begin{align}
+U(P,f,\alpha) - \varepsilon / 3
+&lt; S^\prime(P,f,\alpha)
+\leq U(P,f,\alpha)
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(S^\prime(P,f,\alpha) = \sum_{k} f(t_k^\prime) \Delta\alpha_k\)</span>. We can instead choose each <span class="math notranslate nohighlight">\(t_k^{\prime\prime} \in[x_{k-1}, x_k]\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-S(P,f,\alpha)
-= f(c-\delta_1) [\alpha(c) - \alpha(a)]
-+ f(c+\delta_2) [\alpha(b) - \alpha(c)]\end{align*}\]</div>
-<p>where <span class="math notranslate nohighlight">\(c-\delta_1\)</span> and <span class="math notranslate nohighlight">\(c+\delta_2\)</span>(<span class="math notranslate nohighlight">\(\delta_1, \delta_2 \geq 0\)</span>) are two points in the adjacent sub-intervals sharing the same endpoint <span class="math notranslate nohighlight">\(c\)</span>. Note that <span class="math notranslate nohighlight">\(\delta_1\)</span> and <span class="math notranslate nohighlight">\(\delta_2\)</span> can not be too large. In fact, they satisfy that</p>
+m_k + \frac{\varepsilon / 3}{\alpha(b) - \alpha(a)}
+&gt; f(t_k^{\prime\prime})
+\geq m_k
+\end{align*}\]</div>
+<p>Similarly, we then have</p>
+<div class="math notranslate nohighlight" id="equation-eq-62">
+<span class="eqno">(6.38)<a class="headerlink" href="#equation-eq-62" title="Permalink to this equation">#</a></span>\[\begin{align}
+L(P,f,\alpha) + \varepsilon / 3
+&gt; S^{\prime\prime}(P,f,\alpha)
+\geq L(P,f,\alpha)
+\end{align}\]</div>
+<p>where <span class="math notranslate nohighlight">\(S^{\prime\prime}(P,f,\alpha) = \sum_{k} f(t_k^{\prime\prime}) \Delta\alpha_k\)</span>. By combining <a class="reference internal" href="#equation-eq-61">(6.37)</a> and <a class="reference internal" href="#equation-eq-62">(6.38)</a>, we will obtain the following two inequalities.</p>
+<div class="math notranslate nohighlight" id="equation-eq-63">
+<span class="eqno">(6.39)<a class="headerlink" href="#equation-eq-63" title="Permalink to this equation">#</a></span>\[\begin{align}
+0
+\leq U(P,f,\alpha) - S^{\prime}(P,f,\alpha)
+&lt; \varepsilon / 3
+\end{align}\]</div>
+<div class="math notranslate nohighlight" id="equation-eq-64">
+<span class="eqno">(6.40)<a class="headerlink" href="#equation-eq-64" title="Permalink to this equation">#</a></span>\[\begin{align}
+0
+\leq S^{\prime\prime}(P,f,\alpha) - L(P,f,\alpha)
+&lt; \varepsilon / 3
+\end{align}\]</div>
+<p>Recall the Riemann-Stieltjes sums <span class="math notranslate nohighlight">\(S^{\prime}(P,f,\alpha)\)</span> and <span class="math notranslate nohighlight">\(S^{\prime\prime}(P,f,\alpha)\)</span> are formed with the same partition <span class="math notranslate nohighlight">\(P\)</span>. Hence, they both satisfy <a class="reference internal" href="#equation-eq-61">(6.37)</a>. Their difference is then bounded by</p>
+<div class="math notranslate nohighlight" id="equation-eq-65">
+<span class="eqno">(6.41)<a class="headerlink" href="#equation-eq-65" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{S^{\prime}(P,f,\alpha) - S^{\prime\prime}(P,f,\alpha)}\leq\abs{S^{\prime}(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}
++ \abs{S^{\prime\prime}(P,f,\alpha) - \int_{a}^{b} f \; \mathrm{d}\alpha}
+&lt; \varepsilon / 3
+\end{align}\]</div>
+<p>Then, the difference between the upper and lower sums can be bounded as follows.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignat*}2&amp;&amp;\;&amp; U(P,f,\alpha) - L(P,f,\alpha) \\&amp;\leq&amp;&amp; \abs{U(P,f,\alpha) - S^\prime(P,f,\alpha)}
++ \abs{S^\prime(P,f,\alpha) - S^{\prime\prime}(P,f,\alpha)}
++ \abs{S^{\prime\prime}(P,f,\alpha) - L(P,f,\alpha)}\\&amp;&lt;&amp;&amp; \varepsilon / 3 + \varepsilon / 3 + \varepsilon / 3 \\&amp;=&amp;&amp; \varepsilon\end{alignat*}\end{split}\]</div>
+<p>where the last inequality follows from <a class="reference internal" href="#equation-eq-63">(6.39)</a>, <a class="reference internal" href="#equation-eq-64">(6.40)</a> and <a class="reference internal" href="#equation-eq-65">(6.41)</a>. Therefore, Riemann’s criterion is satisfied since the above inequality holds for any refinement <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>.</p>
+<p>(Proof of 2 <span class="math notranslate nohighlight">\(\implies\)</span> 3) Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary. By Riemann’s criterion, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-0 \leq\delta_1, \delta_2 \leq\norm{P}\end{align*}\]</div>
-<p>Taking into consideration both cases, we have the following inequality for any partition <span class="math notranslate nohighlight">\(P\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-eq-39">
-<span class="eqno">(6.16)<a class="headerlink" href="#equation-eq-39" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{multline}\abs{
-S(P,f,\alpha)
-- f(c) [\alpha(b) - \alpha(a)]
-}\\\leq\abs{f(c-\delta_1) - f(c)}\abs{\alpha(c) - \alpha(a)}
-+ \abs{f(c+\delta_2) - f(c)}\abs{\alpha(b) - \alpha(c)}\end{multline}\end{split}\]</div>
-<p>where of course <span class="math notranslate nohighlight">\(0 \leq \delta_1, \delta_2 \leq \norm{P}\)</span>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In fact, the left-hand side of <a class="reference internal" href="#equation-eq-39">(6.16)</a> reduces to zero when <span class="math notranslate nohighlight">\(c \notin P\)</span> and the equality holds if <span class="math notranslate nohighlight">\(c \in P\)</span>.</p>
+U(P,f,\alpha) - L(P,f,\alpha) &lt; \varepsilon\end{align*}\]</div>
+<p>for any refinement <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>. Because <span class="math notranslate nohighlight">\(\upint_a^b f \; \mathrm{d}\alpha \leq U(P,f,\alpha)\)</span> and <span class="math notranslate nohighlight">\(\lowint_a^b f \; \mathrm{d}\alpha \geq L(P,f,\alpha)\)</span>, it follows that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+0 \leq\upint_a^b f \;\mathrm{d}\alpha - \lowint_a^b f \;\mathrm{d}\alpha
+&lt; \varepsilon\end{align*}\]</div>
+<p>Therefore, the upper and lower integrals are equal to each other since the above inequality holds for any <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>.</p>
+<p>(Proof of 3 <span class="math notranslate nohighlight">\(\implies\)</span> 1) Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. There exist partitions <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(P_2\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+U(P_1,f,\alpha) &lt; \upint_a^b f \;\mathrm{d}\alpha + \varepsilon\quad\text{and}\quad
+L(P_2,f,\alpha) &gt; \lowint_a^b f \;\mathrm{d}\alpha - \varepsilon\end{align*}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span> and <span class="math notranslate nohighlight">\(P\)</span> be any of its refinements. By <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26">Theorem 6.8</a> and <a class="reference internal" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#equation-eq-46">(6.21)</a>, it is clear</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\lowint_a^b f \;\mathrm{d}\alpha - \varepsilon
+&lt; L(P,f,\alpha)
+\leq S(P,f,\alpha)
+\leq U(p,f,\alpha)
+&lt; \upint_a^b f \;\mathrm{d}\alpha + \varepsilon\end{align*}\]</div>
+<p>holds for any choice of <span class="math notranslate nohighlight">\(t_k\)</span> in each sub-interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>. Since the upper and lower integrals have the same value, say <span class="math notranslate nohighlight">\(A\)</span>, it then follows that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{S(P,f,\alpha) - A} &lt; \varepsilon\end{align*}\]</div>
+<p>Therefore, indeed <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>. This completes the proof.</p>
 </div>
-<p>There are altogether four scenarios concerning the continuity of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> at point <span class="math notranslate nohighlight">\(c\)</span>, which are</p>
-<ul class="simple">
-<li><p>➀ <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous at <span class="math notranslate nohighlight">\(x=c\)</span>.</p></li>
-<li><p>➁ <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x=c\)</span>, and <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x=c\)</span>.</p></li>
-<li><p>➂ <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x=c\)</span>, and <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x=c\)</span>.</p></li>
-<li><p>➃ <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous at <span class="math notranslate nohighlight">\(x=c\)</span>.</p></li>
-</ul>
-<p>(Proof of 1) If <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous at <span class="math notranslate nohighlight">\(x=c\)</span>, then <span class="math notranslate nohighlight">\(\alpha\)</span> is a constant function. In this case, <span class="math notranslate nohighlight">\(f\)</span> is certainly integrable with respect to <span class="math notranslate nohighlight">\(\alpha\)</span> with <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha = 0\)</span>. And <a class="reference internal" href="#equation-eq-40">(6.15)</a> holds since its right-hand side is also zero for <span class="math notranslate nohighlight">\(\alpha(a) = \alpha(b)\)</span>.</p>
-<p>(Proof of 2) Because <span class="math notranslate nohighlight">\(\alpha(x)\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x=c\)</span>, we have <span class="math notranslate nohighlight">\(\alpha(c) = \alpha(b)\)</span>, and the inequality <a class="reference internal" href="#equation-eq-39">(6.16)</a> reduces to</p>
-<div class="math notranslate nohighlight" id="equation-eq-41">
-<span class="eqno">(6.17)<a class="headerlink" href="#equation-eq-41" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{
-S(P,f,\alpha)
-- f(c) [\alpha(b) - \alpha(a)]
-}\leq\abs{f(c-\delta_1) - f(c)}\abs{\alpha(c) - \alpha(a)}\end{align}\]</div>
-<p>Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, since <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x=c\)</span>, there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
-<div class="math notranslate nohighlight" id="equation-eq-42">
-<span class="eqno">(6.18)<a class="headerlink" href="#equation-eq-42" title="Permalink to this equation">#</a></span>\[\begin{align}
--\delta &lt; x - c &lt; 0
-\implies\abs{f(x) - f(c)} &lt; \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + 1}\end{align}\]</div>
-<p>Choose a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> with <span class="math notranslate nohighlight">\(\norm{P_\varepsilon} &lt; \delta\)</span>. Let <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span> be an arbitrary refinement. Applying <a class="reference internal" href="#equation-eq-41">(6.17)</a> to <span class="math notranslate nohighlight">\(P\)</span>, we have <span class="math notranslate nohighlight">\(\delta_1 &lt; \norm{P} \leq \norm{P_\varepsilon}&lt;\delta\)</span>. We may then apply <a class="reference internal" href="#equation-eq-42">(6.18)</a>, and obtain</p>
+<p>As one should expect, the integral <span class="math notranslate nohighlight">\(\int_{a}^{b} f \; \mathrm{d}\alpha\)</span> has to be equal to the upper and lower integrals whenever <span class="math notranslate nohighlight">\(f\)</span> is integrable.</p>
+<div class="proof corollary admonition" id="corollary-2">
+<p class="admonition-title"><span class="caption-number">Corollary 6.1 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> be increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{multline*}\abs{
-S(P,f,\alpha)
-- f(c) [\alpha(b) - \alpha(a)]
-}\leq\abs{f(c-\delta_1) - f(c)}\abs{\alpha(c) - \alpha(a)}\\
-&lt; \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + 1}\abs{\alpha(c) - \alpha(a)}
-&lt; \varepsilon\end{multline*}\end{split}\]</div>
-<p>This implies <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <a class="reference internal" href="#equation-eq-40">(6.15)</a> holds.</p>
-<p>(Proof of 3) The proof, in this case, is similar to that of 2.</p>
-<p>(Proof of 4) Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. Because <span class="math notranslate nohighlight">\(f(x)\)</span> is continuous at <span class="math notranslate nohighlight">\(x=c\)</span>, there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
-<div class="math notranslate nohighlight" id="equation-eq-43">
-<span class="eqno">(6.19)<a class="headerlink" href="#equation-eq-43" title="Permalink to this equation">#</a></span>\[\begin{align}\abs{x - c} &lt; \delta\implies\abs{f(x) - f(c)} &lt; \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + \abs{\alpha(b) - \alpha(c)} + 1}\end{align}\]</div>
-<p>Choose a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> with <span class="math notranslate nohighlight">\(\norm{P_\varepsilon} &lt; \delta\)</span>. Let <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>. Applying <a class="reference internal" href="#equation-eq-39">(6.16)</a> to <span class="math notranslate nohighlight">\(P\)</span>, we have <span class="math notranslate nohighlight">\(0 \leq \delta_1, \delta_2 \leq \norm{P} \leq \norm{P_\varepsilon} &lt; \delta\)</span>. Then <a class="reference internal" href="#equation-eq-39">(6.16)</a> and <a class="reference internal" href="#equation-eq-43">(6.19)</a> yield</p>
+\[\begin{align*}\int_{a}^{b} f \;\mathrm{d}\alpha
+= \upint_{a}^{b} f \;\mathrm{d}\alpha
+= \lowint_{a}^{b} f \;\mathrm{d}\alpha\end{align*}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, there exist partitions <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(P_2\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{multline*}\abs{
-S(P,f,\alpha)
-- f(c) [\alpha(b) - \alpha(a)]
-}\\
-&lt;   \frac{\varepsilon}{\abs{\alpha(c) - \alpha(a)} + \abs{\alpha(b) - \alpha(c)} + 1}(\abs{\alpha(c) - \alpha(a)}
-+ \abs{\alpha(b) - \alpha(c)})
-&lt; \varepsilon\end{multline*}\end{split}\]</div>
-<p>Hence, <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>, and <a class="reference internal" href="#equation-eq-40">(6.15)</a> holds. This completes the proof.</p>
+\[\begin{align*}
+U(P_1,f,\alpha) &lt; \upint_{a}^{b} f \;\mathrm{d}\alpha + \varepsilon\quad\text{and}\quad
+L(P_2,f,\alpha) &gt; \upint_{a}^{b} f \;\mathrm{d}\alpha - \varepsilon\end{align*}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(P_\varepsilon = P_1 \cup P_2\)</span>. For any refinement <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\upint_{a}^{b} f \;\mathrm{d}\alpha - \varepsilon
+&lt; L(P,f,\alpha)
+\leq S(P,f,\alpha)
+\leq U(P,f,\alpha)
+&lt; \upint_{a}^{b} f \;\mathrm{d}\alpha + \varepsilon\end{align*}\]</div>
+<p>The upper and lower integrals are equal, say to <span class="math notranslate nohighlight">\(A\)</span>, by <a class="reference internal" href="../Differentiation/The%20Mean%20Value%20Theorem.html#thm:8">Theorem 4.8</a>. It follows that</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\abs{S(P,f,\alpha) - A} &lt; \varepsilon\end{align*}\]</div>
+<p>By <a class="reference internal" href="Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1">Definition 6.1</a>, <span class="math notranslate nohighlight">\(A = \int_{a}^{b} f \; \mathrm{d}\alpha\)</span>.</p>
 </div>
-<p>It should be emphasized that there are cases where <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> while the conditions in the above theorem are not satisfied.</p>
-<div class="proof example admonition" id="example-1">
-<p class="admonition-title"><span class="caption-number">Example 6.1 </span></p>
-<section class="example-content" id="proof-content">
-<p>Let</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-f(x) = \alpha(x) = \begin{cases}
--1 &amp;x &lt; 0 \\
-0 &amp;x=0 \\
-1 &amp;x &gt; 0
-\end{cases},
-\quad x \in[-1, 1]\end{align*}\end{split}\]</div>
-<p>Note that neither <span class="math notranslate nohighlight">\(f\)</span> nor <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(0\)</span>. (And also neither <span class="math notranslate nohighlight">\(f\)</span> nor <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(0\)</span>.) Hence, the conditions in <a class="reference internal" href="#thm:24">Theorem 6.7</a> are not satisfied.</p>
-<p>However, we now show that <span class="math notranslate nohighlight">\(f\)</span> is integrable. Let <span class="math notranslate nohighlight">\(P\)</span> be any partition on <span class="math notranslate nohighlight">\([-1, 1]\)</span>. If <span class="math notranslate nohighlight">\(0 \notin P\)</span>, then</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-S(P,f,\alpha) = f(0)[\alpha(1) - \alpha(-1)] = 0
-\end{align*}\]</div>
-<p>And if <span class="math notranslate nohighlight">\(0 \in P\)</span>, we then have</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}
-S(P,f,\alpha) = f(-\delta_1)[\alpha(0) - \alpha(-1)] + f(\delta_2)[\alpha(1) - \alpha(0)]
-= (-1)[0-(-1)] + 1 \cdot[1 - 0]
-= 0
-\end{align*}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\delta_1, \delta_2 \geq 0\)</span>. Hence, <span class="math notranslate nohighlight">\(S(P,f,\alpha) = 0\)</span> no matter what partition and representative points we choose. It follows that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-1, 1]\)</span> with <span class="math notranslate nohighlight">\(\int_{-1}^{1} f \; \mathrm{d}\alpha = 0\)</span>.</p>
-</section>
-</div><div class="proof example admonition" id="eg:3">
-<p class="admonition-title"><span class="caption-number">Example 6.2 </span></p>
-<section class="example-content" id="proof-content">
-<p>Let</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-f(x) = \begin{cases}
-\frac{\abs{\sin(x)}}{x} &amp;x \neq 0 \\
--1 &amp;x = 0
-\end{cases}\quad\text{and}\quad\alpha(x) = \begin{cases}
--1 &amp;x &lt; 0 \\
-1 &amp;x \geq 0
-\end{cases},
-\quad x \in[-3\pi, 3\pi]\end{align*}\end{split}\]</div>
-<p>Let us take for granted that the following limit exists:</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\lim_{x \to 0}\frac{\sin (x)}{x} = 1
-\end{align*}\]</div>
-<p>Then we note that the left and right limits of <span class="math notranslate nohighlight">\(f\)</span> both exist but are not equal. <a class="reference internal" href="#fig-10"><span class="std std-numref">Fig. 6.2</span></a> exhibits the graphs of these two functions.</p>
-<figure class="align-default" id="fig-10">
-<img alt="../_images/graph-009.png" src="../_images/graph-009.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Left: integrand <span class="math notranslate nohighlight">\(f\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(0\)</span>. Right: integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(0\)</span>.</span><a class="headerlink" href="#fig-10" title="Permalink to this image">#</a></p>
-</figcaption>
-</figure>
-<p>The integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is constant except for a jump discontinuity at <span class="math notranslate nohighlight">\(0\)</span>. We note that <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the <em>right</em> at <span class="math notranslate nohighlight">\(0\)</span>, and <span class="math notranslate nohighlight">\(f\)</span> is continuous from the <em>left</em> at <span class="math notranslate nohighlight">\(0\)</span>. Hence, the conditions in <a class="reference internal" href="#thm:24">Theorem 6.7</a> are satisfied, and we conclude <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> with</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\int_{-3\pi}^{3\pi}f \;\mathrm{d}\alpha
-= f(0)[\alpha(3\pi) - \alpha(-3\pi)]
-= f(0) \cdot 2 = -2
-\end{align*}\]</div>
-</section>
-</div><div class="proof example admonition" id="eg:4">
-<p class="admonition-title"><span class="caption-number">Example 6.3 </span></p>
-<section class="example-content" id="proof-content">
-<p>If we alter the function <span class="math notranslate nohighlight">\(f\)</span> in the example above (<a class="reference internal" href="#eg:3">Example 6.2</a>) by re-defining <span class="math notranslate nohighlight">\(f(0) = 1\)</span> while keeping the integrator <span class="math notranslate nohighlight">\(\alpha\)</span> unchanged, then <span class="math notranslate nohighlight">\(f\)</span> is no longer integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span>. Now,</p>
+<p>As an exercise, we reconsider <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 6.3</a> and prove that <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
+<div class="admonition-exercise-6-3 admonition">
+<p class="admonition-title">Exercise 6.3</p>
+<p>Let functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> be given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\begin{align*}
 f(x) = \begin{cases}
@@ -851,49 +830,33 @@ f(x) = \begin{cases}
 1 &amp;x \geq 0
 \end{cases},
 \quad x \in[-3\pi, 3\pi]\end{align*}\end{split}\]</div>
-<p>Note that we cannot apply <a class="reference internal" href="#thm:24">Theorem 6.7</a> here since neither the integrand nor the integrator is continuous from the left of <span class="math notranslate nohighlight">\(0\)</span>.</p>
-<p>To show that <span class="math notranslate nohighlight">\(f\)</span> is indeed not integrable, we consider <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> and <span class="math notranslate nohighlight">\([0, 3\pi]\)</span> separately. It is evident that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([0, 3\pi]\)</span> with <span class="math notranslate nohighlight">\(\int_{0}^{3\pi}f \; \mathrm{d}\alpha = 0\)</span>. We now consider the other half interval <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>. Given any partition <span class="math notranslate nohighlight">\(P = \{x_0, x_1, \ldots, x_n\}\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>, we have</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{align*}
-S(P,f,\alpha)
-= f(t_n) [\alpha(x_n) - \alpha(x_{n-1})]
-= 2 f(t_n)
-= \begin{cases}
-2 \abs{\sin(t_n)} / t_n &amp;t_n &lt; 0\\
-2 &amp;t_n = 0
-\end{cases}\end{align*}\end{split}\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Intuitively, we know <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> since for any partition <span class="math notranslate nohighlight">\(P\)</span>, we can always choose the last point <span class="math notranslate nohighlight">\(t_n\)</span> such that the Stieltjes sum <span class="math notranslate nohighlight">\(S(P,f,\alpha)\)</span> does not fall in any neighborhood of some number. But we still have to prove this rigorously by the definition.</p>
+<p>Show that <span class="math notranslate nohighlight">\(f \notin \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>.</p>
+<p>[Hint: <span class="math notranslate nohighlight">\(\sin x &lt; x \; \forall x &gt; 0\)</span>.]</p>
 </div>
-<p>We shall prove by contradiction. Assume <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> with <span class="math notranslate nohighlight">\(\int_{-3\pi}^{0} f \; \mathrm{d}\alpha = A\)</span>. Since <span class="math notranslate nohighlight">\(2\abs{\sin x} / x \to -2\)</span> as <span class="math notranslate nohighlight">\(x \to 0^{-}\)</span>, there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>It suffices to prove <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span> since <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([0, 3\pi]\)</span>.</p>
+<p>Note that For any partition <span class="math notranslate nohighlight">\(P = \{x_0, x_1, \ldots, x_n\}\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>, only the last sub-integral <span class="math notranslate nohighlight">\([x_{n-1}, x_n = 0]\)</span> contributes to the upper and lower sums. Furthermore, using the hint, we know</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
--3 &lt; \frac{2\abs{\sin x}}{x} &lt; -1
-\quad\forall x \in(-\delta, 0)
+M_n = 1
+\quad\text{and}\quad
+m_n = -1
 \end{align*}\]</div>
-<p>Choose <span class="math notranslate nohighlight">\(\varepsilon = 1\)</span>. For all partitions <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>, we can always find a refinement <span class="math notranslate nohighlight">\(P=\{x_0, x_1, \ldots, x_n\}\)</span> such that <span class="math notranslate nohighlight">\(x_{n-1} &gt; -\delta\)</span>. We choose the last representative <span class="math notranslate nohighlight">\(t_n \in[x_{n-1}, x_n]\)</span> in two ways. Letting <span class="math notranslate nohighlight">\(t_n\)</span> be some number in that sub-interval other than <span class="math notranslate nohighlight">\(0\)</span> yields a Riemann-Stieltjes sum in between <span class="math notranslate nohighlight">\(-3\)</span> and <span class="math notranslate nohighlight">\(-2\)</span>, i.e.,</p>
+<p>Then the upper and lower sums are given by</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
-S(P,f,\alpha) = 2 \abs{\sin(t_n)} / t_n \in(-3, -1)
+U(P,f,\alpha) = M_n [\alpha(0) - \alpha(x_{n-1})] = 2
+\quad\text{and}\quad
+L(P,f,\alpha) = m_n [\alpha(0) - \alpha(x_{n-1})] = -2
 \end{align*}\]</div>
-<p>since <span class="math notranslate nohighlight">\(-\delta &lt; t_n &lt; 0\)</span>. On the other hand, letting <span class="math notranslate nohighlight">\(t^\prime_n = 0\)</span> leads to another Riemann-Stieltjes sum</p>
+<p>Since the above equations hold for any partition <span class="math notranslate nohighlight">\(P\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>, we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{align*}
-S^\prime(P,f,\alpha) = 2
+\[\begin{align*}\upint_{-3\pi}^0 = 2
+\quad\text{and}\quad\lowint_{-3\pi}^0 = -2
 \end{align*}\]</div>
-<p>We have the following inequality:</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\abs{S(P,f,\alpha) - A} + \abs{S^\prime(P,f,\alpha) - A}\geq\abs{S(P,f,\alpha) - S^\prime(P,f,\alpha)}
-&gt; 3 &gt; 2\varepsilon\end{align*}\]</div>
-<p>This implies that at least one of <span class="math notranslate nohighlight">\(\abs{S(P,f,\alpha) - A} \)</span> and <span class="math notranslate nohighlight">\( \abs{S^\prime(P,f,\alpha) - A} \)</span> is greater than <span class="math notranslate nohighlight">\(\varepsilon\)</span>, which leads to a contradiction. Hence, <span class="math notranslate nohighlight">\(f\)</span> is not integrable on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>.</p>
-<p>Finally, by <a class="reference internal" href="Linear%20Properties.html#thm:25">Theorem 6.3</a>, <span class="math notranslate nohighlight">\(f\)</span> cannot be integrable with respect to <span class="math notranslate nohighlight">\(\alpha\)</span> on the whole interval <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>.</p>
-<p>As a matter of fact, <span class="math notranslate nohighlight">\(f \notin \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span> if we re-define <span class="math notranslate nohighlight">\(f(0)\)</span> other than <span class="math notranslate nohighlight">\(1\)</span> while keep <span class="math notranslate nohighlight">\(\alpha\)</span> unchanged.</p>
-</section>
-</div><div class="admonition-exercise-6-2 admonition">
-<p class="admonition-title">Exercise 6.2</p>
-<p>Let <span class="math notranslate nohighlight">\(f\)</span> be a constant function on <span class="math notranslate nohighlight">\([a, b]\)</span> except for <em>finitely</em> many points. Show that <span class="math notranslate nohighlight">\(f\)</span> is Riemann integrable on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
-<p>[Hint: You may find the theorem of integration by parts (<a class="reference internal" href="Integration%20by%20Parts.html#thm:20">Theorem 6.5</a>) helpful.]</p>
+<p>Therefore, by <a class="reference internal" href="#thm:28">Theorem 6.12</a>, <span class="math notranslate nohighlight">\(f\)</span> is not integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([-3\pi, 0]\)</span>, and hence on <span class="math notranslate nohighlight">\([-3\pi, 3\pi]\)</span>.</p>
+<p>This proof is way cleaner than the one given in <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#eg:4">Example 6.3</a> thanks to Darboux’s formulation of integrals.</p>
 </div>
 </section>
 
@@ -924,17 +887,17 @@ S^\prime(P,f,\alpha) = 2
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Change%20of%20Variables.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6.5. </span>Change of Variables</p>
+            <p class="prev-next-title"><span class="section-number">6.8. </span>Darboux Integrals with Monotonically Increasing Integrators</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html" title="next page">
+    <a class='right-next' id="next-link" href="Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.7. </span>Reduction of Riemann-Stieltjes Integrals to Finite Sums</p>
+        <p class="prev-next-title"><span class="section-number">6.10. </span>Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

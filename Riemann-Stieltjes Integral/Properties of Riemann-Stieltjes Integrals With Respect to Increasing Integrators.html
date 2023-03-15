@@ -59,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6.11. Integrators of Bounded Variation" href="Integrators%20of%20Bounded%20Variation.html" />
-    <link rel="prev" title="6.9. Riemann’s Condition" href="Riemann%27s%20Condition.html" />
+    <link rel="prev" title="6.9. Riemann’s Criterion" href="Riemann%27s%20Criterion.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -391,8 +391,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Riemann%27s%20Condition.html">
-     6.9. Riemann’s Condition
+    <a class="reference internal" href="Riemann%27s%20Criterion.html">
+     6.9. Riemann’s Criterion
     </a>
    </li>
    <li class="toctree-l2 current active">
@@ -757,7 +757,7 @@ title="Print to PDF"
 <p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Let <span class="math notranslate nohighlight">\(c \in (a, b)\)</span> be an interior point. If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([c, b]\)</span></p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. We only prove <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span>. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. By <a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 6.12</a>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
+<p>Proof. We only prove <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span>. Given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>. By <a class="reference internal" href="Riemann%27s%20Criterion.html#thm:28">Theorem 6.12</a>, there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 U(P,f,\alpha) - L(P,f,\alpha) &lt; \varepsilon\quad\forall P \supseteq P_\varepsilon\end{align*}\]</div>
@@ -785,7 +785,7 @@ U(P^{\prime},f,\alpha) - L(P^{\prime},f,\alpha)
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 U(P^{\prime},f,\alpha) - L(P^{\prime},f,\alpha) &lt; \varepsilon\end{align*}\]</div>
-<p>which implies <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span> by <a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 6.12</a>.</p>
+<p>which implies <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span> by <a class="reference internal" href="Riemann%27s%20Criterion.html#thm:28">Theorem 6.12</a>.</p>
 </div>
 <p>In fact, <span class="math notranslate nohighlight">\(f\)</span> is integrable on all sub-intervals of <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 <div class="proof theorem admonition" id="thm:40">
@@ -922,7 +922,7 @@ U(P,\phi\circ f, \alpha) - L(P,\phi\circ f, \alpha)
 <div class="math notranslate nohighlight">
 \[\begin{align*}
 U(P,\phi\circ f, \alpha) - L(P,\phi\circ f, \alpha) &lt; \varepsilon\end{align*}\]</div>
-<p>Therefore, the composite function <span class="math notranslate nohighlight">\(\phi \circ f\)</span> satisfies Riemann’s condition, and hence <span class="math notranslate nohighlight">\(\phi \circ f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="Riemann%27s%20Condition.html#thm:28">Theorem 6.12</a>.</p>
+<p>Therefore, the composite function <span class="math notranslate nohighlight">\(\phi \circ f\)</span> satisfies Riemann’s criterion, and hence <span class="math notranslate nohighlight">\(\phi \circ f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> by <a class="reference internal" href="Riemann%27s%20Criterion.html#thm:28">Theorem 6.12</a>.</p>
 </div>
 <p>Note that the absolute value function <span class="math notranslate nohighlight">\(\phi(x) = \abs{x}\)</span> is continuous. Applying it to an integrable function <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>, we immediately conclude that <span class="math notranslate nohighlight">\(\abs{f}\)</span> is also integrable.</p>
 <div class="proof theorem admonition" id="thm:31">
@@ -1129,11 +1129,11 @@ g(0) &amp;x \geq 0 \\
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Riemann%27s%20Condition.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Riemann%27s%20Criterion.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6.9. </span>Riemann’s Condition</p>
+            <p class="prev-next-title"><span class="section-number">6.9. </span>Riemann’s Criterion</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="Integrators%20of%20Bounded%20Variation.html" title="next page">

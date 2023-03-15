@@ -76,7 +76,7 @@ U(P,f, \alpha) - L(P,f, \alpha)
 ```
 
 Therefore, $ f \in \mathfrak{R}(\alpha) $ on $ [a, b] $
-since it satisfies Riemann's condition ({prf:ref}`thm:28`).
+since it satisfies Riemann's criterion ({prf:ref}`thm:28`).
 
 ````
 

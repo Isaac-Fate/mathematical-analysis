@@ -31,7 +31,7 @@ m_k = \inf_{x \in[x_{k-1}, x_k]} f(x)
 
 And we write $V(x)$ instead of $V_a^x(\alpha)$ to emphasize that the total variation is a function of $x$.
 
-Observe that $V(x)$ is monotonically increasing, hence we shall prove $f$ is integrable w.r.t. $V(x)$ mainly relies on Riemann's condition ({prf:ref}`thm:28`). We intend to bound the difference between the upper and the lower sum, which is shown in the following, with an arbitrarily small positive number.
+Observe that $V(x)$ is monotonically increasing, hence we shall prove $f$ is integrable w.r.t. $V(x)$ mainly relies on Riemann's criterion ({prf:ref}`thm:28`). We intend to bound the difference between the upper and the lower sum, which is shown in the following, with an arbitrarily small positive number.
 
 ```{math}
 \begin{align*}

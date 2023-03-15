@@ -590,7 +590,7 @@ U(P,f) - L(P,f) \geq\varepsilon\end{align*}
 ```
 
 for any partition $P$ on $[a, b]$.
-Therefore, $f$ fails to satisfy Riemann's condition,
+Therefore, $f$ fails to satisfy Riemann's criterion,
 and hence not integrable on $[a, b]$.
 
 ````
