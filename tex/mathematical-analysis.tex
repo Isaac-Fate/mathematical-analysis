@@ -102,6 +102,25 @@ This book mainly follows the structure of \parencite{apostolMathematicalAnalysis
 
 %==============================
 
+\chapter{Topology}
+
+%------------------------------
+
+\section{Compactness}
+
+%------------------------------
+
+\begin{theorem} \label{thm:90}
+	Every closed subspace of a compact space is also compact.
+\end{theorem}
+
+\begin{proof}
+	% TODO
+\end{proof}
+
+
+%==============================
+
 \chapter{Numerical Sequences and Series}
 
 We are interested in real or complex-valued sequences and series.
@@ -4931,29 +4950,29 @@ The following is an example where both inequalities are strict.
 
 %------------------------------
 
-\section{Riemann's Condition}
+\section{Riemann's Criterion}
 
-In Darboux's formulation, the integral exists if and only if the upper and lower integrals are equal to each other. We now show that this is equivalent to the criterion of the existence of integrals from our definition (Definition~\ref{def:1}). Furthermore, we will introduce another equivalent condition, \textbf{Riemann's condition}\index{Riemann's condition}, which is convenient to use in proofs.
+In Darboux's formulation, the integral exists if and only if the upper and lower integrals are equal to each other. We now show that this is equivalent to the criterion of the existence of integrals from our definition (Definition~\ref{def:1}). Furthermore, we will introduce another equivalent condition, \textbf{Riemann's criterion}\index{Riemann's criterion}, which is convenient to use in proofs.
 
-\begin{definition}[Riemann's Condition]
-    Suppose $f$ is bounded and $\alpha$ is increasing on $[a, b]$. Function $f$ is said to satisfy \textbf{Riemann's condition} w.r.t. $\alpha$ on $[a, b]$ if for any $\varepsilon > 0$, there exists a partition $P_\varepsilon$ on $[a, b]$ such that 
+\begin{definition}[Riemann's Criterion]
+    Suppose $f$ is bounded and $\alpha$ is increasing on $[a, b]$. Function $f$ is said to satisfy \textbf{Riemann's criterion} w.r.t. $\alpha$ on $[a, b]$ if for any $\varepsilon > 0$, there exists a partition $P_\varepsilon$ on $[a, b]$ such that 
     \begin{align*}
         U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon
     \end{align*}
     for any refinement $P \supseteq P_\varepsilon$.
 \end{definition}
 
-Essentially, Riemann's condition requires that the upper and lower sums should be arbitrarily close.
+Essentially, Riemann's criterion requires that the upper and lower sums should be arbitrarily close.
 
 %------------------------------
 
-The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann's condition are equivalent.
+The following states that the existence of Riemann-Stieltjes integrals, the existence of Darboux integrals and Riemann's criterion are equivalent.
 
 \begin{theorem} \label{thm:28}
     Suppose $f$ is bounded and $\alpha$ is increasing on $[a, b]$. Then the following statements are equivalent.
     \begin{enumerate}
         \item $f$ is integrable w.r.t. $\alpha$ on $[a, b]$, i.e., $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
-        \item $f$ satisfies Riemann's condition w.r.t. $\alpha$ on $[a, b]$.
+        \item $f$ satisfies Riemann's criterion w.r.t. $\alpha$ on $[a, b]$.
         \item The upper and lower integrals are equal to each other, i.e., $\upint_a^b f \; \mathrm{d}\alpha = \lowint_a^b f \; \mathrm{d}\alpha$.
     \end{enumerate}
 \end{theorem}
@@ -5026,9 +5045,9 @@ The following states that the existence of Riemann-Stieltjes integrals, the exis
         &<&& \varepsilon / 3 + \varepsilon / 3 + \varepsilon / 3 \\
         &=&& \varepsilon
     \end{alignat*}
-    where the last inequality follows from \eqref{eq:63}, \eqref{eq:64} and \eqref{eq:65}. Therefore, Riemann's condition is satisfied since the above inequality holds for any refinement $P$ of $P_\varepsilon$.
+    where the last inequality follows from \eqref{eq:63}, \eqref{eq:64} and \eqref{eq:65}. Therefore, Riemann's criterion is satisfied since the above inequality holds for any refinement $P$ of $P_\varepsilon$.
 
-    (Proof of 2 $\implies$ 3) Let $\varepsilon > 0$ be arbitrary. By Riemann's condition, there exists a partition $P_\varepsilon$ such that 
+    (Proof of 2 $\implies$ 3) Let $\varepsilon > 0$ be arbitrary. By Riemann's criterion, there exists a partition $P_\varepsilon$ such that 
     \begin{align*}
         U(P,f,\alpha) - L(P,f,\alpha) < \varepsilon
     \end{align*}
@@ -5354,7 +5373,7 @@ Suppose we know $f \in \mathfrak{R}(\alpha)$ on $[a, b]$. The following theorem 
     \begin{align*}
         U(P,\phi \circ f, \alpha) - L(P,\phi \circ f, \alpha) < \varepsilon
     \end{align*}
-    Therefore, the composite function $\phi \circ f$ satisfies Riemann's condition, and hence $\phi \circ f \in \mathfrak{R}(\alpha)$ on $[a, b]$ by Theorem~\ref{thm:28}.
+    Therefore, the composite function $\phi \circ f$ satisfies Riemann's criterion, and hence $\phi \circ f \in \mathfrak{R}(\alpha)$ on $[a, b]$ by Theorem~\ref{thm:28}.
 \end{proof}
 
 %------------------------------
@@ -5598,7 +5617,7 @@ For a sub-interval $[x_{k-1}, x_k]$ in the partition $P = \{ x_0, \ldots, x_n \}
 \end{align*}
 And we write $V(x)$ instead of $V_a^x(\alpha)$ to emphasize that the total variation is a function of $x$.
 
-Observe that $V(x)$ is monotonically increasing, hence we shall prove $f$ is integrable w.r.t. $V(x)$ mainly relies on Riemann's condition (Theorem~\ref{thm:28}). We intend to bound the difference between the upper and the lower sum, which is shown in the following, with an arbitrarily small positive number.
+Observe that $V(x)$ is monotonically increasing, hence we shall prove $f$ is integrable w.r.t. $V(x)$ mainly relies on Riemann's criterion (Theorem~\ref{thm:28}). We intend to bound the difference between the upper and the lower sum, which is shown in the following, with an arbitrarily small positive number.
 \begin{align*}
     U(P,f,V) - L(P,f,V)
     &= \sum_k (M_k - m_k) \Delta V_k \\ 
@@ -5848,7 +5867,7 @@ $ \alpha $ is of bounded variation.
 		= \varepsilon
 	\end{align*}
 	Therefore, $ f \in \mathfrak{R}(\alpha) $ on $ [a, b] $
-	since it satisfies Riemann's condition (Theorem~\ref{thm:28}).
+	since it satisfies Riemann's criterion (Theorem~\ref{thm:28}).
 \end{proof}
 
 %------------------------------
@@ -6586,9 +6605,9 @@ In this case, Theorem~\ref{thm:21} is no longer applicable.
 	or a \textbf{zero-measure}\index{zero-measure sets} set 
 	if for any given $\varepsilon > 0$,
 	there exists a countable covering of $S$
-	by by open intervals the sum of whose lengths 
+	by open intervals the sum of whose lengths 
 	is bounded by $\varepsilon$.
-	Mathematically, that is to say there exists 
+	Mathematically, that is to say, there exists 
 	a family of intervals $\{(a_k, b_k)\}_{k \in \Lambda}$
 	where the index set $\Lambda$ is countable such that
 	\begin{align}
@@ -6622,8 +6641,8 @@ and the sum of lengths of empty sets is zero,
 
 It is evident that the union of two zero-measure sets also has measure zero.
 By Mathematical induction, 
-any finite unions of zero-measure sets also has measure zero.
-In fact, this is also the case for countable union of zero-measure sets,
+any finite unions of zero-measure sets also have measure zero.
+In fact, this is also the case for the countable union of zero-measure sets,
 as stated in the following theorem.
 
 \begin{theorem} \label{thm:86}
@@ -6817,7 +6836,7 @@ Intuitively, this implies that $f$ is continuous there.
 \end{theorem}
 
 \begin{proof}
-	%TODO
+	% TODO
 \end{proof}
 
 %------------------------------
@@ -6835,7 +6854,7 @@ then there exists $\delta > 0$ such that the oscillation of $f$
 on any subinterval whose length is less than $\delta$ is also 
 bounded by $\varepsilon$.
 
-\begin{theorem} \label{thm:87}
+\begin{lemma} \label{lem:8}
 	Let $f$ be defined and bounded on an closed interval $I$.
 	Given $\varepsilon > 0$.
 	Suppose that $\omega_f(x) < \varepsilon$ for every $x$ 
@@ -6846,14 +6865,14 @@ bounded by $\varepsilon$.
 		\Omega_f(J) < \varepsilon
 	\end{align*}
 	where $J$ is any subinterval in $I$ whose length is less than $\delta$.
-\end{theorem}
+\end{lemma}
 
 \begin{proof}
 	% TODO
 \end{proof}
 
 \begin{exercise} \label{ex:10}
-	Provide a simpler proof of Theorem~\ref{thm:87}
+	Provide a simpler proof of Theorem~\ref{lem:8}
 	without using Lebesgue's number.
 \end{exercise}
 
@@ -6909,14 +6928,14 @@ bounded by $\varepsilon$.
 
 %------------------------------
 
-\begin{theorem} \label{thm:89}
+\begin{lemma} \label{lem:7}
 	Let $f$ be defined and bounded on a closed interval $I$.
 	For each $\varepsilon > 0$, the set
 	\begin{align*}
 		J_\varepsilon = \set{x \in I}{\omega_f(x) \geq \varepsilon}
 	\end{align*}
 	is closed in $I$.
-\end{theorem}
+\end{lemma}
 
 \begin{proof}
 	Consider the complement of $J_\varepsilon$ in $I$,
@@ -6953,7 +6972,7 @@ bounded by $\varepsilon$.
 
 %------------------------------
 
-\begin{theorem}[Lebesgue's Criterion for Reimann-Integrability] \label{thm:91}
+\begin{theorem}[Lebesgue's Criterion for Reimann-Integrability] \label{thm:89} 
 	Let $f$ be defined and bounded on $[a, b]$.
 	Let $D$ denote the set of discontinuities of $f$ on $[a, b]$.
 	Then $f \in \mathfrak{R}$ on $[a, b]$
@@ -6979,7 +6998,7 @@ bounded by $\varepsilon$.
 	by Theorem~\ref{thm:86},
 	one member of the above union, say $D_r$ 
 	does not have measure zero.
-	Then there exists an positive number $\varepsilon_0 > 0$
+	Then there exists a positive number $\varepsilon_0 > 0$
 	such that the sum of lengths of any countable open cover of $D_r$
 	is greater than or equal to $\varepsilon_0$.
 	That is, 
@@ -7000,7 +7019,7 @@ bounded by $\varepsilon$.
 	except for possibly finitely many points.
 	More specifically, we have 
 	\begin{align*}
-		D_r \setminus P \subseteq \bigcup (x_{k-1}, x_k)
+		D_r \setminus P \subseteq \bigcup_{k \in \Lambda} (x_{k-1}, x_k)
 	\end{align*}
 	Note that $D_r \setminus P$ still does not have measure zero
 	since $P$ is only a finite set.
@@ -7033,13 +7052,118 @@ bounded by $\varepsilon$.
 		U(P,f) - L(P,f) \geq \varepsilon
 	\end{align*}
 	for any partition $P$ on $[a, b]$.
-	Therefore, $f$ fails to satisfy Riemann's condition, 
+	Therefore, $f$ fails to satisfy Riemann's criterion, 
 	and hence not integrable on $[a, b]$.
+
+	(Sufficiency)
+	Now, we assume $D$ has measure zero and 
+	show that $f$ satisfies Riemann's criterion.
+	Recall $D$ can be written as $D = \bigcup_{r=1}^\infty D_r$.
+	Given $\varepsilon > 0$,
+	there exists $r \in \N^\ast$ such that 
+	\begin{align}
+		r > (\Omega_f([a,b]) + b - a) / \varepsilon
+		\label{eq:148}
+	\end{align}
+	Consider the set $D_r$.
+	Note that $D_r$ also has measure zero since $D$ has measure zero.
+	Thus, there exists a countable covering of $D_r$ by open intervals
+	the sum of whose lengths is less than $1 / r$.
+	Moreover, since $D_r$ is compact by Lemma~\ref{lem:7} 
+	and Theorem~\ref{thm:90},
+	there exists a \textit{finite} subcover of $D_r$, 
+	say $U_1, \ldots, U_N$.
+	Note that the union $\bigcup_{k=1}^n U_k$ can be written as
+	a finite union of \textit{disjoint} open intervals,
+	say $I_1, \ldots, I_n$.
+	And the sum their lengths is of course also less than $1 / r$
+	since it is actually less than the sum of lengths of all $U_k$'s.
+	In summary, we have
+	\begin{align*}
+		D_r \subseteq \biguplus_{k=1}^n I_k,
+		\quad \text{and} \quad
+		\sum_{k=1}^n \ell(I_k) < \frac{1}{r}
+	\end{align*}
+
+	Let $S$ denote the complement of $\biguplus_{k=1}^n I_k$ in $[a, b]$.
+	We claim that there exists $\delta > 0$
+	such that $S$ can be written as a finite union of 
+	closed intervals, $J_1, \ldots, J_m$, satisfying the following: 
+	\begin{enumerate}
+		\item Each pair of different closed intervals intersect 
+			at most one point, i.e., $J_i \cap J_j$
+			is either $\emptyset$ or a singleton whenever $i \neq j$,  
+		\item the length of each closed interval is less than $\delta$,
+			i.e., $\ell(J_k) < \delta$, and 
+		\item $\Omega_f(J_k) < 1 / r$ for each $k$.
+	\end{enumerate}
+	The proof of this claim is left as an exercise. 
+	(See Exercise~\ref{ex:12}.)
+
+	Note that the union of endpoints of intervals $I_k$'s and $J_k$'s
+	for a partition $P=\{x_0, \ldots, x_{m+n}\}$ on $[a, b]$.
+	\begin{note}
+		Since there are $n$ open intervals $I_1, \ldots, I_n$
+		and $m$ closed intervals $J_1, \ldots, J_m$,
+		one can verify that the number of set of endpoints 
+		is indeed $m+n$.
+	\end{note}
+	\noindent We are going to show $U(P,f) - L(P,f) < \varepsilon$.
+	Let 
+	\begin{align*}
+		\Lambda_1 = \set{k}{(x_{k-1}, x_k) = I_j \text{ for some $j$}}
+		\quad \text{and} \quad
+		\Lambda_2 = \set{k}{[x_{k-1}, x_k] = J_j \text{ for some $j$}}
+	\end{align*}
+	Then the $U(P,f) - L(P,f)$ can be decomposed into 
+	the following two sums:
+	\begin{align}
+		U(P,f) - L(P,f)
+		= \sum_{k \in \Lambda_1} \Omega_f([x_{k-1}, x_k]) \Delta x_k
+			+ \sum_{k \in \Lambda_2} \Omega_f([x_{k-1}, x_k]) \Delta x_k
+		\label{eq:149}
+	\end{align}
+	We consider each of these two sums separately.
+
+	For $k \in \Lambda_1$, we have
+	\begin{align}
+		\sum_{k \in \Lambda_1} \Omega_f([x_{k-1}, x_k]) \Delta x_k
+		\leq \Omega_f([a, b]) \sum_{k \in \Lambda_1} \Delta x_k
+		< \Omega_f([a, b]) \cdot \frac{1}{r} 
+		\label{eq:150}
+	\end{align}
+	where the last inequality holds 
+	because $\sum_{k \in \Lambda_1} \Delta x_k$ is the exactly
+	the sum of lengths of all $I_k$'s, which is less than $1 / r$.
+
+	On the other hand, for $k \in \Lambda_2$,
+	we have 
+	\begin{align}
+		\sum_{k \in \Lambda_2} \Omega_f([x_{k-1}, x_k]) \Delta x_k
+		< \frac{1}{r} \sum_{k \in \Lambda_2} \Delta x_k
+		\leq \frac{1}{r} \cdot (b - a)
+		\label{eq:151}
+	\end{align}
+	where the second last inequality holds
+	because $\Omega_f(J_k) < 1 / r$ for each $k=1, \ldots, m$.
+	
+	Finally, by combining \eqref{eq:148}, \eqref{eq:149}, \eqref{eq:150}
+	and \eqref{eq:151} together,
+	we find that indeed $U(P,f) - L(P,f) < \varepsilon$.
+	Therefore, $f$ satisfies Riemann's criterion on $[a, b]$
+	and hence is integrable.
+	This completes the proof.
 \end{proof}
 
 \begin{exercise} \label{ex:11}
 	Complete the above proof by
 	showing that $D = \bigcup_{r=1}^\infty D_r$
+\end{exercise}
+
+\begin{exercise} \label{ex:12}
+	Complete the above proof by showing the set $S$
+	can be written as a finite union of closed intervals $J_k$'s
+	satisfying the properties as claimed.
 \end{exercise}
 
 
