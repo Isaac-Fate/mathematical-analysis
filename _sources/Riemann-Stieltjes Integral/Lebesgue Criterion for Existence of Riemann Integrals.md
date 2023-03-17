@@ -319,8 +319,8 @@ on any subinterval whose length is less than $\delta$ is also
 bounded by $\varepsilon$.
 
 
-````{prf:theorem}
-:label: thm:87
+````{prf:lemma}
+:label: lem:8
 
 Let $f$ be defined and bounded on an closed interval $I$.
 Given $\varepsilon > 0$.
@@ -343,10 +343,10 @@ TODO
 
 ````
 
-````{admonition} Exercise 6.7
+````{admonition} Exercise 7.7
 :name: ex:10
 
-Provide a simpler proof of {prf:ref}`thm:87`
+Provide a simpler proof of {prf:ref}`lem:8`
 without using Lebesgue's number.
 
 ````
@@ -415,8 +415,8 @@ This completes the proof.
 
 ````
 
-````{prf:theorem}
-:label: thm:89
+````{prf:lemma}
+:label: lem:7
 
 Let $f$ be defined and bounded on a closed interval $I$.
 For each $\varepsilon > 0$, the set
@@ -480,7 +480,7 @@ Therefore, equivalently, $J_\varepsilon$ is closed in $I$.
 ````
 
 ````{prf:theorem} Lebesgue's Criterion for Reimann-Integrability
-:label: thm:91
+:label: thm:89
 
 Let $f$ be defined and bounded on $[a, b]$.
 Let $D$ denote the set of discontinuities of $f$ on $[a, b]$.
@@ -510,7 +510,7 @@ where
 D_r = \set{x \in[a, b]}{\omega_f(x) \geq \frac{1}{r}}\end{align*}
 ```
 
-This is left as an exercise. (See {ref}`Exercise 6.8<ex:11>`.)
+This is left as an exercise. (See {ref}`Exercise 7.8<ex:11>`.)
 Since $D$ does not have measure zero,
 by {prf:ref}`thm:86`,
 one member of the above union, say $D_r$
@@ -593,11 +593,136 @@ for any partition $P$ on $[a, b]$.
 Therefore, $f$ fails to satisfy Riemann's criterion,
 and hence not integrable on $[a, b]$.
 
+(Sufficiency)
+Now, we assume $D$ has measure zero and
+show that $f$ satisfies Riemann's criterion.
+Recall $D$ can be written as $D = \bigcup_{r=1}^\infty D_r$.
+Given $\varepsilon > 0$,
+there exists $r \in \N^\ast$ such that
+
+```{math}
+:label: eq:148
+\begin{align}
+r > (\Omega_f([a,b]) + b - a) / \varepsilon\end{align}
+```
+
+Consider the set $D_r$.
+Note that $D_r$ also has measure zero since $D$ has measure zero.
+Thus, there exists a countable covering of $D_r$ by open intervals
+the sum of whose lengths is less than $1 / r$.
+Moreover, since $D_r$ is compact by {prf:ref}`lem:7`
+and {prf:ref}`thm:90`,
+there exists a *finite* subcover of $D_r$,
+say $U_1, \ldots, U_N$.
+Note that the union $\bigcup_{k=1}^n U_k$ can be written as
+a finite union of *disjoint* open intervals,
+say $I_1, \ldots, I_n$.
+And the sum their lengths is of course also less than $1 / r$
+since it is actually less than the sum of lengths of all $U_k$'s.
+In summary, we have
+
+```{math}
+\begin{align*}
+D_r \subseteq\biguplus_{k=1}^n I_k,
+\quad\text{and}\quad\sum_{k=1}^n \ell(I_k) < \frac{1}{r}\end{align*}
+```
+
+Let $S$ denote the complement of $\biguplus_{k=1}^n I_k$ in $[a, b]$.
+We claim that there exists $\delta > 0$
+such that $S$ can be written as a finite union of
+closed intervals, $J_1, \ldots, J_m$, satisfying the following:
+- ➀ Each pair of different closed intervals intersect
+at most one point, i.e., $J_i \cap J_j$
+is either $\emptyset$ or a singleton whenever $i \neq j$,
+- ➁ the length of each closed interval is less than $\delta$,
+i.e., $\ell(J_k) < \delta$, and
+- ➂ $\Omega_f(J_k) < 1 / r$ for each $k$.
+
+
+The proof of this claim is left as an exercise.
+(See {ref}`Exercise 7.9<ex:12>`.)
+
+Note that the union of endpoints of intervals $I_k$'s and $J_k$'s
+for a partition $P=\{x_0, \ldots, x_{m+n}\}$ on $[a, b]$.
+
+:::{note}
+
+Since there are $n$ open intervals $I_1, \ldots, I_n$
+and $m$ closed intervals $J_1, \ldots, J_m$,
+one can verify that the number of set of endpoints
+is indeed $m+n$.
+
+:::
+
+We are going to show $U(P,f) - L(P,f) < \varepsilon$.
+Let
+
+```{math}
+\begin{align*}\Lambda_1 = \set{k}{(x_{k-1}, x_k) = I_j \text{ for some $j$}}\quad\text{and}\quad\Lambda_2 = \set{k}{[x_{k-1}, x_k] = J_j \text{ for some $j$}}\end{align*}
+```
+
+Then the $U(P,f) - L(P,f)$ can be decomposed into
+the following two sums:
+
+```{math}
+:label: eq:149
+\begin{align}
+U(P,f) - L(P,f)
+= \sum_{k \in \Lambda_1}\Omega_f([x_{k-1}, x_k]) \Delta x_k
++ \sum_{k \in \Lambda_2}\Omega_f([x_{k-1}, x_k]) \Delta x_k
+\end{align}
+```
+
+We consider each of these two sums separately.
+
+For $k \in \Lambda_1$, we have
+
+```{math}
+:label: eq:150
+\begin{align}\sum_{k \in \Lambda_1}\Omega_f([x_{k-1}, x_k]) \Delta x_k
+\leq\Omega_f([a, b]) \sum_{k \in \Lambda_1}\Delta x_k
+< \Omega_f([a, b]) \cdot\frac{1}{r}\end{align}
+```
+
+where the last inequality holds
+because $\sum_{k \in \Lambda_1} \Delta x_k$ is the exactly
+the sum of lengths of all $I_k$'s, which is less than $1 / r$.
+
+On the other hand, for $k \in \Lambda_2$,
+we have
+
+```{math}
+:label: eq:151
+\begin{align}\sum_{k \in \Lambda_2}\Omega_f([x_{k-1}, x_k]) \Delta x_k
+< \frac{1}{r}\sum_{k \in \Lambda_2}\Delta x_k
+\leq\frac{1}{r}\cdot(b - a)
+\end{align}
+```
+
+where the second last inequality holds
+because $\Omega_f(J_k) < 1 / r$ for each $k=1, \ldots, m$.
+
+Finally, by combining {eq}`eq:148`, {eq}`eq:149`, {eq}`eq:150`
+and {eq}`eq:151` together,
+we find that indeed $U(P,f) - L(P,f) < \varepsilon$.
+Therefore, $f$ satisfies Riemann's criterion on $[a, b]$
+and hence is integrable.
+This completes the proof.
+
 ````
 
-````{admonition} Exercise 6.8
+````{admonition} Exercise 7.8
 :name: ex:11
 
 Complete the above proof by
 showing that $D = \bigcup_{r=1}^\infty D_r$
+````
+
+````{admonition} Exercise 7.9
+:name: ex:12
+
+Complete the above proof by showing the set $S$
+can be written as a finite union of closed intervals $J_k$'s
+satisfying the properties as claimed.
+
 ````

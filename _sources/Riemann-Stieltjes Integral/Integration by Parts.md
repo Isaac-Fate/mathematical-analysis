@@ -110,7 +110,7 @@ This implies that $\alpha \in \mathfrak{R}(f)$ on $[a, b]$, and
 
 ````
 
-````{admonition} Exercise 6.1
+````{admonition} Exercise 7.1
 
 Evaluate the integral
 

@@ -87,14 +87,14 @@ Therefore, the limit $[f(x) - f(c)]/(x - c)$ exists, which is equal to $L$. By t
 
 ````
 
-````{admonition} Exercise 4.1
+````{admonition} Exercise 5.1
 
 Calculate the derivative of $e^x$ at $x = 0$.
 
 [Hint: You may use the fact $e^x = \sum_{n=0}^\infty \frac{x^n}{n!} =  1 + x + \frac{1}{2} x^2 + \frac{1}{6} x^3 + \cdots$.]
 ````
 
-````{admonition} Exercise 4.2
+````{admonition} Exercise 5.2
 :name: ex:1
 
 Calculate the derivative of

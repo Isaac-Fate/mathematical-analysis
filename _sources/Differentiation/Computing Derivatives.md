@@ -221,7 +221,7 @@ which is exactly {eq}`eq:9`.
 
 ````
 
-````{admonition} Exercise 4.3
+````{admonition} Exercise 5.3
 :name: ex:2
 
 Calculate the derivative of
@@ -235,7 +235,7 @@ for $x \neq 0$. Does the derivative exist at $x = 0$?
 
 ````
 
-````{admonition} Exercise 4.4
+````{admonition} Exercise 5.4
 :name: ex:3
 
 Calculate the derivative of
@@ -245,7 +245,7 @@ Calculate the derivative of
 f(x) = x^2 \sin\frac{1}{x^2}\ind\{x \neq 0\}\end{align*}
 ```
 
-for all $x \in \R$. Recall we have already calculated its derivative at $x = 0$ in {ref}`Exercise 4.2<ex:1>`, which is $f^\prime(0) = 0$.
+for all $x \in \R$. Recall we have already calculated its derivative at $x = 0$ in {ref}`Exercise 5.2<ex:1>`, which is $f^\prime(0) = 0$.
 
-[Hint: Make use of the result in {ref}`Exercise 4.3<ex:2>` and the chain rule ({prf:ref}`thm:4`).]
+[Hint: Make use of the result in {ref}`Exercise 5.3<ex:2>` and the chain rule ({prf:ref}`thm:4`).]
 ````

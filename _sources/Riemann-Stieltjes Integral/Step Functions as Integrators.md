@@ -315,7 +315,7 @@ As a matter of fact, $f \notin \mathfrak{R}(\alpha)$ on $[-3\pi, 3\pi]$ if we re
 
 ````
 
-````{admonition} Exercise 6.2
+````{admonition} Exercise 7.2
 
 Let $f$ be a constant function on $[a, b]$ except for *finitely* many points. Show that $f$ is Riemann integrable on $[a, b]$.
 

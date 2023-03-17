@@ -51,12 +51,12 @@ We have
 \end{align*}
 ```
 
-since $p(n) \geq n \; \forall n \in \N^\ast$({ref}`Exercise 2.1<ex:8>`).
+since $p(n) \geq n \; \forall n \in \N^\ast$({ref}`Exercise 3.1<ex:8>`).
 Therefore, $\sum A_n$ also converges to $s$.
 
 ````
 
-````{admonition} Exercise 2.1
+````{admonition} Exercise 3.1
 :name: ex:8
 
 Complete the above proof by showing

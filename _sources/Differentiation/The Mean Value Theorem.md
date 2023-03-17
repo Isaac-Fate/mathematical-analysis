@@ -81,7 +81,7 @@ An analogous result holds if $f^\prime(c) < 0$.
 
 ````
 
-````{admonition} Exercise 4.5
+````{admonition} Exercise 5.5
 
 Prove {prf:ref}`cor:1` assuming $f^\prime(c) < \infty$ using {prf:ref}`thm:1`.
 
@@ -159,7 +159,7 @@ Consider $f(x) = x^3$. Its derivative is $f^\prime(x) = 3x^2$. We note that $f^\
 
 ````
 
-````{admonition} Exercise 4.6
+````{admonition} Exercise 5.6
 
 Recall the function
 
@@ -168,7 +168,7 @@ Recall the function
 f(x) = x^2 \sin\frac{1}{x^2}\ind\{x \neq 0\}\end{align*}
 ```
 
-defined in {ref}`Exercise 4.2<ex:1>`. Show that $f(0)$ is not a local extremum. Recall we have shown that $f^\prime(0) = 0$. This is another example that the converse of {prf:ref}`thm:5` does not hold.
+defined in {ref}`Exercise 5.2<ex:1>`. Show that $f(0)$ is not a local extremum. Recall we have shown that $f^\prime(0) = 0$. This is another example that the converse of {prf:ref}`thm:5` does not hold.
 
 ````
 Moreover, it should be emphasized that we conclude in {prf:ref}`thm:5` that $f^\prime(c) = 0$ under the condition that $f^\prime(c)$ exists. $f(c)$ may be a local extremum without having a derivative there.

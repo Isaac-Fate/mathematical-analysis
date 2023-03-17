@@ -1,5 +1,5 @@
 # Intermediate Value Theorem
-In {ref}`Exercise 4.4<ex:3>`, we have shown that the derivative of function $f(x) = x^2 \sin(1/x^2) \ind\{x \neq 0\}$ is given by
+In {ref}`Exercise 5.4<ex:3>`, we have shown that the derivative of function $f(x) = x^2 \sin(1/x^2) \ind\{x \neq 0\}$ is given by
 
 ```{math}
 \begin{align*}
@@ -92,7 +92,7 @@ f^\prime_{-}(b)
 ```
 
 ````
-Essentially, Darboux's theorem tells us that though the derivative may not be continuous, it cannot have any *jump discontinuities*. The following is another classical example in addition to the one in {ref}`Exercise 4.2<ex:1>`.
+Essentially, Darboux's theorem tells us that though the derivative may not be continuous, it cannot have any *jump discontinuities*. The following is another classical example in addition to the one in {ref}`Exercise 5.2<ex:1>`.
 
 
 ````{prf:example}

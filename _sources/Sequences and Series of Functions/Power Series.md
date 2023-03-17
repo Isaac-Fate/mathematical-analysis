@@ -235,7 +235,7 @@ z_2 = \abs{z_1 - z_0} + \abs{z - z_1} + z_0
 \end{align}
 ```
 
-Since the series $\sum_{n=0}^\infty a_n (z - z_0)^n$ converges absolutely for all $z \in B_{R}(z_0)$, $\sum_{n=0}^\infty \abs{a_n} \abs{z_2 - z_0}^n$ converges since $z_2 \in B_R(z_0)$({ref}`Exercise 7.2<ex:7>`). Note that $\brk{z_2 - z_0}^n = \abs{z_2 - z_0}^n$ since $z_2 - z_0$ is in fact a non-negative number. Hence, indeed $\sum_{n=0}^\infty \sum_{k=0}^\infty \abs{c_{n,k}}$ converges and {prf:ref}`thm:62` is applicable. We conclude that $\sum_{n=0}^\infty c_{n,k}$ converges absolutely, and $\sum_{k=0}^\infty \sum_{n=0}^\infty c_{n,k}$ also converges absolutely. By interchanging the summations in {eq}`eq:127`, we obtain
+Since the series $\sum_{n=0}^\infty a_n (z - z_0)^n$ converges absolutely for all $z \in B_{R}(z_0)$, $\sum_{n=0}^\infty \abs{a_n} \abs{z_2 - z_0}^n$ converges since $z_2 \in B_R(z_0)$({ref}`Exercise 8.2<ex:7>`). Note that $\brk{z_2 - z_0}^n = \abs{z_2 - z_0}^n$ since $z_2 - z_0$ is in fact a non-negative number. Hence, indeed $\sum_{n=0}^\infty \sum_{k=0}^\infty \abs{c_{n,k}}$ converges and {prf:ref}`thm:62` is applicable. We conclude that $\sum_{n=0}^\infty c_{n,k}$ converges absolutely, and $\sum_{k=0}^\infty \sum_{n=0}^\infty c_{n,k}$ also converges absolutely. By interchanging the summations in {eq}`eq:127`, we obtain
 
 ```{math}
 \begin{align*}
@@ -250,7 +250,7 @@ This completes the proof.
 
 ````
 
-````{admonition} Exercise 7.2
+````{admonition} Exercise 8.2
 :name: ex:7
 
 Complete the above proof by showing $z_2 \in B_R(z_0)$. By {eq}`eq:128`, it is equivalent to show $\abs{z_1 - z_0} + \abs{z - z_1} < R$.

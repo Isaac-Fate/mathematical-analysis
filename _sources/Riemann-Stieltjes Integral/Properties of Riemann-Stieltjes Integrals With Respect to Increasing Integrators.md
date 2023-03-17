@@ -369,7 +369,7 @@ The upper and lower integrals are not equal to each other for we have assumed $\
 
 ````
 
-````{admonition} Exercise 6.4
+````{admonition} Exercise 7.4
 
 Prove the existence of $\int_a^b \abs{f} \; \mathrm{d}\alpha$ in {prf:ref}`thm:31` without using {prf:ref}`thm:29`.
 
@@ -401,7 +401,7 @@ Because $\phi(x) = x^2$ is continuous on $\R$, it is, of course, continuous on t
 An alternative proof without using {prf:ref}`thm:29` is left as an exercise.
 
 
-````{admonition} Exercise 6.5
+````{admonition} Exercise 7.5
 
 Prove {prf:ref}`thm:32` without using {prf:ref}`thm:29`. But feel free to use {prf:ref}`thm:31`.
 

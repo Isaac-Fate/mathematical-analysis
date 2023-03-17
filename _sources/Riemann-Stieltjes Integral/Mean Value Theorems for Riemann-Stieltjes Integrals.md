@@ -67,7 +67,7 @@ there exists $c \in[a, b]$ such that $f(c) = A$.
 
 ````
 
-````{admonition} Exercise 6.6
+````{admonition} Exercise 7.6
 :name: ex:9
 
 Suppose $f$ is continuous,

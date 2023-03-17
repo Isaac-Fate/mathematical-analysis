@@ -225,7 +225,7 @@ By {prf:ref}`def:1`, $A = \int_{a}^{b} f \; \mathrm{d}\alpha$.
 As an exercise, we reconsider {prf:ref}`eg:4` and prove that $f$ is not integrable w.r.t. $\alpha$.
 
 
-````{admonition} Exercise 6.3
+````{admonition} Exercise 7.3
 
 Let functions $f$ and $\alpha$ be given by
 
