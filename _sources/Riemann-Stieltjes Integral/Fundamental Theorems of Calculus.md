@@ -271,6 +271,13 @@ Left: $f(x)$. Right: $F(x) = \int_{-1}^x f(t) \; \mathrm{d} t$.
 
 ````
 
+```{index} second fundamental theorem of calculus
+```
+
+The **second fundamental theorem of calculus**
+mainly tells us how to integrate a derivative.
+
+
 ````{prf:theorem} Second Fundamental Theorem of Calculus
 :label: thm:82
 
@@ -287,7 +294,7 @@ F^\prime(x) = f(x)
 ```
 
 Suppose also at the endpoints, the one-sided limits
-$F(a+)$ and $F(b-)$ both exist and satisfy
+$F(a+)$ and $F(b-)$ both exist.
 Then we have
 
 ```{math}
@@ -302,16 +309,17 @@ Then we have
 ````{prf:proof}
 
 Given $\varepsilon > 0$, since $f$ is integrable,
-there exists a partition $P_\varepsilon$ on $[a, b]$
-such that for any refinement $P$ of $P_\varepsilon$,
-we have
+it satisfies Riemann's criterion.
+That is,
+there exists a
+partition $P=\{x_0, \ldots, x_n\}$ on $[a, b]$
+such that
 
 ```{math}
 \begin{align*}
 U(P,f) - L(P,f) < \varepsilon\end{align*}
 ```
 
-Let $P=\{x_1, \ldots, x_n\}$ be a refinement of $P_\varepsilon$.
 On each subinterval $[x_{k-1}, x_k]$,
 applying the mean value theorem for derivatives
 ({prf:ref}`thm:85`),
@@ -329,6 +337,7 @@ Note that $F(x_k +) = F(x_k - ) = F(x_k)$ expect possibly
 for two endpoints (when $x_k$ equals $a$ or $b$)
 since $F$ is continuous in $(a, b)$
 for it is differentiable there.
+
 Summing up over $k$ yields
 
 ```{math}
@@ -363,5 +372,43 @@ This proves {eq}`eq:144` since $\varepsilon > 0$
 is arbitrary
 and that the upper integral
 equals $\int_a^b f(x) \; \mathrm{d} x$.
+
+````
+
+Recall {prf:ref}`thm:23` allows us to
+replace $\mathrm{d} \alpha$ with $\alpha^\prime \mathrm{d} x$:
+
+```{math}
+\begin{align*}\int_a^b f \;\mathrm{d}\alpha
+= \int_a^b f(x) \alpha^\prime(x) \;\mathrm{d} x
+\end{align*}
+```
+
+under the assumption that $\alpha$ has
+a continuous derivative on $[a, b]$.
+Thanks to the second fundamental theorem of calculus,
+we now present a stronger version of this theorem
+without assuming $\alpha^\prime$ is continuous.
+
+
+````{prf:theorem}
+:label: thm:91
+
+Suppose $f \in \mathfrak{R}$ on $[a, b]$.
+Let $\alpha$ be continuous function on $[a, b]$
+whose derivative $\alpha^\prime \in \mathfrak{R}$ on $[a, b]$.
+Then $f \alpha^\prime \in \mathfrak{R}$ on $[a, b]$, and
+
+```{math}
+\begin{align*}\int_a^b f \;\mathrm{d}\alpha
+= \int_a^b f(x) \alpha^\prime(x) \;\mathrm{d} x
+\end{align*}
+```
+
+````
+
+````{prf:proof}
+
+TODO
 
 ````
