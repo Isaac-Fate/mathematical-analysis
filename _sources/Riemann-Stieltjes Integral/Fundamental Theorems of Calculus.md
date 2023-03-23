@@ -397,18 +397,61 @@ without assuming $\alpha^\prime$ is continuous.
 Suppose $f \in \mathfrak{R}$ on $[a, b]$.
 Let $\alpha$ be continuous function on $[a, b]$
 whose derivative $\alpha^\prime \in \mathfrak{R}$ on $[a, b]$.
-Then $f \alpha^\prime \in \mathfrak{R}$ on $[a, b]$, and
+Then $f \alpha^\prime \in \mathfrak{R}$
+and $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and
 
 ```{math}
-\begin{align*}\int_a^b f \;\mathrm{d}\alpha
+:label: eq:153
+\begin{align}\int_a^b f \;\mathrm{d}\alpha
 = \int_a^b f(x) \alpha^\prime(x) \;\mathrm{d} x
-\end{align*}
+\end{align}
 ```
 
 ````
 
 ````{prf:proof}
 
-TODO
+First, we note that $f \alpha^\prime \in \mathfrak{R}$ on $[a, b]$
+by {prf:ref}`thm:38`
+since both $f$ and $\alpha^\prime$ are integrable.
+
+Now, we want to apply {prf:ref}`thm:39`
+to merge the symbol $\alpha^\prime(x) \mathrm{d} x$.
+
+:::{note}
+
+To apply {prf:ref}`thm:39`,
+we need to define a
+function $\int_a^x \alpha^\prime(t) \; \mathrm{d} t$.
+Note that we are basically integrating a derivative.
+Hence, the second fundamental theorem may help.
+
+:::
+
+By the second fundamental theorem of calculus
+({prf:ref}`thm:82`),
+we have
+
+```{math}
+\begin{align*}\int_a^x \alpha(t) \;\mathrm{d} t
+= \alpha(x) - \alpha(a)
+\quad\forall x \in[a, b]\end{align*}
+```
+
+Then {prf:ref}`thm:39` implies
+that $f \in \mathfrak{R}( \alpha(x) - \alpha(a) )$
+on $[a, b]$,
+and
+
+```{math}
+\begin{align*}\int_a^b f(x) \alpha^\prime(x) \;\mathrm{d} x
+= \int_a^b f(x) \;\mathrm{d}[\alpha(x) - \alpha(a) ]\end{align*}
+```
+
+Of course, from the right-hand side of the above equation,
+we immediately find that $f \in \mathfrak{R}(\alpha)$ on $[a, b]$,
+and the right-hand side may
+reduce to $\int_a^b f \; \mathrm{d} \alpha$.
+Therefore, {eq}`eq:153` is proved.
 
 ````

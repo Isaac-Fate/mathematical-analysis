@@ -997,14 +997,46 @@ without assuming <span class="math notranslate nohighlight">\(\alpha^\prime\)</s
 <p>Suppose <span class="math notranslate nohighlight">\(f \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
 Let <span class="math notranslate nohighlight">\(\alpha\)</span> be continuous function on <span class="math notranslate nohighlight">\([a, b]\)</span>
 whose derivative <span class="math notranslate nohighlight">\(\alpha^\prime \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
-Then <span class="math notranslate nohighlight">\(f \alpha^\prime \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
-<div class="math notranslate nohighlight">
-\[\begin{align*}\int_a^b f \;\mathrm{d}\alpha
+Then <span class="math notranslate nohighlight">\(f \alpha^\prime \in \mathfrak{R}\)</span>
+and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
+<div class="math notranslate nohighlight" id="equation-eq-153">
+<span class="eqno">(7.67)<a class="headerlink" href="#equation-eq-153" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
 = \int_a^b f(x) \alpha^\prime(x) \;\mathrm{d} x
-\end{align*}\]</div>
+\end{align}\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. TODO</p>
+<p>Proof. First, we note that <span class="math notranslate nohighlight">\(f \alpha^\prime \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>
+by <a class="reference internal" href="Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#thm:38">Theorem 7.18</a>
+since both <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha^\prime\)</span> are integrable.</p>
+<p>Now, we want to apply <a class="reference internal" href="Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#thm:39">Theorem 7.19</a>
+to merge the symbol <span class="math notranslate nohighlight">\(\alpha^\prime(x) \mathrm{d} x\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To apply <a class="reference internal" href="Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#thm:39">Theorem 7.19</a>,
+we need to define a
+function <span class="math notranslate nohighlight">\(\int_a^x \alpha^\prime(t) \; \mathrm{d} t\)</span>.
+Note that we are basically integrating a derivative.
+Hence, the second fundamental theorem may help.</p>
+</div>
+<p>By the second fundamental theorem of calculus
+(<a class="reference internal" href="#thm:82">Theorem 7.28</a>),
+we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\int_a^x \alpha(t) \;\mathrm{d} t
+= \alpha(x) - \alpha(a)
+\quad\forall x \in[a, b]\end{align*}\]</div>
+<p>Then <a class="reference internal" href="Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#thm:39">Theorem 7.19</a> implies
+that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}( \alpha(x) - \alpha(a) )\)</span>
+on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+and</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}\int_a^b f(x) \alpha^\prime(x) \;\mathrm{d} x
+= \int_a^b f(x) \;\mathrm{d}[\alpha(x) - \alpha(a) ]\end{align*}\]</div>
+<p>Of course, from the right-hand side of the above equation,
+we immediately find that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+and the right-hand side may
+reduce to <span class="math notranslate nohighlight">\(\int_a^b f \; \mathrm{d} \alpha\)</span>.
+Therefore, <a class="reference internal" href="#equation-eq-153">(7.67)</a> is proved.</p>
 </div>
 </section>
 
