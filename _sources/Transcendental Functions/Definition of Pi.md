@@ -97,3 +97,90 @@ name: fig:19
 Geometric interpretation of $\pi$.
 
 ```
+
+Let us prove an alternative definition of $\pi$
+as an Improper Riemann integral,
+which will be useful in defining arsine and arccosine functions.
+
+
+````{prf:theorem}
+:label: thm:92
+
+We have
+
+```{math}
+:label: eq:157
+\begin{align}\pi = 2 \int_0^1 \frac{1}{\sqrt{1 - x^2}}\;\mathrm{d} x
+\end{align}
+```
+
+````
+
+:::{note}
+
+Equation {eq}`eq:157` serves as the definition of $\pi$
+in Bloch's book {cite}`blochRealNumbersReal2011`,
+which paves the way to defining defining the arcsine function
+right after.
+But this approach lacks geometry interpretation.
+
+:::
+
+````{prf:proof}
+
+Consider the closed interval $[0, a]$
+where $a$ is any positive number in $(0, 1)$.
+By applying integration by parts ({prf:ref}`thm:20`),
+we have
+
+```{math}
+:label: eq:154
+\begin{align}\int_0^a \sqrt{1 - x^2}\;\mathrm{d}x
+= - \int_0^a x \;\mathrm{d}\sqrt{1 - x^2}\end{align}
+```
+
+The derivative of the integrator $\alpha(x) = \sqrt{1-x^2}$
+on the right-hand side of {eq}`eq:154` is
+
+```{math}
+\begin{align*}\alpha^\prime(x)
+= -\frac{x}{\sqrt{1-x^2}},
+\quad x \in[0, a]\end{align*}
+```
+
+Note that $\alpha^\prime$ is clearly integrable on $[0, a]$
+for it is continuous.
+Hence, {prf:ref}`thm:91` is applicable.
+We have
+
+```{math}
+:label: eq:155
+\begin{align}\int_0^a x \;\mathrm{d}\sqrt{1-x^2}
+= \int_0^a -\frac{x^2}{\sqrt{1-x^2}}\;\mathrm{d} x
+= \int_0^a \sqrt{1-x^2}\;\mathrm{d}x
+- \int_0^a \frac{1}{\sqrt{1-x^2}}\;\mathrm{d}x
+\end{align}
+```
+
+By combining {eq}`eq:154` and {eq}`eq:155`, we find
+
+```{math}
+:label: eq:156
+\begin{align}\int_0^a \frac{1}{\sqrt{1-x^2}}\;\mathrm{d}x
+= 2 \int_0^a \sqrt{1 - x^2}\;\mathrm{d} x
+\end{align}
+```
+
+Since {eq}`eq:156` holds for every $a \in (0, 1)$
+and the limit of the right-hand side of {eq}`eq:156`
+exists as $a \to 1^-$.
+It follows that
+
+```{math}
+\begin{align*}\int_0^1 \frac{1}{\sqrt{1-x^2}}\;\mathrm{d}x
+= 2 \int_0^1 \sqrt{1-x^2}\;\mathrm{d}x
+= 2 \cdot\frac{\pi}{4}
+= \frac{\pi}{2}\end{align*}
+```
+
+````
