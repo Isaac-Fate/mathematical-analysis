@@ -4239,26 +4239,42 @@ In fact, all functions of bounded variation can be written as a difference betwe
 %------------------------------
 
 \begin{theorem} \label{thm:21}
-    Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and $\phi$ is a \textbf{strictly monotonic continuous} function on a closed interval $I$ with endpoints $c$ and $d$. ($I$ is either $[c, d]$ or $[d, c]$.) Assume
+    Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, 
+	and $\phi$ is a \textbf{strictly monotonic continuous} function 
+	on a closed interval $I$ with endpoints $c$ and $d$. 
+	($I$ is either $[c, d]$ or $[d, c]$.) 
+	Assume
     \begin{align*}
-        a &= \phi(c) & b &= \phi(d)
+        a = \phi(c) 
+		\quad \text{and} \quad
+		b = \phi(d)
     \end{align*}
     Define two composite functions:
     \begin{align*}
-        h &= f(\phi(x)) & 
-        \beta &= \alpha(\phi(x))
+        h = f(\phi(x))
+		\quad \text{and} \quad
+        \beta = \alpha(\phi(x))
     \end{align*}
-    Then $h \in \mathfrak{R}(\beta)$ on $I$, and $\int_a^b f \; \mathrm{d}\alpha = \int_c^d h \; \mathrm{d}\beta$, i.e., 
+    Then $h \in \mathfrak{R}(\beta)$ on $I$, 
+	and $\int_a^b f \; \mathrm{d}\alpha = \int_c^d h \; \mathrm{d}\beta$, 
+	i.e., 
     \begin{align*}
-        \int_a^b f(x) \; \mathrm{d}\alpha(x) = \int_{\phi^{-1}(a)}^{\phi^{-1}(b)} f(\phi(x)) \; \mathrm{d}\alpha(\phi(x))
+        \int_a^b f(x) \; \mathrm{d}\alpha(x) 
+		= \int_{\phi^{-1}(a)}^{\phi^{-1}(b)} 
+			f(\phi(x)) \; \mathrm{d}\alpha(\phi(x))
     \end{align*}
 \end{theorem}
 
-\begin{remark}
-    The reason why we assume that $\phi$ is strictly monotonic and continuous is to ensure that it is a bijective function. It is equivalent to assuming $\phi$ is strictly monotonic and injective.
-\end{remark}
+\begin{note}
+    The reason why we assume that $\phi$ is strictly monotonic 
+	and continuous is to ensure that it is a bijective function. 
+	It is equivalent to assuming $\phi$ is strictly 
+	monotonic and injective.
+\end{note}
 
-\par The main idea of this proof is exploiting the one-to-one relation between the partitions on $[a, b]$ and $[c, d]$. 
+The main idea of this proof is exploiting 
+the one-to-one relation 
+between the partitions on $[a, b]$ and $[c, d]$. 
 
 \begin{proof}
     (One-To-One Relation of Partitions) Without loss of generality, we may assume that $g$ is strictly \textit{increasing} and continuous. Then $I = [c, d]$. From the conditions of $g$, we can immediately conclude that it has a bijective inverse function
@@ -4306,6 +4322,9 @@ In fact, all functions of bounded variation can be written as a difference betwe
     \end{align*}
     This completes the proof.
 \end{proof}
+
+%------------------------------
+
 
 %------------------------------
 
@@ -5588,6 +5607,10 @@ We know by Theorem~\ref{thm:38} that the product $fg$ is integrable w.r.t. $\alp
     The results agree with Theorem~\ref{thm:39} as expected.
 \end{example}
 
+
+%------------------------------
+
+
 %------------------------------
 
 \section{Integrators of Bounded Variation}
@@ -6370,6 +6393,68 @@ theorem of calculus.
 		\label{fig:15}
 	\end{figure}
 \end{example}
+
+%------------------------------
+
+Recall that the derivative of an odd function is even
+whereas the derivative of an even function is odd.
+We have an analogous result in integration.
+That is, when we integrate an odd function
+from $0$ to $x$, then the function in the upper limit $x$
+of the integral is even.
+A similar result exists when integrating an even function.
+
+\begin{theorem} \label{thm:93}
+	Suppose $f \in \mathfrak{R}$ on $[0, a]$.
+	If $f$ is odd or even 
+	then $f$ is Riemann integrable on any closed subinterval
+	in $[-a, a]$.
+	Let 
+	\begin{align*}
+		F(x) = \int_0^x f(t) \; \mathrm{d} t,
+		\quad
+		x \in [-a, a]
+	\end{align*}
+	Then 
+	\begin{enumerate}
+		\item If $f$ is odd, 
+			then $F$ is even, and 
+		 \item If $f$ is even,
+			 then $F$ is odd.
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+	We only prove 1.
+	Firstly, note that $F$ is well-defined on $[0, x]$
+	for every $x \leq a$.
+	Then by changing the variable $\phi(t) = -t$ 
+	using Theorem~\ref{thm:21},
+	we find that $f[\phi(t) = f(-t)$ is Riemann integrable
+	on $[-x, 0]$ and hence $F$ is well-defined on any 
+	closed subinterval of $[-a, a]$.
+	Moreover, we have
+	\begin{align}
+		F(x)
+		= \int_0^x f(t) \; \mathrm{d} t
+		= \int_{0}^{-x} f(-t) \; \mathrm{d} (-t)
+		\label{eq:158}
+	\end{align}
+	First moving the negative sign outside $f$ using the fact 
+	that $f$ is odd,
+	and then moving the negative sign outside the integral
+	(Theorem~\ref{thm:19}),
+	we have 
+	\begin{align}
+		-\int_{0}^{-x} -f(t) \; \mathrm{d} t
+		= \int_{0}^{-x} f(t) \; \mathrm{d} t
+		= F(-x)
+		\label{eq:159}
+	\end{align}
+	Combining \eqref{eq:158} and \eqref{eq:159} together,
+	we conclude that $F(x) = F(-x)$, 
+	which implies $F$ is an even function.
+\end{proof}
 
 %------------------------------
 
@@ -8298,6 +8383,84 @@ which will be useful in defining arsine and arccosine functions.
 %------------------------------
 
 \section{Arcsine and Arccosine}
+
+The concept of the inverse function was introduced 
+by Johann Heinrich Lambert 
+in the 18th century \cite{boyerHistoryCalculusIts1988}, 
+and the inverse sine function was defined as a function of 
+the angle that produces a given value of sine. 
+However, this definition was limited to angles 
+between $[-\pi/2, \pi/2]$, 
+and it was later extended to the entire real line 
+using complex analysis by 
+Carl Friedrich Gauss and Jean-Baptiste Fourier 
+in the early 19th century \cite{edwardsHistoricalDevelopmentCalculus1994}.
+In this section, we still confine ourselves to 
+the traditional domain of arcsine
+without considering the extension.
+
+The notation $\sin^{-1}(x)$ was first introduced by 
+Adrien-Marie Legendre in 1811 \cite{smithHistoryMathematics1958}, 
+although it was sometimes written as $\arcsin(x)$ 
+or $\mathrm{inverse} \sin(x)$ in earlier works. 
+We shall however adopt the notation $\arcsin(x)$ 
+or simply $\arcsin x$ when the variable is abbreviated
+in this book.
+The modern definition of the arcsine function as a function 
+from $[-1, 1]$ to $[-\pi/2, \pi/2]$ 
+was introduced by Augustin-Louis Cauchy 
+in the mid-19th century \cite{boyerHistoryCalculusIts1988}.
+
+%------------------------------
+
+\begin{definition} \label{def:11}
+	The \textbf{arcsine}\index{arcsine} function,
+	written as $\arcsin x$,
+	is defined by
+	\begin{align}
+		\arcsin x
+		= \int_0^x \frac{1}{\sqrt{1-t^2}} \; \mathrm{d} t,
+		\quad
+		x \in [-1, 1]
+		\label{eq:160}
+	\end{align}
+\end{definition}
+
+Note that the integral in \eqref{eq:160} becomes improper
+when $x$ equals $-1$ or $1$.
+And, it follows immediately from Theorem~\ref{thm:92}
+that $\arcsin 1 = \pi / 2$.
+One may also immediately conclude that $\arcsin x$ is an odd function
+by Theorem~\ref{thm:93}.
+Though this is indeed true, 
+the reasoning is not quite complete for Theorem~\ref{thm:93}
+only applies to \textit{proper} integrals.
+Hence, we must be careful about the proof.
+The following proposition states some basic observations 
+of the arcsine function,
+which we shall prove carefully.
+
+\begin{proposition} \label{pro:7}
+	For the arcsine function, we have
+	the following results:
+	\begin{enumerate}
+		\item $\arcsin x$ is an odd function.
+		\item $\arcsin 0 = 0$, $\arcsin 1 = \pi / 2$, 
+			and $\arcsin -1 = -\pi / 2$.
+		\item $\arcsin x$ is continuous on $[-1, 1]$.
+		\item $\arcsin x$ is differentiable in $(-1, 1)$
+			with $\arcsin^\prime x = 1 / \sqrt{1 - x^2}$.
+		\item The one-sided derivatives of $\arcsin x$ 
+			are $\arcsin^\prime_{-} 1 = \infty$ 
+			and $\arcsin^\prime_{+} -1 = -\infty$.
+		\item $\arcsin x$ is strictly increasing on $[-1, 1]$.
+		\item $\arcsin x$ is bijective.
+	\end{enumerate}
+\end{proposition}	
+
+\begin{proof}
+	% TODO
+\end{proof}
 
 %------------------------------
 
