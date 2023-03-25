@@ -913,10 +913,69 @@ See <a class="reference internal" href="#fig-15"><span class="std std-numref">Fi
 </figcaption>
 </figure>
 </section>
-</div><p id="index-1">The <strong>second fundamental theorem of calculus</strong>
+</div><p>Recall that the derivative of an odd function is even
+whereas the derivative of an even function is odd.
+We have an analogous result in integration.
+That is, when we integrate an odd function
+from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(x\)</span>, then the function in the upper limit <span class="math notranslate nohighlight">\(x\)</span>
+of the integral is even.
+A similar result exists when integrating an even function.</p>
+<div class="proof theorem admonition" id="thm:93">
+<p class="admonition-title"><span class="caption-number">Theorem 7.28 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(f \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([0, a]\)</span>.
+If <span class="math notranslate nohighlight">\(f\)</span> is odd or even
+then <span class="math notranslate nohighlight">\(f\)</span> is Riemann integrable on any closed subinterval
+in <span class="math notranslate nohighlight">\([-a, a]\)</span>.
+Let</p>
+<div class="math notranslate nohighlight">
+\[\begin{align*}
+F(x) = \int_0^x f(t) \;\mathrm{d} t,
+\quad
+x \in[-a, a]\end{align*}\]</div>
+<p>Then</p>
+<ul class="simple">
+<li><p>➀ If <span class="math notranslate nohighlight">\(f\)</span> is odd,
+then <span class="math notranslate nohighlight">\(F\)</span> is even, and</p></li>
+<li><p>➁ If <span class="math notranslate nohighlight">\(f\)</span> is even,
+then <span class="math notranslate nohighlight">\(F\)</span> is odd.</p></li>
+</ul>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We only prove 1.
+Firstly, note that <span class="math notranslate nohighlight">\(F\)</span> is well-defined on <span class="math notranslate nohighlight">\([0, x]\)</span>
+for every <span class="math notranslate nohighlight">\(x \leq a\)</span>.
+Then by changing the variable <span class="math notranslate nohighlight">\(\phi(t) = -t\)</span>
+using <a class="reference internal" href="Change%20of%20Variables.html#thm:21">Theorem 7.6</a>,
+we find that <span class="math notranslate nohighlight">\(f[\phi(t) = f(-t)\)</span> is Riemann integrable
+on <span class="math notranslate nohighlight">\([-x, 0]\)</span> and hence <span class="math notranslate nohighlight">\(F\)</span> is well-defined on any
+closed subinterval of <span class="math notranslate nohighlight">\([-a, a]\)</span>.
+Moreover, we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-158">
+<span class="eqno">(7.66)<a class="headerlink" href="#equation-eq-158" title="Permalink to this equation">#</a></span>\[\begin{align}
+F(x)
+= \int_0^x f(t) \;\mathrm{d} t
+= \int_{0}^{-x} f(-t) \;\mathrm{d}(-t)
+\end{align}\]</div>
+<p>First moving the negative sign outside <span class="math notranslate nohighlight">\(f\)</span> using the fact
+that <span class="math notranslate nohighlight">\(f\)</span> is odd,
+and then moving the negative sign outside the integral
+(<a class="reference internal" href="Linear%20Properties.html#thm:19">Theorem 7.2</a>),
+we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-159">
+<span class="eqno">(7.67)<a class="headerlink" href="#equation-eq-159" title="Permalink to this equation">#</a></span>\[\begin{align}
+-\int_{0}^{-x} -f(t) \;\mathrm{d} t
+= \int_{0}^{-x} f(t) \;\mathrm{d} t
+= F(-x)
+\end{align}\]</div>
+<p>Combining <a class="reference internal" href="#equation-eq-158">(7.66)</a> and <a class="reference internal" href="#equation-eq-159">(7.67)</a> together,
+we conclude that <span class="math notranslate nohighlight">\(F(x) = F(-x)\)</span>,
+which implies <span class="math notranslate nohighlight">\(F\)</span> is an even function.</p>
+</div>
+<p id="index-1">The <strong>second fundamental theorem of calculus</strong>
 mainly tells us how to integrate a derivative.</p>
 <div class="proof theorem admonition" id="thm:82">
-<p class="admonition-title"><span class="caption-number">Theorem 7.28 </span> (Second Fundamental Theorem of Calculus)</p>
+<p class="admonition-title"><span class="caption-number">Theorem 7.29 </span> (Second Fundamental Theorem of Calculus)</p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
 Let <span class="math notranslate nohighlight">\(F\)</span> be a function defined on <span class="math notranslate nohighlight">\([a, b]\)</span>
@@ -931,7 +990,7 @@ F^\prime(x) = f(x)
 <span class="math notranslate nohighlight">\(F(a+)\)</span> and <span class="math notranslate nohighlight">\(F(b-)\)</span> both exist.
 Then we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-144">
-<span class="eqno">(7.66)<a class="headerlink" href="#equation-eq-144" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f(x) \;\mathrm{d} x
+<span class="eqno">(7.68)<a class="headerlink" href="#equation-eq-144" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f(x) \;\mathrm{d} x
 = F(b-) - F(a+)
 \end{align}\]</div>
 </section>
@@ -980,7 +1039,7 @@ Taking the infimum over partition <span class="math notranslate nohighlight">\(P
 <div class="math notranslate nohighlight">
 \[\begin{align*}\upint_a^b f(x) \;\mathrm{d} x
 - [F(b-) - F(a+)]\leq\varepsilon\end{align*}\]</div>
-<p>This proves <a class="reference internal" href="#equation-eq-144">(7.66)</a> since <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>
+<p>This proves <a class="reference internal" href="#equation-eq-144">(7.68)</a> since <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>
 is arbitrary
 and that the upper integral
 equals <span class="math notranslate nohighlight">\(\int_a^b f(x) \; \mathrm{d} x\)</span>.</p>
@@ -997,7 +1056,7 @@ Thanks to the second fundamental theorem of calculus,
 we now present a stronger version of this theorem
 without assuming <span class="math notranslate nohighlight">\(\alpha^\prime\)</span> is continuous.</p>
 <div class="proof theorem admonition" id="thm:91">
-<p class="admonition-title"><span class="caption-number">Theorem 7.29 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 7.30 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
 Let <span class="math notranslate nohighlight">\(\alpha\)</span> be continuous function on <span class="math notranslate nohighlight">\([a, b]\)</span>
@@ -1005,7 +1064,7 @@ whose derivative <span class="math notranslate nohighlight">\(\alpha^\prime \in 
 Then <span class="math notranslate nohighlight">\(f \alpha^\prime \in \mathfrak{R}\)</span>
 and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
 <div class="math notranslate nohighlight" id="equation-eq-153">
-<span class="eqno">(7.67)<a class="headerlink" href="#equation-eq-153" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
+<span class="eqno">(7.69)<a class="headerlink" href="#equation-eq-153" title="Permalink to this equation">#</a></span>\[\begin{align}\int_a^b f \;\mathrm{d}\alpha
 = \int_a^b f(x) \alpha^\prime(x) \;\mathrm{d} x
 \end{align}\]</div>
 </section>
@@ -1024,7 +1083,7 @@ Note that we are basically integrating a derivative.
 Hence, the second fundamental theorem may help.</p>
 </div>
 <p>By the second fundamental theorem of calculus
-(<a class="reference internal" href="#thm:82">Theorem 7.28</a>),
+(<a class="reference internal" href="#thm:82">Theorem 7.29</a>),
 we have</p>
 <div class="math notranslate nohighlight">
 \[\begin{align*}\int_a^x \alpha(t) \;\mathrm{d} t
@@ -1041,7 +1100,7 @@ and</p>
 we immediately find that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
 and the right-hand side may
 reduce to <span class="math notranslate nohighlight">\(\int_a^b f \; \mathrm{d} \alpha\)</span>.
-Therefore, <a class="reference internal" href="#equation-eq-153">(7.67)</a> is proved.</p>
+Therefore, <a class="reference internal" href="#equation-eq-153">(7.69)</a> is proved.</p>
 </div>
 </section>
 

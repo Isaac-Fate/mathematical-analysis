@@ -3,11 +3,17 @@
 ````{prf:theorem}
 :label: thm:21
 
-Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and $\phi$ is a **strictly monotonic continuous** function on a closed interval $I$ with endpoints $c$ and $d$. ($I$ is either $[c, d]$ or $[d, c]$.) Assume
+Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$,
+and $\phi$ is a **strictly monotonic continuous** function
+on a closed interval $I$ with endpoints $c$ and $d$.
+($I$ is either $[c, d]$ or $[d, c]$.)
+Assume
 
 ```{math}
 \begin{align*}
-a &= \phi(c) & b &= \phi(d)
+a = \phi(c)
+\quad\text{and}\quad
+b = \phi(d)
 \end{align*}
 ```
 
@@ -15,26 +21,36 @@ Define two composite functions:
 
 ```{math}
 \begin{align*}
-h &= f(\phi(x)) &
-\beta&= \alpha(\phi(x))
+h = f(\phi(x))
+\quad\text{and}\quad\beta = \alpha(\phi(x))
 \end{align*}
 ```
 
-Then $h \in \mathfrak{R}(\beta)$ on $I$, and $\int_a^b f \; \mathrm{d}\alpha = \int_c^d h \; \mathrm{d}\beta$, i.e.,
+Then $h \in \mathfrak{R}(\beta)$ on $I$,
+and $\int_a^b f \; \mathrm{d}\alpha = \int_c^d h \; \mathrm{d}\beta$,
+i.e.,
 
 ```{math}
-\begin{align*}\int_a^b f(x) \;\mathrm{d}\alpha(x) = \int_{\phi^{-1}(a)}^{\phi^{-1}(b)} f(\phi(x)) \;\mathrm{d}\alpha(\phi(x))
+\begin{align*}\int_a^b f(x) \;\mathrm{d}\alpha(x)
+= \int_{\phi^{-1}(a)}^{\phi^{-1}(b)}
+f(\phi(x)) \;\mathrm{d}\alpha(\phi(x))
 \end{align*}
 ```
 
 ````
 
-````{prf:remark}
+:::{note}
 
-The reason why we assume that $\phi$ is strictly monotonic and continuous is to ensure that it is a bijective function. It is equivalent to assuming $\phi$ is strictly monotonic and injective.
+The reason why we assume that $\phi$ is strictly monotonic
+and continuous is to ensure that it is a bijective function.
+It is equivalent to assuming $\phi$ is strictly
+monotonic and injective.
 
-````
-The main idea of this proof is exploiting the one-to-one relation between the partitions on $[a, b]$ and $[c, d]$.
+:::
+
+The main idea of this proof is exploiting
+the one-to-one relation
+between the partitions on $[a, b]$ and $[c, d]$.
 
 
 ````{prf:proof}

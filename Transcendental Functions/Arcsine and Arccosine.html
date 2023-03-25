@@ -53,6 +53,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "FF": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -709,6 +711,78 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="arcsine-and-arccosine">
 <h1><span class="section-number">9.3. </span>Arcsine and Arccosine<a class="headerlink" href="#arcsine-and-arccosine" title="Permalink to this headline">#</a></h1>
+<p>The concept of the inverse function was introduced
+by Johann Heinrich Lambert
+in the 18th century <span id="id1">[<a class="reference internal" href="../references.html#id9" title="Carl B. Boyer. The History of the Calculus and Its Conceptual Development: The Concepts of the Calculus. Dover Books on Advances Mathematics. Dover Publ, New York, N.Y, repr edition, 1988. ISBN 978-0-486-60509-8.">Boyer, 1988</a>]</span>,
+and the inverse sine function was defined as a function of
+the angle that produces a given value of sine.
+However, this definition was limited to angles
+between <span class="math notranslate nohighlight">\([-\pi/2, \pi/2]\)</span>,
+and it was later extended to the entire real line
+using complex analysis by
+Carl Friedrich Gauss and Jean-Baptiste Fourier
+in the early 19th century <span id="id2">[<a class="reference internal" href="../references.html#id12" title="Charles H. Edwards. The historical development of the calculus. Springer study edition. Springer, New York Berlin Heidelberg London Paris Tokyo Hong Kong Barcelona Budapest, 1994. ISBN 978-3-540-90436-6 978-0-387-90436-8 978-3-540-94313-6 978-0-387-94313-8.">Edwards, 1994</a>]</span>.
+In this section, we still confine ourselves to
+the traditional domain of arcsine
+without considering the extension.</p>
+<p>The notation <span class="math notranslate nohighlight">\(\sin^{-1}(x)\)</span> was first introduced by
+Adrien-Marie Legendre in 1811 <span id="id3">[<a class="reference internal" href="../references.html#id18" title="David Eugene Smith. History of Mathematics. Dover, New York, 1958. ISBN 978-0-486-20429-1 978-0-486-20430-7.">Smith, 1958</a>]</span>,
+although it was sometimes written as <span class="math notranslate nohighlight">\(\arcsin(x)\)</span>
+or <span class="math notranslate nohighlight">\(\mathrm{inverse} \sin(x)\)</span> in earlier works.
+We shall however adopt the notation <span class="math notranslate nohighlight">\(\arcsin(x)\)</span>
+or simply <span class="math notranslate nohighlight">\(\arcsin x\)</span> when the variable is abbreviated
+in this book.
+The modern definition of the arcsine function as a function
+from <span class="math notranslate nohighlight">\([-1, 1]\)</span> to <span class="math notranslate nohighlight">\([-\pi/2, \pi/2]\)</span>
+was introduced by Augustin-Louis Cauchy
+in the mid-19th century <span id="id4">[<a class="reference internal" href="../references.html#id9" title="Carl B. Boyer. The History of the Calculus and Its Conceptual Development: The Concepts of the Calculus. Dover Books on Advances Mathematics. Dover Publ, New York, N.Y, repr edition, 1988. ISBN 978-0-486-60509-8.">Boyer, 1988</a>]</span>.</p>
+<div class="proof definition admonition" id="def:11">
+<p class="admonition-title"><span class="caption-number">Definition 9.3 </span></p>
+<section class="definition-content" id="proof-content">
+<p id="index-0">The <strong>arcsine</strong> function,
+written as <span class="math notranslate nohighlight">\(\arcsin x\)</span>,
+is defined by</p>
+<div class="math notranslate nohighlight" id="equation-eq-160">
+<span class="eqno">(9.7)<a class="headerlink" href="#equation-eq-160" title="Permalink to this equation">#</a></span>\[\begin{align}\arcsin x
+= \int_0^x \frac{1}{\sqrt{1-t^2}}\;\mathrm{d} t,
+\quad
+x \in[-1, 1]\end{align}\]</div>
+</section>
+</div><p>Note that the integral in <a class="reference internal" href="#equation-eq-160">(9.7)</a> becomes improper
+when <span class="math notranslate nohighlight">\(x\)</span> equals <span class="math notranslate nohighlight">\(-1\)</span> or <span class="math notranslate nohighlight">\(1\)</span>.
+And, it follows immediately from <a class="reference internal" href="Definition%20of%20Pi.html#thm:92">Theorem 9.2</a>
+that <span class="math notranslate nohighlight">\(\arcsin 1 = \pi / 2\)</span>.
+One may also immediately conclude that <span class="math notranslate nohighlight">\(\arcsin x\)</span> is an odd function
+by <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Fundamental%20Theorems%20of%20Calculus.html#thm:93">Theorem 7.28</a>.
+Though this is indeed true,
+the reasoning is not quite complete for <a class="reference internal" href="../Riemann-Stieltjes%20Integral/Fundamental%20Theorems%20of%20Calculus.html#thm:93">Theorem 7.28</a>
+only applies to <em>proper</em> integrals.
+Hence, we must be careful about the proof.
+The following proposition states some basic observations
+of the arcsine function,
+which we shall prove carefully.</p>
+<div class="proof proposition admonition" id="pro:7">
+<p class="admonition-title"><span class="caption-number">Proposition 9.1 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>For the arcsine function, we have
+the following results:</p>
+<ul class="simple">
+<li><p>➀ <span class="math notranslate nohighlight">\(\arcsin x\)</span> is an odd function.</p></li>
+<li><p>➁ <span class="math notranslate nohighlight">\(\arcsin 0 = 0\)</span>, <span class="math notranslate nohighlight">\(\arcsin 1 = \pi / 2\)</span>,
+and <span class="math notranslate nohighlight">\(\arcsin -1 = -\pi / 2\)</span>.</p></li>
+<li><p>➂ <span class="math notranslate nohighlight">\(\arcsin x\)</span> is continuous on <span class="math notranslate nohighlight">\([-1, 1]\)</span>.</p></li>
+<li><p>➃ <span class="math notranslate nohighlight">\(\arcsin x\)</span> is differentiable in <span class="math notranslate nohighlight">\((-1, 1)\)</span>
+with <span class="math notranslate nohighlight">\(\arcsin^\prime x = 1 / \sqrt{1 - x^2}\)</span>.</p></li>
+<li><p>➄ The one-sided derivatives of <span class="math notranslate nohighlight">\(\arcsin x\)</span>
+are <span class="math notranslate nohighlight">\(\arcsin^\prime_{-} 1 = \infty\)</span>
+and <span class="math notranslate nohighlight">\(\arcsin^\prime_{+} -1 = -\infty\)</span>.</p></li>
+<li><p>➅ <span class="math notranslate nohighlight">\(\arcsin x\)</span> is strictly increasing on <span class="math notranslate nohighlight">\([-1, 1]\)</span>.</p></li>
+<li><p>➆ <span class="math notranslate nohighlight">\(\arcsin x\)</span> is bijective.</p></li>
+</ul>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. TODO</p>
+</div>
 </section>
 
     <script type="text/x-thebe-config">

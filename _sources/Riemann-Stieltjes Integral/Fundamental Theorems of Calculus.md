@@ -271,6 +271,82 @@ Left: $f(x)$. Right: $F(x) = \int_{-1}^x f(t) \; \mathrm{d} t$.
 
 ````
 
+Recall that the derivative of an odd function is even
+whereas the derivative of an even function is odd.
+We have an analogous result in integration.
+That is, when we integrate an odd function
+from $0$ to $x$, then the function in the upper limit $x$
+of the integral is even.
+A similar result exists when integrating an even function.
+
+
+````{prf:theorem}
+:label: thm:93
+
+Suppose $f \in \mathfrak{R}$ on $[0, a]$.
+If $f$ is odd or even
+then $f$ is Riemann integrable on any closed subinterval
+in $[-a, a]$.
+Let
+
+```{math}
+\begin{align*}
+F(x) = \int_0^x f(t) \;\mathrm{d} t,
+\quad
+x \in[-a, a]\end{align*}
+```
+
+Then
+- ➀ If $f$ is odd,
+then $F$ is even, and
+- ➁ If $f$ is even,
+then $F$ is odd.
+
+
+````
+
+````{prf:proof}
+
+We only prove 1.
+Firstly, note that $F$ is well-defined on $[0, x]$
+for every $x \leq a$.
+Then by changing the variable $\phi(t) = -t$
+using {prf:ref}`thm:21`,
+we find that $f[\phi(t) = f(-t)$ is Riemann integrable
+on $[-x, 0]$ and hence $F$ is well-defined on any
+closed subinterval of $[-a, a]$.
+Moreover, we have
+
+```{math}
+:label: eq:158
+\begin{align}
+F(x)
+= \int_0^x f(t) \;\mathrm{d} t
+= \int_{0}^{-x} f(-t) \;\mathrm{d}(-t)
+\end{align}
+```
+
+First moving the negative sign outside $f$ using the fact
+that $f$ is odd,
+and then moving the negative sign outside the integral
+({prf:ref}`thm:19`),
+we have
+
+```{math}
+:label: eq:159
+\begin{align}
+-\int_{0}^{-x} -f(t) \;\mathrm{d} t
+= \int_{0}^{-x} f(t) \;\mathrm{d} t
+= F(-x)
+\end{align}
+```
+
+Combining {eq}`eq:158` and {eq}`eq:159` together,
+we conclude that $F(x) = F(-x)$,
+which implies $F$ is an even function.
+
+````
+
 ```{index} second fundamental theorem of calculus
 ```
 
