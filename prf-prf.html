@@ -1,67 +1,71 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proof Index &#8212; Mathematical Analysis</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/admonition.css" />
-    <link rel="stylesheet" type="text/css" href="_static/dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom-admonition.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'prf-prf';</script>
     <link rel="shortcut icon" href="_static/logo.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
 
     <script>
       DOCUMENTATION_OPTIONS.COLLAPSE_INDEX = true;
@@ -69,2100 +73,347 @@ const thebe_selector_output = ".output, .cell_output"
 
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
         
       
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      <img src="_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Mathematical Analysis</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Mathematical Analysis - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Mathematical Analysis - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Preface
+                    Introduction
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Main Contents
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Set%20Theory/index.html">
-   1. Set Theory
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Set%20Theory/Properties%20of%20Suprema%20and%20Infima.html">
-     1.1. Properties of Suprema and Infima
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Topology/index.html">
-   2. Topology
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Topology/Compactness.html">
-     2.1. Compactness
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Numerical%20Sequences%20and%20Series/index.html">
-   3. Numerical Sequences and Series
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/Monotonic%20Sequences%20of%20Real%20Numbers.html">
-     3.1. Monotonic Sequences of Real Numbers
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html">
-     3.2. Limit Superior and Limit Inferior
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/Infinite%20Series.html">
-     3.3. Infinite Series
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/Inserting%20and%20Removing%20Parentheses.html">
-     3.4. Inserting and Removing Parentheses
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/Alternating%20Series.html">
-     3.5. Alternating Series
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/Absolute%20and%20Conditional%20Convergence.html">
-     3.6. Absolute and Conditional Convergence
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html">
-     3.7. The Comparison Test
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html">
-     3.8. The Ratio Test and the Root Test
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/Dirichlet%27s%20Test%20and%20Abel%27s%20Test.html">
-     3.9. Dirichlet’s Test and Abel’s Test
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/Subseries.html">
-     3.10. Subseries
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/Double%20Series.html">
-     3.11. Double Series
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html">
-     3.12. Rearrangement Theorem for Double Series
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/Iterated%20Series.html">
-     3.13. Iterated Series
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html">
-     3.14. Multiplication of Series
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Limits%20and%20Continuity/index.html">
-   4. Limits and Continuity
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Limits%20and%20Continuity/Limit%20of%20a%20Function.html">
-     4.1. Limit of a Function
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Limits%20and%20Continuity/Computing%20Limits.html">
-     4.2. Computing Limits
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Limits%20and%20Continuity/Continuous%20Functions.html">
-     4.3. Continuous Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Limits%20and%20Continuity/Continuity%20of%20Composite%20Functions.html">
-     4.4. Continuity of Composite Functions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Limits%20and%20Continuity/Connectedness.html">
-     4.5. Connectedness
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Limits%20and%20Continuity/Monotonic%20Functions.html">
-     4.6. Monotonic Functions
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Differentiation/index.html">
-   5. Differentiation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Differentiation/Definition%20of%20Derivative.html">
-     5.1. Definition of Derivative
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Differentiation/Derivatives%20and%20Continuity.html">
-     5.2. Derivatives and Continuity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Differentiation/Computing%20Derivatives.html">
-     5.3. Computing Derivatives
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Differentiation/The%20Mean%20Value%20Theorem.html">
-     5.4. The Mean Value Theorem
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Differentiation/Intermediate%20Value%20Theorem.html">
-     5.5. Intermediate Value Theorem
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Differentiation/Taylor%27s%20Theorem.html">
-     5.6. Taylor’s Theorem
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Functions%20of%20Bounded%20Variation/index.html">
-   6. Functions of Bounded Variation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Functions%20of%20Bounded%20Variation/Definition%20of%20Functions%20of%20Bounded%20Variation.html">
-     6.1. Definition of Functions of Bounded Variation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Functions%20of%20Bounded%20Variation/Total%20Variation.html">
-     6.2. Total Variation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Functions%20of%20Bounded%20Variation/Additive%20Property%20of%20Total%20Variation.html">
-     6.3. Additive Property of Total Variation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html">
-     6.4. Characterization of Functions of Bounded Variation
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Riemann-Stieltjes%20Integral/index.html">
-   7. Riemann-Stieltjes Integral
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">
-     7.1. Definition of the Riemann-Stieltjes Integral
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Linear%20Properties.html">
-     7.2. Linear Properties
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Reduction%20to%20Riemann-Stieltjes%20Integrals.html">
-     7.3. Reduction to Riemann-Stieltjes Integrals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Integration%20by%20Parts.html">
-     7.4. Integration by Parts
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Change%20of%20Variables.html">
-     7.5. Change of Variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Step%20Functions%20as%20Integrators.html">
-     7.6. Step Functions as Integrators
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">
-     7.7. Reduction of Riemann-Stieltjes Integrals to Finite Sums
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html">
-     7.8. Darboux Integrals with Monotonically Increasing Integrators
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Riemann%27s%20Criterion.html">
-     7.9. Riemann’s Criterion
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html">
-     7.10. Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Integrators%20of%20Bounded%20Variation.html">
-     7.11. Integrators of Bounded Variation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Existence%20of%20Riemann-Stieltjes%20Integrals.html">
-     7.12. Existence of Riemann-Stieltjes Integrals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html">
-     7.13. Mean Value Theorems for Riemann-Stieltjes Integrals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Fundamental%20Theorems%20of%20Calculus.html">
-     7.14. Fundamental Theorems of Calculus
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Change%20of%20Variables%20in%20Riemann%20Integrals.html">
-     7.15. Change of Variables in Riemann Integrals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Lebesgue%20Criterion%20for%20Existence%20of%20Riemann%20Integrals.html">
-     7.16. Lebesgue Criterion for Existence of Riemann Integrals
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Riemann-Stieltjes%20Integral/Improper%20Riemann%20Integrals.html">
-     7.17. Improper Riemann Integrals
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Sequences%20and%20Series%20of%20Functions/index.html">
-   8. Sequences and Series of Functions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html">
-     8.1. Uniform Convergence
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html">
-     8.2. Uniform Convergence and Continuity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Differentiation.html">
-     8.3. Uniform Convergence and Differentiation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Sequences%20and%20Series%20of%20Functions/Power%20Series.html">
-     8.4. Power Series
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Transcendental%20Functions/index.html">
-   9. Transcendental Functions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Transcendental%20Functions/Exponential%20Function.html">
-     9.1. Exponential Function
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Transcendental%20Functions/Definition%20of%20Pi.html">
-     9.2. Definition of Pi
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Transcendental%20Functions/Arcsine%20and%20Arccosine.html">
-     9.3. Arcsine and Arccosine
-    </a>
-   </li>
-  </ul>
- </li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Preface/index.html">Preface</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Appendix
- </span>
-</p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="references.html">
-   References
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="genindex.html">
-   Index
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="Point-Set%20Topology/index.html">1. Point-Set Topology</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/index.html">2. Functions of Bounded Variation and Rectifiable Curves</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Functions%20of%20Bounded%20Variation.html">2.1. Functions of Bounded Variation</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Appendix</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="bibliography.html">References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="genindex.html">Index</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
       
-      <li>
-        <a href="https://github.com/Isaac-Fate/mathematical-analysis/issues/new?title=Issue%20on%20page%20%2Fprf-prf.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
+    </div>
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
 </div>
+</div>
+              
+              
 
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
     </div>
 </div>
 
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1></h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
 
    <h1>Proof Index</h1>
 
    <div class="modindex-jumpbox">
-   <a href="#cap-cor:1"><strong>cor:1</strong></a> | 
-   <a href="#cap-cor:2"><strong>cor:2</strong></a> | 
-   <a href="#cap-corollary-15"><strong>corollary-15</strong></a> | 
-   <a href="#cap-corollary-2"><strong>corollary-2</strong></a> | 
-   <a href="#cap-def:1"><strong>def:1</strong></a> | 
-   <a href="#cap-def:10"><strong>def:10</strong></a> | 
-   <a href="#cap-def:11"><strong>def:11</strong></a> | 
-   <a href="#cap-def:2"><strong>def:2</strong></a> | 
-   <a href="#cap-def:3"><strong>def:3</strong></a> | 
-   <a href="#cap-def:4"><strong>def:4</strong></a> | 
-   <a href="#cap-def:5"><strong>def:5</strong></a> | 
-   <a href="#cap-def:6"><strong>def:6</strong></a> | 
-   <a href="#cap-def:7"><strong>def:7</strong></a> | 
-   <a href="#cap-def:8"><strong>def:8</strong></a> | 
-   <a href="#cap-def:9"><strong>def:9</strong></a> | 
    <a href="#cap-definition-0"><strong>definition-0</strong></a> | 
-   <a href="#cap-definition-1"><strong>definition-1</strong></a> | 
-   <a href="#cap-definition-2"><strong>definition-2</strong></a> | 
-   <a href="#cap-eg:1"><strong>eg:1</strong></a> | 
-   <a href="#cap-eg:10"><strong>eg:10</strong></a> | 
-   <a href="#cap-eg:11"><strong>eg:11</strong></a> | 
-   <a href="#cap-eg:12"><strong>eg:12</strong></a> | 
-   <a href="#cap-eg:13"><strong>eg:13</strong></a> | 
-   <a href="#cap-eg:14"><strong>eg:14</strong></a> | 
-   <a href="#cap-eg:15"><strong>eg:15</strong></a> | 
-   <a href="#cap-eg:16"><strong>eg:16</strong></a> | 
-   <a href="#cap-eg:2"><strong>eg:2</strong></a> | 
-   <a href="#cap-eg:3"><strong>eg:3</strong></a> | 
-   <a href="#cap-eg:4"><strong>eg:4</strong></a> | 
-   <a href="#cap-eg:5"><strong>eg:5</strong></a> | 
-   <a href="#cap-eg:6"><strong>eg:6</strong></a> | 
-   <a href="#cap-eg:7"><strong>eg:7</strong></a> | 
-   <a href="#cap-eg:8"><strong>eg:8</strong></a> | 
-   <a href="#cap-eg:9"><strong>eg:9</strong></a> | 
-   <a href="#cap-example-0"><strong>example-0</strong></a> | 
-   <a href="#cap-example-1"><strong>example-1</strong></a> | 
-   <a href="#cap-example-10"><strong>example-10</strong></a> | 
-   <a href="#cap-example-2"><strong>example-2</strong></a> | 
-   <a href="#cap-example-3"><strong>example-3</strong></a> | 
-   <a href="#cap-example-5"><strong>example-5</strong></a> | 
-   <a href="#cap-example-6"><strong>example-6</strong></a> | 
-   <a href="#cap-example-7"><strong>example-7</strong></a> | 
-   <a href="#cap-example-8"><strong>example-8</strong></a> | 
-   <a href="#cap-lem:1"><strong>lem:1</strong></a> | 
-   <a href="#cap-lem:2"><strong>lem:2</strong></a> | 
-   <a href="#cap-lem:3"><strong>lem:3</strong></a> | 
-   <a href="#cap-lem:4"><strong>lem:4</strong></a> | 
-   <a href="#cap-lem:5"><strong>lem:5</strong></a> | 
-   <a href="#cap-lem:6"><strong>lem:6</strong></a> | 
-   <a href="#cap-lem:7"><strong>lem:7</strong></a> | 
-   <a href="#cap-lem:8"><strong>lem:8</strong></a> | 
-   <a href="#cap-lemma-2"><strong>lemma-2</strong></a> | 
-   <a href="#cap-pro:1"><strong>pro:1</strong></a> | 
-   <a href="#cap-pro:2"><strong>pro:2</strong></a> | 
-   <a href="#cap-pro:3"><strong>pro:3</strong></a> | 
-   <a href="#cap-pro:4"><strong>pro:4</strong></a> | 
-   <a href="#cap-pro:5"><strong>pro:5</strong></a> | 
-   <a href="#cap-pro:6"><strong>pro:6</strong></a> | 
-   <a href="#cap-pro:7"><strong>pro:7</strong></a> | 
-   <a href="#cap-remark-1"><strong>remark-1</strong></a> | 
-   <a href="#cap-remark-11"><strong>remark-11</strong></a> | 
-   <a href="#cap-remark-2"><strong>remark-2</strong></a> | 
-   <a href="#cap-remark-3"><strong>remark-3</strong></a> | 
-   <a href="#cap-remark-4"><strong>remark-4</strong></a> | 
-   <a href="#cap-theorem-0"><strong>theorem-0</strong></a> | 
-   <a href="#cap-theorem-1"><strong>theorem-1</strong></a> | 
-   <a href="#cap-theorem-3"><strong>theorem-3</strong></a> | 
-   <a href="#cap-theorem-4"><strong>theorem-4</strong></a> | 
-   <a href="#cap-theorem-5"><strong>theorem-5</strong></a> | 
-   <a href="#cap-theorem-6"><strong>theorem-6</strong></a> | 
-   <a href="#cap-thm:1"><strong>thm:1</strong></a> | 
-   <a href="#cap-thm:10"><strong>thm:10</strong></a> | 
-   <a href="#cap-thm:11"><strong>thm:11</strong></a> | 
-   <a href="#cap-thm:12"><strong>thm:12</strong></a> | 
-   <a href="#cap-thm:13"><strong>thm:13</strong></a> | 
-   <a href="#cap-thm:14"><strong>thm:14</strong></a> | 
-   <a href="#cap-thm:15"><strong>thm:15</strong></a> | 
-   <a href="#cap-thm:16"><strong>thm:16</strong></a> | 
-   <a href="#cap-thm:17"><strong>thm:17</strong></a> | 
-   <a href="#cap-thm:18"><strong>thm:18</strong></a> | 
-   <a href="#cap-thm:19"><strong>thm:19</strong></a> | 
-   <a href="#cap-thm:2"><strong>thm:2</strong></a> | 
-   <a href="#cap-thm:20"><strong>thm:20</strong></a> | 
-   <a href="#cap-thm:21"><strong>thm:21</strong></a> | 
-   <a href="#cap-thm:22"><strong>thm:22</strong></a> | 
-   <a href="#cap-thm:23"><strong>thm:23</strong></a> | 
-   <a href="#cap-thm:24"><strong>thm:24</strong></a> | 
-   <a href="#cap-thm:25"><strong>thm:25</strong></a> | 
-   <a href="#cap-thm:26"><strong>thm:26</strong></a> | 
-   <a href="#cap-thm:27"><strong>thm:27</strong></a> | 
-   <a href="#cap-thm:28"><strong>thm:28</strong></a> | 
-   <a href="#cap-thm:29"><strong>thm:29</strong></a> | 
-   <a href="#cap-thm:3"><strong>thm:3</strong></a> | 
-   <a href="#cap-thm:30"><strong>thm:30</strong></a> | 
-   <a href="#cap-thm:31"><strong>thm:31</strong></a> | 
-   <a href="#cap-thm:32"><strong>thm:32</strong></a> | 
-   <a href="#cap-thm:33"><strong>thm:33</strong></a> | 
-   <a href="#cap-thm:34"><strong>thm:34</strong></a> | 
-   <a href="#cap-thm:35"><strong>thm:35</strong></a> | 
-   <a href="#cap-thm:36"><strong>thm:36</strong></a> | 
-   <a href="#cap-thm:37"><strong>thm:37</strong></a> | 
-   <a href="#cap-thm:38"><strong>thm:38</strong></a> | 
-   <a href="#cap-thm:39"><strong>thm:39</strong></a> | 
-   <a href="#cap-thm:4"><strong>thm:4</strong></a> | 
-   <a href="#cap-thm:40"><strong>thm:40</strong></a> | 
-   <a href="#cap-thm:41"><strong>thm:41</strong></a> | 
-   <a href="#cap-thm:42"><strong>thm:42</strong></a> | 
-   <a href="#cap-thm:43"><strong>thm:43</strong></a> | 
-   <a href="#cap-thm:44"><strong>thm:44</strong></a> | 
-   <a href="#cap-thm:45"><strong>thm:45</strong></a> | 
-   <a href="#cap-thm:46"><strong>thm:46</strong></a> | 
-   <a href="#cap-thm:47"><strong>thm:47</strong></a> | 
-   <a href="#cap-thm:48"><strong>thm:48</strong></a> | 
-   <a href="#cap-thm:49"><strong>thm:49</strong></a> | 
-   <a href="#cap-thm:5"><strong>thm:5</strong></a> | 
-   <a href="#cap-thm:50"><strong>thm:50</strong></a> | 
-   <a href="#cap-thm:51"><strong>thm:51</strong></a> | 
-   <a href="#cap-thm:52"><strong>thm:52</strong></a> | 
-   <a href="#cap-thm:53"><strong>thm:53</strong></a> | 
-   <a href="#cap-thm:54"><strong>thm:54</strong></a> | 
-   <a href="#cap-thm:55"><strong>thm:55</strong></a> | 
-   <a href="#cap-thm:56"><strong>thm:56</strong></a> | 
-   <a href="#cap-thm:57"><strong>thm:57</strong></a> | 
-   <a href="#cap-thm:58"><strong>thm:58</strong></a> | 
-   <a href="#cap-thm:59"><strong>thm:59</strong></a> | 
-   <a href="#cap-thm:6"><strong>thm:6</strong></a> | 
-   <a href="#cap-thm:60"><strong>thm:60</strong></a> | 
-   <a href="#cap-thm:61"><strong>thm:61</strong></a> | 
-   <a href="#cap-thm:62"><strong>thm:62</strong></a> | 
-   <a href="#cap-thm:63"><strong>thm:63</strong></a> | 
-   <a href="#cap-thm:64"><strong>thm:64</strong></a> | 
-   <a href="#cap-thm:65"><strong>thm:65</strong></a> | 
-   <a href="#cap-thm:66"><strong>thm:66</strong></a> | 
-   <a href="#cap-thm:67"><strong>thm:67</strong></a> | 
-   <a href="#cap-thm:68"><strong>thm:68</strong></a> | 
-   <a href="#cap-thm:69"><strong>thm:69</strong></a> | 
-   <a href="#cap-thm:7"><strong>thm:7</strong></a> | 
-   <a href="#cap-thm:70"><strong>thm:70</strong></a> | 
-   <a href="#cap-thm:71"><strong>thm:71</strong></a> | 
-   <a href="#cap-thm:72"><strong>thm:72</strong></a> | 
-   <a href="#cap-thm:73"><strong>thm:73</strong></a> | 
-   <a href="#cap-thm:74"><strong>thm:74</strong></a> | 
-   <a href="#cap-thm:75"><strong>thm:75</strong></a> | 
-   <a href="#cap-thm:76"><strong>thm:76</strong></a> | 
-   <a href="#cap-thm:77"><strong>thm:77</strong></a> | 
-   <a href="#cap-thm:78"><strong>thm:78</strong></a> | 
-   <a href="#cap-thm:79"><strong>thm:79</strong></a> | 
-   <a href="#cap-thm:8"><strong>thm:8</strong></a> | 
-   <a href="#cap-thm:80"><strong>thm:80</strong></a> | 
-   <a href="#cap-thm:81"><strong>thm:81</strong></a> | 
-   <a href="#cap-thm:82"><strong>thm:82</strong></a> | 
-   <a href="#cap-thm:83"><strong>thm:83</strong></a> | 
-   <a href="#cap-thm:84"><strong>thm:84</strong></a> | 
-   <a href="#cap-thm:85"><strong>thm:85</strong></a> | 
-   <a href="#cap-thm:86"><strong>thm:86</strong></a> | 
-   <a href="#cap-thm:88"><strong>thm:88</strong></a> | 
-   <a href="#cap-thm:89"><strong>thm:89</strong></a> | 
-   <a href="#cap-thm:9"><strong>thm:9</strong></a> | 
-   <a href="#cap-thm:90"><strong>thm:90</strong></a> | 
-   <a href="#cap-thm:91"><strong>thm:91</strong></a> | 
-   <a href="#cap-thm:92"><strong>thm:92</strong></a> | 
-   <a href="#cap-thm:93"><strong>thm:93</strong></a>
+   <a href="#cap-eq:1"><strong>eq:1</strong></a> | 
+   <a href="#cap-fig:1"><strong>fig:1</strong></a> | 
+   <a href="#cap-proposition-2"><strong>proposition-2</strong></a>
    </div>
 
    <table class="indextable modindextable">
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-cor:1"><td></td><td>
-       <strong>cor:1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#cor:1"><code class="xref">cor:1</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>corollary</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-cor:2"><td></td><td>
-       <strong>cor:2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Infinite%20Series.html#cor:2"><code class="xref">cor:2</code></a> <em>(Numerical Sequences and Series/Infinite Series)</em></td><td>
-       <em>corollary</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-corollary-15"><td></td><td>
-       <strong>corollary-15</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#corollary-15"><code class="xref">corollary-15</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>corollary</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-corollary-2"><td></td><td>
-       <strong>corollary-2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Riemann%27s%20Criterion.html#corollary-2"><code class="xref">corollary-2</code></a> <em>(Riemann-Stieltjes Integral/Riemann&#39;s Criterion)</em></td><td>
-       <em>corollary</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:1"><td></td><td>
-       <strong>def:1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1"><code class="xref">def:1</code></a> <em>(Riemann-Stieltjes Integral/Definition of the Riemann-Stieltjes Integral)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:10"><td></td><td>
-       <strong>def:10</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Improper%20Riemann%20Integrals.html#def:10"><code class="xref">def:10</code></a> <em>(Riemann-Stieltjes Integral/Improper Riemann Integrals)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:11"><td></td><td>
-       <strong>def:11</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Transcendental%20Functions/Arcsine%20and%20Arccosine.html#def:11"><code class="xref">def:11</code></a> <em>(Transcendental Functions/Arcsine and Arccosine)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:2"><td></td><td>
-       <strong>def:2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#def:2"><code class="xref">def:2</code></a> <em>(Riemann-Stieltjes Integral/Darboux Integrals with Monotonically Increasing Integrators)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:3"><td></td><td>
-       <strong>def:3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Functions%20of%20Bounded%20Variation/Additive%20Property%20of%20Total%20Variation.html#def:3"><code class="xref">def:3</code></a> <em>(Functions of Bounded Variation/Additive Property of Total Variation)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:4"><td></td><td>
-       <strong>def:4</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Transcendental%20Functions/Exponential%20Function.html#def:4"><code class="xref">def:4</code></a> <em>(Transcendental Functions/Exponential Function)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:5"><td></td><td>
-       <strong>def:5</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Alternating%20Series.html#def:5"><code class="xref">def:5</code></a> <em>(Numerical Sequences and Series/Alternating Series)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:6"><td></td><td>
-       <strong>def:6</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Lebesgue%20Criterion%20for%20Existence%20of%20Riemann%20Integrals.html#def:6"><code class="xref">def:6</code></a> <em>(Riemann-Stieltjes Integral/Lebesgue Criterion for Existence of Riemann Integrals)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:7"><td></td><td>
-       <strong>def:7</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Lebesgue%20Criterion%20for%20Existence%20of%20Riemann%20Integrals.html#def:7"><code class="xref">def:7</code></a> <em>(Riemann-Stieltjes Integral/Lebesgue Criterion for Existence of Riemann Integrals)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:8"><td></td><td>
-       <strong>def:8</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Lebesgue%20Criterion%20for%20Existence%20of%20Riemann%20Integrals.html#def:8"><code class="xref">def:8</code></a> <em>(Riemann-Stieltjes Integral/Lebesgue Criterion for Existence of Riemann Integrals)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-def:9"><td></td><td>
-       <strong>def:9</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Transcendental%20Functions/Definition%20of%20Pi.html#def:9"><code class="xref">def:9</code></a> <em>(Transcendental Functions/Definition of Pi)</em></td><td>
-       <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-definition-0"><td></td><td>
        <strong>definition-0</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html#definition-0"><code class="xref">definition-0</code></a> <em>(Sequences and Series of Functions/Uniform Convergence)</em></td><td>
+       <a href="Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Functions%20of%20Bounded%20Variation.html#definition-0"><code class="xref">definition-0</code></a> <em>(Functions of Bounded Variation and Rectifiable Curves/Functions of Bounded Variation)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-definition-1"><td></td><td>
-       <strong>definition-1</strong></td><td></td></tr>
+     <tr class="cap" id="cap-eq:1"><td></td><td>
+       <strong>eq:1</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html#definition-1"><code class="xref">definition-1</code></a> <em>(Numerical Sequences and Series/Limit Superior and Limit Inferior)</em></td><td>
+       <a href="Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Functions%20of%20Bounded%20Variation.html#eq:1"><code class="xref">eq:1</code></a> <em>(Functions of Bounded Variation and Rectifiable Curves/Functions of Bounded Variation)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-definition-2"><td></td><td>
-       <strong>definition-2</strong></td><td></td></tr>
+     <tr class="cap" id="cap-fig:1"><td></td><td>
+       <strong>fig:1</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Riemann-Stieltjes%20Integral/Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#definition-2"><code class="xref">definition-2</code></a> <em>(Riemann-Stieltjes Integral/Darboux Integrals with Monotonically Increasing Integrators)</em></td><td>
-       <em>definition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:1"><td></td><td>
-       <strong>eg:1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/Definition%20of%20Derivative.html#eg:1"><code class="xref">eg:1</code></a> <em>(Differentiation/Definition of Derivative)</em></td><td>
+       <a href="Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Functions%20of%20Bounded%20Variation.html#fig:1"><code class="xref">fig:1</code></a> <em>(Functions of Bounded Variation and Rectifiable Curves/Functions of Bounded Variation)</em></td><td>
        <em>example</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:10"><td></td><td>
-       <strong>eg:10</strong></td><td></td></tr>
+     <tr class="cap" id="cap-proposition-2"><td></td><td>
+       <strong>proposition-2</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
-       <a href="Riemann-Stieltjes%20Integral/Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html#eg:10"><code class="xref">eg:10</code></a> <em>(Riemann-Stieltjes Integral/Mean Value Theorems for Riemann-Stieltjes Integrals)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:11"><td></td><td>
-       <strong>eg:11</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html#eg:11"><code class="xref">eg:11</code></a> <em>(Riemann-Stieltjes Integral/Mean Value Theorems for Riemann-Stieltjes Integrals)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:12"><td></td><td>
-       <strong>eg:12</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Fundamental%20Theorems%20of%20Calculus.html#eg:12"><code class="xref">eg:12</code></a> <em>(Riemann-Stieltjes Integral/Fundamental Theorems of Calculus)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:13"><td></td><td>
-       <strong>eg:13</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Fundamental%20Theorems%20of%20Calculus.html#eg:13"><code class="xref">eg:13</code></a> <em>(Riemann-Stieltjes Integral/Fundamental Theorems of Calculus)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:14"><td></td><td>
-       <strong>eg:14</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Change%20of%20Variables%20in%20Riemann%20Integrals.html#eg:14"><code class="xref">eg:14</code></a> <em>(Riemann-Stieltjes Integral/Change of Variables in Riemann Integrals)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:15"><td></td><td>
-       <strong>eg:15</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Change%20of%20Variables%20in%20Riemann%20Integrals.html#eg:15"><code class="xref">eg:15</code></a> <em>(Riemann-Stieltjes Integral/Change of Variables in Riemann Integrals)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:16"><td></td><td>
-       <strong>eg:16</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Lebesgue%20Criterion%20for%20Existence%20of%20Riemann%20Integrals.html#eg:16"><code class="xref">eg:16</code></a> <em>(Riemann-Stieltjes Integral/Lebesgue Criterion for Existence of Riemann Integrals)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:2"><td></td><td>
-       <strong>eg:2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/Definition%20of%20Derivative.html#eg:2"><code class="xref">eg:2</code></a> <em>(Differentiation/Definition of Derivative)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:3"><td></td><td>
-       <strong>eg:3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Step%20Functions%20as%20Integrators.html#eg:3"><code class="xref">eg:3</code></a> <em>(Riemann-Stieltjes Integral/Step Functions as Integrators)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:4"><td></td><td>
-       <strong>eg:4</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Step%20Functions%20as%20Integrators.html#eg:4"><code class="xref">eg:4</code></a> <em>(Riemann-Stieltjes Integral/Step Functions as Integrators)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:5"><td></td><td>
-       <strong>eg:5</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#eg:5"><code class="xref">eg:5</code></a> <em>(Riemann-Stieltjes Integral/Darboux Integrals with Monotonically Increasing Integrators)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:6"><td></td><td>
-       <strong>eg:6</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Functions%20of%20Bounded%20Variation/Definition%20of%20Functions%20of%20Bounded%20Variation.html#eg:6"><code class="xref">eg:6</code></a> <em>(Functions of Bounded Variation/Definition of Functions of Bounded Variation)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:7"><td></td><td>
-       <strong>eg:7</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html#eg:7"><code class="xref">eg:7</code></a> <em>(Numerical Sequences and Series/The Ratio Test and the Root Test)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:8"><td></td><td>
-       <strong>eg:8</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html#eg:8"><code class="xref">eg:8</code></a> <em>(Numerical Sequences and Series/The Ratio Test and the Root Test)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eg:9"><td></td><td>
-       <strong>eg:9</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html#eg:9"><code class="xref">eg:9</code></a> <em>(Riemann-Stieltjes Integral/Mean Value Theorems for Riemann-Stieltjes Integrals)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-example-0"><td></td><td>
-       <strong>example-0</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Differentiation.html#example-0"><code class="xref">example-0</code></a> <em>(Sequences and Series of Functions/Uniform Convergence and Differentiation)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-example-1"><td></td><td>
-       <strong>example-1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Step%20Functions%20as%20Integrators.html#example-1"><code class="xref">example-1</code></a> <em>(Riemann-Stieltjes Integral/Step Functions as Integrators)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-example-10"><td></td><td>
-       <strong>example-10</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#example-10"><code class="xref">example-10</code></a> <em>(Riemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-example-2"><td></td><td>
-       <strong>example-2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html#example-2"><code class="xref">example-2</code></a> <em>(Sequences and Series of Functions/Uniform Convergence)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-example-3"><td></td><td>
-       <strong>example-3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html#example-3"><code class="xref">example-3</code></a> <em>(Sequences and Series of Functions/Uniform Convergence)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-example-5"><td></td><td>
-       <strong>example-5</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#example-5"><code class="xref">example-5</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-example-6"><td></td><td>
-       <strong>example-6</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#example-6"><code class="xref">example-6</code></a> <em>(Riemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-example-7"><td></td><td>
-       <strong>example-7</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#example-7"><code class="xref">example-7</code></a> <em>(Riemann-Stieltjes Integral/Darboux Integrals with Monotonically Increasing Integrators)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-example-8"><td></td><td>
-       <strong>example-8</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#example-8"><code class="xref">example-8</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>example</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lem:1"><td></td><td>
-       <strong>lem:1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#lem:1"><code class="xref">lem:1</code></a> <em>(Riemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lem:2"><td></td><td>
-       <strong>lem:2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html#lem:2"><code class="xref">lem:2</code></a> <em>(Functions of Bounded Variation/Characterization of Functions of Bounded Variation)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lem:3"><td></td><td>
-       <strong>lem:3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#lem:3"><code class="xref">lem:3</code></a> <em>(Riemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lem:4"><td></td><td>
-       <strong>lem:4</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html#lem:4"><code class="xref">lem:4</code></a> <em>(Numerical Sequences and Series/Rearrangement Theorem for Double Series)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lem:5"><td></td><td>
-       <strong>lem:5</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html#lem:5"><code class="xref">lem:5</code></a> <em>(Numerical Sequences and Series/Limit Superior and Limit Inferior)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lem:6"><td></td><td>
-       <strong>lem:6</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/Definition%20of%20Derivative.html#lem:6"><code class="xref">lem:6</code></a> <em>(Differentiation/Definition of Derivative)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lem:7"><td></td><td>
-       <strong>lem:7</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Lebesgue%20Criterion%20for%20Existence%20of%20Riemann%20Integrals.html#lem:7"><code class="xref">lem:7</code></a> <em>(Riemann-Stieltjes Integral/Lebesgue Criterion for Existence of Riemann Integrals)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lem:8"><td></td><td>
-       <strong>lem:8</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Lebesgue%20Criterion%20for%20Existence%20of%20Riemann%20Integrals.html#lem:8"><code class="xref">lem:8</code></a> <em>(Riemann-Stieltjes Integral/Lebesgue Criterion for Existence of Riemann Integrals)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-lemma-2"><td></td><td>
-       <strong>lemma-2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Linear%20Properties.html#lemma-2"><code class="xref">lemma-2</code></a> <em>(Riemann-Stieltjes Integral/Linear Properties)</em></td><td>
-       <em>lemma</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-pro:1"><td></td><td>
-       <strong>pro:1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/Definition%20of%20Derivative.html#pro:1"><code class="xref">pro:1</code></a> <em>(Differentiation/Definition of Derivative)</em></td><td>
+       <a href="Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Functions%20of%20Bounded%20Variation.html#proposition-2"><code class="xref">proposition-2</code></a> <em>(Functions of Bounded Variation and Rectifiable Curves/Functions of Bounded Variation)</em></td><td>
        <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-pro:2"><td></td><td>
-       <strong>pro:2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Limits%20and%20Continuity/Limit%20of%20a%20Function.html#pro:2"><code class="xref">pro:2</code></a> <em>(Limits and Continuity/Limit of a Function)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-pro:3"><td></td><td>
-       <strong>pro:3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#pro:3"><code class="xref">pro:3</code></a> <em>(Riemann-Stieltjes Integral/Definition of the Riemann-Stieltjes Integral)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-pro:4"><td></td><td>
-       <strong>pro:4</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html#pro:4"><code class="xref">pro:4</code></a> <em>(Numerical Sequences and Series/Limit Superior and Limit Inferior)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-pro:5"><td></td><td>
-       <strong>pro:5</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html#pro:5"><code class="xref">pro:5</code></a> <em>(Numerical Sequences and Series/Limit Superior and Limit Inferior)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-pro:6"><td></td><td>
-       <strong>pro:6</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html#pro:6"><code class="xref">pro:6</code></a> <em>(Numerical Sequences and Series/Limit Superior and Limit Inferior)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-pro:7"><td></td><td>
-       <strong>pro:7</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Transcendental%20Functions/Arcsine%20and%20Arccosine.html#pro:7"><code class="xref">pro:7</code></a> <em>(Transcendental Functions/Arcsine and Arccosine)</em></td><td>
-       <em>proposition</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-remark-1"><td></td><td>
-       <strong>remark-1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Integration%20by%20Parts.html#remark-1"><code class="xref">remark-1</code></a> <em>(Riemann-Stieltjes Integral/Integration by Parts)</em></td><td>
-       <em>remark</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-remark-11"><td></td><td>
-       <strong>remark-11</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#remark-11"><code class="xref">remark-11</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>remark</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-remark-2"><td></td><td>
-       <strong>remark-2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Functions%20of%20Bounded%20Variation/Definition%20of%20Functions%20of%20Bounded%20Variation.html#remark-2"><code class="xref">remark-2</code></a> <em>(Functions of Bounded Variation/Definition of Functions of Bounded Variation)</em></td><td>
-       <em>remark</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-remark-3"><td></td><td>
-       <strong>remark-3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/Taylor%27s%20Theorem.html#remark-3"><code class="xref">remark-3</code></a> <em>(Differentiation/Taylor&#39;s Theorem)</em></td><td>
-       <em>remark</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-remark-4"><td></td><td>
-       <strong>remark-4</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#remark-4"><code class="xref">remark-4</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>remark</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-0"><td></td><td>
-       <strong>theorem-0</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Limits%20and%20Continuity/Computing%20Limits.html#theorem-0"><code class="xref">theorem-0</code></a> <em>(Limits and Continuity/Computing Limits)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-1"><td></td><td>
-       <strong>theorem-1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Inserting%20and%20Removing%20Parentheses.html#theorem-1"><code class="xref">theorem-1</code></a> <em>(Numerical Sequences and Series/Inserting and Removing Parentheses)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-3"><td></td><td>
-       <strong>theorem-3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#theorem-3"><code class="xref">theorem-3</code></a> <em>(Riemann-Stieltjes Integral/Darboux Integrals with Monotonically Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-4"><td></td><td>
-       <strong>theorem-4</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html#theorem-4"><code class="xref">theorem-4</code></a> <em>(Sequences and Series of Functions/Uniform Convergence)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-5"><td></td><td>
-       <strong>theorem-5</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#theorem-5"><code class="xref">theorem-5</code></a> <em>(Riemann-Stieltjes Integral/Darboux Integrals with Monotonically Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-theorem-6"><td></td><td>
-       <strong>theorem-6</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#theorem-6"><code class="xref">theorem-6</code></a> <em>(Riemann-Stieltjes Integral/Darboux Integrals with Monotonically Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:1"><td></td><td>
-       <strong>thm:1</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/Derivatives%20and%20Continuity.html#thm:1"><code class="xref">thm:1</code></a> <em>(Differentiation/Derivatives and Continuity)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:10"><td></td><td>
-       <strong>thm:10</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:10"><code class="xref">thm:10</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:11"><td></td><td>
-       <strong>thm:11</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Limits%20and%20Continuity/Connectedness.html#thm:11"><code class="xref">thm:11</code></a> <em>(Limits and Continuity/Connectedness)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:12"><td></td><td>
-       <strong>thm:12</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/Intermediate%20Value%20Theorem.html#thm:12"><code class="xref">thm:12</code></a> <em>(Differentiation/Intermediate Value Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:13"><td></td><td>
-       <strong>thm:13</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/Intermediate%20Value%20Theorem.html#thm:13"><code class="xref">thm:13</code></a> <em>(Differentiation/Intermediate Value Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:14"><td></td><td>
-       <strong>thm:14</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:14"><code class="xref">thm:14</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:15"><td></td><td>
-       <strong>thm:15</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Limits%20and%20Continuity/Monotonic%20Functions.html#thm:15"><code class="xref">thm:15</code></a> <em>(Limits and Continuity/Monotonic Functions)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:16"><td></td><td>
-       <strong>thm:16</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/Taylor%27s%20Theorem.html#thm:16"><code class="xref">thm:16</code></a> <em>(Differentiation/Taylor&#39;s Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:17"><td></td><td>
-       <strong>thm:17</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/Taylor%27s%20Theorem.html#thm:17"><code class="xref">thm:17</code></a> <em>(Differentiation/Taylor&#39;s Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:18"><td></td><td>
-       <strong>thm:18</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Linear%20Properties.html#thm:18"><code class="xref">thm:18</code></a> <em>(Riemann-Stieltjes Integral/Linear Properties)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:19"><td></td><td>
-       <strong>thm:19</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Linear%20Properties.html#thm:19"><code class="xref">thm:19</code></a> <em>(Riemann-Stieltjes Integral/Linear Properties)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:2"><td></td><td>
-       <strong>thm:2</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/Derivatives%20and%20Continuity.html#thm:2"><code class="xref">thm:2</code></a> <em>(Differentiation/Derivatives and Continuity)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:20"><td></td><td>
-       <strong>thm:20</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Integration%20by%20Parts.html#thm:20"><code class="xref">thm:20</code></a> <em>(Riemann-Stieltjes Integral/Integration by Parts)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:21"><td></td><td>
-       <strong>thm:21</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Change%20of%20Variables.html#thm:21"><code class="xref">thm:21</code></a> <em>(Riemann-Stieltjes Integral/Change of Variables)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:22"><td></td><td>
-       <strong>thm:22</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Functions%20of%20Bounded%20Variation/Characterization%20of%20Functions%20of%20Bounded%20Variation.html#thm:22"><code class="xref">thm:22</code></a> <em>(Functions of Bounded Variation/Characterization of Functions of Bounded Variation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:23"><td></td><td>
-       <strong>thm:23</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Reduction%20to%20Riemann-Stieltjes%20Integrals.html#thm:23"><code class="xref">thm:23</code></a> <em>(Riemann-Stieltjes Integral/Reduction to Riemann-Stieltjes Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:24"><td></td><td>
-       <strong>thm:24</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Step%20Functions%20as%20Integrators.html#thm:24"><code class="xref">thm:24</code></a> <em>(Riemann-Stieltjes Integral/Step Functions as Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:25"><td></td><td>
-       <strong>thm:25</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Linear%20Properties.html#thm:25"><code class="xref">thm:25</code></a> <em>(Riemann-Stieltjes Integral/Linear Properties)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:26"><td></td><td>
-       <strong>thm:26</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Darboux%20Integrals%20with%20Monotonically%20Increasing%20Integrators.html#thm:26"><code class="xref">thm:26</code></a> <em>(Riemann-Stieltjes Integral/Darboux Integrals with Monotonically Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:27"><td></td><td>
-       <strong>thm:27</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Set%20Theory/Properties%20of%20Suprema%20and%20Infima.html#thm:27"><code class="xref">thm:27</code></a> <em>(Set Theory/Properties of Suprema and Infima)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:28"><td></td><td>
-       <strong>thm:28</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Riemann%27s%20Criterion.html#thm:28"><code class="xref">thm:28</code></a> <em>(Riemann-Stieltjes Integral/Riemann&#39;s Criterion)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:29"><td></td><td>
-       <strong>thm:29</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#thm:29"><code class="xref">thm:29</code></a> <em>(Riemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:3"><td></td><td>
-       <strong>thm:3</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Limits%20and%20Continuity/Continuous%20Functions.html#thm:3"><code class="xref">thm:3</code></a> <em>(Limits and Continuity/Continuous Functions)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:30"><td></td><td>
-       <strong>thm:30</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#thm:30"><code class="xref">thm:30</code></a> <em>(Riemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:31"><td></td><td>
-       <strong>thm:31</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#thm:31"><code class="xref">thm:31</code></a> <em>(Riemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:32"><td></td><td>
-       <strong>thm:32</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#thm:32"><code class="xref">thm:32</code></a> <em>(Riemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:33"><td></td><td>
-       <strong>thm:33</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Functions%20of%20Bounded%20Variation/Total%20Variation.html#thm:33"><code class="xref">thm:33</code></a> <em>(Functions of Bounded Variation/Total Variation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:34"><td></td><td>
-       <strong>thm:34</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Functions%20of%20Bounded%20Variation/Additive%20Property%20of%20Total%20Variation.html#thm:34"><code class="xref">thm:34</code></a> <em>(Functions of Bounded Variation/Additive Property of Total Variation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:35"><td></td><td>
-       <strong>thm:35</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Functions%20of%20Bounded%20Variation/Definition%20of%20Functions%20of%20Bounded%20Variation.html#thm:35"><code class="xref">thm:35</code></a> <em>(Functions of Bounded Variation/Definition of Functions of Bounded Variation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:36"><td></td><td>
-       <strong>thm:36</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Functions%20of%20Bounded%20Variation/Definition%20of%20Functions%20of%20Bounded%20Variation.html#thm:36"><code class="xref">thm:36</code></a> <em>(Functions of Bounded Variation/Definition of Functions of Bounded Variation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:37"><td></td><td>
-       <strong>thm:37</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Integrators%20of%20Bounded%20Variation.html#thm:37"><code class="xref">thm:37</code></a> <em>(Riemann-Stieltjes Integral/Integrators of Bounded Variation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:38"><td></td><td>
-       <strong>thm:38</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#thm:38"><code class="xref">thm:38</code></a> <em>(Riemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:39"><td></td><td>
-       <strong>thm:39</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#thm:39"><code class="xref">thm:39</code></a> <em>(Riemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:4"><td></td><td>
-       <strong>thm:4</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/Computing%20Derivatives.html#thm:4"><code class="xref">thm:4</code></a> <em>(Differentiation/Computing Derivatives)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:40"><td></td><td>
-       <strong>thm:40</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Properties%20of%20Riemann-Stieltjes%20Integrals%20With%20Respect%20to%20Increasing%20Integrators.html#thm:40"><code class="xref">thm:40</code></a> <em>(Riemann-Stieltjes Integral/Properties of Riemann-Stieltjes Integrals With Respect to Increasing Integrators)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:41"><td></td><td>
-       <strong>thm:41</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Limits%20and%20Continuity/Continuity%20of%20Composite%20Functions.html#thm:41"><code class="xref">thm:41</code></a> <em>(Limits and Continuity/Continuity of Composite Functions)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:42"><td></td><td>
-       <strong>thm:42</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html#thm:42"><code class="xref">thm:42</code></a> <em>(Sequences and Series of Functions/Uniform Convergence)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:43"><td></td><td>
-       <strong>thm:43</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#thm:43"><code class="xref">thm:43</code></a> <em>(Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:44"><td></td><td>
-       <strong>thm:44</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Differentiation.html#thm:44"><code class="xref">thm:44</code></a> <em>(Sequences and Series of Functions/Uniform Convergence and Differentiation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:45"><td></td><td>
-       <strong>thm:45</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Differentiation.html#thm:45"><code class="xref">thm:45</code></a> <em>(Sequences and Series of Functions/Uniform Convergence and Differentiation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:46"><td></td><td>
-       <strong>thm:46</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence.html#thm:46"><code class="xref">thm:46</code></a> <em>(Sequences and Series of Functions/Uniform Convergence)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:47"><td></td><td>
-       <strong>thm:47</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Double%20Series.html#thm:47"><code class="xref">thm:47</code></a> <em>(Numerical Sequences and Series/Double Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:48"><td></td><td>
-       <strong>thm:48</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Infinite%20Series.html#thm:48"><code class="xref">thm:48</code></a> <em>(Numerical Sequences and Series/Infinite Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:49"><td></td><td>
-       <strong>thm:49</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Subseries.html#thm:49"><code class="xref">thm:49</code></a> <em>(Numerical Sequences and Series/Subseries)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:5"><td></td><td>
-       <strong>thm:5</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:5"><code class="xref">thm:5</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:50"><td></td><td>
-       <strong>thm:50</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Subseries.html#thm:50"><code class="xref">thm:50</code></a> <em>(Numerical Sequences and Series/Subseries)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:51"><td></td><td>
-       <strong>thm:51</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Infinite%20Series.html#thm:51"><code class="xref">thm:51</code></a> <em>(Numerical Sequences and Series/Infinite Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:52"><td></td><td>
-       <strong>thm:52</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/The%20Comparison%20Test.html#thm:52"><code class="xref">thm:52</code></a> <em>(Numerical Sequences and Series/The Comparison Test)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:53"><td></td><td>
-       <strong>thm:53</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Infinite%20Series.html#thm:53"><code class="xref">thm:53</code></a> <em>(Numerical Sequences and Series/Infinite Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:54"><td></td><td>
-       <strong>thm:54</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html#thm:54"><code class="xref">thm:54</code></a> <em>(Numerical Sequences and Series/The Ratio Test and the Root Test)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:55"><td></td><td>
-       <strong>thm:55</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/The%20Ratio%20Test%20and%20the%20Root%20Test.html#thm:55"><code class="xref">thm:55</code></a> <em>(Numerical Sequences and Series/The Ratio Test and the Root Test)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:56"><td></td><td>
-       <strong>thm:56</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Infinite%20Series.html#thm:56"><code class="xref">thm:56</code></a> <em>(Numerical Sequences and Series/Infinite Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:57"><td></td><td>
-       <strong>thm:57</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Monotonic%20Sequences%20of%20Real%20Numbers.html#thm:57"><code class="xref">thm:57</code></a> <em>(Numerical Sequences and Series/Monotonic Sequences of Real Numbers)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:58"><td></td><td>
-       <strong>thm:58</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html#thm:58"><code class="xref">thm:58</code></a> <em>(Numerical Sequences and Series/Limit Superior and Limit Inferior)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:59"><td></td><td>
-       <strong>thm:59</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html#thm:59"><code class="xref">thm:59</code></a> <em>(Numerical Sequences and Series/Limit Superior and Limit Inferior)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:6"><td></td><td>
-       <strong>thm:6</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Limits%20and%20Continuity/Continuous%20Functions.html#thm:6"><code class="xref">thm:6</code></a> <em>(Limits and Continuity/Continuous Functions)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:60"><td></td><td>
-       <strong>thm:60</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Limit%20Superior%20and%20Limit%20Inferior.html#thm:60"><code class="xref">thm:60</code></a> <em>(Numerical Sequences and Series/Limit Superior and Limit Inferior)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:61"><td></td><td>
-       <strong>thm:61</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Iterated%20Series.html#thm:61"><code class="xref">thm:61</code></a> <em>(Numerical Sequences and Series/Iterated Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:62"><td></td><td>
-       <strong>thm:62</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Rearrangement%20Theorem%20for%20Double%20Series.html#thm:62"><code class="xref">thm:62</code></a> <em>(Numerical Sequences and Series/Rearrangement Theorem for Double Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:63"><td></td><td>
-       <strong>thm:63</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Power%20Series.html#thm:63"><code class="xref">thm:63</code></a> <em>(Sequences and Series of Functions/Power Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:64"><td></td><td>
-       <strong>thm:64</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Power%20Series.html#thm:64"><code class="xref">thm:64</code></a> <em>(Sequences and Series of Functions/Power Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:65"><td></td><td>
-       <strong>thm:65</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Uniform%20Convergence%20and%20Continuity.html#thm:65"><code class="xref">thm:65</code></a> <em>(Sequences and Series of Functions/Uniform Convergence and Continuity)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:66"><td></td><td>
-       <strong>thm:66</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Power%20Series.html#thm:66"><code class="xref">thm:66</code></a> <em>(Sequences and Series of Functions/Power Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:67"><td></td><td>
-       <strong>thm:67</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Multiplication%20of%20Series.html#thm:67"><code class="xref">thm:67</code></a> <em>(Numerical Sequences and Series/Multiplication of Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:68"><td></td><td>
-       <strong>thm:68</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Transcendental%20Functions/Exponential%20Function.html#thm:68"><code class="xref">thm:68</code></a> <em>(Transcendental Functions/Exponential Function)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:69"><td></td><td>
-       <strong>thm:69</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Sequences%20and%20Series%20of%20Functions/Power%20Series.html#thm:69"><code class="xref">thm:69</code></a> <em>(Sequences and Series of Functions/Power Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:7"><td></td><td>
-       <strong>thm:7</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:7"><code class="xref">thm:7</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:70"><td></td><td>
-       <strong>thm:70</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Alternating%20Series.html#thm:70"><code class="xref">thm:70</code></a> <em>(Numerical Sequences and Series/Alternating Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:71"><td></td><td>
-       <strong>thm:71</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Absolute%20and%20Conditional%20Convergence.html#thm:71"><code class="xref">thm:71</code></a> <em>(Numerical Sequences and Series/Absolute and Conditional Convergence)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:72"><td></td><td>
-       <strong>thm:72</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Infinite%20Series.html#thm:72"><code class="xref">thm:72</code></a> <em>(Numerical Sequences and Series/Infinite Series)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:73"><td></td><td>
-       <strong>thm:73</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Dirichlet%27s%20Test%20and%20Abel%27s%20Test.html#thm:73"><code class="xref">thm:73</code></a> <em>(Numerical Sequences and Series/Dirichlet&#39;s Test and Abel&#39;s Test)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:74"><td></td><td>
-       <strong>thm:74</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Numerical%20Sequences%20and%20Series/Dirichlet%27s%20Test%20and%20Abel%27s%20Test.html#thm:74"><code class="xref">thm:74</code></a> <em>(Numerical Sequences and Series/Dirichlet&#39;s Test and Abel&#39;s Test)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:75"><td></td><td>
-       <strong>thm:75</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Existence%20of%20Riemann-Stieltjes%20Integrals.html#thm:75"><code class="xref">thm:75</code></a> <em>(Riemann-Stieltjes Integral/Existence of Riemann-Stieltjes Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:76"><td></td><td>
-       <strong>thm:76</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Existence%20of%20Riemann-Stieltjes%20Integrals.html#thm:76"><code class="xref">thm:76</code></a> <em>(Riemann-Stieltjes Integral/Existence of Riemann-Stieltjes Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:77"><td></td><td>
-       <strong>thm:77</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html#thm:77"><code class="xref">thm:77</code></a> <em>(Riemann-Stieltjes Integral/Mean Value Theorems for Riemann-Stieltjes Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:78"><td></td><td>
-       <strong>thm:78</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Mean%20Value%20Theorems%20for%20Riemann-Stieltjes%20Integrals.html#thm:78"><code class="xref">thm:78</code></a> <em>(Riemann-Stieltjes Integral/Mean Value Theorems for Riemann-Stieltjes Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:79"><td></td><td>
-       <strong>thm:79</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Fundamental%20Theorems%20of%20Calculus.html#thm:79"><code class="xref">thm:79</code></a> <em>(Riemann-Stieltjes Integral/Fundamental Theorems of Calculus)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:8"><td></td><td>
-       <strong>thm:8</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:8"><code class="xref">thm:8</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:80"><td></td><td>
-       <strong>thm:80</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Integrators%20of%20Bounded%20Variation.html#thm:80"><code class="xref">thm:80</code></a> <em>(Riemann-Stieltjes Integral/Integrators of Bounded Variation)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:81"><td></td><td>
-       <strong>thm:81</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Fundamental%20Theorems%20of%20Calculus.html#thm:81"><code class="xref">thm:81</code></a> <em>(Riemann-Stieltjes Integral/Fundamental Theorems of Calculus)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:82"><td></td><td>
-       <strong>thm:82</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Fundamental%20Theorems%20of%20Calculus.html#thm:82"><code class="xref">thm:82</code></a> <em>(Riemann-Stieltjes Integral/Fundamental Theorems of Calculus)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:83"><td></td><td>
-       <strong>thm:83</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Change%20of%20Variables%20in%20Riemann%20Integrals.html#thm:83"><code class="xref">thm:83</code></a> <em>(Riemann-Stieltjes Integral/Change of Variables in Riemann Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:84"><td></td><td>
-       <strong>thm:84</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:84"><code class="xref">thm:84</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:85"><td></td><td>
-       <strong>thm:85</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:85"><code class="xref">thm:85</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:86"><td></td><td>
-       <strong>thm:86</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Lebesgue%20Criterion%20for%20Existence%20of%20Riemann%20Integrals.html#thm:86"><code class="xref">thm:86</code></a> <em>(Riemann-Stieltjes Integral/Lebesgue Criterion for Existence of Riemann Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:88"><td></td><td>
-       <strong>thm:88</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Lebesgue%20Criterion%20for%20Existence%20of%20Riemann%20Integrals.html#thm:88"><code class="xref">thm:88</code></a> <em>(Riemann-Stieltjes Integral/Lebesgue Criterion for Existence of Riemann Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:89"><td></td><td>
-       <strong>thm:89</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Lebesgue%20Criterion%20for%20Existence%20of%20Riemann%20Integrals.html#thm:89"><code class="xref">thm:89</code></a> <em>(Riemann-Stieltjes Integral/Lebesgue Criterion for Existence of Riemann Integrals)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:9"><td></td><td>
-       <strong>thm:9</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Differentiation/The%20Mean%20Value%20Theorem.html#thm:9"><code class="xref">thm:9</code></a> <em>(Differentiation/The Mean Value Theorem)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:90"><td></td><td>
-       <strong>thm:90</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Topology/Compactness.html#thm:90"><code class="xref">thm:90</code></a> <em>(Topology/Compactness)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:91"><td></td><td>
-       <strong>thm:91</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Fundamental%20Theorems%20of%20Calculus.html#thm:91"><code class="xref">thm:91</code></a> <em>(Riemann-Stieltjes Integral/Fundamental Theorems of Calculus)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:92"><td></td><td>
-       <strong>thm:92</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Transcendental%20Functions/Definition%20of%20Pi.html#thm:92"><code class="xref">thm:92</code></a> <em>(Transcendental Functions/Definition of Pi)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-thm:93"><td></td><td>
-       <strong>thm:93</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="Riemann-Stieltjes%20Integral/Fundamental%20Theorems%20of%20Calculus.html#thm:93"><code class="xref">thm:93</code></a> <em>(Riemann-Stieltjes Integral/Fundamental Theorems of Calculus)</em></td><td>
-       <em>theorem</em></td></tr>
    </table>
 
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Isaac FEI<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Isaac FEI
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

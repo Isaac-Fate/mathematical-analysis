@@ -1,4 +1,0 @@
-# Limits and Continuity
-
-````{tableofcontents}
-````

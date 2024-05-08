@@ -1,9 +1,9 @@
-# Preface
 
-This book mainly follows the structure of {cite}`apostolMathematicalAnalysisModern1974`.
+# Introduction
 
+Welcome to Mathematical Analysis.
 
 ## Table of Contents
 
-````{tableofcontents}
-````
+```{tableofcontents}
+```

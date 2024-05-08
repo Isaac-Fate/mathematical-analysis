@@ -1,4 +1,0 @@
-# Riemann-Stieltjes Integral
-
-````{tableofcontents}
-````

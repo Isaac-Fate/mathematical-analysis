@@ -1,0 +1,33 @@
+
+:root {
+  --exercise-opaque-color: rgba(0, 246, 16, 1.0);
+  --exercise-transparent-color: rgba(0, 246, 16, 0.1);
+  --solution-opaque-color: rgba(246, 230, 0, 1);
+  --solution-transparent-color: rgba(246, 230, 0, 0.1);
+  --pencil-unicode: "\270f";
+  --bulb-unicode: "\1f4a1";
+}
+
+
+div.exercise {
+  border-left-color: var(--exercise-opaque-color);
+}
+div.exercise .admonition-title {
+  background-color: var(--exercise-transparent-color);
+}
+div.exercise .admonition-title:after {
+  color: var(--exercise-opaque-color);
+  content: var(--pencil-unicode);
+}
+
+
+div.solution {
+  border-left-color: var(--solution-opaque-color);
+}
+div.solution .admonition-title {
+  background-color: var(--solution-transparent-color);
+}
+div.solution .admonition-title:after {
+  color: var(--solution-opaque-color);
+  content: var(--bulb-unicode);
+}
