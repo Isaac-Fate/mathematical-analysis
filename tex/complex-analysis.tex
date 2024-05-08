@@ -1,0 +1,56 @@
+
+\documentclass[thmcnt=section, color=cyan, 12pt]{my-elegantbook}
+
+% Index page
+\usepackage{imakeidx}
+\makeindex[columns=2, intoc, options=-s index_style.ist]
+
+% Title and author
+\title{Mathematical Analysis}
+\author{Isaac FEI}
+
+% Reference file
+\addbibresource{mathematical-analysis.bib} 
+
+% Image of the book cover
+\cover{cover}
+
+\begin{document}
+
+% Print title and cover page
+\maketitle
+
+%--------
+% Preface
+%--------
+
+\frontmatter
+\chapter*{Preface}
+
+This book mainly follows the structure of %\cite{steinComplexAnalysis2003}.
+
+%------------------------------
+
+% Print table of contents
+\tableofcontents
+\mainmatter
+
+%-------------------------------
+% Main document starts from here
+%-------------------------------
+
+%==============================
+
+\chapter{Point-Set Topology}
+
+%==============================
+
+% References
+\printbibliography[heading=bibintoc, title=References]
+
+%==============================
+
+% Print index page
+\printindex
+
+\end{document}
