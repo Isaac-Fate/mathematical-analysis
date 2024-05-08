@@ -1,6 +1,6 @@
 **/.DS_Store
 
-# auxiliary files when compiling LaTeX 
+# auxiliary files when compiling LaTeX
 tex/*.aux
 tex/*.bbl
 tex/*.bcf
@@ -21,3 +21,6 @@ tex/*.ilg
 
 # Python
 **/__pycache__
+
+# Gnereated PDF
+/tex/*.pdf
