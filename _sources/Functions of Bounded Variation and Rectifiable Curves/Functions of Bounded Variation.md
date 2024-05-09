@@ -92,7 +92,7 @@ But a bounded function is not necessarily of bounded variation.
 
 
 ````{prf:example}
-:label: fig:1
+:label: eg:1
 
 Consider the function
 
@@ -109,7 +109,7 @@ Its graph is shown in {numref}`fig:1`.
 ---
 name: fig:1
 ---
-Graph of the function $f(x) = \cos(1/x)$, $x \in (0, 1]$ and $f(0) = 0$. It is bounded on $[0, 1]$ but not of bounded variation for it varias rapidly near $x=0$.
+Graph of the function $f(x) = \cos\frac{1}{x}$ for $x \in (0, 1]$ and $f(0) = 0$. It is bounded on $[0, 1]$ but not of bounded variation for it varias rapidly near $x=0$.
 ```
 
 Clearly, this function is bounded by $1$.
@@ -144,5 +144,128 @@ each two consecutive points. Hence,
 As we increase the number of points in the partition, $\sum \abs{\Delta f_k}$
 will exceeds any given number.
 Therefore, $f$ is not of bounded variation on $[0, 1]$.
+
+````
+
+````{prf:proposition} 
+
+If $f$ is monotonic on $[a, b]$, then $f$ is of bounded variation on $[a, b]$.
+
+````
+
+````{prf:proof}
+
+Assume $f$ is increasing.
+For any partition $P = \{x_0, \dots, x_n\}$ of $[a, b]$, we have
+
+```{math}
+\sum_{k=1}^n \abs{\Delta f_k}
+= \sum_{k=1}^n (f(x_k) - f(x_{k-1}))
+= f(b) - f(a)
+
+```
+
+Therefore, $f$ is of bounded variation on $[a, b]$.
+
+If $f$ is decreasing, then $-f$ is increasing.
+Applying what we have proved, we may conclude that $-f$ is of bounded variation.
+Hence, $f$ is also of bounded variation
+since $\sum \abs{\Delta (-f)_k} = \sum \abs{\Delta f_k}$.
+
+````
+
+````{prf:proposition} 
+
+Suppose that $f$ is continuous on $[a, b]$ and the
+derivative $f^\prime$ exists in $(a, b)$.
+If $\abs{f^\prime(x)} \leq A$ for all $x \in (a, b)$,
+then $f$ is of bounded variation on $[a, b]$.
+
+````
+
+:::{note}
+
+The assumption that $f$ being continuous on $[a, b]$,
+and $f^\prime$ exists in $(a, b)$ coincides with the mean value theorem.
+And indeed, it is the key of this proof.
+
+:::
+
+````{prf:proof}
+
+Let $P = \{x_0, \dots, x_n\}$ be a partition of $[a, b]$.
+By the mean value theorem, there exists $t_k \in (x_{k-1}, x_k)$
+for all $k=1, \dots, n$ such that
+
+```{math}
+
+f(x_k) - f(x_{k-1}) = f^\prime(t_k) (x_k - x_{k-1})
+
+```
+
+It then follows that
+
+```{math}
+\sum_{k=1}^n \abs{\Delta f_k}& = \sum_{k=1}^n \abs{f^\prime(t_k)}(x_k - x_{k-1}) \\& \leq\sum_{k=1}^n A (x_k - x_{k-1}) \\& = A (f(b) - f(a))
+
+```
+
+Therefore, $f$ is of bounded variation on $[a, b]$.
+
+````
+
+The following is a well crafted example of showing that
+a continuous function is not necessarily
+of bounded variation
+if we do not impose that its derivative is bounded in the interior.
+
+
+````{prf:example}
+:label: fig:2
+
+Consider function defined on $[0, 1]$ given by
+
+```{math}
+
+f(x) = \begin{cases}
+x \cos \frac{\pi}{2x}, & x \in (0, 1] \\
+0,                     & x = 0
+\end{cases}
+```
+
+Its graph is shown in Figure {numref}`fig:2````{figure} /figures/continuous-function-that-is-not-of-bounded-variation.png
+---
+name: fig:2
+---
+Graph of the function $f(x) = x \cos \frac{\pi}{2x}$ for $x \in (0, 1]$ and $f(0) = 0$. This function is continuous and its derivative exists in $(0, 1)$. But the derivative is unbounded.
+```
+
+The fact that this function is not of bounded variation may be less intuitive
+than the one given in {prf:ref}`eg:1`.
+The fucntion still varies rapidly near $x=0$.
+However, it does not range from $-1$ and $1$.
+Instead, it damps out at $x=0$ and becomes $0$.
+But we will show in the following that we can find a partition so fine that
+by collecting each small function variation,
+the overall sum may still increase to infinity.
+
+Consider the partition
+
+```{math}
+
+P = \{0, \frac{1}{2n}, \frac{1}{2n - 1}, \dots, \frac{1}{3}, \frac{1}{2}, 1\}
+```
+
+We have
+
+```{math}
+\sum_k \abs{\Delta f_k}& = \frac{1}{2n} + \frac{1}{2n} + \frac{1}{2n - 1} + \frac{1}{2n - 1}
++ \dots + \frac{1}{2} + \frac{1}{2}\\& = 1 + \cdots + \frac{1}{n}
+```
+
+As $n$ gets larger and larger,
+the sum on the right hand-side will increase infinitely
+for we know that the harmonic series $\sum \frac{1}{n}$ diverges.
+Therefore, this function is not of bounded variation.
 
 ````
