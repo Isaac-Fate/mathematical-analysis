@@ -321,9 +321,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -339,15 +337,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#its-graph-is-shown-in-figure-fig-2-figure-figures-continuous-function-that-is-not-of-bounded-variation-png">2.1.1. Its graph is shown in Figure <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:2</span></code>```{figure} /figures/continuous-function-that-is-not-of-bounded-variation.png</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#name-fig-2">2.1.2. name: fig:2</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -504,38 +493,6 @@ for all <span class="math notranslate nohighlight">\(k=1, \dots, n\)</span> such
 a continuous function is not necessarily
 of bounded variation
 if we do not impose that its derivative is bounded in the interior.</p>
-<section id="its-graph-is-shown-in-figure-fig-2-figure-figures-continuous-function-that-is-not-of-bounded-variation-png">
-<h2><span class="section-number">2.1.1. </span>Its graph is shown in Figure <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:2</span></code>```{figure} /figures/continuous-function-that-is-not-of-bounded-variation.png<a class="headerlink" href="#its-graph-is-shown-in-figure-fig-2-figure-figures-continuous-function-that-is-not-of-bounded-variation-png" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="name-fig-2">
-<h2><span class="section-number">2.1.2. </span>name: fig:2<a class="headerlink" href="#name-fig-2" title="Permalink to this heading">#</a></h2>
-<p>Graph of the function <span class="math notranslate nohighlight">\(f(x) = x \cos \frac{\pi}{2x}\)</span> for <span class="math notranslate nohighlight">\(x \in (0, 1]\)</span> and <span class="math notranslate nohighlight">\(f(0) = 0\)</span>. This function is continuous and its derivative exists in <span class="math notranslate nohighlight">\((0, 1)\)</span>. But the derivative is unbounded.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-The fact that this function is not of bounded variation may be less intuitive
-than the one given in {prf:ref}`eg:1`.
-The fucntion still varies rapidly near $x=0$.
-However, it does not range from $-1$ and $1$.
-Instead, it damps out at $x=0$ and becomes $0$.
-But we will show in the following that we can find a partition so fine that
-by collecting each small function variation,
-the overall sum may still increase to infinity.
-
-Consider the partition
-
-```{math}
-
-P = \{0, \frac{1}{2n}, \frac{1}{2n - 1}, \dots, \frac{1}{3}, \frac{1}{2}, 1\}
-</pre></div>
-</div>
-<p>We have</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\sum_k \abs{\Delta f_k}&amp; = \frac{1}{2n} + \frac{1}{2n} + \frac{1}{2n - 1} + \frac{1}{2n - 1}
-+ \dots + \frac{1}{2} + \frac{1}{2}\\&amp; = 1 + \cdots + \frac{1}{n}\end{split}\]</div>
-<p>As <span class="math notranslate nohighlight">\(n\)</span> gets larger and larger,
-the sum on the right hand-side will increase infinitely
-for we know that the harmonic series <span class="math notranslate nohighlight">\(\sum \frac{1}{n}\)</span> diverges.
-Therefore, this function is not of bounded variation.</p>
-</section>
 <div class="proof example admonition" id="fig:2">
 <p class="admonition-title"><span class="caption-number">Example 2.2 </span></p>
 <section class="example-content" id="proof-content">
@@ -545,6 +502,32 @@ Therefore, this function is not of bounded variation.</p>
 x \cos \frac{\pi}{2x}, &amp; x \in (0, 1] \\
 0,                     &amp; x = 0
 \end{cases}\end{split}\]</div>
+<p>Its graph is shown in Figure <a class="reference internal" href="#fig-2"><span class="std std-numref">Fig. 2.2</span></a>.</p>
+<figure class="align-default" id="fig-2">
+<img alt="../_images/continuous-function-that-is-not-of-bounded-variation.png" src="../_images/continuous-function-that-is-not-of-bounded-variation.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Graph of the function <span class="math notranslate nohighlight">\(f(x) = x \cos \frac{\pi}{2x}\)</span> for <span class="math notranslate nohighlight">\(x \in (0, 1]\)</span> and <span class="math notranslate nohighlight">\(f(0) = 0\)</span>. This function is continuous and its derivative exists in <span class="math notranslate nohighlight">\((0, 1)\)</span>. But the derivative is unbounded.</span><a class="headerlink" href="#fig-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The fact that this function is not of bounded variation may be less intuitive
+than the one given in <a class="reference internal" href="#eg:1">Example 2.1</a>.
+The fucntion still varies rapidly near <span class="math notranslate nohighlight">\(x=0\)</span>.
+However, it does not range from <span class="math notranslate nohighlight">\(-1\)</span> and <span class="math notranslate nohighlight">\(1\)</span>.
+Instead, it damps out at <span class="math notranslate nohighlight">\(x=0\)</span> and becomes <span class="math notranslate nohighlight">\(0\)</span>.
+But we will show in the following that we can find a partition so fine that
+by collecting each small function variation,
+the overall sum may still increase to infinity.</p>
+<p>Consider the partition</p>
+<div class="math notranslate nohighlight">
+\[P = \{0, \frac{1}{2n}, \frac{1}{2n - 1}, \dots, \frac{1}{3}, \frac{1}{2}, 1\}\]</div>
+<p>We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sum_k \abs{\Delta f_k}&amp; = \frac{1}{2n} + \frac{1}{2n} + \frac{1}{2n - 1} + \frac{1}{2n - 1}
++ \dots + \frac{1}{2} + \frac{1}{2}\\&amp; = 1 + \cdots + \frac{1}{n}\end{split}\]</div>
+<p>As <span class="math notranslate nohighlight">\(n\)</span> gets larger and larger,
+the sum on the right hand-side will increase infinitely
+for we know that the harmonic series <span class="math notranslate nohighlight">\(\sum \frac{1}{n}\)</span> diverges.
+Therefore, this function is not of bounded variation.</p>
 </section>
 </div></section>
 
@@ -603,21 +586,7 @@ x \cos \frac{\pi}{2x}, &amp; x \in (0, 1] \\
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#its-graph-is-shown-in-figure-fig-2-figure-figures-continuous-function-that-is-not-of-bounded-variation-png">2.1.1. Its graph is shown in Figure <code class="xref std std-numref docutils literal notranslate"><span class="pre">fig:2</span></code>```{figure} /figures/continuous-function-that-is-not-of-bounded-variation.png</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#name-fig-2">2.1.2. name: fig:2</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
+                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>

@@ -233,7 +233,9 @@ x \cos \frac{\pi}{2x}, & x \in (0, 1] \\
 \end{cases}
 ```
 
-Its graph is shown in Figure {numref}`fig:2````{figure} /figures/continuous-function-that-is-not-of-bounded-variation.png
+Its graph is shown in Figure {numref}`fig:2`.
+
+```{figure} /figures/continuous-function-that-is-not-of-bounded-variation.png
 ---
 name: fig:2
 ---
