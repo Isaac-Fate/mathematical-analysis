@@ -7,7 +7,7 @@ on $[a, b]$ if, equivalently to what we stated, the set
 
 ```{math}
 :label: eq:2
-\set{\sum_{k=1}^n \abs{\Delta f_k}}{P \in \SCRP[a, b]}
+\set{\sum_{k=1}^n \abs{\Delta f_k}}{P \in \CALP[a, b]}
 ```
 
 is bounded above.
@@ -25,7 +25,7 @@ of $f$ on $[a, b]$ is defined as
 
 ```{math}
 
-V_a^b (f) := \sup\set{\sum_{k=1}^n \abs{\Delta f_k}}{P \in \SCRP[a, b]}
+V_a^b (f) := \sup\set{\sum_{k=1}^n \abs{\Delta f_k}}{P \in \CALP[a, b]}
 ```
 
 ````
@@ -43,3 +43,4 @@ Notations are very important for they provide intuitive expressions
 of the intrinsic mathematical concepts.
 
 :::
+$\CALP$

@@ -25,7 +25,7 @@ is called a  **partition**  of $[a, b]$.
 The interval $[x_{k-1}, x_k]$ is called the $k$-th subinterval of $P$,
 and we oftern write $\Delta x_k = x_k - x_{k-1}$.
 
-The collection of all partitions of $[a, b]$ is denoted by $\SCRP[a, b]$.
+The collection of all partitions of $[a, b]$ is denoted by $\CALP[a, b]$.
 
 ````
 
