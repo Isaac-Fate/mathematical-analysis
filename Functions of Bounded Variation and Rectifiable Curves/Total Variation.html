@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Functions of Bounded Variation and Rectifiable Curves &#8212; Mathematical Analysis</title>
+    <title>2.2. Total Variation &#8212; Mathematical Analysis</title>
   
   
   
@@ -60,12 +60,14 @@
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Functions of Bounded Variation and Rectifiable Curves/index';</script>
+    <script>window.MathJax = {"tex": {"macros": {"AC": "\\mathcal{A}", "BC": "\\mathcal{B}", "C": "\\mathbb{C}", "CC": "\\mathcal{C}", "DC": "\\mathcal{D}", "EC": "\\mathcal{E}", "F": "\\mathbb{F}", "FC": "\\mathcal{F}", "GC": "\\mathcal{G}", "HC": "\\mathcal{H}", "MC": "\\mathcal{M}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "PC": "\\mathcal{P}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "RE": ["\\mathrm{Re}"], "SC": "\\mathcal{S}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "dif": "\\, \\mathrm{d}", "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "proj": ["\\mathop{\\mathrm{proj}}"], "restr": ["{#1}|_{#2}", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\middle| #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Functions of Bounded Variation and Rectifiable Curves/Total Variation';</script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.1. Functions of Bounded Variation" href="Functions%20of%20Bounded%20Variation.html" />
-    <link rel="prev" title="1. Point-Set Topology" href="../Point-Set%20Topology/index.html" />
+    <link rel="next" title="References" href="../bibliography.html" />
+    <link rel="prev" title="2.1. Functions of Bounded Variation" href="Functions%20of%20Bounded%20Variation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -185,9 +187,9 @@
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Point-Set%20Topology/index.html">1. Point-Set Topology</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Functions of Bounded Variation and Rectifiable Curves</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">2. Functions of Bounded Variation and Rectifiable Curves</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Functions%20of%20Bounded%20Variation.html">2.1. Functions of Bounded Variation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Total%20Variation.html">2.2. Total Variation</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.2. Total Variation</a></li>
 </ul>
 </li>
 </ul>
@@ -249,7 +251,7 @@
       
       
       
-      <li><a href="../_sources/Functions of Bounded Variation and Rectifiable Curves/index.md" target="_blank"
+      <li><a href="../_sources/Functions of Bounded Variation and Rectifiable Curves/Total Variation.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -331,7 +333,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Functions of Bounded Variation and Rectifiable Curves</h1>
+    <h1>Total Variation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -345,9 +347,36 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="functions-of-bounded-variation-and-rectifiable-curves">
-<h1><span class="section-number">2. </span>Functions of Bounded Variation and Rectifiable Curves<a class="headerlink" href="#functions-of-bounded-variation-and-rectifiable-curves" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="total-variation">
+<h1><span class="section-number">2.2. </span>Total Variation<a class="headerlink" href="#total-variation" title="Permalink to this heading">#</a></h1>
+<p id="index-0">Recall that <span class="math notranslate nohighlight">\(f\)</span> is said to be of bounded of variation
+on <span class="math notranslate nohighlight">\([a, b]\)</span> if, equivalently to what we stated, the set</p>
+<div class="math notranslate nohighlight" id="equation-eq-2">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-eq-2" title="Permalink to this equation">#</a></span>\[\set{\sum_{k=1}^n \abs{\Delta f_k}}{P \in \SCRP[a, b]}\]</div>
+<p>is bounded above.
+This set is of course nonempty for <span class="math notranslate nohighlight">\(\{a, b\}\)</span> is clearly a partition.
+By the least upper bound property,
+the set in <a class="reference internal" href="#equation-eq-2">(2.2)</a> has a supremum, which is referred to as
+<strong>total variation</strong>  of <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<div class="proof definition admonition" id="definition-0">
+<p class="admonition-title"><span class="caption-number">Definition 2.3 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+The total variation, denoted by <span class="math notranslate nohighlight">\(V_a^b (f)\)</span>,
+of <span class="math notranslate nohighlight">\(f\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> is defined as</p>
+<div class="math notranslate nohighlight">
+\[V_a^b (f) := \sup\set{\sum_{k=1}^n \abs{\Delta f_k}}{P \in \SCRP[a, b]}\]</div>
+</section>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We adopt the notation <span class="math notranslate nohighlight">\(V_a^b(f)\)</span>,
+which is inspired by the notion of
+a definite integral <span class="math notranslate nohighlight">\(\int_a^b f(x) \dif x\)</span>.
+And as we shall see,
+these two concepts indeed share some similar properties, namely,
+the linear properties.</p>
+<p>Notations are very important for they provide intuitive expressions
+of the intrinsic mathematical concepts.</p>
 </div>
 </section>
 
@@ -382,20 +411,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Point-Set%20Topology/index.html"
+       href="Functions%20of%20Bounded%20Variation.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Point-Set Topology</p>
+        <p class="prev-next-title"><span class="section-number">2.1. </span>Functions of Bounded Variation</p>
       </div>
     </a>
     <a class="right-next"
-       href="Functions%20of%20Bounded%20Variation.html"
+       href="../bibliography.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Functions of Bounded Variation</p>
+        <p class="prev-next-title">References</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

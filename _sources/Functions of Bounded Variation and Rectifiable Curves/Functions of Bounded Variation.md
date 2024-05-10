@@ -25,7 +25,7 @@ is called a  **partition**  of $[a, b]$.
 The interval $[x_{k-1}, x_k]$ is called the $k$-th subinterval of $P$,
 and we oftern write $\Delta x_k = x_k - x_{k-1}$.
 
-The collection of all partitions of $[a, b]$ is denoted by $\PC[a, b]$.
+The collection of all partitions of $[a, b]$ is denoted by $\SCRP[a, b]$.
 
 ````
 
@@ -148,6 +148,7 @@ Therefore, $f$ is not of bounded variation on $[0, 1]$.
 ````
 
 ````{prf:proposition} 
+:label: prop:1
 
 If $f$ is monotonic on $[a, b]$, then $f$ is of bounded variation on $[a, b]$.
 
@@ -215,7 +216,7 @@ Therefore, $f$ is of bounded variation on $[a, b]$.
 ````
 
 The following is a well crafted example of showing that
-a continuous function is not necessarily
+a continuous and differentiable function is not necessarily
 of bounded variation
 if we do not impose that its derivative is bounded in the interior.
 
@@ -269,5 +270,19 @@ As $n$ gets larger and larger,
 the sum on the right hand-side will increase infinitely
 for we know that the harmonic series $\sum \frac{1}{n}$ diverges.
 Therefore, this function is not of bounded variation.
+
+````
+
+Of course, the condition of the derivative being bounded is not necessary
+for a function to be of bounded variation.
+
+
+````{prf:example}
+
+The derivative of the squre root function $f(x) = \sqrt{x}$ in $(0, 1)$
+is $f^\prime(x) = \frac{1}{2\sqrt{x}}$,
+which tends to infinity as $x \to 0$.
+But $f$ is clearly of bounded variation on $[0, 1]$
+by {prf:ref}`prop:1` for it is increasing.
 
 ````

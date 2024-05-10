@@ -66,7 +66,7 @@
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="References" href="../bibliography.html" />
+    <link rel="next" title="2.2. Total Variation" href="Total%20Variation.html" />
     <link rel="prev" title="2. Functions of Bounded Variation and Rectifiable Curves" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -189,6 +189,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Point-Set%20Topology/index.html">1. Point-Set Topology</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">2. Functions of Bounded Variation and Rectifiable Curves</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">2.1. Functions of Bounded Variation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Total%20Variation.html">2.2. Total Variation</a></li>
 </ul>
 </li>
 </ul>
@@ -362,7 +363,7 @@ A set of points</p>
 <p>is called a  <strong>partition</strong>  of <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 <p>The interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> is called the <span class="math notranslate nohighlight">\(k\)</span>-th subinterval of <span class="math notranslate nohighlight">\(P\)</span>,
 and we oftern write <span class="math notranslate nohighlight">\(\Delta x_k = x_k - x_{k-1}\)</span>.</p>
-<p>The collection of all partitions of <span class="math notranslate nohighlight">\([a, b]\)</span> is denoted by <span class="math notranslate nohighlight">\(\PC[a, b]\)</span>.</p>
+<p>The collection of all partitions of <span class="math notranslate nohighlight">\([a, b]\)</span> is denoted by <span class="math notranslate nohighlight">\(\SCRP[a, b]\)</span>.</p>
 </section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -443,7 +444,7 @@ each two consecutive points. Hence,</p>
 will exceeds any given number.
 Therefore, <span class="math notranslate nohighlight">\(f\)</span> is not of bounded variation on <span class="math notranslate nohighlight">\([0, 1]\)</span>.</p>
 </section>
-</div><div class="proof proposition admonition" id="proposition-4">
+</div><div class="proof proposition admonition" id="prop:1">
 <p class="admonition-title"><span class="caption-number">Proposition 2.2 </span></p>
 <section class="proposition-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is monotonic on <span class="math notranslate nohighlight">\([a, b]\)</span>, then <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
@@ -490,7 +491,7 @@ for all <span class="math notranslate nohighlight">\(k=1, \dots, n\)</span> such
 <p>Therefore, <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </div>
 <p>The following is a well crafted example of showing that
-a continuous function is not necessarily
+a continuous and differentiable function is not necessarily
 of bounded variation
 if we do not impose that its derivative is bounded in the interior.</p>
 <div class="proof example admonition" id="fig:2">
@@ -528,6 +529,17 @@ the overall sum may still increase to infinity.</p>
 the sum on the right hand-side will increase infinitely
 for we know that the harmonic series <span class="math notranslate nohighlight">\(\sum \frac{1}{n}\)</span> diverges.
 Therefore, this function is not of bounded variation.</p>
+</section>
+</div><p>Of course, the condition of the derivative being bounded is not necessary
+for a function to be of bounded variation.</p>
+<div class="proof example admonition" id="example-7">
+<p class="admonition-title"><span class="caption-number">Example 2.3 </span></p>
+<section class="example-content" id="proof-content">
+<p>The derivative of the squre root function <span class="math notranslate nohighlight">\(f(x) = \sqrt{x}\)</span> in <span class="math notranslate nohighlight">\((0, 1)\)</span>
+is <span class="math notranslate nohighlight">\(f^\prime(x) = \frac{1}{2\sqrt{x}}\)</span>,
+which tends to infinity as <span class="math notranslate nohighlight">\(x \to 0\)</span>.
+But <span class="math notranslate nohighlight">\(f\)</span> is clearly of bounded variation on <span class="math notranslate nohighlight">\([0, 1]\)</span>
+by <a class="reference internal" href="#prop:1">Proposition 2.2</a> for it is increasing.</p>
 </section>
 </div></section>
 
@@ -571,11 +583,11 @@ Therefore, this function is not of bounded variation.</p>
       </div>
     </a>
     <a class="right-next"
-       href="../bibliography.html"
+       href="Total%20Variation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Total Variation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
