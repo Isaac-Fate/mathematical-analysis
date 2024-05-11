@@ -63,6 +63,7 @@ A simple observation is that a function of bounded variation is also bounded.
 
 
 ````{prf:proposition} 
+:label: prop:2
 
 Let $f$ be a function of bounded variation on $[a, b]$.
 Then $f$ is bounded on $[a, b]$.

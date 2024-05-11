@@ -378,7 +378,58 @@ the linear properties.</p>
 <p>Notations are very important for they provide intuitive expressions
 of the intrinsic mathematical concepts.</p>
 </div>
-<p><span class="math notranslate nohighlight">\(\CALP\)</span></p>
+<p>From this definition,
+we have some simple observations.
+First, the value of <span class="math notranslate nohighlight">\(V_a^b (f)\)</span> is nonnegative.
+And it is easy to prove that <span class="math notranslate nohighlight">\(V_a^b (f) = 0\)</span>
+if and only if <span class="math notranslate nohighlight">\(f\)</span> is constant on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<div class="proof theorem admonition" id="eq:3">
+<p class="admonition-title"><span class="caption-number">Theorem 2.1 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>, then
+so are their sum, difference and product.
+Moreover, we have the following inequalities:</p>
+<div class="math notranslate nohighlight" id="equation-eq-3">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[V_a^b (f \pm g) \leq V_a^b f + V_a^b g\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight" id="equation-eq-4">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-eq-4" title="Permalink to this equation">#</a></span>\[V_a^b (fg) \leq\sup_{x \in [a, b]}\abs{g(x)} V_a^b (f)
++ \sup_{x \in [a, b]}\abs{f(x)} V_a^b (g)\]</div>
+</section>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that the supremums in <a class="reference internal" href="#equation-eq-4">(2.4)</a> indeed exist
+since the functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are bounded due to <a class="reference internal" href="Functions%20of%20Bounded%20Variation.html#prop:2">Proposition 2.1</a>.</p>
+</div>
+<div class="proof admonition" id="proof">
+<p>Proof. We first show that the sum and the difference of two functions
+are of bounded variation, and satisfy <a class="reference internal" href="#equation-eq-3">(2.3)</a>.
+Let <span class="math notranslate nohighlight">\(P\)</span> be an arbitrary partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
+On each subinterval, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\abs{\Delta (f \pm g)_k}&amp; = \abs{f(x_{k+1}) \pm g(x_{k+1}) - [f(x_k) \pm g(x_k)]}\\&amp; = \abs{\Delta f_k \pm \Delta g_k}\\&amp; \leq\abs{\Delta f_k} + \abs{\Delta g_k}\end{split}\]</div>
+<p>Taking the sum over <span class="math notranslate nohighlight">\(k\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k}\abs{\Delta (f \pm g)_k}\leq\sum_{k}\abs{\Delta f_k} + \sum_k \abs{\Delta g_k}\leq V_a^b (f) + V_a^b (g)
+\]</div>
+<p>The above inequality shows that <span class="math notranslate nohighlight">\(f \pm g\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+and <a class="reference internal" href="#equation-eq-3">(2.3)</a> is satisfied.</p>
+<p>In the following, we show that the product of two Functions
+are of bounded variation and satisfies <a class="reference internal" href="#equation-eq-4">(2.4)</a>.
+Let <span class="math notranslate nohighlight">\(P\)</span> be an arbitrary partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
+On each subinterval, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\abs{\Delta (fg)_k}&amp; = \abs{f(x_{k+1}) g(x_{k+1}) - f(x_k) g(x_k)}\\&amp; \text{Add and subtract the term $f(x_k)g(x_{k+1})$}\\&amp; = \abs{ g(x_{k+1})[ f(x_{k+1}) - f(x_k)] + f(x_k)[ g(x_{k+1}) - g(x_k) ] }\\&amp; \leq\abs{g(x_{k+1})}\abs{\Delta f_k} + \abs{f(x_k)}\abs{ \Delta g_k }\\&amp; \leq\sup_{x \in [a, b]}\abs{g(x)}\abs{\Delta f_k}
++ \sup_{x \in [a, b]}\abs{f(x)}\abs{\Delta g_k}\end{split}\]</div>
+<p>Summing over <span class="math notranslate nohighlight">\(k\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sum_k \abs{\Delta (fg)_k}\leq\sup_{x \in [a, b]}\abs{g(x)}\sum_k \abs{\Delta f_k}
++ \sup_{x \in [a, b]}\abs{f(x)}\sum_k \abs{\Delta g_k}\\\leq\sup_{x \in [a, b]}\abs{g(x)} V_a^b (f)
++ \sup_{x \in [a, b]}\abs{f(x)} V_a^b (g)
+\end{split}\]</div>
+<p>This shows the product <span class="math notranslate nohighlight">\(fg\)</span> is in fact of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+and <a class="reference internal" href="#equation-eq-4">(2.4)</a> is satisfied.</p>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
