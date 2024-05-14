@@ -322,7 +322,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -338,6 +340,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additive-property-of-total-variation">2.2.1. Additive Property of Total Variation</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -383,14 +393,14 @@ we have some simple observations.
 First, the value of <span class="math notranslate nohighlight">\(V_a^b (f)\)</span> is nonnegative.
 And it is easy to prove that <span class="math notranslate nohighlight">\(V_a^b (f) = 0\)</span>
 if and only if <span class="math notranslate nohighlight">\(f\)</span> is constant on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
-<div class="proof theorem admonition" id="eq:3">
+<div class="proof theorem admonition" id="thm:1">
 <p class="admonition-title"><span class="caption-number">Theorem 2.1 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>, then
 so are their sum, difference and product.
 Moreover, we have the following inequalities:</p>
 <div class="math notranslate nohighlight" id="equation-eq-3">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[V_a^b (f \pm g) \leq V_a^b f + V_a^b g\]</div>
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[V_a^b (f \pm g) \leq V_a^b (f) + V_a^b (g)\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq-4">
 <span class="eqno">(2.4)<a class="headerlink" href="#equation-eq-4" title="Permalink to this equation">#</a></span>\[V_a^b (fg) \leq\sup_{x \in [a, b]}\abs{g(x)} V_a^b (f)
@@ -407,7 +417,7 @@ are of bounded variation, and satisfy <a class="reference internal" href="#equat
 Let <span class="math notranslate nohighlight">\(P\)</span> be an arbitrary partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
 On each subinterval, we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\abs{\Delta (f \pm g)_k}&amp; = \abs{f(x_{k+1}) \pm g(x_{k+1}) - [f(x_k) \pm g(x_k)]}\\&amp; = \abs{\Delta f_k \pm \Delta g_k}\\&amp; \leq\abs{\Delta f_k} + \abs{\Delta g_k}\end{split}\]</div>
+\[\begin{split}\abs{\Delta (f \pm g)_k}&amp; = \abs{f(x_{k}) \pm g(x_{k}) - [f(x_{k-1}) \pm g(x_{k-1})]}\\&amp; = \abs{\Delta f_k \pm \Delta g_k}\\&amp; \leq\abs{\Delta f_k} + \abs{\Delta g_k}\end{split}\]</div>
 <p>Taking the sum over <span class="math notranslate nohighlight">\(k\)</span>, we have</p>
 <div class="math notranslate nohighlight">
 \[\sum_{k}\abs{\Delta (f \pm g)_k}\leq\sum_{k}\abs{\Delta f_k} + \sum_k \abs{\Delta g_k}\leq V_a^b (f) + V_a^b (g)
@@ -419,7 +429,7 @@ are of bounded variation and satisfies <a class="reference internal" href="#equa
 Let <span class="math notranslate nohighlight">\(P\)</span> be an arbitrary partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
 On each subinterval, we have</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\abs{\Delta (fg)_k}&amp; = \abs{f(x_{k+1}) g(x_{k+1}) - f(x_k) g(x_k)}\\&amp; \text{Add and subtract the term $f(x_k)g(x_{k+1})$}\\&amp; = \abs{ g(x_{k+1})[ f(x_{k+1}) - f(x_k)] + f(x_k)[ g(x_{k+1}) - g(x_k) ] }\\&amp; \leq\abs{g(x_{k+1})}\abs{\Delta f_k} + \abs{f(x_k)}\abs{ \Delta g_k }\\&amp; \leq\sup_{x \in [a, b]}\abs{g(x)}\abs{\Delta f_k}
+\[\begin{split}\abs{\Delta (fg)_k}&amp; = \abs{f(x_{k}) g(x_{k}) - f(x_{k-1}) g(x_{k-1})}\\&amp; \text{Add and subtract the term $f(x_{k-1})g(x_{k})$}\\&amp; = \abs{ g(x_{k})[ f(x_{k}) - f(x_{k-1})] + f(x_{k-1})[ g(x_{k}) - g(x_{k-1}) ] }\\&amp; \leq\abs{g(x_{k})}\abs{\Delta f_k} + \abs{f(x_{k-1})}\abs{ \Delta g_k }\\&amp; \leq\sup_{x \in [a, b]}\abs{g(x)}\abs{\Delta f_k}
 + \sup_{x \in [a, b]}\abs{f(x)}\abs{\Delta g_k}\end{split}\]</div>
 <p>Summing over <span class="math notranslate nohighlight">\(k\)</span>, we have</p>
 <div class="math notranslate nohighlight">
@@ -430,6 +440,141 @@ On each subinterval, we have</p>
 <p>This shows the product <span class="math notranslate nohighlight">\(fg\)</span> is in fact of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>,
 and <a class="reference internal" href="#equation-eq-4">(2.4)</a> is satisfied.</p>
 </div>
+<p>We must exclude the quotients from the above theorem
+since the reciprocal <span class="math notranslate nohighlight">\(\frac{1}{f}\)</span> of <span class="math notranslate nohighlight">\(f\)</span> may not be of bounded variation
+even though <span class="math notranslate nohighlight">\(f\)</span> is.</p>
+<div class="proof example admonition" id="fig:3">
+<p class="admonition-title"><span class="caption-number">Example 2.4 </span></p>
+<section class="example-content" id="proof-content">
+<p>Consider function</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x) = \begin{cases}
+1-x, &amp; 0 \leq x &lt; 1     \\
+-x,  &amp; 1 \leq x  \leq 2
+\end{cases}\end{split}\]</div>
+<p>Function <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([0, 2]\)</span> since it is decreasing.
+Its reciprocal is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{1}{f(x)} = \begin{cases}
+\frac{1}{1-x}, &amp; 0 \leq x &lt; 1     \\
+-\frac{1}{x},  &amp; 1 \leq x  \leq 2
+\end{cases}\end{split}\]</div>
+<p>Figure <a class="reference internal" href="#fig-3"><span class="std std-numref">Fig. 2.3</span></a> depicts the graphs of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\frac{1}{f}\)</span>.</p>
+<figure class="align-default" id="fig-3">
+<img alt="../_images/reciprocal-not-of-bounded-variation.png" src="../_images/reciprocal-not-of-bounded-variation.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Left: <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation for it is decreasing. Right: <span class="math notranslate nohighlight">\(\frac{1}{f}\)</span> is not of bounded variation for it is unbounded.</span><a class="headerlink" href="#fig-3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Note that <span class="math notranslate nohighlight">\(\frac{1}{f}\)</span> goes to positive infinity when <span class="math notranslate nohighlight">\(x \to 1^-\)</span>.
+Therefore, by <a class="reference internal" href="Functions%20of%20Bounded%20Variation.html#prop:2">Proposition 2.1</a>, <span class="math notranslate nohighlight">\(\frac{1}{f}\)</span> is not of bounded variation on <span class="math notranslate nohighlight">\([0, 2]\)</span>
+since it is not bounded.</p>
+</section>
+</div><p>To extend <a class="reference internal" href="#thm:1">Theorem 2.1</a> to quotients,
+we need to required that <span class="math notranslate nohighlight">\(f\)</span> is bounded away from zero in the interval.</p>
+<div class="proof theorem admonition" id="theorem-3">
+<p class="admonition-title"><span class="caption-number">Theorem 2.2 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+And there exists <span class="math notranslate nohighlight">\(m &gt; 0\)</span> such that <span class="math notranslate nohighlight">\(f(x) \geq m\)</span> for all <span class="math notranslate nohighlight">\(x \in [a, b]\)</span>.
+Then the reciprocal of <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
+<div class="math notranslate nohighlight">
+\[V_a^b ( \frac{1}{f})
+\leq\frac{1}{m^2} V_a^b (f)
+\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(P\)</span> be any partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
+On each subinterval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\abs{\Delta (\frac{1}{f})_k}&amp; = \abs{\frac{1}{f(x_k)} - \frac{1}{f(x_{k-1})}}\\&amp; = \abs{\frac{\Delta f_k}{f(x_{k-1}) f(x_k)}}\\&amp; \leq\frac{\abs{ \Delta f_k }}{m^2}\end{split}\]</div>
+<p>Summing over <span class="math notranslate nohighlight">\(k\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\sum_k \abs{\Delta (\frac{1}{f})_k}\leq\frac{1}{m^2}\sum_k \abs{\Delta f_k}\leq\frac{1}{m^2} V_a^b (f)
+\]</div>
+<p>Therefore, <span class="math notranslate nohighlight">\(\frac{1}{f}\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+</div>
+<section id="additive-property-of-total-variation">
+<h2><span class="section-number">2.2.1. </span>Additive Property of Total Variation<a class="headerlink" href="#additive-property-of-total-variation" title="Permalink to this heading">#</a></h2>
+<p>Consider the following continuous function defined on <span class="math notranslate nohighlight">\([0, 3]\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}f(x) = \begin{cases}
+x,           &amp; 0 \leq x \leq 1 \\
+-(x-1)(x-3), &amp; 1 &lt; x \leq 3
+\end{cases}\end{split}\]</div>
+<p><a class="reference internal" href="#fig-4"><span class="std std-numref">Fig. 2.4</span></a> depicts its graph.</p>
+<figure class="align-default" id="fig-4">
+<img alt="../_images/additive-property-of-total-variation-example-1.png" src="../_images/additive-property-of-total-variation-example-1.png" />
+<figcaption>
+<p><span class="caption-number">Fig. 2.4 </span><span class="caption-text">Function <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([0, 1]\)</span> and <span class="math notranslate nohighlight">\([1, 3]\)</span>, separately.</span><a class="headerlink" href="#fig-4" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>We cannot prove <span class="math notranslate nohighlight">\(f\)</span> is of bounded of variation using
+<a class="reference internal" href="Functions%20of%20Bounded%20Variation.html#prop:3">Proposition 2.3</a> since its derivative does not exist at <span class="math notranslate nohighlight">\(x=1\)</span>.
+However, we note that <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation
+on <span class="math notranslate nohighlight">\([0, 1]\)</span> and <span class="math notranslate nohighlight">\([1, 3]\)</span>, separately.
+And intuitively, having only
+fintely many points at which <span class="math notranslate nohighlight">\(f^\prime\)</span> fail to exist
+should not
+prevent <span class="math notranslate nohighlight">\(f\)</span> from being of bounded of variation on the entire interval.
+This is indeed true, which is stated in the following theorem.</p>
+<div class="proof theorem admonition" id="eq:9">
+<p class="admonition-title"><span class="caption-number">Theorem 2.3 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>.
+Then <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on the subintervals <span class="math notranslate nohighlight">\([c, b]\)</span> and <span class="math notranslate nohighlight">\([a, c]\)</span>.
+Moreover, we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-9">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-eq-9" title="Permalink to this equation">#</a></span>\[V_a^b(f) = V_a^c(f) + V_c^b(f)\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We will first show that <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on each subinterval, and</p>
+<div class="math notranslate nohighlight" id="equation-eq-5">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-eq-5" title="Permalink to this equation">#</a></span>\[V_a^c(f) + V_c^b(f) \leq V_a^b(f)\]</div>
+<p>To make the proof clear,
+we introduce the notation <span class="math notranslate nohighlight">\(S(P) = \sum_k \abs{\Delta f_k}\)</span>
+where <span class="math notranslate nohighlight">\(P\)</span> is any partition of an arbitrary subinterval contained in <span class="math notranslate nohighlight">\([a, b]\)</span>.
+(Though it suffices to just consider the subintervals <span class="math notranslate nohighlight">\([a, b]\)</span>, <span class="math notranslate nohighlight">\([a, c]\)</span>
+and <span class="math notranslate nohighlight">\([c, b]\)</span> in this proof.)</p>
+<p>Let <span class="math notranslate nohighlight">\(P^\prime\)</span> and <span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span> be partitions of <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\([c, b]\)</span>,
+respectively,
+and let <span class="math notranslate nohighlight">\(P = P^\prime \cup P^{\prime\prime}\)</span>.
+Note that <span class="math notranslate nohighlight">\(P\)</span> is a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>,
+and by reviewing the notation of <span class="math notranslate nohighlight">\(S(P)\)</span>
+one may easily conclude that <span class="math notranslate nohighlight">\(S(P^\prime) + S(P^{\prime\prime}) = S(P)\)</span>.
+Since <span class="math notranslate nohighlight">\(f\)</span> is of bounded of variation on <span class="math notranslate nohighlight">\([a, b]\)</span>, we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-6">
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-eq-6" title="Permalink to this equation">#</a></span>\[S(P^\prime) + S(P^{\prime\prime}) = S(P) \leq V_a^b (f)\]</div>
+<p>The above inequality holds for any partition <span class="math notranslate nohighlight">\(p^\prime\)</span> of <span class="math notranslate nohighlight">\([a, c]\)</span>
+and any partition <span class="math notranslate nohighlight">\(p^{\prime\prime}\)</span> of <span class="math notranslate nohighlight">\([c, b]\)</span>.
+Therefore, by definition, <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\([c, b]\)</span>.
+Moreover, taking the supremum over <span class="math notranslate nohighlight">\(P^\prime\)</span> and then over <span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span>
+on both sides of <a class="reference internal" href="#equation-eq-6">(2.7)</a>, we will obtain extactly <a class="reference internal" href="#equation-eq-5">(2.6)</a>.</p>
+<p>To show the equality <a class="reference internal" href="#equation-eq-9">(2.5)</a>, we also need to show</p>
+<div class="math notranslate nohighlight" id="equation-eq-7">
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-eq-7" title="Permalink to this equation">#</a></span>\[V_a^c(f) + V_c^b(f) \geq V_a^b (f)\]</div>
+<p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
+There exists a partition <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>
+such that <span class="math notranslate nohighlight">\(S(P) &gt; V_a^b(f) - \varepsilon\)</span>.
+Let</p>
+<div class="math notranslate nohighlight">
+\[P^\prime = ( P \cap[a, c]) \cup\{c\}\quad\text{and}\quad
+P^{\prime\prime} = ( P \cap[c, b]) \cup\{c\}\]</div>
+<p>It is clear that <span class="math notranslate nohighlight">\(P^\prime\)</span> and <span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span>
+are partitions of <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\([c, b]\)</span>, respectively.
+If <span class="math notranslate nohighlight">\(c \in P\)</span>, then clearly <span class="math notranslate nohighlight">\(S(P) = S(P^\prime) + S(P^{\prime\prime})\)</span>.
+If <span class="math notranslate nohighlight">\(c \notin P\)</span>, supposing the intermediate
+subinterval of <span class="math notranslate nohighlight">\(P\)</span> containing <span class="math notranslate nohighlight">\(c\)</span> is <span class="math notranslate nohighlight">\([x_{j-1}, x_j]\)</span>,
+then we have</p>
+<div class="math notranslate nohighlight">
+\[\abs{\Delta f_j} = \abs{f(x_j) - f(x_{j-1})}\leq\abs{f(x_j) - f(c)} + \abs{f(c) -  f(x_j)}\]</div>
+<p>It then follows that <span class="math notranslate nohighlight">\(S(P) \leq S(P^\prime) + S(P^{\prime\prime})\)</span>.
+Hence, no matter if <span class="math notranslate nohighlight">\(c \in P\)</span> or <span class="math notranslate nohighlight">\(c \notin P\)</span>, we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-8">
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-eq-8" title="Permalink to this equation">#</a></span>\[V_a^c(f) + V_c^b(f) \geq S(P^\prime) + S(P^{\prime\prime}) \geq S(P) &gt; V_a^b(f) - \varepsilon\]</div>
+<p>Because <a class="reference internal" href="#equation-eq-8">(2.9)</a> holds for every <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, <a class="reference internal" href="#equation-eq-7">(2.8)</a> is proved.</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -487,7 +632,20 @@ and <a class="reference internal" href="#equation-eq-4">(2.4)</a> is satisfied.<
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additive-property-of-total-variation">2.2.1. Additive Property of Total Variation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

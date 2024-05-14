@@ -177,6 +177,7 @@ since $\sum \abs{\Delta (-f)_k} = \sum \abs{\Delta f_k}$.
 ````
 
 ````{prf:proposition} 
+:label: prop:3
 
 Suppose that $f$ is continuous on $[a, b]$ and the
 derivative $f^\prime$ exists in $(a, b)$.
