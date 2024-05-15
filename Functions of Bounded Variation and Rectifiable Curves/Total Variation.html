@@ -346,6 +346,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additive-property-of-total-variation">2.2.1. Additive Property of Total Variation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#total-variation-as-a-function-of-the-right-endpoint">2.2.2. Total Variation as a Function of the Right Endpoint</a></li>
 </ul>
             </nav>
         </div>
@@ -518,7 +519,7 @@ fintely many points at which <span class="math notranslate nohighlight">\(f^\pri
 should not
 prevent <span class="math notranslate nohighlight">\(f\)</span> from being of bounded of variation on the entire interval.
 This is indeed true, which is stated in the following theorem.</p>
-<div class="proof theorem admonition" id="eq:9">
+<div class="proof theorem admonition" id="thm:2">
 <p class="admonition-title"><span class="caption-number">Theorem 2.3 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>.
@@ -549,7 +550,7 @@ Since <span class="math notranslate nohighlight">\(f\)</span> is of bounded of v
 and any partition <span class="math notranslate nohighlight">\(p^{\prime\prime}\)</span> of <span class="math notranslate nohighlight">\([c, b]\)</span>.
 Therefore, by definition, <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\([c, b]\)</span>.
 Moreover, taking the supremum over <span class="math notranslate nohighlight">\(P^\prime\)</span> and then over <span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span>
-on both sides of <a class="reference internal" href="#equation-eq-6">(2.7)</a>, we will obtain extactly <a class="reference internal" href="#equation-eq-5">(2.6)</a>.</p>
+on both sides of <a class="reference internal" href="#equation-eq-6">(2.7)</a>, we will obtain exactly <a class="reference internal" href="#equation-eq-5">(2.6)</a>.</p>
 <p>To show the equality <a class="reference internal" href="#equation-eq-9">(2.5)</a>, we also need to show</p>
 <div class="math notranslate nohighlight" id="equation-eq-7">
 <span class="eqno">(2.8)<a class="headerlink" href="#equation-eq-7" title="Permalink to this equation">#</a></span>\[V_a^c(f) + V_c^b(f) \geq V_a^b (f)\]</div>
@@ -574,7 +575,116 @@ Hence, no matter if <span class="math notranslate nohighlight">\(c \in P\)</span
 <span class="eqno">(2.9)<a class="headerlink" href="#equation-eq-8" title="Permalink to this equation">#</a></span>\[V_a^c(f) + V_c^b(f) \geq S(P^\prime) + S(P^{\prime\prime}) \geq S(P) &gt; V_a^b(f) - \varepsilon\]</div>
 <p>Because <a class="reference internal" href="#equation-eq-8">(2.9)</a> holds for every <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, <a class="reference internal" href="#equation-eq-7">(2.8)</a> is proved.</p>
 </div>
+<p>Applying the above theorem, we can immediately conclude that <span class="math notranslate nohighlight">\(f\)</span>
+is also of bounded variation on any interval contained in <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<div class="proof corollary admonition" id="cor:1">
+<p class="admonition-title"><span class="caption-number">Corollary 2.1 </span></p>
+<section class="corollary-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+and <span class="math notranslate nohighlight">\([c, d] \subseteq[a, b]\)</span>,
+then <span class="math notranslate nohighlight">\(f\)</span> is also of bounded variation on <span class="math notranslate nohighlight">\([c, d]\)</span>.</p>
 </section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. With the given condition, we have <span class="math notranslate nohighlight">\(a \leq c &lt; d \leq b\)</span>.
+If <span class="math notranslate nohighlight">\(c = a\)</span> or <span class="math notranslate nohighlight">\(d = b\)</span>,
+then the assumption of this corollary reduces to the one in <a class="reference internal" href="#thm:2">Theorem 2.3</a>.</p>
+<p>Now, we assume that <span class="math notranslate nohighlight">\(a &lt; c &lt; d &lt;b\)</span>.
+Regarding <span class="math notranslate nohighlight">\(c\)</span> as an intermediate point in <span class="math notranslate nohighlight">\([a, b]\)</span>,
+<a class="reference internal" href="#thm:2">Theorem 2.3</a> shows that <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([c, b]\)</span>.
+Next, because <span class="math notranslate nohighlight">\(d \in (c, b)\)</span>, applying <a class="reference internal" href="#thm:2">Theorem 2.3</a> again,
+we conclude that <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([c, d]\)</span>.</p>
+</div>
+</section>
+<section id="total-variation-as-a-function-of-the-right-endpoint">
+<h2><span class="section-number">2.2.2. </span>Total Variation as a Function of the Right Endpoint<a class="headerlink" href="#total-variation-as-a-function-of-the-right-endpoint" title="Permalink to this heading">#</a></h2>
+<p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+For any <span class="math notranslate nohighlight">\(x \in (a, b)\)</span>.
+<a class="reference internal" href="#thm:2">Theorem 2.3</a> tells us that <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, x]\)</span>.
+Thereofore, we can regard <span class="math notranslate nohighlight">\(V_a^x (f)\)</span> as a function of <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is very similar to considering <span class="math notranslate nohighlight">\(\int_a^x f(t) \dif t\)</span> as a function
+of the upper limit of the integral, which
+again shows that our notation of the total variation rather helpful.</p>
+</div>
+<p>When <span class="math notranslate nohighlight">\(x = b\)</span>, it is just the total variation of <span class="math notranslate nohighlight">\(f\)</span> on the entire interval.
+We don’t have definition for <span class="math notranslate nohighlight">\(x = a\)</span> yet.
+But we can easily fix this by naturally defining <span class="math notranslate nohighlight">\(V_a^a (f) := 0\)</span>.
+Now, function <span class="math notranslate nohighlight">\(V_a^x(f)\)</span> is defined on the entire interval <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>In the next chapter, we will study the Riemann-Stieltjes integral, which
+is more generalized definition of the Rieman intergral.
+In the texts of the Riemann-Stieltjes integral <span class="math notranslate nohighlight">\(\int_a^b f \dif \alpha\)</span>,
+we often assume that the integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing
+(or slightly more generalized, monotonic)<span id="id1">[<a class="reference internal" href="../bibliography.html#id17" title="Walter Rudin. Principles of Mathematical Analysis. International Series in Pure and Applied Mathematics. McGraw-Hill, New York, 3d ed edition, 1976. ISBN 978-0-07-054235-8.">Rudin, 1976</a>]</span>.
+But we can extend the results easily to a even more
+general assumption that the integrator <span class="math notranslate nohighlight">\(\alpha\)</span>
+is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>The key of achieving this is that a function of bounded variation
+can be written as a difference of two increasing funcitons,
+and conversely, the difference of two increasing functions
+is of bounded variation
+(<a class="reference internal" href="#thm:4">Theorem 2.5</a>).
+And the following theorem tells us exactly how to
+find such increasing
+functions.</p>
+<div class="proof theorem admonition" id="thm:3">
+<p class="admonition-title"><span class="caption-number">Theorem 2.4 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Then</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(V_a^x(f)\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p></li>
+<li><p><span class="math notranslate nohighlight">\(V_a^x(f) - f(x)\)</span> is also increasing.</p></li>
+</ol>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(h &gt; 0\)</span>(and <span class="math notranslate nohighlight">\(x + h \leq b\)</span>), by <a class="reference internal" href="#thm:2">Theorem 2.3</a>, we have</p>
+<div class="math notranslate nohighlight">
+\[V_a^x (f) + V_x^{x+h}(f) = V_a^{x+h}(f)
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We have seen in <a class="reference internal" href="#cor:1">Corollary 2.1</a> that <span class="math notranslate nohighlight">\(V_x^{x+h}(f)\)</span> indeed exists.</p>
+</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight">
+\[V_a^{x+h}(f) - V_a^{x}(f) = V_x^{x+h}(f) \geq 0
+\]</div>
+<p>This shows <span class="math notranslate nohighlight">\(V_a^x(f)\)</span> is increasing.</p>
+<p>Next, we will prove <span class="math notranslate nohighlight">\(V_a^x(f) - f(x)\)</span> is creasing.
+To ease the notation, let <span class="math notranslate nohighlight">\(g(x) = V_a^x(f) - f(x)\)</span>.
+Similarly, suppose <span class="math notranslate nohighlight">\(h &gt; 0\)</span> and <span class="math notranslate nohighlight">\(x + h \leq b\)</span>,
+consider the difference</p>
+<div class="math notranslate nohighlight" id="equation-eq-10">
+<span class="eqno">(2.10)<a class="headerlink" href="#equation-eq-10" title="Permalink to this equation">#</a></span>\[g(x+h) - g(x)
+= V_x^{x+h}(f) + [f(x+h) - f(x)]\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Seeing the term <span class="math notranslate nohighlight">\(f(x+h) - f(x)\)</span> in the context of total variation,
+we immediately think of the partition <span class="math notranslate nohighlight">\(P = \{x, x+h\}\)</span> of <span class="math notranslate nohighlight">\([x, x+h]\)</span>.</p>
+</div>
+<p>We have</p>
+<div class="math notranslate nohighlight">
+\[\abs{f(x+h) - f(x)}\leq V_x^{x+h}(f)
+\]</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight">
+\[V_x^{x+h}(f) \geq\abs{f(x+h) - f(x)}\geq -[f(x+h) - f(x)]\]</div>
+<p>which further implies</p>
+<div class="math notranslate nohighlight" id="equation-eq-11">
+<span class="eqno">(2.11)<a class="headerlink" href="#equation-eq-11" title="Permalink to this equation">#</a></span>\[V_x^{x+h}(f) + [f(x+h) - f(x)]\geq 0\]</div>
+<p>Comparing <a class="reference internal" href="#equation-eq-10">(2.10)</a> and <a class="reference internal" href="#equation-eq-11">(2.11)</a>, we conclude
+that <span class="math notranslate nohighlight">\(g(x)\)</span> is indeed increasing.</p>
+</div>
+<div class="proof theorem admonition" id="thm:4">
+<p class="admonition-title"><span class="caption-number">Theorem 2.5 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+then <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation if and only if
+it can be expressed as a difference of two
+increasing functions.</p>
+</section>
+</div></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -642,6 +752,7 @@ Hence, no matter if <span class="math notranslate nohighlight">\(c \in P\)</span
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additive-property-of-total-variation">2.2.1. Additive Property of Total Variation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#total-variation-as-a-function-of-the-right-endpoint">2.2.2. Total Variation as a Function of the Right Endpoint</a></li>
 </ul>
   </nav></div>
 

@@ -240,7 +240,7 @@ This is indeed true, which is stated in the following theorem.
 
 
 ````{prf:theorem} 
-:label: eq:9
+:label: thm:2
 
 Let $f$ be of bounded variation on $[a, b]$, and $c \in (a, b)$.
 Then $f$ is of bounded variation on the subintervals $[c, b]$ and $[a, c]$.
@@ -291,7 +291,7 @@ The above inequality holds for any partition $p^\prime$ of $[a, c]$
 and any partition $p^{\prime\prime}$ of $[c, b]$.
 Therefore, by definition, $f$ is of bounded variation on $[a, c]$ and $[c, b]$.
 Moreover, taking the supremum over $P^\prime$ and then over $P^{\prime\prime}$
-on both sides of {eq}`eq:6`, we will obtain extactly {eq}`eq:5`.
+on both sides of {eq}`eq:6`, we will obtain exactly {eq}`eq:5`.
 
 To show the equality {eq}`eq:9`, we also need to show
 
@@ -334,5 +334,164 @@ V_a^c(f) + V_c^b(f) \geq S(P^\prime) + S(P^{\prime\prime}) \geq S(P) > V_a^b(f) 
 ```
 
 Because {eq}`eq:8` holds for every $\varepsilon > 0$, {eq}`eq:7` is proved.
+
+````
+
+Applying the above theorem, we can immediately conclude that $f$
+is also of bounded variation on any interval contained in $[a, b]$.
+
+
+````{prf:corollary} 
+:label: cor:1
+
+If $f$ is of bounded variation on $[a, b]$,
+and $[c, d] \subseteq[a, b]$,
+then $f$ is also of bounded variation on $[c, d]$.
+
+````
+
+````{prf:proof}
+
+With the given condition, we have $a \leq c < d \leq b$.
+If $c = a$ or $d = b$,
+then the assumption of this corollary reduces to the one in {prf:ref}`thm:2`.
+
+Now, we assume that $a < c < d <b$.
+Regarding $c$ as an intermediate point in $[a, b]$,
+{prf:ref}`thm:2` shows that $f$ is of bounded variation on $[c, b]$.
+Next, because $d \in (c, b)$, applying {prf:ref}`thm:2` again,
+we conclude that $f$ is of bounded variation on $[c, d]$.
+
+````
+## Total Variation as a Function of the Right Endpoint
+
+Suppose $f$ is of bounded variation on $[a, b]$.
+For any $x \in (a, b)$.
+{prf:ref}`thm:2` tells us that $f$ is of bounded variation on $[a, x]$.
+Thereofore, we can regard $V_a^x (f)$ as a function of $x$.
+
+
+:::{note}
+
+This is very similar to considering $\int_a^x f(t) \dif t$ as a function
+of the upper limit of the integral, which
+again shows that our notation of the total variation rather helpful.
+
+:::
+
+When $x = b$, it is just the total variation of $f$ on the entire interval.
+We don't have definition for $x = a$ yet.
+But we can easily fix this by naturally defining $V_a^a (f) := 0$.
+Now, function $V_a^x(f)$ is defined on the entire interval $[a, b]$.
+
+In the next chapter, we will study the Riemann-Stieltjes integral, which
+is more generalized definition of the Rieman intergral.
+In the texts of the Riemann-Stieltjes integral $\int_a^b f \dif \alpha$,
+we often assume that the integrator $\alpha$ is increasing
+(or slightly more generalized, monotonic){cite}`rudinPrinciplesMathematicalAnalysis1976`.
+But we can extend the results easily to a even more
+general assumption that the integrator $\alpha$
+is of bounded variation on $[a, b]$.
+
+The key of achieving this is that a function of bounded variation
+can be written as a difference of two increasing funcitons,
+and conversely, the difference of two increasing functions
+is of bounded variation
+({prf:ref}`thm:4`).
+And the following theorem tells us exactly how to
+find such increasing
+functions.
+
+
+````{prf:theorem} 
+:label: thm:3
+
+Let $f$ be of bounded variation on $[a, b]$.
+Then
+1. $V_a^x(f)$ is increasing on $[a, b]$, and
+2. $V_a^x(f) - f(x)$ is also increasing.
+
+````
+
+````{prf:proof}
+
+Let $h > 0$(and $x + h \leq b$), by {prf:ref}`thm:2`, we have
+
+```{math}
+
+V_a^x (f) + V_x^{x+h}(f) = V_a^{x+h}(f)
+
+```
+
+:::{note}
+
+We have seen in {prf:ref}`cor:1` that $V_x^{x+h}(f)$ indeed exists.
+
+:::
+
+It then follows that
+
+```{math}
+
+V_a^{x+h}(f) - V_a^{x}(f) = V_x^{x+h}(f) \geq 0
+
+```
+
+This shows $V_a^x(f)$ is increasing.
+
+Next, we will prove $V_a^x(f) - f(x)$ is creasing.
+To ease the notation, let $g(x) = V_a^x(f) - f(x)$.
+Similarly, suppose $h > 0$ and $x + h \leq b$,
+consider the difference
+
+```{math}
+:label: eq:10
+
+g(x+h) - g(x)
+= V_x^{x+h}(f) + [f(x+h) - f(x)]
+```
+
+:::{note}
+
+Seeing the term $f(x+h) - f(x)$ in the context of total variation,
+we immediately think of the partition $P = \{x, x+h\}$ of $[x, x+h]$.
+
+:::
+
+We have
+
+```{math}
+\abs{f(x+h) - f(x)}\leq V_x^{x+h}(f)
+
+```
+
+It then follows that
+
+```{math}
+
+V_x^{x+h}(f) \geq\abs{f(x+h) - f(x)}\geq -[f(x+h) - f(x)]
+```
+
+which further implies
+
+```{math}
+:label: eq:11
+
+V_x^{x+h}(f) + [f(x+h) - f(x)]\geq 0
+
+```
+
+Comparing {eq}`eq:10` and {eq}`eq:11`, we conclude
+that $g(x)$ is indeed increasing.
+
+````
+
+````{prf:theorem} 
+:label: thm:4
+
+Let $f$ be defined on $[a, b]$,
+then $f$ is of bounded variation if and only if
+it can be expressed as a difference of two
+increasing functions.
 
 ````
