@@ -485,6 +485,16 @@ Comparing {eq}`eq:10` and {eq}`eq:11`, we conclude
 that $g(x)$ is indeed increasing.
 
 ````
+## Characterization of Functions of Bounded Variation
+
+With the help of {prf:ref}`thm:3`, we can easily prove
+the following elegant theorem,
+which characterizes functions of bounded variation.
+It states that a function on $[a, b]$ is of bounded variation
+if and only if it can be written as a difference of two increasing functions.
+The difficult part of find such increasing functions
+is already handled by {prf:ref}`thm:3`.
+
 
 ````{prf:theorem} 
 :label: thm:4
@@ -495,3 +505,35 @@ it can be expressed as a difference of two
 increasing functions.
 
 ````
+
+````{prf:proof}
+
+We first suppose that $f$ is of bounded variation.
+Then {prf:ref}`thm:3` shows that $V_a^x(f)$
+and $V_a^x(f) - f(x)$ are both increasing on $[a, b]$.
+Since we can write
+
+```{math}
+
+f(x) = V_a^x(f) - [ V_a^x (f) - f(x)]
+```
+
+It is proved.
+
+Reversely, suppose that $f$ can be expressed as a difference of
+two increasing functions $g$ and $h$ on $[a, b]$, $f = g - h$.
+{prf:ref}`prop:1` tells us that $g$ and $h$ are of bounded variation
+since they are increasing functions.
+Then by {prf:ref}`thm:1`, we know that $g - h$ is also of bounded variation.
+This completes the proof.
+
+````
+
+:::{note}
+
+We can also make these two increasing functions strict.
+Suppose $f = g - h$.
+We can easily achieve this by defining $\tilde{g}(x) = g(x) + x$
+and $\tilde{h}(x) = h(x) + x$.
+
+:::

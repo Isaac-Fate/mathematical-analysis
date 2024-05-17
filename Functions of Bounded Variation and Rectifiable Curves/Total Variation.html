@@ -347,6 +347,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additive-property-of-total-variation">2.2.1. Additive Property of Total Variation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#total-variation-as-a-function-of-the-right-endpoint">2.2.2. Total Variation as a Function of the Right Endpoint</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#characterization-of-functions-of-bounded-variation">2.2.3. Characterization of Functions of Bounded Variation</a></li>
 </ul>
             </nav>
         </div>
@@ -676,6 +677,16 @@ we immediately think of the partition <span class="math notranslate nohighlight"
 <p>Comparing <a class="reference internal" href="#equation-eq-10">(2.10)</a> and <a class="reference internal" href="#equation-eq-11">(2.11)</a>, we conclude
 that <span class="math notranslate nohighlight">\(g(x)\)</span> is indeed increasing.</p>
 </div>
+</section>
+<section id="characterization-of-functions-of-bounded-variation">
+<h2><span class="section-number">2.2.3. </span>Characterization of Functions of Bounded Variation<a class="headerlink" href="#characterization-of-functions-of-bounded-variation" title="Permalink to this heading">#</a></h2>
+<p>With the help of <a class="reference internal" href="#thm:3">Theorem 2.4</a>, we can easily prove
+the following elegant theorem,
+which characterizes functions of bounded variation.
+It states that a function on <span class="math notranslate nohighlight">\([a, b]\)</span> is of bounded variation
+if and only if it can be written as a difference of two increasing functions.
+The difficult part of find such increasing functions
+is already handled by <a class="reference internal" href="#thm:3">Theorem 2.4</a>.</p>
 <div class="proof theorem admonition" id="thm:4">
 <p class="admonition-title"><span class="caption-number">Theorem 2.5 </span></p>
 <section class="theorem-content" id="proof-content">
@@ -684,7 +695,29 @@ then <span class="math notranslate nohighlight">\(f\)</span> is of bounded varia
 it can be expressed as a difference of two
 increasing functions.</p>
 </section>
-</div></section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We first suppose that <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation.
+Then <a class="reference internal" href="#thm:3">Theorem 2.4</a> shows that <span class="math notranslate nohighlight">\(V_a^x(f)\)</span>
+and <span class="math notranslate nohighlight">\(V_a^x(f) - f(x)\)</span> are both increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Since we can write</p>
+<div class="math notranslate nohighlight">
+\[f(x) = V_a^x(f) - [ V_a^x (f) - f(x)]\]</div>
+<p>It is proved.</p>
+<p>Reversely, suppose that <span class="math notranslate nohighlight">\(f\)</span> can be expressed as a difference of
+two increasing functions <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(h\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, <span class="math notranslate nohighlight">\(f = g - h\)</span>.
+<a class="reference internal" href="Functions%20of%20Bounded%20Variation.html#prop:1">Proposition 2.2</a> tells us that <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(h\)</span> are of bounded variation
+since they are increasing functions.
+Then by <a class="reference internal" href="#thm:1">Theorem 2.1</a>, we know that <span class="math notranslate nohighlight">\(g - h\)</span> is also of bounded variation.
+This completes the proof.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We can also make these two increasing functions strict.
+Suppose <span class="math notranslate nohighlight">\(f = g - h\)</span>.
+We can easily achieve this by defining <span class="math notranslate nohighlight">\(\tilde{g}(x) = g(x) + x\)</span>
+and <span class="math notranslate nohighlight">\(\tilde{h}(x) = h(x) + x\)</span>.</p>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -753,6 +786,7 @@ increasing functions.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additive-property-of-total-variation">2.2.1. Additive Property of Total Variation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#total-variation-as-a-function-of-the-right-endpoint">2.2.2. Total Variation as a Function of the Right Endpoint</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#characterization-of-functions-of-bounded-variation">2.2.3. Characterization of Functions of Bounded Variation</a></li>
 </ul>
   </nav></div>
 
