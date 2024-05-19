@@ -64,7 +64,7 @@ This book mainly follows the structure of \cite{apostolMathematicalAnalysisModer
 	is called a \textbf{partition}\index{partition of an interval} of $[a, b]$.
 
 	The interval $[x_{k-1}, x_k]$ is called the $k$-th subinterval of $P$,
-	and we oftern write $\Delta x_k = x_k - x_{k-1}$.
+	and we often write $\Delta x_k = x_k - x_{k-1}$.
 
 	The collection of all partitions of $[a, b]$ is denoted by $\CALP [a, b]$.
 \end{definition}
@@ -89,6 +89,25 @@ This book mainly follows the structure of \cite{apostolMathematicalAnalysisModer
 	is \textbf{of bounded variation}\index{functions of bounded variation}
 	on $[a, b]$.
 \end{definition}
+
+\begin{note}
+	A geometric interpretation of the sum $\sum_{k=1}^n \abs{\Delta f_k}$
+	is the total vertical length of several pieces of the function.
+	Imagine a point moving along the curve of the function from the
+	left to the right.
+	If the partition gets finer and finer,
+	then $\sum_{k=1}^n \abs{\Delta f_k}$
+	will become the length of its journey projected on the $y$-axis.
+	In fact, it is defined as the total variation as we shall introduce later.
+\end{note}
+
+Sometimes, it is convenient to denote the sum $\sum_{k=1}^n \abs{\Delta f_k}$
+by the symbol
+\begin{align*}
+	v(P, f) := \sum_{k=1}^n \abs{\Delta f_k}
+\end{align*}
+We do not use the capital letter $V$ here for it is reserved for
+the total variation.
 
 A simple observation is that a function of bounded variation is also bounded.
 
@@ -125,7 +144,7 @@ But a bounded function is not necessarily of bounded variation.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.6\textwidth]{figures/bounded-function-that-is-not-of-bounded-variation.png}
-		\caption{Graph of the function $f(x) = \cos\frac{1}{x}$ for $x \in (0, 1]$ and $f(0) = 0$. It is bounded on $[0, 1]$ but not of bounded variation for it varias rapidly near $x=0$.}
+		\caption{Graph of the function $f(x) = \cos\frac{1}{x}$ for $x \in (0, 1]$ and $f(0) = 0$. It is bounded on $[0, 1]$ but not of bounded variation for it varies rapidly near $x=0$.}
 		\label{fig:1}
 	\end{figure}
 	Clearly, this function is bounded by $1$.
@@ -228,7 +247,7 @@ if we do not impose that its derivative is bounded in the interior.
 
 	The fact that this function is not of bounded variation may be less intuitive
 	than the one given in Example~\ref{eg:1}.
-	The fucntion still varies rapidly near $x=0$.
+	The function still varies rapidly near $x=0$.
 	However, it does not range from $-1$ and $1$.
 	Instead, it damps out at $x=0$ and becomes $0$.
 	But we will show in the following that we can find a partition so fine that
@@ -256,12 +275,55 @@ Of course, the condition of the derivative being bounded is not necessary
 for a function to be of bounded variation.
 
 \begin{example}
-	The derivative of the squre root function $f(x) = \sqrt{x}$ in $(0, 1)$
+	The derivative of the square root function $f(x) = \sqrt{x}$ in $(0, 1)$
 	is $f^\prime(x) = \frac{1}{2\sqrt{x}}$,
 	which tends to infinity as $x \to 0$.
 	But $f$ is clearly of bounded variation on $[0, 1]$
 	by Proposition~\ref{prop:1} for it is increasing.
 \end{example}
+
+Let $P$ be a partition of $[a, b]$.
+If we make it finer by adding some intermediate points,
+then the sum of variations will increase.
+This result may be helpful in some proofs.
+
+\begin{proposition} \label{prop:4}
+	Let $f$ be defined on $[a, b]$,
+	and $P$ a partition of $[a, b]$.
+	If $P^\prime$ is finer than $P$, i.e., $P^\prime \supset P$,
+	then
+	\begin{align*}
+		v(P^\prime, f) \geq v(P, f)
+	\end{align*}
+\end{proposition}
+
+\begin{note}
+	Compare this to the upper and lower Darboux sums
+	when we introduce them in a later section.
+\end{note}
+
+\begin{proof}
+	It suffices to that prove for the case
+	where $P^\prime$ is one point finer than $P$.
+	Suppose $P = \{x_0, \dots, x_n\}$ and $P^\prime = P \sqcup \{c\}$.
+	We have
+	\begin{align*}
+		v(P^\prime, f)
+		 & = \abs{f(x_1) - f(x_0)} + \cdots
+		+ \abs{f(c) - f(x_{j-1})} + \abs{f(x_j) - f(c)} + \cdots
+		+ \abs{f(x_n) - f(x_{n-1})}            \\
+		 & \geq \abs{f(x_1) - f(x_0)} + \cdots
+		+ \abs{f(x_j) - f(x_{j-1})} + \cdots
+		+ \abs{f(x_n) - f(x_{n-1})}            \\
+		 & = v(P, f)
+	\end{align*}
+	\begin{note}
+		Note that $j$ may equal to $1$ or $n$ in the above notations.
+		We write down the summation in the expanded form
+		to make the proof easier to read.
+	\end{note}
+	This completes the proof.
+\end{proof}
 
 %------------------------------ 
 
@@ -273,6 +335,10 @@ on $[a, b]$ if, equivalently to what we stated, the set
 	\set{\sum_{k=1}^n \abs{\Delta f_k}}{P \in \CALP [a, b]}
 	\label{eq:2}
 \end{align}
+or with our shortened notation
+\begin{align*}
+	\set{v(P, f)}{P \in \CALP[a, b]}
+\end{align*}
 is bounded above.
 This set is of course nonempty for $\{a, b\}$ is clearly a partition.
 By the least upper bound property,
@@ -284,7 +350,9 @@ the set in \eqref{eq:2} has a supremum, which is referred to as
 	The total variation, denoted by $V_a^b (f)$,
 	of $f$ on $[a, b]$ is defined as
 	\begin{align*}
-		V_a^b (f) := \sup \set{\sum_{k=1}^n \abs{\Delta f_k}}{P \in \CALP [a, b]}
+		V_a^b (f)
+		:= \sup_{P \in \CALP [a, b]} v(P, f)
+		= \sup \set{\sum_{k=1}^n \abs{\Delta f_k}}{P \in \CALP [a, b]}
 	\end{align*}
 \end{definition}
 
@@ -306,6 +374,78 @@ First, the value of $V_a^b (f)$ is nonnegative.
 And it is easy to prove that $V_a^b (f) = 0$
 if and only if $f$ is constant on $[a, b]$.
 
+The simplest function of bounded variation
+(well, apart from a constant function) is
+monotonic function.
+It is natural to ask what is its total variation.
+With a little thought,
+one can imagine that
+it should be the absolute value of the difference at the endpoints.
+
+\begin{proposition}
+	If $f$ is a monotonic function on $[a, b]$,
+	then its total variation is the absolute value of the difference
+	of the function values at the endpoints, i.e.,
+	\begin{align*}
+		V_a^b(f) = \abs{f(a) - f(b)}
+	\end{align*}
+\end{proposition}
+
+\begin{proof}
+	We only prove the case that $f$ is increasing.
+	For any partition $P = \{x_0, \dots, x_n\}$ of $[a, b]$, we have
+	\begin{align*}
+		\sum_{k=1}^n \abs{f(x_k) - f(x_{k-1})}
+		= \sum_{k=1}^n [f(x_k) - f(x_{k-1})]
+		= f(b) - f(a)
+	\end{align*}
+	Note that the sum is independent of the partition.
+	Hence, the set in \eqref{eq:2} is just a constant.
+	Therefore, the total variation $V_a^b(f) = f(b) - f(a)$.
+\end{proof}
+
+When studying functions of bounded variation,
+in most cases, we are often interested in
+monotonic functions
+or continuous and differentiable functions.
+(Proposition~\ref{prop:1} and \ref{prop:3}.)
+
+\begin{note}
+	On one hand, we will see in Theorem~\ref{thm:4},
+	a function is of bounded variation if and only if
+	it can be expressed as a difference
+	of two increasing functions,
+	the need of studying monotonic functions arises naturally.
+
+	On the other hand, as we shall see in the chapter on Riemann-Stieltjes integrals,
+	we assume the integrator $\alpha$ is of bounded variation.
+	Since integrator $\alpha$ will be put after the
+	differential operator, $\dif \alpha$,
+	and we often hope to express it as $\alpha^\prime(t) \dif t$
+	to reduce the integral to Riemann integral
+	and compute its value,
+	we would like $\alpha$ to be differentiable.
+\end{note}
+
+But if we are curious about whether some piecewise functions
+are of bounded variation,
+then Proposition~\ref{prop:1} and \ref{prop:3} will not be enough.
+
+For example, consider the following function defined on $[0, 3]$:
+\begin{align*}
+	f(x) = \begin{cases}
+		       x,           & 0 \leq x \leq 1 \\
+		       -(x-1)(x-3), & 1 < x \leq 3
+	       \end{cases}
+\end{align*}
+Figure~\ref{fig:4} depicts its graph.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures/piecewise-function-of-bounded-variation.png}
+	\caption{Is this function of bounded variation on $[0, 3]$?}
+	\label{fig:4}
+\end{figure}
+
 \begin{theorem} \label{thm:1}
 	Let $f$ and $g$ be of bounded variation on $[a, b]$, then
 	so are their sum, difference and product.
@@ -326,8 +466,6 @@ if and only if $f$ is constant on $[a, b]$.
 	Note that the supremums in \eqref{eq:4} indeed exist
 	since the functions $f$ and $g$ are bounded due to Proposition~\ref{prop:2}.
 \end{note}
-
-
 
 \begin{proof}
 	We first show that the sum and the difference of two functions
@@ -439,30 +577,6 @@ we need to required that $f$ is bounded away from zero in the interval.
 
 \subsection{Additive Property of Total Variation}
 
-Consider the following continuous function defined on $[0, 3]$:
-\begin{align*}
-	f(x) = \begin{cases}
-		       x,           & 0 \leq x \leq 1 \\
-		       -(x-1)(x-3), & 1 < x \leq 3
-	       \end{cases}
-\end{align*}
-Figure~\ref{fig:4} depicts its graph.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\textwidth]{figures/additive-property-of-total-variation-example-1.png}
-	\caption{Function $f$ is of bounded variation on $[0, 1]$ and $[1, 3]$, separately.}
-	\label{fig:4}
-\end{figure}
-We cannot prove $f$ is of bounded of variation using
-Proposition~\ref{prop:3} since its derivative does not exist at $x=1$.
-However, we note that $f$ is of bounded variation
-on $[0, 1]$ and $[1, 3]$, separately.
-And intuitively, having only
-fintely many points at which $f^\prime$ fail to exist
-should not
-prevent $f$ from being of bounded of variation on the entire interval.
-This is indeed true, which is stated in the following theorem.
-
 \begin{theorem} \label{thm:2}
 	Let $f$ be of bounded variation on $[a, b]$, and $c \in (a, b)$.
 	Then $f$ is of bounded variation on the subintervals $[c, b]$ and $[a, c]$.
@@ -479,25 +593,20 @@ This is indeed true, which is stated in the following theorem.
 		V_a^c(f) + V_c^b(f) \leq V_a^b(f)
 		\label{eq:5}
 	\end{align}
-	To make the proof clear,
-	we introduce the notation $S(P) = \sum_k \abs{\Delta f_k}$
-	where $P$ is any partition of an arbitrary subinterval contained in $[a, b]$.
-	(Though it suffices to just consider the subintervals $[a, b]$, $[a, c]$
-	and $[c, b]$ in this proof.)
 
 	Let $P^\prime$ and $P^{\prime\prime}$ be partitions of $[a, c]$ and $[c, b]$,
 	respectively,
 	and let $P = P^\prime \cup P^{\prime\prime}$.
 	Note that $P$ is a partition of $[a, b]$,
-	and by reviewing the notation of $S(P)$
-	one may easily conclude that $S(P^\prime) + S(P^{\prime\prime}) = S(P)$.
+	and by reviewing the notation of $v(P, f)$
+	one may easily conclude that $v(P^\prime, f) + v(P^{\prime\prime}, f) = v(P, f)$.
 	Since $f$ is of bounded of variation on $[a, b]$, we have
 	\begin{align}
-		S(P^\prime) + S(P^{\prime\prime}) = S(P) \leq V_a^b (f)
+		v(P^\prime, f) + v(P^{\prime\prime}, f) = v(P, f) \leq V_a^b (f)
 		\label{eq:6}
 	\end{align}
 	The above inequality holds for any partition $p^\prime$ of $[a, c]$
-	and any partition $p^{\prime\prime}$ of $[c, b]$.
+	and any partition $P^{\prime\prime}$ of $[c, b]$.
 	Therefore, by definition, $f$ is of bounded variation on $[a, c]$ and $[c, b]$.
 	Moreover, taking the supremum over $P^\prime$ and then over $P^{\prime\prime}$
 	on both sides of \eqref{eq:6}, we will obtain exactly \eqref{eq:5}.
@@ -509,7 +618,7 @@ This is indeed true, which is stated in the following theorem.
 	\end{align}
 	Let $\varepsilon > 0$ be arbitrary.
 	There exists a partition $P$ of $[a, b]$
-	such that $S(P) > V_a^b(f) - \varepsilon$.
+	such that $v(P, f) > V_a^b(f) - \varepsilon$.
 	Let
 	\begin{align*}
 		P^\prime = ( P \cap [a, c] ) \cup \{c\} \quad \text{and} \quad
@@ -517,18 +626,11 @@ This is indeed true, which is stated in the following theorem.
 	\end{align*}
 	It is clear that $P^\prime$ and $P^{\prime\prime}$
 	are partitions of $[a, c]$ and $[c, b]$, respectively.
-	If $c \in P$, then clearly $S(P) = S(P^\prime) + S(P^{\prime\prime})$.
-	If $c \notin P$, supposing the intermediate
-	subinterval of $P$ containing $c$ is $[x_{j-1}, x_j]$,
-	then we have
-	\begin{align*}
-		\abs{\Delta f_j} = \abs{f(x_j) - f(x_{j-1})}
-		\leq \abs{f(x_j) - f(c)} + \abs{f(c) -  f(x_j)}
-	\end{align*}
-	It then follows that $S(P) \leq S(P^\prime) + S(P^{\prime\prime})$.
-	Hence, no matter if $c \in P$ or $c \notin P$, we have
+	By Proposition~\ref{prop:4}, we have
 	\begin{align}
-		V_a^c(f) + V_c^b(f) \geq S(P^\prime) + S(P^{\prime\prime}) \geq S(P) > V_a^b(f) - \varepsilon
+		V_a^c(f) + V_c^b(f) \geq v(P^\prime, f)
+		+ v(P^{\prime\prime}, f)
+		\geq v(P, f) > V_a^b(f) - \varepsilon
 		\label{eq:8}
 	\end{align}
 	Because \eqref{eq:8} holds for every $\varepsilon > 0$, \eqref{eq:7} is proved.
@@ -560,7 +662,7 @@ is also of bounded variation on any interval contained in $[a, b]$.
 Suppose $f$ is of bounded variation on $[a, b]$.
 For any $x \in (a, b)$.
 Theorem~\ref{thm:2} tells us that $f$ is of bounded variation on $[a, x]$.
-Thereofore, we can regard $V_a^x (f)$ as a function of $x$.
+Therefore, we can regard $V_a^x (f)$ as a function of $x$.
 
 \begin{note}
 	This is very similar to considering $\int_a^x f(t) \dif t$ as a function
@@ -574,7 +676,7 @@ But we can easily fix this by naturally defining $V_a^a (f) := 0$.
 Now, function $V_a^x(f)$ is defined on the entire interval $[a, b]$.
 
 In the next chapter, we will study the Riemann-Stieltjes integral, which
-is more generalized definition of the Rieman intergral.
+is more generalized definition of the Riemann integral.
 In the texts of the Riemann-Stieltjes integral $\int_a^b f \dif \alpha$,
 we often assume that the integrator $\alpha$ is increasing
 (or slightly more generalized, monotonic)\cite{rudinPrinciplesMathematicalAnalysis1976}.
@@ -583,7 +685,7 @@ general assumption that the integrator $\alpha$
 is of bounded variation on $[a, b]$.
 
 The key of achieving this is that a function of bounded variation
-can be written as a difference of two increasing funcitons,
+can be written as a difference of two increasing functions,
 and conversely, the difference of two increasing functions
 is of bounded variation
 (Theorem~\ref{thm:4}).
@@ -644,12 +746,50 @@ functions.
 	that $g(x)$ is indeed increasing.
 \end{proof}
 
+\subsection{Characterization of Functions of Bounded Variation}
+
+With the help of Theorem~\ref{thm:3}, we can easily prove
+the following elegant theorem,
+which characterizes functions of bounded variation.
+It states that a function on $[a, b]$ is of bounded variation
+if and only if it can be written as a difference of two increasing functions.
+The difficult part of find such increasing functions
+is already handled by Theorem~\ref{thm:3}.
+
 \begin{theorem} \label{thm:4}
 	Let $f$ be defined on $[a, b]$,
 	then $f$ is of bounded variation if and only if
 	it can be expressed as a difference of two
 	increasing functions.
 \end{theorem}
+
+\begin{proof}
+	We first suppose that $f$ is of bounded variation.
+	Then Theorem~\ref{thm:3} shows that $V_a^x(f)$
+	and $V_a^x(f) - f(x)$ are both increasing on $[a, b]$.
+	Since we can write
+	\begin{align*}
+		f(x) = V_a^x(f) - [ V_a^x (f) - f(x)]
+	\end{align*}
+	It is proved.
+
+	Reversely, suppose that $f$ can be expressed as a difference of
+	two increasing functions $g$ and $h$ on $[a, b]$, $f = g - h$.
+	Proposition~\ref{prop:1} tells us that $g$ and $h$ are of bounded variation
+	since they are increasing functions.
+	Then by Theorem~\ref{thm:1}, we know that $g - h$ is also of bounded variation.
+	This completes the proof.
+\end{proof}
+
+\begin{note}
+	We can also make these two increasing functions strict.
+	Suppose $f = g - h$.
+	We can easily achieve this by defining $\tilde{g}(x) = g(x) + x$
+	and $\tilde{h}(x) = h(x) + x$.
+\end{note}
+
+
+
 
 %==============================
 
