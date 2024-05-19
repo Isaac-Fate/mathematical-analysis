@@ -23,7 +23,7 @@ a = x_0 < x_1 < \cdots < x_n = b
 is called a  **partition**  of $[a, b]$.
 
 The interval $[x_{k-1}, x_k]$ is called the $k$-th subinterval of $P$,
-and we oftern write $\Delta x_k = x_k - x_{k-1}$.
+and we often write $\Delta x_k = x_k - x_{k-1}$.
 
 The collection of all partitions of $[a, b]$ is denoted by $\CALP[a, b]$.
 
@@ -58,6 +58,30 @@ is  **of bounded variation**
 on $[a, b]$.
 
 ````
+
+:::{note}
+
+A geometric interpretation of the sum $\sum_{k=1}^n \abs{\Delta f_k}$
+is the total vertical length of several pieces of the function.
+Imagine a point moving along the curve of the function from the
+left to the right.
+If the partition gets finer and finer,
+then $\sum_{k=1}^n \abs{\Delta f_k}$
+will become the length of its journey projected on the $y$-axis.
+In fact, it is defined as the total variation as we shall introduce later.
+
+:::
+
+Sometimes, it is convenient to denote the sum $\sum_{k=1}^n \abs{\Delta f_k}$
+by the symbol
+
+```{math}
+
+v(P, f) := \sum_{k=1}^n \abs{\Delta f_k}
+```
+
+We do not use the capital letter $V$ here for it is reserved for
+the total variation.
 
 A simple observation is that a function of bounded variation is also bounded.
 
@@ -110,7 +134,7 @@ Its graph is shown in {numref}`fig:1`.
 ---
 name: fig:1
 ---
-Graph of the function $f(x) = \cos\frac{1}{x}$ for $x \in (0, 1]$ and $f(0) = 0$. It is bounded on $[0, 1]$ but not of bounded variation for it varias rapidly near $x=0$.
+Graph of the function $f(x) = \cos\frac{1}{x}$ for $x \in (0, 1]$ and $f(0) = 0$. It is bounded on $[0, 1]$ but not of bounded variation for it varies rapidly near $x=0$.
 ```
 
 Clearly, this function is bounded by $1$.
@@ -247,7 +271,7 @@ Graph of the function $f(x) = x \cos \frac{\pi}{2x}$ for $x \in (0, 1]$ and $f(0
 
 The fact that this function is not of bounded variation may be less intuitive
 than the one given in {prf:ref}`eg:1`.
-The fucntion still varies rapidly near $x=0$.
+The function still varies rapidly near $x=0$.
 However, it does not range from $-1$ and $1$.
 Instead, it damps out at $x=0$ and becomes $0$.
 But we will show in the following that we can find a partition so fine that
@@ -281,10 +305,69 @@ for a function to be of bounded variation.
 
 ````{prf:example}
 
-The derivative of the squre root function $f(x) = \sqrt{x}$ in $(0, 1)$
+The derivative of the square root function $f(x) = \sqrt{x}$ in $(0, 1)$
 is $f^\prime(x) = \frac{1}{2\sqrt{x}}$,
 which tends to infinity as $x \to 0$.
 But $f$ is clearly of bounded variation on $[0, 1]$
 by {prf:ref}`prop:1` for it is increasing.
+
+````
+
+Let $P$ be a partition of $[a, b]$.
+If we make it finer by adding some intermediate points,
+then the sum of variations will increase.
+This result may be helpful in some proofs.
+
+
+````{prf:proposition} 
+:label: prop:4
+
+Let $f$ be defined on $[a, b]$,
+and $P$ a partition of $[a, b]$.
+If $P^\prime$ is finer than $P$, i.e., $P^\prime \supset P$,
+then
+
+```{math}
+
+v(P^\prime, f) \geq v(P, f)
+
+```
+
+````
+
+:::{note}
+
+Compare this to the upper and lower Darboux sums
+when we introduce them in a later section.
+
+:::
+
+````{prf:proof}
+
+It suffices to that prove for the case
+where $P^\prime$ is one point finer than $P$.
+Suppose $P = \{x_0, \dots, x_n\}$ and $P^\prime = P \sqcup \{c\}$.
+We have
+
+```{math}
+
+v(P^\prime, f)
+& = \abs{f(x_1) - f(x_0)} + \cdots
++ \abs{f(c) - f(x_{j-1})} + \abs{f(x_j) - f(c)} + \cdots
++ \abs{f(x_n) - f(x_{n-1})}\\& \geq\abs{f(x_1) - f(x_0)} + \cdots
++ \abs{f(x_j) - f(x_{j-1})} + \cdots
++ \abs{f(x_n) - f(x_{n-1})}\\& = v(P, f)
+
+```
+
+:::{note}
+
+Note that $j$ may equal to $1$ or $n$ in the above notations.
+We write down the summation in the expanded form
+to make the proof easier to read.
+
+:::
+
+This completes the proof.
 
 ````

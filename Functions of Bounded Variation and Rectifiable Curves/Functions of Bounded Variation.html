@@ -362,7 +362,7 @@ A set of points</p>
 \]</div>
 <p>is called a  <strong>partition</strong>  of <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 <p>The interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span> is called the <span class="math notranslate nohighlight">\(k\)</span>-th subinterval of <span class="math notranslate nohighlight">\(P\)</span>,
-and we oftern write <span class="math notranslate nohighlight">\(\Delta x_k = x_k - x_{k-1}\)</span>.</p>
+and we often write <span class="math notranslate nohighlight">\(\Delta x_k = x_k - x_{k-1}\)</span>.</p>
 <p>The collection of all partitions of <span class="math notranslate nohighlight">\([a, b]\)</span> is denoted by <span class="math notranslate nohighlight">\(\CALP[a, b]\)</span>.</p>
 </section>
 </div><div class="admonition note">
@@ -385,7 +385,24 @@ If there exists a positive number <span class="math notranslate nohighlight">\(M
 is  <strong>of bounded variation</strong>
 on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
-</div><p>A simple observation is that a function of bounded variation is also bounded.</p>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A geometric interpretation of the sum <span class="math notranslate nohighlight">\(\sum_{k=1}^n \abs{\Delta f_k}\)</span>
+is the total vertical length of several pieces of the function.
+Imagine a point moving along the curve of the function from the
+left to the right.
+If the partition gets finer and finer,
+then <span class="math notranslate nohighlight">\(\sum_{k=1}^n \abs{\Delta f_k}\)</span>
+will become the length of its journey projected on the <span class="math notranslate nohighlight">\(y\)</span>-axis.
+In fact, it is defined as the total variation as we shall introduce later.</p>
+</div>
+<p>Sometimes, it is convenient to denote the sum <span class="math notranslate nohighlight">\(\sum_{k=1}^n \abs{\Delta f_k}\)</span>
+by the symbol</p>
+<div class="math notranslate nohighlight">
+\[v(P, f) := \sum_{k=1}^n \abs{\Delta f_k}\]</div>
+<p>We do not use the capital letter <span class="math notranslate nohighlight">\(V\)</span> here for it is reserved for
+the total variation.</p>
+<p>A simple observation is that a function of bounded variation is also bounded.</p>
 <div class="proof proposition admonition" id="prop:2">
 <p class="admonition-title"><span class="caption-number">Proposition 2.1 </span></p>
 <section class="proposition-content" id="proof-content">
@@ -419,7 +436,7 @@ Therefore, <span class="math notranslate nohighlight">\(f\)</span> is indeed bou
 <figure class="align-default" id="fig-1">
 <img alt="../_images/bounded-function-that-is-not-of-bounded-variation.png" src="../_images/bounded-function-that-is-not-of-bounded-variation.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Graph of the function <span class="math notranslate nohighlight">\(f(x) = \cos\frac{1}{x}\)</span> for <span class="math notranslate nohighlight">\(x \in (0, 1]\)</span> and <span class="math notranslate nohighlight">\(f(0) = 0\)</span>. It is bounded on <span class="math notranslate nohighlight">\([0, 1]\)</span> but not of bounded variation for it varias rapidly near <span class="math notranslate nohighlight">\(x=0\)</span>.</span><a class="headerlink" href="#fig-1" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Graph of the function <span class="math notranslate nohighlight">\(f(x) = \cos\frac{1}{x}\)</span> for <span class="math notranslate nohighlight">\(x \in (0, 1]\)</span> and <span class="math notranslate nohighlight">\(f(0) = 0\)</span>. It is bounded on <span class="math notranslate nohighlight">\([0, 1]\)</span> but not of bounded variation for it varies rapidly near <span class="math notranslate nohighlight">\(x=0\)</span>.</span><a class="headerlink" href="#fig-1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Clearly, this function is bounded by <span class="math notranslate nohighlight">\(1\)</span>.
@@ -512,7 +529,7 @@ x \cos \frac{\pi}{2x}, &amp; x \in (0, 1] \\
 </figure>
 <p>The fact that this function is not of bounded variation may be less intuitive
 than the one given in <a class="reference internal" href="#eg:1">Example 2.1</a>.
-The fucntion still varies rapidly near <span class="math notranslate nohighlight">\(x=0\)</span>.
+The function still varies rapidly near <span class="math notranslate nohighlight">\(x=0\)</span>.
 However, it does not range from <span class="math notranslate nohighlight">\(-1\)</span> and <span class="math notranslate nohighlight">\(1\)</span>.
 Instead, it damps out at <span class="math notranslate nohighlight">\(x=0\)</span> and becomes <span class="math notranslate nohighlight">\(0\)</span>.
 But we will show in the following that we can find a partition so fine that
@@ -535,13 +552,54 @@ for a function to be of bounded variation.</p>
 <div class="proof example admonition" id="example-7">
 <p class="admonition-title"><span class="caption-number">Example 2.3 </span></p>
 <section class="example-content" id="proof-content">
-<p>The derivative of the squre root function <span class="math notranslate nohighlight">\(f(x) = \sqrt{x}\)</span> in <span class="math notranslate nohighlight">\((0, 1)\)</span>
+<p>The derivative of the square root function <span class="math notranslate nohighlight">\(f(x) = \sqrt{x}\)</span> in <span class="math notranslate nohighlight">\((0, 1)\)</span>
 is <span class="math notranslate nohighlight">\(f^\prime(x) = \frac{1}{2\sqrt{x}}\)</span>,
 which tends to infinity as <span class="math notranslate nohighlight">\(x \to 0\)</span>.
 But <span class="math notranslate nohighlight">\(f\)</span> is clearly of bounded variation on <span class="math notranslate nohighlight">\([0, 1]\)</span>
 by <a class="reference internal" href="#prop:1">Proposition 2.2</a> for it is increasing.</p>
 </section>
-</div></section>
+</div><p>Let <span class="math notranslate nohighlight">\(P\)</span> be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
+If we make it finer by adding some intermediate points,
+then the sum of variations will increase.
+This result may be helpful in some proofs.</p>
+<div class="proof proposition admonition" id="prop:4">
+<p class="admonition-title"><span class="caption-number">Proposition 2.4 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be defined on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+and <span class="math notranslate nohighlight">\(P\)</span> a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
+If <span class="math notranslate nohighlight">\(P^\prime\)</span> is finer than <span class="math notranslate nohighlight">\(P\)</span>, i.e., <span class="math notranslate nohighlight">\(P^\prime \supset P\)</span>,
+then</p>
+<div class="math notranslate nohighlight">
+\[v(P^\prime, f) \geq v(P, f)
+\]</div>
+</section>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Compare this to the upper and lower Darboux sums
+when we introduce them in a later section.</p>
+</div>
+<div class="proof admonition" id="proof">
+<p>Proof. It suffices to that prove for the case
+where <span class="math notranslate nohighlight">\(P^\prime\)</span> is one point finer than <span class="math notranslate nohighlight">\(P\)</span>.
+Suppose <span class="math notranslate nohighlight">\(P = \{x_0, \dots, x_n\}\)</span> and <span class="math notranslate nohighlight">\(P^\prime = P \sqcup \{c\}\)</span>.
+We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v(P^\prime, f)
+&amp; = \abs{f(x_1) - f(x_0)} + \cdots
++ \abs{f(c) - f(x_{j-1})} + \abs{f(x_j) - f(c)} + \cdots
++ \abs{f(x_n) - f(x_{n-1})}\\&amp; \geq\abs{f(x_1) - f(x_0)} + \cdots
++ \abs{f(x_j) - f(x_{j-1})} + \cdots
++ \abs{f(x_n) - f(x_{n-1})}\\&amp; = v(P, f)
+\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that <span class="math notranslate nohighlight">\(j\)</span> may equal to <span class="math notranslate nohighlight">\(1\)</span> or <span class="math notranslate nohighlight">\(n\)</span> in the above notations.
+We write down the summation in the expanded form
+to make the proof easier to read.</p>
+</div>
+<p>This completes the proof.</p>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
