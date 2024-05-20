@@ -465,6 +465,76 @@ x,           &amp; 0 \leq x \leq 1 \\
 <p><span class="caption-number">Fig. 2.3 </span><span class="caption-text">Is this function of bounded variation on <span class="math notranslate nohighlight">\([0, 3]\)</span>?</span><a class="headerlink" href="#fig-4" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p>Intuitively, the function in <a class="reference internal" href="#fig-4"><span class="std std-numref">Fig. 2.3</span></a> should be of bounded variation.
+But we must be careful about the jump point,
+which we have not covered in the previous discussion.</p>
+<div class="proof proposition admonition" id="proposition-2">
+<p class="admonition-title"><span class="caption-number">Proposition 2.6 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+and is continuous at <span class="math notranslate nohighlight">\(x = a\)</span>.
+If function <span class="math notranslate nohighlight">\(g\)</span> is defined by revising the value at <span class="math notranslate nohighlight">\(x=a\)</span>, i.e.,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}g(x) = \begin{cases}
+f(x), &amp; x \in (a, b] \\
+y,    &amp; x = a
+\end{cases}\end{split}\]</div>
+<p>then <span class="math notranslate nohighlight">\(g\)</span> is still of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+And its total variation is given by</p>
+<div class="math notranslate nohighlight">
+\[V_a^b(g) = V_a^b(f) + \abs{y - f(a)}\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(P\)</span> be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
+We have</p>
+<div class="math notranslate nohighlight" id="equation-eq-12">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-12" title="Permalink to this equation">#</a></span>\[\begin{split}v(P, g) &amp; = \abs{g(x_1) - g(a)} + \cdots\abs{g(x_n) - g(x_{n-1})}\nonumber\\&amp; = \abs{f(x_1) - y} + \cdots\abs{f(x_n) - f(x_{n-1})}\nonumber\\&amp; \leq\left[\abs{y -  f(a)} + \abs{f(x_1) - f(a)}\right] + \cdots\abs{f(x_n) - f(x_{n-1})}\nonumber\\&amp; = \abs{y - f(a)} + v(P, f) \nonumber\\&amp; \leq\abs{y - f(a)} + V_a^b(f)\end{split}\]</div>
+<p>This shows that <span class="math notranslate nohighlight">\(g\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>Now, we compute its total variation.
+Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
+Because <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x=a\)</span>,
+there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\abs{x - a} &lt; \delta\implies\abs{f(x) - f(a)} &lt; \varepsilon/4
+\]</div>
+<p>By the definition of total variation and <a class="reference internal" href="Functions%20of%20Bounded%20Variation.html#prop:4">Proposition 2.4</a>,
+there exists a fine enough partition <span class="math notranslate nohighlight">\(P\)</span>
+such that the minimum length of the subinterval is less than <span class="math notranslate nohighlight">\(\delta\)</span>, and</p>
+<div class="math notranslate nohighlight">
+\[v(P, f) &gt; V_a^b(f) - \varepsilon/2
+\]</div>
+<p>On the subinterval <span class="math notranslate nohighlight">\([a=x_0, x_1]\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\abs{\Delta g_1}&amp; = \abs{g(x_1) - g(x_0)}\\&amp; = \abs{f(x_1) - y}\\&amp; \geq\abs{f(a) - y} - \abs{f(x_1) - f(a)}\\&amp; = \abs{f(a) - y} + \abs{f(x_1) - f(a)} -
+2\abs{f(x_1) - f(a)}\\&amp; \text{Note that $\abs{x_1 - x_0} &lt; \delta$, hence we may estimate the last term as follows}\\&amp; &gt; \abs{f(a) - y} + \abs{f(x_1) - f(a)} - 2 \cdot\varepsilon/4 \\&amp; &gt; \abs{f(a) - y} + \abs{f(x_1) - f(a)} - \varepsilon/2
+\end{split}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When reaching</p>
+<div class="math notranslate nohighlight">
+\[\abs{\Delta g_1}\geq\abs{f(a) - y} - \abs{f(x_1) - f(a)}\]</div>
+<p>in the above derivation,
+one may be worried that
+it is not proceeding towards the goal
+since we have a minus sign before <span class="math notranslate nohighlight">\(\abs{f(x_1) - f(a)}\)</span>.
+But since this term <span class="math notranslate nohighlight">\(\abs{f(x_1) - f(a)}\)</span> can be made arbitrarily small,
+we can always add it (to construct the sum <span class="math notranslate nohighlight">\(v(P, f)\)</span>)
+and then subtract it,
+and make the trailing negative term <span class="math notranslate nohighlight">\(-2\abs{f(x_1) - f(a)}\)</span> negligible,
+as what we did above.</p>
+</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight">
+\[v(P, g) &gt; \abs{f(a) - y} + v(P, f) - \varepsilon/2
+&gt; \abs{f(a) - y} + V_a^b(f) - \varepsilon\]</div>
+<p>Therefore, we have</p>
+<div class="math notranslate nohighlight">
+\[V_a^b(g) \geq v(P, g) \geq\abs{f(a) - y} + V_a^b(f)
+\]</div>
+<p>Compare this to <a class="reference internal" href="#equation-eq-12">(2.3)</a>, we may conclude</p>
+<div class="math notranslate nohighlight">
+\[V_a^b(g) = V_a^b(f) + \abs{f(a) - y}\]</div>
+</div>
 <div class="proof theorem admonition" id="thm:1">
 <p class="admonition-title"><span class="caption-number">Theorem 2.1 </span></p>
 <section class="theorem-content" id="proof-content">
@@ -472,20 +542,20 @@ x,           &amp; 0 \leq x \leq 1 \\
 so are their sum, difference and product.
 Moreover, we have the following inequalities:</p>
 <div class="math notranslate nohighlight" id="equation-eq-3">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[V_a^b (f \pm g) \leq V_a^b (f) + V_a^b (g)\]</div>
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-eq-3" title="Permalink to this equation">#</a></span>\[V_a^b (f \pm g) \leq V_a^b (f) + V_a^b (g)\]</div>
 <p>and</p>
 <div class="math notranslate nohighlight" id="equation-eq-4">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-eq-4" title="Permalink to this equation">#</a></span>\[V_a^b (fg) \leq\sup_{x \in [a, b]}\abs{g(x)} V_a^b (f)
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-eq-4" title="Permalink to this equation">#</a></span>\[V_a^b (fg) \leq\sup_{x \in [a, b]}\abs{g(x)} V_a^b (f)
 + \sup_{x \in [a, b]}\abs{f(x)} V_a^b (g)\]</div>
 </section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note that the supremums in <a class="reference internal" href="#equation-eq-4">(2.4)</a> indeed exist
+<p>Note that the supremums in <a class="reference internal" href="#equation-eq-4">(2.5)</a> indeed exist
 since the functions <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are bounded due to <a class="reference internal" href="Functions%20of%20Bounded%20Variation.html#prop:2">Proposition 2.1</a>.</p>
 </div>
 <div class="proof admonition" id="proof">
 <p>Proof. We first show that the sum and the difference of two functions
-are of bounded variation, and satisfy <a class="reference internal" href="#equation-eq-3">(2.3)</a>.
+are of bounded variation, and satisfy <a class="reference internal" href="#equation-eq-3">(2.4)</a>.
 Let <span class="math notranslate nohighlight">\(P\)</span> be an arbitrary partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
 On each subinterval, we have</p>
 <div class="math notranslate nohighlight">
@@ -495,9 +565,9 @@ On each subinterval, we have</p>
 \[\sum_{k}\abs{\Delta (f \pm g)_k}\leq\sum_{k}\abs{\Delta f_k} + \sum_k \abs{\Delta g_k}\leq V_a^b (f) + V_a^b (g)
 \]</div>
 <p>The above inequality shows that <span class="math notranslate nohighlight">\(f \pm g\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>,
-and <a class="reference internal" href="#equation-eq-3">(2.3)</a> is satisfied.</p>
+and <a class="reference internal" href="#equation-eq-3">(2.4)</a> is satisfied.</p>
 <p>In the following, we show that the product of two Functions
-are of bounded variation and satisfies <a class="reference internal" href="#equation-eq-4">(2.4)</a>.
+are of bounded variation and satisfies <a class="reference internal" href="#equation-eq-4">(2.5)</a>.
 Let <span class="math notranslate nohighlight">\(P\)</span> be an arbitrary partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
 On each subinterval, we have</p>
 <div class="math notranslate nohighlight">
@@ -510,7 +580,7 @@ On each subinterval, we have</p>
 + \sup_{x \in [a, b]}\abs{f(x)} V_a^b (g)
 \end{split}\]</div>
 <p>This shows the product <span class="math notranslate nohighlight">\(fg\)</span> is in fact of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>,
-and <a class="reference internal" href="#equation-eq-4">(2.4)</a> is satisfied.</p>
+and <a class="reference internal" href="#equation-eq-4">(2.5)</a> is satisfied.</p>
 </div>
 <p>We must exclude the quotients from the above theorem
 since the reciprocal <span class="math notranslate nohighlight">\(\frac{1}{f}\)</span> of <span class="math notranslate nohighlight">\(f\)</span> may not be of bounded variation
@@ -544,7 +614,7 @@ since it is not bounded.</p>
 </section>
 </div><p>To extend <a class="reference internal" href="#thm:1">Theorem 2.1</a> to quotients,
 we need to required that <span class="math notranslate nohighlight">\(f\)</span> is bounded away from zero in the interval.</p>
-<div class="proof theorem admonition" id="theorem-4">
+<div class="proof theorem admonition" id="theorem-5">
 <p class="admonition-title"><span class="caption-number">Theorem 2.2 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Let <span class="math notranslate nohighlight">\(f\)</span> be of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
@@ -575,12 +645,12 @@ On each subinterval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\
 Then <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on the subintervals <span class="math notranslate nohighlight">\([c, b]\)</span> and <span class="math notranslate nohighlight">\([a, c]\)</span>.
 Moreover, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-9">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-eq-9" title="Permalink to this equation">#</a></span>\[V_a^b(f) = V_a^c(f) + V_c^b(f)\]</div>
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-eq-9" title="Permalink to this equation">#</a></span>\[V_a^b(f) = V_a^c(f) + V_c^b(f)\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. We will first show that <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on each subinterval, and</p>
 <div class="math notranslate nohighlight" id="equation-eq-5">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-eq-5" title="Permalink to this equation">#</a></span>\[V_a^c(f) + V_c^b(f) \leq V_a^b(f)\]</div>
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-eq-5" title="Permalink to this equation">#</a></span>\[V_a^c(f) + V_c^b(f) \leq V_a^b(f)\]</div>
 <p>Let <span class="math notranslate nohighlight">\(P^\prime\)</span> and <span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span> be partitions of <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\([c, b]\)</span>,
 respectively,
 and let <span class="math notranslate nohighlight">\(P = P^\prime \cup P^{\prime\prime}\)</span>.
@@ -589,15 +659,15 @@ and by reviewing the notation of <span class="math notranslate nohighlight">\(v(
 one may easily conclude that <span class="math notranslate nohighlight">\(v(P^\prime, f) + v(P^{\prime\prime}, f) = v(P, f)\)</span>.
 Since <span class="math notranslate nohighlight">\(f\)</span> is of bounded of variation on <span class="math notranslate nohighlight">\([a, b]\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-6">
-<span class="eqno">(2.7)<a class="headerlink" href="#equation-eq-6" title="Permalink to this equation">#</a></span>\[v(P^\prime, f) + v(P^{\prime\prime}, f) = v(P, f) \leq V_a^b (f)\]</div>
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-eq-6" title="Permalink to this equation">#</a></span>\[v(P^\prime, f) + v(P^{\prime\prime}, f) = v(P, f) \leq V_a^b (f)\]</div>
 <p>The above inequality holds for any partition <span class="math notranslate nohighlight">\(p^\prime\)</span> of <span class="math notranslate nohighlight">\([a, c]\)</span>
 and any partition <span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span> of <span class="math notranslate nohighlight">\([c, b]\)</span>.
 Therefore, by definition, <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\([c, b]\)</span>.
 Moreover, taking the supremum over <span class="math notranslate nohighlight">\(P^\prime\)</span> and then over <span class="math notranslate nohighlight">\(P^{\prime\prime}\)</span>
-on both sides of <a class="reference internal" href="#equation-eq-6">(2.7)</a>, we will obtain exactly <a class="reference internal" href="#equation-eq-5">(2.6)</a>.</p>
-<p>To show the equality <a class="reference internal" href="#equation-eq-9">(2.5)</a>, we also need to show</p>
+on both sides of <a class="reference internal" href="#equation-eq-6">(2.8)</a>, we will obtain exactly <a class="reference internal" href="#equation-eq-5">(2.7)</a>.</p>
+<p>To show the equality <a class="reference internal" href="#equation-eq-9">(2.6)</a>, we also need to show</p>
 <div class="math notranslate nohighlight" id="equation-eq-7">
-<span class="eqno">(2.8)<a class="headerlink" href="#equation-eq-7" title="Permalink to this equation">#</a></span>\[V_a^c(f) + V_c^b(f) \geq V_a^b (f)\]</div>
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-eq-7" title="Permalink to this equation">#</a></span>\[V_a^c(f) + V_c^b(f) \geq V_a^b (f)\]</div>
 <p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
 There exists a partition <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>
 such that <span class="math notranslate nohighlight">\(v(P, f) &gt; V_a^b(f) - \varepsilon\)</span>.
@@ -609,10 +679,10 @@ P^{\prime\prime} = ( P \cap[c, b]) \cup\{c\}\]</div>
 are partitions of <span class="math notranslate nohighlight">\([a, c]\)</span> and <span class="math notranslate nohighlight">\([c, b]\)</span>, respectively.
 By <a class="reference internal" href="Functions%20of%20Bounded%20Variation.html#prop:4">Proposition 2.4</a>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-8">
-<span class="eqno">(2.9)<a class="headerlink" href="#equation-eq-8" title="Permalink to this equation">#</a></span>\[V_a^c(f) + V_c^b(f) \geq v(P^\prime, f)
+<span class="eqno">(2.10)<a class="headerlink" href="#equation-eq-8" title="Permalink to this equation">#</a></span>\[V_a^c(f) + V_c^b(f) \geq v(P^\prime, f)
 + v(P^{\prime\prime}, f)
 \geq v(P, f) &gt; V_a^b(f) - \varepsilon\]</div>
-<p>Because <a class="reference internal" href="#equation-eq-8">(2.9)</a> holds for every <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, <a class="reference internal" href="#equation-eq-7">(2.8)</a> is proved.</p>
+<p>Because <a class="reference internal" href="#equation-eq-8">(2.10)</a> holds for every <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>, <a class="reference internal" href="#equation-eq-7">(2.9)</a> is proved.</p>
 </div>
 <p>Applying the above theorem, we can immediately conclude that <span class="math notranslate nohighlight">\(f\)</span>
 is also of bounded variation on any interval contained in <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
@@ -695,7 +765,7 @@ To ease the notation, let <span class="math notranslate nohighlight">\(g(x) = V_
 Similarly, suppose <span class="math notranslate nohighlight">\(h &gt; 0\)</span> and <span class="math notranslate nohighlight">\(x + h \leq b\)</span>,
 consider the difference</p>
 <div class="math notranslate nohighlight" id="equation-eq-10">
-<span class="eqno">(2.10)<a class="headerlink" href="#equation-eq-10" title="Permalink to this equation">#</a></span>\[g(x+h) - g(x)
+<span class="eqno">(2.11)<a class="headerlink" href="#equation-eq-10" title="Permalink to this equation">#</a></span>\[g(x+h) - g(x)
 = V_x^{x+h}(f) + [f(x+h) - f(x)]\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -711,8 +781,8 @@ we immediately think of the partition <span class="math notranslate nohighlight"
 \[V_x^{x+h}(f) \geq\abs{f(x+h) - f(x)}\geq -[f(x+h) - f(x)]\]</div>
 <p>which further implies</p>
 <div class="math notranslate nohighlight" id="equation-eq-11">
-<span class="eqno">(2.11)<a class="headerlink" href="#equation-eq-11" title="Permalink to this equation">#</a></span>\[V_x^{x+h}(f) + [f(x+h) - f(x)]\geq 0\]</div>
-<p>Comparing <a class="reference internal" href="#equation-eq-10">(2.10)</a> and <a class="reference internal" href="#equation-eq-11">(2.11)</a>, we conclude
+<span class="eqno">(2.12)<a class="headerlink" href="#equation-eq-11" title="Permalink to this equation">#</a></span>\[V_x^{x+h}(f) + [f(x+h) - f(x)]\geq 0\]</div>
+<p>Comparing <a class="reference internal" href="#equation-eq-10">(2.11)</a> and <a class="reference internal" href="#equation-eq-11">(2.12)</a>, we conclude
 that <span class="math notranslate nohighlight">\(g(x)\)</span> is indeed increasing.</p>
 </div>
 </section>

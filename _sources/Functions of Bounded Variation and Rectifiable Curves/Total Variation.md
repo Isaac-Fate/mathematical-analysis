@@ -145,6 +145,122 @@ name: fig:4
 Is this function of bounded variation on $[0, 3]$?
 ```
 
+Intuitively, the function in {numref}`fig:4` should be of bounded variation.
+But we must be careful about the jump point,
+which we have not covered in the previous discussion.
+
+
+````{prf:proposition} 
+
+Suppose $f$ is of bounded variation on $[a, b]$,
+and is continuous at $x = a$.
+If function $g$ is defined by revising the value at $x=a$, i.e.,
+
+```{math}
+
+g(x) = \begin{cases}
+f(x), & x \in (a, b] \\
+y,    & x = a
+\end{cases}
+```
+
+then $g$ is still of bounded variation on $[a, b]$.
+And its total variation is given by
+
+```{math}
+
+V_a^b(g) = V_a^b(f) + \abs{y - f(a)}
+```
+
+````
+
+````{prf:proof}
+
+Let $P$ be a partition of $[a, b]$.
+We have
+
+```{math}
+:label: eq:12
+
+v(P, g) & = \abs{g(x_1) - g(a)} + \cdots\abs{g(x_n) - g(x_{n-1})}\nonumber\\& = \abs{f(x_1) - y} + \cdots\abs{f(x_n) - f(x_{n-1})}\nonumber\\& \leq\left[\abs{y -  f(a)} + \abs{f(x_1) - f(a)}\right] + \cdots\abs{f(x_n) - f(x_{n-1})}\nonumber\\& = \abs{y - f(a)} + v(P, f) \nonumber\\& \leq\abs{y - f(a)} + V_a^b(f)
+
+```
+
+This shows that $g$ is of bounded variation on $[a, b]$.
+
+Now, we compute its total variation.
+Let $\varepsilon > 0$ be arbitrary.
+Because $f$ is continuous at $x=a$,
+there exists $\delta > 0$ such that
+
+```{math}
+\abs{x - a} < \delta\implies\abs{f(x) - f(a)} < \varepsilon/4
+
+```
+
+By the definition of total variation and {prf:ref}`prop:4`,
+there exists a fine enough partition $P$
+such that the minimum length of the subinterval is less than $\delta$, and
+
+```{math}
+
+v(P, f) > V_a^b(f) - \varepsilon/2
+
+```
+
+On the subinterval $[a=x_0, x_1]$, we have
+
+```{math}
+\abs{\Delta g_1}& = \abs{g(x_1) - g(x_0)}\\& = \abs{f(x_1) - y}\\& \geq\abs{f(a) - y} - \abs{f(x_1) - f(a)}\\& = \abs{f(a) - y} + \abs{f(x_1) - f(a)} -
+2\abs{f(x_1) - f(a)}\\& \text{Note that $\abs{x_1 - x_0} < \delta$, hence we may estimate the last term as follows}\\& > \abs{f(a) - y} + \abs{f(x_1) - f(a)} - 2 \cdot\varepsilon/4 \\& > \abs{f(a) - y} + \abs{f(x_1) - f(a)} - \varepsilon/2
+
+```
+
+:::{note}
+
+When reaching
+
+```{math}
+\abs{\Delta g_1}\geq\abs{f(a) - y} - \abs{f(x_1) - f(a)}
+```
+
+in the above derivation,
+one may be worried that
+it is not proceeding towards the goal
+since we have a minus sign before $\abs{f(x_1) - f(a)}$.
+But since this term $\abs{f(x_1) - f(a)}$ can be made arbitrarily small,
+we can always add it (to construct the sum $v(P, f)$)
+and then subtract it,
+and make the trailing negative term $-2\abs{f(x_1) - f(a)}$ negligible,
+as what we did above.
+
+:::
+
+It then follows that
+
+```{math}
+
+v(P, g) > \abs{f(a) - y} + v(P, f) - \varepsilon/2
+> \abs{f(a) - y} + V_a^b(f) - \varepsilon
+```
+
+Therefore, we have
+
+```{math}
+
+V_a^b(g) \geq v(P, g) \geq\abs{f(a) - y} + V_a^b(f)
+
+```
+
+Compare this to {eq}`eq:12`, we may conclude
+
+```{math}
+
+V_a^b(g) = V_a^b(f) + \abs{f(a) - y}
+```
+
+````
+
 ````{prf:theorem} 
 :label: thm:1
 
