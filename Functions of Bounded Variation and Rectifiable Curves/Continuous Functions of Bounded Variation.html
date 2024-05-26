@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Functions of Bounded Variation and Rectifiable Curves &#8212; Mathematical Analysis</title>
+    <title>2.3. Continuous Functions of Bounded Variation &#8212; Mathematical Analysis</title>
   
   
   
@@ -60,12 +60,14 @@
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Functions of Bounded Variation and Rectifiable Curves/index';</script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "CALA": "\\mathcal{A}", "CALB": "\\mathcal{B}", "CALC": "\\mathcal{C}", "CALD": "\\mathcal{D}", "CALE": "\\mathcal{E}", "CALF": "\\mathcal{F}", "CALG": "\\mathcal{G}", "CALH": "\\mathcal{H}", "CALI": "\\mathcal{I}", "CALJ": "\\mathcal{J}", "CALK": "\\mathcal{K}", "CALL": "\\mathcal{L}", "CALM": "\\mathcal{M}", "CALN": "\\mathcal{N}", "CALO": "\\mathcal{O}", "CALP": "\\mathcal{P}", "CALQ": "\\mathcal{Q}", "CALR": "\\mathcal{R}", "CALS": "\\mathcal{S}", "CALT": "\\mathcal{T}", "CALU": "\\mathcal{U}", "CALV": "\\mathcal{V}", "CALW": "\\mathcal{W}", "CALX": "\\mathcal{X}", "CALY": "\\mathcal{Y}", "CALZ": "\\mathcal{Z}", "F": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "RE": ["\\mathrm{Re}"], "SCRI": "\\mathsrc{I}", "SRCA": "\\mathsrc{A}", "SRCB": "\\mathsrc{B}", "SRCC": "\\mathsrc{C}", "SRCD": "\\mathsrc{D}", "SRCE": "\\mathsrc{E}", "SRCF": "\\mathsrc{F}", "SRCG": "\\mathsrc{G}", "SRCH": "\\mathsrc{H}", "SRCJ": "\\mathsrc{J}", "SRCK": "\\mathsrc{K}", "SRCL": "\\mathsrc{L}", "SRCM": "\\mathsrc{M}", "SRCN": "\\mathsrc{N}", "SRCO": "\\mathsrc{O}", "SRCP": "\\mathsrc{P}", "SRCQ": "\\mathsrc{Q}", "SRCR": "\\mathsrc{R}", "SRCS": "\\mathsrc{S}", "SRCT": "\\mathsrc{T}", "SRCU": "\\mathsrc{U}", "SRCV": "\\mathsrc{V}", "SRCW": "\\mathsrc{W}", "SRCX": "\\mathsrc{X}", "SRCY": "\\mathsrc{Y}", "SRCZ": "\\mathsrc{Z}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "dif": "\\, \\mathrm{d}", "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "proj": ["\\mathop{\\mathrm{proj}}"], "restr": ["{#1}|_{#2}", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\; \\middle| \\; #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Functions of Bounded Variation and Rectifiable Curves/Continuous Functions of Bounded Variation';</script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.1. Functions of Bounded Variation" href="Functions%20of%20Bounded%20Variation.html" />
-    <link rel="prev" title="1. Point-Set Topology" href="../Point-Set%20Topology/index.html" />
+    <link rel="next" title="References" href="../bibliography.html" />
+    <link rel="prev" title="2.2. Total Variation" href="Total%20Variation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -185,10 +187,10 @@
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Point-Set%20Topology/index.html">1. Point-Set Topology</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Functions of Bounded Variation and Rectifiable Curves</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">2. Functions of Bounded Variation and Rectifiable Curves</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Functions%20of%20Bounded%20Variation.html">2.1. Functions of Bounded Variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Total%20Variation.html">2.2. Total Variation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Continuous%20Functions%20of%20Bounded%20Variation.html">2.3. Continuous Functions of Bounded Variation</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.3. Continuous Functions of Bounded Variation</a></li>
 </ul>
 </li>
 </ul>
@@ -250,7 +252,7 @@
       
       
       
-      <li><a href="../_sources/Functions of Bounded Variation and Rectifiable Curves/index.md" target="_blank"
+      <li><a href="../_sources/Functions of Bounded Variation and Rectifiable Curves/Continuous Functions of Bounded Variation.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -332,7 +334,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Functions of Bounded Variation and Rectifiable Curves</h1>
+    <h1>Continuous Functions of Bounded Variation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -346,9 +348,96 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="functions-of-bounded-variation-and-rectifiable-curves">
-<h1><span class="section-number">2. </span>Functions of Bounded Variation and Rectifiable Curves<a class="headerlink" href="#functions-of-bounded-variation-and-rectifiable-curves" title="Permalink to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="continuous-functions-of-bounded-variation">
+<h1><span class="section-number">2.3. </span>Continuous Functions of Bounded Variation<a class="headerlink" href="#continuous-functions-of-bounded-variation" title="Permalink to this heading">#</a></h1>
+<p>Previously, we have shown that a function <span class="math notranslate nohighlight">\(f\)</span> of bounded variation can be
+written as the difference of two increasing functions, <span class="math notranslate nohighlight">\(f = g - h\)</span>.
+Now, suppose <span class="math notranslate nohighlight">\(f\)</span> is continuous.
+We will show in this section that the two increasing functions <span class="math notranslate nohighlight">\(g\)</span> and <span class="math notranslate nohighlight">\(h\)</span>
+can also be made continuous as well.</p>
+<div class="proof theorem admonition" id="theorem-0">
+<p class="admonition-title"><span class="caption-number">Theorem 2.6 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Then <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0 \in [a, b]\)</span>
+if and only if <span class="math notranslate nohighlight">\(V_a^x(f)\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>.
+In other words, every point of continuity of <span class="math notranslate nohighlight">\(f\)</span> is also
+a point of continuity of <span class="math notranslate nohighlight">\(V_a^x(f)\)</span> and vice versa.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We first suppose that <span class="math notranslate nohighlight">\(V_a^x(f)\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>
+and show that <span class="math notranslate nohighlight">\(f\)</span> is also continuous at <span class="math notranslate nohighlight">\(x_0\)</span>,
+which is the easier direction to prove.</p>
+<p>We will only show that <span class="math notranslate nohighlight">\(f\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x_0\)</span>(<span class="math notranslate nohighlight">\(x_0 \neq b\)</span>),
+and the continuity from the left is similarly proved (including <span class="math notranslate nohighlight">\(x_0 = b\)</span>).
+Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
+Because <span class="math notranslate nohighlight">\(V_a^x(f)\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>,
+there exists <span class="math notranslate nohighlight">\(\delta  &gt; 0\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[\abs{x - x_0} &lt; \delta\implies\abs{V_a^x(f) - V_a^x(f)} &lt; \varepsilon\]</div>
+<p>For all <span class="math notranslate nohighlight">\(h\)</span> satisfying <span class="math notranslate nohighlight">\(0 &lt; h &lt; \delta\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\abs{f(x_0 + h) - f(x_0)}&amp; = v(P, f) \quad\text{where $P = \{x_0, x_0+h\}$ is a partition of $[x_0, x_0+h]$}\\&amp; \leq V_{x_0}^{x_0+h}(f) \\&amp; = V_a^{x_0+h}(f) - V_a^{x_0}(f) \\&amp; &lt; \varepsilon\end{split}\]</div>
+<p>This shows that <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span> from the right.
+Applying a similar argument,
+one may show that it is also continuous at <span class="math notranslate nohighlight">\(x_0\)</span> from the left
+by considering the interval <span class="math notranslate nohighlight">\([x_0-h, x_0]\)</span>.</p>
+<p>We now prove the reverse direction.
+Suppose <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>.
+Again, we will only prove that <span class="math notranslate nohighlight">\(V_a^x(f)\)</span>
+is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>(<span class="math notranslate nohighlight">\(x_0 \neq b\)</span>) from the right.
+Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
+Since <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span>, there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span>
+such that</p>
+<div class="math notranslate nohighlight">
+\[\abs{x-x_0} &lt; \delta\implies\abs{f(x) - f(x_0)} &lt; \varepsilon/2
+\]</div>
+<p>Consider the total variation <span class="math notranslate nohighlight">\(V_{x_0}^b(f)\)</span>.
+For any <span class="math notranslate nohighlight">\(h\)</span> satisfying <span class="math notranslate nohighlight">\(0 &lt; h &lt; \delta\)</span>,
+There exists a partition <span class="math notranslate nohighlight">\(P\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[x_1 - x_0 \leq\delta\]</div>
+<p>where <span class="math notranslate nohighlight">\(x_1 = x_0 + h\)</span>
+and</p>
+<div class="math notranslate nohighlight" id="equation-eq-14">
+<span class="eqno">(2.13)<a class="headerlink" href="#equation-eq-14" title="Permalink to this equation">#</a></span>\[v(P, f) &gt; V_{x_0}^b(f) - \varepsilon/2\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If one is confusing about how finding such <span class="math notranslate nohighlight">\(P\)</span> is possible,
+we can think of finding it with the following process.
+First, find a partition <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\([x_0, b]\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[v(P, f) &gt; V_{x_0}^b(f) - \varepsilon/2
+\]</div>
+<p>and then refine <span class="math notranslate nohighlight">\(P\)</span> to <span class="math notranslate nohighlight">\(P^\prime\)</span> by adding a point <span class="math notranslate nohighlight">\(c\)</span> in between <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span>
+such that <span class="math notranslate nohighlight">\(c - x_0 &lt; \delta\)</span>.
+Note that <span class="math notranslate nohighlight">\(v(P^\prime, f) \geq v(P, f)\)</span>(<a class="reference internal" href="Functions%20of%20Bounded%20Variation.html#prop:4">Proposition 2.4</a>).
+Therefore,</p>
+<div class="math notranslate nohighlight">
+\[v(P^\prime, f) &gt; V_{x_0}^b(f) - \varepsilon/2
+\]</div>
+<p>is satisfied.
+Finally, rename <span class="math notranslate nohighlight">\(P^\prime\)</span> to <span class="math notranslate nohighlight">\(P\)</span>.</p>
+</div>
+<p>We can express <span class="math notranslate nohighlight">\(v(P, f)\)</span> as</p>
+<div class="math notranslate nohighlight" id="equation-eq-13">
+<span class="eqno">(2.14)<a class="headerlink" href="#equation-eq-13" title="Permalink to this equation">#</a></span>\[\begin{split}v(P, f)
+&amp; = \abs{\Delta f_1} + \underbrace{ \abs{\Delta f_2} + \cdots + \abs{\Delta f_n} }_{ \text{$= v(P^\prime, f)$ where $P^\prime$ is a partition of $[x_1, b]$}}\nonumber\\&amp; = \abs{f(x_1) - f(x_0)} + v(P^\prime, f) \nonumber\\&amp; \leq\abs{f(x_1) - f(x_0)} + V_{x_1}^b(f) \nonumber\\&amp; \text{Recall that $x_1 - x_0 &lt; \delta$ and $f$ is continuous at $x_0$}\nonumber\\&amp; &lt; \varepsilon/2 + V_{x_1}^b(f)\end{split}\]</div>
+<p>Combining <a class="reference internal" href="#equation-eq-14">(2.13)</a> and <a class="reference internal" href="#equation-eq-13">(2.14)</a>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\varepsilon/2 + V_{x_1}^b(f) &gt; v(P, f) &gt; V_{x_0}^b(f) - \varepsilon/2
+\]</div>
+<p>Rearranging the terms yields</p>
+<div class="math notranslate nohighlight">
+\[\abs{V_a^{x_0+h}(f) - V_a^{x_0}(f)}
+= V_{x_0}^{x_0 + h}(f)
+= V_{x_0}^{x_1}(f)
+= V_{x_0}^b(f) - V_{x_1}^b(f)
+&lt; \varepsilon\]</div>
+<p>(Specially, it also holds for <span class="math notranslate nohighlight">\(x_0 = 1\)</span>.)
+This shows <span class="math notranslate nohighlight">\(V_a^x(f)\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span> from the right.
+And considering <span class="math notranslate nohighlight">\(V_a^{x_0}(f)\)</span> and <span class="math notranslate nohighlight">\(V_a^{x_0-h}(f)\)</span> and applying a similar argument,
+one can also show that <span class="math notranslate nohighlight">\(V_a^{x}(f)\)</span> is continuous at <span class="math notranslate nohighlight">\(x_0\)</span> from the left.</p>
 </div>
 </section>
 
@@ -383,20 +472,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Point-Set%20Topology/index.html"
+       href="Total%20Variation.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Point-Set Topology</p>
+        <p class="prev-next-title"><span class="section-number">2.2. </span>Total Variation</p>
       </div>
     </a>
     <a class="right-next"
-       href="Functions%20of%20Bounded%20Variation.html"
+       href="../bibliography.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Functions of Bounded Variation</p>
+        <p class="prev-next-title">References</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

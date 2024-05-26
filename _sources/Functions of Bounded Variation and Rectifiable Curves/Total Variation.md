@@ -128,6 +128,10 @@ But if we are curious about whether some piecewise functions
 are of bounded variation,
 then {prf:ref}`prop:1` and {prf:ref}`prop:3` will not be enough.
 
+
+````{prf:example}
+:label: eg:2
+
 For example, consider the following function defined on $[0, 3]$:
 
 ```{math}
@@ -149,8 +153,10 @@ Intuitively, the function in {numref}`fig:4` should be of bounded variation.
 But we must be careful about the jump point,
 which we have not covered in the previous discussion.
 
+````
 
 ````{prf:proposition} 
+:label: prop:5
 
 Suppose $f$ is of bounded variation on $[a, b]$,
 and is continuous at $x = a$.
@@ -260,6 +266,48 @@ V_a^b(g) = V_a^b(f) + \abs{f(a) - y}
 ```
 
 ````
+
+The function $f$ in {prf:ref}`eg:2` can be regarded as a sum
+of two functions on $[0, 3]$, $f(x) = g(x) + h(x)$ where
+
+```{math}
+
+g(x) & = \begin{cases}
+x, & x \in [0, 1] \\
+0, & x \in (1, 3]
+\end{cases}& & = (x \mapsto x) \ind_{[0, 1]}\\
+h(x) & = \begin{cases}
+0,            & x \in [0, 1) \\
+\tilde{h}(x), & x \in [1, 3]
+\end{cases}& & = \tilde{h}\ind_{[1, 3]}
+```
+
+where
+
+```{math}
+\tilde{h}(x) = \begin{cases}
+-(x-1)(x-3), & x \in (1, 3] \\
+0,           & x = 1
+\end{cases}
+```
+
+We have already seen that functions like $\tilde{h}$ are of bounded variation
+in {prf:ref}`prop:5`.
+If we know the sum of two functions of bounded variation (on the same interval)
+is also of bounded variation ({prf:ref}`thm:1`),
+we may then conclude that piecewise functions like $f$ in {prf:ref}`eg:2`
+are indeed of bounded variation.
+
+Hence, the next step to do is studying
+whether functions like $g$ and $h$ are of bounded variation.
+Describing in words,
+such functions are constructed
+by extending a function of bounded variation
+to a larger interval by defining function values of everywhere else
+in the larger interval to be zeros.
+
+
+
 
 ````{prf:theorem} 
 :label: thm:1
