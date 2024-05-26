@@ -431,20 +431,148 @@ But if we are curious about whether some piecewise functions
 are of bounded variation,
 then Proposition~\ref{prop:1} and \ref{prop:3} will not be enough.
 
-For example, consider the following function defined on $[0, 3]$:
+\begin{example} \label{eg:2}
+	For example, consider the following function defined on $[0, 3]$:
+	\begin{align*}
+		f(x) = \begin{cases}
+			       x,           & 0 \leq x \leq 1 \\
+			       -(x-1)(x-3), & 1 < x \leq 3
+		       \end{cases}
+	\end{align*}
+	Figure~\ref{fig:4} depicts its graph.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth]{figures/piecewise-function-of-bounded-variation.png}
+		\caption{Is this function of bounded variation on $[0, 3]$?}
+		\label{fig:4}
+	\end{figure}
+
+	Intuitively, the function in Figure~\ref{fig:4} should be of bounded variation.
+	But we must be careful about the jump point,
+	which we have not covered in the previous discussion.
+\end{example}
+
+\begin{proposition} \label{prop:5}
+	Suppose $f$ is of bounded variation on $[a, b]$,
+	and is continuous at $x = a$.
+	If function $g$ is defined by revising the value at $x=a$, i.e.,
+	\begin{align*}
+		g(x) = \begin{cases}
+			       f(x), & x \in (a, b] \\
+			       y,    & x = a
+		       \end{cases}
+	\end{align*}
+	then $g$ is still of bounded variation on $[a, b]$.
+	And its total variation is given by
+	\begin{align*}
+		V_a^b(g) = V_a^b(f) + \abs{y - f(a)}
+	\end{align*}
+\end{proposition}
+
+\begin{proof}
+	Let $P$ be a partition of $[a, b]$.
+	We have
+	\begin{align}
+		v(P, g) & = \abs{g(x_1) - g(a)} + \cdots \abs{g(x_n) - g(x_{n-1})}                                     \nonumber \\
+		        & = \abs{f(x_1) - y} + \cdots \abs{f(x_n) - f(x_{n-1})}                                       \nonumber  \\
+		        & \leq \left[ \abs{y -  f(a)} + \abs{f(x_1) - f(a)} \right] + \cdots \abs{f(x_n) - f(x_{n-1})} \nonumber \\
+		        & = \abs{y - f(a)} + v(P, f)                                                                  \nonumber  \\
+		        & \leq \abs{y - f(a)} + V_a^b(f)
+		\label{eq:12}
+	\end{align}
+	This shows that $g$ is of bounded variation on $[a, b]$.
+
+	Now, we compute its total variation.
+	Let $\varepsilon > 0$ be arbitrary.
+	Because $f$ is continuous at $x=a$,
+	there exists $\delta > 0$ such that
+	\begin{align*}
+		\abs{x - a} < \delta \implies \abs{f(x) - f(a)} < \varepsilon/4
+	\end{align*}
+	By the definition of total variation and Proposition~\ref{prop:4},
+	there exists a fine enough partition $P$
+	such that the minimum length of the subinterval is less than $\delta$, and
+	\begin{align*}
+		v(P, f) > V_a^b(f) - \varepsilon/2
+	\end{align*}
+	On the subinterval $[a=x_0, x_1]$, we have
+	\begin{align*}
+		\abs{\Delta g_1} & = \abs{g(x_1) - g(x_0)}                                                                     \\
+		                 & = \abs{f(x_1) - y}                                                                          \\
+		                 & \geq \abs{f(a) - y} - \abs{f(x_1) - f(a)}                                                   \\
+		                 & = \abs{f(a) - y} + \abs{f(x_1) - f(a)} -
+		2\abs{f(x_1) - f(a)}                                                                                           \\
+		                 & \text{Note that $\abs{x_1 - x_0} < \delta$, hence we may estimate the last term as follows} \\
+		                 & > \abs{f(a) - y} + \abs{f(x_1) - f(a)} - 2 \cdot \varepsilon/4                              \\
+		                 & > \abs{f(a) - y} + \abs{f(x_1) - f(a)} - \varepsilon/2
+	\end{align*}
+	\begin{note}
+		When reaching
+		\begin{align*}
+			\abs{\Delta g_1} \geq \abs{f(a) - y} - \abs{f(x_1) - f(a)}
+		\end{align*}
+		in the above derivation,
+		one may be worried that
+		it is not proceeding towards the goal
+		since we have a minus sign before $\abs{f(x_1) - f(a)}$.
+		But since this term $\abs{f(x_1) - f(a)}$ can be made arbitrarily small,
+		we can always add it (to construct the sum $v(P, f)$)
+		and then subtract it,
+		and make the trailing negative term $-2\abs{f(x_1) - f(a)}$ negligible,
+		as what we did above.
+	\end{note}
+	It then follows that
+	\begin{align*}
+		v(P, g) > \abs{f(a) - y} + v(P, f) - \varepsilon/2
+		> \abs{f(a) - y} + V_a^b(f) - \varepsilon
+	\end{align*}
+	Therefore, we have
+	\begin{align*}
+		V_a^b(g) \geq v(P, g) \geq \abs{f(a) - y} + V_a^b(f)
+	\end{align*}
+	Compare this to \eqref{eq:12}, we may conclude
+	\begin{align*}
+		V_a^b(g) = V_a^b(f) + \abs{f(a) - y}
+	\end{align*}
+
+\end{proof}
+
+The function $f$ in Example~\ref{eg:2} can be regarded as a sum
+of two functions on $[0, 3]$, $f(x) = g(x) + h(x)$ where
 \begin{align*}
-	f(x) = \begin{cases}
-		       x,           & 0 \leq x \leq 1 \\
-		       -(x-1)(x-3), & 1 < x \leq 3
-	       \end{cases}
+	g(x) & = \begin{cases}
+		         x, & x \in [0, 1] \\
+		         0, & x \in (1, 3]
+	         \end{cases}            &  & = (x \mapsto x) \ind_{[0, 1]} \\
+	h(x) & = \begin{cases}
+		         0,            & x \in [0, 1) \\
+		         \tilde{h}(x), & x \in [1, 3]
+	         \end{cases} &  & = \tilde{h} \ind_{[1, 3]}
 \end{align*}
-Figure~\ref{fig:4} depicts its graph.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.6\textwidth]{figures/piecewise-function-of-bounded-variation.png}
-	\caption{Is this function of bounded variation on $[0, 3]$?}
-	\label{fig:4}
-\end{figure}
+where
+\begin{align*}
+	\tilde{h}(x) = \begin{cases}
+		               -(x-1)(x-3), & x \in (1, 3] \\
+		               0,           & x = 1
+	               \end{cases}
+\end{align*}
+
+We have already seen that functions like $\tilde{h}$ are of bounded variation
+in Proposition~\ref{prop:5}.
+If we know the sum of two functions of bounded variation (on the same interval)
+is also of bounded variation (Theorem~\ref{thm:1}),
+we may then conclude that piecewise functions like $f$ in Example~\ref{eg:2}
+are indeed of bounded variation.
+
+Hence, the next step to do is studying
+whether functions like $g$ and $h$ are of bounded variation.
+Describing in words,
+such functions are constructed
+by extending a function of bounded variation
+to a larger interval by defining function values of everywhere else
+in the larger interval to be zeros.
+
+
 
 \begin{theorem} \label{thm:1}
 	Let $f$ and $g$ be of bounded variation on $[a, b]$, then
@@ -788,8 +916,114 @@ is already handled by Theorem~\ref{thm:3}.
 	and $\tilde{h}(x) = h(x) + x$.
 \end{note}
 
+\section{Continuous Functions of Bounded Variation}
 
+Previously, we have shown that a function $f$ of bounded variation can be
+written as the difference of two increasing functions, $f = g - h$.
+Now, suppose $f$ is continuous.
+We will show in this section that the two increasing functions $g$ and $h$
+can also be made continuous as well.
 
+\begin{theorem}
+	Suppose $f$ is of bounded variation on $[a, b]$.
+	Then $f$ is continuous at $x_0 \in [a, b]$
+	if and only if $V_a^x(f)$ is continuous at $x_0$.
+	In other words, every point of continuity of $f$ is also
+	a point of continuity of $V_a^x(f)$ and vice versa.
+\end{theorem}
+
+\begin{proof}
+	We first suppose that $V_a^x(f)$ is continuous at $x_0$
+	and show that $f$ is also continuous at $x_0$,
+	which is the easier direction to prove.
+
+	We will only show that $f$ is continuous from the right at $x_0$ ($x_0 \neq b$),
+	and the continuity from the left is similarly proved (including $x_0 = b$).
+	Let $\varepsilon > 0$ be arbitrary.
+	Because $V_a^x(f)$ is continuous at $x_0$,
+	there exists $\delta  > 0$ such that
+	\begin{align*}
+		\abs{x - x_0} < \delta \implies \abs{V_a^x(f) - V_a^x(f)} < \varepsilon
+	\end{align*}
+	For all $h$ satisfying $0 < h < \delta$, we have
+	\begin{align*}
+		\abs{f(x_0 + h) - f(x_0)}
+		 & = v(P, f) \quad \text{where $P = \{x_0, x_0+h\}$ is a partition of $[x_0, x_0+h]$} \\
+		 & \leq V_{x_0}^{x_0+h}(f)                                                            \\
+		 & = V_a^{x_0+h}(f) - V_a^{x_0}(f)                                                    \\
+		 & < \varepsilon
+	\end{align*}
+	This shows that $f$ is continuous at $x_0$ from the right.
+	Applying a similar argument,
+	one may show that it is also continuous at $x_0$ from the left
+	by considering the interval $[x_0-h, x_0]$.
+
+	We now prove the reverse direction.
+	Suppose $f$ is continuous at $x_0$.
+	Again, we will only prove that $V_a^x(f)$
+	is continuous at $x_0$ ($x_0 \neq b$) from the right.
+	Let $\varepsilon > 0$ be arbitrary.
+	Since $f$ is continuous at $x_0$, there exists $\delta > 0$
+	such that
+	\begin{align*}
+		\abs{x-x_0} < \delta \implies \abs{f(x) - f(x_0)} < \varepsilon/2
+	\end{align*}
+	Consider the total variation $V_{x_0}^b(f)$.
+	For any $h$ satisfying $0 < h < \delta$,
+	There exists a partition $P$ such that
+	\begin{align*}
+		x_1 - x_0 \leq \delta
+	\end{align*}
+	where $x_1 = x_0 + h$
+	and
+	\begin{align}
+		v(P, f) > V_{x_0}^b(f) - \varepsilon/2
+		\label{eq:14}
+	\end{align}
+	\begin{note}
+		If one is confusing about how finding such $P$ is possible,
+		we can think of finding it with the following process.
+		First, find a partition $P$ of $[x_0, b]$ such that
+		\begin{align*}
+			v(P, f) > V_{x_0}^b(f) - \varepsilon/2
+		\end{align*}
+		and then refine $P$ to $P^\prime$ by adding a point $c$ in between $x_0$ and $x_1$
+		such that $c - x_0 < \delta$.
+		Note that $v(P^\prime, f) \geq v(P, f)$ (Proposition~\ref{prop:4}).
+		Therefore,
+		\begin{align*}
+			v(P^\prime, f) > V_{x_0}^b(f) - \varepsilon/2
+		\end{align*}
+		is satisfied.
+		Finally, rename $P^\prime$ to $P$.
+	\end{note}
+	We can express $v(P, f)$ as
+	\begin{align}
+		v(P, f)
+		 & = \abs{\Delta f_1} + \underbrace{ \abs{\Delta f_2} + \cdots + \abs{\Delta f_n} }_{ \text{$= v(P^\prime, f)$ where $P^\prime$ is a partition of $[x_1, b]$}} \nonumber \\
+		 & = \abs{f(x_1) - f(x_0)} + v(P^\prime, f) \nonumber                                                                                                                    \\
+		 & \leq \abs{f(x_1) - f(x_0)} + V_{x_1}^b(f) \nonumber                                                                                                                   \\
+		 & \text{Recall that $x_1 - x_0 < \delta$ and $f$ is continuous at $x_0$} \nonumber                                                                                      \\
+		 & < \varepsilon/2 + V_{x_1}^b(f)
+		\label{eq:13}
+	\end{align}
+	Combining \eqref{eq:14} and \eqref{eq:13}, we obtain
+	\begin{align*}
+		\varepsilon/2 + V_{x_1}^b(f) > v(P, f) > V_{x_0}^b(f) - \varepsilon/2
+	\end{align*}
+	Rearranging the terms yields
+	\begin{align*}
+		\abs{V_a^{x_0+h}(f) - V_a^{x_0}(f)}
+		= V_{x_0}^{x_0 + h}(f)
+		= V_{x_0}^{x_1}(f)
+		= V_{x_0}^b(f) - V_{x_1}^b(f)
+		< \varepsilon
+	\end{align*}
+	(Specially, it also holds for $x_0 = 1$.)
+	This shows $V_a^x(f)$ is continuous at $x_0$ from the right.
+	And considering $V_a^{x_0}(f)$ and $V_a^{x_0-h}(f)$ and applying a similar argument,
+	one can also show that $V_a^{x}(f)$ is continuous at $x_0$ from the left.
+\end{proof}
 
 %==============================
 
