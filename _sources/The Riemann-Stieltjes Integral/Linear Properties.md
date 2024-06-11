@@ -44,28 +44,26 @@ both $c_1$ and $c_2$ are zeros.
 
 Consider the Riemann-Stieltjes sum $S(P,T,c_1 f + c_2 g, \alpha)$.
 We have
-\begin{alignat*}{2}
-& \quad &  & \abs{S(P,T,c_1 f + c_2 g, \alpha)
+
+```{math}
+& \quad& & \abs{S(P,T,c_1 f + c_2 g, \alpha)
 - c_1 \int_a^b f \dif \alpha
-- c_2 \int_a^b g \dif \alpha}                   \\
-& =     &  & \abs{
+- c_2 \int_a^b g \dif \alpha}\\& = & & \abs{
 \sum_k (c_1 \Delta f_k + c_2 \Delta g_k)
 - c_1 \int_a^b f \dif \alpha
-- c_2 \int_a^b g \dif \alpha}                   \\
-& =     &  & \abs{
+- c_2 \int_a^b g \dif \alpha}\\& = & & \abs{
 c_1 \sum_k \Delta f_k + c_2  \sum_k \Delta g_k
 - c_1 \int_a^b f \dif \alpha
-- c_2 \int_a^b g \dif \alpha}                   \\
-& =     &  & \abs{
+- c_2 \int_a^b g \dif \alpha}\\& = & & \abs{
 c_1 S(P,T,f,\alpha) + c_2 S(P,T,g,\alpha)
 - c_1 \int_a^b f \dif \alpha
-- c_2 \int_a^b g \dif \alpha}                   \\
-& \leq  &  & \abs{c_1} \abs{
+- c_2 \int_a^b g \dif \alpha}\\& \leq& & \abs{c_1}\abs{
 S(P,T,f,\alpha) - \int_a^b f \dif \alpha
-} + \abs{c_2} \abs{
+} + \abs{c_2}\abs{
 S(P,T,g,\alpha) - \int_a^b g \dif \alpha
 }
-\end{alignat*}
+```
+
 Applying {eq}`eq:15`, we obtain
 
 ```{math}

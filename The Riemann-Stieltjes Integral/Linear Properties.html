@@ -384,32 +384,25 @@ And the <span class="math notranslate nohighlight">\(+1\)</span> in the denomina
 both <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span> are zeros.</p>
 </div>
 <p>Consider the Riemann-Stieltjes sum <span class="math notranslate nohighlight">\(S(P,T,c_1 f + c_2 g, \alpha)\)</span>.
-We have
-\begin{alignat*}{2}
-&amp; \quad &amp;  &amp; \abs{S(P,T,c_1 f + c_2 g, \alpha)</p>
-<ul class="simple">
-<li><p>c_1 \int_a^b f \dif \alpha</p></li>
-<li><p>c_2 \int_a^b g \dif \alpha}                   \
-&amp; =     &amp;  &amp; \abs{
-\sum_k (c_1 \Delta f_k + c_2 \Delta g_k)</p></li>
-<li><p>c_1 \int_a^b f \dif \alpha</p></li>
-<li><p>c_2 \int_a^b g \dif \alpha}                   \
-&amp; =     &amp;  &amp; \abs{
-c_1 \sum_k \Delta f_k + c_2  \sum_k \Delta g_k</p></li>
-<li><p>c_1 \int_a^b f \dif \alpha</p></li>
-<li><p>c_2 \int_a^b g \dif \alpha}                   \
-&amp; =     &amp;  &amp; \abs{
-c_1 S(P,T,f,\alpha) + c_2 S(P,T,g,\alpha)</p></li>
-<li><p>c_1 \int_a^b f \dif \alpha</p></li>
-<li><p>c_2 \int_a^b g \dif \alpha}                   \
-&amp; \leq  &amp;  &amp; \abs{c_1} \abs{
+We have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}&amp; \quad&amp; &amp; \abs{S(P,T,c_1 f + c_2 g, \alpha)
+- c_1 \int_a^b f \dif \alpha
+- c_2 \int_a^b g \dif \alpha}\\&amp; = &amp; &amp; \abs{
+\sum_k (c_1 \Delta f_k + c_2 \Delta g_k)
+- c_1 \int_a^b f \dif \alpha
+- c_2 \int_a^b g \dif \alpha}\\&amp; = &amp; &amp; \abs{
+c_1 \sum_k \Delta f_k + c_2  \sum_k \Delta g_k
+- c_1 \int_a^b f \dif \alpha
+- c_2 \int_a^b g \dif \alpha}\\&amp; = &amp; &amp; \abs{
+c_1 S(P,T,f,\alpha) + c_2 S(P,T,g,\alpha)
+- c_1 \int_a^b f \dif \alpha
+- c_2 \int_a^b g \dif \alpha}\\&amp; \leq&amp; &amp; \abs{c_1}\abs{
 S(P,T,f,\alpha) - \int_a^b f \dif \alpha
-} + \abs{c_2} \abs{
+} + \abs{c_2}\abs{
 S(P,T,g,\alpha) - \int_a^b g \dif \alpha
-}
-\end{alignat*}
-Applying <a class="reference internal" href="#equation-eq-15">(3.2)</a>, we obtain</p></li>
-</ul>
+}\end{split}\]</div>
+<p>Applying <a class="reference internal" href="#equation-eq-15">(3.2)</a>, we obtain</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\abs{S(P,T,c_1 f + c_2 g, \alpha)
 - c_1 \int_a^b f \dif \alpha
