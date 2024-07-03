@@ -67,7 +67,7 @@ Subtracting {eq}`eq:17` from {eq}`eq:18`, we obtain
 :label: eq:20
 
 A - S(P^\prime, T^\prime, \alpha, f)
-& = \sum_{k=1}^n f(x_k) [\alpha(x_k) - \alpha(t_k) ]
+= \sum_{k=1}^n f(x_k) [\alpha(x_k) - \alpha(t_k) ]
 + \sum_{k=1}^n f(x_{k-1}) [\alpha(t_k) - \alpha(x_{k-1}) ]
 ```
 
@@ -104,6 +104,8 @@ we have
 \abs{
 S(P^{\prime\prime}, T^{\prime\prime}, f, \alpha)
 - \int_a^b f \dif \alpha
+} < \varepsilon\implies\abs{
+A - S(P^\prime, T^\prime, \alpha, f) -  \int_a^b f \dif \alpha
 } < \varepsilon
 ```
 

@@ -398,7 +398,7 @@ can be written as</p>
 <p>Subtracting <a class="reference internal" href="#equation-eq-17">(3.4)</a> from <a class="reference internal" href="#equation-eq-18">(3.5)</a>, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-20">
 <span class="eqno">(3.6)<a class="headerlink" href="#equation-eq-20" title="Permalink to this equation">#</a></span>\[A - S(P^\prime, T^\prime, \alpha, f)
-&amp; = \sum_{k=1}^n f(x_k) [\alpha(x_k) - \alpha(t_k) ]
+= \sum_{k=1}^n f(x_k) [\alpha(x_k) - \alpha(t_k) ]
 + \sum_{k=1}^n f(x_{k-1}) [\alpha(t_k) - \alpha(x_{k-1}) ]\]</div>
 <p>Taking a close look at the right-hand side of <a class="reference internal" href="#equation-eq-20">(3.6)</a>,
 one may realize that it is also a Riemann-Stieltjes sum.
@@ -428,6 +428,8 @@ we have</p>
 \[\abs{
 S(P^{\prime\prime}, T^{\prime\prime}, f, \alpha)
 - \int_a^b f \dif \alpha
+} &lt; \varepsilon\implies\abs{
+A - S(P^\prime, T^\prime, \alpha, f) -  \int_a^b f \dif \alpha
 } &lt; \varepsilon\]</div>
 <p>This shows that <span class="math notranslate nohighlight">\(\alpha \in \mathfrak{R}(f)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
 and <a class="reference internal" href="#equation-eq-19">(3.3)</a> is proved.</p>
