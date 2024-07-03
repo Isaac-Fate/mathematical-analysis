@@ -77,3 +77,21 @@ This shows that $c_1 f + c_2 g$
 is also Riemann integrable on $[a, b]$, and {eq}`eq:16` is satisfied.
 
 ````
+
+Analogously, we can prove that
+the integral is linear in the integrators.
+
+
+````{prf:theorem} 
+
+If $f \in \mathfrak{R}(\alpha)$
+and $f \in \mathfrak{R}(\beta)$ on $[a, b]$,
+then $f \in \mathfrak{R}(c_1 \alpha + c_2 \beta)$ on $[a, b]$.
+And
+
+```{math}
+\int_a^b f \dif(c_1 \alpha + c_2 \beta)
+= c_1 \int_a^b f \dif\alpha + c_2 \int_a^b f \dif\beta
+```
+
+````

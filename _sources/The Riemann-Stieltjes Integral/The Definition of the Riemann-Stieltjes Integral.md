@@ -13,7 +13,8 @@ for any choice of $\varepsilon > 0$,
 we can always find a partition $P_\varepsilon$ of $[a, b]$ such that
 for any partition $P$ finer than $P_\varepsilon$, $P \supseteq P_\varepsilon$,
 and for any set of representatives $T$ of $P$,
-the Stieltjes sum satisfies
+the  **Riemann-Stieltjes sum** 
+satisfies
 
 ```{math}
 \abs{ S(P, T, f, \alpha) - A } < \varepsilon
