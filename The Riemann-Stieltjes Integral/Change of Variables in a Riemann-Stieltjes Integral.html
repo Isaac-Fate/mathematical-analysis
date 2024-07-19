@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Point-Set Topology &#8212; Mathematical Analysis</title>
+    <title>3.4. Change of Variables in a Riemann-Stieltjes Integral &#8212; Mathematical Analysis</title>
   
   
   
@@ -60,12 +60,14 @@
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Point-Set Topology/index';</script>
+    <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "CALA": "\\mathcal{A}", "CALB": "\\mathcal{B}", "CALC": "\\mathcal{C}", "CALD": "\\mathcal{D}", "CALE": "\\mathcal{E}", "CALF": "\\mathcal{F}", "CALG": "\\mathcal{G}", "CALH": "\\mathcal{H}", "CALI": "\\mathcal{I}", "CALJ": "\\mathcal{J}", "CALK": "\\mathcal{K}", "CALL": "\\mathcal{L}", "CALM": "\\mathcal{M}", "CALN": "\\mathcal{N}", "CALO": "\\mathcal{O}", "CALP": "\\mathcal{P}", "CALQ": "\\mathcal{Q}", "CALR": "\\mathcal{R}", "CALS": "\\mathcal{S}", "CALT": "\\mathcal{T}", "CALU": "\\mathcal{U}", "CALV": "\\mathcal{V}", "CALW": "\\mathcal{W}", "CALX": "\\mathcal{X}", "CALY": "\\mathcal{Y}", "CALZ": "\\mathcal{Z}", "F": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "RE": ["\\mathrm{Re}"], "SCRI": "\\mathsrc{I}", "SRCA": "\\mathsrc{A}", "SRCB": "\\mathsrc{B}", "SRCC": "\\mathsrc{C}", "SRCD": "\\mathsrc{D}", "SRCE": "\\mathsrc{E}", "SRCF": "\\mathsrc{F}", "SRCG": "\\mathsrc{G}", "SRCH": "\\mathsrc{H}", "SRCJ": "\\mathsrc{J}", "SRCK": "\\mathsrc{K}", "SRCL": "\\mathsrc{L}", "SRCM": "\\mathsrc{M}", "SRCN": "\\mathsrc{N}", "SRCO": "\\mathsrc{O}", "SRCP": "\\mathsrc{P}", "SRCQ": "\\mathsrc{Q}", "SRCR": "\\mathsrc{R}", "SRCS": "\\mathsrc{S}", "SRCT": "\\mathsrc{T}", "SRCU": "\\mathsrc{U}", "SRCV": "\\mathsrc{V}", "SRCW": "\\mathsrc{W}", "SRCX": "\\mathsrc{X}", "SRCY": "\\mathsrc{Y}", "SRCZ": "\\mathsrc{Z}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "dif": "\\, \\mathrm{d}", "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "proj": ["\\mathop{\\mathrm{proj}}"], "restr": ["{#1}|_{#2}", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\; \\middle| \\; #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'The Riemann-Stieltjes Integral/Change of Variables in a Riemann-Stieltjes Integral';</script>
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Functions of Bounded Variation and Rectifiable Curves" href="../Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/index.html" />
-    <link rel="prev" title="Preface" href="../Preface/index.html" />
+    <link rel="next" title="References" href="../bibliography.html" />
+    <link rel="prev" title="3.3. Integration by Parts" href="Integration%20by%20Parts.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -184,18 +186,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../Preface/index.html">Preface</a></li>
 </ul>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Point-Set Topology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Point-Set%20Topology/index.html">1. Point-Set Topology</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/index.html">2. Functions of Bounded Variation and Rectifiable Curves</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Functions%20of%20Bounded%20Variation.html">2.1. Functions of Bounded Variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Total%20Variation.html">2.2. Total Variation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Continuous%20Functions%20of%20Bounded%20Variation.html">2.3. Continuous Functions of Bounded Variation</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/index.html">3. The Riemann-Stieltjes Integral</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/The%20Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">3.1. The Definition of the Riemann-Stieltjes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Linear%20Properties.html">3.2. Linear Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Integration%20by%20Parts.html">3.3. Integration by Parts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Change%20of%20Variables%20in%20a%20Riemann-Stieltjes%20Integral.html">3.4. Change of Variables in a Riemann-Stieltjes Integral</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">3. The Riemann-Stieltjes Integral</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="The%20Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">3.1. The Definition of the Riemann-Stieltjes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Linear%20Properties.html">3.2. Linear Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Integration%20by%20Parts.html">3.3. Integration by Parts</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.4. Change of Variables in a Riemann-Stieltjes Integral</a></li>
 </ul>
 </li>
 </ul>
@@ -257,7 +259,7 @@
       
       
       
-      <li><a href="../_sources/Point-Set Topology/index.md" target="_blank"
+      <li><a href="../_sources/The Riemann-Stieltjes Integral/Change of Variables in a Riemann-Stieltjes Integral.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -339,7 +341,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Point-Set Topology</h1>
+    <h1>Change of Variables in a Riemann-Stieltjes Integral</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -353,8 +355,76 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="point-set-topology">
-<h1><span class="section-number">1. </span>Point-Set Topology<a class="headerlink" href="#point-set-topology" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="change-of-variables-in-a-riemann-stieltjes-integral">
+<h1><span class="section-number">3.4. </span>Change of Variables in a Riemann-Stieltjes Integral<a class="headerlink" href="#change-of-variables-in-a-riemann-stieltjes-integral" title="Permalink to this heading">#</a></h1>
+<div class="proof theorem admonition" id="theorem-0">
+<p class="admonition-title"><span class="caption-number">Theorem 3.4 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(f)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Let <span class="math notranslate nohighlight">\(g\)</span> be a strictly monotonic and surjective function defined
+on an interval <span class="math notranslate nohighlight">\(J\)</span> having endpoints <span class="math notranslate nohighlight">\(c\)</span> and <span class="math notranslate nohighlight">\(d\)</span>.
+Suppose also that <span class="math notranslate nohighlight">\(g(c) = a\)</span> and <span class="math notranslate nohighlight">\(g(d) = b\)</span>.
+Let</p>
+<div class="math notranslate nohighlight">
+\[h(x) = f[g(x)]\quad\text{and}\quad\beta(x) = \alpha[g(x)]\quad x \in J
+\]</div>
+<p>Then <span class="math notranslate nohighlight">\(h \in \mathfrak{R}(\beta)\)</span> on <span class="math notranslate nohighlight">\(J\)</span>,
+and <span class="math notranslate nohighlight">\(\int_a^b f \dif \alpha = \int_c^d h \dif \beta\)</span>.
+That is,</p>
+<div class="math notranslate nohighlight">
+\[\int_{a = g(c)}^{b = g(d)} f(t) \dif t
+= \int_c^d f[g(x)]\dif\alpha[g(x)]\]</div>
+</section>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Originally in <span id="id1">[<a class="reference internal" href="../bibliography.html#id4" title="Tom M. Apostol. Mathematical Analysis: A Modern Approach to Advanced Calculus. Addison-Wesley Series in Mathematics. Addison-Wesley, Reading, Mass., 2. ed edition, 1974. ISBN 978-0-201-00288-1.">Apostol, 1974</a>]</span>,
+the condition of function <span class="math notranslate nohighlight">\(g\)</span> is that it is strictly monotonic and continuous.
+As a matter of fact, these two conditions are equivalent.
+At the end of the day,
+we impose these to conditions of <span class="math notranslate nohighlight">\(g\)</span> so that it has
+an inverse <span class="math notranslate nohighlight">\(g^{-1}\)</span> defined on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+(<span class="math notranslate nohighlight">\(g^{-1}\)</span> is also continuous of course.)</p>
+<p>The key of this proof is constructing a one-to-one relation
+using function <span class="math notranslate nohighlight">\(g\)</span>
+between a partition <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span> and a partition <span class="math notranslate nohighlight">\(P'\)</span> of <span class="math notranslate nohighlight">\(J\)</span>.
+In the proof below, we write <span class="math notranslate nohighlight">\(P = g(P^\prime)\)</span>
+and <span class="math notranslate nohighlight">\(P^\prime = g^{-1}(P)\)</span>.</p>
+</div>
+<div class="proof admonition" id="proof">
+<p>Proof. Without loss of generality, we may assume that <span class="math notranslate nohighlight">\(g\)</span> is strictly increasing.
+If <span class="math notranslate nohighlight">\(g\)</span> is decreasing, we may easily obtain the same result
+by applying the linearity of the integrals.</p>
+<p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
+There exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span> satisfying
+the property described in <a class="reference internal" href="The%20Definition%20of%20the%20Riemann-Stieltjes%20Integral.html#def:1">Definition 3.1</a>.
+As noted previously, we may construct a partition of <span class="math notranslate nohighlight">\([c, d]\)</span>,
+<span class="math notranslate nohighlight">\(P^\prime_\varepsilon = g^{-1}(P_\varepsilon)\)</span>.
+Let <span class="math notranslate nohighlight">\(P^\prime \supseteq P^\prime_\varepsilon\)</span> be any refinement.
+Similarly, we may construct a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>
+associated with <span class="math notranslate nohighlight">\(P^\prime\)</span>, <span class="math notranslate nohighlight">\(P = g(P^\prime)\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To exploit the property of <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>,
+we would want to have <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>.
+Luckily, this is indeed true.</p>
+</div>
+<p>Now, we show that <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>.
+For any point <span class="math notranslate nohighlight">\(x \in P_\varepsilon\)</span>,
+we have <span class="math notranslate nohighlight">\(g^{-1}(x) \in P^\prime_\varepsilon \subseteq P^\prime\)</span>.
+Since <span class="math notranslate nohighlight">\(x = g[g^{-1}(x)]\)</span>,
+it then follows that <span class="math notranslate nohighlight">\(x \in g(P^\prime) = P\)</span>.
+This shows <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>.</p>
+<p>Write <span class="math notranslate nohighlight">\(P^\prime = \{y_0, \ldots, y_n\}\)</span>.
+Suppose <span class="math notranslate nohighlight">\(T^\prime\)</span> is a list of representatives of <span class="math notranslate nohighlight">\(P^\prime\)</span>.
+Let <span class="math notranslate nohighlight">\(T = g(T^\prime)\)</span>.
+Then, of course, <span class="math notranslate nohighlight">\(T\)</span> is a list of representatives of <span class="math notranslate nohighlight">\(P\)</span>.
+This implies that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S(P^\prime, T^\prime, h, \beta)
+&amp; = \sum_{k=1}^n f[g(s_k)]\left\{\alpha[g(y_k)] - \alpha[y_{k-1}]\right\}\\&amp; = \sum_{k=1}^n f(t_k) [\alpha(x_k) - \alpha(x_{k-1}) ]\\&amp; = S(P, T, f, \alpha)
+\end{split}\]</div>
+<p>The remainder of the proof is straightforward and is therefore omitted.</p>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -370,7 +440,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Point-Set Topology"
+            path: "./The Riemann-Stieltjes Integral"
         },
         predefinedOutput: true
     }
@@ -388,20 +458,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Preface/index.html"
+       href="Integration%20by%20Parts.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Preface</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>Integration by Parts</p>
       </div>
     </a>
     <a class="right-next"
-       href="../Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/index.html"
+       href="../bibliography.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Functions of Bounded Variation and Rectifiable Curves</p>
+        <p class="prev-next-title">References</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

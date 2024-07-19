@@ -3,6 +3,7 @@
 ```
 
 ````{prf:definition} 
+:label: def:1
 
 Let $f$ and $\alpha$ be bounded on $[a, b]$.
 We say $f$ is

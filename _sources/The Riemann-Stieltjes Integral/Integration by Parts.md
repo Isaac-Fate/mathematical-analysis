@@ -16,6 +16,16 @@ then $\alpha \in \mathfrak{R}(f)$ on $[a, b]$, and
 
 ````
 
+:::{note}
+
+Take a second
+and appreciate the beauty of symmetry of the equation {eq}`eq:19`.
+This can be regarded as a  *reciprocal rule*  for Riemann-Stieltjes integrals.
+Indeed, it tells us the value of the integral
+when the integrand and the integrator are swapped.
+
+:::
+
 ````{prf:proof}
 
 Let $\varepsilon > 0$ be arbitrary.
