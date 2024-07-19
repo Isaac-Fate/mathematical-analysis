@@ -1027,6 +1027,313 @@ can also be made continuous as well.
 
 %==============================
 
+\chapter{The Riemann-Stieltjes Integral}
+
+%------------------------------
+
+\section{The Definition of the Riemann-Stieltjes Integral}
+
+\begin{definition} \label{def:1}
+	Let $f$ and $\alpha$ be bounded on $[a, b]$.
+	We say $f$ is
+	\textbf{Riemann-Stieltjes integrable}\index{Riemann-Stieltjes integrable}
+	with respect to $\alpha$ on $[a, b]$
+	if there exists a number $A$ such that
+	for any choice of $\varepsilon > 0$,
+	we can always find a partition $P_\varepsilon$ of $[a, b]$ such that
+	for any partition $P$ finer than $P_\varepsilon$, $P \supseteq P_\varepsilon$,
+	and for any set of representatives $T$ of $P$,
+	the \textbf{Riemann-Stieltjes sum}\index{Riemann-Stieltjes sum}
+	satisfies
+	\begin{align*}
+		\abs{ S(P, T, f, \alpha) - A } < \varepsilon
+	\end{align*}
+	The number $A$ is denoted by $\int_a^b f \dif \alpha$
+	or more verbose, $\int_a^b f(x) \dif \alpha(x)$,
+	and is referred to as the (value of)
+	\textbf{Riemann-Stieltjes integral}\index{Riemann-Stieltjes integral}
+	(of $f$ w.r.t. $\alpha$ on $[a, b]$).
+\end{definition}
+
+\section{Linear Properties}
+
+The following theorem shows the linearity of integrals in the fashion of
+the integrands.
+
+\begin{theorem}
+	If $f, g \in \mathfrak{R}(\alpha)$ on $[a, b]$,
+	then $c_1 f + c_2 g \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+	And
+	\begin{align}
+		\int_a^b c_1 f + c_2 g \dif \alpha
+		= c_1 \int_a^b f \dif \alpha + c_2 \int_a^b g \dif \alpha
+		\label{eq:16}
+	\end{align}
+\end{theorem}
+
+\begin{proof}
+	Let $\varepsilon > 0$ be arbitrary.
+	Because $f$ and $g$ are both Riemann integrable on $[a, b]$,
+	there exists a partition $P_\varepsilon$ of $[a, b]$
+	such that for any $P \supseteq P_\varepsilon$ and
+	set of representatives $T$ of $P$ satisfying
+	\begin{align}
+		\abs{S(P,T,f,\alpha) - \int_a^b f \dif \alpha} < \frac{\varepsilon}{\abs{c_1} + \abs{c_2} + 1}
+		\quad \text{and} \quad
+		\abs{S(P,T,g,\alpha) - \int_a^b g \dif \alpha} < \frac{\varepsilon}{\abs{c_1} + \abs{c_2} + 1}
+		\label{eq:15}
+	\end{align}
+	\begin{note}
+		The reason of the choice of
+		the small number $\frac{\varepsilon}{\abs{c_1} + \abs{c_2} + 1}$
+		will be clear later.
+		And the $+1$ in the denominator is designed for the case that
+		both $c_1$ and $c_2$ are zeros.
+	\end{note}
+	Consider the Riemann-Stieltjes sum $S(P,T,c_1 f + c_2 g, \alpha)$.
+	We have
+	\begin{alignat*}{2}
+		 & \quad &  & \abs{S(P,T,c_1 f + c_2 g, \alpha)
+			- c_1 \int_a^b f \dif \alpha
+		- c_2 \int_a^b g \dif \alpha}                   \\
+		 & =     &  & \abs{
+			\sum_k (c_1 \Delta f_k + c_2 \Delta g_k)
+			- c_1 \int_a^b f \dif \alpha
+		- c_2 \int_a^b g \dif \alpha}                   \\
+		 & =     &  & \abs{
+			c_1 \sum_k \Delta f_k + c_2  \sum_k \Delta g_k
+			- c_1 \int_a^b f \dif \alpha
+		- c_2 \int_a^b g \dif \alpha}                   \\
+		 & =     &  & \abs{
+			c_1 S(P,T,f,\alpha) + c_2 S(P,T,g,\alpha)
+			- c_1 \int_a^b f \dif \alpha
+		- c_2 \int_a^b g \dif \alpha}                   \\
+		 & \leq  &  & \abs{c_1} \abs{
+			S(P,T,f,\alpha) - \int_a^b f \dif \alpha
+		} + \abs{c_2} \abs{
+			S(P,T,g,\alpha) - \int_a^b g \dif \alpha
+		}
+	\end{alignat*}
+	Applying \eqref{eq:15}, we obtain
+	\begin{align*}
+		\abs{S(P,T,c_1 f + c_2 g, \alpha)
+			- c_1 \int_a^b f \dif \alpha
+			-  c_2 \int_a^b g \dif \alpha}
+		 & < \abs{c_1} \frac{\varepsilon}{\abs{c_1} + \abs{c_2} + 1}
+		+ \abs{c_2} \frac{\varepsilon}{\abs{c_1} + \abs{c_2} + 1}                  \\
+		 & = \frac{\varepsilon (\abs{c_1} + \abs{c_2})}{\abs{c_1} + \abs{c_2} + 1} \\
+		 & < \varepsilon
+	\end{align*}
+	This shows that $c_1 f + c_2 g$
+	is also Riemann integrable on $[a, b]$, and \eqref{eq:16} is satisfied.
+\end{proof}
+
+Analogously, we can prove that
+the integral is linear in the integrators.
+
+\begin{theorem}
+	If $f \in \mathfrak{R}(\alpha)$
+	and $f \in \mathfrak{R}(\beta)$ on $[a, b]$,
+	then $f \in \mathfrak{R}(c_1 \alpha + c_2 \beta)$ on $[a, b]$.
+	And
+	\begin{align*}
+		\int_a^b f \dif (c_1 \alpha + c_2 \beta)
+		= c_1 \int_a^b f \dif \alpha + c_2 \int_a^b f \dif \beta
+	\end{align*}
+\end{theorem}
+
+%==============================
+
+\section{Integration by Parts}
+
+\begin{theorem}
+	If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$,
+	then $\alpha \in \mathfrak{R}(f)$ on $[a, b]$, and
+	\begin{align}
+		\int_a^b f \dif \alpha
+		+ \int_a^b \alpha \dif f
+		= f(b) \alpha(b) - f(a) \alpha(a)
+		\label{eq:19}
+	\end{align}
+\end{theorem}
+
+\begin{note}
+	Take a second
+	and appreciate the beauty of symmetry of the equation \eqref{eq:19}.
+	This can be regarded as a \textit{reciprocal rule} for Riemann-Stieltjes integrals.
+	Indeed, it tells us the value of the integral
+	when the integrand and the integrator are swapped.
+\end{note}
+
+\begin{proof}
+	Let $\varepsilon > 0$ be arbitrary.
+	Because $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, by definition,
+	there exists $P_\varepsilon$ such that for
+	any refinement $P \supseteq P_\varepsilon$
+	and any set of representatives $T$ of $P$,
+	the Riemann-Stieltjes sum $S(P, T, f, \alpha)$ satisfies that
+	\begin{align*}
+		\abs{S(P, T, f, \alpha) - \int_a^b f \dif \alpha} < \varepsilon
+	\end{align*}
+
+	Consider an arbitrary refinement $P^\prime \supseteq P_\varepsilon$.
+	And let $T^\prime$ be a list of representatives of $P^\prime$.
+	We want to show that $S(P^\prime, T^\prime, \alpha, f)$
+	is near the desired value.
+	Write $P^\prime = \{x_0, \ldots, x_n\}$.
+	The Riemann-Stieltjes sum $S(P^\prime, T^\prime, \alpha, f)$ can be then
+	written as
+	\begin{align}
+		S(P^\prime, T^\prime, \alpha, f)
+		= \sum_{k=1}^n \alpha(t_k) [f(x_k) - f(x_{k-1}]
+		= \sum_{k=1}^n \alpha(t_k) f(x_k)
+		- \sum_{k=1}^n \alpha(t_k) f(x_{k-1})
+		\label{eq:17}
+	\end{align}
+
+
+	Meanwhile, the difference $A = f(b)\alpha(b) - f(a)\alpha(a)$
+	on the right-hand side of \eqref{eq:19}
+	can be written as
+	\begin{alignat}{2}
+		A & = &  & f(b)\alpha(b) - f(a)\alpha(a) \nonumber                                 \\
+		  & = &  & f(x_n)\alpha(x_n)
+		- f(x_{n-1})\alpha(x_{n-1}) \nonumber                                              \\
+		  &   &  & + f(x_{n-1})\alpha(x_{n-1})
+		- \cdots
+		- f(x_{1})\alpha(x_{1}) \nonumber                                                  \\
+		  &   &  & + f(x_{1})\alpha(x_{1})- f(x_0)\alpha(x_0) \nonumber                    \\
+		  & = &  & \sum_{k=1}^n f(x_k)\alpha(x_k) - \sum_{k=1}^n f(x_{k-1})\alpha(x_{k-1})
+		\label{eq:18}
+	\end{alignat}
+
+	Subtracting \eqref{eq:17} from \eqref{eq:18}, we obtain
+	\begin{align}
+		A - S(P^\prime, T^\prime, \alpha, f)
+		= \sum_{k=1}^n f(x_k) [ \alpha(x_k) - \alpha(t_k) ]
+		+ \sum_{k=1}^n f(x_{k-1}) [ \alpha(t_k) - \alpha(x_{k-1}) ]
+		\label{eq:20}
+	\end{align}
+	Taking a close look at the right-hand side of \eqref{eq:20},
+	one may realize that it is also a Riemann-Stieltjes sum.
+	To see this, let $P^{\prime\prime} = P^\prime \cup T^\prime$,
+	and let $T^{\prime\prime}$ be the list of representatives constructed as follows.
+	Choose $x_k$ in $[t_k, x_k]$ (if $t_k < x_k$)
+	and chose $x_{k-1}$ in $[x_{k-1}, t_k]$ (if $x_{k-1} < t_k$).
+	\begin{note}
+		There are chances that $t_k = x_k$ or $t_k = x_{k-1}$.
+		In that case, the term $f(x_k)[\alpha(x_k)-\alpha(t_k)]$
+		or $f(x_{k-1})[\alpha(t_k)-\alpha(x_{k-1})]$
+		would be zero.
+	\end{note}
+
+	Consider the diagram shown in Figure \ref{fig:5}.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.8\textwidth]{figures/integration-by-parts-proof-diagram.png}
+		\caption{The blue part is associated with $f(x_k)[\alpha(x_k)-\alpha(t_k)]$ while the orange part is associated with $f(x_{k-1})[\alpha(t_k)-\alpha(x_{k-1})]$. We see that summing them up yields $S(P^{\prime\prime}, T^{\prime\prime}, f, \alpha)$.}
+		\label{fig:5}
+	\end{figure}
+
+	The right-hand side of \eqref{eq:20}
+	is just $S(P^{\prime\prime}, T^{\prime\prime}, f, \alpha)$.
+	Since $P^{\prime\prime} \supseteq P_\varepsilon$,
+	we have
+	\begin{align*}
+		\abs{
+			S(P^{\prime\prime}, T^{\prime\prime}, f, \alpha)
+			- \int_a^b f \dif \alpha
+		} < \varepsilon
+		\implies \abs{
+			A - S(P^\prime, T^\prime, \alpha, f) -  \int_a^b f \dif \alpha
+		} < \varepsilon
+	\end{align*}
+	This shows that $\alpha \in \mathfrak{R}(f)$ on $[a, b]$,
+	and \eqref{eq:19} is proved.
+\end{proof}
+
+\section{Change of Variables in a Riemann-Stieltjes Integral}
+
+\begin{theorem}
+	Suppose $f \in \mathfrak{R}(f)$ on $[a, b]$.
+	Let $g$ be a strictly monotonic and surjective function defined
+	on an interval $J$ having endpoints $c$ and $d$.
+	Suppose also that $g(c) = a$ and $g(d) = b$.
+	Let
+	\begin{align*}
+		h(x) = f[g(x)] \quad \text{and} \quad \beta(x) = \alpha[g(x)]
+		\quad x \in J
+	\end{align*}
+	Then $h \in \mathfrak{R}(\beta)$ on $J$,
+	and $\int_a^b f \dif \alpha = \int_c^d h \dif \beta$.
+	That is,
+	\begin{align*}
+		\int_{a = g(c)}^{b = g(d)} f(t) \dif t
+		= \int_c^d f[g(x)] \dif \alpha[g(x)]
+	\end{align*}
+\end{theorem}
+
+\begin{note}
+	Originally in \cite{apostolMathematicalAnalysisModern1974},
+	the condition of function $g$ is that it is strictly monotonic and continuous.
+	As a matter of fact, these two conditions are equivalent.
+	At the end of the day,
+	we impose these to conditions of $g$ so that it has
+	an inverse $g^{-1}$ defined on $[a, b]$.
+	($g^{-1}$ is also continuous of course.)
+
+	The key of this proof is constructing a one-to-one relation
+	using function $g$
+	between a partition $P$ of $[a, b]$ and a partition $P'$ of $J$.
+	In the proof below, we write $P = g(P^\prime)$
+	and $P^\prime = g^{-1}(P)$.
+\end{note}
+
+
+\begin{proof}
+	Without loss of generality, we may assume that $g$ is strictly increasing.
+	If $g$ is decreasing, we may easily obtain the same result
+	by applying the linearity of the integrals.
+
+	Let $\varepsilon > 0$ be arbitrary.
+	There exists a partition $P_\varepsilon$ of $[a, b]$ satisfying
+	the property described in Definition~\ref{def:1}.
+	As noted previously, we may construct a partition of $[c, d]$,
+	$P^\prime_\varepsilon = g^{-1}(P_\varepsilon)$.
+	Let $P^\prime \supseteq P^\prime_\varepsilon$ be any refinement.
+	Similarly, we may construct a partition of $[a, b]$
+	associated with $P^\prime$, $P = g(P^\prime)$.
+
+	\begin{note}
+		To exploit the property of $P_\varepsilon$,
+		we would want to have $P \supseteq P_\varepsilon$.
+		Luckily, this is indeed true.
+	\end{note}
+
+	Now, we show that $P \supseteq P_\varepsilon$.
+	For any point $x \in P_\varepsilon$,
+	we have $g^{-1}(x) \in P^\prime_\varepsilon \subseteq P^\prime$.
+	Since $x = g[g^{-1}(x)]$,
+	it then follows that $x \in g(P^\prime) = P$.
+	This shows $P \supseteq P_\varepsilon$.
+
+	Write $P^\prime = \{y_0, \ldots, y_n\}$.
+	Suppose $T^\prime$ is a list of representatives of $P^\prime$.
+	Let $T = g(T^\prime)$.
+	Then, of course, $T$ is a list of representatives of $P$.
+	This implies that
+	\begin{align*}
+		S(P^\prime, T^\prime, h, \beta)
+		 & = \sum_{k=1}^n f[g(s_k)] \left\{ \alpha[g(y_k)] - \alpha[y_{k-1}] \right\} \\
+		 & = \sum_{k=1}^n f(t_k) [ \alpha(x_k) - \alpha(x_{k-1}) ]                    \\
+		 & = S(P, T, f, \alpha)
+	\end{align*}
+	The remainder of the proof is straightforward and is therefore omitted.
+\end{proof}
+
+
+%==============================
+
 % References
 \printbibliography[heading=bibintoc, title=References]
 
