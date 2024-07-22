@@ -1,4 +1,4 @@
-# Change of Variables in a Riemann-Stieltjes Integral
+# Change of Variables in Riemann-Stieltjes Integrals
 
 ````{prf:theorem} 
 
