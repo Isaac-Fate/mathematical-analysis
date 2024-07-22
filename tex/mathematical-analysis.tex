@@ -1252,7 +1252,7 @@ the integral is linear in the integrators.
 	and \eqref{eq:19} is proved.
 \end{proof}
 
-\section{Change of Variables in a Riemann-Stieltjes Integral}
+\section{Change of Variables in Riemann-Stieltjes Integrals}
 
 \begin{theorem}
 	Suppose $f \in \mathfrak{R}(f)$ on $[a, b]$.
@@ -1329,6 +1329,96 @@ the integral is linear in the integrators.
 		 & = S(P, T, f, \alpha)
 	\end{align*}
 	The remainder of the proof is straightforward and is therefore omitted.
+\end{proof}
+
+\section{Reduction to Riemann Integrals}
+
+The next theorem tells us that we may replace
+the symbol $\dif \alpha$ with $\alpha^\prime(x) \dif x$
+under some conditions.
+
+\begin{theorem}
+	Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$,
+	and $\alpha$ has a continuous derivative on $[a, b]$.
+	Then $f \alpha^\prime \in \mathfrak{R}$ on $[a, b]$, and
+	\begin{align*}
+		\int_a^b f(x) \dif \alpha(x)
+		= \int_a^b f(x) \alpha^\prime(x) \dif x
+	\end{align*}
+\end{theorem}
+
+\begin{proof}
+	First, suppose $f$ is bounded by $M > 0$, i.e.,
+	\begin{align}
+		\abs{f(x)} \leq M \quad \forall x \in [a, b]
+		\label{eq:23}
+	\end{align}
+
+	Let $\varepsilon > 0$ be arbitrary.
+
+
+	Because $\alpha^\prime$ is continuous on $[a, b]$,
+	it is continuous uniformly there.
+	There exists $\delta > 0$ such that
+	\begin{align}
+		\abs{s - t} \implies \abs{\alpha^\prime(s) - \alpha^\prime(t)}
+		< \frac{\varepsilon}{2M(b-a)}
+		\label{eq:22}
+	\end{align}
+
+	Since $f$ is integrable w.r.t. $\alpha$ on $[a, b]$,
+	there exists a partition $P_\varepsilon$ of $[a, b]$
+	such that
+	for any refinement $P$ of $P_\varepsilon$,
+	and any list of representatives $T$ of $P$,
+	we have
+	\begin{align}
+		\abs{ S(P, T, f, \alpha) - \int_a^b f \dif \alpha}
+		< \varepsilon / 2
+		\label{eq:21}
+	\end{align}
+	Then, we can find a finer
+	partition $P^\prime_\varepsilon \supseteq P_\varepsilon$
+	such that $\norm{P^\prime_\varepsilon} < \delta$.
+
+
+	Let $P \supseteq P^\prime_\varepsilon$ be a refinement
+	such that
+	and $T$ be a list of representatives of $P$.
+	Note that $P$ is of course also a refinement of $P_\varepsilon$.
+	Applying the mean value theorem, we have
+	\begin{align*}
+		S(P,T,f,\alpha)
+		 & = \sum_{k=1}^n f(t_k) [ \alpha(t_k) - \alpha(t_{k-1}) ] \nonumber \\
+		 & = \sum_{k=1}^n f(t_k) \alpha^\prime(s_k) \Delta x_k
+	\end{align*}
+	where each $s_k \in (x_{k-1}, x_k)$.
+
+	Taking the difference of $S(P,T,f \alpha^\prime, x)$
+	and $S(P,T,f,\alpha)$, we have
+	\begin{align*}
+		\abs{S(P,T,f \alpha^\prime, x) - S(P,T,f,\alpha)}
+		 & = \abs{\sum_{k=1}^n f(t_k)
+		[\alpha^\prime(t_k) - \alpha^\prime(s_k)] \Delta x_k} \\
+		 & \leq \sum_{k=1}^n \abs{
+			f(t_k)
+			[\alpha^\prime(t_k) - \alpha^\prime(s_k)] \Delta x_k
+		}                                                     \\
+		 & = \sum_{k=1}^n \abs{
+			f(t_k)}
+		\abs{ \alpha^\prime(t_k) - \alpha^\prime(s_k) } \Delta x_k
+	\end{align*}
+	Then applying \eqref{eq:23} and \eqref{eq:22},
+	the above difference is further bounded by
+	\begin{align}
+		\abs{S(P,T,f \alpha^\prime, x) - S(P,T,f,\alpha)}
+		< M \frac{\varepsilon}{2M(b-a)} \sum_{k=1}^n \Delta x_k
+		= \varepsilon / 2
+		\label{eq:24}
+	\end{align}
+	Recall $P \supseteq P_\varepsilon$.
+	Then we may conclude this proof
+	by comparing \eqref{eq:21} and \eqref{eq:24}.
 \end{proof}
 
 
