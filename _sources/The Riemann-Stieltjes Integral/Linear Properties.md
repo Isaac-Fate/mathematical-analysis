@@ -95,3 +95,18 @@ And
 ```
 
 ````
+
+````{prf:theorem} 
+:label: thm:5
+
+Assume $c \in (a, b)$.
+If two of the three integrals in {eq}`eq:25` exist,
+then the other one also exists, and {eq}`eq:25` holds.
+
+```{math}
+:label: eq:25
+\int_a^c f \dif\alpha + \int_c^b f \dif\alpha
+= \int_a^b f \dif\alpha
+```
+
+````

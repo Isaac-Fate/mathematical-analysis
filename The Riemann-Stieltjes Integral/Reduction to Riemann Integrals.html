@@ -202,6 +202,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Change%20of%20Variables%20in%20Riemann-Stieltjes%20Integrals.html">3.4. Change of Variables in Riemann-Stieltjes Integrals</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">3.5. Reduction to Riemann Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Step%20Functions%20as%20Integrators.html">3.6. Step Functions as Integrators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reduction%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">3.7. Reduction Riemann-Stieltjes Integrals to Finite Sums</a></li>
 </ul>
 </details></li>
 </ul>
@@ -365,7 +366,7 @@ document.write(`
 the symbol <span class="math notranslate nohighlight">\(\dif \alpha\)</span> with <span class="math notranslate nohighlight">\(\alpha^\prime(x) \dif x\)</span>
 under some conditions.</p>
 <div class="proof theorem admonition" id="theorem-0">
-<p class="admonition-title"><span class="caption-number">Theorem 3.5 </span></p>
+<p class="admonition-title"><span class="caption-number">Theorem 3.6 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Suppose <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
 and <span class="math notranslate nohighlight">\(\alpha\)</span> has a continuous derivative on <span class="math notranslate nohighlight">\([a, b]\)</span>.
@@ -378,13 +379,13 @@ Then <span class="math notranslate nohighlight">\(f \alpha^\prime \in \mathfrak{
 </div><div class="proof admonition" id="proof">
 <p>Proof. First, suppose <span class="math notranslate nohighlight">\(f\)</span> is bounded by <span class="math notranslate nohighlight">\(M &gt; 0\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight" id="equation-eq-23">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-eq-23" title="Link to this equation">#</a></span>\[\abs{f(x)}\leq M \quad\forall x \in[a, b]\]</div>
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-eq-23" title="Link to this equation">#</a></span>\[\abs{f(x)}\leq M \quad\forall x \in[a, b]\]</div>
 <p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.</p>
 <p>Because <span class="math notranslate nohighlight">\(\alpha^\prime\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>,
 it is continuous uniformly there.
 There exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-22">
-<span class="eqno">(3.8)<a class="headerlink" href="#equation-eq-22" title="Link to this equation">#</a></span>\[\abs{s - t}\implies\abs{\alpha^\prime(s) - \alpha^\prime(t)}
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-eq-22" title="Link to this equation">#</a></span>\[\abs{s - t}\implies\abs{\alpha^\prime(s) - \alpha^\prime(t)}
 &lt; \frac{\varepsilon}{2M(b-a)}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(f\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
 there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>
@@ -393,7 +394,7 @@ for any refinement <span class="math notranslate nohighlight">\(P\)</span> of <s
 and any list of representatives <span class="math notranslate nohighlight">\(T\)</span> of <span class="math notranslate nohighlight">\(P\)</span>,
 we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-21">
-<span class="eqno">(3.9)<a class="headerlink" href="#equation-eq-21" title="Link to this equation">#</a></span>\[\abs{ S(P, T, f, \alpha) - \int_a^b f \dif \alpha}
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-eq-21" title="Link to this equation">#</a></span>\[\abs{ S(P, T, f, \alpha) - \int_a^b f \dif \alpha}
 &lt; \varepsilon / 2\]</div>
 <p>Then, we can find a finer
 partition <span class="math notranslate nohighlight">\(P^\prime_\varepsilon \supseteq P_\varepsilon\)</span>
@@ -418,15 +419,15 @@ f(t_k)
 }\\&amp; = \sum_{k=1}^n \abs{
 f(t_k)}\abs{ \alpha^\prime(t_k) - \alpha^\prime(s_k) }\Delta x_k
 \end{split}\]</div>
-<p>Then applying <a class="reference internal" href="#equation-eq-23">(3.7)</a> and <a class="reference internal" href="#equation-eq-22">(3.8)</a>,
+<p>Then applying <a class="reference internal" href="#equation-eq-23">(3.8)</a> and <a class="reference internal" href="#equation-eq-22">(3.9)</a>,
 the above difference is further bounded by</p>
 <div class="math notranslate nohighlight" id="equation-eq-24">
-<span class="eqno">(3.10)<a class="headerlink" href="#equation-eq-24" title="Link to this equation">#</a></span>\[\abs{S(P,T,f \alpha^\prime, x) - S(P,T,f,\alpha)}
+<span class="eqno">(3.11)<a class="headerlink" href="#equation-eq-24" title="Link to this equation">#</a></span>\[\abs{S(P,T,f \alpha^\prime, x) - S(P,T,f,\alpha)}
 &lt; M \frac{\varepsilon}{2M(b-a)}\sum_{k=1}^n \Delta x_k
 = \varepsilon / 2\]</div>
 <p>Recall <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>.
 Then we may conclude this proof
-by comparing <a class="reference internal" href="#equation-eq-21">(3.9)</a> and <a class="reference internal" href="#equation-eq-24">(3.10)</a>.</p>
+by comparing <a class="reference internal" href="#equation-eq-21">(3.10)</a> and <a class="reference internal" href="#equation-eq-24">(3.11)</a>.</p>
 </div>
 </section>
 

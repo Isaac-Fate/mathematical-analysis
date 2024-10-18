@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3.6. Step Functions as Integrators &#8212; Mathematical Analysis</title>
+    <title>3.7. Reduction Riemann-Stieltjes Integrals to Finite Sums &#8212; Mathematical Analysis</title>
   
   
   
@@ -61,12 +61,12 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "CALA": "\\mathcal{A}", "CALB": "\\mathcal{B}", "CALC": "\\mathcal{C}", "CALD": "\\mathcal{D}", "CALE": "\\mathcal{E}", "CALF": "\\mathcal{F}", "CALG": "\\mathcal{G}", "CALH": "\\mathcal{H}", "CALI": "\\mathcal{I}", "CALJ": "\\mathcal{J}", "CALK": "\\mathcal{K}", "CALL": "\\mathcal{L}", "CALM": "\\mathcal{M}", "CALN": "\\mathcal{N}", "CALO": "\\mathcal{O}", "CALP": "\\mathcal{P}", "CALQ": "\\mathcal{Q}", "CALR": "\\mathcal{R}", "CALS": "\\mathcal{S}", "CALT": "\\mathcal{T}", "CALU": "\\mathcal{U}", "CALV": "\\mathcal{V}", "CALW": "\\mathcal{W}", "CALX": "\\mathcal{X}", "CALY": "\\mathcal{Y}", "CALZ": "\\mathcal{Z}", "F": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "RE": ["\\mathrm{Re}"], "SCRI": "\\mathsrc{I}", "SRCA": "\\mathsrc{A}", "SRCB": "\\mathsrc{B}", "SRCC": "\\mathsrc{C}", "SRCD": "\\mathsrc{D}", "SRCE": "\\mathsrc{E}", "SRCF": "\\mathsrc{F}", "SRCG": "\\mathsrc{G}", "SRCH": "\\mathsrc{H}", "SRCJ": "\\mathsrc{J}", "SRCK": "\\mathsrc{K}", "SRCL": "\\mathsrc{L}", "SRCM": "\\mathsrc{M}", "SRCN": "\\mathsrc{N}", "SRCO": "\\mathsrc{O}", "SRCP": "\\mathsrc{P}", "SRCQ": "\\mathsrc{Q}", "SRCR": "\\mathsrc{R}", "SRCS": "\\mathsrc{S}", "SRCT": "\\mathsrc{T}", "SRCU": "\\mathsrc{U}", "SRCV": "\\mathsrc{V}", "SRCW": "\\mathsrc{W}", "SRCX": "\\mathsrc{X}", "SRCY": "\\mathsrc{Y}", "SRCZ": "\\mathsrc{Z}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "dif": "\\, \\mathrm{d}", "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor#1\\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "proj": ["\\mathop{\\mathrm{proj}}"], "restr": ["{#1}|_{#2}", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\; \\middle| \\; #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'The Riemann-Stieltjes Integral/Step Functions as Integrators';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'The Riemann-Stieltjes Integral/Reduction Riemann-Stieltjes Integrals to Finite Sums';</script>
     <link rel="icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.7. Reduction Riemann-Stieltjes Integrals to Finite Sums" href="Reduction%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html" />
-    <link rel="prev" title="3.5. Reduction to Riemann Integrals" href="Reduction%20to%20Riemann%20Integrals.html" />
+    <link rel="next" title="References" href="../bibliography.html" />
+    <link rel="prev" title="3.6. Step Functions as Integrators" href="Step%20Functions%20as%20Integrators.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -201,8 +201,8 @@
 <li class="toctree-l2"><a class="reference internal" href="Integration%20by%20Parts.html">3.3. Integration by Parts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Change%20of%20Variables%20in%20Riemann-Stieltjes%20Integrals.html">3.4. Change of Variables in Riemann-Stieltjes Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Reduction%20to%20Riemann%20Integrals.html">3.5. Reduction to Riemann Integrals</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.6. Step Functions as Integrators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Reduction%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">3.7. Reduction Riemann-Stieltjes Integrals to Finite Sums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Step%20Functions%20as%20Integrators.html">3.6. Step Functions as Integrators</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.7. Reduction Riemann-Stieltjes Integrals to Finite Sums</a></li>
 </ul>
 </details></li>
 </ul>
@@ -264,7 +264,7 @@
       
       
       
-      <li><a href="../_sources/The Riemann-Stieltjes Integral/Step Functions as Integrators.md" target="_blank"
+      <li><a href="../_sources/The Riemann-Stieltjes Integral/Reduction Riemann-Stieltjes Integrals to Finite Sums.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,7 +346,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Step Functions as Integrators</h1>
+    <h1>Reduction Riemann-Stieltjes Integrals to Finite Sums</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -360,84 +360,56 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="step-functions-as-integrators">
-<h1><span class="section-number">3.6. </span>Step Functions as Integrators<a class="headerlink" href="#step-functions-as-integrators" title="Link to this heading">#</a></h1>
-<div class="proof proposition admonition" id="prop:6">
-<p class="admonition-title"><span class="caption-number">Proposition 3.1 </span></p>
-<section class="proposition-content" id="proof-content">
-<p>Suppose <span class="math notranslate nohighlight">\(\alpha\)</span> is constant on <span class="math notranslate nohighlight">\([a, b]\)</span> except possibly at point <span class="math notranslate nohighlight">\(x=a\)</span>,
-that is, <span class="math notranslate nohighlight">\(\alpha(x) = \alpha(b)\)</span> for all <span class="math notranslate nohighlight">\(a &lt; x \leq b\)</span>.
-If <span class="math notranslate nohighlight">\(f\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(a\)</span>,
-then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="reduction-riemann-stieltjes-integrals-to-finite-sums">
+<h1><span class="section-number">3.7. </span>Reduction Riemann-Stieltjes Integrals to Finite Sums<a class="headerlink" href="#reduction-riemann-stieltjes-integrals-to-finite-sums" title="Link to this heading">#</a></h1>
+<p>Function <span class="math notranslate nohighlight">\(\alpha\)</span> in <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#thm:6">Theorem 3.7</a> is a special case of step functions.</p>
+<div class="proof definition admonition" id="def:2">
+<span id="index-0"></span><p class="admonition-title"><span class="caption-number">Definition 3.2 </span> (Step Functions)</p>
+<section class="definition-content" id="proof-content">
+<p>A function defined on <span class="math notranslate nohighlight">\([a, b]\)</span> is called
+a  <strong>step function</strong>
+if there is a partition</p>
 <div class="math notranslate nohighlight">
-\[\int_a^b f \dif\alpha = f(a)[\alpha(b) - \alpha(a)]\]</div>
+\[a=x_1 &lt; x_2 &lt; \cdots &lt; x_n = b
+\]</div>
+<p>such that <span class="math notranslate nohighlight">\(\alpha\)</span> is constant on <span class="math notranslate nohighlight">\((x_{k-1}, x_k)\)</span> for <span class="math notranslate nohighlight">\(k=2, \ldots, n\)</span>.</p>
+<p id="index-1">The number <span class="math notranslate nohighlight">\(\alpha(x_k+) - \alpha(x_k-)\)</span> is defined as
+the  <strong>jump</strong>
+at point <span class="math notranslate nohighlight">\(x_k\)</span> for <span class="math notranslate nohighlight">\(k=2, \ldots, n-1\)</span>.</p>
+<p>At the left endpoint <span class="math notranslate nohighlight">\(x=a\)</span>, the jump is defined as <span class="math notranslate nohighlight">\(\alpha(a+) - \alpha(a)\)</span>.
+Similarly, at the right endpoint <span class="math notranslate nohighlight">\(x=b\)</span>, the jump is defined
+as <span class="math notranslate nohighlight">\(\alpha(b) - \alpha(b-)\)</span>.</p>
 </section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Note that we assume <span class="math notranslate nohighlight">\(\alpha\)</span> possibly has a different value at <span class="math notranslate nohighlight">\(a\)</span>.
-If <span class="math notranslate nohighlight">\(\alpha\)</span> is constant on the entire interval <span class="math notranslate nohighlight">\([a, b]\)</span>,
-the integral clearly exists and is zero.</p>
-<p>An analogous result holds
-when we assume <span class="math notranslate nohighlight">\(\alpha\)</span> is constant on <span class="math notranslate nohighlight">\([a, b]\)</span> except possibly
-at the right endpoint <span class="math notranslate nohighlight">\(x=b\)</span>.</p>
+<p>It is possible that <span class="math notranslate nohighlight">\(\alpha(x_k+) = \alpha(x_k -)\)</span>.
+In this case, the jump at <span class="math notranslate nohighlight">\(x_k\)</span> is zero.
+But this does not mean that <span class="math notranslate nohighlight">\(\alpha\)</span> is constant on <span class="math notranslate nohighlight">\((x_{k-1}, x_{k+1})\)</span>
+because we might have <span class="math notranslate nohighlight">\(x_k \neq x_k+\)</span>.</p>
 </div>
-<div class="proof admonition" id="proof">
-<p>Proof. If <span class="math notranslate nohighlight">\(\alpha(a) = \alpha(b)\)</span>, the conclusion is trivial.
-In the following proof, we assume <span class="math notranslate nohighlight">\(\alpha(a) \neq \alpha(b)\)</span>.</p>
-<p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
-Because <span class="math notranslate nohighlight">\(f\)</span> is continuous at <span class="math notranslate nohighlight">\(x=a\)</span>, there exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
-<div class="math notranslate nohighlight">
-\[x - a &lt; \delta\implies\abs{f(x) - f(a)} &lt; \frac{\varepsilon}{\abs{\alpha(b) - \alpha(a)}}\]</div>
-<p>Let <span class="math notranslate nohighlight">\(P_\varepsilon = \{x_0, \ldots, x_n\}\)</span> be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>
-such that <span class="math notranslate nohighlight">\(x_1 &lt; x_0 + \delta\)</span>.
-For any refinement <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>, we have</p>
-<div class="math notranslate nohighlight">
-\[S(P, T, f, \alpha) = \sum_{k=1}^n f(x_k) \Delta\alpha_k
-= f(t_1) [\alpha(x_1) - \alpha(x_0)]
-= f(t_1) [\alpha(b) - \alpha(a)]\]</div>
-<p>It then follows that</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\abs{S(P,T,f,\alpha) - f(a)[\alpha(b) - \alpha(a)]}&amp; = \abs{f(t_1) - f(a)}\abs{\alpha(b) - \alpha(a)}\\&amp; &lt; \frac{\varepsilon}{\abs{\alpha(b) - \alpha(a)}}\abs{\alpha(b) - \alpha(a)}\\&amp; =\varepsilon\end{split}\]</div>
-<p>This completes the proof.</p>
-</div>
-<div class="proof theorem admonition" id="thm:6">
-<p class="admonition-title"><span class="caption-number">Theorem 3.7 </span></p>
+<p>Step functions provide the link between the Riemann-Stieltjes integrals
+and the finite sums of functions.</p>
+<div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span class="caption-number">Theorem 3.8 </span></p>
 <section class="theorem-content" id="proof-content">
-<p>Given <span class="math notranslate nohighlight">\(a &lt; c &lt;b\)</span>.
-Let <span class="math notranslate nohighlight">\(\alpha\)</span> be constant on <span class="math notranslate nohighlight">\([a, b]\)</span> except at point <span class="math notranslate nohighlight">\(x=c\)</span>.
-That is, let <span class="math notranslate nohighlight">\(\alpha(a)\)</span>, <span class="math notranslate nohighlight">\(\alpha(c)\)</span> and <span class="math notranslate nohighlight">\(\alpha(b)\)</span> be arbitrary.
-Define</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\alpha(x) := \begin{cases}
-\alpha(a), &amp; a \leq x &lt; c \\
-\alpha(c), &amp; x=c          \\
-\alpha(b), &amp; c &lt; x \leq b
-\end{cases}\end{split}\]</div>
-<p>If function <span class="math notranslate nohighlight">\(f\)</span> is defined in such a way that</p>
+<p>Let <span class="math notranslate nohighlight">\(\alpha\)</span> be a step function on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Let <span class="math notranslate nohighlight">\(x_1, \ldots, x_n\)</span> be the same as in <a class="reference internal" href="#def:2">Definition 3.2</a>
+and <span class="math notranslate nohighlight">\(\alpha_k\)</span> be the jump at <span class="math notranslate nohighlight">\(x_k\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be a function defined on <span class="math notranslate nohighlight">\([a, b]\)</span> such that</p>
 <ol class="arabic simple">
-<li><p>At least one of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(c\)</span>, and</p></li>
-<li><p>at least one of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(c\)</span>,</p></li>
+<li><p>at least one of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x_k\)</span>, and</p></li>
+<li><p>at least one of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x_k\)</span>.</p></li>
 </ol>
-<p>then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
+<p>for <span class="math notranslate nohighlight">\(k=2, \ldots, n-1\)</span>.
+And for <span class="math notranslate nohighlight">\(k=1\)</span> and <span class="math notranslate nohighlight">\(k=n\)</span>, at least one of <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span>
+is continuous from one side at the endpoint.</p>
+<p>Then, <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and we have</p>
 <div class="math notranslate nohighlight">
-\[\int_a^b f \dif\alpha = f(c)[\alpha(c+) - \alpha(c-)]\]</div>
+\[\int_a^b f \dif\alpha =
+\sum_{k=1}^n f(x_k) \alpha_k
+\]</div>
 </section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. It follows from <a class="reference internal" href="#prop:6">Proposition 3.1</a> and its analogous result
-that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, c]\)</span>
-and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}\)</span> on <span class="math notranslate nohighlight">\([c, b]\)</span>.
-The values of the integrals are</p>
-<div class="math notranslate nohighlight">
-\[\int_a^c f \dif\alpha = f(c)[\alpha(c) - \alpha(a)]\quad\text{and}\quad\int_c^b f \dif\alpha = f(c)[\alpha(b) - \alpha(c)]\]</div>
-<p>Then <a class="reference internal" href="Linear%20Properties.html#thm:5">Theorem 3.3</a> implies
-that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
-<div class="math notranslate nohighlight">
-\[\int_a^b f \dif\alpha
-= \int_a^c f \dif\alpha + \int_c^b f \dif\alpha
-= f(c)[\alpha(b) - \alpha(a)]
-= f(c)[\alpha(c+) - \alpha(c-)]\]</div>
-</div>
-</section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {
@@ -470,20 +442,20 @@ that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Reduction%20to%20Riemann%20Integrals.html"
+       href="Step%20Functions%20as%20Integrators.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.5. </span>Reduction to Riemann Integrals</p>
+        <p class="prev-next-title"><span class="section-number">3.6. </span>Step Functions as Integrators</p>
       </div>
     </a>
     <a class="right-next"
-       href="Reduction%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html"
+       href="../bibliography.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.7. </span>Reduction Riemann-Stieltjes Integrals to Finite Sums</p>
+        <p class="prev-next-title">References</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

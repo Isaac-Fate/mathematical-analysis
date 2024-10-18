@@ -61,6 +61,7 @@ This completes the proof.
 ````
 
 ````{prf:theorem} 
+:label: thm:6
 
 Given $a < c <b$.
 Let $\alpha$ be constant on $[a, b]$ except at point $x=c$.
@@ -83,6 +84,29 @@ then $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and
 
 ```{math}
 \int_a^b f \dif\alpha = f(c)[\alpha(c+) - \alpha(c-)]
+```
+
+````
+
+````{prf:proof}
+
+It follows from {prf:ref}`prop:6` and its analogous result
+that $f \in \mathfrak{R}(\alpha)$ on $[a, c]$
+and $f \in \mathfrak{R}$ on $[c, b]$.
+The values of the integrals are
+
+```{math}
+\int_a^c f \dif\alpha = f(c)[\alpha(c) - \alpha(a)]\quad\text{and}\quad\int_c^b f \dif\alpha = f(c)[\alpha(b) - \alpha(c)]
+```
+
+Then {prf:ref}`thm:5` implies
+that $f \in \mathfrak{R}(\alpha)$ on $[a, b]$, and
+
+```{math}
+\int_a^b f \dif\alpha
+= \int_a^c f \dif\alpha + \int_c^b f \dif\alpha
+= f(c)[\alpha(b) - \alpha(a)]
+= f(c)[\alpha(c+) - \alpha(c-)]
 ```
 
 ````
