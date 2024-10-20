@@ -47,7 +47,7 @@ and the finite sums of functions.
 
 
 ````{prf:theorem} 
-:label: eq:27
+:label: thm:7
 
 Let $\alpha$ be a step function on $[a, b]$.
 Let $x_1, \ldots, x_n$ be the same as in {prf:ref}`def:2`
@@ -155,10 +155,8 @@ The construction is valid as long as $f(k) = a_k$ and
 is continuous from the left at $x=1, \ldots, n$.
 One may define $f$ by applying the linear interpolation
 (or polynomial interpolation or spline interpolation, etc.)
-on the data $a_1, \ldots, a_n$,
+on the data $(1, a_1), \ldots, (n, a_n)$,
 in which case $f$ is continuous on the entire interval $[0, n]$.
 But I prefer the one given in the proof since this makes
 both floor and ceiling functions appear in {eq}`eq:28`,
 which makes the formula prettier.
-
-

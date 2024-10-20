@@ -207,6 +207,7 @@
 <li class="toctree-l2"><a class="reference internal" href="The%20Riemann-Stieltjes%20Integral/Reduction%20to%20Riemann%20Integrals.html">3.5. Reduction to Riemann Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="The%20Riemann-Stieltjes%20Integral/Step%20Functions%20as%20Integrators.html">3.6. Step Functions as Integrators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="The%20Riemann-Stieltjes%20Integral/Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">3.7. Reduction of Riemann-Stieltjes Integrals to Finite Sums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="The%20Riemann-Stieltjes%20Integral/Euler%27s%20Summation%20Formula.html">3.8. Euler’s Summation Formula</a></li>
 </ul>
 </details></li>
 </ul>
@@ -329,8 +330,8 @@ document.write(`
    <a href="#cap-eq:1"><strong>eq:1</strong></a> | 
    <a href="#cap-eq:16"><strong>eq:16</strong></a> | 
    <a href="#cap-eq:19"><strong>eq:19</strong></a> | 
-   <a href="#cap-eq:27"><strong>eq:27</strong></a> | 
    <a href="#cap-eq:28"><strong>eq:28</strong></a> | 
+   <a href="#cap-eq:33"><strong>eq:33</strong></a> | 
    <a href="#cap-example-7"><strong>example-7</strong></a> | 
    <a href="#cap-fig:2"><strong>fig:2</strong></a> | 
    <a href="#cap-fig:3"><strong>fig:3</strong></a> | 
@@ -349,7 +350,9 @@ document.write(`
    <a href="#cap-thm:3"><strong>thm:3</strong></a> | 
    <a href="#cap-thm:4"><strong>thm:4</strong></a> | 
    <a href="#cap-thm:5"><strong>thm:5</strong></a> | 
-   <a href="#cap-thm:6"><strong>thm:6</strong></a>
+   <a href="#cap-thm:6"><strong>thm:6</strong></a> | 
+   <a href="#cap-thm:7"><strong>thm:7</strong></a> | 
+   <a href="#cap-thm:8"><strong>thm:8</strong></a>
    </div>
 
    <table class="indextable modindextable">
@@ -426,20 +429,20 @@ document.write(`
        <a href="The%20Riemann-Stieltjes%20Integral/Integration%20by%20Parts.html#eq:19"><code class="xref">eq:19</code></a> <em>(The Riemann-Stieltjes Integral/Integration by Parts)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-eq:27"><td></td><td>
-       <strong>eq:27</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="The%20Riemann-Stieltjes%20Integral/Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html#eq:27"><code class="xref">eq:27</code></a> <em>(The Riemann-Stieltjes Integral/Reduction of Riemann-Stieltjes Integrals to Finite Sums)</em></td><td>
-       <em>theorem</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-eq:28"><td></td><td>
        <strong>eq:28</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="The%20Riemann-Stieltjes%20Integral/Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html#eq:28"><code class="xref">eq:28</code></a> <em>(The Riemann-Stieltjes Integral/Reduction of Riemann-Stieltjes Integrals to Finite Sums)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-eq:33"><td></td><td>
+       <strong>eq:33</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="The%20Riemann-Stieltjes%20Integral/Euler%27s%20Summation%20Formula.html#eq:33"><code class="xref">eq:33</code></a> <em>(The Riemann-Stieltjes Integral/Euler&#39;s Summation Formula)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-example-7"><td></td><td>
@@ -527,7 +530,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="The%20Riemann-Stieltjes%20Integral/Reduction%20to%20Riemann%20Integrals.html#theorem-0"><code class="xref">theorem-0</code></a> <em>(The Riemann-Stieltjes Integral/Reduction to Riemann Integrals)</em></td><td>
+       <a href="The%20Riemann-Stieltjes%20Integral/Change%20of%20Variables%20in%20Riemann-Stieltjes%20Integrals.html#theorem-0"><code class="xref">theorem-0</code></a> <em>(The Riemann-Stieltjes Integral/Change of Variables in Riemann-Stieltjes Integrals)</em></td><td>
        <em>theorem</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-theorem-1"><td></td><td>
@@ -592,6 +595,22 @@ document.write(`
        <td></td>
        <td>
        <a href="The%20Riemann-Stieltjes%20Integral/Step%20Functions%20as%20Integrators.html#thm:6"><code class="xref">thm:6</code></a> <em>(The Riemann-Stieltjes Integral/Step Functions as Integrators)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm:7"><td></td><td>
+       <strong>thm:7</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="The%20Riemann-Stieltjes%20Integral/Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html#thm:7"><code class="xref">thm:7</code></a> <em>(The Riemann-Stieltjes Integral/Reduction of Riemann-Stieltjes Integrals to Finite Sums)</em></td><td>
+       <em>theorem</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-thm:8"><td></td><td>
+       <strong>thm:8</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="The%20Riemann-Stieltjes%20Integral/Reduction%20to%20Riemann%20Integrals.html#thm:8"><code class="xref">thm:8</code></a> <em>(The Riemann-Stieltjes Integral/Reduction to Riemann Integrals)</em></td><td>
        <em>theorem</em></td></tr>
    </table>
 

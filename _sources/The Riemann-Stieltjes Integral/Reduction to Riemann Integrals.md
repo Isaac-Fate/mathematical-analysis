@@ -6,6 +6,7 @@ under some conditions.
 
 
 ````{prf:theorem} 
+:label: thm:8
 
 Suppose $f \in \mathfrak{R}(\alpha)$ on $[a, b]$,
 and $\alpha$ has a continuous derivative on $[a, b]$.
