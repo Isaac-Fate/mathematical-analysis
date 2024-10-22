@@ -1,5 +1,16 @@
 # Euler's Summation Formula
 
+Euler's summation formula compares a sum $\sum f(n)$
+with its associated integral $\int f(x) \dif x$.
+See {numref}`fig:6` for an illustration.
+
+```{figure} /figures/euler-summation-formula.png
+---
+name: fig:6
+---
+Euler's Summation Formula.
+```
+
 ````{prf:theorem} Euler's Summation Formula
 :label: eq:33
 
@@ -17,6 +28,19 @@ then we have
 In particular, if $a, b \in \Z$ we have
 
 ```{math}
+:label: eq:37
+\sum_{n=a+1}^{b} f(n)
+= \int_a^b f(x) \dif x
++ \int_a^b f^\prime(x) \{x\}\dif x
+
+```
+
+By adding the term $f(a)$ on both sides and applying
+the fundamental theorem of calculus,
+one may obtain a more symmetric formula:
+
+```{math}
+:label: eq:38
 \sum_{n=a}^b f(n)
 = \int_a^b f(x) \dif x
 + \int_a^b f^\prime(x) \left(\{x\} - \frac{1}{2}\right)\dif x
@@ -24,6 +48,14 @@ In particular, if $a, b \in \Z$ we have
 ```
 
 ````
+
+:::{note}
+{eq}`eq:37` is easier to use in practice while {eq}`eq:38`
+is more elegant in the sense of symmetry.
+To derive {eq}`eq:38`, we need to use the fundamental theorem of calculus,
+which will be introduced later.
+
+:::
 
 ````{prf:proof}
 
@@ -122,10 +154,10 @@ Subtracting {eq}`eq:35` from {eq}`eq:34` yields
 = f(b) \{b\} - f(a) \{a\}
 ```
 
-Since $f$ as a continuous derivative,
+Since $f$ has a continuous derivative,
 by {prf:ref}`thm:8`,
 we can replace $\dif f(x)$
-with $f^\prime{x} \dif x$.
+with $f^\prime(x) \dif x$.
 Then rearranging the terms, we obtain
 
 ```{math}
@@ -137,6 +169,33 @@ Then rearranging the terms, we obtain
 ```
 {eq}`eq:33` is proved by comparing {eq}`eq:32` and {eq}`eq:36`.
 
+````
 
+````{prf:example}
+:label: eq:39
+
+Using the Euler's summation formula {eq}`eq:37`,
+we can derive the following
+identities related to summing up terms of the form $\frac{1}{k^s}$:
+1. If $s \neq 1$
+```{math}
+\sum_{k=1}^n \frac{1}{k^s} = \frac{1}{n^{s-1}} + s \int_1^n \frac{\floor{x}}{x^{s+1}}\dif x
+
+```2. If $s=1$
+```{math}
+:label: eq:39
+\sum_{k=1}^n \frac{1}{k}
+= \ln n - \int_1^n \frac{\{x\}}{x^{2}}\dif x + 1
+
+```{eq}`eq:39` provides another way of
+proving
+the sequence $\left\{ \sum_{1}^n \frac{1}{k} - \ln n\right\}$ converges
+(to Euler's constant $\gamma$).
+And hence, we obtain an integral form of the Euler's constant:
+
+```{math}
+\gamma = 1 - \int_1^\infty\ \frac{\{x\}}{x^2}\dif x
+
+```
 
 ````
