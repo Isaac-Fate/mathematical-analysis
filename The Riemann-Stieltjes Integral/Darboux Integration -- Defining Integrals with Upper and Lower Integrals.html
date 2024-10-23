@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2. Functions of Bounded Variation and Rectifiable Curves &#8212; Mathematical Analysis</title>
+    <title>3.9. Darboux Integration – Defining Integrals with Upper and Lower Integrals &#8212; Mathematical Analysis</title>
   
   
   
@@ -61,12 +61,12 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "CALA": "\\mathcal{A}", "CALB": "\\mathcal{B}", "CALC": "\\mathcal{C}", "CALD": "\\mathcal{D}", "CALE": "\\mathcal{E}", "CALF": "\\mathcal{F}", "CALG": "\\mathcal{G}", "CALH": "\\mathcal{H}", "CALI": "\\mathcal{I}", "CALJ": "\\mathcal{J}", "CALK": "\\mathcal{K}", "CALL": "\\mathcal{L}", "CALM": "\\mathcal{M}", "CALN": "\\mathcal{N}", "CALO": "\\mathcal{O}", "CALP": "\\mathcal{P}", "CALQ": "\\mathcal{Q}", "CALR": "\\mathcal{R}", "CALS": "\\mathcal{S}", "CALT": "\\mathcal{T}", "CALU": "\\mathcal{U}", "CALV": "\\mathcal{V}", "CALW": "\\mathcal{W}", "CALX": "\\mathcal{X}", "CALY": "\\mathcal{Y}", "CALZ": "\\mathcal{Z}", "F": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "RE": ["\\mathrm{Re}"], "SCRI": "\\mathsrc{I}", "SRCA": "\\mathsrc{A}", "SRCB": "\\mathsrc{B}", "SRCC": "\\mathsrc{C}", "SRCD": "\\mathsrc{D}", "SRCE": "\\mathsrc{E}", "SRCF": "\\mathsrc{F}", "SRCG": "\\mathsrc{G}", "SRCH": "\\mathsrc{H}", "SRCJ": "\\mathsrc{J}", "SRCK": "\\mathsrc{K}", "SRCL": "\\mathsrc{L}", "SRCM": "\\mathsrc{M}", "SRCN": "\\mathsrc{N}", "SRCO": "\\mathsrc{O}", "SRCP": "\\mathsrc{P}", "SRCQ": "\\mathsrc{Q}", "SRCR": "\\mathsrc{R}", "SRCS": "\\mathsrc{S}", "SRCT": "\\mathsrc{T}", "SRCU": "\\mathsrc{U}", "SRCV": "\\mathsrc{V}", "SRCW": "\\mathsrc{W}", "SRCX": "\\mathsrc{X}", "SRCY": "\\mathsrc{Y}", "SRCZ": "\\mathsrc{Z}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "ceil": ["\\lceil #1 \\rceil", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "dif": "\\, \\mathrm{d}", "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor #1 \\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "proj": ["\\mathop{\\mathrm{proj}}"], "restr": ["{#1}|_{#2}", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\; \\middle| \\; #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Functions of Bounded Variation and Rectifiable Curves/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'The Riemann-Stieltjes Integral/Darboux Integration -- Defining Integrals with Upper and Lower Integrals';</script>
     <link rel="icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.1. Functions of Bounded Variation" href="Functions%20of%20Bounded%20Variation.html" />
-    <link rel="prev" title="1. Point-Set Topology" href="../Point-Set%20Topology/index.html" />
+    <link rel="next" title="References" href="../bibliography.html" />
+    <link rel="prev" title="3.8. Euler’s Summation Formula" href="Euler%27s%20Summation%20Formula.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -189,22 +189,22 @@
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Point-Set%20Topology/index.html">1. Point-Set Topology</a></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">2. Functions of Bounded Variation and Rectifiable Curves</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="Functions%20of%20Bounded%20Variation.html">2.1. Functions of Bounded Variation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Total%20Variation.html">2.2. Total Variation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Continuous%20Functions%20of%20Bounded%20Variation.html">2.3. Continuous Functions of Bounded Variation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/index.html">2. Functions of Bounded Variation and Rectifiable Curves</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Functions%20of%20Bounded%20Variation.html">2.1. Functions of Bounded Variation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Total%20Variation.html">2.2. Total Variation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Continuous%20Functions%20of%20Bounded%20Variation.html">2.3. Continuous Functions of Bounded Variation</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/index.html">3. The Riemann-Stieltjes Integral</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/The%20Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">3.1. The Definition of the Riemann-Stieltjes Integral</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Linear%20Properties.html">3.2. Linear Properties</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Integration%20by%20Parts.html">3.3. Integration by Parts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Change%20of%20Variables%20in%20Riemann-Stieltjes%20Integrals.html">3.4. Change of Variables in Riemann-Stieltjes Integrals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Reduction%20to%20Riemann%20Integrals.html">3.5. Reduction to Riemann Integrals</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Step%20Functions%20as%20Integrators.html">3.6. Step Functions as Integrators</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">3.7. Reduction of Riemann-Stieltjes Integrals to Finite Sums</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Euler%27s%20Summation%20Formula.html">3.8. Euler’s Summation Formula</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../The%20Riemann-Stieltjes%20Integral/Darboux%20Integration%20--%20Defining%20Integrals%20with%20Upper%20and%20Lower%20Integrals.html">3.9. Darboux Integration – Defining Integrals with Upper and Lower Integrals</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">3. The Riemann-Stieltjes Integral</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="The%20Definition%20of%20the%20Riemann-Stieltjes%20Integral.html">3.1. The Definition of the Riemann-Stieltjes Integral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Linear%20Properties.html">3.2. Linear Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Integration%20by%20Parts.html">3.3. Integration by Parts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Change%20of%20Variables%20in%20Riemann-Stieltjes%20Integrals.html">3.4. Change of Variables in Riemann-Stieltjes Integrals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reduction%20to%20Riemann%20Integrals.html">3.5. Reduction to Riemann Integrals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Step%20Functions%20as%20Integrators.html">3.6. Step Functions as Integrators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">3.7. Reduction of Riemann-Stieltjes Integrals to Finite Sums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Euler%27s%20Summation%20Formula.html">3.8. Euler’s Summation Formula</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.9. Darboux Integration – Defining Integrals with Upper and Lower Integrals</a></li>
 </ul>
 </details></li>
 </ul>
@@ -266,7 +266,7 @@
       
       
       
-      <li><a href="../_sources/Functions of Bounded Variation and Rectifiable Curves/index.md" target="_blank"
+      <li><a href="../_sources/The Riemann-Stieltjes Integral/Darboux Integration -- Defining Integrals with Upper and Lower Integrals.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -348,7 +348,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Functions of Bounded Variation and Rectifiable Curves</h1>
+    <h1>Darboux Integration – Defining Integrals with Upper and Lower Integrals</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -362,9 +362,115 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="functions-of-bounded-variation-and-rectifiable-curves">
-<h1><span class="section-number">2. </span>Functions of Bounded Variation and Rectifiable Curves<a class="headerlink" href="#functions-of-bounded-variation-and-rectifiable-curves" title="Link to this heading">#</a></h1>
-<div class="toctree-wrapper compound">
+  <section class="tex2jax_ignore mathjax_ignore" id="darboux-integration-defining-integrals-with-upper-and-lower-integrals">
+<h1><span class="section-number">3.9. </span>Darboux Integration – Defining Integrals with Upper and Lower Integrals<a class="headerlink" href="#darboux-integration-defining-integrals-with-upper-and-lower-integrals" title="Link to this heading">#</a></h1>
+<p>From now on, the theory of Riemann-Stieltjes integration
+will be developed for increasing integrators.</p>
+<p>One may have the feeling that
+it is troublesome to prove the existence of Integrals
+because not only are we required to find a partition
+but also consider all possible choices <span class="math notranslate nohighlight">\(T\)</span> of points in subintervals.</p>
+<p>The definition of upper and lower sums
+will get rid of <span class="math notranslate nohighlight">\(T\)</span> in <span class="math notranslate nohighlight">\(S(P,T,f,\alpha)\)</span>.</p>
+<div class="proof definition admonition" id="definition-0">
+<span id="index-0"></span><p class="admonition-title"><span class="caption-number">Definition 3.3 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(P=\{x_0, x_1, \ldots, x_n\}\)</span> be a partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
+For <span class="math notranslate nohighlight">\(k=1, \ldots, n\)</span>, define</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_k(f) &amp; := \sup_{x \in [x_{k-1}, x_{k}]} f(x) \\
+m_k(f) &amp; := \inf_{x \in [x_{k-1}, x_k]} f(x)
+\end{split}\]</div>
+<p>The sums</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}U(P, f, \alpha) &amp; := \sum_{k=1}^n M_k(f) \Delta\alpha_k \\
+L(P, f, \alpha) &amp; := \sum_{k=1}^n m_k(f) \Delta\alpha_k
+\end{split}\]</div>
+<p>are called  <strong>upper and lower Darboux sums</strong>  respectively.</p>
+</section>
+</div><p>Let <span class="math notranslate nohighlight">\(t_k \in [x_{k-1}, x_k]\)</span>, clearly, we have</p>
+<div class="math notranslate nohighlight">
+\[m_k(f) \leq f(t_k) \leq M_k
+\]</div>
+<p>If the integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing, then</p>
+<div class="math notranslate nohighlight">
+\[m_k(f) \Delta\alpha_k \leq f(t_k) \Delta\alpha_k \leq M_k \Delta\alpha_k
+\]</div>
+<p>Summing over <span class="math notranslate nohighlight">\(k\)</span> yields</p>
+<div class="math notranslate nohighlight">
+\[L(P, f, \alpha) \leq S(P, T, f, \alpha) \leq U(P, f, \alpha)
+\]</div>
+<div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span class="caption-number">Theorem 3.11 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Assume <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>. Then</p>
+<ol class="arabic simple">
+<li><p>if <span class="math notranslate nohighlight">\(P^\prime \supseteq P\)</span>, we have</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[U(P^\prime, f, \alpha) \leq U(P, f, \alpha)
+\quad\text{and}\quad
+L(P^\prime, f, \alpha) \geq L(P, f, \alpha)
+\]</div>
+<p>In other words, as the partition gets finer the upper Darboux sum decreases
+while the lower Darboux sum increases.
+2. For any two partitions <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(P_2\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[L(P_1, f, \alpha) \leq U(P_2, f, \alpha)
+\]</div>
+<p>That is, any lower Darboux sum is no greater than any upper Darboux sum.</p>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. \noindent <strong>Proof of 1:</strong>
+We only prove <span class="math notranslate nohighlight">\(U(P^\prime, f, \alpha) \leq U(P, f, \alpha)\)</span>.
+The idea of the proof is simple.
+But to write it down with symbols,
+we must carefully design the notations.</p>
+<p>Let <span class="math notranslate nohighlight">\(P = \{x_0, \ldots, x_n\}\)</span>.
+Since <span class="math notranslate nohighlight">\(P \supseteq P\)</span>, we can express <span class="math notranslate nohighlight">\(P^\prime\)</span> as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}P^\prime&amp; = &amp; \{&amp; y_{0}, \\&amp; &amp; &amp; y_{1}, \ldots y_{m_1}, \\&amp; &amp; &amp; \ldots, \\&amp; &amp; &amp; y_{m_{k-1}+1}, \ldots y_{m_k}, \\&amp; &amp; &amp; \ldots, \\&amp; &amp; &amp; y_{m_{n-1}+1}, \ldots y_{m_n}\}\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(y_{m_k} = x_k\)</span>(<span class="math notranslate nohighlight">\(m_0 = 0\)</span>) for <span class="math notranslate nohighlight">\(k=0, 1, \ldots, n\)</span>.
+And we have</p>
+<div class="math notranslate nohighlight">
+\[U(P^\prime, f, \alpha)
+= \sum_{k=1}^n \sum_{j=m_{k-1} + 1}^{m_k}\sup_{x \in [y_{j-1}, y_{j}]}
+f(x) [\alpha(y_{j}) - \alpha(y_{j-1})]\]</div>
+<p>Consider a particular subinterval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>.
+We are going to show that the portion of <span class="math notranslate nohighlight">\(U(P^\prime, f, \alpha)\)</span>
+associated with <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>
+is no larger than that of <span class="math notranslate nohighlight">\(U(P, f, \alpha)\)</span>.
+We have</p>
+<div class="math notranslate nohighlight">
+\[\sup_{x \in [y_{j-1}, y_{j}]} f(x)
+\leq\sup_{x \in [x_{k-1}, x_k]} f(x)
+= M_k
+\quad\forall j=m_{k-1}+1, \ldots, m_k
+\]</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sum_{j=m_{k-1} + 1}^{m_k}\sup_{x \in [y_{j-1}, y_{j}]}
+f(x) [\alpha(y_{j}) - \alpha(y_{j-1})]&amp; \leq\sum_{j=m_{k-1} + 1}^{m_k} M_k [\alpha(y_{j}) - \alpha(y_{j-1})]\\&amp; = M_k [\alpha(y_{m_k}) - \alpha(y_{m_{k-1}})]\\&amp; = M_k [\alpha(x_k) - \alpha(x_{k-1})]\\&amp; = M_k \alpha_k
+\end{split}\]</div>
+<p>Summing over <span class="math notranslate nohighlight">\(k\)</span> on both sides of the above inequality yields</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}U(P^\prime, f, \alpha)
+&amp; = \sum_{k=1}^n \sum_{j=m_{k-1} + 1}^{m_k}\sup_{x \in [y_{j-1}, y_{j}]}
+f(x) [\alpha(y_{j}) - \alpha(y_{j-1})]\\&amp; \leq\sum_{k=1}^n M_k \alpha_k \\&amp; =U(P, f, \alpha)
+\end{split}\]</div>
+<p>which is exactly what we want to show.</p>
+<p>\noindent <strong>Proof of 2:</strong>
+Let <span class="math notranslate nohighlight">\(P = P_1 \cup P_2\)</span>.
+Then <span class="math notranslate nohighlight">\(P\)</span> is a refinement of both <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(P_2\)</span>.
+Applying the first part of this theorem and the inequality that</p>
+<div class="math notranslate nohighlight">
+\[L(P, f, \alpha) \leq U(P, f, \alpha)
+\]</div>
+<p>we obtain</p>
+<div class="math notranslate nohighlight">
+\[L(P_1, f, \alpha) \leq L(P, f, \alpha) \leq U(P, f, \alpha)
+\leq U(P_2, f, \alpha)
+\]</div>
 </div>
 </section>
 
@@ -381,7 +487,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./Functions of Bounded Variation and Rectifiable Curves"
+            path: "./The Riemann-Stieltjes Integral"
         },
         predefinedOutput: true
     }
@@ -399,20 +505,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Point-Set%20Topology/index.html"
+       href="Euler%27s%20Summation%20Formula.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Point-Set Topology</p>
+        <p class="prev-next-title"><span class="section-number">3.8. </span>Euler’s Summation Formula</p>
       </div>
     </a>
     <a class="right-next"
-       href="Functions%20of%20Bounded%20Variation.html"
+       href="../bibliography.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Functions of Bounded Variation</p>
+        <p class="prev-next-title">References</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
