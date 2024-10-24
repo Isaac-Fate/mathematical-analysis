@@ -170,3 +170,135 @@ L(P_1, f, \alpha) \leq L(P, f, \alpha) \leq U(P, f, \alpha)
 ```
 
 ````
+
+Let $P_0 = \{a, b\}$ be the trivial partition on $[a, b]$.
+Then $U(P, f, \alpha) \geq L(P_0, f, \alpha)$
+and $L(P, f, \alpha) \leq U(P_0, f, \alpha)$ for every partition $P$,
+which means that the set of all upper Darboux sums is bounded below,
+and the set of all lower Darboux sums is bounded above.
+Then we may take the infimum and supremum, respectively, of the two sets
+to introduce the definitions of the upper and lower integrals.
+
+```{index} lower Darboux integral
+```
+
+````{prf:definition} 
+
+Assume $\alpha$ is increasing on $[a, b]$.
+The  **upper Darboux integral** 
+is defined by
+
+```{math}
+\overline{\int_a^b} f \dif\alpha
+:= \inf_{P \in \CALP[a, b]} U(P, f, \alpha)
+
+```
+
+and the  **lower Darboux integral** 
+is defined by
+
+```{math}
+\underline{\int_a^b} f \dif\alpha
+:= \sup_{P \in \CALP[a, b]} L(P, f, \alpha)
+
+```
+
+````
+
+:::{note}
+
+Upper and lower integrals always exist
+assuming $f$ is bounded and $\alpha$ is increasing, of course.
+
+:::
+
+Intuitively, the lower integral should be no greater than the upper integral.
+
+
+````{prf:theorem} 
+:label: eq:40
+
+Assume $\alpha$ is increasing on $[a, b]$, we have
+
+```{math}
+:label: eq:40
+\underline{\int_a^b} f \dif\alpha\leq\overline{\int_a^b} f \dif\alpha
+```
+
+````
+
+````{prf:proof}
+
+Let $\varepsilon > 0$ be arbitrary.
+By the property of infimums, there exists a partition $P_1$ of $[a, b]$
+such that
+
+```{math}
+\underline{\int_a^b} f \dif\alpha
+< L(P_1, f, \alpha) + \varepsilon/2
+
+```
+
+Similarly, by the property of supremums,
+there exists a partition $P_2$ of $[a, b]$
+such that
+
+```{math}
+\overline{\int_a^b} f \dif\alpha
+> U(P_2, f, \alpha) - \varepsilon/2
+
+```
+
+It then follows that
+
+```{math}
+\underline{\int_a^b} f \dif\alpha& < L(P_1, f, \alpha) + \varepsilon/2 \\& \leq U(P_2, f, \alpha) + \varepsilon/2 \\& < \overline{\int_a^b} f \dif\alpha + \varepsilon/2 + \varepsilon/2 \\& = \overline{\int_a^b} f \dif\alpha + \varepsilon
+```
+
+In summary, we have
+
+```{math}
+\underline{\int_a^b} f \dif\alpha
+< \overline{\int_a^b} f \dif\alpha + \varepsilon\quad\forall\varepsilon > 0
+
+```
+
+This implies that $\underline{\int_a^b} f \dif \alpha \leq \overline{\int_a^b} f \dif \alpha$.
+
+````
+
+There are examples where the inequality in {eq}`eq:40` is strict.
+
+
+````{prf:example}
+
+Consider the Dirichlet function $\ind_{\Q}(x)$ restricted on $[a, b]$.
+Let $P$ an arbitrary partition of $[a, b]$.
+On any subinterval $[x_{k-1}, x_k]$, we have
+
+```{math}
+\sup_{[x_{k-1}, x_k]}\ind_{\Q}(x) = 1
+\quad\text{and}\quad\inf_{[x_{k-1}, x_k]}\ind_{\Q}(x) = 0
+
+```
+
+It then follows that
+
+```{math}
+
+U(P, \ind_\Q, x) = b - a
+\quad\text{and}\quad
+L(P, \ind_\Q, x) = 0
+
+```
+
+Since the above equations hold for all $P \in \CALP[a, b]$,
+the upper and lower integrals are
+
+```{math}
+\overline{\int_a^b}\ind_{\Q}(x) \dif x = b - a
+\quad\text{and}\quad\underline{\int_a^b}\ind_{\Q}(x) \dif x = 0
+
+```
+
+````

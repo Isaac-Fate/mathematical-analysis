@@ -472,7 +472,93 @@ Applying the first part of this theorem and the inequality that</p>
 \leq U(P_2, f, \alpha)
 \]</div>
 </div>
+<p>Let <span class="math notranslate nohighlight">\(P_0 = \{a, b\}\)</span> be the trivial partition on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Then <span class="math notranslate nohighlight">\(U(P, f, \alpha) \geq L(P_0, f, \alpha)\)</span>
+and <span class="math notranslate nohighlight">\(L(P, f, \alpha) \leq U(P_0, f, \alpha)\)</span> for every partition <span class="math notranslate nohighlight">\(P\)</span>,
+which means that the set of all upper Darboux sums is bounded below,
+and the set of all lower Darboux sums is bounded above.
+Then we may take the infimum and supremum, respectively, of the two sets
+to introduce the definitions of the upper and lower integrals.</p>
+<div class="proof definition admonition" id="definition-2">
+<span id="index-1"></span><p class="admonition-title"><span class="caption-number">Definition 3.4 </span></p>
+<section class="definition-content" id="proof-content">
+<p>Assume <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+The  <strong>upper Darboux integral</strong>
+is defined by</p>
+<div class="math notranslate nohighlight">
+\[\overline{\int_a^b} f \dif\alpha
+:= \inf_{P \in \CALP[a, b]} U(P, f, \alpha)
+\]</div>
+<p>and the  <strong>lower Darboux integral</strong>
+is defined by</p>
+<div class="math notranslate nohighlight">
+\[\underline{\int_a^b} f \dif\alpha
+:= \sup_{P \in \CALP[a, b]} L(P, f, \alpha)
+\]</div>
 </section>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Upper and lower integrals always exist
+assuming <span class="math notranslate nohighlight">\(f\)</span> is bounded and <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing, of course.</p>
+</div>
+<p>Intuitively, the lower integral should be no greater than the upper integral.</p>
+<div class="proof theorem admonition" id="eq:40">
+<p class="admonition-title"><span class="caption-number">Theorem 3.12 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Assume <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>, we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-40">
+<span class="eqno">(3.25)<a class="headerlink" href="#equation-eq-40" title="Link to this equation">#</a></span>\[\underline{\int_a^b} f \dif\alpha\leq\overline{\int_a^b} f \dif\alpha\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
+By the property of infimums, there exists a partition <span class="math notranslate nohighlight">\(P_1\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>
+such that</p>
+<div class="math notranslate nohighlight">
+\[\underline{\int_a^b} f \dif\alpha
+&lt; L(P_1, f, \alpha) + \varepsilon/2
+\]</div>
+<p>Similarly, by the property of supremums,
+there exists a partition <span class="math notranslate nohighlight">\(P_2\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>
+such that</p>
+<div class="math notranslate nohighlight">
+\[\overline{\int_a^b} f \dif\alpha
+&gt; U(P_2, f, \alpha) - \varepsilon/2
+\]</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\underline{\int_a^b} f \dif\alpha&amp; &lt; L(P_1, f, \alpha) + \varepsilon/2 \\&amp; \leq U(P_2, f, \alpha) + \varepsilon/2 \\&amp; &lt; \overline{\int_a^b} f \dif\alpha + \varepsilon/2 + \varepsilon/2 \\&amp; = \overline{\int_a^b} f \dif\alpha + \varepsilon\end{split}\]</div>
+<p>In summary, we have</p>
+<div class="math notranslate nohighlight">
+\[\underline{\int_a^b} f \dif\alpha
+&lt; \overline{\int_a^b} f \dif\alpha + \varepsilon\quad\forall\varepsilon &gt; 0
+\]</div>
+<p>This implies that <span class="math notranslate nohighlight">\(\underline{\int_a^b} f \dif \alpha \leq \overline{\int_a^b} f \dif \alpha\)</span>.</p>
+</div>
+<p>There are examples where the inequality in <a class="reference internal" href="#equation-eq-40">(3.25)</a> is strict.</p>
+<div class="proof example admonition" id="example-4">
+<p class="admonition-title"><span class="caption-number">Example 3.2 </span></p>
+<section class="example-content" id="proof-content">
+<p>Consider the Dirichlet function <span class="math notranslate nohighlight">\(\ind_{\Q}(x)\)</span> restricted on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Let <span class="math notranslate nohighlight">\(P\)</span> an arbitrary partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
+On any subinterval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\sup_{[x_{k-1}, x_k]}\ind_{\Q}(x) = 1
+\quad\text{and}\quad\inf_{[x_{k-1}, x_k]}\ind_{\Q}(x) = 0
+\]</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight">
+\[U(P, \ind_\Q, x) = b - a
+\quad\text{and}\quad
+L(P, \ind_\Q, x) = 0
+\]</div>
+<p>Since the above equations hold for all <span class="math notranslate nohighlight">\(P \in \CALP[a, b]\)</span>,
+the upper and lower integrals are</p>
+<div class="math notranslate nohighlight">
+\[\overline{\int_a^b}\ind_{\Q}(x) \dif x = b - a
+\quad\text{and}\quad\underline{\int_a^b}\ind_{\Q}(x) \dif x = 0
+\]</div>
+</section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {
