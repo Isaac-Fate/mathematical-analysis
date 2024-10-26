@@ -394,7 +394,7 @@ We have</p>
 \[\overline{\int_a^b} f \dif\alpha
 = \inf_{P \in \CALP[a, b]} U(P, f, \alpha)
 \geq\overline{\int_a^c} f \dif\alpha + \overline{\int_c^b} f \dif\alpha\]</div>
-<p>\noindent <strong>Proof of RHS <span class="math notranslate nohighlight">\(\leq\)</span> LHS:</strong>
+<p>\noindent <strong>Proof of LHS <span class="math notranslate nohighlight">\(\leq\)</span> RHS:</strong>
 Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
 There exist a partition <span class="math notranslate nohighlight">\(P_1\)</span> of <span class="math notranslate nohighlight">\([a, c]\)</span> and a partition <span class="math notranslate nohighlight">\(P_2\)</span> of <span class="math notranslate nohighlight">\([c, b]\)</span>
 such that</p>
@@ -423,6 +423,43 @@ Adding the above two inequalities yields</p>
 <div class="math notranslate nohighlight">
 \[\overline{\int_a^b} f \dif\alpha\leq\overline{\int_a^c} f \dif\alpha
 + \overline{\int_c^b} f \dif\alpha\]</div>
+</div>
+<div class="proof proposition admonition" id="proposition-1">
+<p class="admonition-title"><span class="caption-number">Proposition 3.3 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>We have the following inequalities
+about upper and lower integrals of sums of two functions:</p>
+<div class="math notranslate nohighlight">
+\[\overline{\int_a^b} f+g \dif\alpha\leq\overline{\int_a^b} f \dif\alpha
++ \overline{\int_a^b} g \dif\alpha\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[\underline{\int_a^b} f+g \dif\alpha\geq\underline{\int_a^b} f \dif\alpha
++ \underline{\int_a^b} g \dif\alpha\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We only prove the inequality for the upper integrals.
+Let <span class="math notranslate nohighlight">\(P\)</span> be any partition of <span class="math notranslate nohighlight">\([a, b]\)</span>.
+On each interval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[f(x) + g(x)
+\leq\sup_{x \in [x_{k-1}, x_k]} f(x)
++ \sup_{x \in [x_{k-1}, x_k]} g(x)
+\quad\forall x \in[x_{k-1}, x_k]\]</div>
+<p>Taking the supremum on both sides over <span class="math notranslate nohighlight">\(x\)</span> yields</p>
+<div class="math notranslate nohighlight">
+\[\sup_{x \in [x_{k-1}, x_k]} f(x) + g(x)
+\leq\sup_{x \in [x_{k-1}, x_k]} f(x)
++ \sup_{x \in [x_{k-1}, x_k]} g(x)
+\]</div>
+<p>Then summing over <span class="math notranslate nohighlight">\(k\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}U(P, f+g, \alpha)
+&amp; = \sum_{k}\sup_{x \in [x_{k-1}, x_k]} f(x) + g(x) \\&amp; \leq\sum_{k}\sup_{x \in [x_{k-1}, x_k]} f(x)
++ \sum_{k}\sup_{x \in [x_{k-1}, x_k]} g(x) \\&amp; = U(P, f, \alpha) + U(P, g, \alpha)
+\end{split}\]</div>
+<p>Finally, the inequality is proved by
+taking the infimum on both sides over <span class="math notranslate nohighlight">\(P\)</span>.</p>
 </div>
 </section>
 

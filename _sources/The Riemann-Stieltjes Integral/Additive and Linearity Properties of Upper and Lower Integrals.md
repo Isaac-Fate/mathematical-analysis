@@ -43,7 +43,7 @@ Taking the infimum over $P$ yields
 = \inf_{P \in \CALP[a, b]} U(P, f, \alpha)
 \geq\overline{\int_a^c} f \dif\alpha + \overline{\int_c^b} f \dif\alpha
 ```
-\noindent **Proof of RHS $\leq$ LHS:** 
+\noindent **Proof of LHS $\leq$ RHS:** 
 Let $\varepsilon > 0$ be arbitrary.
 There exist a partition $P_1$ of $[a, c]$ and a partition $P_2$ of $[c, b]$
 such that
@@ -88,5 +88,62 @@ holds for every $\varepsilon > 0$,
 \overline{\int_a^b} f \dif\alpha\leq\overline{\int_a^c} f \dif\alpha
 + \overline{\int_c^b} f \dif\alpha
 ```
+
+````
+
+````{prf:proposition} 
+
+We have the following inequalities
+about upper and lower integrals of sums of two functions:
+
+```{math}
+\overline{\int_a^b} f+g \dif\alpha\leq\overline{\int_a^b} f \dif\alpha
++ \overline{\int_a^b} g \dif\alpha
+```
+
+and
+
+```{math}
+\underline{\int_a^b} f+g \dif\alpha\geq\underline{\int_a^b} f \dif\alpha
++ \underline{\int_a^b} g \dif\alpha
+```
+
+````
+
+````{prf:proof}
+
+We only prove the inequality for the upper integrals.
+Let $P$ be any partition of $[a, b]$.
+On each interval $[x_{k-1}, x_k]$, we have
+
+```{math}
+
+f(x) + g(x)
+\leq\sup_{x \in [x_{k-1}, x_k]} f(x)
++ \sup_{x \in [x_{k-1}, x_k]} g(x)
+\quad\forall x \in[x_{k-1}, x_k]
+```
+
+Taking the supremum on both sides over $x$ yields
+
+```{math}
+\sup_{x \in [x_{k-1}, x_k]} f(x) + g(x)
+\leq\sup_{x \in [x_{k-1}, x_k]} f(x)
++ \sup_{x \in [x_{k-1}, x_k]} g(x)
+
+```
+
+Then summing over $k$:
+
+```{math}
+
+U(P, f+g, \alpha)
+& = \sum_{k}\sup_{x \in [x_{k-1}, x_k]} f(x) + g(x) \\& \leq\sum_{k}\sup_{x \in [x_{k-1}, x_k]} f(x)
++ \sum_{k}\sup_{x \in [x_{k-1}, x_k]} g(x) \\& = U(P, f, \alpha) + U(P, g, \alpha)
+
+```
+
+Finally, the inequality is proved by
+taking the infimum on both sides over $P$.
 
 ````
