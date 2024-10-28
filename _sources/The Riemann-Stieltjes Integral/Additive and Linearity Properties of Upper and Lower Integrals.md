@@ -92,11 +92,13 @@ holds for every $\varepsilon > 0$,
 ````
 
 ````{prf:proposition} 
+:label: eq:41
 
 We have the following inequalities
 about upper and lower integrals of sums of two functions:
 
 ```{math}
+:label: eq:41
 \overline{\int_a^b} f+g \dif\alpha\leq\overline{\int_a^b} f \dif\alpha
 + \overline{\int_a^b} g \dif\alpha
 ```
@@ -112,7 +114,7 @@ and
 
 ````{prf:proof}
 
-We only prove the inequality for the upper integrals.
+We only prove {eq}`eq:41`.
 Let $P$ be any partition of $[a, b]$.
 On each interval $[x_{k-1}, x_k]$, we have
 
@@ -145,5 +147,29 @@ U(P, f+g, \alpha)
 
 Finally, the inequality is proved by
 taking the infimum on both sides over $P$.
+
+````
+
+````{prf:example}
+
+The inequality {eq}`eq:41` may be strict.
+Consider $f(x) = \ind_{\Q} (x)$ and $g(x) = -\ind_{\Q}(x)$
+restricted on $[a, b]$.
+We have
+
+```{math}
+\overline{\int_a^b} f+g \dif\alpha
+= \overline{\int_a^b} 0 \dif\alpha
+= 0
+
+```
+
+and
+
+```{math}
+\overline{\int_a^b} f \dif\alpha = b-a
+\quad\text{and}\quad\overline{\int_a^b} g \dif\alpha = 0
+
+```
 
 ````

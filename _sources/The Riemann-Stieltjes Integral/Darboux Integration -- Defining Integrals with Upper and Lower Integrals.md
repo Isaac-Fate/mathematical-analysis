@@ -64,6 +64,7 @@ L(P, f, \alpha) \leq S(P, T, f, \alpha) \leq U(P, f, \alpha)
 ```
 
 ````{prf:theorem} 
+:label: thm:9
 
 Assume $\alpha$ is increasing on $[a, b]$. Then
 1. if $P^\prime \supseteq P$, we have
