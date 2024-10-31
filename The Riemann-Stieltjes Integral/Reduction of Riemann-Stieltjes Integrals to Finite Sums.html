@@ -207,6 +207,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Darboux%20Integration%20--%20Defining%20Integrals%20with%20Upper%20and%20Lower%20Integrals.html">3.9. Darboux Integration – Defining Integrals with Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Additive%20and%20Linearity%20Properties%20of%20Upper%20and%20Lower%20Integrals.html">3.10. Additive and Linearity Properties of Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Riemann%27s%20Condition.html">3.11. Riemann’s Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Comparison%20Theorems.html">3.12. Comparison Theorems</a></li>
 </ul>
 </details></li>
 </ul>
@@ -409,7 +410,7 @@ is continuous from one side at the endpoint.</p></li>
 </ol>
 <p>Then, <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-27">
-<span class="eqno">(3.12)<a class="headerlink" href="#equation-eq-27" title="Link to this equation">#</a></span>\[\int_a^b f \dif\alpha =
+<span class="eqno">(3.13)<a class="headerlink" href="#equation-eq-27" title="Link to this equation">#</a></span>\[\int_a^b f \dif\alpha =
 \sum_{k=1}^n f(x_k) \alpha_k\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
@@ -423,17 +424,17 @@ Note that the condition of <a class="reference internal" href="Step%20Functions%
 on each subinterval <span class="math notranslate nohighlight">\([s_{k-1}, s_k], \; k=2, \ldots, n-1\)</span>.
 Therefore, <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([s_{k-1}, s_k]\)</span>, and</p>
 <div class="math notranslate nohighlight" id="equation-eq-26">
-<span class="eqno">(3.13)<a class="headerlink" href="#equation-eq-26" title="Link to this equation">#</a></span>\[\int_{s_{k-1}}^{s_k} f \dif\alpha
+<span class="eqno">(3.14)<a class="headerlink" href="#equation-eq-26" title="Link to this equation">#</a></span>\[\int_{s_{k-1}}^{s_k} f \dif\alpha
 = f(x_k) [\alpha(x_k +) - \alpha(x_k -)]
 = f(x_k) \alpha_k
 \quad\forall k=2, \ldots, n-1\]</div>
-<p>By <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#prop:6">Proposition 3.1</a>, we know that <a class="reference internal" href="#equation-eq-26">(3.13)</a> also holds
+<p>By <a class="reference internal" href="Step%20Functions%20as%20Integrators.html#prop:6">Proposition 3.2</a>, we know that <a class="reference internal" href="#equation-eq-26">(3.14)</a> also holds
 for <span class="math notranslate nohighlight">\(k=1\)</span> and <span class="math notranslate nohighlight">\(k=n\)</span>.
 Then by <a class="reference internal" href="Linear%20Properties.html#thm:5">Theorem 3.3</a>, <span class="math notranslate nohighlight">\(f\)</span> is integrable on the entire
 interval <span class="math notranslate nohighlight">\([a, b]\)</span>.
-We may then conclude this proof by summing up <a class="reference internal" href="#equation-eq-26">(3.13)</a> over all <span class="math notranslate nohighlight">\(k\)</span>.</p>
+We may then conclude this proof by summing up <a class="reference internal" href="#equation-eq-26">(3.14)</a> over all <span class="math notranslate nohighlight">\(k\)</span>.</p>
 </div>
-<p>Substitute <span class="math notranslate nohighlight">\(\alpha(x) = \floor{x}\)</span> in <a class="reference internal" href="#equation-eq-27">(3.12)</a>,
+<p>Substitute <span class="math notranslate nohighlight">\(\alpha(x) = \floor{x}\)</span> in <a class="reference internal" href="#equation-eq-27">(3.13)</a>,
 we will obtain a formula for representing any finite sum
 using an integral.</p>
 <div class="proof theorem admonition" id="eq:28">
@@ -442,7 +443,7 @@ using an integral.</p>
 <p>Given a finite sum <span class="math notranslate nohighlight">\(\sum_{k=1}^n a_k\)</span>.
 We have</p>
 <div class="math notranslate nohighlight" id="equation-eq-28">
-<span class="eqno">(3.14)<a class="headerlink" href="#equation-eq-28" title="Link to this equation">#</a></span>\[\sum_{k=1}^n a_k = \int_0^n a_{\ceil{x}}\dif\floor{x}\]</div>
+<span class="eqno">(3.15)<a class="headerlink" href="#equation-eq-28" title="Link to this equation">#</a></span>\[\sum_{k=1}^n a_k = \int_0^n a_{\ceil{x}}\dif\floor{x}\]</div>
 <p>where <span class="math notranslate nohighlight">\(a_0\)</span> is an arbitrary constant.</p>
 </section>
 </div><div class="proof admonition" id="proof">
@@ -452,7 +453,7 @@ Define a function <span class="math notranslate nohighlight">\(f\)</span> on <sp
 \[f(x) = a_{\ceil{x}}, \quad x \in[0, n]\]</div>
 <p>Note that <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous from the right at <span class="math notranslate nohighlight">\(x=0, 1, \ldots, n-1\)</span>,
 and <span class="math notranslate nohighlight">\(f\)</span> is continuous from the left at <span class="math notranslate nohighlight">\(x=1, 2, \ldots, n\)</span>.
-Therefore, <a class="reference internal" href="#equation-eq-27">(3.12)</a> is applicable.
+Therefore, <a class="reference internal" href="#equation-eq-27">(3.13)</a> is applicable.
 It yields that</p>
 <div class="math notranslate nohighlight">
 \[\int_0^n f \dif\alpha
@@ -469,7 +470,7 @@ One may define <span class="math notranslate nohighlight">\(f\)</span> by applyi
 on the data <span class="math notranslate nohighlight">\((1, a_1), \ldots, (n, a_n)\)</span>,
 in which case <span class="math notranslate nohighlight">\(f\)</span> is continuous on the entire interval <span class="math notranslate nohighlight">\([0, n]\)</span>.
 But I prefer the one given in the proof since this makes
-both floor and ceiling functions appear in <a class="reference internal" href="#equation-eq-28">(3.14)</a>,
+both floor and ceiling functions appear in <a class="reference internal" href="#equation-eq-28">(3.15)</a>,
 which makes the formula prettier.</p>
 </section>
 

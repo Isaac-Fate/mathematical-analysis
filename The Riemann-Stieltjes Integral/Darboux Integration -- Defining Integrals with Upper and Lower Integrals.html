@@ -207,6 +207,7 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">3.9. Darboux Integration – Defining Integrals with Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Additive%20and%20Linearity%20Properties%20of%20Upper%20and%20Lower%20Integrals.html">3.10. Additive and Linearity Properties of Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Riemann%27s%20Condition.html">3.11. Riemann’s Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Comparison%20Theorems.html">3.12. Comparison Theorems</a></li>
 </ul>
 </details></li>
 </ul>
@@ -422,13 +423,12 @@ while the lower Darboux sum increases.
 \]</div>
 <p>That is, any lower Darboux sum is no greater than any upper Darboux sum.</p>
 </section>
-</div><div class="proof admonition" id="proof">
-<p>Proof. \noindent <strong>Proof of 1:</strong>
-We only prove <span class="math notranslate nohighlight">\(U(P^\prime, f, \alpha) \leq U(P, f, \alpha)\)</span>.
-The idea of the proof is simple.
-But to write it down with symbols,
-we must carefully design the notations.</p>
-<p>Let <span class="math notranslate nohighlight">\(P = \{x_0, \ldots, x_n\}\)</span>.
+</div><p>Think about how to prove <span class="math notranslate nohighlight">\(U(P^\prime, f, \alpha) \leq U(P, f, \alpha)\)</span> in 1.
+One way to do this is by designing notations to
+explicitly write down
+the expressions for <span class="math notranslate nohighlight">\(P^\prime\)</span> and <span class="math notranslate nohighlight">\(U(P^\prime, f, \alpha)\)</span>.
+My way is as follows.
+Let <span class="math notranslate nohighlight">\(P = \{x_0, \ldots, x_n\}\)</span>.
 Since <span class="math notranslate nohighlight">\(P \supseteq P\)</span>, we can express <span class="math notranslate nohighlight">\(P^\prime\)</span> as</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}P^\prime&amp; = &amp; \{&amp; y_{0}, \\&amp; &amp; &amp; y_{1}, \ldots y_{m_1}, \\&amp; &amp; &amp; \ldots, \\&amp; &amp; &amp; y_{m_{k-1}+1}, \ldots y_{m_k}, \\&amp; &amp; &amp; \ldots, \\&amp; &amp; &amp; y_{m_{n-1}+1}, \ldots y_{m_n}\}\end{split}\]</div>
@@ -438,29 +438,35 @@ And we have</p>
 \[U(P^\prime, f, \alpha)
 = \sum_{k=1}^n \sum_{j=m_{k-1} + 1}^{m_k}\sup_{x \in [y_{j-1}, y_{j}]}
 f(x) [\alpha(y_{j}) - \alpha(y_{j-1})]\]</div>
-<p>Consider a particular subinterval <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>.
-We are going to show that the portion of <span class="math notranslate nohighlight">\(U(P^\prime, f, \alpha)\)</span>
-associated with <span class="math notranslate nohighlight">\([x_{k-1}, x_k]\)</span>
-is no larger than that of <span class="math notranslate nohighlight">\(U(P, f, \alpha)\)</span>.
-We have</p>
-<div class="math notranslate nohighlight">
-\[\sup_{x \in [y_{j-1}, y_{j}]} f(x)
-\leq\sup_{x \in [x_{k-1}, x_k]} f(x)
-= M_k
-\quad\forall j=m_{k-1}+1, \ldots, m_k
-\]</div>
-<p>It then follows that</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\sum_{j=m_{k-1} + 1}^{m_k}\sup_{x \in [y_{j-1}, y_{j}]}
-f(x) [\alpha(y_{j}) - \alpha(y_{j-1})]&amp; \leq\sum_{j=m_{k-1} + 1}^{m_k} M_k [\alpha(y_{j}) - \alpha(y_{j-1})]\\&amp; = M_k [\alpha(y_{m_k}) - \alpha(y_{m_{k-1}})]\\&amp; = M_k [\alpha(x_k) - \alpha(x_{k-1})]\\&amp; = M_k \alpha_k
-\end{split}\]</div>
-<p>Summing over <span class="math notranslate nohighlight">\(k\)</span> on both sides of the above inequality yields</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}U(P^\prime, f, \alpha)
-&amp; = \sum_{k=1}^n \sum_{j=m_{k-1} + 1}^{m_k}\sup_{x \in [y_{j-1}, y_{j}]}
-f(x) [\alpha(y_{j}) - \alpha(y_{j-1})]\\&amp; \leq\sum_{k=1}^n M_k \alpha_k \\&amp; =U(P, f, \alpha)
-\end{split}\]</div>
-<p>which is exactly what we want to show.</p>
+<p>And the rest of the proof can be done easily.</p>
+<p>However, we can be a little smarter about this proof.
+Note that the major difficulty is that
+the form of the refinement <span class="math notranslate nohighlight">\(P^\prime\)</span>
+is undetermined.
+It may contain many extra points scattered in different locations.
+But we can start by consider the simplest case
+where <span class="math notranslate nohighlight">\(P^\prime\)</span> has only one point more than <span class="math notranslate nohighlight">\(P\)</span>.
+And then we can extend the conclusion to any
+larger refinements by applying the mathematical induction.</p>
+<div class="proof admonition" id="proof">
+<p>Proof. \noindent <strong>Proof of 1:</strong>
+We only prove <span class="math notranslate nohighlight">\(U(P^\prime, f, \alpha) \leq U(P, f, \alpha)\)</span>.
+First, consider the case where <span class="math notranslate nohighlight">\(P^\prime\)</span>
+has only one point <span class="math notranslate nohighlight">\(y\)</span> more than <span class="math notranslate nohighlight">\(P = \{x_0, \ldots, x_n\}\)</span>.
+Suppose <span class="math notranslate nohighlight">\(y \in (x_{j-1}, x_j)\)</span>.
+On the subinterval <span class="math notranslate nohighlight">\([x_{j-1}, x_j]\)</span>, we have
+\begin{multline*}
+\sup_{x \in [x_{j-1}, y]} f(x) [\alpha(y) - \alpha(x_{j-1})]</p>
+<ul class="simple">
+<li><p>\sup_{x \in [y, x_j]} f(x) [\alpha(x_{j}) - \alpha(y)] \
+\leq \sup_{x \in [x_{j-1}, x_j]} f(x) [\alpha(x_{j}) - \alpha(x_{j-1})]
+= M_j
+\end{multline*}
+Then it is clear that <span class="math notranslate nohighlight">\(U(P^\prime, f, \alpha) \leq U(P, f, \alpha)\)</span>.</p></li>
+</ul>
+<p>In general, suppose <span class="math notranslate nohighlight">\(\abs{P^\prime} = \abs{P} + n\)</span>,
+one may then prove this easily by
+applying the mathematical induction.</p>
 <p>\noindent <strong>Proof of 2:</strong>
 Let <span class="math notranslate nohighlight">\(P = P_1 \cup P_2\)</span>.
 Then <span class="math notranslate nohighlight">\(P\)</span> is a refinement of both <span class="math notranslate nohighlight">\(P_1\)</span> and <span class="math notranslate nohighlight">\(P_2\)</span>.
@@ -509,7 +515,7 @@ assuming <span class="math notranslate nohighlight">\(f\)</span> is bounded and 
 <section class="theorem-content" id="proof-content">
 <p>Assume <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-40">
-<span class="eqno">(3.25)<a class="headerlink" href="#equation-eq-40" title="Link to this equation">#</a></span>\[\underline{\int_a^b} f \dif\alpha\leq\overline{\int_a^b} f \dif\alpha\]</div>
+<span class="eqno">(3.26)<a class="headerlink" href="#equation-eq-40" title="Link to this equation">#</a></span>\[\underline{\int_a^b} f \dif\alpha\leq\overline{\int_a^b} f \dif\alpha\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
 <p>Proof. Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
@@ -536,7 +542,7 @@ such that</p>
 \]</div>
 <p>This implies that <span class="math notranslate nohighlight">\(\underline{\int_a^b} f \dif \alpha \leq \overline{\int_a^b} f \dif \alpha\)</span>.</p>
 </div>
-<p>There are examples where the inequality in <a class="reference internal" href="#equation-eq-40">(3.25)</a> is strict.</p>
+<p>There are examples where the inequality in <a class="reference internal" href="#equation-eq-40">(3.26)</a> is strict.</p>
 <div class="proof example admonition" id="example-4">
 <p class="admonition-title"><span class="caption-number">Example 3.2 </span></p>
 <section class="example-content" id="proof-content">

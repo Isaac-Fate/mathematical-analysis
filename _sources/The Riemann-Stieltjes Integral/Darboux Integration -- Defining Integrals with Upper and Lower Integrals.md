@@ -91,13 +91,11 @@ That is, any lower Darboux sum is no greater than any upper Darboux sum.
 
 ````
 
-````{prf:proof}
-\noindent **Proof of 1:** 
-We only prove $U(P^\prime, f, \alpha) \leq U(P, f, \alpha)$.
-The idea of the proof is simple.
-But to write it down with symbols,
-we must carefully design the notations.
-
+Think about how to prove $U(P^\prime, f, \alpha) \leq U(P, f, \alpha)$ in 1.
+One way to do this is by designing notations to
+explicitly write down
+the expressions for $P^\prime$ and $U(P^\prime, f, \alpha)$.
+My way is as follows.
 Let $P = \{x_0, \ldots, x_n\}$.
 Since $P \supseteq P$, we can express $P^\prime$ as
 
@@ -116,39 +114,38 @@ U(P^\prime, f, \alpha)
 f(x) [\alpha(y_{j}) - \alpha(y_{j-1})]
 ```
 
-Consider a particular subinterval $[x_{k-1}, x_k]$.
-We are going to show that the portion of $U(P^\prime, f, \alpha)$
-associated with $[x_{k-1}, x_k]$
-is no larger than that of $U(P, f, \alpha)$.
-We have
+And the rest of the proof can be done easily.
 
-```{math}
-\sup_{x \in [y_{j-1}, y_{j}]} f(x)
-\leq\sup_{x \in [x_{k-1}, x_k]} f(x)
-= M_k
-\quad\forall j=m_{k-1}+1, \ldots, m_k
+However, we can be a little smarter about this proof.
+Note that the major difficulty is that
+the form of the refinement $P^\prime$
+is undetermined.
+It may contain many extra points scattered in different locations.
+But we can start by consider the simplest case
+where $P^\prime$ has only one point more than $P$.
+And then we can extend the conclusion to any
+larger refinements by applying the mathematical induction.
 
-```
 
-It then follows that
+````{prf:proof}
+\noindent **Proof of 1:** 
+We only prove $U(P^\prime, f, \alpha) \leq U(P, f, \alpha)$.
+First, consider the case where $P^\prime$
+has only one point $y$ more than $P = \{x_0, \ldots, x_n\}$.
+Suppose $y \in (x_{j-1}, x_j)$.
+On the subinterval $[x_{j-1}, x_j]$, we have
+\begin{multline*}
+\sup_{x \in [x_{j-1}, y]} f(x) [\alpha(y) - \alpha(x_{j-1})]
++ \sup_{x \in [y, x_j]} f(x) [\alpha(x_{j}) - \alpha(y)] \\
+\leq \sup_{x \in [x_{j-1}, x_j]} f(x) [\alpha(x_{j}) - \alpha(x_{j-1})]
+= M_j
+\end{multline*}
+Then it is clear that $U(P^\prime, f, \alpha) \leq U(P, f, \alpha)$.
 
-```{math}
-\sum_{j=m_{k-1} + 1}^{m_k}\sup_{x \in [y_{j-1}, y_{j}]}
-f(x) [\alpha(y_{j}) - \alpha(y_{j-1})]& \leq\sum_{j=m_{k-1} + 1}^{m_k} M_k [\alpha(y_{j}) - \alpha(y_{j-1})]\\& = M_k [\alpha(y_{m_k}) - \alpha(y_{m_{k-1}})]\\& = M_k [\alpha(x_k) - \alpha(x_{k-1})]\\& = M_k \alpha_k
+In general, suppose $\abs{P^\prime} = \abs{P} + n$,
+one may then prove this easily by
+applying the mathematical induction.
 
-```
-
-Summing over $k$ on both sides of the above inequality yields
-
-```{math}
-
-U(P^\prime, f, \alpha)
-& = \sum_{k=1}^n \sum_{j=m_{k-1} + 1}^{m_k}\sup_{x \in [y_{j-1}, y_{j}]}
-f(x) [\alpha(y_{j}) - \alpha(y_{j-1})]\\& \leq\sum_{k=1}^n M_k \alpha_k \\& =U(P, f, \alpha)
-
-```
-
-which is exactly what we want to show.
 
 \noindent **Proof of 2:** 
 Let $P = P_1 \cup P_2$.

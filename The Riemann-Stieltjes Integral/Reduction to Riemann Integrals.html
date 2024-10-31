@@ -207,6 +207,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Darboux%20Integration%20--%20Defining%20Integrals%20with%20Upper%20and%20Lower%20Integrals.html">3.9. Darboux Integration – Defining Integrals with Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Additive%20and%20Linearity%20Properties%20of%20Upper%20and%20Lower%20Integrals.html">3.10. Additive and Linearity Properties of Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Riemann%27s%20Condition.html">3.11. Riemann’s Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Comparison%20Theorems.html">3.12. Comparison Theorems</a></li>
 </ul>
 </details></li>
 </ul>
@@ -383,13 +384,13 @@ Then <span class="math notranslate nohighlight">\(f \alpha^\prime \in \mathfrak{
 </div><div class="proof admonition" id="proof">
 <p>Proof. First, suppose <span class="math notranslate nohighlight">\(f\)</span> is bounded by <span class="math notranslate nohighlight">\(M &gt; 0\)</span>, i.e.,</p>
 <div class="math notranslate nohighlight" id="equation-eq-23">
-<span class="eqno">(3.8)<a class="headerlink" href="#equation-eq-23" title="Link to this equation">#</a></span>\[\abs{f(x)}\leq M \quad\forall x \in[a, b]\]</div>
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-eq-23" title="Link to this equation">#</a></span>\[\abs{f(x)}\leq M \quad\forall x \in[a, b]\]</div>
 <p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.</p>
 <p>Because <span class="math notranslate nohighlight">\(\alpha^\prime\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span>,
 it is continuous uniformly there.
 There exists <span class="math notranslate nohighlight">\(\delta &gt; 0\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-22">
-<span class="eqno">(3.9)<a class="headerlink" href="#equation-eq-22" title="Link to this equation">#</a></span>\[\abs{s - t}\implies\abs{\alpha^\prime(s) - \alpha^\prime(t)}
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-eq-22" title="Link to this equation">#</a></span>\[\abs{s - t}\implies\abs{\alpha^\prime(s) - \alpha^\prime(t)}
 &lt; \frac{\varepsilon}{2M(b-a)}\]</div>
 <p>Since <span class="math notranslate nohighlight">\(f\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
 there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>
@@ -398,7 +399,7 @@ for any refinement <span class="math notranslate nohighlight">\(P\)</span> of <s
 and any list of representatives <span class="math notranslate nohighlight">\(T\)</span> of <span class="math notranslate nohighlight">\(P\)</span>,
 we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-21">
-<span class="eqno">(3.10)<a class="headerlink" href="#equation-eq-21" title="Link to this equation">#</a></span>\[\abs{ S(P, T, f, \alpha) - \int_a^b f \dif \alpha}
+<span class="eqno">(3.11)<a class="headerlink" href="#equation-eq-21" title="Link to this equation">#</a></span>\[\abs{ S(P, T, f, \alpha) - \int_a^b f \dif \alpha}
 &lt; \varepsilon / 2\]</div>
 <p>Then, we can find a finer
 partition <span class="math notranslate nohighlight">\(P^\prime_\varepsilon \supseteq P_\varepsilon\)</span>
@@ -423,15 +424,15 @@ f(t_k)
 }\\&amp; = \sum_{k=1}^n \abs{
 f(t_k)}\abs{ \alpha^\prime(t_k) - \alpha^\prime(s_k) }\Delta x_k
 \end{split}\]</div>
-<p>Then applying <a class="reference internal" href="#equation-eq-23">(3.8)</a> and <a class="reference internal" href="#equation-eq-22">(3.9)</a>,
+<p>Then applying <a class="reference internal" href="#equation-eq-23">(3.9)</a> and <a class="reference internal" href="#equation-eq-22">(3.10)</a>,
 the above difference is further bounded by</p>
 <div class="math notranslate nohighlight" id="equation-eq-24">
-<span class="eqno">(3.11)<a class="headerlink" href="#equation-eq-24" title="Link to this equation">#</a></span>\[\abs{S(P,T,f \alpha^\prime, x) - S(P,T,f,\alpha)}
+<span class="eqno">(3.12)<a class="headerlink" href="#equation-eq-24" title="Link to this equation">#</a></span>\[\abs{S(P,T,f \alpha^\prime, x) - S(P,T,f,\alpha)}
 &lt; M \frac{\varepsilon}{2M(b-a)}\sum_{k=1}^n \Delta x_k
 = \varepsilon / 2\]</div>
 <p>Recall <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>.
 Then we may conclude this proof
-by comparing <a class="reference internal" href="#equation-eq-21">(3.10)</a> and <a class="reference internal" href="#equation-eq-24">(3.11)</a>.</p>
+by comparing <a class="reference internal" href="#equation-eq-21">(3.11)</a> and <a class="reference internal" href="#equation-eq-24">(3.12)</a>.</p>
 </div>
 </section>
 

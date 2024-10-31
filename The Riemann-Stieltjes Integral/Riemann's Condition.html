@@ -65,7 +65,7 @@
     <link rel="icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="References" href="../bibliography.html" />
+    <link rel="next" title="3.12. Comparison Theorems" href="Comparison%20Theorems.html" />
     <link rel="prev" title="3.10. Additive and Linearity Properties of Upper and Lower Integrals" href="Additive%20and%20Linearity%20Properties%20of%20Upper%20and%20Lower%20Integrals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -207,6 +207,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Darboux%20Integration%20--%20Defining%20Integrals%20with%20Upper%20and%20Lower%20Integrals.html">3.9. Darboux Integration – Defining Integrals with Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Additive%20and%20Linearity%20Properties%20of%20Upper%20and%20Lower%20Integrals.html">3.10. Additive and Linearity Properties of Upper and Lower Integrals</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">3.11. Riemann’s Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Comparison%20Theorems.html">3.12. Comparison Theorems</a></li>
 </ul>
 </details></li>
 </ul>
@@ -385,27 +386,52 @@ with respect to <span class="math notranslate nohighlight">\(\alpha\)</span> on 
 if for any <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>,
 there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> such that</p>
 <div class="math notranslate nohighlight" id="equation-eq-42">
-<span class="eqno">(3.27)<a class="headerlink" href="#equation-eq-42" title="Link to this equation">#</a></span>\[P \supseteq P_\varepsilon\implies
+<span class="eqno">(3.28)<a class="headerlink" href="#equation-eq-42" title="Link to this equation">#</a></span>\[P \supseteq P_\varepsilon\implies
 0 \leq U(P, f, \alpha) - L(P, f, \alpha) &lt; \varepsilon\]</div>
 <p>or equivalently, just saying that</p>
 <div class="math notranslate nohighlight" id="equation-eq-43">
-<span class="eqno">(3.28)<a class="headerlink" href="#equation-eq-43" title="Link to this equation">#</a></span>\[0 \leq U(P_\varepsilon, f, \alpha) - L(P_\varepsilon, f, \alpha) &lt; \varepsilon\]</div>
+<span class="eqno">(3.29)<a class="headerlink" href="#equation-eq-43" title="Link to this equation">#</a></span>\[0 \leq U(P_\varepsilon, f, \alpha) - L(P_\varepsilon, f, \alpha) &lt; \varepsilon\]</div>
 </section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference internal" href="#equation-eq-42">(3.27)</a> is the definition given in <span id="id1">[<a class="reference internal" href="../bibliography.html#id7" title="Tom M. Apostol. Mathematical Analysis: A Modern Approach to Advanced Calculus. Addison-Wesley Series in Mathematics. Addison-Wesley, Reading, Mass., 2. ed edition, 1974. ISBN 978-0-201-00288-1.">Apostol, 1974</a>]</span>.
-But clearly <a class="reference internal" href="#equation-eq-42">(3.27)</a><span class="math notranslate nohighlight">\(\iff\)</span><a class="reference internal" href="#equation-eq-43">(3.28)</a>.
-(<a class="reference internal" href="#equation-eq-42">(3.27)</a><span class="math notranslate nohighlight">\(\implies\)</span><a class="reference internal" href="#equation-eq-43">(3.28)</a> is obvious.)
-If <a class="reference internal" href="#equation-eq-43">(3.28)</a> holds,
+<p><a class="reference internal" href="#equation-eq-42">(3.28)</a> is the definition given in <span id="id1">[<a class="reference internal" href="../bibliography.html#id7" title="Tom M. Apostol. Mathematical Analysis: A Modern Approach to Advanced Calculus. Addison-Wesley Series in Mathematics. Addison-Wesley, Reading, Mass., 2. ed edition, 1974. ISBN 978-0-201-00288-1.">Apostol, 1974</a>]</span>.
+But clearly <a class="reference internal" href="#equation-eq-42">(3.28)</a><span class="math notranslate nohighlight">\(\iff\)</span><a class="reference internal" href="#equation-eq-43">(3.29)</a>.
+(<a class="reference internal" href="#equation-eq-42">(3.28)</a><span class="math notranslate nohighlight">\(\implies\)</span><a class="reference internal" href="#equation-eq-43">(3.29)</a> is obvious.)
+If <a class="reference internal" href="#equation-eq-43">(3.29)</a> holds,
 then by <a class="reference internal" href="Darboux%20Integration%20--%20Defining%20Integrals%20with%20Upper%20and%20Lower%20Integrals.html#thm:9">Theorem 3.11</a>
 we know that the upper sum will decrease while the lower sum will increase
 as the partition gets finer,
 and the lower sum is always no greater than the upper sum.
-Therefore, <a class="reference internal" href="#equation-eq-42">(3.27)</a> holds.</p>
+Therefore, <a class="reference internal" href="#equation-eq-42">(3.28)</a> holds.</p>
+</div>
+<div class="proof proposition admonition" id="proposition-1">
+<p class="admonition-title"><span class="caption-number">Proposition 3.5 </span></p>
+<section class="proposition-content" id="proof-content">
+<p>Let <span class="math notranslate nohighlight">\(f\)</span> be a bounded function on <span class="math notranslate nohighlight">\([a, b]\)</span>. We have</p>
+<div class="math notranslate nohighlight">
+\[\sup_{x, y \in [a, b]}[f(x) - f(y)]
+= \sup_{x \in [a, b]} f(x) - \inf_{x \in [a, b]} f(x)
+\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(M = \sup_{x \in [a, b]} f(x)\)</span> and <span class="math notranslate nohighlight">\(m = \inf_{x \in [a, b]} f(x)\)</span>.
+Clearly</p>
+<div class="math notranslate nohighlight">
+\[f(x) - f(y) \leq M - m \quad\forall x, y \in[a, b]\]</div>
+<p>That is, <span class="math notranslate nohighlight">\(M-m\)</span> is an upper bound of the
+set <span class="math notranslate nohighlight">\(\{f(x) - f(y) \mid x, y \in [a, b]\}\)</span>.
+We now show that <span class="math notranslate nohighlight">\(M - m\)</span> is the least upper bound.
+Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
+There exists <span class="math notranslate nohighlight">\(x_0 \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(x_0) &gt; M - \varepsilon/2\)</span>,
+and there exists <span class="math notranslate nohighlight">\(y_0 \in [a, b]\)</span> such that <span class="math notranslate nohighlight">\(f(y_0) &lt; m + \varepsilon/2\)</span>.
+It then follows that</p>
+<div class="math notranslate nohighlight">
+\[f(x_0) - f(y_0) &gt; M - m - \varepsilon\]</div>
+<p>This completes the proof.</p>
 </div>
 <p>The following theorem ease the procedure of proving
 the existence of an integral.</p>
-<div class="proof theorem admonition" id="theorem-1">
+<div class="proof theorem admonition" id="theorem-2">
 <p class="admonition-title"><span class="caption-number">Theorem 3.13 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Assume <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>.
@@ -424,7 +450,7 @@ there exists a partition <span class="math notranslate nohighlight">\(P_\varepsi
 for all <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>
 and any list of representatives <span class="math notranslate nohighlight">\(T\)</span> of <span class="math notranslate nohighlight">\(P\)</span>, we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-44">
-<span class="eqno">(3.29)<a class="headerlink" href="#equation-eq-44" title="Link to this equation">#</a></span>\[\abs{ S(P, T, f, \alpha) - \int_a^b f \dif \alpha } &lt; \varepsilon / 4\]</div>
+<span class="eqno">(3.30)<a class="headerlink" href="#equation-eq-44" title="Link to this equation">#</a></span>\[\abs{ S(P, T, f, \alpha) - \int_a^b f \dif \alpha } &lt; \varepsilon / 4\]</div>
 <p>We now construct two particular lists of representatives
 <span class="math notranslate nohighlight">\(T_1\)</span> and <span class="math notranslate nohighlight">\(T_2\)</span> of <span class="math notranslate nohighlight">\(P\)</span> as follows.
 Write <span class="math notranslate nohighlight">\(P = \{x_0, \ldots, x_n\}\)</span>.
@@ -444,13 +470,13 @@ S(P, T_2, f, \alpha) &amp; &gt; U(P, f, \alpha) - \varepsilon / 4
 \end{split}\]</div>
 <p>Taking the difference yields</p>
 <div class="math notranslate nohighlight" id="equation-eq-45">
-<span class="eqno">(3.30)<a class="headerlink" href="#equation-eq-45" title="Link to this equation">#</a></span>\[U(P, f, \alpha) - L(P, f, \alpha)
+<span class="eqno">(3.31)<a class="headerlink" href="#equation-eq-45" title="Link to this equation">#</a></span>\[U(P, f, \alpha) - L(P, f, \alpha)
 &lt; S(P, T_1, f, \alpha) - S(P, T_2, f, \alpha) + \varepsilon/2\]</div>
-<p>But <a class="reference internal" href="#equation-eq-44">(3.29)</a> implies that</p>
+<p>But <a class="reference internal" href="#equation-eq-44">(3.30)</a> implies that</p>
 <div class="math notranslate nohighlight">
 \[\abs{S(P, T_1, f, \alpha) - S(P, T_2, f, \alpha)} &lt; \varepsilon/2
 \]</div>
-<p>Combined with <a class="reference internal" href="#equation-eq-45">(3.30)</a>, we obtain</p>
+<p>Combined with <a class="reference internal" href="#equation-eq-45">(3.31)</a>, we obtain</p>
 <div class="math notranslate nohighlight">
 \[U(P, f, \alpha) - L(P, f, \alpha) &lt; \varepsilon\]</div>
 <p>which holds for any refinement <span class="math notranslate nohighlight">\(P\)</span> of <span class="math notranslate nohighlight">\(P_\varepsilon\)</span>.
@@ -546,11 +572,11 @@ equals to that of both lower and upper integrals.</p>
       </div>
     </a>
     <a class="right-next"
-       href="../bibliography.html"
+       href="Comparison%20Theorems.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title"><span class="section-number">3.12. </span>Comparison Theorems</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

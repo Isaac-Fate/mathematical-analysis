@@ -207,6 +207,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Darboux%20Integration%20--%20Defining%20Integrals%20with%20Upper%20and%20Lower%20Integrals.html">3.9. Darboux Integration – Defining Integrals with Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Additive%20and%20Linearity%20Properties%20of%20Upper%20and%20Lower%20Integrals.html">3.10. Additive and Linearity Properties of Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Riemann%27s%20Condition.html">3.11. Riemann’s Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Comparison%20Theorems.html">3.12. Comparison Theorems</a></li>
 </ul>
 </details></li>
 </ul>
@@ -375,7 +376,7 @@ the integrands.</p>
 then <span class="math notranslate nohighlight">\(c_1 f + c_2 g \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
 And</p>
 <div class="math notranslate nohighlight" id="equation-eq-16">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-eq-16" title="Link to this equation">#</a></span>\[\int_a^b c_1 f + c_2 g \dif\alpha
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-eq-16" title="Link to this equation">#</a></span>\[\int_a^b c_1 f + c_2 g \dif\alpha
 = c_1 \int_a^b f \dif\alpha + c_2 \int_a^b g \dif\alpha\]</div>
 </section>
 </div><div class="proof admonition" id="proof">
@@ -385,7 +386,7 @@ there exists a partition <span class="math notranslate nohighlight">\(P_\varepsi
 such that for any <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span> and
 set of representatives <span class="math notranslate nohighlight">\(T\)</span> of <span class="math notranslate nohighlight">\(P\)</span> satisfying</p>
 <div class="math notranslate nohighlight" id="equation-eq-15">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-eq-15" title="Link to this equation">#</a></span>\[\abs{S(P,T,f,\alpha) - \int_a^b f \dif \alpha} &lt; \frac{\varepsilon}{\abs{c_1} + \abs{c_2} + 1}\quad\text{and}\quad\abs{S(P,T,g,\alpha) - \int_a^b g \dif \alpha} &lt; \frac{\varepsilon}{\abs{c_1} + \abs{c_2} + 1}\]</div>
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-eq-15" title="Link to this equation">#</a></span>\[\abs{S(P,T,f,\alpha) - \int_a^b f \dif \alpha} &lt; \frac{\varepsilon}{\abs{c_1} + \abs{c_2} + 1}\quad\text{and}\quad\abs{S(P,T,g,\alpha) - \int_a^b g \dif \alpha} &lt; \frac{\varepsilon}{\abs{c_1} + \abs{c_2} + 1}\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The reason of the choice of
@@ -413,14 +414,14 @@ S(P,T,f,\alpha) - \int_a^b f \dif \alpha
 } + \abs{c_2}\abs{
 S(P,T,g,\alpha) - \int_a^b g \dif \alpha
 }\end{split}\]</div>
-<p>Applying <a class="reference internal" href="#equation-eq-15">(3.2)</a>, we obtain</p>
+<p>Applying <a class="reference internal" href="#equation-eq-15">(3.3)</a>, we obtain</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\abs{S(P,T,c_1 f + c_2 g, \alpha)
 - c_1 \int_a^b f \dif \alpha
 -  c_2 \int_a^b g \dif \alpha}&amp; &lt; \abs{c_1}\frac{\varepsilon}{\abs{c_1} + \abs{c_2} + 1}
 + \abs{c_2}\frac{\varepsilon}{\abs{c_1} + \abs{c_2} + 1}\\&amp; = \frac{\varepsilon (\abs{c_1} + \abs{c_2})}{\abs{c_1} + \abs{c_2} + 1}\\&amp; &lt; \varepsilon\end{split}\]</div>
 <p>This shows that <span class="math notranslate nohighlight">\(c_1 f + c_2 g\)</span>
-is also Riemann integrable on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <a class="reference internal" href="#equation-eq-16">(3.1)</a> is satisfied.</p>
+is also Riemann integrable on <span class="math notranslate nohighlight">\([a, b]\)</span>, and <a class="reference internal" href="#equation-eq-16">(3.2)</a> is satisfied.</p>
 </div>
 <p>Analogously, we can prove that
 the integral is linear in the integrators.</p>
@@ -439,10 +440,10 @@ And</p>
 <p class="admonition-title"><span class="caption-number">Theorem 3.3 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Assume <span class="math notranslate nohighlight">\(c \in (a, b)\)</span>.
-If two of the three integrals in <a class="reference internal" href="#equation-eq-25">(3.3)</a> exist,
-then the other one also exists, and <a class="reference internal" href="#equation-eq-25">(3.3)</a> holds.</p>
+If two of the three integrals in <a class="reference internal" href="#equation-eq-25">(3.4)</a> exist,
+then the other one also exists, and <a class="reference internal" href="#equation-eq-25">(3.4)</a> holds.</p>
 <div class="math notranslate nohighlight" id="equation-eq-25">
-<span class="eqno">(3.3)<a class="headerlink" href="#equation-eq-25" title="Link to this equation">#</a></span>\[\int_a^c f \dif\alpha + \int_c^b f \dif\alpha
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-eq-25" title="Link to this equation">#</a></span>\[\int_a^c f \dif\alpha + \int_c^b f \dif\alpha
 = \int_a^b f \dif\alpha\]</div>
 </section>
 </div></section>

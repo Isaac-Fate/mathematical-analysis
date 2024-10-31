@@ -54,6 +54,45 @@ Therefore, {eq}`eq:42` holds.
 
 :::
 
+````{prf:proposition} 
+
+Let $f$ be a bounded function on $[a, b]$. We have
+
+```{math}
+\sup_{x, y \in [a, b]}[f(x) - f(y)]
+= \sup_{x \in [a, b]} f(x) - \inf_{x \in [a, b]} f(x)
+
+```
+
+````
+
+````{prf:proof}
+
+Let $M = \sup_{x \in [a, b]} f(x)$ and $m = \inf_{x \in [a, b]} f(x)$.
+Clearly
+
+```{math}
+
+f(x) - f(y) \leq M - m \quad\forall x, y \in[a, b]
+```
+
+That is, $M-m$ is an upper bound of the
+set $\{f(x) - f(y) \mid x, y \in [a, b]\}$.
+We now show that $M - m$ is the least upper bound.
+Let $\varepsilon > 0$ be arbitrary.
+There exists $x_0 \in [a, b]$ such that $f(x_0) > M - \varepsilon/2$,
+and there exists $y_0 \in [a, b]$ such that $f(y_0) < m + \varepsilon/2$.
+It then follows that
+
+```{math}
+
+f(x_0) - f(y_0) > M - m - \varepsilon
+```
+
+This completes the proof.
+
+````
+
 The following theorem ease the procedure of proving
 the existence of an integral.
 

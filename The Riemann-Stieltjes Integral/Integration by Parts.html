@@ -207,6 +207,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Darboux%20Integration%20--%20Defining%20Integrals%20with%20Upper%20and%20Lower%20Integrals.html">3.9. Darboux Integration – Defining Integrals with Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Additive%20and%20Linearity%20Properties%20of%20Upper%20and%20Lower%20Integrals.html">3.10. Additive and Linearity Properties of Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Riemann%27s%20Condition.html">3.11. Riemann’s Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Comparison%20Theorems.html">3.12. Comparison Theorems</a></li>
 </ul>
 </details></li>
 </ul>
@@ -372,14 +373,14 @@ document.write(`
 <p>If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
 then <span class="math notranslate nohighlight">\(\alpha \in \mathfrak{R}(f)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
 <div class="math notranslate nohighlight" id="equation-eq-19">
-<span class="eqno">(3.4)<a class="headerlink" href="#equation-eq-19" title="Link to this equation">#</a></span>\[\int_a^b f \dif\alpha
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-eq-19" title="Link to this equation">#</a></span>\[\int_a^b f \dif\alpha
 + \int_a^b \alpha\dif f
 = f(b) \alpha(b) - f(a) \alpha(a)\]</div>
 </section>
 </div><div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Take a second
-and appreciate the beauty of symmetry of the equation <a class="reference internal" href="#equation-eq-19">(3.4)</a>.
+and appreciate the beauty of symmetry of the equation <a class="reference internal" href="#equation-eq-19">(3.5)</a>.
 This can be regarded as a  <em>reciprocal rule</em>  for Riemann-Stieltjes integrals.
 Indeed, it tells us the value of the integral
 when the integrand and the integrator are swapped.</p>
@@ -401,24 +402,24 @@ Write <span class="math notranslate nohighlight">\(P^\prime = \{x_0, \ldots, x_n
 The Riemann-Stieltjes sum <span class="math notranslate nohighlight">\(S(P^\prime, T^\prime, \alpha, f)\)</span> can be then
 written as</p>
 <div class="math notranslate nohighlight" id="equation-eq-17">
-<span class="eqno">(3.5)<a class="headerlink" href="#equation-eq-17" title="Link to this equation">#</a></span>\[S(P^\prime, T^\prime, \alpha, f)
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-eq-17" title="Link to this equation">#</a></span>\[S(P^\prime, T^\prime, \alpha, f)
 = \sum_{k=1}^n \alpha(t_k) [f(x_k) - f(x_{k-1}]
 = \sum_{k=1}^n \alpha(t_k) f(x_k)
 - \sum_{k=1}^n \alpha(t_k) f(x_{k-1})\]</div>
 <p>Meanwhile, the difference <span class="math notranslate nohighlight">\(A = f(b)\alpha(b) - f(a)\alpha(a)\)</span>
-on the right-hand side of <a class="reference internal" href="#equation-eq-19">(3.4)</a>
+on the right-hand side of <a class="reference internal" href="#equation-eq-19">(3.5)</a>
 can be written as</p>
 <div class="math notranslate nohighlight" id="equation-eq-18">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-eq-18" title="Link to this equation">#</a></span>\[\begin{split}A &amp; = &amp; &amp; f(b)\alpha(b) - f(a)\alpha(a) \nonumber\\&amp; = &amp; &amp; f(x_n)\alpha(x_n)
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-eq-18" title="Link to this equation">#</a></span>\[\begin{split}A &amp; = &amp; &amp; f(b)\alpha(b) - f(a)\alpha(a) \nonumber\\&amp; = &amp; &amp; f(x_n)\alpha(x_n)
 - f(x_{n-1})\alpha(x_{n-1}) \nonumber\\&amp; &amp; &amp; + f(x_{n-1})\alpha(x_{n-1})
 - \cdots
 - f(x_{1})\alpha(x_{1}) \nonumber\\&amp; &amp; &amp; + f(x_{1})\alpha(x_{1})- f(x_0)\alpha(x_0) \nonumber\\&amp; = &amp; &amp; \sum_{k=1}^n f(x_k)\alpha(x_k) - \sum_{k=1}^n f(x_{k-1})\alpha(x_{k-1})\end{split}\]</div>
-<p>Subtracting <a class="reference internal" href="#equation-eq-17">(3.5)</a> from <a class="reference internal" href="#equation-eq-18">(3.6)</a>, we obtain</p>
+<p>Subtracting <a class="reference internal" href="#equation-eq-17">(3.6)</a> from <a class="reference internal" href="#equation-eq-18">(3.7)</a>, we obtain</p>
 <div class="math notranslate nohighlight" id="equation-eq-20">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-eq-20" title="Link to this equation">#</a></span>\[A - S(P^\prime, T^\prime, \alpha, f)
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-eq-20" title="Link to this equation">#</a></span>\[A - S(P^\prime, T^\prime, \alpha, f)
 = \sum_{k=1}^n f(x_k) [\alpha(x_k) - \alpha(t_k) ]
 + \sum_{k=1}^n f(x_{k-1}) [\alpha(t_k) - \alpha(x_{k-1}) ]\]</div>
-<p>Taking a close look at the right-hand side of <a class="reference internal" href="#equation-eq-20">(3.7)</a>,
+<p>Taking a close look at the right-hand side of <a class="reference internal" href="#equation-eq-20">(3.8)</a>,
 one may realize that it is also a Riemann-Stieltjes sum.
 To see this, let <span class="math notranslate nohighlight">\(P^{\prime\prime} = P^\prime \cup T^\prime\)</span>,
 and let <span class="math notranslate nohighlight">\(T^{\prime\prime}\)</span> be the list of representatives constructed as follows.
@@ -438,7 +439,7 @@ would be zero.</p>
 <p><span class="caption-number">Fig. 3.1 </span><span class="caption-text">The blue part is associated with <span class="math notranslate nohighlight">\(f(x_k)[\alpha(x_k)-\alpha(t_k)]\)</span> while the orange part is associated with <span class="math notranslate nohighlight">\(f(x_{k-1})[\alpha(t_k)-\alpha(x_{k-1})]\)</span>. We see that summing them up yields <span class="math notranslate nohighlight">\(S(P^{\prime\prime}, T^{\prime\prime}, f, \alpha)\)</span>.</span><a class="headerlink" href="#fig-5" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The right-hand side of <a class="reference internal" href="#equation-eq-20">(3.7)</a>
+<p>The right-hand side of <a class="reference internal" href="#equation-eq-20">(3.8)</a>
 is just <span class="math notranslate nohighlight">\(S(P^{\prime\prime}, T^{\prime\prime}, f, \alpha)\)</span>.
 Since <span class="math notranslate nohighlight">\(P^{\prime\prime} \supseteq P_\varepsilon\)</span>,
 we have</p>
@@ -450,7 +451,7 @@ S(P^{\prime\prime}, T^{\prime\prime}, f, \alpha)
 A - S(P^\prime, T^\prime, \alpha, f) -  \int_a^b f \dif \alpha
 } &lt; \varepsilon\]</div>
 <p>This shows that <span class="math notranslate nohighlight">\(\alpha \in \mathfrak{R}(f)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
-and <a class="reference internal" href="#equation-eq-19">(3.4)</a> is proved.</p>
+and <a class="reference internal" href="#equation-eq-19">(3.5)</a> is proved.</p>
 </div>
 </section>
 
