@@ -55,6 +55,7 @@ Therefore, {eq}`eq:42` holds.
 :::
 
 ````{prf:proposition} 
+:label: prop:7
 
 Let $f$ be a bounded function on $[a, b]$. We have
 

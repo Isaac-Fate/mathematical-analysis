@@ -395,7 +395,7 @@ we have <span class="math notranslate nohighlight">\(f(x) \geq 0\)</span> and he
 its integral equals to the upper integral,
 hence greater than or equal to zero.</p>
 </div>
-<div class="proof corollary admonition" id="corollary-1">
+<div class="proof corollary admonition" id="cor:2">
 <p class="admonition-title"><span class="caption-number">Corollary 3.1 </span></p>
 <section class="corollary-content" id="proof-content">
 <p>Assume <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing and <span class="math notranslate nohighlight">\(f \leq g\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
@@ -403,7 +403,39 @@ If <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)<
 <div class="math notranslate nohighlight">
 \[\int_a^b f \dif\alpha\leq\int_a^b g \dif\alpha\]</div>
 </section>
-</div></section>
+</div><div class="proof theorem admonition" id="eq:47">
+<p class="admonition-title"><span class="caption-number">Theorem 3.15 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Assume <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+then <span class="math notranslate nohighlight">\(\abs{f} \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, and</p>
+<div class="math notranslate nohighlight" id="equation-eq-47">
+<span class="eqno">(3.32)<a class="headerlink" href="#equation-eq-47" title="Link to this equation">#</a></span>\[\abs{\int_a^b f \dif \alpha}\leq\int_a^b \abs{f}\dif\alpha\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
+Because <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>
+equivalently, satisfying the Riemann’s condition,
+there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon = \{x_0, \ldots, x_n\}\)</span>
+such that <span class="math notranslate nohighlight">\(U(P, f, \alpha) - L(P, f, \alpha) &lt; \varepsilon\)</span>.
+On each subinterval <span class="math notranslate nohighlight">\(I_k = [x_{k-1}, x_k]\)</span>, we have</p>
+<div class="math notranslate nohighlight">
+\[\omega_{\abs{f}}(I_k)
+= \sup_{x, y \in I_k}( \abs{f(x)} - \abs{f(y)})
+\leq\sup_{x, y \in I_k}\abs{ f(x) - f(y) }
+= \omega_f(I_k)
+\]</div>
+<p>Multiplying by <span class="math notranslate nohighlight">\(\Delta \alpha_k\)</span> on both sides and then summing over <span class="math notranslate nohighlight">\(k\)</span>,
+we obtain</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}U(P_\varepsilon, \abs{f}, \alpha) - L(P_\varepsilon, \abs{f}, \alpha)
+&amp; = \sum_{k=1}^n \omega_{\abs{f}}(I_k) \Delta\alpha_k \\&amp; \leq\sum_{k=1}^n \omega_{f}(I_k) \Delta\alpha_k \\&amp; = U(P_\varepsilon, f, \alpha) - L(P_\varepsilon, f, \alpha) \\&amp; &lt; \varepsilon\end{split}\]</div>
+<p>This implies that <span class="math notranslate nohighlight">\(\abs{f}\)</span> also satisfies the Riemann’s condition
+and hence integrable.</p>
+<p>Then, since <span class="math notranslate nohighlight">\(-\abs{f} \leq f \leq \abs{f}\)</span>, <a class="reference internal" href="#equation-eq-47">(3.32)</a>
+is proved by applying <a class="reference internal" href="#cor:2">Corollary 3.1</a>.</p>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {

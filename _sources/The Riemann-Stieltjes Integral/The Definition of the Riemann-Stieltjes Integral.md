@@ -45,7 +45,7 @@ to be unbounded and subsequently prove the non-existence of the integral.
 
 ````{prf:proposition} 
 
-If $f$ is unbounded, the $f \notin \mathfrak{R}(\alpha)$ on $[a, b]$.
+If $f$ is unbounded, then $f \notin \mathfrak{R}(\alpha)$ on $[a, b]$.
 
 ````
 
