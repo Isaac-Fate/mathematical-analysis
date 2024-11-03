@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3.8. Euler’s Summation Formula &#8212; Mathematical Analysis</title>
+    <title>3.13. Integrators of Bounded Variation &#8212; Mathematical Analysis</title>
   
   
   
@@ -61,12 +61,12 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"tex": {"macros": {"C": "\\mathbb{C}", "CALA": "\\mathcal{A}", "CALB": "\\mathcal{B}", "CALC": "\\mathcal{C}", "CALD": "\\mathcal{D}", "CALE": "\\mathcal{E}", "CALF": "\\mathcal{F}", "CALG": "\\mathcal{G}", "CALH": "\\mathcal{H}", "CALI": "\\mathcal{I}", "CALJ": "\\mathcal{J}", "CALK": "\\mathcal{K}", "CALL": "\\mathcal{L}", "CALM": "\\mathcal{M}", "CALN": "\\mathcal{N}", "CALO": "\\mathcal{O}", "CALP": "\\mathcal{P}", "CALQ": "\\mathcal{Q}", "CALR": "\\mathcal{R}", "CALS": "\\mathcal{S}", "CALT": "\\mathcal{T}", "CALU": "\\mathcal{U}", "CALV": "\\mathcal{V}", "CALW": "\\mathcal{W}", "CALX": "\\mathcal{X}", "CALY": "\\mathcal{Y}", "CALZ": "\\mathcal{Z}", "F": "\\mathbb{F}", "N": "\\mathbb{N}", "Ns": "\\mathbb{N^\\ast}", "Q": "\\mathbb{Q}", "R": "\\mathbb{R}", "RE": ["\\mathrm{Re}"], "SCRI": "\\mathsrc{I}", "SRCA": "\\mathsrc{A}", "SRCB": "\\mathsrc{B}", "SRCC": "\\mathsrc{C}", "SRCD": "\\mathsrc{D}", "SRCE": "\\mathsrc{E}", "SRCF": "\\mathsrc{F}", "SRCG": "\\mathsrc{G}", "SRCH": "\\mathsrc{H}", "SRCJ": "\\mathsrc{J}", "SRCK": "\\mathsrc{K}", "SRCL": "\\mathsrc{L}", "SRCM": "\\mathsrc{M}", "SRCN": "\\mathsrc{N}", "SRCO": "\\mathsrc{O}", "SRCP": "\\mathsrc{P}", "SRCQ": "\\mathsrc{Q}", "SRCR": "\\mathsrc{R}", "SRCS": "\\mathsrc{S}", "SRCT": "\\mathsrc{T}", "SRCU": "\\mathsrc{U}", "SRCV": "\\mathsrc{V}", "SRCW": "\\mathsrc{W}", "SRCX": "\\mathsrc{X}", "SRCY": "\\mathsrc{Y}", "SRCZ": "\\mathsrc{Z}", "Span": ["\\mathop{\\mathrm{span}}"], "Z": "\\mathbb{Z}", "abs": ["\\left\\lvert #1 \\right\\rvert", 1], "argmax": ["\\mathop{\\mathrm{arg \\, max}}"], "argmin": ["\\mathop{\\mathrm{arg \\, min}}"], "bmat": ["\\left[\\begin{array}"], "brk": ["\\left( #1 \\right)", 1], "ceil": ["\\lceil #1 \\rceil", 1], "col": ["\\mathop{\\mathrm{col}}"], "d": ["\\mathrm{d}"], "dif": "\\, \\mathrm{d}", "emat": ["\\end{array}\\right]"], "floor": ["\\lfloor #1 \\rfloor", 1], "im": ["\\mathop{\\mathrm{im}}"], "ind": ["\\mathbb{1}"], "ker": ["\\mathop{\\mathrm{ker}}"], "lowint": ["\\underline{\\int}"], "norm": ["\\left\\lVert #1 \\right\\rVert", 1], "odv": ["\\frac{\\mathrm{d} #1s}{\\mathrm{d} #2}", 2], "odvs": ["\\frac{\\mathrm{d}}{\\mathrm{d} #2} #1", 2], "proj": ["\\mathop{\\mathrm{proj}}"], "restr": ["{#1}|_{#2}", 2], "row": ["\\mathop{\\mathrm{row}}"], "set": ["\\left\\{ #1 \\; \\middle| \\; #2 \\right\\}", 2], "upint": ["\\overline{\\int}"], "v": ["\\mathbf{#1}", 1]}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'The Riemann-Stieltjes Integral/Euler's Summation Formula';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'The Riemann-Stieltjes Integral/Integrators of Bounded Variation';</script>
     <link rel="icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.9. Darboux Integration – Defining Integrals with Upper and Lower Integrals" href="Darboux%20Integration%20--%20Defining%20Integrals%20with%20Upper%20and%20Lower%20Integrals.html" />
-    <link rel="prev" title="3.7. Reduction of Riemann-Stieltjes Integrals to Finite Sums" href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html" />
+    <link rel="next" title="References" href="../bibliography.html" />
+    <link rel="prev" title="3.12. Comparison Theorems" href="Comparison%20Theorems.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -203,12 +203,12 @@
 <li class="toctree-l2"><a class="reference internal" href="Reduction%20to%20Riemann%20Integrals.html">3.5. Reduction to Riemann Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Step%20Functions%20as%20Integrators.html">3.6. Step Functions as Integrators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html">3.7. Reduction of Riemann-Stieltjes Integrals to Finite Sums</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.8. Euler’s Summation Formula</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Euler%27s%20Summation%20Formula.html">3.8. Euler’s Summation Formula</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Darboux%20Integration%20--%20Defining%20Integrals%20with%20Upper%20and%20Lower%20Integrals.html">3.9. Darboux Integration – Defining Integrals with Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Additive%20and%20Linearity%20Properties%20of%20Upper%20and%20Lower%20Integrals.html">3.10. Additive and Linearity Properties of Upper and Lower Integrals</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Riemann%27s%20Condition.html">3.11. Riemann’s Condition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Comparison%20Theorems.html">3.12. Comparison Theorems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Integrators%20of%20Bounded%20Variation.html">3.13. Integrators of Bounded Variation</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.13. Integrators of Bounded Variation</a></li>
 </ul>
 </details></li>
 </ul>
@@ -270,7 +270,7 @@
       
       
       
-      <li><a href="../_sources/The Riemann-Stieltjes Integral/Euler's Summation Formula.md" target="_blank"
+      <li><a href="../_sources/The Riemann-Stieltjes Integral/Integrators of Bounded Variation.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -352,7 +352,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Euler’s Summation Formula</h1>
+    <h1>Integrators of Bounded Variation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -366,136 +366,129 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="euler-s-summation-formula">
-<h1><span class="section-number">3.8. </span>Euler’s Summation Formula<a class="headerlink" href="#euler-s-summation-formula" title="Link to this heading">#</a></h1>
-<p>Euler’s summation formula compares a sum <span class="math notranslate nohighlight">\(\sum f(n)\)</span>
-with its associated integral <span class="math notranslate nohighlight">\(\int f(x) \dif x\)</span>.
-See <a class="reference internal" href="#fig-6"><span class="std std-numref">Fig. 3.2</span></a> for an illustration.</p>
-<figure class="align-default" id="fig-6">
-<img alt="../_images/euler-summation-formula.png" src="../_images/euler-summation-formula.png" />
-<figcaption>
-<p><span class="caption-number">Fig. 3.2 </span><span class="caption-text">Euler’s Summation Formula.</span><a class="headerlink" href="#fig-6" title="Link to this image">#</a></p>
-</figcaption>
-</figure>
-<div class="proof theorem admonition" id="eq:33">
-<p class="admonition-title"><span class="caption-number">Theorem 3.10 </span> (Euler’s Summation Formula)</p>
-<section class="theorem-content" id="proof-content">
-<p>If <span class="math notranslate nohighlight">\(f\)</span> has a continuous derivative <span class="math notranslate nohighlight">\(f^\prime\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
-then we have</p>
-<div class="math notranslate nohighlight" id="equation-eq-33">
-<span class="eqno">(3.16)<a class="headerlink" href="#equation-eq-33" title="Link to this equation">#</a></span>\[\sum_{n=\floor{a}+1}^{\floor{b}} f(n)
-= \int_a^b f(x) \dif x
-+ \int_a^b f^\prime(x) \{x\}\dif x
-+ f(a) \{a\} - f(b) \{b\}\]</div>
-<p>In particular, if <span class="math notranslate nohighlight">\(a, b \in \Z\)</span> we have</p>
-<div class="math notranslate nohighlight" id="equation-eq-37">
-<span class="eqno">(3.17)<a class="headerlink" href="#equation-eq-37" title="Link to this equation">#</a></span>\[\sum_{n=a+1}^{b} f(n)
-= \int_a^b f(x) \dif x
-+ \int_a^b f^\prime(x) \{x\}\dif x\]</div>
-<p>By adding the term <span class="math notranslate nohighlight">\(f(a)\)</span> on both sides and applying
-the fundamental theorem of calculus,
-one may obtain a more symmetric formula:</p>
-<div class="math notranslate nohighlight" id="equation-eq-38">
-<span class="eqno">(3.18)<a class="headerlink" href="#equation-eq-38" title="Link to this equation">#</a></span>\[\sum_{n=a}^b f(n)
-= \int_a^b f(x) \dif x
-+ \int_a^b f^\prime(x) \left(\{x\} - \frac{1}{2}\right)\dif x
-+ \frac{f(a) + f(b)}{2}\]</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="integrators-of-bounded-variation">
+<h1><span class="section-number">3.13. </span>Integrators of Bounded Variation<a class="headerlink" href="#integrators-of-bounded-variation" title="Link to this heading">#</a></h1>
+<p>Recall in the previous section we always assume that
+the integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing.
+Now, we want to extend the theorems about existence of integrals
+to the case when the integrator is of bounded variation.</p>
+<p>For example, we want to generalize <a class="reference internal" href="Comparison%20Theorems.html#thm:10">Theorem 3.16</a> to
+that assuming <span class="math notranslate nohighlight">\(\alpha\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+if <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+then <span class="math notranslate nohighlight">\(f^2 \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<p>The key of achieving this is that a function <span class="math notranslate nohighlight">\(\alpha\)</span> of bounded variation
+can be written as a difference of
+two increasing functions <span class="math notranslate nohighlight">\(\alpha_1\)</span> and <span class="math notranslate nohighlight">\(\alpha_2\)</span>,
+(<a class="reference internal" href="../Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Total%20Variation.html#thm:4">Theorem 2.5</a>).</p>
+<div class="math notranslate nohighlight">
+\[\alpha = \alpha_1 - \alpha_2
+\]</div>
+<p>If we have proved in the previous section that
+for some function <span class="math notranslate nohighlight">\(g\)</span>, <span class="math notranslate nohighlight">\(g \in \mathfrak{R}(\alpha_1)\)</span>
+and <span class="math notranslate nohighlight">\(g \in \mathfrak{R}(\alpha_2)\)</span>on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+Then by the linearity of integrals we may conclude
+that <span class="math notranslate nohighlight">\(g \in \mathfrak{R}(\alpha = \alpha_1 - \alpha_2)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
+<div class="proof lemma admonition" id="eq:48">
+<p class="admonition-title"><span class="caption-number">Lemma 3.1 </span></p>
+<section class="lemma-content" id="proof-content">
+<p>Assume <span class="math notranslate nohighlight">\(\alpha\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+then for any given <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span>
+there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span> such that
+for all refinement <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span>, <span class="math notranslate nohighlight">\(P = \{x_0, \ldots, x_n\}\)</span>,
+we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-48">
+<span class="eqno">(3.33)<a class="headerlink" href="#equation-eq-48" title="Link to this equation">#</a></span>\[\sum_{k=1}^n \omega_f(I_k) \abs{\Delta \alpha_k} &lt; \varepsilon\]</div>
 </section>
-</div><div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><a class="reference internal" href="#equation-eq-37">(3.17)</a> is easier to use in practice while <a class="reference internal" href="#equation-eq-38">(3.18)</a>
-is more elegant in the sense of symmetry.
-To derive <a class="reference internal" href="#equation-eq-38">(3.18)</a>, we need to use the fundamental theorem of calculus,
-which will be introduced later.</p>
-</div>
+</div><p>The idea of the proof is as follows.
+The appearance of the oscillation <span class="math notranslate nohighlight">\(\omega_f(I_k)\)</span> in <a class="reference internal" href="#equation-eq-48">(3.33)</a>
+suggests us to consider the difference <span class="math notranslate nohighlight">\(f(t_k) - f(t^\prime_k)\)</span>.
+We have for all <span class="math notranslate nohighlight">\(t_k, t^\prime_k \in [x_{k-1}, x_k]\)</span> that</p>
+<div class="math notranslate nohighlight">
+\[\abs{\sum_{k=1}^n [ f(t_k) - f(t^\prime_k) ] \Delta \alpha_k} &lt; c \varepsilon\]</div>
+<p>The difficulty is that <span class="math notranslate nohighlight">\(\Delta \alpha_k\)</span> is not nonnegative anymore as
+in the previous section.
+To solve this, we simply
+consider the set <span class="math notranslate nohighlight">\(A\)</span> of indices of which <span class="math notranslate nohighlight">\(\Delta \alpha_k \geq 0\)</span>
+and the set <span class="math notranslate nohighlight">\(B\)</span> of indices of which <span class="math notranslate nohighlight">\(\Delta \alpha_k &lt; 0\)</span> separately.
+Then we have</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^n [ f(t_k) - f(t^\prime_k) ]\Delta\alpha_k
+= \sum_{k \in A}[ f(t_k) - f(t^\prime_k) ]\abs{\Delta \alpha_k}
++ \sum_{k \in B}[ f(t_k^\prime) - f(t_k) ]\abs{\Delta \alpha_k}\]</div>
+<p>The rest of the proof is done by choosing the <span class="math notranslate nohighlight">\(t_k\)</span> and <span class="math notranslate nohighlight">\(t^\prime_k\)</span>
+and then comparing <span class="math notranslate nohighlight">\(\abs{f(t_k) - f(t^\prime_k)}\)</span> with <span class="math notranslate nohighlight">\(\omega_f(I_k)\)</span>.</p>
 <div class="proof admonition" id="proof">
-<p>Proof. Consider a partition of <span class="math notranslate nohighlight">\([\floor{a}+1, \floor{b}]\)</span>:</p>
+<p>Proof. If <span class="math notranslate nohighlight">\(V_a^b(\alpha) = 0\)</span>, then <span class="math notranslate nohighlight">\(\alpha\)</span> is constant
+and hence the conclusion is trivial.
+In the following context, we assume <span class="math notranslate nohighlight">\(V_a^b(\alpha) &gt; 0\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
+Because <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+there exists a partition <span class="math notranslate nohighlight">\(P_\varepsilon\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>
+such that
+for any refinement <span class="math notranslate nohighlight">\(P=\{x_0, \ldots, x_n\}\)</span>
+and any list of representatives <span class="math notranslate nohighlight">\(T\)</span> of <span class="math notranslate nohighlight">\(P\)</span>, we have</p>
 <div class="math notranslate nohighlight">
-\[P = \{\floor{a}+1, \floor{a}+2, \ldots, \floor{b}\}\]</div>
-<p>Applying <a class="reference internal" href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html#thm:7">Theorem 3.8</a>, we have</p>
-<div class="math notranslate nohighlight" id="equation-eq-29">
-<span class="eqno">(3.19)<a class="headerlink" href="#equation-eq-29" title="Link to this equation">#</a></span>\[\int_{\floor{a}+1}^{\floor{b}} f(x) \dif\floor{x}
-= \sum_{n=\floor{a}+2}^b f(n)\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Note that <span class="math notranslate nohighlight">\(n\)</span> starts at <span class="math notranslate nohighlight">\(\floor{a}+2\)</span>
-since the jump of the floor function <span class="math notranslate nohighlight">\(\floor{x}\)</span>
-at <span class="math notranslate nohighlight">\(x=\floor{a}+1\)</span> is <span class="math notranslate nohighlight">\(0\)</span>.</p>
-</div>
-<p>Next, we examine the integrals <span class="math notranslate nohighlight">\(\int_a^{\floor{a}+1} f(x) \dif \floor{x}\)</span>
-and <span class="math notranslate nohighlight">\(\int_{\floor{b}}^b f(x) \dif \floor{x}\)</span>.
-It is clear that</p>
-<div class="math notranslate nohighlight" id="equation-eq-30">
-<span class="eqno">(3.20)<a class="headerlink" href="#equation-eq-30" title="Link to this equation">#</a></span>\[\int_{\floor{b}}^b f(x) \dif\floor{x} = 0\]</div>
-<p>because it is zero be definition if <span class="math notranslate nohighlight">\(b \in \Z\)</span>
-and when <span class="math notranslate nohighlight">\(b \neq \Z\)</span>, <span class="math notranslate nohighlight">\(\floor{x} = \floor{b}\)</span> is constant on <span class="math notranslate nohighlight">\([\floor{b}, b]\)</span>.
-Now, we consider <span class="math notranslate nohighlight">\(\floor{x}\)</span> on <span class="math notranslate nohighlight">\([\floor{a}, \floor{a}+1]\)</span>.
-We have</p>
+\[\abs{S(P, T, f, \alpha) - \int_a^b f \dif \alpha} &lt; \varepsilon / 4
+\]</div>
+<p>It then follows that</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\floor{x} = \begin{cases}
-\floor{a},   &amp; \floor{a} \leq x &lt; \floor{a}+1 \\
-\floor{a}+1, &amp; x=\floor{a}+1
-\end{cases}\end{split}\]</div>
-<p>Therefore, <span class="math notranslate nohighlight">\(\floor{x}\)</span> has a jump <span class="math notranslate nohighlight">\(1\)</span> at <span class="math notranslate nohighlight">\(x=\floor{a}+1\)</span>.
+\[\abs{\sum_{k=1}^n [ f(t_k) - f(t^\prime_k) ] \Delta \alpha_k} &lt; \varepsilon / 2
+\quad\forall t_k, t^\prime_k \in[x_{k-1}, x_k]\]</div>
+<p>Let subsets <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> of indices <span class="math notranslate nohighlight">\(\{1, \ldots, n\}\)</span> be defined by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A &amp; = \set{\Delta \alpha_k \geq 0}{k \in \{1, \ldots, n\}}\\
+B &amp; = \set{\Delta \alpha_k &lt; 0}{k \in \{1, \ldots, n\}}\end{split}\]</div>
+<p>Clearly, <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> forms a partition of <span class="math notranslate nohighlight">\(\{1, \ldots, n\}\)</span>,
+i.e., <span class="math notranslate nohighlight">\(A \cup B = \{1, \ldots, n\}\)</span> and <span class="math notranslate nohighlight">\(A \cap B = \emptyset\)</span>.
 It then follows that</p>
-<div class="math notranslate nohighlight" id="equation-eq-31">
-<span class="eqno">(3.21)<a class="headerlink" href="#equation-eq-31" title="Link to this equation">#</a></span>\[\int_a^{\floor{a}+1} f(x) \dif\floor{x}
-= f(\floor{a}+1)\]</div>
-<p>Combining <a class="reference internal" href="#equation-eq-29">(3.19)</a>, <a class="reference internal" href="#equation-eq-30">(3.20)</a> and <a class="reference internal" href="#equation-eq-31">(3.21)</a>, we obtain</p>
-<div class="math notranslate nohighlight" id="equation-eq-32">
-<span class="eqno">(3.22)<a class="headerlink" href="#equation-eq-32" title="Link to this equation">#</a></span>\[\int_a^b f(x) \dif\floor{x} = \sum_{n=\floor{a}+1}^b f(n)\]</div>
-<p>This expresses the summation in <a class="reference internal" href="#equation-eq-33">(3.16)</a>
-as an integral.</p>
-<p>The rest of the proof leverages the theorems of
-integration by parts and reduction of Riemann integrals.
-Applying integration by parts, we have</p>
-<div class="math notranslate nohighlight" id="equation-eq-34">
-<span class="eqno">(3.23)<a class="headerlink" href="#equation-eq-34" title="Link to this equation">#</a></span>\[\int_a^b f(x) \dif x + \int_a^b x \dif f(x)
-= f(b)b - f(a)a\]</div>
-<p>and</p>
-<div class="math notranslate nohighlight" id="equation-eq-35">
-<span class="eqno">(3.24)<a class="headerlink" href="#equation-eq-35" title="Link to this equation">#</a></span>\[\int_a^b f(x) \dif\floor{x} + \int_a^b \floor{x}\dif f(x)
-= f(b) \floor{b} - f(a) \floor{a}\]</div>
-<p>Subtracting <a class="reference internal" href="#equation-eq-35">(3.24)</a> from <a class="reference internal" href="#equation-eq-34">(3.23)</a> yields</p>
 <div class="math notranslate nohighlight">
-\[\int_a^b f(x) \dif x - \int_a^b f(x) \dif\floor{x}
-+ \int_a^b \{x\}\dif f(x)
-= f(b) \{b\} - f(a) \{a\}\]</div>
-<p>Since <span class="math notranslate nohighlight">\(f\)</span> has a continuous derivative,
-by <a class="reference internal" href="Reduction%20to%20Riemann%20Integrals.html#thm:8">Theorem 3.6</a>,
-we can replace <span class="math notranslate nohighlight">\(\dif f(x)\)</span>
-with <span class="math notranslate nohighlight">\(f^\prime(x) \dif x\)</span>.
-Then rearranging the terms, we obtain</p>
-<div class="math notranslate nohighlight" id="equation-eq-36">
-<span class="eqno">(3.25)<a class="headerlink" href="#equation-eq-36" title="Link to this equation">#</a></span>\[\int_a^b f(x) \dif\floor{x}
-= \int_a^b f(x)\dif x
-+ \int_a^b f^\prime(x) \{x\}\dif x
-+ f(a) \{a\} - f(b) \{b\}\]</div>
-<p><a class="reference internal" href="#equation-eq-33">(3.16)</a> is proved by comparing <a class="reference internal" href="#equation-eq-32">(3.22)</a> and <a class="reference internal" href="#equation-eq-36">(3.25)</a>.</p>
-</div>
-<div class="proof example admonition" id="eq:39">
-<p class="admonition-title"><span class="caption-number">Example 3.1 </span></p>
-<section class="example-content" id="proof-content">
-<p>Using the Euler’s summation formula <a class="reference internal" href="#equation-eq-37">(3.17)</a>,
-we can derive the following
-identities related to summing up terms of the form <span class="math notranslate nohighlight">\(\frac{1}{k^s}\)</span>:</p>
+\[\sum_{k=1}^n [ f(t_k) - f(t^\prime_k) ]\Delta\alpha_k
+= \sum_{k \in A}[ f(t_k) - f(t^\prime_k) ]\abs{\Delta \alpha_k}
++ \sum_{k \in B}[ f(t_k^\prime) - f(t_k) ]\abs{\Delta \alpha_k}\]</div>
+<p>Therefore,</p>
+<div class="math notranslate nohighlight" id="equation-eq-49">
+<span class="eqno">(3.34)<a class="headerlink" href="#equation-eq-49" title="Link to this equation">#</a></span>\[\abs{
+\sum_{k \in A} [ f(t_k) - f(t^\prime_k) ] \abs{\Delta \alpha_k}
++ \sum_{k \in B} [ f(t_k^\prime) - f(t_k) ] \abs{\Delta \alpha_k}
+} &lt; \varepsilon / 2
+\quad\forall t_k, t^\prime_k \in[x_{k-1}, x_k]\]</div>
+<p>Now, we will strategically select <span class="math notranslate nohighlight">\(t_k\)</span> and <span class="math notranslate nohighlight">\(t^\prime_k\)</span>
+to accomplish our goal.</p>
 <ol class="arabic simple">
-<li><p>If <span class="math notranslate nohighlight">\(s \neq 1\)</span></p></li>
+<li><p>For <span class="math notranslate nohighlight">\(k \in A\)</span>, we may select <span class="math notranslate nohighlight">\(t_k\)</span> and <span class="math notranslate nohighlight">\(t^\prime_k\)</span>
+such that <span class="math notranslate nohighlight">\(f(t_k) - f(t^\prime_k) &gt; \max \left\{ 0, \omega_f(I_k) - \frac{\varepsilon}{2 V_a^b(\alpha)} \right\}\)</span>, and</p></li>
+<li><p>For <span class="math notranslate nohighlight">\(k \in B\)</span>, we may select <span class="math notranslate nohighlight">\(t_k\)</span> and <span class="math notranslate nohighlight">\(t^\prime_k\)</span>
+such that <span class="math notranslate nohighlight">\(f(t^\prime_k) - f(t_k) &gt; \max \left\{ 0, \omega_f(I_k) - \frac{\varepsilon}{2 V_a^b(\alpha)} \right\}\)</span>.</p></li>
 </ol>
+<p>Plugging the particular choices of <span class="math notranslate nohighlight">\(t_k\)</span>’s and <span class="math notranslate nohighlight">\(t^\prime_k\)</span>’s
+into <a class="reference internal" href="#equation-eq-49">(3.34)</a>, we obtain</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\sum_{k=1}^n \frac{1}{k^s} = \frac{1}{n^{s-1}} + s \int_1^n \frac{\floor{x}}{x^{s+1}}\dif x\\```2. If $s=1$
-```{math}
-:label: eq:39
-\sum_{k=1}^n \frac{1}{k}
-= \ln n - \int_1^n \frac{\{x\}}{x^{2}}\dif x + 1\\```{eq}`eq:39` provides another way of
-proving
-the sequence $\left\{ \sum_{1}^n \frac{1}{k} - \ln n\right\}$ converges
-(to Euler's constant $\gamma$).
-And hence, we obtain an integral form of the Euler's constant:\\```{math}
-\gamma = 1 - \int_1^\infty\ \frac{\{x\}}{x^2}\dif x
-\end{aligned}\end{align} \]</div>
+\[\begin{split}\varepsilon / 2
+&amp; &gt; 	\abs{
+\sum_{k \in A} [ f(t_k) - f(t^\prime_k) ] \abs{\Delta \alpha_k}
++ \sum_{k \in B} [ f(t_k^\prime) - f(t_k) ] \abs{\Delta \alpha_k}
+}\\&amp; = 	\sum_{k \in A}[ f(t_k) - f(t^\prime_k) ]\abs{\Delta \alpha_k}
++ \sum_{k \in B}[ f(t_k^\prime) - f(t_k) ]\abs{\Delta \alpha_k}\\&amp; &gt; \sum_{k=1}^n \left(\omega_f(I_k) - \frac{\varepsilon}{2 V_a^b(\alpha)}\right)\abs{\Delta \alpha_k}\\&amp; = \sum_{k=1}^n \omega_f(I_k) \abs{\Delta \alpha_k}
+- \frac{\varepsilon}{2 V_a^b(\alpha)}\sum_{k=1}^n \abs{\Delta \alpha_k}\\&amp; \geq\sum_{k=1}^n \omega_f(I_k) \abs{\Delta \alpha_k} - \varepsilon / 2
+\end{split}\]</div>
+<p>where the last inequality follows from the property of
+total variations <span class="math notranslate nohighlight">\(\sum_{k=1}^n \abs{\Delta \alpha_k} \leq V_a^b(\alpha)\)</span>.
+Moving the term <span class="math notranslate nohighlight">\(-\varepsilon / 2\)</span> to the left in the above inequality yields</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^n \omega_f(I_k) \abs{\Delta \alpha_k} &lt; \varepsilon\]</div>
+</div>
+<div class="proof theorem admonition" id="theorem-1">
+<p class="admonition-title"><span class="caption-number">Theorem 3.18 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Assume <span class="math notranslate nohighlight">\(\alpha\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>
+then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(V_a^x(\alpha))\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
-</div></section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. Sorry.</p>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -528,20 +521,20 @@ And hence, we obtain an integral form of the Euler's constant:\\```{math}
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="Reduction%20of%20Riemann-Stieltjes%20Integrals%20to%20Finite%20Sums.html"
+       href="Comparison%20Theorems.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.7. </span>Reduction of Riemann-Stieltjes Integrals to Finite Sums</p>
+        <p class="prev-next-title"><span class="section-number">3.12. </span>Comparison Theorems</p>
       </div>
     </a>
     <a class="right-next"
-       href="Darboux%20Integration%20--%20Defining%20Integrals%20with%20Upper%20and%20Lower%20Integrals.html"
+       href="../bibliography.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.9. </span>Darboux Integration – Defining Integrals with Upper and Lower Integrals</p>
+        <p class="prev-next-title">References</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

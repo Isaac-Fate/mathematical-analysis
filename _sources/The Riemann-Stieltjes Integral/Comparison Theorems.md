@@ -124,6 +124,7 @@ But $f$ is not.
 ````
 
 ````{prf:theorem} 
+:label: thm:10
 
 Assume $\alpha$ is increasing on $[a, b]$.
 If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$
