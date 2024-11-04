@@ -383,12 +383,22 @@ two increasing functions <span class="math notranslate nohighlight">\(\alpha_1\)
 <div class="math notranslate nohighlight">
 \[\alpha = \alpha_1 - \alpha_2
 \]</div>
-<p>If we have proved in the previous section that
-for some function <span class="math notranslate nohighlight">\(g\)</span>, <span class="math notranslate nohighlight">\(g \in \mathfrak{R}(\alpha_1)\)</span>
-and <span class="math notranslate nohighlight">\(g \in \mathfrak{R}(\alpha_2)\)</span>on <span class="math notranslate nohighlight">\([a, b]\)</span>.
-Then by the linearity of integrals we may conclude
-that <span class="math notranslate nohighlight">\(g \in \mathfrak{R}(\alpha = \alpha_1 - \alpha_2)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
-<div class="proof lemma admonition" id="eq:48">
+<p>Then, to exploit the condition that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span>,
+we would want that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha_1)\)</span> and <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha_2)\)</span>.
+But this is not true in general due to the nonuniqueness
+of the decomposition of <span class="math notranslate nohighlight">\(\alpha\)</span> into two increasing functions.
+For example, consider <span class="math notranslate nohighlight">\(\alpha(x) = 0\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+We can write <span class="math notranslate nohighlight">\(\alpha\)</span> as a difference of two identity
+functions <span class="math notranslate nohighlight">\(\alpha_1(x) = \alpha(x) = x\)</span>.
+Then the Dirichlet function <span class="math notranslate nohighlight">\(\ind_{\Q}\)</span> is not integrable
+w.r.t. <span class="math notranslate nohighlight">\(\alpha_1\)</span> nor <span class="math notranslate nohighlight">\(\alpha_2\)</span>.
+But it is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> for the integrator is constant.</p>
+<p>However, if we decompose <span class="math notranslate nohighlight">\(\alpha\)</span>(in the canonical way) as</p>
+<div class="math notranslate nohighlight">
+\[\alpha(x) = V_a^x(\alpha) - [ V_a^x(\alpha) - \alpha(x) ]\]</div>
+<p>then we will see in <a class="reference internal" href="#thm:11">Theorem 3.18</a> that <span class="math notranslate nohighlight">\(f\)</span>
+is also integrable w.r.t. <span class="math notranslate nohighlight">\(V_a^x(\alpha)\)</span> and <span class="math notranslate nohighlight">\(V_a^x(\alpha) - \alpha(x)\)</span>.</p>
+<div class="proof lemma admonition" id="lem:1">
 <p class="admonition-title"><span class="caption-number">Lemma 3.1 </span></p>
 <section class="lemma-content" id="proof-content">
 <p>Assume <span class="math notranslate nohighlight">\(\alpha\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
@@ -400,7 +410,13 @@ we have</p>
 <div class="math notranslate nohighlight" id="equation-eq-48">
 <span class="eqno">(3.33)<a class="headerlink" href="#equation-eq-48" title="Link to this equation">#</a></span>\[\sum_{k=1}^n \omega_f(I_k) \abs{\Delta \alpha_k} &lt; \varepsilon\]</div>
 </section>
-</div><p>The idea of the proof is as follows.
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing,
+then what this lemma states is exactly
+that <span class="math notranslate nohighlight">\(f\)</span> satisfies the Riemann’s condition.</p>
+</div>
+<p>The idea of the proof is as follows.
 The appearance of the oscillation <span class="math notranslate nohighlight">\(\omega_f(I_k)\)</span> in <a class="reference internal" href="#equation-eq-48">(3.33)</a>
 suggests us to consider the difference <span class="math notranslate nohighlight">\(f(t_k) - f(t^\prime_k)\)</span>.
 We have for all <span class="math notranslate nohighlight">\(t_k, t^\prime_k \in [x_{k-1}, x_k]\)</span> that</p>
@@ -478,7 +494,7 @@ Moving the term <span class="math notranslate nohighlight">\(-\varepsilon / 2\)<
 <div class="math notranslate nohighlight">
 \[\sum_{k=1}^n \omega_f(I_k) \abs{\Delta \alpha_k} &lt; \varepsilon\]</div>
 </div>
-<div class="proof theorem admonition" id="theorem-1">
+<div class="proof theorem admonition" id="thm:11">
 <p class="admonition-title"><span class="caption-number">Theorem 3.18 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Assume <span class="math notranslate nohighlight">\(\alpha\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
@@ -486,7 +502,34 @@ If <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</sp
 then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(V_a^x(\alpha))\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
 </div><div class="proof admonition" id="proof">
-<p>Proof. Sorry.</p>
+<p>Proof. Suppose <span class="math notranslate nohighlight">\(f\)</span> is bounded by <span class="math notranslate nohighlight">\(M &gt; 0\)</span>.</p>
+<p>Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
+By <a class="reference internal" href="#lem:1">Lemma 3.1</a>, there exists a partition <span class="math notranslate nohighlight">\(P^\prime_\varepsilon\)</span> of <span class="math notranslate nohighlight">\([a, b]\)</span>
+such that for all <span class="math notranslate nohighlight">\(P \supseteq P^\prime_\varepsilon\)</span>,
+we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-50">
+<span class="eqno">(3.35)<a class="headerlink" href="#equation-eq-50" title="Link to this equation">#</a></span>\[\sum_{k}\omega_f(I_k) \abs{\Delta \alpha_k} &lt; \varepsilon / 2\]</div>
+<p>By the definition of total variations and <a class="reference internal" href="../Functions%20of%20Bounded%20Variation%20and%20Rectifiable%20Curves/Functions%20of%20Bounded%20Variation.html#prop:4">Proposition 2.4</a>,
+there exists a partition <span class="math notranslate nohighlight">\(P^{\prime\prime}_\varepsilon\)</span> such that
+for all its refinement we have</p>
+<div class="math notranslate nohighlight" id="equation-eq-51">
+<span class="eqno">(3.36)<a class="headerlink" href="#equation-eq-51" title="Link to this equation">#</a></span>\[V_a^b(\alpha) &lt; \sum_{k}\abs{\Delta \alpha_k} + \frac{\varepsilon}{4M}\]</div>
+<p>Let <span class="math notranslate nohighlight">\(P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon\)</span>.
+For any its refinement <span class="math notranslate nohighlight">\(P\)</span>, both <a class="reference internal" href="#equation-eq-50">(3.35)</a> and <a class="reference internal" href="#equation-eq-51">(3.36)</a> hold.
+And we have</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\sum_{k}\omega_f(I_k) (V_{x_{k-1}}^{x_k}(\alpha) - \abs{\Delta \alpha_k})
+&amp; \leq 2M \sum_{k}(V_{x_{k-1}}^{x_k}(\alpha) - \abs{\Delta \alpha_k}) \\&amp; = 2M \left( V_a^b(\alpha) - \sum_{k}\abs{\Delta \alpha_k}\right)\end{split}\]</div>
+<p>Then applying <a class="reference internal" href="#equation-eq-51">(3.36)</a> yields</p>
+<div class="math notranslate nohighlight" id="equation-eq-52">
+<span class="eqno">(3.37)<a class="headerlink" href="#equation-eq-52" title="Link to this equation">#</a></span>\[\sum_{k}\omega_f(I_k) (V_{x_{k-1}}^{x_k}(\alpha) - \abs{\Delta \alpha_k})
+&lt; \varepsilon / 2\]</div>
+<p>Adding <a class="reference internal" href="#equation-eq-51">(3.36)</a> and <a class="reference internal" href="#equation-eq-52">(3.37)</a>, we obtain</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k}\omega_f(I_k) V_{x_{k-1}}^{x_k}(\alpha)
+&lt; \varepsilon\]</div>
+<p>This implies that <span class="math notranslate nohighlight">\(f\)</span> satisfies the Riemann’s condition w.r.t. <span class="math notranslate nohighlight">\(V_a^x(\alpha)\)</span>
+on <span class="math notranslate nohighlight">\([a, b]\)</span> and hence the proof is complete.</p>
 </div>
 </section>
 

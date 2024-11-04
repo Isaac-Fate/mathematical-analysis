@@ -20,15 +20,31 @@ two increasing functions $\alpha_1$ and $\alpha_2$,
 
 ```
 
-If we have proved in the previous section that
-for some function $g$, $g \in \mathfrak{R}(\alpha_1)$
-and $g \in \mathfrak{R}(\alpha_2)$on $[a, b]$.
-Then by the linearity of integrals we may conclude
-that $g \in \mathfrak{R}(\alpha = \alpha_1 - \alpha_2)$ on $[a, b]$.
+Then, to exploit the condition that $f \in \mathfrak{R}(\alpha)$,
+we would want that $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$.
+But this is not true in general due to the nonuniqueness
+of the decomposition of $\alpha$ into two increasing functions.
+For example, consider $\alpha(x) = 0$ on $[a, b]$.
+We can write $\alpha$ as a difference of two identity
+functions $\alpha_1(x) = \alpha(x) = x$.
+Then the Dirichlet function $\ind_{\Q}$ is not integrable
+w.r.t. $\alpha_1$ nor $\alpha_2$.
+But it is integrable w.r.t. $\alpha$ for the integrator is constant.
+
+However, if we decompose $\alpha$(in the canonical way) as
+
+```{math}
+\alpha(x) = V_a^x(\alpha) - [ V_a^x(\alpha) - \alpha(x) ]
+```
+
+then we will see in {prf:ref}`thm:11` that $f$
+is also integrable w.r.t. $V_a^x(\alpha)$ and $V_a^x(\alpha) - \alpha(x)$.
+
+
 
 
 ````{prf:lemma} 
-:label: eq:48
+:label: lem:1
 
 Assume $\alpha$ is of bounded variation on $[a, b]$.
 If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$,
@@ -43,6 +59,14 @@ we have
 ```
 
 ````
+
+:::{note}
+
+If $\alpha$ is increasing,
+then what this lemma states is exactly
+that $f$ satisfies the Riemann's condition.
+
+:::
 
 The idea of the proof is as follows.
 The appearance of the oscillation $\omega_f(I_k)$ in {eq}`eq:48`
@@ -156,6 +180,7 @@ Moving the term $-\varepsilon / 2$ to the left in the above inequality yields
 ````
 
 ````{prf:theorem} 
+:label: thm:11
 
 Assume $\alpha$ is of bounded variation on $[a, b]$.
 If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$
@@ -165,6 +190,55 @@ then $f \in \mathfrak{R}(V_a^x(\alpha))$ on $[a, b]$.
 
 ````{prf:proof}
 
-Sorry.
+Suppose $f$ is bounded by $M > 0$.
+
+Let $\varepsilon > 0$ be arbitrary.
+By {prf:ref}`lem:1`, there exists a partition $P^\prime_\varepsilon$ of $[a, b]$
+such that for all $P \supseteq P^\prime_\varepsilon$,
+we have
+
+```{math}
+:label: eq:50
+\sum_{k}\omega_f(I_k) \abs{\Delta \alpha_k} < \varepsilon / 2
+
+```
+
+By the definition of total variations and {prf:ref}`prop:4`,
+there exists a partition $P^{\prime\prime}_\varepsilon$ such that
+for all its refinement we have
+
+```{math}
+:label: eq:51
+
+V_a^b(\alpha) < \sum_{k}\abs{\Delta \alpha_k} + \frac{\varepsilon}{4M}
+```
+
+Let $P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon$.
+For any its refinement $P$, both {eq}`eq:50` and {eq}`eq:51` hold.
+And we have
+
+```{math}
+\sum_{k}\omega_f(I_k) (V_{x_{k-1}}^{x_k}(\alpha) - \abs{\Delta \alpha_k})
+& \leq 2M \sum_{k}(V_{x_{k-1}}^{x_k}(\alpha) - \abs{\Delta \alpha_k}) \\& = 2M \left( V_a^b(\alpha) - \sum_{k}\abs{\Delta \alpha_k}\right)
+```
+
+Then applying {eq}`eq:51` yields
+
+```{math}
+:label: eq:52
+\sum_{k}\omega_f(I_k) (V_{x_{k-1}}^{x_k}(\alpha) - \abs{\Delta \alpha_k})
+< \varepsilon / 2
+
+```
+
+Adding {eq}`eq:51` and {eq}`eq:52`, we obtain
+
+```{math}
+\sum_{k}\omega_f(I_k) V_{x_{k-1}}^{x_k}(\alpha)
+< \varepsilon
+```
+
+This implies that $f$ satisfies the Riemann's condition w.r.t. $V_a^x(\alpha)$
+on $[a, b]$ and hence the proof is complete.
 
 ````
