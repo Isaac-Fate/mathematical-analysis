@@ -186,6 +186,9 @@ Assume $\alpha$ is of bounded variation on $[a, b]$.
 If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$
 then $f \in \mathfrak{R}(V_a^x(\alpha))$ on $[a, b]$.
 
+And of course, applying the linearity,
+we also have $f \in \mathfrak{R}(V_a^x(\alpha) - \alpha)$ on $[a, b]$.
+
 ````
 
 ````{prf:proof}
@@ -231,7 +234,7 @@ Then applying {eq}`eq:51` yields
 
 ```
 
-Adding {eq}`eq:51` and {eq}`eq:52`, we obtain
+Adding {eq}`eq:50` and {eq}`eq:52`, we obtain
 
 ```{math}
 \sum_{k}\omega_f(I_k) V_{x_{k-1}}^{x_k}(\alpha)
@@ -240,5 +243,80 @@ Adding {eq}`eq:51` and {eq}`eq:52`, we obtain
 
 This implies that $f$ satisfies the Riemann's condition w.r.t. $V_a^x(\alpha)$
 on $[a, b]$ and hence the proof is complete.
+
+````
+
+````{prf:theorem} 
+
+Assume $\alpha$ is of bounded variation on $[a, b]$.
+If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$
+then $f$ is also integrable on any subinterval.
+That is, if $[c, d] \subseteq[a, b]$,
+then $f \in \mathfrak{R}(\alpha)$ on $[a, d]$.
+
+````
+
+````{prf:proof}
+
+Thanks to {prf:ref}`thm:11` and {prf:ref}`thm:12`,
+we only need to prove this theorem for increasing integrators.
+In what follows, we assume $\alpha$ is increasing.
+
+We are going to show that $f$ satisfies the
+Riemann's condition w.r.t. $\alpha$ on $[c, d]$.
+Let $\varepsilon > 0$ be arbitrary.
+Because $f \in \mathfrak{R}(\alpha)$ on $[a, b]$,
+there exists a partition $P_\varepsilon$ of $[a, b]$
+such that
+
+```{math}
+
+U(P_\varepsilon, f, \alpha) - L(P_\varepsilon, f, \alpha) < \varepsilon
+```
+
+Let $P^\prime = P_\varepsilon \cup \{c, d\}$.
+Since $P^\prime$ is a refinement of $P_\varepsilon$.
+It also holds that
+
+```{math}
+
+U(P^\prime, f, \alpha) - L(P^\prime, f, \alpha) < \varepsilon
+```
+
+Let $P = P^\prime \cap [c, d]$.
+We note that $P$ is a partition of $[c, d]$.
+And if we write
+
+```{math}
+
+U(P^\prime, f, \alpha) - L(P^\prime, f, \alpha)
+= \sum_{k \in J}\omega_f(I_k) \Delta\alpha_k
+
+```
+
+then we will find that $U(P, f, \alpha) - L(P, f, \alpha)$ is
+the sum of a subcollection of terms from the above sum.
+That is, we can write
+
+```{math}
+
+U(P, f, \alpha) - L(P, f, \alpha)
+= \sum_{k \in K}\omega_f(I_k) \Delta\alpha_k
+
+```
+
+where $K \subseteq J$.
+Since each term $\omega_f(I_k) \Delta \alpha_k$ is nonnegative,
+we have
+
+```{math}
+
+U(P, f, \alpha) - L(P, f, \alpha)
+\leq U(P^\prime, f, \alpha) - L(P^\prime, f, \alpha)
+< \varepsilon
+```
+
+This implies that $f$ satisfies the Riemann's condition
+w.r.t. $\alpha$ on $[c, d]$.
 
 ````

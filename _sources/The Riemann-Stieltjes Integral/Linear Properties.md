@@ -83,6 +83,7 @@ the integral is linear in the integrators.
 
 
 ````{prf:theorem} 
+:label: thm:12
 
 If $f \in \mathfrak{R}(\alpha)$
 and $f \in \mathfrak{R}(\beta)$ on $[a, b]$,
