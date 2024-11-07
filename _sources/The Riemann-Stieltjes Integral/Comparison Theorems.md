@@ -178,6 +178,7 @@ the product of integrable functions is also integrable.
 
 
 ````{prf:theorem} 
+:label: thm:14
 
 Assume $\alpha$ is increasing on $[a, b]$.
 If $f, g \in \mathfrak{R}(\alpha)$ on $[a, b]$

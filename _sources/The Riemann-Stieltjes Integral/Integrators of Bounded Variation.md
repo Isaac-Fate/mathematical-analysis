@@ -247,6 +247,7 @@ on $[a, b]$ and hence the proof is complete.
 ````
 
 ````{prf:theorem} 
+:label: thm:13
 
 Assume $\alpha$ is of bounded variation on $[a, b]$.
 If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$
@@ -318,5 +319,152 @@ U(P, f, \alpha) - L(P, f, \alpha)
 
 This implies that $f$ satisfies the Riemann's condition
 w.r.t. $\alpha$ on $[c, d]$.
+
+````
+
+````{prf:theorem} 
+
+Assume $f, g \in \mathfrak{R}(\alpha)$ on $[a, b]$
+where the integrator $\alpha$ is increasing.
+Define functions $F$ and $G$ on $[a, b]$ by
+
+```{math}
+
+F(x) = \int_a^x f \dif\alpha
+```
+
+and
+
+```{math}
+
+G(x) = \int_a^x g \dif\alpha
+```
+
+Then $f \in \mathfrak{R}(G)$, $g \in \mathfrak{R}(F)$
+and $fg \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+And we have
+
+```{math}
+\int_a^b f g \dif\alpha
+= \int_a^b f \dif G
+= \int_a^b g \dif F
+
+```
+
+````
+
+````{prf:proof}
+
+We first show that $F$ and $G$ are well defined.
+When $x = a$, the lower and upper limits are equal,
+hence the integrals are zeros by the definition.
+And when $a < x \leq b$,
+by {prf:ref}`thm:13`, $f$ and $g$ are integrable w.r.t. $\alpha$ on $[a, x]$.
+
+The conclusion that $fg \in \mathfrak{R}(\alpha)$ on $[a, b]$
+is exactly {prf:ref}`thm:14`.
+
+In the following, we will only prove that $f \in \mathfrak{R}(G)$ and
+
+```{math}
+\int_a^b f g \dif\alpha
+= \int_a^b f \dif G
+
+```
+
+Suppose $f$ is bounded by $M > 0$.
+Let $\varepsilon > 0$ be arbitrary.
+Because $g \in \mathfrak{R}(\alpha)$ on $[a, b]$,
+equivalently, $g$ satisfies the Riemann's condition.
+There exists a partition $P^\prime_\varepsilon$
+such that
+
+```{math}
+:label: eq:55
+\sum_{k=1}^n \omega_g(I_k) \Delta\alpha_k < \frac{\varepsilon}{2M}\quad\forall P \supseteq P^\prime_\varepsilon
+```
+
+Because the product $fg$ is integrable w.r.t. $\alpha$,
+there exists a partition $P^{\prime\prime}_\varepsilon$
+such that
+
+```{math}
+:label: eq:56
+\abs{S(P, T, fg, \alpha) - \int_a^b f g \dif \alpha} < \varepsilon / 2
+\quad\forall P \supseteq P^{\prime\prime}_\varepsilon\quad\forall T \text{ of } P
+
+```
+
+Let $P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon$.
+Let $P \supseteq P_\varepsilon$ and $T$ be any list of representatives of $P$.
+We will compare $S(P, T, f, G)$ and $S(P, T, fg, \alpha)$.
+We have
+
+```{math}
+:label: eq:53
+\abs{S(P, T, f, G) - S(P, T, fg, \alpha)}& = \abs{\sum_{k=1}^n f(t_k) [\Delta G_k - g(t_k) \Delta \alpha_k]}\nonumber\\& \leq\sum_{k=1}^n \abs{f(t_k)}\abs{\Delta G_k - g(t_k) \Delta \alpha_k}\nonumber\\& \leq M \sum_{k=1}^n \abs{\Delta G_k - g(t_k) \Delta \alpha_k}
+```
+
+where
+
+```{math}
+\Delta G_k = \int_{x_{k-1}}^{x_k} g \dif\alpha
+```
+
+:::{note}
+
+The well-definedness of $\Delta G_k$ also follows from {prf:ref}`thm:13`.
+
+:::
+
+Let $m_k = \inf_{x \in [x_{k-1}, x_k]} g(x)$
+and $M_k = \sup_{x \in [x_{k-1}, x_k]} g(x)$.
+Because $m_k \leq g(x) \leq M_k \; \forall x \in [x_{k-1}, x_k]$,
+by the comparison theorem of integrals ({prf:ref}`cor:2`),
+we have
+
+```{math}
+
+m_k \Delta\alpha_k
+= \int_a^n m_k \dif\alpha\leq\int_{x_{k-1}}^{x_k} g \dif\alpha\leq\int_a^n M_k \dif\alpha
+= M_k \Delta\alpha_k
+
+```
+
+That is,
+
+```{math}
+
+m_k \Delta\alpha_k \leq\Delta G_k \leq M_k \Delta\alpha_k
+
+```
+
+It then follows that
+
+```{math}
+:label: eq:54
+\abs{\Delta G_k - g(t_k) \Delta \alpha_k}\leq\omega_g(I_k) \Delta\alpha_k
+
+```
+
+Combining {eq}`eq:53`, {eq}`eq:54` and {eq}`eq:55` yields
+
+```{math}
+:label: eq:57
+\abs{S(P, T, f, G) - S(P, T, fg, \alpha)}\leq M \sum_{k=1}^n \omega_g(I_k) \Delta\alpha_k
+< M \frac{\varepsilon}{2M}
+=\varepsilon / 2
+
+```
+
+Finally, compare {eq}`eq:57` and {eq}`eq:56` and we may conclude that
+\begin{multline*}
+\abs{S(P, T, f, G) - \int_a^b f g \dif \alpha} \\
+\leq \abs{S(P, T, f, G) - S(P, T, fg, \alpha)}
++ \abs{S(P, T, fg, \alpha)-  \int_a^b f g \dif \alpha}
+< \varepsilon
+\end{multline*}
+This implies that $f \in \mathfrak{R}(G)$ on $[a, b]$
+and $\int_a^b f \dif G = \int_a^b f g \dif \alpha$.
 
 ````

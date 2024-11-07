@@ -533,7 +533,7 @@ And we have</p>
 <p>This implies that <span class="math notranslate nohighlight">\(f\)</span> satisfies the Riemann’s condition w.r.t. <span class="math notranslate nohighlight">\(V_a^x(\alpha)\)</span>
 on <span class="math notranslate nohighlight">\([a, b]\)</span> and hence the proof is complete.</p>
 </div>
-<div class="proof theorem admonition" id="theorem-2">
+<div class="proof theorem admonition" id="thm:13">
 <p class="admonition-title"><span class="caption-number">Theorem 3.19 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>Assume <span class="math notranslate nohighlight">\(\alpha\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>.
@@ -582,6 +582,100 @@ we have</p>
 &lt; \varepsilon\]</div>
 <p>This implies that <span class="math notranslate nohighlight">\(f\)</span> satisfies the Riemann’s condition
 w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([c, d]\)</span>.</p>
+</div>
+<div class="proof theorem admonition" id="theorem-3">
+<p class="admonition-title"><span class="caption-number">Theorem 3.20 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>Assume <span class="math notranslate nohighlight">\(f, g \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>
+where the integrator <span class="math notranslate nohighlight">\(\alpha\)</span> is increasing.
+Define functions <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span> by</p>
+<div class="math notranslate nohighlight">
+\[F(x) = \int_a^x f \dif\alpha\]</div>
+<p>and</p>
+<div class="math notranslate nohighlight">
+\[G(x) = \int_a^x g \dif\alpha\]</div>
+<p>Then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(G)\)</span>, <span class="math notranslate nohighlight">\(g \in \mathfrak{R}(F)\)</span>
+and <span class="math notranslate nohighlight">\(fg \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.
+And we have</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f g \dif\alpha
+= \int_a^b f \dif G
+= \int_a^b g \dif F
+\]</div>
+</section>
+</div><div class="proof admonition" id="proof">
+<p>Proof. We first show that <span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span> are well defined.
+When <span class="math notranslate nohighlight">\(x = a\)</span>, the lower and upper limits are equal,
+hence the integrals are zeros by the definition.
+And when <span class="math notranslate nohighlight">\(a &lt; x \leq b\)</span>,
+by <a class="reference internal" href="#thm:13">Theorem 3.19</a>, <span class="math notranslate nohighlight">\(f\)</span> and <span class="math notranslate nohighlight">\(g\)</span> are integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, x]\)</span>.</p>
+<p>The conclusion that <span class="math notranslate nohighlight">\(fg \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>
+is exactly <a class="reference internal" href="Comparison%20Theorems.html#thm:14">Theorem 3.17</a>.</p>
+<p>In the following, we will only prove that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(G)\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[\int_a^b f g \dif\alpha
+= \int_a^b f \dif G
+\]</div>
+<p>Suppose <span class="math notranslate nohighlight">\(f\)</span> is bounded by <span class="math notranslate nohighlight">\(M &gt; 0\)</span>.
+Let <span class="math notranslate nohighlight">\(\varepsilon &gt; 0\)</span> be arbitrary.
+Because <span class="math notranslate nohighlight">\(g \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>,
+equivalently, <span class="math notranslate nohighlight">\(g\)</span> satisfies the Riemann’s condition.
+There exists a partition <span class="math notranslate nohighlight">\(P^\prime_\varepsilon\)</span>
+such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-55">
+<span class="eqno">(3.38)<a class="headerlink" href="#equation-eq-55" title="Link to this equation">#</a></span>\[\sum_{k=1}^n \omega_g(I_k) \Delta\alpha_k &lt; \frac{\varepsilon}{2M}\quad\forall P \supseteq P^\prime_\varepsilon\]</div>
+<p>Because the product <span class="math notranslate nohighlight">\(fg\)</span> is integrable w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span>,
+there exists a partition <span class="math notranslate nohighlight">\(P^{\prime\prime}_\varepsilon\)</span>
+such that</p>
+<div class="math notranslate nohighlight" id="equation-eq-56">
+<span class="eqno">(3.39)<a class="headerlink" href="#equation-eq-56" title="Link to this equation">#</a></span>\[\abs{S(P, T, fg, \alpha) - \int_a^b f g \dif \alpha} &lt; \varepsilon / 2
+\quad\forall P \supseteq P^{\prime\prime}_\varepsilon\quad\forall T \text{ of } P\]</div>
+<p>Let <span class="math notranslate nohighlight">\(P_\varepsilon = P^\prime_\varepsilon \cup P^{\prime\prime}_\varepsilon\)</span>.
+Let <span class="math notranslate nohighlight">\(P \supseteq P_\varepsilon\)</span> and <span class="math notranslate nohighlight">\(T\)</span> be any list of representatives of <span class="math notranslate nohighlight">\(P\)</span>.
+We will compare <span class="math notranslate nohighlight">\(S(P, T, f, G)\)</span> and <span class="math notranslate nohighlight">\(S(P, T, fg, \alpha)\)</span>.
+We have</p>
+<div class="math notranslate nohighlight" id="equation-eq-53">
+<span class="eqno">(3.40)<a class="headerlink" href="#equation-eq-53" title="Link to this equation">#</a></span>\[\begin{split}\abs{S(P, T, f, G) - S(P, T, fg, \alpha)}&amp; = \abs{\sum_{k=1}^n f(t_k) [\Delta G_k - g(t_k) \Delta \alpha_k]}\nonumber\\&amp; \leq\sum_{k=1}^n \abs{f(t_k)}\abs{\Delta G_k - g(t_k) \Delta \alpha_k}\nonumber\\&amp; \leq M \sum_{k=1}^n \abs{\Delta G_k - g(t_k) \Delta \alpha_k}\end{split}\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\Delta G_k = \int_{x_{k-1}}^{x_k} g \dif\alpha\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The well-definedness of <span class="math notranslate nohighlight">\(\Delta G_k\)</span> also follows from <a class="reference internal" href="#thm:13">Theorem 3.19</a>.</p>
+</div>
+<p>Let <span class="math notranslate nohighlight">\(m_k = \inf_{x \in [x_{k-1}, x_k]} g(x)\)</span>
+and <span class="math notranslate nohighlight">\(M_k = \sup_{x \in [x_{k-1}, x_k]} g(x)\)</span>.
+Because <span class="math notranslate nohighlight">\(m_k \leq g(x) \leq M_k \; \forall x \in [x_{k-1}, x_k]\)</span>,
+by the comparison theorem of integrals (<a class="reference internal" href="Comparison%20Theorems.html#cor:2">Corollary 3.1</a>),
+we have</p>
+<div class="math notranslate nohighlight">
+\[m_k \Delta\alpha_k
+= \int_a^n m_k \dif\alpha\leq\int_{x_{k-1}}^{x_k} g \dif\alpha\leq\int_a^n M_k \dif\alpha
+= M_k \Delta\alpha_k
+\]</div>
+<p>That is,</p>
+<div class="math notranslate nohighlight">
+\[m_k \Delta\alpha_k \leq\Delta G_k \leq M_k \Delta\alpha_k
+\]</div>
+<p>It then follows that</p>
+<div class="math notranslate nohighlight" id="equation-eq-54">
+<span class="eqno">(3.41)<a class="headerlink" href="#equation-eq-54" title="Link to this equation">#</a></span>\[\abs{\Delta G_k - g(t_k) \Delta \alpha_k}\leq\omega_g(I_k) \Delta\alpha_k\]</div>
+<p>Combining <a class="reference internal" href="#equation-eq-53">(3.40)</a>, <a class="reference internal" href="#equation-eq-54">(3.41)</a> and <a class="reference internal" href="#equation-eq-55">(3.38)</a> yields</p>
+<div class="math notranslate nohighlight" id="equation-eq-57">
+<span class="eqno">(3.42)<a class="headerlink" href="#equation-eq-57" title="Link to this equation">#</a></span>\[\abs{S(P, T, f, G) - S(P, T, fg, \alpha)}\leq M \sum_{k=1}^n \omega_g(I_k) \Delta\alpha_k
+&lt; M \frac{\varepsilon}{2M}
+=\varepsilon / 2\]</div>
+<p>Finally, compare <a class="reference internal" href="#equation-eq-57">(3.42)</a> and <a class="reference internal" href="#equation-eq-56">(3.39)</a> and we may conclude that
+\begin{multline*}
+\abs{S(P, T, f, G) - \int_a^b f g \dif \alpha} \
+\leq \abs{S(P, T, f, G) - S(P, T, fg, \alpha)}</p>
+<ul class="simple">
+<li><p>\abs{S(P, T, fg, \alpha)-  \int_a^b f g \dif \alpha}
+&lt; \varepsilon
+\end{multline*}
+This implies that <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(G)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>
+and <span class="math notranslate nohighlight">\(\int_a^b f \dif G = \int_a^b f g \dif \alpha\)</span>.</p></li>
+</ul>
 </div>
 </section>
 
