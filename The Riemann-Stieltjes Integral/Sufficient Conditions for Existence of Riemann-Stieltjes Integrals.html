@@ -369,10 +369,13 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="sufficient-conditions-for-existence-of-riemann-stieltjes-integrals">
 <h1><span class="section-number">3.14. </span>Sufficient Conditions for Existence of Riemann-Stieltjes Integrals<a class="headerlink" href="#sufficient-conditions-for-existence-of-riemann-stieltjes-integrals" title="Link to this heading">#</a></h1>
-<p>We begin to study when does the integral exist.
-The continuous function is the most intuitive
-and straightforward type of function that possesses integrals.</p>
-<div class="proof theorem admonition" id="theorem-0">
+<p>We begin to study when does the integral exist.</p>
+<p>One may recall from the calculus that the continuous function is the most intuitive
+and straightforward type of function that possesses the Riemann integrals.</p>
+<p>We will show in the following theorem that this is also true
+for Riemann-Stieltjes
+integrals with integrators of bounded variation.</p>
+<div class="proof theorem admonition" id="thm:16">
 <p class="admonition-title"><span class="caption-number">Theorem 3.21 </span></p>
 <section class="theorem-content" id="proof-content">
 <p>If <span class="math notranslate nohighlight">\(f\)</span> is continuous on <span class="math notranslate nohighlight">\([a, b]\)</span> and if <span class="math notranslate nohighlight">\(\alpha\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span>,
@@ -401,7 +404,30 @@ It then follows that</p>
 = \varepsilon\]</div>
 <p>This implies that <span class="math notranslate nohighlight">\(f\)</span> satisfies the Riemann’s condition w.r.t. <span class="math notranslate nohighlight">\(\alpha\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </div>
+<p>Thanks to the theorem of integration by parts (<a class="reference internal" href="Integration%20by%20Parts.html#thm:15">Theorem 3.4</a>),
+by swapping the assumptions for the integrand and the integrator,
+we can immediately obtain another sufficient condition for
+existence of Riemann-Stieltjes integrals.</p>
+<div class="proof theorem admonition" id="thm:17">
+<p class="admonition-title"><span class="caption-number">Theorem 3.22 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>If <span class="math notranslate nohighlight">\(f\)</span> is of bounded variation on <span class="math notranslate nohighlight">\([a, b]\)</span> and <span class="math notranslate nohighlight">\(\alpha\)</span> is continuous,
+then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(\alpha)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>.</p>
 </section>
+</div><p>Put <span class="math notranslate nohighlight">\(\alpha(x) = x\)</span> in <a class="reference internal" href="#thm:16">Theorem 3.21</a> and <a class="reference internal" href="#thm:17">Theorem 3.22</a>,
+and we may conclude that continuous functions and functions of bounded variation
+are Riemann integrable.</p>
+<div class="proof theorem admonition" id="theorem-2">
+<p class="admonition-title"><span class="caption-number">Theorem 3.23 </span></p>
+<section class="theorem-content" id="proof-content">
+<p>If on <span class="math notranslate nohighlight">\([a, b]\)</span>,</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(f\)</span> is continuous, or</p></li>
+<li><p><span class="math notranslate nohighlight">\(f\)</span> is of bounded variation</p></li>
+</ol>
+<p>then <span class="math notranslate nohighlight">\(f \in \mathfrak{R}(x)\)</span> on <span class="math notranslate nohighlight">\([a, b]\)</span>, i.e., <span class="math notranslate nohighlight">\(\int_a^b f(x) \dif x\)</span> exists.</p>
+</section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {

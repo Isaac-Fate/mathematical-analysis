@@ -1,7 +1,7 @@
 # Integration by Parts
 
 ````{prf:theorem} 
-:label: eq:19
+:label: thm:15
 
 If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$,
 then $\alpha \in \mathfrak{R}(f)$ on $[a, b]$, and
