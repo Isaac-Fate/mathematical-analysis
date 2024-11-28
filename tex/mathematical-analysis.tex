@@ -1217,7 +1217,7 @@ the integral is linear in the integrators.
 
 \section{Integration by Parts}
 
-\begin{theorem}
+\begin{theorem} \label{thm:15}
 	If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$,
 	then $\alpha \in \mathfrak{R}(f)$ on $[a, b]$, and
 	\begin{align}
@@ -2972,6 +2972,269 @@ and then comparing $\abs{f(t_k) - f(t^\prime_k)}$ with $\omega_f(I_k)$.
 	This implies that $f \in \mathfrak{R}(G)$ on $[a, b]$
 	and $\int_a^b f \dif G = \int_a^b f g \dif \alpha$.
 \end{proof}
+
+
+
+\section{Sufficient Conditions for Existence of Riemann-Stieltjes Integrals}
+
+We begin to study when does the integral exist.
+
+One may recall from the calculus that the continuous function is the most intuitive
+and straightforward type of function that possesses the Riemann integrals.
+
+We will show in the following theorem that this is also true
+for Riemann-Stieltjes
+integrals with integrators of bounded variation.
+
+
+\begin{theorem} \label{thm:16}
+	If $f$ is continuous on $[a, b]$ and if $\alpha$ is of bounded variation on $[a, b]$,
+	then $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+\end{theorem}
+
+\begin{proof}
+	It suffices to prove this theorem for increasing $\alpha$.
+
+	If $\alpha(a) = \alpha(b)$, then $\alpha$ is a constant function,
+	in which case the conclusion is trivial.
+	In what follows, we assume $\alpha(a) < \alpha(b)$.
+
+	Let $\varepsilon > 0$ be arbitrary.
+	Because $f$ is continuous on $[a, b]$, $f$ is uniformly continuous there.
+	Then there exists $\delta > 0$ such that
+	\begin{align*}
+		\abs{x - y} < \delta \implies
+		\abs{f(x) - f(y)}
+		< \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)}
+	\end{align*}
+	Let $P_\varepsilon$ be a partition such that $x_k - x_{k-1} < \delta$ for all $k$.
+	It then follows that
+	\begin{align*}
+		\omega_f(I_k) = \sup_{x, y \in I_k} \abs{f(x) - f(y)}
+		\leq \frac{\varepsilon / 2}{\alpha(b) - \alpha(a)}
+		< \frac{\varepsilon}{\alpha(b) - \alpha(a)}
+	\end{align*}
+	Multiply by $\Delta \alpha_k$ and sum over $k$, and we will obtain
+	\begin{align*}
+		\sum_{k} \omega_f(I_k) \Delta \alpha_k
+		< \frac{\varepsilon}{\alpha(b) - \alpha(a)} \sum_{k} \Delta \alpha_k
+		= \varepsilon
+	\end{align*}
+	This implies that $f$ satisfies the Riemann's condition w.r.t. $\alpha$ on $[a, b]$.
+\end{proof}
+
+Thanks to the theorem of integration by parts (Theorem~\ref{thm:15}),
+by swapping the assumptions for the integrand and the integrator,
+we can immediately obtain another sufficient condition for
+existence of Riemann-Stieltjes integrals.
+
+\begin{theorem} \label{thm:17}
+	If $f$ is of bounded variation on $[a, b]$ and $\alpha$ is continuous,
+	then $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+\end{theorem}
+
+Put $\alpha(x) = x$ in Theorem~\ref{thm:16} and Theorem~\ref{thm:17},
+and we may conclude that continuous functions and functions of bounded variation
+are Riemann integrable.
+
+\begin{theorem}
+	If on $[a, b]$,
+	\begin{enumerate}
+		\item $f$ is continuous, or
+		\item $f$ is of bounded variation
+	\end{enumerate}
+	then $f \in \mathfrak{R}(x)$ on $[a, b]$, i.e., $\int_a^b f(x) \dif x$ exists.
+\end{theorem}
+
+
+
+\section{Necessary Conditions for Existence of Riemann-Stieltjes Integrals}
+
+\begin{theorem}
+	Assume $\alpha$ is increasing on $[a, b]$.
+	Let $a \leq c < b$.
+	If $f$ and $\alpha$ are discontinuous from the right at $c$,
+	then $f \notin \mathfrak{R}(\alpha)$ on $[a, b]$.
+
+	Analogously, letting $a < c \leq b$,
+	if $f$ and $\alpha$ are discontinuous from the left at $c$,
+	then $f \notin \mathfrak{R}(\alpha)$ on $[a, b]$.
+\end{theorem}
+
+\begin{proof}
+	We only prove the case
+	when $f$ and $\alpha$ are discontinuous from the right at $c$.
+
+	Because $f$ and $\alpha$ are discontinuous from the right at $c$,
+	there exists $\varepsilon > 0$ such that for every $\delta > 0$,
+	we can find $x, y \in (c, c+\delta)$ such that
+	\begin{align*}
+		\abs{f(x) - f(c)} > \varepsilon
+		\quad \text{and} \quad
+		\abs{\alpha(y) - \alpha(c)} = \alpha(y) - \alpha(c) > \varepsilon
+	\end{align*}
+	We want to show that $f$ does not satisfy the Riemann's condition.
+	More precisely, choosing the number $\varepsilon_0 = \varepsilon^2$,
+	we claim that for every partition $P_{\varepsilon_0}$ of $[a, b]$,
+	there exists a refinement $P$ such
+	that $U(P, f, \alpha) - L(P, f, \alpha) > \varepsilon_0$.
+
+	First, exploiting the fact that $\alpha$ is discontinuous from the right at $c$
+	we can find a number $d > c$ such
+	that $\alpha(d) - \alpha(c) > \varepsilon$.
+	Let partition $P = P_{\varepsilon_0} \cup \{c, d\}$.
+	In this way, we guarantee that the subinterval $[c, d]$
+	is contained in the partition.
+	Then, since $f$ is discontinuous from the right at $c$,
+	we can find $t \in (c, d)$ such that $\abs{f(t) - f(c)} > \varepsilon$.
+	It then follows that
+	\begin{align*}
+		\omega_f([c, d])
+		= \sup_{x, y \in [c, d]} \abs{f(x) - f(y)}
+		\geq \abs{f(t) - f(c)}
+		> \varepsilon
+	\end{align*}
+	Multiplying by $ [\alpha(d) - \alpha(c)]$ yields
+	\begin{align*}
+		\omega_f([c, d]) [\alpha(d) - \alpha(c)] > \varepsilon^2 = \varepsilon_0
+	\end{align*}
+	Therefore,
+	\begin{align*}
+		U(P, f, \alpha) - L(P, f, \alpha)
+		\geq \omega_f([c, d]) [\alpha(d) - \alpha(c)]
+		> \varepsilon_0
+	\end{align*}
+	This completes the proof.
+\end{proof}
+
+
+\section{Mean Value Theorems for Riemann-Stieltjes Integrals}
+
+\begin{theorem}[First Mean Value Theorem for Riemann-Stieltjes Integrals] \label{thm:18}
+	Assume $\alpha$ is increasing on $[a, b]$ and $f \in \mathfrak{R}(\alpha)$
+	on $[a, b]$.
+	Let $m = \inf_{x \in [a, b]}f(x)$ and $M = \sup_{x \in [a, b]}f(x)$.
+	Then there exists $c \in [m, M]$
+	such that
+	\begin{align*}
+		\int_a^b f \dif \alpha
+		= c \int_a^b \dif \alpha = c[\alpha(b) -\alpha(a)]
+	\end{align*}
+	In particular, if $f$ is continuous on $[a, b]$
+	then $f$ can attain the value $c$, i.e.,
+	exists $x_0 \in [a, b]$ such that $f(x_0) = c$.
+\end{theorem}
+
+\begin{proof}
+	If $\alpha(a) = \alpha(b)$, then $\alpha$ is constant
+	and the integral evaluates to zero.
+	In this case, simply choose $c = f(a)$.
+	Now, assume $\alpha(a) < \alpha(b)$.
+
+	Because $m \leq f(x) \leq M$
+	(regard $m$ and $M$ as constant functions) on $[a, b]$,
+	applying the comparison theorem (Corollary~\ref{cor:2}), we have
+	\begin{align*}
+		\int_a^b m \dif \alpha
+		\leq \int_a^b f \dif \alpha
+		\leq \int_a^b M \dif \alpha
+	\end{align*}
+	The number $c$ defined by
+	\begin{align*}
+		c = \frac{1}{\alpha(b) - \alpha(a)} \int_a^b f \dif \alpha
+	\end{align*}
+	is as desired.
+\end{proof}
+
+\begin{example}
+
+	Consider $f(x) = -x^2 + 2x + 3$ defined on $[0, 3]$.
+	We have $m = 0$ and $M = 4$.
+	The integral is $\int_0^3 f(x) \dif x = 9$,
+	which is represented by the blue area in Figure~\ref{fig:7}.
+
+	Theorem~\ref{thm:18} says that we can find a line $y = c$ such that
+	the area under $y = c$ equals the area under $f$
+	where $0 = m \leq c \leq M =  4$.
+	In this example, $c = 3$.
+	And because $f$ is continuous, it attains the value $c = 3$ on $[0, 3]$.
+	Indeed, we have $f(0) = f(2) = 3$.
+
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{figures/mean-value-theorem-for-riemann-stieltjes-integrals-first-mean-value-theorem.png}
+		\caption{The area under $f$ equals the area under $y = 3$.}
+		\label{fig:7}
+	\end{figure}
+
+\end{example}
+
+
+
+
+
+\begin{theorem}[Second Mean Value Theorem for Riemann-Stieltjes Integrals] \label{thm:19}
+	Assume $\alpha$ is continuous and $f$ is increasing on $[a, b]$,
+	then there exists a point $x_0 \in [a, b]$ such that
+	\begin{align*}
+		\int_a^b f \dif \alpha
+		= f(a) \int_a^{x_0} \dif \alpha + f(b) \int_{x_0}^b \dif \alpha
+	\end{align*}
+\end{theorem}
+
+The second mean value theorem can be proved easily
+using the first mean value theorem and integration by parts.
+
+
+\begin{proof}
+
+	Because $\alpha$ is continuous and $f$ is increasing,
+	it is clear that $f \in \mathfrak{R}(\alpha)$ on $[a, b]$
+	and, of course, $\alpha \in \mathfrak{R}(f)$ on $[a, b]$.
+
+	Applying the first mean value theorem (Theorem~\ref{thm:18}),
+	we have
+	\begin{align}
+		\int_a^b \alpha \dif f = \alpha(x_0) [f(b) - f(a)]
+		\label{eq:58}
+	\end{align}
+	for some $x_0 \in [a, b]$.
+	On the other hand, by the theorem of integration by parts, we have
+	\begin{align}
+		\int_a^b f \dif \alpha + \int_a^b \alpha \dif f
+		= f(b) \alpha(b) - f(a) \alpha(a)
+		\label{eq:59}
+	\end{align}
+	Combining \eqref{eq:58} and \eqref{eq:59}, we obtain that
+	\begin{align*}
+		\int_a^b f \dif \alpha
+		 & = f(b) \alpha(b) - f(a) \alpha(a)
+		- f(b) \alpha(x_0) + f(a) \alpha(x_0)                              \\
+		 & = f(a)[\alpha(x_0) - \alpha(a)] + f(b)[\alpha(b) - \alpha(x_0)] \\
+		 & = f(a) \int_a^{x_0} \dif \alpha + f(b) \int_{x_0}^b \dif \alpha
+	\end{align*}
+	which is as desired.
+\end{proof}
+
+\begin{example}
+	For Riemann integrals,
+	we can interpret Theorem~\ref{thm:19} as follows.
+	For example, consider $f(x) = 2 - \cos(x), \; x \in [0, \pi]$.
+	By the second mean value theorem, we can find a point $x_0 \in [0, \pi]$
+	(in this case, $x_0 = \pi / 2$) such that
+	the area under $f$ is equal to the sum of areas of two rectangles.
+	One rectangle has width $x_0 - a = \pi/2 - 0$ and height $f(a) = f(0)$.
+	And the other one has width $b - x_0=\pi -  \pi/2$ and height $f(b) = f(\pi)$.
+	See Figure~\ref{fig:8} for an illustration.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{figures/mean-value-theorem-for-riemann-stieltjes-integrals-second-mean-value-theorem.png}
+		\caption{The area under $f$ can be decomposed of two rectangles.}
+		\label{fig:8}
+	\end{figure}
+\end{example}
 
 %==============================
 

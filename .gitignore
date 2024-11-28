@@ -24,3 +24,6 @@ tex/*.ilg
 
 # Gnereated PDF
 /tex/*.pdf
+
+# Secret files
+/.env
