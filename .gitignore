@@ -22,9 +22,6 @@ tex/*.ilg
 # Python
 **/__pycache__
 
-# Gnereated PDF
-/tex/*.pdf
-
 # Secret files
 /.env
 
