@@ -1,0 +1,114 @@
+#### CONFIGURATION FOR SEABORN V0.8 STYLE ####
+# This style file provides a modern, aesthetically pleasing look 
+# inspired by the Seaborn statistical visualization library
+
+### FIGURE AND AXES SETTINGS ###
+# Figure properties
+figure.figsize: 6.4, 4.8
+figure.dpi: 100.0
+figure.facecolor: white
+figure.edgecolor: white
+
+# Axes properties
+axes.facecolor : #EAEAF2
+axes.edgecolor: white
+axes.linewidth: 1.25
+axes.grid: True
+axes.grid.axis: both
+axes.grid.which: major
+
+# Axes labels
+axes.labelsize: 12.0
+axes.labelweight: normal
+axes.labelcolor: .15
+axes.labelpad: 4.0
+
+# Title settings
+axes.titlesize: 12.0
+axes.titleweight: normal
+axes.titlepad: 6.0
+axes.titlelocation: center
+
+### COLOR CYCLES ###
+# Default color cycle for plot lines and points
+axes.prop_cycle: cycler('color', [(0.2980392156862745, 0.4470588235294118, 0.6901960784313725), (0.8666666666666667, 0.5176470588235295, 0.3215686274509804), (0.3333333333333333, 0.6588235294117647, 0.40784313725490196), (0.7686274509803922, 0.3058823529411765, 0.3215686274509804), (0.5058823529411764, 0.4470588235294118, 0.7019607843137254), (0.5764705882352941, 0.47058823529411764, 0.3764705882352941), (0.8549019607843137, 0.5450980392156862, 0.7647058823529411), (0.5490196078431373, 0.5490196078431373, 0.5490196078431373), (0.8, 0.7254901960784313, 0.4549019607843137), (0.39215686274509803, 0.7098039215686275, 0.803921568627451)])
+
+### GRID SETTINGS ###
+grid.color: white
+grid.linestyle: -
+grid.linewidth: 1.0
+grid.alpha: 1.0
+
+### FONT SETTINGS ###
+# Font families
+font.family: sans-serif
+font.sans-serif: Arial, DejaVu Sans, Liberation Sans, Bitstream Vera Sans, sans-serif
+font.size: 12.0
+
+### LINE SETTINGS ###
+lines.linewidth: 1.5
+lines.solid_capstyle: round
+lines.solid_joinstyle: round
+lines.markersize: 6.0
+lines.dash_joinstyle: round
+lines.dash_capstyle: butt
+
+### TICK SETTINGS ###
+# X-axis ticks
+xtick.color: .15
+xtick.direction: out
+xtick.labelsize: 11.0
+xtick.major.size: 6.0
+xtick.major.width: 1.25
+xtick.minor.size: 4.0
+xtick.minor.width: 1.0
+
+# Y-axis ticks
+ytick.color: .15
+ytick.direction: out
+ytick.labelsize: 11.0
+ytick.major.size: 6.0
+ytick.major.width: 1.25
+ytick.minor.size: 4.0
+ytick.minor.width: 1.0
+
+### LEGEND SETTINGS ###
+legend.frameon: True
+legend.framealpha: 0.8
+legend.fontsize: 11.0
+legend.edgecolor: 0.8
+legend.fancybox: True
+legend.numpoints: 1
+legend.scatterpoints: 1
+legend.markerscale: 1.0
+
+### IMAGE SETTINGS ###
+image.cmap: rocket
+image.interpolation: auto
+image.composite_image: True
+image.resample: True
+image.lut: 256
+
+### SAVING FIGURE SETTINGS ###
+savefig.dpi: figure
+savefig.format: png
+savefig.bbox: standard
+savefig.transparent: False
+savefig.pad_inches: 0.1
+
+### 3D AXES SETTINGS ###
+# Note: Some of these are custom settings and may need adjustment
+axes3d.grid: True
+axes3d.xaxis.panecolor: 0.95, 0.95, 0.95, 0.5
+axes3d.yaxis.panecolor: 0.9, 0.9, 0.9, 0.5
+axes3d.zaxis.panecolor: 0.925, 0.925, 0.925, 0.5
+
+### ANIMATION SETTINGS ###
+animation.html: none
+animation.writer: ffmpeg
+animation.frame_format: png
+animation.bitrate: -1
+
+### MATHTEXT SETTINGS ###
+mathtext.default: it
+mathtext.fontset: dejavusans

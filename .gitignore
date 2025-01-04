@@ -27,3 +27,6 @@ tex/*.ilg
 
 # Secret files
 /.env
+
+# Python virtual environment
+/venv

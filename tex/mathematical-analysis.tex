@@ -2858,7 +2858,7 @@ and then comparing $\abs{f(t_k) - f(t^\prime_k)}$ with $\omega_f(I_k)$.
 	w.r.t. $\alpha$ on $[c, d]$.
 \end{proof}
 
-\begin{theorem}
+\begin{theorem} \label{thm:20}
 	Assume $f, g \in \mathfrak{R}(\alpha)$ on $[a, b]$
 	where the integrator $\alpha$ is increasing.
 	Define functions $F$ and $G$ on $[a, b]$ by
@@ -3043,7 +3043,7 @@ are Riemann integrable.
 		\item $f$ is continuous, or
 		\item $f$ is of bounded variation
 	\end{enumerate}
-	then $f \in \mathfrak{R}(x)$ on $[a, b]$, i.e., $\int_a^b f(x) \dif x$ exists.
+	then $f \in \mathfrak{R}$ on $[a, b]$, i.e., $\int_a^b f(x) \dif x$ exists.
 \end{theorem}
 
 
@@ -3235,6 +3235,277 @@ using the first mean value theorem and integration by parts.
 		\label{fig:8}
 	\end{figure}
 \end{example}
+
+
+
+\section{The Function of Variable Upper Limit Integrals}
+
+\begin{theorem} \label{thm:21}
+	Let $\alpha$ be of bounded variation on $[a, b]$
+	and $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+	Let function $F(x)$ be defined by
+	\begin{align*}
+		F(x) = \int_a^x f \dif \alpha, \quad x \in [a, b]
+	\end{align*}
+	(By Theorem~\ref{thm:13} we see that $F$ is well defined.)
+	Then we have the following statements:
+	\begin{enumerate}
+		\item $F$ is of bounded variation on $[a, b]$.
+		\item Every point of continuity of $\alpha$
+		      is also a point of continuity of $F$.
+		      In other words, if $\alpha$ is continuous at $x_0 \in [a, b]$,
+		      then $F$ is also continuous at $x_0$.
+		\item Assume further that $\alpha$ is increasing on $[a, b]$.
+		      Then $F^\prime(x)$ exists at $x \in (a, b)$
+		      where $\alpha^\prime(x)$ exists
+		      and where $f$ is continuous.
+		      For such $x$, we have
+		      \begin{align*}
+			      F^\prime(x) = f(x) \alpha^\prime(x)
+		      \end{align*}
+		      And if the left side derivative $\alpha^\prime_+(a)$ exists
+		      and $f$ is continuous at the left endpoint,
+		      then the left derivate of $F$ also exists.
+		      An analogous statement holds for the right endpoint.
+		      \begin{align*}
+			      F^\prime(a)_+ = f(a) \alpha^\prime_+(a)
+			      \quad \text{or} \quad
+			      F^\prime(b)_{-} = f(b) \alpha^\prime_-(b)
+		      \end{align*}
+	\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+	\noindent\textbf{Proof of 1:} We will use the first mean value theorem
+	and the condition that $\alpha$ is of bounded variation on $[a, b]$.
+
+	Because $\alpha$ is of bounded variation on $[a, b]$, by definition,
+	there exists $M_1 > 0$ such that
+	\begin{align*}
+		\sum_{k} \abs{\Delta \alpha_k} < M_1
+	\end{align*}
+	for all partition $P$ of $[a, b]$.
+
+	Suppose $f$ is bounded by $M_2 > 0$.
+	Let $M = M_1 M_2$.
+	We will show that $\sum_{k} \abs{\Delta F_k} < M$ for all partition $P$.
+
+	Let $P = \{x_0, \ldots, x_n\}$ be an approximate partition of $[a, b]$.
+	On each subinterval $[x_{k-1}, x_k]$,
+	applying the first mean value theorem, we obtain
+	\begin{align*}
+		\abs{\Delta F_k} = \abs{\int_{x_{k-1}}^{x_k} f \dif \alpha}
+		= \abs{ c_k } \abs{ \Delta \alpha_k }
+		< M_2 \abs{\Delta \alpha_k}
+	\end{align*}
+	where $c_k$ satisfies
+	that $\inf_{x\in[x_{k-1}, x_k]} f(x) \leq c_k \leq \sup_{x\in[x_{k-1}, x_k]} f(x)$.
+	Summing over $k$ yields
+	\begin{align*}
+		\sum_{k=1}^n \abs{\Delta F_k} < M_2 \sum_{k=1}^n \abs{\Delta \alpha_k}
+		< M_2 M_1 = M
+	\end{align*}
+	This implies that $F$ is indeed of bounded variation on $[a, b]$.
+
+	\noindent\textbf{Proof of 2:}
+	Suppose $f$ is bounded by $M > 0$.
+	Let $\varepsilon > 0$ be arbitrary.
+	Suppose  $\alpha$ is continuous at $x_0 \in [a, b]$.
+	Then there exists $\delta > 0$ such
+	that
+	\begin{align*}
+		\abs{x - x_0} < \delta
+		\implies \abs{\alpha(x) - \alpha(x_0)} < \frac{\varepsilon}{2M}
+	\end{align*}
+
+	Assume $0 < \abs{x - x_0} < \delta$, we have
+	\begin{align*}
+		\abs{F(x) - F(x_0)}
+		= \abs{\int_{x_0}^x f \dif \alpha}
+	\end{align*}
+	By the first mean value theorem,
+	there exists a number $c$ in between the infimum and supremum of $f$
+	on the interval with endpoints $x_0$ and $x$ such that
+	\begin{align*}
+		\int_{x_0}^x f \dif \alpha = c [\alpha(x) - \alpha(x_0)]
+	\end{align*}
+	It then follows that
+	\begin{align*}
+		\abs{F(x) - F(x_0)} = \abs{c} \abs{\alpha(x) - \alpha(x_0)}
+		\leq M \frac{\varepsilon}{2M} = \varepsilon / 2< \varepsilon
+	\end{align*}
+	This proves that $F$ is continuous at $x_0$.
+
+	\noindent\textbf{Proof of 3:}
+	For any $h \neq 0$ such that $x+h \in (a, b)$, we have
+	\begin{align*}
+		\frac{F(x+h) - F(x)}{h}
+		= \frac{1}{h} \int_{x}^{x+h} f \dif \alpha
+	\end{align*}
+	By the first mean value theorem and the condition that $f$ is continuous,
+	there exists $t$ in between $x$ and $x+h$
+	(we have $\abs{t - x} < \abs{h}$) such that
+	\begin{align*}
+		\frac{1}{h} \int_{x}^{x+h} f \dif \alpha
+		= f(t) \frac{\alpha(x+h) - \alpha(x)}{h}
+	\end{align*}
+	Because $\alpha^\prime(x)$ exists and $f$ is continuous at $x$,
+	the limit of RHS of the above equation exists as $h \to 0$,
+	we have
+	\begin{align*}
+		\lim_{h \to 0} f(t) \frac{\alpha(x+h) - \alpha(x)}{h}
+		= f(x) \alpha^\prime(x)
+	\end{align*}
+	This completes the proof.
+\end{proof}
+
+Specially, if we assume the integrator $\alpha(x) = x$,
+then we will obtain the
+\textbf{first fundamental theorem of calculus}
+\index{first fundamental theorem of calculus}
+stated as follows.
+
+
+\begin{theorem}[First Fundamental Theorem of Calculus]
+	Let $F(x)$ be defined by
+	\begin{align*}
+		F(x) = \int_a^x f(t) \dif t, \quad
+		x \in [a, b]
+	\end{align*}
+	Then $F$ is of bounded variation on $[a, b]$,
+	and $F^\prime(x)$ exists at $x \in (a, b)$
+	where $f$ is continuous.
+	For such $x$, we have
+	\begin{align*}
+		F^\prime(x) = f(x)
+	\end{align*}
+	If $f$ is continuous at the endpoint $a$ or $b$,
+	then the one-sided derivate of $F$ also exists there.
+	In that case,
+	\begin{align*}
+		F^\prime_+(a) = f(a)
+		\quad \text{or} \quad
+		F^\prime_{-} (b) = f(b)
+	\end{align*}
+\end{theorem}
+
+\begin{example}
+	Consider $f(x) = \abs{x}, \; x \in [-1, 1]$
+	and $F(x) = \int_{-1}^x f(t) \dif t, x \in [-1, 1]$.
+	We know that $F^(x)$ exists in $(-1, 1)$
+	and its one-sided derivatives exist at endpoints.
+	Consider the function $\tilde{F}$ defined by
+	\begin{align*}
+		\tilde{F}(x)
+		= \begin{cases}
+			  -\frac{1}{2} x^2, & x \in [-1, 0) \\
+			  \frac{1}{2} x^2,  & x \in [0, 1]
+		  \end{cases}
+	\end{align*}
+	By calculating the derivative of $\tilde{F}$,
+	we find that
+	\begin{align*}
+		\tilde{F}^\prime(x) = \abs{x} = f(x) \quad \forall x \in (-1, 1)
+	\end{align*}
+	And the one-sided derivatives $\tilde{F}^\prime_{+}(-1) = 1 = f(-1)$
+	and $\tilde{F}^\prime_{-}(1) = 1 = f(1)$.
+	Therefore, by Rolle's theorem, $F$ and $t\tilde{F}$ differs by a constant $c$,
+	$F(x) = \tilde{F}(x) + c, \; x\in [-1, 1]$.
+	Since $F(-1) = 0$, it follows that $c = \frac{1}{2}$.
+	In conclusion, we have
+	\begin{align*}
+		F(x) = \frac{1}{2} \sgn(x) x^2 + \frac{1}{2}, \quad x \in [-1, 1]
+	\end{align*}
+
+	The graphs of $f$ and $F$ are shown in Figure~\ref{fig:9}.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{figures/absolute-value-function-and-its-antiderivative.png}
+		\caption{Left: function $f(x) = \abs{x}$; Right: $F(x) = \int_{-1}^x f(t) \dif t$.}
+		\label{fig:9}
+	\end{figure}
+
+	Observe that the original function $f$ has a sharp turn at $x=0$.
+	However, upon integration,
+	the resulting function becomes smoother in the sense that it gains differentiability.
+\end{example}
+
+Combining Theorem~\ref{thm:20} and Theorem~\ref{thm:21},
+we obtain the following theorem
+which converts the Riemann integral of product $fg$
+to a Riemann-Stieltjes integral $\int_a^b f \dif G$ or $\int_a^b g \dif F$.
+
+\begin{theorem}
+	Assume $f, g \in \mathfrak{R}$ on $[a, b]$.
+	Let
+	\begin{align*}
+		F(x) = \int_a^x f(t) \dif t, \quad
+		G(x) = \int_a^x g(t) \dif t, \quad
+		x \in [a, b]
+	\end{align*}
+	Then $F$ and $G$ are continuous functions of bounded variation on $[a, b]$.
+	Moreover, $f \in \mathfrak{R}(G)$ and $g \in \mathfrak{R}(F)$ on $[a, b]$,
+	and we have
+	\begin{align*}
+		\int_a^b f(x) g(x) \dif x
+		= \int_a^b f(x) \dif G(x)
+		= \int_a^b g(x) \dif F(x)
+	\end{align*}
+\end{theorem}
+
+
+
+\section{Second Fundamental Theorem of Calculus}
+
+\begin{theorem}[Second Fundamental Theorem of Calculus] \label{thm:22}
+	Assume $f \in \mathfrak{R}$ on $[a, b]$.
+	Let $F$ be a continuous function defined on $[a, b]$
+	such that the derivative $F^\prime$ exists in $(a, b)$ and
+	\begin{align*}
+		F^\prime(x) = f(x) \quad \forall x \in (a, b)
+	\end{align*}
+	Then we have
+	\begin{align*}
+		\int_a^b f(x) \dif x
+		= F(b) - F(a)
+	\end{align*}
+\end{theorem}
+
+\begin{proof}
+	Let $\varepsilon > 0$ be arbitrary.
+	Since $f \in \mathfrak{R}$ on $[a, b]$,
+	there exists a partition $P = \{x_0, \ldots, x_n\}$ of $[a, b]$ such that
+	\begin{align*}
+		\abs{S(P,T,f,x) - \int_a^b f(x) \dif x} < \varepsilon
+	\end{align*}
+	for any list of representatives.
+	On each subinterval $[x_{k-1}, x_k]$,
+	by the mean value theorem of differential calculus,
+	we have
+	\begin{align*}
+		F(x_k) - F(x_{k-1}) = f(t_k) \Delta x_k
+	\end{align*}
+	where $t_k \in (x_{k-1}, x_k)$.
+	Summing over $k$ yields
+	\begin{align*}
+		F(b) - F(a)
+		= \sum_{k=1}^n f(t_k) \Delta x_k
+	\end{align*}
+	where the RHS is a Riemann-Stieltjes sum.
+	Therefore,
+	\begin{align*}
+		\abs{(F(b) - F(a)) - \int_a^b f(x) \dif x} < \varepsilon
+	\end{align*}
+	Note that the above inequality holds for any $\varepsilon > 0$.
+	This completes the proof.
+\end{proof}
+
+
+\begin{exercise}
+	Assume further that $f$ is continuous in Theorem~\ref{thm:22}.
+	Construct a simpler proof using Theorem~\ref{thm:8}.
+\end{exercise}
+
 
 %==============================
 
