@@ -926,7 +926,7 @@ Now, suppose $f$ is continuous.
 We will show in this section that the two increasing functions $g$ and $h$
 can also be made continuous as well.
 
-\begin{theorem}
+\begin{theorem} \label{thm:24}
 	Suppose $f$ is of bounded variation on $[a, b]$.
 	Then $f$ is continuous at $x_0 \in [a, b]$
 	if and only if $V_a^x(f)$ is continuous at $x_0$.
@@ -3047,6 +3047,100 @@ are Riemann integrable.
 \end{theorem}
 
 
+Back to Theorem~\ref{thm:16}.
+In the following proposition, we study one of the corner cases
+that $f$ is continuous on the interval except possibly
+at the endpoints.
+
+\begin{proposition}
+	Let $\alpha$ be of bounded variation on $[a, b]$.
+	Assume $f$ is bounded on $[a, b]$ and
+	continuous on $[a, b]$ except at endpoint $a$ or $b$ or both.
+	If $\alpha$ is continuous at the points where $f$ is not,
+	then $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+\end{proposition}
+
+\begin{proof}
+	We only prove the case where $f$ is discontinuous at $a$
+	and $\alpha$ is continuous at $a$.
+
+	We want to prove this using Riemann's condition.
+	Hence, the condition that the integral is increasing is needed.
+	In the following,
+	we will first show that if we were able to prove this proposition
+	for increasing integrators,
+	then we can extend to integrators being bounded of variation.
+	Now, assume this proposition is proved for increasing integrators.
+	Since $\alpha$ is of bounded of variation,
+	we can decompose it into two increasing functions:
+	\begin{align*}
+		\alpha(x) = \underbrace{V_a^x(\alpha)}_{\alpha_1(x)}
+		- \underbrace{ [V_a^x(\alpha) - \alpha(x)] }_{\alpha_2(x)}
+	\end{align*}
+	Recall Theorem~\ref{thm:24}, which states that every point of continuity
+	of $\alpha$ is a point of continuity of $V_a^x(\alpha)$ and vice versa,
+	it then follows that both $\alpha_1$ and $\alpha_2$
+	are continuous at $a$.
+	Therefore, applying this proposition,
+	we have $f \in \mathfrak{R}(\alpha_1)$ and $f \in \mathfrak{R}(\alpha_2)$
+	on $[a, b]$.
+	Then by the linearity of the integrals, $f \in \mathfrak{R}(\alpha)$
+	on $[a, b]$, which proves this proposition
+	for integrators of bounded variation.
+
+	In the following, we will prove this proposition
+	assuming $\alpha$ is increasing.
+
+	In the following, we will prove this proposition
+	assuming $\alpha$ is increasing.
+	Suppose f is bounded by $M > 0$.
+	Let $\varepsilon > 0$ be arbitrary.
+	We will construct a partition $P_\varepsilon$ of $[a, b]$
+	in two steps.
+
+	Because $\alpha$ is continuous at $a$,
+	there exists $\delta > 0$ such that
+	\begin{align*}
+		x - a < \delta
+		\implies \alpha(x) - \alpha(a) < \frac{\varepsilon}{2M}
+	\end{align*}
+	Let $x_1 = a + \delta/ 2$.
+	This point will set as the second point in $P_\varepsilon$.
+
+	Next, we note that $f$ is continuous
+	on the interval $[x_1, b]$, and hence
+	it is continuous uniformly there.
+	There exists $\delta^\prime > 0$ such that
+	\begin{align*}
+		\abs{s - t} < \delta^\prime
+		\implies \abs{f(s) - f(t)} < \frac{\varepsilon}{2(b-a)}
+	\end{align*}
+	Choose the rest of the points in $P_\varepsilon$
+	in such a way that
+	\begin{align*}
+		\Delta x_k = x_k - x_{k-1} < \delta^\prime
+		\quad \forall 2 \leq k \leq n
+	\end{align*}
+	It then follows that
+	\begin{align*}
+		\omega_f(I_k) \leq \frac{\varepsilon}{2 (b-a)}
+		\quad \forall 2 \leq  k \leq n
+	\end{align*}
+
+	With the above construction of $P_\varepsilon$, we have
+	\begin{align*}
+		U(P_\varepsilon, f, \alpha) - L(P_\varepsilon, f, \alpha)
+		 & = \sum_{k=1}^n \omega_f(I_k) \Delta x_k                             \\
+		 & = \omega_f (I_1) (x_1 - a) + \sum_{k=2}^n \omega_f(I_k) \Delta x_k  \\
+		 & < M \cdot \frac{\varepsilon}{2 M}
+		+ \frac{\varepsilon}{2(b-a)} \sum_{k=2}^n \Delta x_k                   \\
+		 & \leq \frac{\varepsilon}{2} + \frac{\varepsilon}{2(b-a)} \cdot (b-a) \\
+		 & = \varepsilon
+	\end{align*}
+	This proves $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
+\end{proof}
+
+
 
 \section{Necessary Conditions for Existence of Riemann-Stieltjes Integrals}
 
@@ -3169,8 +3263,6 @@ are Riemann integrable.
 	\end{figure}
 
 \end{example}
-
-
 
 
 
@@ -3435,7 +3527,7 @@ we obtain the following theorem
 which converts the Riemann integral of product $fg$
 to a Riemann-Stieltjes integral $\int_a^b f \dif G$ or $\int_a^b g \dif F$.
 
-\begin{theorem}
+\begin{theorem} \label{thm:23}
 	Assume $f, g \in \mathfrak{R}$ on $[a, b]$.
 	Let
 	\begin{align*}
@@ -3456,6 +3548,12 @@ to a Riemann-Stieltjes integral $\int_a^b f \dif G$ or $\int_a^b g \dif F$.
 
 
 \section{Second Fundamental Theorem of Calculus}
+
+The first fundamental theorem of calculus
+tells us about nice properties of the function
+constructed from integrating a integrable function.
+
+The following theorem, on the other hand, provides a method for evaluating the integral of a derivative.
 
 \begin{theorem}[Second Fundamental Theorem of Calculus] \label{thm:22}
 	Assume $f \in \mathfrak{R}$ on $[a, b]$.
@@ -3505,6 +3603,71 @@ to a Riemann-Stieltjes integral $\int_a^b f \dif G$ or $\int_a^b g \dif F$.
 	Assume further that $f$ is continuous in Theorem~\ref{thm:22}.
 	Construct a simpler proof using Theorem~\ref{thm:8}.
 \end{exercise}
+
+The second fundamental theorem of calculus combined
+with Theorem~\ref{thm:22}
+can be used to strength Theorem~\ref{thm:8}.
+
+\begin{theorem}
+	Assume $f \in \mathfrak{R}$ on $[a, b]$.
+	If $\alpha$ is continuous on $[a, b]$
+	and its derivative $\alpha^\prime \in \mathfrak{R}$ on $[a, b]$.
+	Then the following integrals exist and are equal:
+	\begin{align*}
+		\int_a^b f(x) \dif \alpha(x)
+		= \int_a^b f(x) \alpha^\prime(x) \dif x
+	\end{align*}
+\end{theorem}
+
+\begin{note}
+	This theorem strengthens Theorem~\ref{thm:8}
+	by relaxing the condition on $\alpha^\prime$:
+	instead of requiring $\alpha^\prime$ to be continuous,
+	it only requires $\alpha^\prime$ to be integrable.
+\end{note}
+
+\begin{proof}
+	Let
+	\begin{align*}
+		A(x) = \int_a^x \alpha^\prime(t) \dif t, \quad x \in [a, b]
+	\end{align*}
+	By Theorem~\ref{thm:23}, we have $f \in \mathfrak{R}(A)$ on $[a, b]$,
+	and
+	\begin{align*}
+		\int_a^b f(x) \alpha^\prime(x) \dif x
+		= \int_a^b f(x) \dif A(x)
+	\end{align*}
+	Meanwhile, by the second fundamental theorem of calculus, we know
+	\begin{align*}
+		A(x) = \alpha(x) - \alpha(a)
+	\end{align*}
+	Due to the linearity, $f \in \mathfrak{R}(\alpha)$ and
+	\begin{align*}
+		\int_a^b f(x) \dif \alpha(x)
+		 & = \int_a^b f(x) \dif [A(x) + \alpha(a)]                  \\
+		 & = \int_a^b f(x) \dif A(x) + \int_a^b f(x) \dif \alpha(a) \\
+		 & = \int_a^b f(x) \dif A(x) + 0                            \\
+		 & = \int_a^b f(x) \alpha^\prime(x) \dif x
+	\end{align*}
+\end{proof}
+
+
+
+\section{Change of Variables in a Riemann Integral}
+
+\begin{theorem}
+	Assume that $g$ has a continuous derivative $g^\prime$ on $[c, d]$.
+	Let $f$ be continuous on $g([c, d])$
+	and define $F$ by
+	\begin{align*}
+		F(x) = \int_{g(c)}^x f(t) \dif t,
+		\quad x \in g([c, d])
+	\end{align*}
+\end{theorem}
+
+
+
+
 
 
 %==============================
