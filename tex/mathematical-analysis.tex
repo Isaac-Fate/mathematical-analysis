@@ -1301,7 +1301,7 @@ the integral is linear in the integrators.
 	Consider the diagram shown in Figure \ref{fig:5}.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.8\textwidth]{figures/integration-by-parts-proof-diagram.png}
+		\includegraphics[width=0.7\textwidth]{figures/integration-by-parts-proof-diagram.png}
 		\caption{The blue part is associated with $f(x_k)[\alpha(x_k)-\alpha(t_k)]$ while the orange part is associated with $f(x_{k-1})[\alpha(t_k)-\alpha(x_{k-1})]$. We see that summing them up yields $S(P^{\prime\prime}, T^{\prime\prime}, f, \alpha)$.}
 		\label{fig:5}
 	\end{figure}
@@ -3140,7 +3140,18 @@ at the endpoints.
 	This proves $f \in \mathfrak{R}(\alpha)$ on $[a, b]$.
 \end{proof}
 
-
+\begin{example} \label{eg:3}
+	Consider
+	\begin{align*}
+		f(x) = \begin{cases}
+			       2x \sin \frac{1}{x} - \cos \frac{1}{x}, & x \in (0, 1] \\
+			       0,                                      & x=0
+		       \end{cases}
+	\end{align*}
+	Function $f$ is bounded on $[0, 1]$ and it is continuous on $[0, 1]$
+	except at $x=0$.
+	The Riemann integral $\int_0^1 f(x) \dif x$ exists.
+\end{example}
 
 \section{Necessary Conditions for Existence of Riemann-Stieltjes Integrals}
 
@@ -3458,7 +3469,7 @@ then we will obtain the
 stated as follows.
 
 
-\begin{theorem}[First Fundamental Theorem of Calculus]
+\begin{theorem}[First Fundamental Theorem of Calculus] \label{thm:25}
 	Let $F(x)$ be defined by
 	\begin{align*}
 		F(x) = \int_a^x f(t) \dif t, \quad
@@ -3604,6 +3615,53 @@ The following theorem, on the other hand, provides a method for evaluating the i
 	Construct a simpler proof using Theorem~\ref{thm:8}.
 \end{exercise}
 
+\begin{example}
+	Let
+	\begin{align*}
+		F(x) =\begin{cases}
+			      x^2 \sin \frac{1}{x}, & x\in (0, 1] \\
+			      0,                    & x=0
+		      \end{cases}
+	\end{align*}
+	Note that $F$ is continuous on $[0, 1]$, and in the interior $(0, 1)$,
+	we have
+	\begin{align*}
+		F^\prime(x) = 2x \sin \frac{1}{x} - \cos \frac{1}{x}
+	\end{align*}
+	Define $f$ on $[0, 1]$ by
+	\begin{align*}
+		f(x) = \begin{cases}
+			       2x \sin \frac{1}{x} - \cos \frac{1}{x}, & x \in (0, 1] \\
+			       0,                                      & x=0
+		       \end{cases}
+	\end{align*}
+	Then $F^\prime(x) = f(x) \; \forall x \in (0, 1)$.
+	In Example~\ref{eg:3}, we have seen that $f \in \mathfrak{R}$ on $[0, 1]$.
+	Using the second fundamental theorem of calculus,
+	we can evaluate the integral $\int_0^1 f(x) \dif x$:
+	\begin{align*}
+		\int_0^1 f(x) \dif x = F(1) - F(0) = \sin(1)
+	\end{align*}
+	Just for extra exercises, one may also compute that
+	\begin{align*}
+		\int_0^{1/\pi} f(x) \dif x = F(1/\pi) - F(0) = 0
+		\quad \text{and} \quad
+		\int_{1/\pi}^1 f(x) \dif x = F(1) - F(1/\pi) = \sin(1)
+	\end{align*}
+	A figure of $f$ and $F$ is shown in Figure~\ref{fig:10}.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\textwidth]{figures/second-fundamental-theorem-of-calculus-example-1.png}
+		\caption{Left: $f(x)$, the signed area on the left of
+			the line $x=\frac{1}{\pi}$ is $0$,
+			and the area on the right of the line $x=\frac{1}{\pi}$
+			equalling to the overall signed area, which is $\sin(1)$;
+			Right: $F(x)$, note that $F(1 / \pi) = 0$.}
+		\label{fig:10}
+	\end{figure}
+\end{example}
+
 The second fundamental theorem of calculus combined
 with Theorem~\ref{thm:22}
 can be used to strength Theorem~\ref{thm:8}.
@@ -3655,7 +3713,7 @@ can be used to strength Theorem~\ref{thm:8}.
 
 \section{Change of Variables in a Riemann Integral}
 
-\begin{theorem}
+\begin{theorem} \label{thm:26}
 	Assume that $g$ has a continuous derivative $g^\prime$ on $[c, d]$.
 	Let $f$ be continuous on $g([c, d])$
 	and define $F$ by
@@ -3663,9 +3721,114 @@ can be used to strength Theorem~\ref{thm:8}.
 		F(x) = \int_{g(c)}^x f(t) \dif t,
 		\quad x \in g([c, d])
 	\end{align*}
+	Then
+	\begin{align}
+		F[g(x)]
+		=\int_{g(c)}^{g(x)} f(t) \dif t
+		= \int_c^x f[g(t)] g^\prime(t) \dif t
+		\quad \forall x \in [c, d]
+		\label{eq:60}
+	\end{align}
+	In particular, taking $x = d$ yields
+	\begin{align*}
+		\int_{g(c)}^{g(d)} f(t) \dif t
+		= \int_c^d f[g(t)] g^\prime(t) \dif t
+	\end{align*}
 \end{theorem}
 
 
+\begin{note}
+	Recall that a continuous function maps a connected sets to a connected sets,
+	and maps compact sets to compact sets.
+	Because $g$ is continuous on $[c, d]$, the image $g([c, d])$
+	is actually a closed interval (when $g$ is nonconstant).
+	If $g$ is constant, than $g([c, d])$ is just a single point.
+\end{note}
+
+\begin{proof}
+	When $g$ is constant, the conclusion is trivial.
+	In what follows, we assume $g$ is nonconstant.
+	As we have noted, $g([c, d])$ is a closed interval, say $[a, b]$.
+	Since $f$ is continuous on $[a, b]$,
+	by the first fundamental theorem of calculus (Theorem~\ref{thm:25}),
+	we have
+	\begin{align*}
+		F^\prime(x) = f(x) \quad \forall x \in [a, b] = g([c, d])
+	\end{align*}
+	For any $t \in [c, d]$, we have $g(t) \in [a, b]$.
+	Substituting $x = g(t)$
+	and then multiplying by $g^\prime(t)$ on both sides,
+	we obtain
+	\begin{align*}
+		F^\prime[g(t)] g^\prime(t) = f[g(t)] g^\prime(t)
+		\quad \forall t \in [c, d]
+	\end{align*}
+	Define function $G$ on $[c, d]$ by
+	\begin{align*}
+		G(t) = F[g(t)], \quad t \in [c, d]
+	\end{align*}
+	The chain rules implies
+	\begin{align*}
+		G^\prime(t)
+		= F^\prime[g(t)] g^\prime(t)
+		= f[g(t)] g^\prime(t)
+		\quad \forall t \in [c, d]
+	\end{align*}
+
+	Note that the derivative $G^\prime(t)$ is continuous on $[c, d]$.
+	Therefore, $G^\prime \in \mathfrak{R}$ on $[c, d]$
+	(and hence on any subinterval, in particular, on $[c, x]$).
+	Moreover, $G$ is continuous on $[c, d]$.
+	Hence, we are allowed use the second fundamental theorem of calculus
+	(Theorem~\ref{thm:22}) to integrate the derivate $G^\prime(t)$
+	on $[c, x]$.
+	We have
+	\begin{align*}
+		\int_c^x G^\prime(t) \dif t = G(x) - G(c)
+	\end{align*}
+	Plug in the formula for $H(t)$:
+	\begin{align*}
+		\int_c^d f^\prime[g(t)] g^\prime(t) \dif t = F[g(x)] - F[g(c)]
+		= \int_{g(c)}^{g(x)} f(t) \dif t
+	\end{align*}
+	Note that the above equality holds for every $x \in (c, d]$,
+	and it also holds when $x = c$.
+\end{proof}
+
+\begin{example} \label{eg:4}
+	Consider
+	\begin{align*}
+		I(x) = \int_0^x \sin^2 t \cos t \dif t, \quad x \in \R
+	\end{align*}
+	Let $f(t) = t^2$ and $g(t) = \sin t$.
+	We have
+	\begin{align*}
+		I(x) = \int_0^x f[g(t)] g^\prime(t) \dif t
+	\end{align*}
+	Apply \eqref{eq:60} in reverse direction:
+	\begin{align*}
+		I(x) = \int_0^x f[g(t)] g^\prime(t) \dif t
+		= \int_{g(0)}^{g(x)} f(t) \dif t
+		= \int_0^{\sin x} t^2 \dif t
+		= \left . \frac{1}{3} t^3 \right\rvert_{0}^{\sin x}
+		= \frac{1}{3} \sin^3 x
+	\end{align*}
+
+	The graph of the function $\sin^2(x) \cos(x)$ is shown in Figure~\ref{fig:11}.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{figures/change-of-variables-in-a-riemann-integral-example-1.png}
+		\caption{Graph of the function $\sin^2(x) \cos(x)$.}
+		\label{fig:11}
+	\end{figure}
+
+\end{example}
+
+
+\begin{exercise}
+	Simplify the integral $I(x)$ in Example~\ref{eg:4} in a different way
+	by applying \eqref{eq:60} in the forward direction.
+\end{exercise}
 
 
 
