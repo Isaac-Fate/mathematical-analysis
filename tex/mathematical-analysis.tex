@@ -3666,7 +3666,7 @@ The second fundamental theorem of calculus combined
 with Theorem~\ref{thm:22}
 can be used to strength Theorem~\ref{thm:8}.
 
-\begin{theorem}
+\begin{theorem} \label{thm:27}
 	Assume $f \in \mathfrak{R}$ on $[a, b]$.
 	If $\alpha$ is continuous on $[a, b]$
 	and its derivative $\alpha^\prime \in \mathfrak{R}$ on $[a, b]$.
@@ -3795,7 +3795,7 @@ can be used to strength Theorem~\ref{thm:8}.
 	and it also holds when $x = c$.
 \end{proof}
 
-\begin{example} \label{eg:4}
+\begin{example}
 	Consider
 	\begin{align*}
 		I(x) = \int_0^x \sin^2 t \cos t \dif t, \quad x \in \R
@@ -3814,22 +3814,106 @@ can be used to strength Theorem~\ref{thm:8}.
 		= \frac{1}{3} \sin^3 x
 	\end{align*}
 
-	The graph of the function $\sin^2(x) \cos(x)$ is shown in Figure~\ref{fig:11}.
+	A graph of the function $\sin^2(x) \cos(x)$ is shown in Figure~\ref{fig:11}.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\textwidth]{figures/change-of-variables-in-a-riemann-integral-example-1.png}
 		\caption{Graph of the function $\sin^2(x) \cos(x)$.}
 		\label{fig:11}
 	\end{figure}
-
 \end{example}
 
 
-\begin{exercise}
-	Simplify the integral $I(x)$ in Example~\ref{eg:4} in a different way
-	by applying \eqref{eq:60} in the forward direction.
-\end{exercise}
 
+\section{Second Mean-Value Theorem for Riemann Integrals}
+
+\begin{theorem}
+	Let $g$ be continuous and $f$ be increasing on $[a, b]$.
+	Let $A$ and $B$ be two real numbers satisfying
+	\begin{align*}
+		A \leq f(a+)
+		\quad \text{and} B \geq f(b-)
+	\end{align*}
+	Then there exists a point $x_0 \in [a, b]$ such that
+	\begin{align}
+		\int_a^b f(x) g(x) \dif x
+		= A \int_a^{x_0} g(x) \dif x
+		+ B \int_{x_0}^b g(x) \dif x
+		\label{eq:61}
+	\end{align}
+	(Note that $f, g \in \mathfrak{R}$ on $[a, b]$, and so does their product (Theorem~\ref{thm:14}).)
+
+	In particular, if $f(x) \geq 0$ for all $x \in [a, b]$, we have
+	\begin{align}
+		\int_a^b f(x) g(x) \dif x
+		= B \int_{x_0}^b g(x) \dif x
+		\label{eq:62}
+	\end{align}
+\end{theorem}
+
+\begin{proof}
+	\noindent\textbf{Proof of \eqref{eq:61}:}
+	We first define a function $\tilde{f}$ on $[a, b]$ as follows:
+	\begin{align*}
+		\tilde{f}(x) = \begin{cases}
+			               f(x), & x \in (a, b) \\
+			               A,    & x=a          \\
+			               B,    & x=b
+		               \end{cases}
+	\end{align*}
+	With the given properties of $A$ and $B$, we note
+	that $\tilde{f}$ is also increasing on $[a, b]$.
+	And since $\tilde{f} g$ differs $f g$ by two points,
+	the integrals are equal:
+	\begin{align}
+		\int_a^b \tilde{f}(x) g(x) \dif x
+		= \int_a^b f(x) g(x) \dif x
+		\label{eq:65}
+	\end{align}
+
+	Let
+	\begin{align*}
+		G(x) = \int_a^x g(t) \dif t, \quad x \in [a, b]
+	\end{align*}
+	By Theorem~\ref{thm:21}, we have $G^\prime(x) = g(x) \; \forall x \in [a, b]$.
+	Then applying Theorem~\ref{thm:27}, we have
+	\begin{align}
+		\int_a^b \tilde{f}(x) g(x) \dif x
+		= \int_a^b \tilde{f}(x) \dif G(x)
+		\label{eq:64}
+	\end{align}
+
+	Next, by the second mean value theorem for Riemann-Stieltjes integrals
+	(Theorem~\ref{thm:19}), there exists $x_0 \in [a, b]$ such that
+	\begin{align*}
+		\int_a^b \tilde{f}(x) \dif G(x)
+		 & = \tilde{f}(a) \int_a^{x_0} \dif G(x)
+		+ \tilde{f}(b) \int_{x_0}^b \dif G(x)    \\
+		 & =  A \int_a^{x_0} \dif G(x)
+		+ B \int_{x_0}^b \dif G(x)
+	\end{align*}
+	Apply Theorem~\ref{thm:27} again to replace $\dif G(x)$ with $g(x) \dif x$:
+	\begin{align}
+		\int_a^b \tilde{f}(x) \dif G(x)
+		=  A \int_a^{x_0} g(x) \dif x
+		+ B \int_{x_0}^b g(x) \dif x
+		\label{eq:63}
+	\end{align}
+
+	Finally, combining \eqref{eq:65}, \eqref{eq:64} and \eqref{eq:63} together,
+	we obtain
+	\begin{align*}
+		\int_a^b f(x) g(x) \dif x
+		=  A \int_a^{x_0} g(x) \dif x
+		+ B \int_{x_0}^b g(x) \dif x
+	\end{align*}
+
+
+
+	\noindent\textbf{Proof of \eqref{eq:62}:}
+
+
+\end{proof}
 
 
 
