@@ -15,7 +15,7 @@
 \addbibresource{mathematical-analysis.bib} 
 
 % Image of the book cover
-\cover{cover}
+\cover{cover.png}
 
 \begin{document}
 
@@ -3827,12 +3827,16 @@ can be used to strength Theorem~\ref{thm:8}.
 
 \section{Second Mean-Value Theorem for Riemann Integrals}
 
+The second mean-value theorem provides a way of estimating the
+integral of a product $f(x) g(x)$ when one function is \textit{monotonic}.
+
 \begin{theorem}
 	Let $g$ be continuous and $f$ be increasing on $[a, b]$.
 	Let $A$ and $B$ be two real numbers satisfying
 	\begin{align*}
 		A \leq f(a+)
-		\quad \text{and} B \geq f(b-)
+		\quad \text{and} \quad
+		B \geq f(b-)
 	\end{align*}
 	Then there exists a point $x_0 \in [a, b]$ such that
 	\begin{align}
@@ -3911,8 +3915,59 @@ can be used to strength Theorem~\ref{thm:8}.
 
 
 	\noindent\textbf{Proof of \eqref{eq:62}:}
+	Let $A = 0$ and $B \geq f(b-)$.
+	Since $f$ is assumed to be nonnegative on $[a, b]$,
+	it holds that $A \leq f(a+)$, and hence \eqref{eq:61} is applicable.
+	We have
+	\begin{align*}
+		\int_a^b f(x) g(x) \dif x
+		=  A \int_a^{x_0} g(x) \dif x
+		+ B \int_{x_0}^b g(x) \dif x
+		=  B \int_{x_0}^b g(x) \dif x
+	\end{align*}
+	for some $x_0 \in [a, b]$.
 
+\end{proof}
 
+An analogous result holds when $f$ is decreasing on $[a, b]$.
+In that case, if $A \geq f(a+)$ and $B \leq f(b-)$, then
+there exists $x_0 \in [a, b]$ such that
+\begin{align*}
+	\int_a^b f(x) g(x) \dif x
+	= A \int_a^{x_0} g(x) \dif x
+	+ B \int_{x_0}^b g(x) \dif x
+\end{align*}
+In particular, if $f$ is nonpositive, then
+\begin{align*}
+	\int_a^b f(x) g(x) \dif x
+	= A \int_a^{x_0} g(x) \dif x
+\end{align*}
+
+\begin{exercise}
+	Show that
+	\begin{align*}
+		\abs{\int_a^b \frac{\sin x}{x} \dif x} \leq \frac{2}{a}
+	\end{align*}
+	where $0 < a < b$.
+\end{exercise}
+
+\begin{proof}
+	Let $f(x) = \frac{1}{x}$ and $g(x) = \sin x$.
+	Note that $f$ is decreasing and nonnegative on $[a, b]$,
+	and $g$ is continuous on $[a, b]$.
+	The second mean-value theorem implies that
+	\begin{align*}
+		\int_a^b \frac{\sin x}{x} \dif x
+		= \frac{1}{a} \int_a^{x_0} \sin x \dif x
+	\end{align*}
+	for some $x_0 \in [a, b]$.
+	A few steps of calculation yield
+	\begin{align*}
+		\frac{1}{a} \int_a^{x_0} \sin x \dif x
+		 & = \frac{1}{a} \left . (-\cos x) \right\rvert_{a}^{x_0} \\
+		 & = \frac{1}{a} (\cos a - \cos x_0)
+	\end{align*}
+	Finally, the proof is concluded by noting that $\abs{\cos a - \cos x} \leq 2$.
 \end{proof}
 
 
