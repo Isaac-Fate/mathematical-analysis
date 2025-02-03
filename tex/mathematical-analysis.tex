@@ -2478,7 +2478,7 @@ the existence of an integral.
 	\end{align*}
 \end{corollary}
 
-\begin{theorem}
+\begin{theorem} \label{thm:28}
 	Assume $\alpha$ is increasing on $[a, b]$.
 	If $f \in \mathfrak{R}(\alpha)$ on $[a, b]$,
 	then $\abs{f} \in \mathfrak{R}(\alpha)$ on $[a, b]$, and
@@ -3970,6 +3970,69 @@ In particular, if $f$ is nonpositive, then
 	Finally, the proof is concluded by noting that $\abs{\cos a - \cos x} \leq 2$.
 \end{proof}
 
+
+
+%------------------------------
+
+\section{Riemann Stieltjes Integrals Depending on a Parameter}
+
+\begin{theorem}
+	Let function $f$ be continuous at each point $(x, y)$
+	in a rectangle
+	\begin{align*}
+		Q = \set{(x, y)}{x \in [a, b], y \in [c, d]}
+	\end{align*}
+	Assume $\alpha$ is of bounded variation on $[a, b]$.
+	Define $F$ on $[c, d]$ by
+	\begin{align*}
+		F(y) = \int_a^b f(x, y) \dif \alpha(x), \quad y \in [c, d]
+	\end{align*}
+	(Note that $F(y)$ is well-defined since  $\alpha$ is of bounded on $[a, b]$
+	and for a fixed $y$, $f(x, y)$
+	can be regarded as a continuous function of $x$ on $[a, b]$.)
+
+	We have that $F$ is continuous on $[c, d]$.
+	In other words, we may change the order of limit and integration, i.e.,
+	for each $y_0 \in [c, d]$, we have
+	\begin{align*}
+		\lim_{y \to y_0} \int_a^b f(x, y) \dif \alpha(x)
+		= \int_a^b \lim_{y \to y_0} f(x, y) \dif \alpha(x)
+		= \int_a^b f(x, y_0) \dif \alpha(x)
+	\end{align*}
+\end{theorem}
+
+\begin{proof}
+	It suffices to prove this theorem assuming that $\alpha$ is increasing.
+	If $\alpha$ is constant, then the conclusion is trivial.
+	Hence, in the following we also assume $\alpha$ is nonconstant.
+
+	Let $\varepsilon > 0$ be arbitrary.
+	Because $f$ is continuous uniformly on $Q$ (since $Q$ is compact),
+	there exists $\delta > 0$ such that
+	\begin{align*}
+		\norm{(\tilde{x}, y) - (x, y_0)}
+		\implies \abs{f(\tilde{x}, y) - f(x, y_0)}
+		< \frac{\varepsilon}{\alpha(b) - \alpha(a)}
+	\end{align*}
+	for each $x \in [a, b]$.
+	In particular, letting $\tilde{x} = x$, we have
+	\begin{align*}
+		\abs{y - y_0} < \delta
+		\implies \abs{f(x, y) - f(x, y_0)}
+		< \frac{\varepsilon}{\alpha(b) - \alpha(a)}
+	\end{align*}
+
+	Let $y$ satisfy that $\abs{y - y_0} < \delta$.
+	It then follows from the comparison theorem (Theorem~\ref{thm:28}) that
+	\begin{align*}
+		\abs{F(y) - F(y_0)}
+		 & = \abs{\int_a^b [f(x, y) - f(x, y_0)] \dif \alpha(x)}               \\
+		 & \leq \int_a^b \abs{f(x, y) - f(x, y_0)} \dif \alpha(x)              \\
+		 & < \int_a^b \frac{\varepsilon}{\alpha(b) - \alpha(a)} \dif \alpha(x) \\
+		 & = \varepsilon
+	\end{align*}
+	This completes the proof.
+\end{proof}
 
 
 %==============================
