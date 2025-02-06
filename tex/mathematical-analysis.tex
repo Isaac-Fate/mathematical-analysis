@@ -3825,7 +3825,7 @@ can be used to strength Theorem~\ref{thm:8}.
 
 
 
-\section{Second Mean-Value Theorem for Riemann Integrals}
+\section{Second Mean Value Theorem for Riemann Integrals}
 
 The second mean-value theorem provides a way of estimating the
 integral of a product $f(x) g(x)$ when one function is \textit{monotonic}.
@@ -3976,12 +3976,9 @@ In particular, if $f$ is nonpositive, then
 
 \section{Riemann Stieltjes Integrals Depending on a Parameter}
 
-\begin{theorem}
+\begin{theorem} \label{thm:29}
 	Let function $f$ be continuous at each point $(x, y)$
-	in a rectangle
-	\begin{align*}
-		Q = \set{(x, y)}{x \in [a, b], y \in [c, d]}
-	\end{align*}
+	in the rectangle $[a, b] \times [c, d]$.
 	Assume $\alpha$ is of bounded variation on $[a, b]$.
 	Define $F$ on $[c, d]$ by
 	\begin{align*}
@@ -4007,17 +4004,19 @@ In particular, if $f$ is nonpositive, then
 	Hence, in the following we also assume $\alpha$ is nonconstant.
 
 	Let $\varepsilon > 0$ be arbitrary.
-	Because $f$ is continuous uniformly on $Q$ (since $Q$ is compact),
+	Because $f$ is continuous uniformly on $[a, b] \times [c, d]$
+	(since $[a, b] \times [c, d]$ is compact),
 	there exists $\delta > 0$ such that
 	\begin{align*}
-		\norm{(\tilde{x}, y) - (x, y_0)}
-		\implies \abs{f(\tilde{x}, y) - f(x, y_0)}
+		\norm{(x_1, y_1) - (x_2, y_2)} < \delta
+		\implies \abs{f(x_1, y_1) - f(x_2, y_2)}
 		< \frac{\varepsilon}{\alpha(b) - \alpha(a)}
 	\end{align*}
-	for each $x \in [a, b]$.
-	In particular, letting $\tilde{x} = x$, we have
+	for each pair of points $(x_1, y_1)$ and $(x_2, y_2)$ in the rectangle.
+	In particular, consider the pair of points $(x, y)$ and $(x, y_0)$.
+	We have
 	\begin{align*}
-		\abs{y - y_0} < \delta
+		\norm{(x, y) - (x, y_0)} = \abs{y - y_0} < \delta
 		\implies \abs{f(x, y) - f(x, y_0)}
 		< \frac{\varepsilon}{\alpha(b) - \alpha(a)}
 	\end{align*}
@@ -4033,6 +4032,289 @@ In particular, if $f$ is nonpositive, then
 	\end{align*}
 	This completes the proof.
 \end{proof}
+
+By converting $g(x) \dif x$ to $\dif G(x)$,
+we may obtain a version of the above theorem for Riemann integrals.
+
+\begin{theorem}
+	Let function $f$ be continuous at each point $(x, y)$
+	in the rectangle $[a, b] \times [c, d]$.
+	Assume $g$ is continuous on $[a, b]$.
+	Define $F$ on $[c, d]$ by
+	\begin{align*}
+		F(y) = \int_a^b f(x, y) g(x) \dif x, \quad y \in [c, d]
+	\end{align*}
+	We have that $F$ is continuous on $[c, d]$.
+	In other words, we may change the order of limit and integration, i.e.,
+	for each $y_0 \in [c, d]$, we have
+	\begin{align*}
+		\lim_{y \to y_0} \int_a^b f(x, y) g(x) \dif x
+		= \int_a^b \lim_{y \to y_0} f(x, y_0) g(x) \dif x
+		= \int_a^b f(x, y_0) g(x) \dif x
+	\end{align*}
+\end{theorem}
+
+\begin{proof}
+	For each fixed $y$, $f(x, y) \in \mathfrak{R}$ on $[a, b]$
+	since it is continuous.
+	Because $g$ is also Riemann integrable on $[a, b]$,
+	Theorem~\ref{thm:23} is applicable.
+	We may use it to convert $\int_a^b f(x, y) g(x) \dif x$
+	to a Riemann-Stieltjes integral.
+	Define
+	\begin{align*}
+		G(x) = \int_a^x g(t) \dif t, \quad x \in [a, b]
+	\end{align*}
+	We have
+	\begin{align*}
+		\int_a^b f(x, y) g(x) \dif x
+		=  \int_a^b f(x, y) \dif G(x)
+	\end{align*}
+	Since $f$ is continuous on $[a, b]\times [c, d]$
+	and $G$ is of bounded variation on $[a, b]$ (Theorem~\ref{thm:21}),
+	it follows from Theorem~\ref{thm:29} that
+	\begin{align*}
+		\lim_{y \to y_0} \int_a^b f(x, y) \dif G(x)
+		= \int_a^b lim_{y \to y_0} f(x, y) \dif G(x)
+		= \int_a^b f(x, y_0) \dif G(x)
+	\end{align*}
+	Apply Theorem~\ref{thm:23} again to
+	convert to the Riemann integral:
+	\begin{align*}
+		\int_a^b f(x, y_0) \dif G(x)
+		= \int_a^b f(x, y_0) g(x) \dif x
+	\end{align*}
+	This completes the proof.
+\end{proof}
+
+
+%------------------------------
+
+\section{Differentiation Under the Integral Sign}
+
+\begin{theorem} \label{thm:30}
+	Let $R = [a, b] \times [c, d]$.
+	Assume that $\alpha$ is of bounded variation on $[a, b]$.
+	For each point $y \in [c, d]$, assume that the integral
+	\begin{align*}
+		F(y) = \int_a^b f(x, y) \dif \alpha(x)
+	\end{align*}
+	exists.
+	If the partial derivative $f_y(x, y)$ is continuous on $R$,
+	then the derivative $F^\prime(y)$ exists and
+	\begin{align*}
+		F^\prime(y) = \int_a^b f_y(x, y) \dif \alpha(x)
+		\quad \forall y \in [c, d]
+	\end{align*}
+\end{theorem}
+
+To prove the existence of the derivative $F^\prime(y_0)$,
+we consider the quotient
+\begin{align*}
+	\frac{F(y) - F(y_0)}{y - y_0}
+	= \int_a^b \frac{f(x, y) - f(x, y_0)}{y - y_0} \dif \alpha(x)
+\end{align*}
+When taking the limit $y \to y_0$, we would like to move the
+limit under the integration sign
+\begin{align*}
+	\lim_{y \to y_0} \int_a^b \frac{f(x, y) - f(x, y_0)}{y - y_0} \dif \alpha(x)
+	= \int_a^b \lim_{y \to y_0} \frac{f(x, y) - f(x, y_0)}{y - y_0} \dif \alpha(x)
+	=  \int_a^b f_y(x, y_0) \dif \alpha(x)
+\end{align*}
+by applying Theorem~\ref{thm:29}.
+But it is valid to apply that theorem only if
+we can show that $\frac{f(x, y) - f(x, y_0)}{y - y_0}$ is continuous on $R$,
+which is not that easy.
+We will do this by first proving the following lemma.
+
+
+\begin{lemma} \label{lem:2}
+	Let function $f$ be defined on a rectangle $R = [a, b] \times [c, d]$.
+	If the partial derivative $f_y$, exists
+	and is continuous on $R$,
+	then the function
+	\begin{align*}
+		g(x, y) = f(x, y) - f(x, y_0), \quad (x, y) \in R
+	\end{align*}
+	($y_0 \in R$ is fixed) is continuous on $R$.
+\end{lemma}
+
+\begin{proof}
+	Suppose $f_y$ is bounded by $M > 0$ on $R$.
+	(This is possible since $f_y$ is continuous and $R$ is compact.)
+	Let $\varepsilon > 0$ be arbitrary.
+	Because $f_y$ is continuous uniformly on $R$,
+	there exists $\delta > 0$ satisfying
+	\begin{align*}
+		\delta < \frac{\varepsilon / 2}{M}
+	\end{align*}
+	such that
+	\begin{align*}
+		\norm{(x_1, y_1) - (x_2, y_2)} < \delta
+		\implies \abs{f(x_1, y_1) - f(x_2, y_2)} < \frac{\varepsilon / 2}{d - c}
+	\end{align*}
+
+	Choose an arbitrary point $(x, y) \in R$.
+	Let numbers $h$ and $k$ be such
+	that $\sqrt{h^2 + k^2} < \delta$ and $(x+h, y+k) \in R$.
+	Consider the difference
+	\begin{align*}
+		g(x+h, y+k) - g(x, y)
+		= [f(x+h, y+k) - f(x+h, y_0)] - [f(x, y) - f(x, y_0)]
+	\end{align*}
+	Applying the second fundamental theorem of calculus (Theorem~\ref{thm:22}),
+	we have
+	\begin{align}
+		[f(x+h, y+k) - f(x+h, y_0)] - [f(x, y) - f(x, y_0)]
+		 & = \int_{y_0}^{y+k} f_y(x+h, t) \dif t
+		+ \int_{y_0}^{y} f_y(x, t) \dif t
+		\label{eq:67}
+	\end{align}
+	Note that the mean value theorem is applicable since
+	the functions $f(x+h, t)$ and $f(x, t)$ can be regarded as continuous
+	functions of variable $t$ with $x+h$ and $x$ fixed.
+	Rearranging the terms on the RHS of \eqref{eq:67} yields
+	\begin{align}
+		\int_{y_0}^{y+k} f_y(x+h, t) \dif t
+		+ \int_{y_0}^{y} f_y(x, t) \dif t
+		= \underbrace{\int_y^{y+k} f_y(x+h, t) \dif t}_{\text{apply the mean value theorem}}
+		+ \int_{y_0}^{y} f_y(x+h, t) - f_y(x, t) \dif t
+		\label{eq:68}
+	\end{align}
+	Because $f_y(x+h, t)$ is a continuous function of $t$,
+	the mean value theorem (Theorem~\ref{thm:18}) is applicable.
+	We have
+	\begin{align}
+		\int_y^{y+k} f_y(x+h, t) \dif t = k f_y(x+h, \bar{y})
+		\label{eq:69}
+	\end{align}
+	for some $\bar{y}$ in between $y$ and $y+k$.
+	Combining \eqref{eq:67}, \eqref{eq:68} and \eqref{eq:69}, we have
+	\begin{align}
+		\abs{g(x+h, y+k) - g(x, y)}
+		\leq \abs{k} \abs{f_y(x+h, \bar{y})}
+		+ \abs{ \int_{y_0}^y \abs{f_y(x+h, t) - f_y(x, t)} \dif t }
+		\label{eq:70}
+	\end{align}
+
+	We will bound the two terms on the RHS of \eqref{eq:70} separately
+	using different techniques.
+
+
+	Recall $\abs{k} < \delta < \frac{\varepsilon / 2}{M}$
+	and $\abs{f_y(x, y)} \leq M$.
+	We have
+	\begin{align}
+		\abs{k} \abs{f_y(x+h, \bar{y})}
+		< \frac{\varepsilon / 2}{M} \cdot M = \varepsilon / 2
+		\label{eq:71}
+	\end{align}
+
+	On the other hand, since
+	\begin{align*}
+		\norm{(x+h, t) - (x, t)} = \abs{h} < \delta
+	\end{align*}
+	we have
+	\begin{align*}
+		\abs{f(x+h, t) - f(x, t)} < \frac{\varepsilon / 2}{d - c}
+	\end{align*}
+	It then follows that
+	\begin{align}
+		\abs{ \int_{y_0}^y \abs{f_y(x+h, t) - f_y(x, t)} \dif t }
+		 & \leq \abs{ \int_{y_0}^y \frac{\varepsilon / 2}{d - c} \dif t } \nonumber \\
+		 & = \frac{\varepsilon / 2}{d - c} \cdot \abs{y - y_0}       \nonumber      \\
+		 & \leq \varepsilon / 2
+		\label{eq:72}
+	\end{align}
+
+	Finally, it follows from \eqref{eq:70}, \eqref{eq:71} and \eqref{eq:72}
+	that $\abs{g(x+h, y+k) - g(x, y)} < \varepsilon$,
+	which shows that $g$ is continuous at point $(x, y)$, and hence on $R$.
+\end{proof}
+
+Now, we provide the proof of Theorem~\ref{thm:30}.
+
+\begin{proof}
+	We have
+	\begin{align*}
+		\int_a^b f_y(x, y_0) \dif \alpha(x)
+		= \int_a^b \lim_{y \to y_0} \frac{f(x, y) - f(x, y_0)}{y - y_0} \dif \alpha(x)
+	\end{align*}
+	By Lemma~\ref{lem:2}, the function $f(x, y) - f(x, y_0)$ is continuous on $R$,
+	so does the quotient $\frac{f(x, y) - f(x, y_0)}{y - y_0}$.
+	Therefore, Theorem~\ref{thm:29} is applicable.
+	We may then interchange the limit and integration:
+	\begin{align*}
+		\int_a^b \lim_{y \to y_0} \frac{f(x, y) - f(x, y_0)}{y - y_0} \dif \alpha(x)
+		=  \lim_{y \to y_0} \int_a^b \frac{f(x, y) - f(x, y_0)}{y - y_0} \dif \alpha(x)
+		=  \lim_{y \to y_0} \frac{F(y) - F(y_0)}{y - y_0}
+	\end{align*}
+	Therefore, the derivative $F^\prime(y_0)$ exists,
+	and it equals to $\int_a^b f_y(x, y_0) \dif \alpha(x)$.
+\end{proof}
+
+The problem of the above proof is that
+the function
+\begin{align*}
+	\phi(x, y) = \frac{f(x, y) - f(x, y_0)}{y - y_0}
+\end{align*}
+
+
+Alternatively, without applying Theorem~\ref{thm:29} directly.
+Instead, by mimicking a similar argument in the proof of  Theorem~\ref{thm:29},
+we may produce the following simpler proof of Theorem~\ref{thm:30}.
+
+\begin{proof}
+	Without loss of generality, we may assume that $\alpha$ is increasing
+	and nonconstant.
+
+	We have
+	\begin{align*}
+		\frac{F(y) - F(y_0)}{y - y_0}
+		 & = \frac{1}{y - y_0} \int_a^b [f_y(x, y) - f_y(x, y_0)] \dif \alpha(x) \\
+		 & = \int_a^b \frac{f_y(x, y) - f_y(x, y_0)}{y - y_0} \dif \alpha(x)     \\
+		 & = \int_a^b f_y(x, \bar{y}) \dif \alpha(x)
+	\end{align*}
+	where $\bar{y}$ is in between $y$ and $y_0$.
+	Note that the last equality follows from the differential mean value theorem.
+	Taking the difference with $\int_a^b f_y(x, y_0) \dif \alpha(x)$ yields
+	\begin{align}
+		\abs{\frac{F(y) - F(y_0)}{y - y_0} - \int_a^b f_y(x, y_0) \dif \alpha(x)}
+		 & = \abs{\int_a^b [f_y(x, \bar{y}) - f_y(x, y_0)] \dif \alpha(x)}  \nonumber \\
+		 & \leq \int_a^b \abs{f_y(x, \bar{y}) - f_y(x, y_0)} \dif \alpha(x)
+		\label{eq:66}
+	\end{align}
+
+	Let $\varepsilon > 0$ be arbitrary.
+	Because $f_y$ is continuous on $R$, it is continuous uniformly there.
+	There exists $\delta > 0$ such that
+	\begin{align*}
+		\norm{(x_1, y_1) - (x_2, y_2)} < \delta
+		\implies \abs{f_y(x_1, y_1) - f_y(x_2, y_2)}
+		< \frac{\varepsilon}{\alpha(b) - \alpha(a)}
+	\end{align*}
+	Let $y$ be such that $\abs{y - y_0} < \delta$.
+	It then follows that
+	\begin{align*}
+		\norm{(x, \bar{y}) - (x, y_0)} = \abs{\bar{y} - y_0}
+		< \abs{y - y_0} < \delta
+	\end{align*}
+	Therefore,
+	\begin{align*}
+		\abs{f_y(x, \bar{y}) - f_y(x, y_0)} < \frac{\varepsilon}{\alpha(b) - \alpha(a)}
+	\end{align*}
+
+	Combined with \eqref{eq:66}, we obtain
+	\begin{align*}
+		\abs{\frac{F(y) - F(y_0)}{y - y_0} - \int_a^b f_y(x, y_0) \dif \alpha(x)}
+		< \int_a^b \frac{\varepsilon}{\alpha(b) - \alpha(a)} \dif \alpha(x)
+		= \varepsilon
+	\end{align*}
+	This shows that the limit of the quotient $\frac{F(y) - F(y_0)}{y - y_0}$
+	exists as $y \to y_0$, i.e., $F^\prime(y_0)$ exists, and
+	it equals to $\int_a^b f_y(x, y_0) \dif \alpha(x)$.
+\end{proof}
+
 
 
 %==============================
